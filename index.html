@@ -1,0 +1,666 @@
+<title>Football Pyramids</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Every Premier League and EFL table on one page, from the top of English football down to League Two.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: ad rail | stacked league tables | ad rail. Tiers run top to bottom, the way the pyramid does. */
+:root {
+  --paper: #F2F4F0;        /* touchline chalk */
+  --sheet: #FFFFFF;
+  --ink: #121B2A;          /* floodlight navy */
+  --muted: #5A6577;
+  --rule: #DCE1DA;
+  --rule-strong: #AEB7AD;
+  --accent: #2440C4;       /* cobalt */
+  --accent-soft: #E5E9FB;
+  --accent-line: #9AA9EC;
+  --accent-flash: #C3CDF6;
+  --up: #17834A;
+  --mid: #B07506;
+  --down: #C2362C;
+  --hover: #F6F8F5;
+  --hatch: rgba(18, 27, 42, 0.06);
+  --display: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0E141C; --sheet: #151D28; --ink: #E6EBF0; --muted: #96A1B3;
+    --rule: #243041; --rule-strong: #3A4B62;
+    --accent: #8EA2FF; --accent-soft: #1C2547; --accent-line: #4256A8; --accent-flash: #2D3C7A;
+    --up: #45C47E; --mid: #E6AA3A; --down: #F26B60;
+    --hover: #18212D; --hatch: rgba(230, 235, 240, 0.06);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0E141C; --sheet: #151D28; --ink: #E6EBF0; --muted: #96A1B3;
+  --rule: #243041; --rule-strong: #3A4B62;
+  --accent: #8EA2FF; --accent-soft: #1C2547; --accent-line: #4256A8; --accent-flash: #2D3C7A;
+  --up: #45C47E; --mid: #E6AA3A; --down: #F26B60;
+  --hover: #18212D; --hatch: rgba(230, 235, 240, 0.06);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 25; background: var(--paper);
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Header ---------- */
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+.bar-inner {
+  max-width: 1320px; margin: 0 auto;
+  padding-block: 10px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; align-items: center; gap: 12px 20px; flex-wrap: wrap;
+}
+.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand-text { display: grid; line-height: 1; }
+.brand-text small {
+  margin-bottom: 3px; font-family: var(--mono); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent);
+}
+.brand-text span {
+  font-family: var(--display); font-weight: 800; font-size: 27px;
+  letter-spacing: 0.07em; text-transform: uppercase;
+}
+.glyph { display: inline-grid; justify-items: center; gap: 3px; }
+.glyph i { display: block; height: 5px; border-radius: 1px; background: var(--accent); }
+.glyph i:nth-child(1) { width: 10px; }
+.glyph i:nth-child(2) { width: 18px; }
+.glyph i:nth-child(3) { width: 26px; }
+
+.nav { display: flex; gap: 2px; order: 2; }
+.nav a {
+  font-family: var(--display); font-weight: 700; font-size: 18px; line-height: 1;
+  letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none;
+  padding: 8px 10px; border-radius: 6px; color: var(--muted); white-space: nowrap;
+}
+.nav a:hover { color: var(--ink); background: var(--sheet); }
+.nav a[aria-current="true"] { color: var(--paper); background: var(--ink); }
+.nav .long { display: none; }
+
+.finder { position: relative; margin-left: auto; order: 3; }
+.finder svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 15px; height: 15px; color: var(--muted); pointer-events: none; }
+.finder input {
+  width: 220px; height: 36px; padding: 0 32px 0 32px;
+  font: inherit; font-size: 14px; color: var(--ink);
+  background: var(--sheet); border: 1px solid var(--rule-strong); border-radius: 8px;
+}
+.finder input::placeholder { color: var(--muted); }
+.finder input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+.finder button {
+  position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+  width: 28px; height: 28px; border: 0; border-radius: 6px; background: transparent;
+  color: var(--muted); font-size: 18px; line-height: 1; cursor: pointer;
+}
+.finder button:hover { background: var(--hover); color: var(--ink); }
+
+@media (min-width: 1040px) {
+  .nav .long { display: inline; }
+  .nav .short { display: none; }
+}
+@media (max-width: 699px) {
+  .brand-text span { font-size: 22px; letter-spacing: 0.05em; }
+  .brand-text small { font-size: 9px; letter-spacing: 0.24em; }
+  .finder { flex: 1 1 130px; min-width: 0; }
+  .finder input { width: 100%; }
+  .nav { order: 4; flex: 1 1 100%; justify-content: space-between; }
+  .nav a { flex: 1; text-align: center; }
+}
+
+/* ---------- Shell ---------- */
+.shell {
+  max-width: 1320px; margin: 0 auto;
+  padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px;
+}
+main { min-width: 0; width: 100%; max-width: 820px; justify-self: center; }
+.rail { display: none; }
+.rail .stick { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 84px); display: grid; gap: 16px; }
+@media (min-width: 1060px) {
+  .shell { grid-template-columns: minmax(0, 1fr) 300px; }
+  .rail-right { display: block; }
+  main { justify-self: end; }
+}
+@media (min-width: 1320px) {
+  .shell { grid-template-columns: 160px minmax(0, 1fr) 300px; }
+  .rail-left { display: block; }
+  main { justify-self: center; }
+}
+
+/* ---------- Ad slots ---------- */
+.ad {
+  width: 100%; height: var(--h, 250px);
+  display: grid; place-content: center; justify-items: center; gap: 2px;
+  border: 1px dashed var(--rule-strong); border-radius: 8px;
+  background: repeating-linear-gradient(135deg, transparent 0 10px, var(--hatch) 10px 11px), var(--paper);
+  color: var(--muted); text-align: center;
+}
+.ad-tag { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; }
+.ad-size { font-family: var(--display); font-weight: 700; font-size: 24px; letter-spacing: 0.03em; color: var(--ink); opacity: 0.7; }
+.ad-note { font-size: 12px; }
+.ad-inline { --h: 100px; max-width: 320px; margin: 40px auto 0; }
+@media (min-width: 760px) { .ad-inline { --h: 90px; max-width: 728px; } }
+@media (min-width: 1060px) { .ad-inline { display: none; } }
+.ad-inline .ad-size .wide { display: none; }
+@media (min-width: 760px) { .ad-inline .ad-size .wide { display: inline; } .ad-inline .ad-size .narrow { display: none; } }
+
+/* ---------- Intro ---------- */
+.eyebrow { margin: 0; font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+h1 {
+  margin: 8px 0 0; max-width: 20ch;
+  font-family: var(--display); font-weight: 800; font-size: clamp(2.4rem, 6.4vw, 3.9rem);
+  line-height: 0.98; letter-spacing: 0.005em; text-wrap: balance;
+}
+.lede { margin: 14px 0 0; max-width: 60ch; color: var(--muted); font-size: 16px; }
+.stamp {
+  display: inline-flex; align-items: center; gap: 8px; margin: 16px 0 0;
+  font-family: var(--mono); font-size: 12px; color: var(--muted);
+}
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--mid); flex: none; }
+.stamp.live .dot { background: var(--up); }
+@media (prefers-reduced-motion: no-preference) {
+  .stamp.live .dot { animation: pulse 2s ease-in-out infinite; }
+}
+@keyframes pulse { 50% { opacity: 0.35; } }
+
+/* Pyramid figure: bar width is to scale with clubs per tier */
+.pyr {
+  margin: 28px 0 0; padding: 18px 18px 14px;
+  background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px;
+}
+.pyr-rows { display: grid; gap: 6px; }
+.pyr-row {
+  display: grid; grid-template-columns: 54px minmax(0, 1fr); align-items: center; gap: 10px;
+  text-decoration: none; color: var(--ink);
+}
+.pyr-tier { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.pyr-track { position: relative; height: 34px; display: flex; align-items: center; justify-content: center; }
+.pyr-bar {
+  position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: var(--w); border-radius: 4px;
+  background: var(--accent-soft); border: 1px solid var(--accent-line);
+}
+.pyr-label {
+  position: relative; display: inline-flex; align-items: baseline; gap: 8px; white-space: nowrap;
+  font-family: var(--display); font-weight: 700; font-size: 17px; letter-spacing: 0.04em; text-transform: uppercase;
+}
+.pyr-label small { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--muted); }
+a.pyr-row:hover .pyr-bar { border: 2px solid var(--accent); }
+a.pyr-row:hover .pyr-label span { text-decoration: underline; text-underline-offset: 3px; }
+.pyr-row.soon .pyr-bar { background: transparent; border: 1px dashed var(--rule-strong); }
+.pyr-row.soon .pyr-label { color: var(--muted); }
+.pyr figcaption { margin-top: 12px; font-size: 12.5px; color: var(--muted); }
+.nm-short { display: none; }
+@media (max-width: 480px) {
+  .nm-long { display: none; }
+  .nm-short { display: inline; }
+  .pyr { padding: 14px 12px 12px; }
+  .pyr-row { grid-template-columns: 44px minmax(0, 1fr); gap: 6px; }
+  .pyr-tier { font-size: 10px; letter-spacing: 0.02em; }
+  .pyr-label { font-size: 15px; gap: 6px; }
+}
+
+/* ---------- Tier sections ---------- */
+.tier { margin-top: 52px; scroll-margin-top: 84px; }
+@media (max-width: 699px) { .tier { scroll-margin-top: 124px; } }
+.tier-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px; }
+.tier-num { margin: 0; flex: 1 1 100%; font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.tier h2 {
+  margin: 0; font-family: var(--display); font-weight: 800; font-size: clamp(2.1rem, 5.4vw, 2.9rem);
+  line-height: 0.95; letter-spacing: 0.02em; text-transform: uppercase; text-wrap: balance;
+}
+.tier-meta { margin: 0 0 0 auto; font-size: 13px; color: var(--muted); }
+.legend { list-style: none; margin: 14px 0 10px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--muted); }
+.legend li { display: inline-flex; align-items: center; gap: 7px; }
+.legend i { width: 10px; height: 10px; border-radius: 2px; background: currentColor; flex: none; }
+.legend .k-top i { color: var(--up); }
+.legend .k-mid i { color: var(--mid); }
+.legend .k-down i { color: var(--down); }
+
+.table-wrap { background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; overflow-x: auto; }
+table { width: 100%; border-collapse: separate; border-spacing: 0; font-variant-numeric: tabular-nums; font-size: 14px; }
+thead th {
+  padding: 10px 8px; text-align: right; font-weight: 500;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+  border-bottom: 1px solid var(--rule); white-space: nowrap;
+}
+tbody td, tbody th { padding: 8px; text-align: right; border-bottom: 1px solid var(--rule); }
+tbody tr:last-child > * { border-bottom: 0; }
+thead .c-club, tbody .c-club { text-align: left; }
+thead abbr { text-decoration: none; cursor: help; }
+tbody th.c-club { font-weight: 500; }
+.c-pos { width: 44px; text-align: center !important; font-weight: 600; color: var(--muted); }
+.c-n { width: 40px; }
+.c-gd { width: 50px; }
+.c-pts { width: 52px; padding-right: 14px !important; font-weight: 700; }
+.c-form { width: 120px; }
+tbody tr:hover > * { background: var(--hover); }
+tr.z-top .c-pos { box-shadow: inset 4px 0 0 var(--up); color: var(--up); }
+tr.z-mid .c-pos { box-shadow: inset 4px 0 0 var(--mid); color: var(--mid); }
+tr.z-down .c-pos { box-shadow: inset 4px 0 0 var(--down); color: var(--down); }
+tbody tr.edge > * { border-bottom: 2px solid var(--rule-strong); }
+tbody tr.is-mine > * { background: var(--accent-soft); }
+tbody tr.is-mine .c-club { font-weight: 700; }
+tbody tr.is-mine .c-club::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: var(--accent); vertical-align: 2px; }
+@media (prefers-reduced-motion: no-preference) {
+  tbody tr.flash > * { animation: flash 1.6s ease-out; }
+}
+@keyframes flash { 0%, 35% { background: var(--accent-flash); } 100% { background: var(--accent-soft); } }
+.ded {
+  display: inline-block; margin-left: 6px; padding: 0 5px; border-radius: 4px;
+  font-family: var(--mono); font-size: 11px; font-weight: 500; line-height: 18px; vertical-align: 1px;
+  color: var(--down); border: 1px solid currentColor;
+}
+.form { display: inline-flex; gap: 3px; }
+.form b { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 3px; font-family: var(--mono); font-size: 10px; font-weight: 500; color: var(--sheet); }
+.form .W { background: var(--up); } .form .D { background: var(--muted); } .form .L { background: var(--down); }
+.tier-notes { margin: 10px 0 0; padding: 0; list-style: none; display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+
+@media (max-width: 599px) {
+  .c-w, .c-d, .c-l, .c-gf, .c-ga, .c-form { display: none; }
+  table { font-size: 14px; }
+  tbody td, tbody th { padding: 9px 6px; }
+  .c-pos { width: 36px; }
+  .tier-meta { margin-left: 0; flex: 1 1 100%; }
+}
+@media (max-width: 899px) { .c-form { display: none; } }
+
+/* Promotion and relegation between tiers */
+.band { position: relative; margin: 18px 0 0 6px; padding: 2px 0 2px 22px; display: grid; gap: 3px; font-size: 14px; }
+.band::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; border-radius: 1px; background: var(--rule-strong); }
+.band p { margin: 0; }
+.band-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.band .arw { display: inline-block; width: 18px; font-size: 11px; }
+.band-down .arw { color: var(--down); }
+.band-up .arw { color: var(--up); }
+
+.next-tiers { margin-top: 44px; padding: 18px 20px; border: 1px dashed var(--rule-strong); border-radius: 10px; }
+.next-tiers h2 { margin: 4px 0 6px; font-family: var(--display); font-weight: 800; font-size: 1.9rem; line-height: 1; letter-spacing: 0.02em; text-transform: uppercase; color: var(--muted); }
+.next-tiers p { margin: 0; max-width: 60ch; font-size: 14px; color: var(--muted); }
+
+/* ---------- Footer ---------- */
+footer { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--rule); display: grid; gap: 6px; font-size: 13px; color: var(--muted); }
+footer p { margin: 0; max-width: 72ch; }
+
+.toast {
+  position: fixed; left: 50%; transform: translateX(-50%); z-index: 30;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  max-width: calc(100% - 32px); padding: 10px 14px; border-radius: 8px;
+  background: var(--ink); color: var(--paper); font-size: 14px;
+}
+</style>
+
+<header class="bar">
+  <div class="bar-inner">
+    <a class="brand" href="#top" aria-label="Football Pyramids, back to top">
+      <span class="glyph" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-text" aria-hidden="true"><small>Football</small><span>Pyramids</span></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Jump to a division"></nav>
+    <div class="finder">
+      <label class="sr-only" for="club-find">Find a club</label>
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+      <input id="club-find" type="search" list="club-list" placeholder="Find a club" autocomplete="off" enterkeyhint="search">
+      <datalist id="club-list"></datalist>
+      <button id="club-clear" type="button" aria-label="Clear highlighted club" hidden>×</button>
+    </div>
+  </div>
+</header>
+
+<div class="shell" id="top">
+  <aside class="rail rail-left" aria-label="Advertisement">
+    <div class="stick">
+      <div class="ad" style="--h:600px"><span class="ad-tag">Advertisement</span><span class="ad-size">160 × 600</span><span class="ad-note">Skyscraper</span></div>
+    </div>
+  </aside>
+
+  <main>
+    <section class="intro" aria-labelledby="intro-h">
+      <p class="eyebrow">English football · <span id="season">2026–27</span></p>
+      <h1 id="intro-h">The top four tiers of English football, on one page.</h1>
+      <p class="lede">Every Premier League and EFL table, stacked from the top down. Scroll to move down the pyramid. Promotion, play-off and relegation places are marked on every table.</p>
+      <p class="stamp" id="stamp"><span class="dot"></span><span id="stamp-text"></span></p>
+      <figure class="pyr" id="pyr"></figure>
+    </section>
+
+    <div id="tiers"></div>
+
+    <footer>
+      <p id="foot-mode"></p>
+      <p>Clubs are ranked by points, then goal difference, then goals scored. Times are UK time.</p>
+      <p>Football Pyramids is an independent site and is not affiliated with the Premier League, the EFL or any club.</p>
+    </footer>
+  </main>
+
+  <aside class="rail rail-right" aria-label="Advertisement">
+    <div class="stick">
+      <div class="ad" style="--h:600px"><span class="ad-tag">Advertisement</span><span class="ad-size">300 × 600</span><span class="ad-note">Half page</span></div>
+      <div class="ad" style="--h:250px"><span class="ad-tag">Advertisement</span><span class="ad-size">300 × 250</span><span class="ad-note">Medium rectangle</span></div>
+    </div>
+  </aside>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script type="application/json" id="seed">{"season":"2026–27","mode":"snapshot","updated":"2026-10-20T21:52:35+01:00","belowNote":"National League champions and play-off winner come up","leagues":[{"id":"premier-league","tier":1,"name":"Premier League","short":"PL","updated":"2026-10-19T21:58:19+01:00","zones":[{"from":1,"to":4,"kind":"top","label":"Champions League"},{"from":5,"to":5,"kind":"mid","label":"Europa League"},{"from":18,"to":20,"kind":"down","label":"Relegation"}],"relegationNote":"18th–20th drop to the Championship","notes":[],"rows":[{"pos":1,"team":"Manchester City","p":7,"w":7,"d":0,"l":0,"gf":19,"ga":7,"pts":21},{"pos":2,"team":"Arsenal","p":7,"w":6,"d":0,"l":1,"gf":11,"ga":5,"pts":18},{"pos":3,"team":"Brighton & Hove Albion","p":7,"w":5,"d":1,"l":1,"gf":23,"ga":5,"pts":16},{"pos":4,"team":"Chelsea","p":7,"w":4,"d":1,"l":2,"gf":17,"ga":13,"pts":13},{"pos":5,"team":"Liverpool","p":7,"w":3,"d":3,"l":1,"gf":9,"ga":8,"pts":12},{"pos":6,"team":"Brentford","p":7,"w":2,"d":4,"l":1,"gf":13,"ga":8,"pts":10},{"pos":7,"team":"Leeds United","p":7,"w":2,"d":4,"l":1,"gf":9,"ga":6,"pts":10},{"pos":8,"team":"Everton","p":7,"w":2,"d":4,"l":1,"gf":8,"ga":7,"pts":10},{"pos":9,"team":"Hull City","p":7,"w":2,"d":3,"l":2,"gf":8,"ga":7,"pts":9},{"pos":10,"team":"Ipswich Town","p":7,"w":3,"d":0,"l":4,"gf":11,"ga":15,"pts":9},{"pos":11,"team":"Newcastle United","p":7,"w":2,"d":2,"l":3,"gf":10,"ga":14,"pts":8},{"pos":12,"team":"Aston Villa","p":7,"w":2,"d":2,"l":3,"gf":7,"ga":11,"pts":8},{"pos":13,"team":"Manchester United","p":7,"w":1,"d":4,"l":2,"gf":10,"ga":10,"pts":7},{"pos":14,"team":"Crystal Palace","p":7,"w":2,"d":1,"l":4,"gf":9,"ga":17,"pts":7},{"pos":15,"team":"AFC Bournemouth","p":7,"w":1,"d":3,"l":3,"gf":9,"ga":13,"pts":6},{"pos":16,"team":"Tottenham Hotspur","p":7,"w":1,"d":3,"l":3,"gf":6,"ga":10,"pts":6},{"pos":17,"team":"Coventry City","p":7,"w":2,"d":0,"l":5,"gf":6,"ga":14,"pts":6},{"pos":18,"team":"Fulham","p":7,"w":1,"d":2,"l":4,"gf":7,"ga":10,"pts":5},{"pos":19,"team":"Nottingham Forest","p":7,"w":1,"d":2,"l":4,"gf":5,"ga":9,"pts":5},{"pos":20,"team":"Sunderland","p":7,"w":1,"d":1,"l":5,"gf":6,"ga":14,"pts":4}]},{"id":"championship","tier":2,"name":"Championship","short":"CH","updated":"2026-10-20T21:41:32+01:00","zones":[{"from":1,"to":2,"kind":"top","label":"Promotion"},{"from":3,"to":8,"kind":"mid","label":"Play-offs"},{"from":22,"to":24,"kind":"down","label":"Relegation"}],"promotionNote":"1st, 2nd and the play-off winner go up","relegationNote":"22nd–24th drop to League One","notes":["Play-offs: 3rd and 4th go straight to the semi-finals; 5th to 8th play eliminators first.","Southampton: 4 points deducted by the EFL."],"rows":[{"pos":1,"team":"Swansea City","p":11,"w":7,"d":2,"l":2,"gf":16,"ga":8,"pts":23},{"pos":2,"team":"West Ham United","p":11,"w":6,"d":4,"l":1,"gf":30,"ga":12,"pts":22},{"pos":3,"team":"Middlesbrough","p":11,"w":6,"d":4,"l":1,"gf":22,"ga":16,"pts":22},{"pos":4,"team":"Birmingham City","p":11,"w":5,"d":5,"l":1,"gf":20,"ga":11,"pts":20},{"pos":5,"team":"West Bromwich Albion","p":11,"w":6,"d":2,"l":3,"gf":15,"ga":12,"pts":20},{"pos":6,"team":"Stoke City","p":11,"w":6,"d":1,"l":4,"gf":18,"ga":16,"pts":19},{"pos":7,"team":"Wolverhampton Wanderers","p":11,"w":5,"d":3,"l":3,"gf":19,"ga":16,"pts":18},{"pos":8,"team":"Southampton","p":11,"w":6,"d":3,"l":2,"gf":21,"ga":10,"pts":17,"ded":4},{"pos":9,"team":"Queens Park Rangers","p":11,"w":4,"d":5,"l":2,"gf":15,"ga":12,"pts":17},{"pos":10,"team":"Blackburn Rovers","p":11,"w":4,"d":3,"l":4,"gf":17,"ga":16,"pts":15},{"pos":11,"team":"Sheffield United","p":11,"w":4,"d":3,"l":4,"gf":15,"ga":14,"pts":15},{"pos":12,"team":"Millwall","p":11,"w":4,"d":3,"l":4,"gf":18,"ga":18,"pts":15},{"pos":13,"team":"Portsmouth","p":11,"w":4,"d":3,"l":4,"gf":14,"ga":14,"pts":15},{"pos":14,"team":"Wrexham","p":11,"w":3,"d":5,"l":3,"gf":15,"ga":16,"pts":14},{"pos":15,"team":"Bolton Wanderers","p":11,"w":4,"d":2,"l":5,"gf":15,"ga":18,"pts":14},{"pos":16,"team":"Bristol City","p":11,"w":4,"d":2,"l":5,"gf":12,"ga":15,"pts":14},{"pos":17,"team":"Charlton Athletic","p":11,"w":3,"d":5,"l":3,"gf":10,"ga":15,"pts":14},{"pos":18,"team":"Lincoln City","p":11,"w":3,"d":3,"l":5,"gf":9,"ga":19,"pts":12},{"pos":19,"team":"Cardiff City","p":11,"w":2,"d":5,"l":4,"gf":18,"ga":17,"pts":11},{"pos":20,"team":"Watford","p":11,"w":3,"d":2,"l":6,"gf":10,"ga":19,"pts":11},{"pos":21,"team":"Norwich City","p":11,"w":3,"d":0,"l":8,"gf":17,"ga":21,"pts":9},{"pos":22,"team":"Burnley","p":11,"w":1,"d":5,"l":5,"gf":16,"ga":21,"pts":8},{"pos":23,"team":"Derby County","p":11,"w":1,"d":3,"l":7,"gf":9,"ga":20,"pts":6},{"pos":24,"team":"Preston North End","p":11,"w":1,"d":1,"l":9,"gf":9,"ga":24,"pts":4}]},{"id":"league-one","tier":3,"name":"League One","short":"L1","updated":"2026-10-20T21:43:07+01:00","zones":[{"from":1,"to":2,"kind":"top","label":"Promotion"},{"from":3,"to":6,"kind":"mid","label":"Play-offs"},{"from":21,"to":24,"kind":"down","label":"Relegation"}],"promotionNote":"1st, 2nd and the play-off winner go up","relegationNote":"21st–24th drop to League Two","notes":[],"rows":[{"pos":1,"team":"Stockport County","p":11,"w":7,"d":1,"l":3,"gf":23,"ga":11,"pts":22},{"pos":2,"team":"Huddersfield Town","p":11,"w":6,"d":4,"l":1,"gf":22,"ga":10,"pts":22},{"pos":3,"team":"Bradford City","p":11,"w":6,"d":3,"l":2,"gf":10,"ga":5,"pts":21},{"pos":4,"team":"Cambridge United","p":11,"w":5,"d":5,"l":1,"gf":18,"ga":14,"pts":20},{"pos":5,"team":"Plymouth Argyle","p":12,"w":6,"d":1,"l":5,"gf":18,"ga":17,"pts":19},{"pos":6,"team":"Sheffield Wednesday","p":10,"w":5,"d":3,"l":2,"gf":20,"ga":10,"pts":18},{"pos":7,"team":"Oxford United","p":9,"w":5,"d":3,"l":1,"gf":18,"ga":10,"pts":18},{"pos":8,"team":"Reading","p":10,"w":4,"d":3,"l":3,"gf":22,"ga":12,"pts":15},{"pos":9,"team":"Stevenage","p":10,"w":4,"d":3,"l":3,"gf":15,"ga":10,"pts":15},{"pos":10,"team":"Leicester City","p":10,"w":4,"d":3,"l":3,"gf":16,"ga":15,"pts":15},{"pos":11,"team":"Mansfield Town","p":10,"w":4,"d":3,"l":3,"gf":16,"ga":15,"pts":15},{"pos":12,"team":"Leyton Orient","p":10,"w":4,"d":2,"l":4,"gf":15,"ga":11,"pts":14},{"pos":13,"team":"Luton Town","p":10,"w":4,"d":2,"l":4,"gf":19,"ga":18,"pts":14},{"pos":14,"team":"Burton Albion","p":12,"w":3,"d":5,"l":4,"gf":16,"ga":18,"pts":14},{"pos":15,"team":"Wycombe Wanderers","p":11,"w":3,"d":5,"l":3,"gf":18,"ga":22,"pts":14},{"pos":16,"team":"AFC Wimbledon","p":11,"w":3,"d":3,"l":5,"gf":7,"ga":18,"pts":12},{"pos":17,"team":"Blackpool","p":10,"w":3,"d":2,"l":5,"gf":15,"ga":16,"pts":11},{"pos":18,"team":"Notts County","p":10,"w":2,"d":4,"l":4,"gf":10,"ga":13,"pts":10},{"pos":19,"team":"Doncaster Rovers","p":10,"w":2,"d":3,"l":5,"gf":10,"ga":13,"pts":9},{"pos":20,"team":"Milton Keynes Dons","p":10,"w":1,"d":6,"l":3,"gf":11,"ga":18,"pts":9},{"pos":21,"team":"Peterborough United","p":11,"w":2,"d":3,"l":6,"gf":10,"ga":20,"pts":9},{"pos":22,"team":"Barnsley","p":10,"w":2,"d":2,"l":6,"gf":10,"ga":19,"pts":8},{"pos":23,"team":"Bromley","p":10,"w":2,"d":2,"l":6,"gf":9,"ga":25,"pts":8},{"pos":24,"team":"Wigan Athletic","p":10,"w":2,"d":1,"l":7,"gf":7,"ga":15,"pts":7}]},{"id":"league-two","tier":4,"name":"League Two","short":"L2","updated":"2026-10-20T21:52:35+01:00","zones":[{"from":1,"to":3,"kind":"top","label":"Promotion"},{"from":4,"to":7,"kind":"mid","label":"Play-offs"},{"from":23,"to":24,"kind":"down","label":"Relegation"}],"promotionNote":"1st–3rd and the play-off winner go up","relegationNote":"23rd–24th drop to the National League","notes":[],"rows":[{"pos":1,"team":"Salford City","p":12,"w":8,"d":1,"l":3,"gf":19,"ga":12,"pts":25},{"pos":2,"team":"Barnet","p":10,"w":6,"d":3,"l":1,"gf":23,"ga":15,"pts":21},{"pos":3,"team":"Crewe Alexandra","p":12,"w":5,"d":6,"l":1,"gf":15,"ga":11,"pts":21},{"pos":4,"team":"Walsall","p":11,"w":4,"d":7,"l":0,"gf":16,"ga":7,"pts":19},{"pos":5,"team":"Cheltenham Town","p":12,"w":5,"d":3,"l":4,"gf":21,"ga":22,"pts":18},{"pos":6,"team":"York City","p":11,"w":4,"d":5,"l":2,"gf":19,"ga":13,"pts":17},{"pos":7,"team":"Gillingham","p":12,"w":4,"d":5,"l":3,"gf":17,"ga":14,"pts":17},{"pos":8,"team":"Shrewsbury Town","p":12,"w":5,"d":2,"l":5,"gf":13,"ga":17,"pts":17},{"pos":9,"team":"Chesterfield","p":12,"w":4,"d":4,"l":4,"gf":18,"ga":16,"pts":16},{"pos":10,"team":"Exeter City","p":12,"w":4,"d":4,"l":4,"gf":8,"ga":6,"pts":16},{"pos":11,"team":"Accrington Stanley","p":12,"w":3,"d":6,"l":3,"gf":17,"ga":16,"pts":15},{"pos":12,"team":"Newport County","p":12,"w":3,"d":6,"l":3,"gf":16,"ga":15,"pts":15},{"pos":13,"team":"Tranmere Rovers","p":12,"w":3,"d":6,"l":3,"gf":15,"ga":15,"pts":15},{"pos":14,"team":"Rochdale","p":12,"w":4,"d":3,"l":5,"gf":15,"ga":17,"pts":15},{"pos":15,"team":"Swindon Town","p":12,"w":4,"d":3,"l":5,"gf":13,"ga":16,"pts":15},{"pos":16,"team":"Bristol Rovers","p":12,"w":5,"d":0,"l":7,"gf":16,"ga":20,"pts":15},{"pos":17,"team":"Grimsby Town","p":12,"w":3,"d":5,"l":4,"gf":15,"ga":15,"pts":14},{"pos":18,"team":"Fleetwood Town","p":12,"w":3,"d":5,"l":4,"gf":14,"ga":15,"pts":14},{"pos":19,"team":"Colchester United","p":11,"w":2,"d":6,"l":3,"gf":11,"ga":14,"pts":12},{"pos":20,"team":"Port Vale","p":10,"w":3,"d":3,"l":4,"gf":6,"ga":10,"pts":12},{"pos":21,"team":"Oldham Athletic","p":11,"w":3,"d":2,"l":6,"gf":13,"ga":17,"pts":11},{"pos":22,"team":"Rotherham United","p":12,"w":2,"d":5,"l":5,"gf":14,"ga":20,"pts":11},{"pos":23,"team":"Northampton Town","p":10,"w":2,"d":4,"l":4,"gf":6,"ga":8,"pts":10},{"pos":24,"team":"Crawley Town","p":10,"w":1,"d":2,"l":7,"gf":11,"ga":20,"pts":5}]}]}</script>
+<script>
+(function () {
+  "use strict";
+  var DATA_URL = "data.json";
+  var REFRESH_MS = 5 * 60 * 1000;
+  var STORE_KEY = "pyramid:club";
+  var LATER_TIERS = [
+    { tier: 5, name: "National League", clubs: 24 },
+    { tier: 6, name: "National League North & South", short: "NL North & South", clubs: 48 }
+  ];
+  var ALIASES = {
+    "spurs": "Tottenham Hotspur", "man city": "Manchester City", "man utd": "Manchester United",
+    "man united": "Manchester United", "wolves": "Wolverhampton Wanderers", "boro": "Middlesbrough",
+    "qpr": "Queens Park Rangers", "west brom": "West Bromwich Albion", "forest": "Nottingham Forest",
+    "brighton": "Brighton & Hove Albion", "bournemouth": "AFC Bournemouth", "mk dons": "Milton Keynes Dons",
+    "sheff utd": "Sheffield United", "sheff wed": "Sheffield Wednesday", "wednesday": "Sheffield Wednesday",
+    "villa": "Aston Villa", "palace": "Crystal Palace", "toon": "Newcastle United", "posh": "Peterborough United",
+    "pompey": "Portsmouth", "dons": "AFC Wimbledon", "wimbledon": "AFC Wimbledon"
+  };
+
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var data = JSON.parse(document.getElementById("seed").textContent);
+  var myClub = null;
+  try { myClub = localStorage.getItem(STORE_KEY); } catch (e) {}
+
+  function $(id) { return document.getElementById(id); }
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function ord(n) {
+    var s = ["th", "st", "nd", "rd"], v = n % 100;
+    return n + (s[(v - 20) % 10] || s[v] || s[0]);
+  }
+  function range(z) { return z.from === z.to ? ord(z.from) : z.from + "–" + z.to; }
+  function gd(r) { var d = r.gf - r.ga; return d > 0 ? "+" + d : d < 0 ? "−" + Math.abs(d) : "0"; }
+  function ukTime(iso) {
+    try {
+      return new Intl.DateTimeFormat("en-GB", {
+        timeZone: "Europe/London", day: "numeric", month: "short",
+        hour: "2-digit", minute: "2-digit", hour12: false
+      }).format(new Date(iso));
+    } catch (e) { return iso; }
+  }
+  function zoneOf(lg, pos) {
+    for (var i = 0; i < lg.zones.length; i++) {
+      var z = lg.zones[i];
+      if (pos >= z.from && pos <= z.to) return z;
+    }
+    return null;
+  }
+
+  /* ---------- Rendering ---------- */
+  function renderNav() {
+    $("nav").innerHTML = data.leagues.map(function (lg) {
+      return '<a href="#' + lg.id + '" data-id="' + lg.id + '" title="' + esc(lg.name) + '">' +
+        '<span class="short">' + esc(lg.short) + '</span><span class="long">' + esc(lg.name) + "</span></a>";
+    }).join("");
+  }
+
+  function renderPyramid() {
+    var tiers = data.leagues.map(function (lg) {
+      return { tier: lg.tier, name: lg.name, clubs: lg.rows.length, href: "#" + lg.id };
+    }).concat(LATER_TIERS);
+    var max = Math.max.apply(null, tiers.map(function (t) { return t.clubs; }));
+    var rows = tiers.map(function (t) {
+      var inner =
+        '<span class="pyr-tier">Tier ' + t.tier + "</span>" +
+        '<span class="pyr-track"><span class="pyr-bar" style="--w:' + (t.clubs / max * 100).toFixed(2) + '%"></span>' +
+        '<span class="pyr-label"><span><span class="nm-long">' + esc(t.name) + '</span><span class="nm-short">' + esc(t.short || t.name) + "</span></span>" +
+        "<small>" + t.clubs + " clubs" + (t.href ? "" : " · soon") + "</small></span></span>";
+      return t.href
+        ? '<a class="pyr-row" href="' + t.href + '">' + inner + "</a>"
+        : '<div class="pyr-row soon">' + inner + "</div>";
+    }).join("");
+    $("pyr").innerHTML = '<div class="pyr-rows">' + rows + "</div>" +
+      "<figcaption>Bar width is to scale with the number of clubs in each tier. Tiers 5 and 6 are next to be added.</figcaption>";
+  }
+
+  function rowHTML(lg, r, i, hasForm) {
+    var z = zoneOf(lg, r.pos);
+    var next = lg.rows[i + 1];
+    var cls = [];
+    if (z) cls.push("z-" + z.kind);
+    if (next && zoneOf(lg, next.pos) !== z) cls.push("edge");
+    if (myClub === r.team) cls.push("is-mine");
+    var form = "";
+    if (hasForm) {
+      form = '<td class="c-form"><span class="form" aria-label="Last five, most recent last: ' + esc(r.form || "") + '">' +
+        String(r.form || "").slice(-5).split("").map(function (c) {
+          return /[WDL]/.test(c) ? '<b class="' + c + '">' + c + "</b>" : "";
+        }).join("") + "</span></td>";
+    }
+    return '<tr class="' + cls.join(" ") + '" data-team="' + esc(r.team) + '">' +
+      '<td class="c-pos">' + r.pos + "</td>" +
+      '<th scope="row" class="c-club">' + esc(r.team) +
+        (r.ded ? '<span class="ded" title="' + r.ded + ' points deducted">−' + r.ded + "</span>" : "") + "</th>" +
+      '<td class="c-n">' + r.p + "</td>" +
+      '<td class="c-n c-w">' + r.w + "</td>" +
+      '<td class="c-n c-d">' + r.d + "</td>" +
+      '<td class="c-n c-l">' + r.l + "</td>" +
+      '<td class="c-n c-gf">' + r.gf + "</td>" +
+      '<td class="c-n c-ga">' + r.ga + "</td>" +
+      '<td class="c-gd">' + gd(r) + "</td>" +
+      form +
+      '<td class="c-pts">' + r.pts + "</td></tr>";
+  }
+
+  function sectionHTML(lg) {
+    var hasForm = lg.rows.some(function (r) { return r.form; });
+    var legend = lg.zones.map(function (z) {
+      return '<li class="k-' + z.kind + '"><i></i>' + range(z) + " " + esc(z.label) + "</li>";
+    }).join("");
+    var notes = (lg.notes || []).length
+      ? '<ul class="tier-notes">' + lg.notes.map(function (n) { return "<li>" + esc(n) + "</li>"; }).join("") + "</ul>"
+      : "";
+    return '<section class="tier" id="' + lg.id + '" aria-labelledby="h-' + lg.id + '">' +
+      '<header class="tier-head"><p class="tier-num">Tier ' + lg.tier + "</p>" +
+      '<h2 id="h-' + lg.id + '">' + esc(lg.name) + "</h2>" +
+      '<p class="tier-meta">' + lg.rows.length + " clubs · updated " + ukTime(lg.updated) + "</p></header>" +
+      '<ul class="legend" aria-label="Table key">' + legend + "</ul>" +
+      '<div class="table-wrap"><table><caption class="sr-only">' + esc(lg.name) + " table</caption>" +
+      "<thead><tr>" +
+        '<th scope="col" class="c-pos"><abbr title="Position">Pos</abbr></th>' +
+        '<th scope="col" class="c-club">Club</th>' +
+        '<th scope="col" class="c-n"><abbr title="Played">P</abbr></th>' +
+        '<th scope="col" class="c-n c-w"><abbr title="Won">W</abbr></th>' +
+        '<th scope="col" class="c-n c-d"><abbr title="Drawn">D</abbr></th>' +
+        '<th scope="col" class="c-n c-l"><abbr title="Lost">L</abbr></th>' +
+        '<th scope="col" class="c-n c-gf"><abbr title="Goals for">GF</abbr></th>' +
+        '<th scope="col" class="c-n c-ga"><abbr title="Goals against">GA</abbr></th>' +
+        '<th scope="col" class="c-gd"><abbr title="Goal difference">GD</abbr></th>' +
+        (hasForm ? '<th scope="col" class="c-form"><abbr title="Last five league games, most recent on the right">Form</abbr></th>' : "") +
+        '<th scope="col" class="c-pts"><abbr title="Points">Pts</abbr></th>' +
+      "</tr></thead><tbody>" +
+      lg.rows.map(function (r, i) { return rowHTML(lg, r, i, hasForm); }).join("") +
+      "</tbody></table></div>" + notes + "</section>";
+  }
+
+  function bandHTML(upper, lower) {
+    return '<div class="band" role="note">' +
+      '<p class="band-label">Tier ' + upper.tier + " ⇅ Tier " + (upper.tier + 1) + "</p>" +
+      '<p class="band-down"><span class="arw" aria-hidden="true">▼</span>' + esc(upper.relegationNote) + "</p>" +
+      '<p class="band-up"><span class="arw" aria-hidden="true">▲</span>' + esc(lower ? lower.promotionNote : data.belowNote) + "</p>" +
+      "</div>";
+  }
+
+  var INLINE_AD = '<div class="ad ad-inline"><span class="ad-tag">Advertisement</span>' +
+    '<span class="ad-size"><span class="wide">728 × 90</span><span class="narrow">320 × 100</span></span></div>';
+
+  function renderTiers() {
+    var html = "";
+    data.leagues.forEach(function (lg, i) {
+      var next = data.leagues[i + 1] || null;
+      html += sectionHTML(lg) + bandHTML(lg, next);
+      if (i === 1) html += INLINE_AD;
+    });
+    html += '<section class="next-tiers" aria-labelledby="next-h"><p class="eyebrow">Tier 5 and below</p>' +
+      '<h2 id="next-h">National League</h2>' +
+      "<p>The National League, National League North and National League South come next, then the steps below them.</p></section>";
+    $("tiers").innerHTML = html;
+  }
+
+  function renderMeta() {
+    $("season").textContent = data.season;
+    var live = data.mode === "live";
+    $("stamp").className = "stamp" + (live ? " live" : "");
+    $("stamp-text").textContent = (live ? "Live · updated " : "Sample snapshot · standings as of ") + ukTime(data.updated) + " UK";
+    $("foot-mode").textContent = live
+      ? "Tables refresh automatically every few minutes."
+      : "Prototype: these standings are a snapshot from 19–20 October 2026. Live updates switch on once the data feed is connected.";
+    var teams = allTeams();
+    $("club-list").innerHTML = teams.map(function (t) { return '<option value="' + esc(t) + '"></option>'; }).join("");
+  }
+
+  function render() {
+    renderNav();
+    renderPyramid();
+    renderTiers();
+    renderMeta();
+    applyClub(false);
+    watchSections();
+  }
+
+  /* ---------- Club finder ---------- */
+  function allTeams() {
+    var out = [];
+    data.leagues.forEach(function (lg) { lg.rows.forEach(function (r) { out.push(r.team); }); });
+    return out.sort(function (a, b) { return a.localeCompare(b); });
+  }
+  function matchClub(q) {
+    q = q.trim().toLowerCase();
+    if (!q) return null;
+    var teams = allTeams();
+    if (ALIASES[q] && teams.indexOf(ALIASES[q]) > -1) return ALIASES[q];
+    var exact = teams.filter(function (t) { return t.toLowerCase() === q; })[0];
+    if (exact) return exact;
+    var starts = teams.filter(function (t) { return t.toLowerCase().indexOf(q) === 0; });
+    if (starts.length === 1) return starts[0];
+    var has = teams.filter(function (t) { return t.toLowerCase().indexOf(q) > -1; });
+    return has.length === 1 ? has[0] : (starts[0] || has[0] || null);
+  }
+  var toastTimer;
+  function toast(msg) {
+    var t = $("toast");
+    t.textContent = msg; t.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { t.hidden = true; }, 3200);
+  }
+  function applyClub(scroll) {
+    var rows = document.querySelectorAll("tr[data-team]");
+    var target = null;
+    for (var i = 0; i < rows.length; i++) {
+      var on = rows[i].getAttribute("data-team") === myClub;
+      rows[i].classList.toggle("is-mine", on);
+      rows[i].classList.remove("flash");
+      if (on) target = rows[i];
+    }
+    $("club-clear").hidden = !myClub;
+    if (myClub && document.activeElement !== $("club-find")) $("club-find").value = myClub;
+    if (scroll && target) {
+      target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+      void target.offsetWidth;
+      target.classList.add("flash");
+    }
+  }
+  function setClub(name, scroll) {
+    myClub = name || null;
+    try { if (myClub) localStorage.setItem(STORE_KEY, myClub); else localStorage.removeItem(STORE_KEY); } catch (e) {}
+    applyClub(scroll);
+  }
+  function submitFind() {
+    var input = $("club-find");
+    var q = input.value;
+    if (!q.trim()) return;
+    var m = matchClub(q);
+    if (m) { input.value = m; setClub(m, true); input.blur(); }
+    else toast("No club called “" + q.trim() + "” in the top four tiers.");
+  }
+  $("club-find").addEventListener("change", submitFind);
+  $("club-find").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); submitFind(); } });
+  $("club-find").addEventListener("input", function () {
+    var v = this.value;
+    if (allTeams().indexOf(v) > -1) { setClub(v, true); this.blur(); }
+    if (!v) setClub(null, false);
+  });
+  $("club-clear").addEventListener("click", function () {
+    $("club-find").value = "";
+    setClub(null, false);
+    $("club-find").focus();
+  });
+
+  /* ---------- Current-division highlight in the nav ---------- */
+  var observer = null;
+  function watchSections() {
+    if (!("IntersectionObserver" in window)) return;
+    if (observer) observer.disconnect();
+    var links = document.querySelectorAll("#nav a");
+    observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        links.forEach(function (a) { a.setAttribute("aria-current", a.getAttribute("data-id") === en.target.id ? "true" : "false"); });
+      });
+    }, { rootMargin: "-30% 0px -60% 0px" });
+    data.leagues.forEach(function (lg) { var s = $(lg.id); if (s) observer.observe(s); });
+  }
+
+  /* ---------- Live refresh ---------- */
+  function valid(j) {
+    return j && Array.isArray(j.leagues) && j.leagues.length && j.leagues.every(function (lg) {
+      return lg && lg.id && Array.isArray(lg.rows) && lg.rows.length && Array.isArray(lg.zones);
+    });
+  }
+  function refresh() {
+    if (!window.fetch) return;
+    fetch(DATA_URL + "?t=" + Date.now(), { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) {
+        if (!valid(j) || j.updated === data.updated) return;
+        var y = window.scrollY;
+        data = j;
+        render();
+        window.scrollTo(0, y);
+      })
+      .catch(function () {});
+  }
+
+  render();
+  refresh();
+  setInterval(function () { if (!document.hidden) refresh(); }, REFRESH_MS);
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) refresh(); });
+})();
+</script>
