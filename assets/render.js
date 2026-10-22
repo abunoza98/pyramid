@@ -218,7 +218,8 @@
     return '<section class="tier" id="' + esc(lg.id) + '" aria-labelledby="h-' + esc(lg.id) + '">' +
       '<header class="tier-head"><p class="tier-num">' + esc(opts.eyebrow || "Tier " + lg.tier) + "</p>" +
       '<h2 id="h-' + esc(lg.id) + '">' + esc(lg.name) + "</h2>" +
-      '<p class="tier-meta">' + meta + "</p></header>" +
+      '<p class="tier-meta">' + meta + "</p>" +
+      (opts.fixtures ? '<a class="tier-fx" href="' + esc(opts.fixtures) + '">Fixtures and results <span aria-hidden="true">→</span></a>' : "") + "</header>" +
       todayHTML(lg) + legendHTML(lg, grouped) + body + notesHTML(lg) +
       (opts.more ? '<a class="more" href="' + esc(opts.more.href) + '">' + esc(opts.more.text) + ' <span aria-hidden="true">→</span></a>' : "") +
       "</section>";
@@ -295,7 +296,7 @@
           " down to " + esc(last.name) + ". Promotion, play-off and relegation places are marked on every table.</p>") +
       stampHTML(c.mode, c.updated, c.liveCount) + pyramidHTML(c) + "</section>";
     c.leagues.forEach(function (lg, i) {
-      html += tierHTML(lg) + bandHTML(lg, c.leagues[i + 1] || null, c.belowNote);
+      html += tierHTML(lg, { fixtures: (opts.fixtures || {})[c.country + "/" + lg.id] }) + bandHTML(lg, c.leagues[i + 1] || null, c.belowNote);
       if (i === 1) html += INLINE_AD;
     });
     return html;
@@ -414,7 +415,7 @@
     var panels = countries.map(function (c, i) {
       return '<div class="tf-panel' + (i === 0 ? " on" : "") + '" data-panel="' + c.country + '" role="tabpanel">' +
         tierHTML(c.leagues[0], {
-          eyebrow: c.name + " · Tier 1",
+          eyebrow: c.name + " · Tier 1", fixtures: (opts.fixtures || {})[c.country + "/" + c.leagues[0].id],
           more: { href: base + c.country + "/" + suffix, text: "See the full " + c.adjective + " pyramid: " + c.leagues.length + " tiers, " + countryClubs(c) + " clubs" }
         }) + "</div>";
     }).join("");
@@ -423,8 +424,122 @@
     return html;
   }
 
+  /* ---------- Fixtures pages ----------
+     fx: data/fixtures/<country>/<league>.json. opts: { tz: "local" | "uk", now, live, group, round, tableHref, myClub }.
+     Rounds are as the league names them; the page opens on the current one. */
+  function fmt(ts, tz, o) {
+    var opt = {};
+    for (var k in o) opt[k] = o[k];
+    if (tz === "uk") opt.timeZone = "Europe/London";
+    try { return new Intl.DateTimeFormat("en-GB", opt).format(new Date(ts * 1000)); } catch (e) { return ""; }
+  }
+  function tzName(tz) {
+    if (tz === "uk") return "UK time";
+    try { if (Intl.DateTimeFormat().resolvedOptions().timeZone === "Europe/London") return "UK time"; } catch (e) {}
+    try {
+      var zone = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+      return "your time (" + (zone.split("/").pop() || "local").replace(/_/g, " ") + ")";
+    } catch (e) { return "your time"; }
+  }
+  function currentRound(rounds, now) {
+    var t = (now || Date.now()) / 1000 - 2 * 86400;
+    for (var i = 0; i < rounds.length; i++) if (rounds[i].mid >= t) return i;
+    return rounds.length - 1;
+  }
+  var GONE = { PST: "Postponed", CANC: "Cancelled", ABD: "Abandoned", AWD: "Awarded", WO: "Walkover", SUSP: "Suspended", INT: "Interrupted" };
+
+  function gameHTML(f, tz, now, myClub) {
+    var on = isLive(f), done = isDone(f) || f.st === "AWD" || f.st === "WO";
+    var hasScore = f.hg != null && f.ag != null;
+    var time = GONE[f.st] && !on ? "" : f.st === "TBD" ? "TBC" : on || isDone(f) ? clock({ st: f.st, p1: f.p1, p2: f.p2 }, now) : fmt(f.ts, tz, { hour: "2-digit", minute: "2-digit", hour12: false });
+    var score = hasScore && (on || done || f.st === "ABD") ? f.hg + "–" + f.ag : "v";
+    var notes = [];
+    if (GONE[f.st] && !on) notes.push('<b class="g-flag">' + GONE[f.st] + "</b>");
+    if (f.moved && !done) notes.push('<span class="g-moved">Moved from ' + esc(fmt(f.moved.from, tz, { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", hour12: false })) + "</span>");
+    if (f.ht && (on || done) && f.st !== "1H") notes.push("HT " + f.ht[0] + "–" + f.ht[1]);
+    if (f.st === "AET") notes.push("After extra time");
+    if (f.pen) notes.push("Penalties " + f.pen[0] + "–" + f.pen[1]);
+    if (f.v) notes.push(esc(f.v));
+    var win = done && hasScore ? (f.hg > f.ag ? "h" : f.hg < f.ag ? "a" : "") : "";
+    var mine = myClub && (f.h.n === myClub || f.a.n === myClub);
+    return '<li class="g' + (on ? " on" : "") + (GONE[f.st] && !on ? " off" : "") + (mine ? " is-mine" : "") + '">' +
+      '<span class="g-time">' + esc(time) + "</span>" +
+      '<span class="g-h' + (win === "h" ? " w" : "") + '">' + esc(f.h.n) + "</span>" +
+      '<span class="g-s">' + score + "</span>" +
+      '<span class="g-a' + (win === "a" ? " w" : "") + '">' + esc(f.a.n) + "</span>" +
+      (notes.length ? '<span class="g-note">' + notes.join(" · ") + "</span>" : "") + "</li>";
+  }
+
+  function roundRange(r, tz) {
+    var ts = r.fixtures.filter(function (f) { return !GONE[f.st] && f.st !== "TBD"; }).map(function (f) { return f.ts; });
+    if (!ts.length) return "";
+    var a = Math.min.apply(null, ts), b = Math.max.apply(null, ts);
+    var da = fmt(a, tz, { day: "numeric", month: "short" }), db = fmt(b, tz, { day: "numeric", month: "short" });
+    if (da === db) return da;
+    var ma = fmt(a, tz, { month: "short" }), mb = fmt(b, tz, { month: "short" });
+    return ma === mb ? fmt(a, tz, { day: "numeric" }) + "–" + db : da + " – " + db;
+  }
+
+  function fixturesMain(fx, opts) {
+    opts = opts || {};
+    var tz = opts.tz || "uk", now = opts.now || Date.now();
+    var gi = Math.min(opts.group || 0, fx.groups.length - 1);
+    var g = fx.groups[gi];
+    var ri = opts.round == null ? currentRound(g.rounds, now) : Math.max(0, Math.min(opts.round, g.rounds.length - 1));
+    var r = g.rounds[ri];
+    // Today's live scores, laid over the fixture list.
+    var live = {};
+    (opts.live && opts.live.fixtures || []).forEach(function (f) { live[f.id] = f; });
+    var games = r.fixtures.map(function (f) {
+      var l = live[f.id];
+      if (!l) return f;
+      var c = JSON.parse(JSON.stringify(f));
+      c.st = l.st; c.p1 = l.p1 || c.p1; c.p2 = l.p2 || c.p2;
+      if (l.h.g != null) { c.hg = l.h.g; c.ag = l.a.g; }
+      return c;
+    });
+    // Group by day in the chosen time zone; postponed and cancelled games go last.
+    var days = [], byDay = {}, off = [];
+    games.forEach(function (f) {
+      if (GONE[f.st] && !isLive(f) && f.st !== "ABD" && f.st !== "AWD") { off.push(f); return; }
+      var d = fmt(f.ts, tz, { weekday: "long", day: "numeric", month: "long" });
+      if (!byDay[d]) { byDay[d] = []; days.push(d); }
+      byDay[d].push(f);
+    });
+    var list = days.map(function (d) {
+      return '<h3 class="fx-date">' + esc(d) + '</h3><ul class="fx-list">' +
+        byDay[d].map(function (f) { return gameHTML(f, tz, now, opts.myClub); }).join("") + "</ul>";
+    }).join("") + (off.length ? '<h3 class="fx-date">Postponed and cancelled</h3><ul class="fx-list">' +
+        off.map(function (f) { return gameHTML(f, tz, now, opts.myClub); }).join("") + "</ul>" : "");
+    var liveN = games.filter(isLive).length;
+
+    var groups = fx.groups.length > 1 ? '<div class="tf-tabs fx-groups" role="tablist" aria-label="Groups">' + fx.groups.map(function (x, i) {
+      return '<button type="button" role="tab" class="tf-tab' + (i === gi ? " on" : "") + '" data-group="' + i + '" aria-selected="' + (i === gi) + '">' + esc(x.name) + "</button>";
+    }).join("") + "</div>" : "";
+    var options = g.rounds.map(function (x, i) {
+      var range = roundRange(x, tz);
+      return '<option value="' + i + '"' + (i === ri ? " selected" : "") + ">" + esc(x.label) + (range ? " · " + esc(range) : "") + "</option>";
+    }).join("");
+    return '<section class="intro fx-intro" aria-labelledby="intro-h">' +
+      '<p class="eyebrow">' + esc(fx.countryName) + " · Tier " + fx.tier + " · " + esc(fx.season) + "</p>" +
+      '<h1 id="intro-h">' + esc(fx.name) + " fixtures and results</h1>" +
+      '<p class="lede">Every ' + esc(fx.name) + " game this season, round by round, with results, postponements and kick-off changes.</p>" +
+      '<p class="fx-links">' + (opts.tableHref ? '<a href="' + esc(opts.tableHref) + '">' + esc(fx.name) + " table →</a>" : "") +
+      '<span>Times in ' + esc(tzName(tz)) + "</span>" +
+      (opts.localIsUk ? "" : '<button type="button" class="tz-toggle" data-tz="' + (tz === "uk" ? "local" : "uk") + '">' +
+        (tz === "uk" ? "Use my time zone" : "Show UK times") + "</button>") + "</p></section>" +
+      groups +
+      '<nav class="rnav" aria-label="Rounds">' +
+      '<button type="button" class="rnav-step" data-step="-1"' + (ri === 0 ? " disabled" : "") + ' aria-label="Previous round">‹</button>' +
+      '<label class="sr-only" for="round-pick">Round</label><select id="round-pick" class="round-pick">' + options + "</select>" +
+      '<button type="button" class="rnav-step" data-step="1"' + (ri === g.rounds.length - 1 ? " disabled" : "") + ' aria-label="Next round">›</button></nav>' +
+      (liveN ? '<p class="stamp live now"><span class="dot"></span><span>' + liveN + " game" + (liveN === 1 ? "" : "s") + " live</span></p>" : "") +
+      '<div class="fx-round" data-round="' + ri + '">' + list + "</div>" +
+      '<p class="fx-foot">Fixture lists are checked every 6 hours; live scores update during games. Kick-off changes are marked for three weeks.</p>';
+  }
+
   return {
     esc: esc, ukTime: ukTime, clubCount: clubCount, countryClubs: countryClubs, groupsOf: groupsOf,
-    countryMain: countryMain, homeMain: homeMain, summary: summary, flag: flag, applyLive: applyLive, clock: clock, isLive: isLive
+    countryMain: countryMain, homeMain: homeMain, summary: summary, flag: flag, fixturesMain: fixturesMain, currentRound: currentRound, applyLive: applyLive, clock: clock, isLive: isLive
   };
 });

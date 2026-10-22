@@ -135,6 +135,8 @@
   try { seasons = JSON.parse(body.getAttribute("data-seasons") || "null"); } catch (e) {}
   var MINE = PAGE === "country" ? [COUNTRY] : COUNTRIES;
   // The home page's strip shows every country's games, not just the featured ones.
+  var FIXLINKS = {};   // links from each table to its fixtures page
+  try { FIXLINKS = JSON.parse(body.getAttribute("data-fixtures") || "{}"); } catch (e) {}
   var OTHERS = [];   // the home page's "More pyramids" cards
   try { OTHERS = JSON.parse(body.getAttribute("data-others") || "[]"); } catch (e) {}
 
@@ -189,7 +191,8 @@
   function render() {
     if (!MINE.every(function (c) { return official[c]; })) return;
     var withLive = MINE.map(function (c) { return FP.applyLive(official[c], live); });
-    redraw(PAGE === "country" ? FP.countryMain(withLive[0], { seasons: seasons }) : FP.homeMain(withLive, BASE, SUFFIX, OTHERS, { live: live }));
+    redraw(PAGE === "country" ? FP.countryMain(withLive[0], { seasons: seasons, fixtures: FIXLINKS })
+      : FP.homeMain(withLive, BASE, SUFFIX, OTHERS, { live: live, fixtures: FIXLINKS }));
     applyTabs();
     liveShown = relevant().length > 0;
   }
@@ -271,10 +274,72 @@
     });
   }
 
+  /* ---------- Fixtures pages ----------
+     The page arrives showing the current round in UK time. Here it switches to the visitor's time zone,
+     lets them move between rounds and groups, and lays today's live scores over the list. */
+  var TZ_KEY = "pyramid:tz";
+  var LOCAL_IS_UK = false;
+  try { LOCAL_IS_UK = Intl.DateTimeFormat().resolvedOptions().timeZone === "Europe/London"; } catch (e) {}
+  var fxData = null, fxState = { tz: "local", group: 0, round: null };
+  try { if (localStorage.getItem(TZ_KEY) === "uk") fxState.tz = "uk"; } catch (e) {}
+  function fxRender() {
+    if (!fxData) return;
+    var y = window.scrollY;
+    $("main-content").innerHTML = FP.fixturesMain(fxData, {
+      tz: fxState.tz, group: fxState.group, round: fxState.round, live: live, myClub: myClub, localIsUk: LOCAL_IS_UK,
+      tableHref: body.getAttribute("data-table") || ""
+    });
+    window.scrollTo(0, y);
+  }
+  function fxRound() { var el = document.querySelector(".fx-round"); return el ? Number(el.getAttribute("data-round")) : 0; }
+  function fxStart() {
+    var league = body.getAttribute("data-league");
+    fetch(BASE + "data/fixtures/" + COUNTRY + "/" + league + ".json?t=" + Date.now(), { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .catch(function () { return null; })
+      .then(function (d) {
+        if (!d || !d.groups) return;
+        fxData = d;
+        fxRender();
+        fxLive();
+      });
+    document.addEventListener("click", function (e) {
+      var t = e.target.closest && e.target.closest("[data-step], [data-group], .tz-toggle");
+      if (!t || !fxData) return;
+      if (t.hasAttribute("data-step")) fxState.round = fxRound() + Number(t.getAttribute("data-step"));
+      else if (t.hasAttribute("data-group")) { fxState.group = Number(t.getAttribute("data-group")); fxState.round = null; }
+      else {
+        fxState.tz = t.getAttribute("data-tz");
+        try { localStorage.setItem(TZ_KEY, fxState.tz); } catch (err) {}
+      }
+      fxRender();
+    });
+    document.addEventListener("change", function (e) {
+      if (e.target.id !== "round-pick" || !fxData) return;
+      fxState.round = Number(e.target.value);
+      fxRender();
+    });
+  }
+  var fxTimer = null;
+  function fxLive() {
+    clearTimeout(fxTimer);
+    if (document.hidden) return;
+    refreshLive().then(function (changed) {
+      var anyLive = relevant().some(FP.isLive);
+      if (changed || anyLive) fxRender();
+      fxTimer = setTimeout(fxLive, nextDelay());
+    });
+  }
+
   /* ---------- Start ---------- */
   var arrivedForClub = location.hash === "#club";
   if (arrivedForClub && history.replaceState) history.replaceState(null, "", location.pathname + location.search);
   applyClub(arrivedForClub);
-  cycle();
-  document.addEventListener("visibilitychange", function () { if (!document.hidden) cycle(); });
+  if (PAGE === "fixtures" && window.fetch && window.FP) {
+    fxStart();
+    document.addEventListener("visibilitychange", function () { if (!document.hidden && fxData) fxLive(); });
+  } else {
+    cycle();
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) cycle(); });
+  }
 })();

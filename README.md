@@ -42,6 +42,10 @@ footballpyramids.com: Europe's top five leagues on the home page, and a full pyr
 3. Fix odd club names in `NAMES`. Countries without `featured: true` sit under the header's "More" menu and as cards on the home page.
 4. Run Update standings, then Backfill history for past seasons. The live-scores worker picks the new leagues up by itself.
 
+## Fixtures
+
+`scripts/update-fixtures.mjs` (GitHub: Update fixtures, every 6 hours) saves each league's season fixtures to `data/fixtures/<country>/<league>.json`, divided into the league's rounds. `build.mjs` makes a page per league at `/<country>/<league>/fixtures/`, opening on the current round; each table links to it. Pages show kick-off times in the visitor's time zone (with a switch to UK time), live scores from the live worker, results with half-time scores, and postponed, cancelled and "time to be confirmed" games. When a kick-off time changes, the old time is kept and shown as "Moved from …" for three weeks.
+
 ## Live scores
 
 `worker/live.js` is a separate Cloudflare Worker at live.footballpyramids.com. Every minute it checks today's fixtures for every league on the site (it reads `data/live-leagues.json`, which `build.mjs` writes) and, only while a game is on, asks API-Football for live scores. It saves them in a KV namespace and serves them at `/live.json`. The country and home pages read that every 30 seconds during games, lay the scores over the official tables and re-sort them ("as it stands"). Each fixture remembers how many games each club had played before kick-off, so a result is never counted twice once the official table catches up. Set `LIVE_URL` to `""` in `leagues.mjs` to switch it off.

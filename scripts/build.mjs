@@ -26,7 +26,7 @@ const FAVICON = "data:image/svg+xml," + encodeURIComponent(
 
 const esc = FP.esc;
 
-function shell({ title, description, canonical, base, suffix, page, country, stamps, main, countries, seasons }) {
+function shell({ title, description, canonical, base, suffix, page, country, stamps, main, countries, seasons, attrs = {} }) {
   const snapshot = countries.some((c) => c.mode !== "live");
   const home = base || "./";
   const homeHref = suffix ? base + suffix : home;
@@ -61,7 +61,7 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
 <link rel="preload" href="${base}assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${base}assets/style.css">
 ${ADSENSE_CLIENT && !suffix ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>\n` : ""}</head>
-<body${ADS ? "" : ' class="no-ads"'} data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${featured.map((c) => c.country).join(",")}"${page === "home" ? ` data-others="${esc(JSON.stringify(others.map(FP.summary)))}"` : ""} data-stamps="${esc(JSON.stringify(stamps))}"${seasons ? ` data-seasons="${esc(JSON.stringify(seasons))}"` : ""}${LIVE_URL && (page === "home" || page === "country") ? ` data-live="${esc(LIVE_URL)}"` : ""}>
+<body${ADS ? "" : ' class="no-ads"'} data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${featured.map((c) => c.country).join(",")}"${page === "home" ? ` data-others="${esc(JSON.stringify(others.map(FP.summary)))}"` : ""} data-stamps="${esc(JSON.stringify(stamps))}"${seasons ? ` data-seasons="${esc(JSON.stringify(seasons))}"` : ""}${LIVE_URL && (page === "home" || page === "country" || page === "fixtures") ? ` data-live="${esc(LIVE_URL)}"` : ""}${Object.entries(attrs).map(([k, v]) => ` data-${k}="${esc(typeof v === "string" ? v : JSON.stringify(v))}"`).join("")}>
 <header class="bar">
   <div class="bar-inner">
     <a class="brand" href="${homeHref}" aria-label="Football Pyramids, home">
@@ -140,6 +140,14 @@ export async function loadHistory(root = ROOT) {
   }
   return out;
 }
+// Fixture lists saved by scripts/update-fixtures.mjs: { "england/premier-league": data }
+export async function loadFixtures(root = ROOT) {
+  const out = {};
+  for (const cfg of COUNTRIES) for (const lg of cfg.leagues) {
+    try { out[`${cfg.country}/${lg.id}`] = JSON.parse(await readFile(path.join(root, "data", "fixtures", cfg.country, `${lg.id}.json`), "utf8")); } catch {}
+  }
+  return out;
+}
 const slug = (year) => `${year}-${String((year + 1) % 100).padStart(2, "0")}`;
 
 // The "Other seasons" list. rel is the path from the page to the country folder ("" or "../").
@@ -180,6 +188,12 @@ function tierNames(c) {
 export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}) {
   const countries = await loadCountries(root);
   const history = await loadHistory(root);
+  const fixtures = await loadFixtures(root);
+  // Links from tables to fixtures pages, relative to the home page or a country page.
+  const fxLinks = (fromHome) => Object.fromEntries(Object.keys(fixtures).map((k) => {
+    const [c, l] = k.split("/");
+    return [k, (fromHome ? `${c}/` : "") + `${l}/fixtures/${suffix}`];
+  }));
   const suffix = preview ? "index.html" : "";
   const stamps = Object.fromEntries(countries.map((c) => [c.country, c.updated]));
   const written = [];
@@ -194,8 +208,8 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   await write("index.html", shell({
     title: "Football Pyramids: every league table, top to bottom | Premier League, La Liga, Bundesliga, Ligue 1, Serie A",
     description: `Every tier of ${countries.length} countries' football pyramids, each on one page: ${countries.map((c) => c.name).join(", ")}. Live scores on match days.`,
-    canonical: SITE + "/", base: "", suffix, page: "home", stamps, countries,
-    main: FP.homeMain(countries.filter((c) => c.featured), "", suffix, countries.filter((c) => !c.featured).map(FP.summary))
+    canonical: SITE + "/", base: "", suffix, page: "home", stamps, countries, attrs: { fixtures: fxLinks(true) },
+    main: FP.homeMain(countries.filter((c) => c.featured), "", suffix, countries.filter((c) => !c.featured).map(FP.summary), { fixtures: fxLinks(true) })
   }));
 
   // Country pages
@@ -206,8 +220,21 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       description: `Every ${c.adjective} league table from ${first} down to ${last} on one page, with promotion and relegation places marked.`,
       canonical: `${SITE}/${c.country}/`, base: "../", suffix, page: "country", country: c.country,
       stamps: { [c.country]: c.updated }, countries, seasons: seasonList(c, history[c.country], "", suffix, null),
-      main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null) })
+      attrs: { fixtures: fxLinks(false) },
+      main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null), fixtures: fxLinks(false) })
     }));
+    // Fixtures pages, one per league
+    for (const lg of c.leagues) {
+      const fx = fixtures[`${c.country}/${lg.id}`];
+      if (!fx) continue;
+      await write(`${c.country}/${lg.id}/fixtures/index.html`, shell({
+        title: `${fx.name} fixtures and results ${fx.season} | Football Pyramids`,
+        description: `Every ${fx.name} fixture and result for ${fx.season}, round by round, with kick-off times in your time zone, postponements and live scores.`,
+        canonical: `${SITE}/${c.country}/${lg.id}/fixtures/`, base: "../../../", suffix, page: "fixtures", country: c.country,
+        stamps: {}, countries, attrs: { league: lg.id, table: `../../${suffix}#${lg.id}` },
+        main: FP.fixturesMain(fx, { tz: "uk", tableHref: `../../${suffix}#${lg.id}` })
+      }));
+    }
     // Past seasons
     const liveYear = Number(String(c.season).slice(0, 4));
     for (const h of history[c.country]) {
@@ -262,9 +289,11 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     const today = new Date().toISOString().slice(0, 10);
     const urls = ["/", ...countries.map((c) => `/${c.country}/`), "/contact/", "/privacy/"];
     const past = countries.flatMap((c) => history[c.country].map((h) => `/${c.country}/${slug(h.year)}/`));
+    const fxUrls = Object.keys(fixtures).filter((k) => countries.some((c) => c.country === k.split("/")[0])).map((k) => `/${k}/fixtures/`);
     await write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>hourly</changefreq></url>`).join("\n")}
+${fxUrls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>daily</changefreq></url>`).join("\n")}
 ${past.map((u) => `  <url><loc>${SITE}${u}</loc><changefreq>yearly</changefreq></url>`).join("\n")}
 </urlset>
 `);
