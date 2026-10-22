@@ -96,8 +96,8 @@ ${ADSENSE_CLIENT && !suffix ? `<script async src="https://pagead2.googlesyndicat
     <div class="finder">
       <label class="sr-only" for="club-find">Find a club</label>
       <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
-      <input id="club-find" type="search" list="club-list" placeholder="Find a club" autocomplete="off" enterkeyhint="search">
-      <datalist id="club-list"></datalist>
+      <input id="club-find" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="club-find-list" placeholder="Find a club" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">
+      <ul class="finder-list" id="club-find-list" role="listbox" aria-label="Matching clubs" hidden></ul>
       <button id="club-clear" type="button" aria-label="Clear highlighted club" hidden>×</button>
     </div>
   </div>
@@ -424,6 +424,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
 
   // Club pages: one per club in the current tables, from data the site already has (no extra API requests).
   const clubUrls = [];
+  const pastFinder = [];   // clubs only in past seasons, for the club finder
   {
     // Every fixture each club has, across its league, cups and Europe.
     const cfgOf = (cc, id) => {
@@ -553,6 +554,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         main: FP.clubMain(data, { tz: "venue" })
       }));
       clubUrls.push(`/${k.path}`);
+      pastFinder.push({ team: k.name, country: k.c.country, countryName: k.c.name, league: last.league, tier: last.tier, past: last.season, path: k.path });
     }
   }
 
@@ -576,11 +578,13 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   for (const c of countries) {
     for (const lg of c.leagues) {
       for (const g of FP.groupsOf(lg)) {
-        for (const r of g.rows) clubs.push({ team: r.team, country: c.country, countryName: c.name, league: lg.name,
+        for (const r of g.rows) clubs.push({ team: r.team, country: c.country, countryName: c.name, league: lg.name, tier: lg.tier,
           ...(clubUrls.includes(`/${c.country}/club/${FP.slug(r.team)}/`) ? { path: `${c.country}/club/${FP.slug(r.team)}/` } : {}) });
       }
     }
   }
+  // Then clubs that are only in past seasons, marked with the last season they were seen.
+  clubs.push(...pastFinder);
   clubs.sort((a, b) => a.team.localeCompare(b.team));
   await write("data/clubs.json", JSON.stringify(clubs));
 
