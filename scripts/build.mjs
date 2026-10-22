@@ -217,7 +217,10 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   // Cards for a country's cups (status from the fixtures), with links relative to the country page.
   const cupCards = (c, rel) => ((COUNTRIES.find((x) => x.country === c.country) || {}).cups || [])
     .filter((cup) => fixtures[`${c.country}/${cup.id}`])
-    .map((cup) => ({ id: cup.id, name: cup.name, status: FP.cupStatus(fixtures[`${c.country}/${cup.id}`]), href: `${rel}${cup.id}/${suffix}` }));
+    .map((cup) => {
+      const fx = fixtures[`${c.country}/${cup.id}`];
+      return { id: cup.id, name: cup.name, status: FP.cupStatus(fx), span: FP.cupSpan(fx), href: `${rel}${cup.id}/${suffix}` };
+    });
   let europe = null;
   try { europe = JSON.parse(await readFile(path.join(root, "data", "europe.json"), "utf8")); } catch {}
   HAS_EUROPE = !!europe;
@@ -244,9 +247,10 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     description: `Every tier of ${countries.length} countries' football pyramids, each on one page: ${countries.map((c) => c.name).join(", ")}. Live scores on match days.`,
     canonical: SITE + "/", base: "", suffix, page: "home", stamps, countries,
     attrs: { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/fixtures/${suffix}` } : {}) },
-      ...(europe ? { europe: "1" } : {}) },
+      ...(europe ? { europe: "1" } : {}), cupsmap: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])) },
     main: FP.homeMain(countries.filter((c) => c.featured), "", suffix, countries.filter((c) => !c.featured).map(FP.summary),
-      { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/fixtures/${suffix}` } : {}) }, europe })
+      { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/fixtures/${suffix}` } : {}) }, europe,
+        cups: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])) })
   }));
 
   // Country pages

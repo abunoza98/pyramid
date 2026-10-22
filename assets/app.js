@@ -139,6 +139,8 @@
   // The home page shows the Champions League table too, so it also loads data/europe.json.
   if (PAGE === "home" && body.getAttribute("data-europe")) MINE = MINE.concat(["europe"]);
   // The home page's strip shows every country's games, not just the featured ones.
+  var CUPSMAP = {};   // the home page's cup chips, by country
+  try { CUPSMAP = JSON.parse(body.getAttribute("data-cupsmap") || "{}"); } catch (e) {}
   var CUPS = [];   // a country page's cup cards
   try { CUPS = JSON.parse(body.getAttribute("data-cups") || "[]"); } catch (e) {}
   var FIXLINKS = {};   // links from each table to its fixtures page
@@ -214,7 +216,7 @@
     }
     else {
       var eu = MINE.indexOf("europe") > -1 ? withLive[MINE.indexOf("europe")] : null;
-      html = FP.homeMain(withLive.filter(function (c) { return c.country !== "europe"; }), BASE, SUFFIX, OTHERS, { live: live, fixtures: FIXLINKS, europe: eu });
+      html = FP.homeMain(withLive.filter(function (c) { return c.country !== "europe"; }), BASE, SUFFIX, OTHERS, { live: live, fixtures: FIXLINKS, europe: eu, cups: CUPSMAP });
     }
     redraw(html);
     applyTabs();

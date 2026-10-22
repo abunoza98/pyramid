@@ -247,7 +247,17 @@
     '<span class="ad-size"><span class="wide">728 × 90</span><span class="narrow">320 × 100</span></span></div>';
 
   // c: a country's data, or a home-page summary (whose leagues carry clubs/groups counts). link: page the bars link to.
-  function pyramidHTML(c, link) {
+  // cups: [{ name, href, status, span }] shown as chips under the bars.
+  var CUP_ICON = '<svg class="cup-ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2h8v3a4 4 0 0 1-8 0V2zM4 3H2v1a2.5 2.5 0 0 0 2.6 2.5M12 3h2v1a2.5 2.5 0 0 1-2.6 2.5M8 9v3M5 14h6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  function cupChipsHTML(cups) {
+    if (!cups || !cups.length) return "";
+    return '<div class="pyr-cups"><span class="pyr-cups-h">Cups</span>' + cups.map(function (c) {
+      return '<a class="cup-chip" href="' + esc(c.href) + '">' + CUP_ICON + '<span class="cup-chip-name">' + esc(c.name) + "</span>" +
+        '<span class="cup-chip-meta">' + esc([c.span, c.status].filter(Boolean).join(" · ")) + "</span></a>";
+    }).join("") + "</div>";
+  }
+
+  function pyramidHTML(c, link, cups) {
     var tiers = c.leagues.map(function (lg) {
       var g = lg.groups && lg.groups.length;
       return { tier: lg.tier, name: lg.name, short: lg.short, clubs: lg.clubs != null && !lg.rows && !lg.groups ? lg.clubs : clubCount(lg),
@@ -263,7 +273,7 @@
         "<small>" + detail + "</small></span></span>";
       return t.href ? '<a class="pyr-row" href="' + t.href + '">' + inner + "</a>" : '<div class="pyr-row soon">' + inner + "</div>";
     }).join("");
-    return '<figure class="pyr"><div class="pyr-rows">' + rows + "</div>" +
+    return '<figure class="pyr"><div class="pyr-rows">' + rows + "</div>" + cupChipsHTML(cups) +
       "<figcaption>Bar width is to scale with the number of clubs in each tier." +
       ((c.later || []).length ? " Tiers " + c.later.map(function (t) { return t.tier; }).join(" and ") + " are next to be added." : "") +
       "</figcaption></figure>";
@@ -294,12 +304,12 @@
           ", from " + esc(c.leagues[0].name) + " down to " + esc(last.name) + ". Promotion, play-off and relegation places are marked from each league's records.</p>"
         : '<p class="lede">Every league in the top ' + n + " tiers of " + esc(c.adjective) + " football, from " + esc(c.leagues[0].name) +
           " down to " + esc(last.name) + ". Promotion, play-off and relegation places are marked on every table.</p>") +
-      stampHTML(c.mode, c.updated, c.liveCount) + pyramidHTML(c) + "</section>";
+      stampHTML(c.mode, c.updated, c.liveCount) + pyramidHTML(c, "", opts.cups) + "</section>";
     c.leagues.forEach(function (lg, i) {
       html += tierHTML(lg, { fixtures: (opts.fixtures || {})[c.country + "/" + lg.id] }) + bandHTML(lg, c.leagues[i + 1] || null, c.belowNote);
       if (i === 1) html += INLINE_AD;
     });
-    return html + cupsHTML(opts.cups);
+    return html;
   }
 
   /* ---------- Flags (simple SVGs, so they look the same on every device) ---------- */
@@ -380,7 +390,7 @@
   }
 
   // The pyramid explorer: a flag for each country, and that country's pyramid.
-  function explorerHTML(all, base, suffix) {
+  function explorerHTML(all, base, suffix, cupsBy) {
     var tabs = all.map(function (s, i) {
       return '<button type="button" role="tab" class="xp-tab' + (i === 0 ? " on" : "") + '" data-tab="' + s.country + '" aria-selected="' + (i === 0) + '">' +
         flag(s.country) + "<span>" + esc(s.name) + "</span></button>";
@@ -390,7 +400,7 @@
       return '<div class="xp-panel' + (i === 0 ? " on" : "") + '" data-panel="' + s.country + '" role="tabpanel">' +
         '<div class="xp-head"><h2>' + flag(s.country) + (eu ? "European competitions" : "The " + esc(s.adjective) + " pyramid") + "</h2>" +
         "<p>" + (eu ? s.tiers + " competitions · " + s.clubs + " clubs in the league phase" : s.tiers + " tier" + (s.tiers === 1 ? "" : "s") + " · " + s.clubs + " clubs") + "</p></div>" +
-        pyramidHTML(s, eu ? base + "europe/" : href) +
+        pyramidHTML(s, eu ? base + "europe/" : href, (cupsBy || {})[s.country]) +
         '<a class="more" href="' + href + '">' + (eu ? "Open the European tables and brackets" : "Open every " + esc(s.adjective) + " table") + ' <span aria-hidden="true">→</span></a></div>';
     }).join("");
     return '<section class="explorer" data-tabs="pyramid" aria-labelledby="xp-h"><h2 class="section-h" id="xp-h">Pick a pyramid</h2>' +
@@ -421,7 +431,7 @@
       "</section>" +
       stripHTML(opts.live, opts.europe ? all.concat([summary(opts.europe)]) : all, base, suffix, names) +
       // England first (the default), Europe straight after the big five.
-      explorerHTML(opts.europe ? all.slice(0, countries.length).concat([summary(opts.europe)], all.slice(countries.length)) : all, base, suffix) + INLINE_AD;
+      explorerHTML(opts.europe ? all.slice(0, countries.length).concat([summary(opts.europe)], all.slice(countries.length)) : all, base, suffix, opts.cups) + INLINE_AD;
     // The top flights, one tab each, with the Champions League last when it's there.
     var items = countries.map(function (c) {
       return { key: c.country, flagOf: c.country, label: c.leagues[0].name, lg: c.leagues[0],
@@ -770,6 +780,19 @@
     return /final/i.test(last.label) && t && t.winner != null ? "Won by " + t.teams[t.winner].n : "Latest: " + last.label;
   }
 
+  // "Tiers 1–4", or "Open to all levels" when clubs from below the site's leagues take part too.
+  function cupSpan(fx) {
+    if (!fx) return "";
+    var tiers = [], untagged = false;
+    fx.groups[0].rounds.forEach(function (r) { r.fixtures.forEach(function (f) { [f.h, f.a].forEach(function (t) {
+      if (t.tier) tiers.push(t.tier); else untagged = true;
+    }); }); });
+    if (!tiers.length) return "";
+    var lo = Math.min.apply(null, tiers), hi = Math.max.apply(null, tiers);
+    if (untagged) return lo === 1 ? "Open to all levels" : "Tier " + lo + " and below";
+    return lo === hi ? "Tier " + lo : "Tiers " + lo + "–" + hi;
+  }
+
   function cupMain(cup, fx, opts) {
     opts = opts || {};
     var country = fx ? fx.country : cup.country;
@@ -822,6 +845,6 @@
 
   return {
     esc: esc, ukTime: ukTime, clubCount: clubCount, countryClubs: countryClubs, groupsOf: groupsOf,
-    countryMain: countryMain, homeMain: homeMain, summary: summary, flag: flag, fixturesMain: fixturesMain, currentRound: currentRound, compMain: compMain, europeMain: europeMain, cupMain: cupMain, cupStatus: cupStatus, compStatus: compStatus, tiesOf: tiesOf, applyLive: applyLive, clock: clock, isLive: isLive
+    countryMain: countryMain, homeMain: homeMain, summary: summary, flag: flag, fixturesMain: fixturesMain, currentRound: currentRound, compMain: compMain, europeMain: europeMain, cupMain: cupMain, cupStatus: cupStatus, cupSpan: cupSpan, compStatus: compStatus, tiesOf: tiesOf, applyLive: applyLive, clock: clock, isLive: isLive
   };
 });

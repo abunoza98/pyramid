@@ -722,3 +722,16 @@ body.no-ads main { justify-self: center !important; }
 .upset { color: var(--mid); font-weight: 700; }
 .cups-sec { margin-top: 8px; }
 .cups-sec .section-h { margin-top: 52px; }
+
+/* Cup chips under the pyramid */
+.pyr-cups { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--rule-strong); }
+.pyr-cups-h { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-right: 2px; }
+.cup-chip {
+  display: inline-grid; grid-template-columns: auto auto; grid-template-areas: "ic name" "ic meta"; align-items: center; column-gap: 8px;
+  padding: 6px 12px 6px 10px; border-radius: 8px; border: 1px solid var(--accent-line); background: var(--accent-soft);
+  color: var(--ink); text-decoration: none;
+}
+.cup-chip:hover { border-color: var(--accent); }
+.cup-ic { grid-area: ic; width: 18px; height: 18px; color: var(--accent); }
+.cup-chip-name { grid-area: name; font-family: var(--display); font-weight: 700; font-size: 16px; line-height: 1.05; letter-spacing: 0.03em; text-transform: uppercase; }
+.cup-chip-meta { grid-area: meta; font-size: 11.5px; color: var(--muted); }
