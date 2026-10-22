@@ -169,14 +169,12 @@
   }
 
   /* ---------- Whole pages (the inside of <main>) ---------- */
-  // "ENGLAND · [2026–27 ▾]". seasons: [{ label, href, current }]; app.js navigates when the pick changes.
+  // "ENGLAND" then a button per season. seasons: [{ label, href, current }]
   function seasonsHTML(c, seasons) {
-    var pick = seasons && seasons.length > 1
-      ? '<span class="season-wrap"><select class="season-pick" aria-label="Season">' + seasons.map(function (s) {
-          return '<option value="' + esc(s.href) + '"' + (s.current ? " selected" : "") + ">" + esc(s.label) + "</option>";
-        }).join("") + "</select></span>"
-      : "<span>" + esc(c.season) + "</span>";
-    return '<div class="seasons"><span class="seasons-country">' + esc(c.name) + '</span><span class="sep" aria-hidden="true">·</span>' + pick + "</div>";
+    var list = seasons && seasons.length > 1 ? seasons : [{ label: c.season, current: true }];
+    return '<nav class="seasons" aria-label="Seasons"><span class="seasons-country">' + esc(c.name) + "</span><ul>" + list.map(function (s) {
+      return "<li>" + (s.current ? '<span aria-current="page">' + esc(s.label) + "</span>" : '<a href="' + esc(s.href) + '">' + esc(s.label) + "</a>") + "</li>";
+    }).join("") + "</ul></nav>";
   }
 
   function countryMain(c, opts) {
