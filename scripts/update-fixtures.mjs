@@ -37,11 +37,12 @@ export function roundLabel(r) {
 // European competitions: "Play-offs" is used both for the last qualifying round and (after the league phase)
 // for the knockout play-offs, so name them apart by date. League phase rounds become "Matchday N".
 export function europeRounds(list) {
-  const lp = list.filter((x) => /league stage/i.test(x.round || "")).map((x) => x.f.ts);
+  // The league phase (since 2024–25) or, before that, the group stage.
+  const lp = list.filter((x) => /league stage|group stage/i.test(x.round || "")).map((x) => x.f.ts);
   const start = lp.length ? Math.min(...lp) : Infinity;
   for (const x of list) {
     const r = x.round || "";
-    const m = /^league stage\s*-\s*(\d+)$/i.exec(r);
+    const m = /^(?:league|group) stage\s*-\s*(\d+)$/i.exec(r);
     if (m) x.round = `Matchday ${m[1]}`;
     else if (/^play-?offs?$|^playoff round$/i.test(r) || /knockout round play-?offs/i.test(r)) {
       x.round = x.f.ts < start ? "Qualifying play-offs" : "Knockout play-offs";

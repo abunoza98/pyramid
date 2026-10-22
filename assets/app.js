@@ -201,7 +201,7 @@
       var id = body.getAttribute("data-league");
       var comp = withLive[0].leagues.filter(function (l) { return l.id === id; })[0];
       if (!comp) return;
-      html = FP.compMain(comp, compFx, { tz: fxState.tz, live: live, fixturesHref: body.getAttribute("data-fx") || "" });
+      html = FP.compMain(comp, compFx, { tz: fxState.tz, live: live, fixturesHref: body.getAttribute("data-fx") || "", seasons: seasons });
     }
     else html = FP.homeMain(withLive, BASE, SUFFIX, OTHERS, { live: live, fixtures: FIXLINKS, europe: EUROPE_SUM, statuses: STATUSES });
     redraw(html);
@@ -305,14 +305,15 @@
     $("main-content").innerHTML = FP.fixturesMain(fxData, {
       tz: fxState.tz, group: fxState.group, round: fxState.round, live: live, myClub: myClub, localIsUk: LOCAL_IS_UK,
       tableHref: body.getAttribute("data-table") || "",
-      tableText: COUNTRY === "europe" && fxData ? fxData.name + " table and bracket" : null
+      tableText: COUNTRY === "europe" && fxData ? fxData.name + (fxData.year ? " " + fxData.season : " table and bracket") : null
     });
     window.scrollTo(0, y);
   }
   function fxRound() { var el = document.querySelector(".fx-round"); return el ? Number(el.getAttribute("data-round")) : 0; }
   function fxStart() {
     var league = body.getAttribute("data-league");
-    fetch(BASE + "data/fixtures/" + COUNTRY + "/" + league + ".json?t=" + Date.now(), { cache: "no-store" })
+    var file = body.getAttribute("data-fxfile") || "data/fixtures/" + COUNTRY + "/" + league + ".json";
+    fetch(BASE + file + "?t=" + Date.now(), { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : null; })
       .catch(function () { return null; })
       .then(function (d) {

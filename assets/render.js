@@ -538,7 +538,8 @@
     return '<section class="intro fx-intro" aria-labelledby="intro-h">' +
       '<p class="eyebrow">' + (fx.country === "europe" ? "UEFA" : esc(fx.countryName) + " · Tier " + fx.tier) + " · " + esc(fx.season) + "</p>" +
       '<h1 id="intro-h">' + esc(fx.name) + " fixtures and results</h1>" +
-      '<p class="lede">Every ' + esc(fx.name) + " game this season, round by round, with results, postponements and kick-off changes.</p>" +
+      '<p class="lede">' + (fx.year ? "Every " + esc(fx.name) + " game from " + esc(fx.season) + ", round by round, from the first qualifying round to the final."
+        : "Every " + esc(fx.name) + " game this season, round by round, with results, postponements and kick-off changes.") + "</p>" +
       '<p class="fx-links">' + (opts.tableHref ? '<a href="' + esc(opts.tableHref) + '">' + esc(opts.tableText || fx.name + " table") + " →</a>" : "") +
       '<span>Times in ' + esc(tzName(tz)) + "</span>" +
       (opts.localIsUk ? "" : '<button type="button" class="tz-toggle" data-tz="' + (tz === "uk" ? "local" : "uk") + '">' +
@@ -550,7 +551,7 @@
       '<button type="button" class="rnav-step" data-step="1"' + (ri === g.rounds.length - 1 ? " disabled" : "") + ' aria-label="Next round">›</button></nav>' +
       (liveN ? '<p class="stamp live now"><span class="dot"></span><span>' + liveN + " game" + (liveN === 1 ? "" : "s") + " live</span></p>" : "") +
       '<div class="fx-round" data-round="' + ri + '">' + list + "</div>" +
-      '<p class="fx-foot">Fixture lists are checked every 6 hours; live scores update during games. Kick-off changes are marked for three weeks.</p>';
+      (fx.year ? "" : '<p class="fx-foot">Fixture lists are checked every 6 hours; live scores update during games. Kick-off changes are marked for three weeks.</p>');
   }
 
   /* ---------- European competitions ----------
@@ -669,7 +670,11 @@
     var finished = function (r) { return r.fixtures.every(function (f) { return isDone(f) || GONE[f.st]; }); };
     if (ko.length) {
       var open = ko.filter(function (r) { return !finished(r); })[0];
-      if (!open) return "Final played";
+      if (!open) {
+        var fin = ko.filter(function (r) { return /^final$/i.test(r.label); })[0];
+        var t = fin && tiesOf(fin)[0];
+        return t && t.winner != null ? "Won by " + t.teams[t.winner].n : "Final played";
+      }
       return /^knockout/i.test(open.label) ? open.label : "Knockouts: " + open.label.toLowerCase().replace(/^\w/, function (c) { return c.toUpperCase(); });
     }
     var done = lp.filter(finished).length;
@@ -693,12 +698,14 @@
     return '<section class="intro fx-intro" aria-labelledby="intro-h">' +
       '<p class="eyebrow">UEFA · ' + esc(fx ? fx.season : "") + "</p>" +
       '<h1 id="intro-h"><span class="comp-dot c-' + esc(comp.id) + '" aria-hidden="true"></span>' + esc(comp.name) + "</h1>" +
-      '<p class="lede"><strong>' + esc(compStatus(comp, fx)) + "</strong> · The league-phase table, the knockout bracket as each draw is made, and every qualifying tie.</p>" +
+      (opts.seasons ? seasonsHTML({ name: comp.name, season: fx ? fx.season : "" }, opts.seasons) : "") +
+      '<p class="lede"><strong>' + esc(compStatus(comp, fx)) + "</strong> · " + (comp.final ? (comp.groups ? "The group-stage tables" : "The league-phase table") + ", the full knockout bracket and every qualifying tie."
+        : "The league-phase table, the knockout bracket as each draw is made, and every qualifying tie.") + "</p>" +
       '<p class="fx-links">' + (opts.fixturesHref ? '<a href="' + esc(opts.fixturesHref) + '">Fixtures and results by round →</a>' : "") +
       '<span>Times in ' + esc(tzName(tz)) + "</span></p></section>" +
       '<section class="comp" data-tabs="stage"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Stages">' +
-      tab("lp", "League phase") + tab("ko", "Knockouts") + tab("q", "Qualifying") + "</div>" +
-      panel("lp", tierHTML(comp, { eyebrow: "League phase" })) +
+      tab("lp", comp.groups ? "Group stage" : "League phase") + tab("ko", "Knockouts") + tab("q", "Qualifying") + "</div>" +
+      panel("lp", (comp.rows && !comp.rows.length && !comp.groups ? '<p class="ko-empty">No table for this season.</p>' : tierHTML(comp, { eyebrow: comp.groups ? "Group stage" : "League phase" }))) +
       panel("ko", bracketHTML(ko, tz, now)) +
       panel("q", qualifyingHTML(q, tz, now)) + "</section>";
   }
