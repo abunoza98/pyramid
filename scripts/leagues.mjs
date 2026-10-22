@@ -6,6 +6,9 @@ export const SITE = "https://footballpyramids.com";
 
 // Shown on the About & contact and Privacy pages.
 // operator: leave empty to keep the company name off the site, or set e.g. "Arrow Sport Pty Ltd".
+// Ad slots stay hidden until AdSense is approved. Set to true when the ad code goes in.
+export const ADS = false;
+
 export const CONTACT = { email: "hello@footballpyramids.com", operator: "Arrow Sport Pty Ltd", based: "Australia" };
 
 const Z = (from, to, kind, label) => ({ from, to, kind, label });
@@ -140,6 +143,28 @@ export const NAMES = {
   "Paderborn": "SC Paderborn", "FC Schalke 04": "Schalke 04",
   // France
   "Paris Saint Germain": "Paris Saint-Germain", "Saint Etienne": "Saint-Étienne", "Stade Brestois 29": "Brest",
+  "York": "York City",
+  // Spain (added after the first live run, October 2026)
+  "Granada CF": "Granada", "Celta de Vigo II": "Celta Fortuna", "FC Andorra": "Andorra", "AD Ceuta FC": "Ceuta",
+  "Mérida AD": "Mérida", "Athletic Club II": "Bilbao Athletic", "Mirandes": "Mirandés", "Extremadura 1924": "Extremadura",
+  "Deportivo La Coruña II": "Deportivo Fabril", "CD Coria": "Coria", "Arenas Getxo": "Arenas", "Real Avilés": "Avilés",
+  "Villarreal II": "Villarreal B", "FC Cartagena": "Cartagena", "Alcorcon": "Alcorcón", "Real Madrid II": "Real Madrid Castilla",
+  "Gimnastic": "Gimnàstic", "Atlético Madrid II": "Atlético Madrileño", "Europa Fc": "Europa", "Real Jaén": "Jaén", "Real Murcia": "Murcia",
+  "Unionistas de Salamanca": "Unionistas",
+  // Germany
+  "FSV Mainz 05": "Mainz 05", "SC Paderborn 07": "SC Paderborn", "SpVgg Greuther Fürth": "Greuther Fürth",
+  "SV Darmstadt 98": "Darmstadt 98", "FC Viktoria Köln": "Viktoria Köln", "FC Saarbrücken": "1. FC Saarbrücken",
+  "Hoffenheim II": "TSG Hoffenheim II", "Stuttgart II": "VfB Stuttgart II", "FC Ingolstadt 04": "FC Ingolstadt",
+  "SV Wehen": "Wehen Wiesbaden", "Verl": "SC Verl", "SG Sonnenhof Grossaspach": "Sonnenhof Großaspach",
+  "SSV Jahn Regensburg": "Jahn Regensburg", "Havelse": "TSV Havelse", "Rot-Weiß Essen": "Rot-Weiss Essen",
+  // France
+  "Estac Troyes": "Troyes", "RED Star FC 93": "Red Star", "PAU": "Pau", "Clermont Foot": "Clermont",
+  "La Roche VF": "La Roche", "Le Puy Foot": "Le Puy", "Fleury 91": "Fleury", "Gobelins": "Paris 13 Atletico",
+  "Quevilly": "Quevilly-Rouen", "Thionville Lusitanos": "Thionville", "Orleans": "Orléans", "Bourg-en-bresse 01": "Bourg-Péronnas",
   // Italy
-  "Inter": "Inter Milan", "Hellas Verona": "Hellas Verona", "Sudtirol": "Südtirol"
+  "Inter": "Inter Milan", "AS Roma": "Roma", "Sudtirol": "Südtirol", "Vicenza Virtus": "Vicenza", "Alcione": "Alcione Milano",
+  "Albinoleffe": "AlbinoLeffe", "Desenzano Calvina": "Desenzano", "Juventus U23": "Juventus Next Gen", "Athletic Carpi": "Carpi",
+  "PRO Vercelli": "Pro Vercelli", "Guidonia Montecelio 1937": "Guidonia Montecelio", "Atalanta II": "Atalanta U23",
+  "Campobasso FC": "Campobasso", "Forli": "Forlì", "SS Monopoli": "Monopoli", "AZ Picerno": "Picerno",
+  "Team Altamura": "Altamura", "Inter U23": "Inter Milan U23"
 };

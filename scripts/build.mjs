@@ -10,7 +10,7 @@ import { readFile, writeFile, mkdir, copyFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import path from "node:path";
-import { COUNTRIES, SITE, CONTACT } from "./leagues.mjs";
+import { COUNTRIES, SITE, CONTACT, ADS } from "./leagues.mjs";
 import { contactPage, privacyPage } from "./pages.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -49,7 +49,7 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
 <link rel="preload" href="${base}assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${base}assets/style.css">
 </head>
-<body data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${countries.map((c) => c.country).join(",")}" data-stamps="${esc(JSON.stringify(stamps))}">
+<body${ADS ? "" : ' class="no-ads"'} data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${countries.map((c) => c.country).join(",")}" data-stamps="${esc(JSON.stringify(stamps))}">
 <header class="bar">
   <div class="bar-inner">
     <a class="brand" href="${homeHref}" aria-label="Football Pyramids, home">
