@@ -12,7 +12,8 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { EUROPE } from "./leagues.mjs";
 import { api, toRows, groupName, seasonLabel } from "./update-standings.mjs";
-import { slim, toRounds, europeRounds } from "./update-fixtures.mjs";
+import { slim } from "./update-fixtures.mjs";
+import { toRounds, europeRounds } from "./rounds.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const now = new Date();

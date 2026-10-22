@@ -12,6 +12,7 @@ import { createRequire } from "node:module";
 import path from "node:path";
 import { COUNTRIES, EUROPE, SITE, CONTACT, ADS, ADSENSE_CLIENT, LIVE_URL } from "./leagues.mjs";
 import { zoneAt, applyPlayoffRules, labelCupPlaces } from "./zones.mjs";
+import { regroupEurope } from "./rounds.mjs";
 export { applyPlayoffRules, labelCupPlaces };
 import { contactPage, privacyPage } from "./pages.mjs";
 
@@ -147,7 +148,10 @@ export async function loadHistory(root = ROOT) {
 export async function loadFixtures(root = ROOT) {
   const out = {};
   for (const cfg of [...COUNTRIES, EUROPE]) for (const lg of cfg.leagues) {
-    try { out[`${cfg.country}/${lg.id}`] = JSON.parse(await readFile(path.join(root, "data", "fixtures", cfg.country, `${lg.id}.json`), "utf8")); } catch {}
+    try {
+      const fx = JSON.parse(await readFile(path.join(root, "data", "fixtures", cfg.country, `${lg.id}.json`), "utf8"));
+      out[`${cfg.country}/${lg.id}`] = cfg === EUROPE ? regroupEurope(fx) : fx;
+    } catch {}
   }
   return out;
 }
@@ -161,7 +165,7 @@ export async function loadEuropeHistory(root = ROOT) {
     const list = [];
     for (const f of files) {
       const h = JSON.parse(await readFile(path.join(dir, f), "utf8"));
-      try { h.fx = JSON.parse(await readFile(path.join(dir, f.replace(".json", "-fixtures.json")), "utf8")); } catch { h.fx = null; }
+      try { h.fx = regroupEurope(JSON.parse(await readFile(path.join(dir, f.replace(".json", "-fixtures.json")), "utf8"))); } catch { h.fx = null; }
       list.push(h);
     }
     out[lg.id] = list.sort((a, b) => b.year - a.year);

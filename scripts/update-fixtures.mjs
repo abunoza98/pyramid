@@ -14,6 +14,8 @@ import path from "node:path";
 import { COUNTRIES, EUROPE, NAMES } from "./leagues.mjs";
 import { api, seasonLabel } from "./update-standings.mjs";
 import { build } from "./build.mjs";
+import { roundLabel, europeRounds, toRounds } from "./rounds.mjs";
+export { roundLabel, europeRounds, toRounds };
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const now = new Date();
@@ -22,35 +24,6 @@ const MOVED_DAYS = 21;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const name = (t) => { const raw = String(t?.name || "Unknown").trim(); return NAMES[raw] || raw; };
-
-// "Regular Season - 12" -> "Round 12"; "Relegation Round - 3" -> "Relegation round 3"
-export function roundLabel(r) {
-  const s = String(r || "").trim();
-  let m = /^Regular Season\s*-\s*(\d+)$/i.exec(s);
-  if (m) return `Round ${m[1]}`;
-  m = /^(.*?)\s*-\s*(\d+)$/.exec(s);
-  if (m) return `${m[1].charAt(0).toUpperCase()}${m[1].slice(1).toLowerCase()} ${m[2]}`;
-  if (/^\d+(st|nd|rd|th) qualifying round$/i.test(s)) return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
-  return s || "Other games";
-}
-
-// European competitions: "Play-offs" is used both for the last qualifying round and (after the league phase)
-// for the knockout play-offs, so name them apart by date. League phase rounds become "Matchday N".
-export function europeRounds(list) {
-  // The league phase (since 2024–25) or, before that, the group stage.
-  const lp = list.filter((x) => /league stage|group stage/i.test(x.round || "")).map((x) => x.f.ts);
-  const start = lp.length ? Math.min(...lp) : Infinity;
-  for (const x of list) {
-    const r = x.round || "";
-    const m = /^(?:league|group) stage\s*-\s*(\d+)$/i.exec(r);
-    if (m) x.round = `Matchday ${m[1]}`;
-    else if (/^play-?offs?$|^playoff round$/i.test(r) || /knockout round play-?offs/i.test(r)) {
-      x.round = x.f.ts < start ? "Qualifying play-offs" : "Knockout play-offs";
-    }
-    x.f.stage = /qualif/i.test(x.round) || x.f.ts < start ? "q" : /^Matchday/.test(x.round) ? "lp" : "ko";
-  }
-  return list;
-}
 
 // One API fixture -> what the pages need.
 export function slim(x, prev) {
@@ -75,24 +48,6 @@ export function slim(x, prev) {
     else if (prev.moved && Date.now() - Date.parse(prev.moved.seen) < MOVED_DAYS * 86400000) f.moved = prev.moved;
   }
   return f;
-}
-
-// Fixtures -> rounds, in date order (by each round's middle kick-off, so a rearranged game doesn't reorder rounds).
-export function toRounds(list) {
-  const by = new Map();
-  for (const x of list) {
-    const key = x.round;
-    if (!by.has(key)) by.set(key, []);
-    by.get(key).push(x.f);
-  }
-  const rounds = [...by.entries()].map(([key, fixtures]) => {
-    fixtures.sort((a, b) => a.ts - b.ts || a.id - b.id);
-    const times = fixtures.filter((f) => !["PST", "CANC", "TBD"].includes(f.st)).map((f) => f.ts).sort((a, b) => a - b);
-    const mid = times.length ? times[Math.floor(times.length / 2)] : (fixtures[0]?.ts || 0);
-    return { key, label: roundLabel(key), mid, fixtures };
-  });
-  rounds.sort((a, b) => a.mid - b.mid);
-  return rounds;
 }
 
 async function main() {
