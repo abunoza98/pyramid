@@ -9,7 +9,7 @@ export const SITE = "https://footballpyramids.com";
 // Ad slots stay hidden until AdSense is approved. Set to true when the ad code goes in.
 export const ADS = false;
 // Live scores come from a small Cloudflare Worker (worker/live.js). Set to "" to switch live scores off.
-export const LIVE_URL = "https://live.footballpyramids.com/live.json";
+export const LIVE_URL = "https://footballpyramids-live.shrill-breeze-e2a5.workers.dev/live.json";
 // Google AdSense publisher ID. The AdSense script loads on every page and ads.txt is written from this.
 export const ADSENSE_CLIENT = "ca-pub-3336933659025894";
 
@@ -206,7 +206,7 @@ export const COUNTRIES = [
     cups: [{ apiId: 181, id: "scottish-cup", name: "Scottish Cup", short: "SC",
       rounds: { "1st Round": "First round", "Round of 128": "Second round", "Round of 64": "Third round", "Round of 32": "Fourth round", "Round of 16": "Fifth round" } }, { apiId: 185, id: "scottish-league-cup", name: "Scottish League Cup", short: "SLC", rounds: { "Group Stage": "Group stage" } }],
     leagues: [
-      { apiId: 179, id: "premiership", tier: 1, name: "Premiership", short: "PREM", clubs: 12,
+      { apiId: 179, id: "premiership", tier: 1, name: "Premiership", short: "PREM", clubs: 12, split: 6,
         zones: [Z(11, 11, "down", "Relegation play-off"), Z(12, 12, "down", "Relegation")],
         relegationNote: "12th drops to the Championship; 11th plays the Championship play-off winner",
         notes: ["After 33 games the league splits into a top six and a bottom six for the last five rounds."] },
