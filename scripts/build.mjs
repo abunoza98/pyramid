@@ -153,7 +153,12 @@ export async function loadHistory(root = ROOT) {
     let files = [];
     try { files = (await readdir(dir)).filter((f) => /^\d{4}\.json$/.test(f)); } catch {}
     const list = [];
-    for (const f of files) list.push(JSON.parse(await readFile(path.join(dir, f), "utf8")));
+    for (const f of files) {
+      const h = JSON.parse(await readFile(path.join(dir, f), "utf8"));
+      // Leave out leagues whose saved seasons before `historyFrom` aren't reliable.
+      h.leagues = h.leagues.filter((l) => !((cfg.leagues.find((x) => x.id === l.id) || {}).historyFrom > h.year));
+      if (h.leagues.length) list.push(h);
+    }
     out[cfg.country] = list.sort((a, b) => b.year - a.year);
   }
   return out;

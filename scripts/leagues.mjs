@@ -68,7 +68,9 @@ export const COUNTRIES = [
         zones: [Z(1, 2, "top", "Promotion"), Z(3, 6, "mid", "Play-offs"), Z(19, 22, "down", "Relegation")],
         promotionNote: "1st, 2nd and the play-off winner go up", relegationNote: "19th–22nd drop to Primera Federación",
         notes: [RESERVES] },
-      { id: "primera-federacion", tier: 3, name: "Primera Federación", short: "PF", clubs: 20,
+      // Primera Federación started in 2021-22. The API's older seasons under these IDs are the old
+      // Segunda B, filed under the wrong years, so past tables start from 2021-22.
+      { id: "primera-federacion", tier: 3, name: "Primera Federación", short: "PF", clubs: 20, historyFrom: 2021,
         groups: [{ apiId: 435, name: "Group 1" }, { apiId: 436, name: "Group 2" }],
         zones: [Z(1, 1, "top", "Promotion"), Z(2, 5, "mid", "Play-offs"), Z(16, 20, "down", "Relegation")],
         promotionNote: "Each group winner goes up, plus two play-off winners",
@@ -236,7 +238,8 @@ export const COUNTRIES = [
       { apiId: 205, id: "2-lig", tier: 3, name: "2. Lig", short: "2L", zones: "api", splitGroups: true,
         promotionNote: "Each group winner goes up, plus each group's play-off winner (2nd–5th)",
         relegationNote: "The bottom clubs in each group drop to the 3. Lig", notes: [] },
-      { id: "3-lig", tier: 4, name: "3. Lig", short: "3L", clubs: 18, zones: "api",
+      // Before 2018-19 the API names several different 3. Lig clubs "Elazığ Belediyespor SK", so past tables start there.
+      { id: "3-lig", tier: 4, name: "3. Lig", short: "3L", clubs: 18, zones: "api", historyFrom: 2018,
         groups: [{ apiId: 552, name: "Group 1" }, { apiId: 553, name: "Group 2" }, { apiId: 554, name: "Group 3" }],
         promotionNote: "The top clubs in each group go up",
         notes: ["API-Football doesn't mark this league's promotion and relegation places yet, so they aren't coloured."] }
