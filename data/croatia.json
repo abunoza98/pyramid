@@ -1,0 +1,664 @@
+{
+ "country": "croatia",
+ "name": "Croatia",
+ "adjective": "Croatian",
+ "season": "2026–27",
+ "mode": "live",
+ "updated": "2026-10-20T00:00:00.000Z",
+ "belowNote": "Treća NL champions come up",
+ "leagues": [
+  {
+   "id": "hnl",
+   "tier": 1,
+   "name": "HNL",
+   "short": "HNL",
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 2,
+     "to": 2,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 3,
+     "to": 4,
+     "kind": "mid",
+     "label": "Conference League"
+    },
+    {
+     "from": 10,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "relegationNote": "10th drops to the Prva NL",
+   "notes": [
+    "Ten clubs play each other four times."
+   ],
+   "history": [
+    {
+     "until": 2021,
+     "name": "Prva HNL",
+     "short": "1HNL"
+    }
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Hajduk Split",
+     "p": 10,
+     "w": 7,
+     "d": 1,
+     "l": 2,
+     "gf": 19,
+     "ga": 9,
+     "pts": 22,
+     "tid": 608,
+     "form": "WWLWW"
+    },
+    {
+     "pos": 2,
+     "team": "Dinamo Zagreb",
+     "p": 9,
+     "w": 6,
+     "d": 1,
+     "l": 2,
+     "gf": 23,
+     "ga": 12,
+     "pts": 19,
+     "tid": 620,
+     "form": "WLWLW"
+    },
+    {
+     "pos": 3,
+     "team": "Varaždin",
+     "p": 10,
+     "w": 5,
+     "d": 3,
+     "l": 2,
+     "gf": 14,
+     "ga": 8,
+     "pts": 18,
+     "tid": 1483,
+     "form": "DDDWL"
+    },
+    {
+     "pos": 4,
+     "team": "Osijek",
+     "p": 10,
+     "w": 5,
+     "d": 2,
+     "l": 3,
+     "gf": 19,
+     "ga": 15,
+     "pts": 17,
+     "tid": 616,
+     "form": "LWDLD"
+    },
+    {
+     "pos": 5,
+     "team": "Rijeka",
+     "p": 9,
+     "w": 5,
+     "d": 2,
+     "l": 2,
+     "gf": 16,
+     "ga": 12,
+     "pts": 17,
+     "tid": 561,
+     "form": "WDWLW"
+    },
+    {
+     "pos": 6,
+     "team": "Istra 1961",
+     "p": 10,
+     "w": 3,
+     "d": 3,
+     "l": 4,
+     "gf": 17,
+     "ga": 16,
+     "pts": 12,
+     "tid": 1016,
+     "form": "DWLWL"
+    },
+    {
+     "pos": 7,
+     "team": "Lokomotiva",
+     "p": 10,
+     "w": 3,
+     "d": 1,
+     "l": 6,
+     "gf": 13,
+     "ga": 17,
+     "pts": 10,
+     "tid": 1017,
+     "form": "LDLLW"
+    },
+    {
+     "pos": 8,
+     "team": "Slaven Belupo",
+     "p": 10,
+     "w": 3,
+     "d": 1,
+     "l": 6,
+     "gf": 12,
+     "ga": 22,
+     "pts": 10,
+     "tid": 1018,
+     "form": "WLDWL"
+    },
+    {
+     "pos": 9,
+     "team": "Rudeš",
+     "p": 10,
+     "w": 2,
+     "d": 1,
+     "l": 7,
+     "gf": 13,
+     "ga": 27,
+     "pts": 7,
+     "tid": 1019,
+     "form": "LLDWL"
+    },
+    {
+     "pos": 10,
+     "team": "Gorica",
+     "p": 10,
+     "w": 1,
+     "d": 3,
+     "l": 6,
+     "gf": 7,
+     "ga": 15,
+     "pts": 6,
+     "tid": 1068,
+     "form": "LDWLD"
+    }
+   ],
+   "updated": "2026-10-20T00:00:00.000Z"
+  },
+  {
+   "id": "prva-nl",
+   "tier": 2,
+   "name": "Prva NL",
+   "short": "1NL",
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 16,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "promotionNote": "1st goes up",
+   "relegationNote": "16th drops to the Druga NL",
+   "notes": [
+    "Reserve sides can't be promoted to the HNL."
+   ],
+   "history": [
+    {
+     "until": 2021,
+     "name": "Druga HNL",
+     "short": "2HNL"
+    }
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Croatia Zmijavci",
+     "p": 9,
+     "w": 6,
+     "d": 1,
+     "l": 2,
+     "gf": 15,
+     "ga": 7,
+     "pts": 19,
+     "tid": 6254,
+     "form": "LLWWW"
+    },
+    {
+     "pos": 2,
+     "team": "Jadran LP",
+     "p": 9,
+     "w": 4,
+     "d": 4,
+     "l": 1,
+     "gf": 17,
+     "ga": 12,
+     "pts": 16,
+     "tid": 5708,
+     "form": "WWWDD"
+    },
+    {
+     "pos": 3,
+     "team": "Segesta Sisak",
+     "p": 9,
+     "w": 4,
+     "d": 2,
+     "l": 3,
+     "gf": 14,
+     "ga": 12,
+     "pts": 14,
+     "tid": 5722,
+     "form": "WWDLW"
+    },
+    {
+     "pos": 4,
+     "team": "BSK Bijelo Brdo",
+     "p": 9,
+     "w": 4,
+     "d": 2,
+     "l": 3,
+     "gf": 10,
+     "ga": 9,
+     "pts": 14,
+     "tid": 1487,
+     "form": "WLWLD"
+    },
+    {
+     "pos": 5,
+     "team": "Karlovac 1919",
+     "p": 9,
+     "w": 4,
+     "d": 2,
+     "l": 3,
+     "gf": 12,
+     "ga": 12,
+     "pts": 14,
+     "tid": 15295,
+     "form": "LLDWW"
+    },
+    {
+     "pos": 6,
+     "team": "Mladost Ždralovi",
+     "p": 9,
+     "w": 4,
+     "d": 2,
+     "l": 3,
+     "gf": 9,
+     "ga": 10,
+     "pts": 14,
+     "tid": 8593,
+     "form": "WLLWL"
+    },
+    {
+     "pos": 7,
+     "team": "Cibalia",
+     "p": 9,
+     "w": 3,
+     "d": 4,
+     "l": 2,
+     "gf": 9,
+     "ga": 10,
+     "pts": 13,
+     "tid": 1021,
+     "form": "DWWLL"
+    },
+    {
+     "pos": 8,
+     "team": "Dinamo Zagreb II",
+     "p": 9,
+     "w": 4,
+     "d": 0,
+     "l": 5,
+     "gf": 14,
+     "ga": 13,
+     "pts": 12,
+     "tid": 22416,
+     "form": "LLWWL"
+    },
+    {
+     "pos": 9,
+     "team": "Orijent 1919",
+     "p": 9,
+     "w": 3,
+     "d": 3,
+     "l": 3,
+     "gf": 8,
+     "ga": 9,
+     "pts": 12,
+     "tid": 6256,
+     "form": "LWLWD"
+    },
+    {
+     "pos": 10,
+     "team": "Opatija",
+     "p": 9,
+     "w": 3,
+     "d": 2,
+     "l": 4,
+     "gf": 10,
+     "ga": 11,
+     "pts": 11,
+     "tid": 6246,
+     "form": "LLWDW"
+    },
+    {
+     "pos": 11,
+     "team": "Dubrava Zagreb",
+     "p": 9,
+     "w": 3,
+     "d": 2,
+     "l": 4,
+     "gf": 10,
+     "ga": 11,
+     "pts": 11,
+     "tid": 6255,
+     "form": "DWLLW"
+    },
+    {
+     "pos": 12,
+     "team": "Vukovar",
+     "p": 9,
+     "w": 3,
+     "d": 2,
+     "l": 4,
+     "gf": 14,
+     "ga": 17,
+     "pts": 11,
+     "tid": 5730,
+     "form": "WLLWL"
+    },
+    {
+     "pos": 13,
+     "team": "Sesvete",
+     "p": 9,
+     "w": 3,
+     "d": 1,
+     "l": 5,
+     "gf": 10,
+     "ga": 10,
+     "pts": 10,
+     "tid": 1479,
+     "form": "WLLDL"
+    },
+    {
+     "pos": 14,
+     "team": "Dugopolje",
+     "p": 9,
+     "w": 2,
+     "d": 4,
+     "l": 3,
+     "gf": 13,
+     "ga": 14,
+     "pts": 10,
+     "tid": 1471,
+     "form": "LWLLD"
+    },
+    {
+     "pos": 15,
+     "team": "Kustošija",
+     "p": 9,
+     "w": 2,
+     "d": 4,
+     "l": 3,
+     "gf": 6,
+     "ga": 7,
+     "pts": 10,
+     "tid": 1481,
+     "form": "DWLDW"
+    },
+    {
+     "pos": 16,
+     "team": "Hrvace",
+     "p": 9,
+     "w": 2,
+     "d": 1,
+     "l": 6,
+     "gf": 8,
+     "ga": 15,
+     "pts": 7,
+     "tid": 6241,
+     "form": "DWWLL"
+    }
+   ],
+   "updated": "2026-10-20T00:00:00.000Z"
+  },
+  {
+   "id": "druga-nl",
+   "tier": 3,
+   "name": "Druga NL",
+   "short": "2NL",
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 16,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "promotionNote": "1st goes up",
+   "relegationNote": "16th drops to the Treća NL",
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Uskok Klis",
+     "p": 8,
+     "w": 6,
+     "d": 0,
+     "l": 2,
+     "gf": 19,
+     "ga": 7,
+     "pts": 18,
+     "tid": 8589,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 2,
+     "team": "Bjelovar",
+     "p": 9,
+     "w": 5,
+     "d": 2,
+     "l": 2,
+     "gf": 21,
+     "ga": 12,
+     "pts": 17,
+     "tid": 5705,
+     "form": "WDDLW"
+    },
+    {
+     "pos": 3,
+     "team": "Dugo Selo",
+     "p": 9,
+     "w": 5,
+     "d": 1,
+     "l": 3,
+     "gf": 14,
+     "ga": 8,
+     "pts": 16,
+     "tid": 8602,
+     "form": "WWWWL"
+    },
+    {
+     "pos": 4,
+     "team": "Jarun",
+     "p": 8,
+     "w": 3,
+     "d": 5,
+     "l": 0,
+     "gf": 17,
+     "ga": 12,
+     "pts": 14,
+     "tid": 8605,
+     "form": "DDWWD"
+    },
+    {
+     "pos": 5,
+     "team": "Trnje",
+     "p": 9,
+     "w": 4,
+     "d": 2,
+     "l": 3,
+     "gf": 15,
+     "ga": 11,
+     "pts": 14,
+     "tid": 8607,
+     "form": "LLWLD"
+    },
+    {
+     "pos": 6,
+     "team": "Uljanik",
+     "p": 9,
+     "w": 4,
+     "d": 2,
+     "l": 3,
+     "gf": 17,
+     "ga": 18,
+     "pts": 14,
+     "tid": 8582,
+     "form": "LDLWL"
+    },
+    {
+     "pos": 7,
+     "team": "Slavonija Požega",
+     "p": 9,
+     "w": 3,
+     "d": 3,
+     "l": 3,
+     "gf": 16,
+     "ga": 15,
+     "pts": 12,
+     "tid": 6250,
+     "form": "WDWDW"
+    },
+    {
+     "pos": 8,
+     "team": "Solin",
+     "p": 9,
+     "w": 3,
+     "d": 3,
+     "l": 3,
+     "gf": 12,
+     "ga": 11,
+     "pts": 12,
+     "tid": 1480,
+     "form": "LWWDL"
+    },
+    {
+     "pos": 9,
+     "team": "Inter Zaprešić",
+     "p": 9,
+     "w": 3,
+     "d": 3,
+     "l": 3,
+     "gf": 13,
+     "ga": 14,
+     "pts": 12,
+     "tid": 1020,
+     "form": "WLDWD"
+    },
+    {
+     "pos": 10,
+     "team": "Zagora",
+     "p": 9,
+     "w": 2,
+     "d": 5,
+     "l": 2,
+     "gf": 21,
+     "ga": 20,
+     "pts": 11,
+     "tid": 5731,
+     "form": "WWLDD"
+    },
+    {
+     "pos": 11,
+     "team": "Križevci",
+     "p": 9,
+     "w": 3,
+     "d": 2,
+     "l": 4,
+     "gf": 12,
+     "ga": 15,
+     "pts": 11,
+     "tid": 5711,
+     "form": "DWLLD"
+    },
+    {
+     "pos": 12,
+     "team": "Grobničan",
+     "p": 9,
+     "w": 3,
+     "d": 2,
+     "l": 4,
+     "gf": 12,
+     "ga": 18,
+     "pts": 11,
+     "tid": 8580,
+     "form": "WLLDW"
+    },
+    {
+     "pos": 13,
+     "team": "Hrvatski Dragovoljac",
+     "p": 9,
+     "w": 3,
+     "d": 1,
+     "l": 5,
+     "gf": 9,
+     "ga": 16,
+     "pts": 10,
+     "tid": 1472,
+     "form": "WLWLL"
+    },
+    {
+     "pos": 14,
+     "team": "Lučko",
+     "p": 9,
+     "w": 2,
+     "d": 3,
+     "l": 4,
+     "gf": 10,
+     "ga": 12,
+     "pts": 9,
+     "tid": 1477,
+     "form": "LLLWD"
+    },
+    {
+     "pos": 15,
+     "team": "Varteks Varaždin",
+     "p": 9,
+     "w": 2,
+     "d": 2,
+     "l": 5,
+     "gf": 8,
+     "ga": 14,
+     "pts": 8,
+     "tid": 8599,
+     "form": "LDDLW"
+    },
+    {
+     "pos": 16,
+     "team": "Koprivnica",
+     "p": 9,
+     "w": 1,
+     "d": 2,
+     "l": 6,
+     "gf": 10,
+     "ga": 23,
+     "pts": 5,
+     "tid": 5710,
+     "form": "LLDLL"
+    }
+   ],
+   "updated": "2026-10-20T00:00:00.000Z"
+  }
+ ]
+}

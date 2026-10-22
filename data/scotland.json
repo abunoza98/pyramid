@@ -1,0 +1,695 @@
+{
+ "country": "scotland",
+ "name": "Scotland",
+ "adjective": "Scottish",
+ "season": "2026–27",
+ "mode": "live",
+ "updated": "2026-10-21T00:00:00.000Z",
+ "belowNote": "The Highland/Lowland League play-off winner can come up",
+ "leagues": [
+  {
+   "id": "premiership",
+   "tier": 1,
+   "name": "Premiership",
+   "short": "PREM",
+   "zones": [
+    {
+     "from": 11,
+     "to": 11,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 12,
+     "to": 12,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "relegationNote": "12th drops to the Championship; 11th plays the Championship play-off winner",
+   "notes": [
+    "After 33 games the league splits into a top six and a bottom six for the last five rounds."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Celtic",
+     "p": 9,
+     "w": 8,
+     "d": 0,
+     "l": 1,
+     "gf": 23,
+     "ga": 5,
+     "pts": 24,
+     "tid": 247,
+     "form": "WWLWW"
+    },
+    {
+     "pos": 2,
+     "team": "Rangers",
+     "p": 9,
+     "w": 6,
+     "d": 2,
+     "l": 1,
+     "gf": 13,
+     "ga": 7,
+     "pts": 20,
+     "tid": 257,
+     "form": "WWWWD"
+    },
+    {
+     "pos": 3,
+     "team": "Heart of Midlothian",
+     "p": 9,
+     "w": 5,
+     "d": 1,
+     "l": 3,
+     "gf": 20,
+     "ga": 15,
+     "pts": 16,
+     "tid": 254,
+     "form": "WLDWL"
+    },
+    {
+     "pos": 4,
+     "team": "Dundee",
+     "p": 9,
+     "w": 4,
+     "d": 2,
+     "l": 3,
+     "gf": 13,
+     "ga": 10,
+     "pts": 14,
+     "tid": 253,
+     "form": "DLWWD"
+    },
+    {
+     "pos": 5,
+     "team": "St Johnstone",
+     "p": 9,
+     "w": 3,
+     "d": 3,
+     "l": 3,
+     "gf": 11,
+     "ga": 11,
+     "pts": 12,
+     "tid": 258,
+     "form": "WLDWD"
+    },
+    {
+     "pos": 6,
+     "team": "Dundee United",
+     "p": 9,
+     "w": 3,
+     "d": 3,
+     "l": 3,
+     "gf": 11,
+     "ga": 12,
+     "pts": 12,
+     "tid": 1386,
+     "form": "LDWWD"
+    },
+    {
+     "pos": 7,
+     "team": "Aberdeen",
+     "p": 9,
+     "w": 3,
+     "d": 2,
+     "l": 4,
+     "gf": 10,
+     "ga": 10,
+     "pts": 11,
+     "tid": 252,
+     "form": "DWDLW"
+    },
+    {
+     "pos": 8,
+     "team": "St Mirren",
+     "p": 9,
+     "w": 3,
+     "d": 1,
+     "l": 5,
+     "gf": 9,
+     "ga": 17,
+     "pts": 10,
+     "tid": 251,
+     "form": "LLLLL"
+    },
+    {
+     "pos": 9,
+     "team": "Falkirk",
+     "p": 9,
+     "w": 2,
+     "d": 3,
+     "l": 4,
+     "gf": 9,
+     "ga": 12,
+     "pts": 9,
+     "tid": 1389,
+     "form": "DWDLW"
+    },
+    {
+     "pos": 10,
+     "team": "Motherwell",
+     "p": 9,
+     "w": 2,
+     "d": 2,
+     "l": 5,
+     "gf": 11,
+     "ga": 16,
+     "pts": 8,
+     "tid": 256,
+     "form": "LLLLL"
+    },
+    {
+     "pos": 11,
+     "team": "Kilmarnock",
+     "p": 9,
+     "w": 2,
+     "d": 2,
+     "l": 5,
+     "gf": 10,
+     "ga": 20,
+     "pts": 8,
+     "tid": 250,
+     "form": "DWDLW"
+    },
+    {
+     "pos": 12,
+     "team": "Hibernian",
+     "p": 9,
+     "w": 2,
+     "d": 1,
+     "l": 6,
+     "gf": 9,
+     "ga": 14,
+     "pts": 7,
+     "tid": 249,
+     "form": "LLDLL"
+    }
+   ],
+   "updated": "2026-10-21T00:00:00.000Z"
+  },
+  {
+   "id": "scottish-championship",
+   "tier": 2,
+   "name": "Championship",
+   "short": "CH",
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 2,
+     "to": 4,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 9,
+     "to": 9,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 10,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "promotionNote": "1st goes up; 2nd–4th play off for a final against the Premiership's 11th",
+   "relegationNote": "10th drops to League One; 9th plays in League One's play-offs",
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Stenhousemuir",
+     "p": 10,
+     "w": 7,
+     "d": 2,
+     "l": 1,
+     "gf": 13,
+     "ga": 5,
+     "pts": 23,
+     "tid": 6784,
+     "form": "WWWLD"
+    },
+    {
+     "pos": 2,
+     "team": "Partick Thistle",
+     "p": 11,
+     "w": 6,
+     "d": 4,
+     "l": 1,
+     "gf": 12,
+     "ga": 4,
+     "pts": 22,
+     "tid": 901,
+     "form": "DWWWD"
+    },
+    {
+     "pos": 3,
+     "team": "Raith Rovers",
+     "p": 11,
+     "w": 6,
+     "d": 3,
+     "l": 2,
+     "gf": 16,
+     "ga": 7,
+     "pts": 21,
+     "tid": 1385,
+     "form": "DLWWD"
+    },
+    {
+     "pos": 4,
+     "team": "Inverness Caledonian Thistle",
+     "p": 11,
+     "w": 4,
+     "d": 4,
+     "l": 3,
+     "gf": 14,
+     "ga": 11,
+     "pts": 16,
+     "tid": 903,
+     "form": "DWWLW"
+    },
+    {
+     "pos": 5,
+     "team": "Dunfermline",
+     "p": 10,
+     "w": 3,
+     "d": 6,
+     "l": 1,
+     "gf": 8,
+     "ga": 6,
+     "pts": 15,
+     "tid": 1388,
+     "form": "WWDDD"
+    },
+    {
+     "pos": 6,
+     "team": "Livingston",
+     "p": 11,
+     "w": 4,
+     "d": 2,
+     "l": 5,
+     "gf": 14,
+     "ga": 11,
+     "pts": 14,
+     "tid": 255,
+     "form": "DWLLD"
+    },
+    {
+     "pos": 7,
+     "team": "Ayr United",
+     "p": 11,
+     "w": 3,
+     "d": 3,
+     "l": 5,
+     "gf": 10,
+     "ga": 12,
+     "pts": 12,
+     "tid": 1387,
+     "form": "WLWDL"
+    },
+    {
+     "pos": 8,
+     "team": "Arbroath",
+     "p": 11,
+     "w": 3,
+     "d": 2,
+     "l": 6,
+     "gf": 7,
+     "ga": 17,
+     "pts": 11,
+     "tid": 4249,
+     "form": "LWLLL"
+    },
+    {
+     "pos": 9,
+     "team": "Greenock Morton",
+     "p": 11,
+     "w": 2,
+     "d": 1,
+     "l": 8,
+     "gf": 9,
+     "ga": 18,
+     "pts": 7,
+     "tid": 1383,
+     "form": "LLLWW"
+    },
+    {
+     "pos": 10,
+     "team": "Queen's Park",
+     "p": 11,
+     "w": 2,
+     "d": 1,
+     "l": 8,
+     "gf": 6,
+     "ga": 18,
+     "pts": 7,
+     "tid": 6778,
+     "form": "LLLWL"
+    }
+   ],
+   "updated": "2026-10-21T00:00:00.000Z"
+  },
+  {
+   "id": "scottish-league-one",
+   "tier": 3,
+   "name": "League One",
+   "short": "L1",
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 2,
+     "to": 4,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 9,
+     "to": 9,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 10,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "promotionNote": "1st goes up; 2nd–4th play off with the Championship's 9th",
+   "relegationNote": "10th drops to League Two; 9th plays in League Two's play-offs",
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Ross County",
+     "p": 10,
+     "w": 9,
+     "d": 1,
+     "l": 0,
+     "gf": 38,
+     "ga": 6,
+     "pts": 28,
+     "tid": 902,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
+     "team": "Hamilton Academical",
+     "p": 10,
+     "w": 9,
+     "d": 1,
+     "l": 0,
+     "gf": 23,
+     "ga": 3,
+     "pts": 28,
+     "tid": 248,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 3,
+     "team": "East Kilbride",
+     "p": 11,
+     "w": 5,
+     "d": 3,
+     "l": 3,
+     "gf": 20,
+     "ga": 15,
+     "pts": 18,
+     "tid": 6765,
+     "form": "WWWDD"
+    },
+    {
+     "pos": 4,
+     "team": "Montrose",
+     "p": 11,
+     "w": 5,
+     "d": 1,
+     "l": 5,
+     "gf": 14,
+     "ga": 20,
+     "pts": 16,
+     "tid": 4251,
+     "form": "WWLLD"
+    },
+    {
+     "pos": 5,
+     "team": "Airdrieonians",
+     "p": 11,
+     "w": 3,
+     "d": 4,
+     "l": 4,
+     "gf": 10,
+     "ga": 15,
+     "pts": 13,
+     "tid": 4668,
+     "form": "WWWDL"
+    },
+    {
+     "pos": 6,
+     "team": "Alloa Athletic",
+     "p": 11,
+     "w": 3,
+     "d": 3,
+     "l": 5,
+     "gf": 12,
+     "ga": 13,
+     "pts": 12,
+     "tid": 1391,
+     "form": "LLLLW"
+    },
+    {
+     "pos": 7,
+     "team": "Peterhead",
+     "p": 11,
+     "w": 3,
+     "d": 1,
+     "l": 7,
+     "gf": 9,
+     "ga": 17,
+     "pts": 10,
+     "tid": 6777,
+     "form": "LLLLW"
+    },
+    {
+     "pos": 8,
+     "team": "Queen of the South",
+     "p": 11,
+     "w": 3,
+     "d": 1,
+     "l": 7,
+     "gf": 12,
+     "ga": 34,
+     "pts": 10,
+     "tid": 1384,
+     "form": "LLWWL"
+    },
+    {
+     "pos": 9,
+     "team": "East Fife",
+     "p": 11,
+     "w": 1,
+     "d": 6,
+     "l": 4,
+     "gf": 8,
+     "ga": 14,
+     "pts": 9,
+     "tid": 6764,
+     "form": "DLLDL"
+    },
+    {
+     "pos": 10,
+     "team": "Cove Rangers",
+     "p": 11,
+     "w": 1,
+     "d": 3,
+     "l": 7,
+     "gf": 9,
+     "ga": 18,
+     "pts": 6,
+     "tid": 6763,
+     "form": "LLLDL"
+    }
+   ],
+   "updated": "2026-10-20T00:00:00.000Z"
+  },
+  {
+   "id": "scottish-league-two",
+   "tier": 4,
+   "name": "League Two",
+   "short": "L2",
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 2,
+     "to": 4,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 10,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation play-off"
+    }
+   ],
+   "promotionNote": "1st goes up; 2nd–4th play off with League One's 9th",
+   "relegationNote": "10th plays the Highland/Lowland League play-off winner",
+   "notes": [
+    "Edinburgh City: 5 points deducted."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Stranraer",
+     "p": 11,
+     "w": 7,
+     "d": 2,
+     "l": 2,
+     "gf": 25,
+     "ga": 9,
+     "pts": 23,
+     "tid": 6785,
+     "form": "WWDWW"
+    },
+    {
+     "pos": 2,
+     "team": "Clyde",
+     "p": 11,
+     "w": 7,
+     "d": 2,
+     "l": 2,
+     "gf": 27,
+     "ga": 18,
+     "pts": 23,
+     "tid": 6762,
+     "form": "WDLWW"
+    },
+    {
+     "pos": 3,
+     "team": "Elgin City",
+     "p": 11,
+     "w": 5,
+     "d": 3,
+     "l": 3,
+     "gf": 27,
+     "ga": 17,
+     "pts": 18,
+     "tid": 6767,
+     "form": "LLWWD"
+    },
+    {
+     "pos": 4,
+     "team": "Spartans",
+     "p": 11,
+     "w": 4,
+     "d": 3,
+     "l": 4,
+     "gf": 22,
+     "ga": 20,
+     "pts": 15,
+     "tid": 6781,
+     "form": "WLLWL"
+    },
+    {
+     "pos": 5,
+     "team": "Kelty Hearts",
+     "p": 11,
+     "w": 5,
+     "d": 0,
+     "l": 6,
+     "gf": 16,
+     "ga": 21,
+     "pts": 15,
+     "tid": 6773,
+     "form": "LLWLW"
+    },
+    {
+     "pos": 6,
+     "team": "Dumbarton",
+     "p": 11,
+     "w": 4,
+     "d": 1,
+     "l": 6,
+     "gf": 12,
+     "ga": 18,
+     "pts": 13,
+     "tid": 1382,
+     "form": "LWWLD"
+    },
+    {
+     "pos": 7,
+     "team": "Stirling Albion",
+     "p": 11,
+     "w": 3,
+     "d": 3,
+     "l": 5,
+     "gf": 14,
+     "ga": 24,
+     "pts": 12,
+     "tid": 4669,
+     "form": "LDWWD"
+    },
+    {
+     "pos": 8,
+     "team": "Edinburgh City",
+     "p": 11,
+     "w": 4,
+     "d": 4,
+     "l": 3,
+     "gf": 20,
+     "ga": 18,
+     "pts": 11,
+     "ded": 5,
+     "tid": 6766,
+     "form": "WWDLD"
+    },
+    {
+     "pos": 9,
+     "team": "Forfar Athletic",
+     "p": 11,
+     "w": 3,
+     "d": 2,
+     "l": 6,
+     "gf": 11,
+     "ga": 19,
+     "pts": 11,
+     "tid": 4250,
+     "form": "LWLLL"
+    },
+    {
+     "pos": 10,
+     "team": "Annan Athletic",
+     "p": 11,
+     "w": 3,
+     "d": 0,
+     "l": 8,
+     "gf": 11,
+     "ga": 21,
+     "pts": 9,
+     "tid": 6757,
+     "form": "WLLLL"
+    }
+   ],
+   "updated": "2026-10-20T00:00:00.000Z"
+  }
+ ]
+}
