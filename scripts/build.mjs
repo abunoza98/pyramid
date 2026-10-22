@@ -27,7 +27,17 @@ const FAVICON = "data:image/svg+xml," + encodeURIComponent(
 
 const esc = FP.esc;
 
-let HAS_EUROPE = false;   // set by build() once the European tables exist
+let HAS_EUROPE = false;
+
+// Footer notes only where they apply: table pages explain the tables; fixtures, cup and bracket pages need none.
+function footNotes(page, snapshot) {
+  const ranking = "<p>Clubs are ranked by points, then by each league's own tie-break rules.</p>";
+  if (["home", "country", "europe"].includes(page)) {
+    return (snapshot ? "<p>These are sample standings gathered by hand, and each table shows the date it is from.</p>" : "<p>Tables update through the day as results come in.</p>") + ranking;
+  }
+  if (page === "history") return "<p>Final tables as they stood at the end of the season.</p>" + ranking;
+  return "";
+}   // set by build() once the European tables exist
 
 function shell({ title, description, canonical, base, suffix, page, country, stamps, main, countries, seasons, attrs = {} }) {
   const snapshot = countries.some((c) => c.mode !== "live");
@@ -93,8 +103,7 @@ ${ADSENSE_CLIENT && !suffix ? `<script async src="https://pagead2.googlesyndicat
   <main>
     <div id="main-content">${main}</div>
     <footer>
-      ${snapshot ? "<p>These are sample standings gathered by hand, and each table shows the date it is from. Live updates start once the data feed is connected.</p>" : "<p>Tables update through the day as results come in.</p>"}
-      <p>Clubs are ranked by points, then by each league's own tie-break rules. Kick-off times are shown in your own time zone.</p>
+      ${footNotes(page, snapshot)}
       <p>Football Pyramids is an independent site and is not affiliated with any league, federation or club.</p>
       <p class="foot-links">
         <a href="${base}contact/${suffix}">About and contact</a>
