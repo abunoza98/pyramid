@@ -455,6 +455,22 @@
     if (dot.classList.contains("fchip")) { if (!canHover) dot.classList.toggle("open"); return; }
     if (!canHover && !dot.classList.contains("open")) { e.preventDefault(); dot.classList.add("open"); }
   });
+  // Keep a label on screen. Its side (left, centred, right) is set by where its chip or dot usually sits, but on a
+  // phone the form chips can wrap onto a new line, so measure once it shows and nudge it back inside the screen.
+  function fitTip(host) {
+    var tip = host && host.querySelector(".ltip");
+    if (!tip) return;
+    tip.style.translate = "";
+    requestAnimationFrame(function () {
+      var r = tip.getBoundingClientRect(), pad = 12, vw = document.documentElement.clientWidth;
+      if (!r.width) return;
+      var shift = r.left < pad ? pad - r.left : r.right > vw - pad ? vw - pad - r.right : 0;
+      if (shift) tip.style.translate = Math.round(shift) + "px 0";
+    });
+  }
+  ["mouseover", "focusin", "click"].forEach(function (type) {
+    document.addEventListener(type, function (e) { fitTip(e.target.closest ? e.target.closest(".ld, .fchip") : null); });
+  });
   function clubRender() { if (window.FP) FP.retime($("main-content"), fxState.tz, COUNTRY); }
 
   /* ---------- Start ---------- */
