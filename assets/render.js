@@ -1074,15 +1074,23 @@
       var total = off(latest, depth);
       var cap = latest.now ? "This season so far: " + ord(latest.pos) + " " + inLeague(latest.league) + ", " + ord(latest.rank) + " of " + total + " in the pyramid."
         : "In " + latest.season + ": " + ord(latest.pos) + " " + inLeague(latest.league) + ", " + ord(latest.rank) + " of " + total + " in the pyramid.";
-      journey = '<section class="cl-sec"><div class="cl-sec-h"><h2>Pyramid journey</h2></div>' +
-        '<p class="lchart-cap">' + esc(cap) + "</p>" +
+      var ups = d.journey.filter(function (x) { return x.move === "up"; }).length, downs = d.journey.filter(function (x) { return x.move === "down"; }).length;
+      var oldest = d.journey[d.journey.length - 1];
+      var tally = n > 1 && (ups || downs)
+        ? " Since " + oldest.season + ": " + (ups ? ups + " promotion" + (ups === 1 ? "" : "s") : "") + (ups && downs ? " and " : "") +
+          (downs ? downs + " relegation" + (downs === 1 ? "" : "s") : "") + "."
+        : "";
+      journey = '<section class="cl-sec" id="journey"><div class="cl-sec-h"><h2>' + esc(d.name) + (/s$/.test(d.name) ? "’" : "’s") + " journey through the " + (d.adjective ? esc(d.adjective) + " " : "") + "pyramid</h2></div>" +
+        '<p class="lchart-cap">' + esc(cap + tally) + "</p>" +
         '<div class="lchart"><div class="lside">' + side + '</div><div class="lplot" style="height:' + h + 'px">' +
         '<svg viewBox="0 0 1000 ' + ymax + '" preserveAspectRatio="none" aria-hidden="true">' + rects + lpath + "</svg>" + dots + "</div>" +
         '<div class="lx">' + xl + "</div></div>" +
         '<details class="jmore" id="club-seasons"><summary>Season by season <span>' + n + (n === 1 ? " season" : " seasons") + "</span></summary>" +
         '<ul class="jlist">' + d.journey.map(function (x) {
           return "<li><span>" + esc(x.season) + '</span><i class="tag tier-' + x.tier + '">T' + x.tier + "</i>" +
-            ((x.href || (x.now && tableNow)) ? '<a href="' + esc(x.href || tableNow) + '">' + esc(x.league) + "</a>" : esc(x.league)) + "<b>" + (x.pos ? ord(x.pos) + (x.of ? " of " + x.of : "") : "") +
+            "<span class=\"jl\">" + ((x.href || (x.now && tableNow)) ? '<a href="' + esc(x.href || tableNow) + '">' + esc(x.league) + "</a>" : esc(x.league)) +
+            (x.move ? ' <i class="jm ' + x.move + '" title="' + esc((x.move === "up" ? "Up to " : "Down to ") + x.to + " the next season") + '">' +
+              (x.move === "up" ? "▲ Promoted" : "▼ Relegated") + "</i>" : "") + "</span><b>" + (x.pos ? ord(x.pos) + (x.of ? " of " + x.of : "") : "") +
             (x.rank ? '<em>' + ord(x.rank) + " overall</em>" : "") + "</b></li>";
         }).join("") + "</ul></details></section>";
     }

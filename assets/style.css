@@ -880,6 +880,10 @@ tbody tr.is-this .c-club { font-weight: 700; }
 .jlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 14px; }
 .jlist li { display: grid; grid-template-columns: 70px 34px minmax(0, 1fr) auto; align-items: center; gap: 8px; padding: 6px 2px; border-bottom: 1px solid var(--rule); }
 .jlist li > span { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.jlist .jl { min-width: 0; }
+.jlist .jm { display: inline-block; font-style: normal; font-size: 11px; font-weight: 600; white-space: nowrap; margin-left: 4px; }
+.jlist .jm.up { color: var(--up); }
+.jlist .jm.down { color: var(--down); }
 .jlist a { color: var(--ink); text-decoration: none; }
 .jlist a:hover { color: var(--accent); text-decoration: underline; }
 .jlist b { font-weight: 600; font-variant-numeric: tabular-nums; }

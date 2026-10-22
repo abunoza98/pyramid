@@ -464,20 +464,38 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       }
       return out;
     };
-    const pastSeasons = (c, name) => {
+    // A club's past seasons. Rows are matched on API-Football's club ID where both sides have one (the newer
+    // countries' history files carry it), otherwise on the name's slug, so spellings that differ only in accents,
+    // case or punctuation ("1.FC Köln" / "1. FC Köln", "Besiktas" / "Beşiktaş") count as the same club. A row whose
+    // ID differs is a different club, even with the same name.
+    const pastSeasons = (c, name, tid) => {
       const out = [];
+      const sl = FP.slug(name);
+      const same = (x) => (tid && x.tid ? x.tid === tid : FP.slug(x.team) === sl);
       for (const h of history[c.country] || []) {
         const sizes = sizesOf(h.leagues);
         found: for (const plg of h.leagues) for (const pg of FP.groupsOf(plg)) {
-          const pr = pg.rows.find((x) => x.team === name);
+          const pr = pg.rows.find(same);
           if (pr) {
-            out.push({ season: h.season, tier: plg.tier, league: plg.name, pos: pr.pos, of: pg.rows.length, rank: rankIn(sizes, plg.tier, pr.pos), sizes,
+            out.push({ season: h.season, year: h.year, tier: plg.tier, league: plg.name, pos: pr.pos, of: pg.rows.length, rank: rankIn(sizes, plg.tier, pr.pos), sizes,
               href: `${base}${c.country}/${slug(h.year)}/${suffix}${plg.id ? "#" + plg.id : ""}` });
             break found;
           }
         }
       }
       return out;
+    };
+    // Promotion and relegation, from the tier the club played in the following season. Only marked when that season
+    // is on the site too, so a gap in the record (a club below the tiers covered) is never guessed at.
+    const moves = (journey) => {
+      const byYear = new Map(journey.map((x) => [x.year, x]));
+      for (const x of journey) {
+        const next = byYear.get(x.year + 1);
+        if (!next || next.tier === x.tier) continue;
+        x.move = next.tier < x.tier ? "up" : "down";
+        x.to = next.league;
+      }
+      return journey;
     };
     const tableOf = (c, lg) => ({ id: lg.id, name: lg.name, zones: lg.zones });
     for (const [tid, k] of index) {
@@ -503,10 +521,10 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       }
       // Pyramid journey: this season, then each saved past season (matched by name).
       const sizesNow = sizesOf(c.leagues);
-      const journey = [{ season: c.season, tier: lg.tier, league: lg.name, pos: r.pos, of: g.rows.length, rank: rankIn(sizesNow, lg.tier, r.pos), sizes: sizesNow, now: true },
-        ...pastSeasons(c, r.team)];
+      const journey = moves([{ season: c.season, year: Number(String(c.season).slice(0, 4)), tier: lg.tier, league: lg.name, pos: r.pos, of: g.rows.length,
+        rank: rankIn(sizesNow, lg.tier, r.pos), sizes: sizesNow, now: true }, ...pastSeasons(c, r.team, tid)]);
       const data = {
-        tid, name: r.team, country: c.country, countryName: c.name, season: c.season, comps, root: base, suffix,
+        tid, name: r.team, country: c.country, countryName: c.name, adjective: c.adjective, season: c.season, comps, root: base, suffix,
         pos: r.pos, pts: r.pts, p: r.p,
         league: { ...tableOf(c, lg), short: lg.short, group: FP.groupsOf(lg).length > 1 ? g.name : null, rows: g.rows,
           tableHref: `${base}${c.country}/${suffix}#${lg.id}`, _club: `${base}${c.country}/club/`, _suffix: suffix },
@@ -522,10 +540,10 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     }
     // Clubs only in past seasons: their journey through the pyramid and when they were last seen.
     for (const k of pastOnly) {
-      const journey = pastSeasons(k.c, k.name);
+      const journey = moves(pastSeasons(k.c, k.name));
       if (!journey.length) continue;
       const last = journey[0];
-      const data = { tid: null, name: k.name, country: k.c.country, countryName: k.c.name, season: k.c.season, comps: {}, root: base, suffix,
+      const data = { tid: null, name: k.name, country: k.c.country, countryName: k.c.name, adjective: k.c.adjective, season: k.c.season, comps: {}, root: base, suffix,
         league: null, fx: [], journey, ladder: laddersOf(k.c),
         note: `Not in the ${k.c.adjective} leagues covered here this season. Last seen in ${last.season}: ${last.league}, ${ordinal(last.pos)}.` };
       await write(`${k.path}index.html`, shell({
