@@ -441,13 +441,14 @@ body.no-ads main { justify-self: center !important; }
 .mv { display: block; font-size: 8px; line-height: 1; margin-top: 1px; }
 .mv-up { color: var(--up); } .mv-down { color: var(--down); }
 
-.today { margin: 12px 0 0; border: 1px solid var(--rule); border-radius: 8px; background: var(--sheet); }
+.today { margin: 10px 0 0; border: 1px solid var(--rule); border-radius: 8px; background: var(--sheet); }
+.today:not([open]) { display: inline-block; }
 .today summary {
-  display: flex; align-items: center; gap: 8px; padding: 9px 12px; cursor: pointer; list-style: none;
+  display: flex; align-items: center; gap: 8px; padding: 6px 12px; cursor: pointer; list-style: none;
   font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink);
 }
 .today summary::-webkit-details-marker { display: none; }
-.today summary::after { content: "▾"; margin-left: auto; font-size: 11px; color: var(--muted); }
+.today summary::after { content: "▾"; margin-left: auto; padding-left: 10px; font-size: 11px; color: var(--muted); }
 .today[open] summary::after { content: "▴"; }
 .live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--down); flex: none; }
 .today ul { list-style: none; margin: 0; padding: 0 0 4px; border-top: 1px solid var(--rule); }
