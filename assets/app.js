@@ -91,8 +91,10 @@
     setClub(c.team);
     $("club-find").value = c.team;
     $("club-find").blur();
+    // Open the club's page (it stays highlighted in every table from now on).
+    if (c.path) { location.href = BASE + c.path + SUFFIX; return; }
+    // No club page: show it in its table instead.
     if (applyClub(true)) return;
-    // Not on this page: open the club's country page, which scrolls to it.
     location.href = BASE + c.country + "/" + SUFFIX + "#club";
   }
   function submitFind() {

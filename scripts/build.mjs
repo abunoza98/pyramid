@@ -459,7 +459,8 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   for (const c of countries) {
     for (const lg of c.leagues) {
       for (const g of FP.groupsOf(lg)) {
-        for (const r of g.rows) clubs.push({ team: r.team, country: c.country, countryName: c.name, league: lg.name });
+        for (const r of g.rows) clubs.push({ team: r.team, country: c.country, countryName: c.name, league: lg.name,
+          ...(clubUrls.includes(`/${c.country}/club/${FP.slug(r.team)}/`) ? { path: `${c.country}/club/${FP.slug(r.team)}/` } : {}) });
       }
     }
   }
