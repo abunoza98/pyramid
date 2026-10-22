@@ -4,6 +4,10 @@
 
 export const SITE = "https://footballpyramids.com";
 
+// Shown on the About & contact and Privacy pages.
+// operator: leave empty to keep the company name off the site, or set e.g. "Arrow Sport Pty Ltd".
+export const CONTACT = { email: "hello@footballpyramids.com", operator: "Arrow Sport Pty Ltd", based: "Australia" };
+
 const Z = (from, to, kind, label) => ({ from, to, kind, label });
 const RESERVES = "Reserve teams can't be promoted to the same division as their first team.";
 

@@ -10,7 +10,8 @@ import { readFile, writeFile, mkdir, copyFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import path from "node:path";
-import { COUNTRIES, SITE } from "./leagues.mjs";
+import { COUNTRIES, SITE, CONTACT } from "./leagues.mjs";
+import { contactPage, privacyPage } from "./pages.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const require = createRequire(import.meta.url);
@@ -44,10 +45,8 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${canonical}">
 <link rel="icon" href="${FAVICON}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="preload" href="${base}assets/fonts/big-shoulders-display-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="${base}assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${base}assets/style.css">
 </head>
 <body data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${countries.map((c) => c.country).join(",")}" data-stamps="${esc(JSON.stringify(stamps))}">
@@ -81,6 +80,11 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
       ${snapshot ? "<p>These are sample standings gathered by hand, and each table shows the date it is from. Live updates start once the data feed is connected.</p>" : "<p>Tables update through the day as results come in.</p>"}
       <p>Clubs are ranked by points, then by each league's own tie-break rules. Times are UK time.</p>
       <p>Football Pyramids is an independent site and is not affiliated with any league, federation or club.</p>
+      <p class="foot-links">
+        <a href="${base}contact/${suffix}">About and contact</a>
+        <a href="${base}privacy/${suffix}">Privacy policy</a>
+        <button type="button" id="privacy-settings" hidden>Privacy and cookie settings</button>
+      </p>
     </footer>
   </main>
 
@@ -144,6 +148,21 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     }));
   }
 
+  // About & contact, and the privacy policy
+  const snapshot = countries.some((c) => c.mode !== "live");
+  await write(`contact/index.html`, shell({
+    title: "About and contact | Football Pyramids",
+    description: "What Football Pyramids covers, where its tables come from, and how to get in touch.",
+    canonical: `${SITE}/contact/`, base: "../", suffix, page: "static", stamps: {}, countries,
+    main: contactPage({ contact: CONTACT, snapshot, countryNames: countries.map((c) => c.name) })
+  }));
+  await write(`privacy/index.html`, shell({
+    title: "Privacy policy | Football Pyramids",
+    description: "How Football Pyramids handles data, cookies and advertising.",
+    canonical: `${SITE}/privacy/`, base: "../", suffix, page: "static", stamps: {}, countries,
+    main: privacyPage({ contact: CONTACT })
+  }));
+
   // Club index for the finder
   const clubs = [];
   for (const c of countries) {
@@ -158,7 +177,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
 
   if (!preview) {
     const today = new Date().toISOString().slice(0, 10);
-    const urls = ["/", ...countries.map((c) => `/${c.country}/`)];
+    const urls = ["/", ...countries.map((c) => `/${c.country}/`), "/contact/", "/privacy/"];
     await write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>hourly</changefreq></url>`).join("\n")}
@@ -167,7 +186,10 @@ ${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><chan
     await write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
   } else {
     // The preview needs its own copy of the assets and data.
-    for (const rel of ["assets/style.css", "assets/render.js", "assets/app.js", ...countries.map((c) => `data/${c.country}.json`)]) {
+    const fonts = ["big-shoulders-display-latin-700-normal", "big-shoulders-display-latin-800-normal", "ibm-plex-sans-latin-400-normal",
+      "ibm-plex-sans-latin-500-normal", "ibm-plex-sans-latin-600-normal", "ibm-plex-sans-latin-700-normal", "ibm-plex-mono-latin-500-normal"]
+      .map((f) => `assets/fonts/${f}.woff2`);
+    for (const rel of ["assets/style.css", "assets/render.js", "assets/app.js", ...fonts, ...countries.map((c) => `data/${c.country}.json`)]) {
       await mkdir(path.dirname(path.join(outDir, rel)), { recursive: true });
       await copyFile(path.join(root, rel), path.join(outDir, rel));
     }

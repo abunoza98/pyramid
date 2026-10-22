@@ -142,7 +142,7 @@
     window.scrollTo(0, y);
   }
   function refresh() {
-    if (!window.fetch || !window.FP) return;
+    if (!window.fetch || !window.FP || (PAGE !== "home" && PAGE !== "country")) return;
     if (PAGE === "country") {
       getCountry(COUNTRY).then(function (c) {
         if (!valid(c)) return;
@@ -157,6 +157,28 @@
         list.forEach(function (c) { current[c.country] = c.updated; });
       });
     }
+  }
+
+  /* ---------- Copy buttons (contact email) ---------- */
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest && e.target.closest(".copy");
+    if (!btn) return;
+    var text = btn.getAttribute("data-copy");
+    var done = function () { btn.textContent = "Copied"; setTimeout(function () { btn.textContent = "Copy address"; }, 2000); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function () { toast(text); });
+    else toast(text);
+  });
+
+  /* ---------- Privacy and cookie settings ----------
+     Appears once Google's consent tool (AdSense Privacy & messaging) is on the page. */
+  var ps = $("privacy-settings");
+  if (ps) {
+    window.googlefc = window.googlefc || {};
+    window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
+    window.googlefc.callbackQueue.push({ CONSENT_DATA_READY: function () { ps.hidden = false; } });
+    ps.addEventListener("click", function () {
+      if (window.googlefc && window.googlefc.showRevocationMessage) window.googlefc.callbackQueue.push(window.googlefc.showRevocationMessage);
+    });
   }
 
   /* ---------- Start ---------- */
