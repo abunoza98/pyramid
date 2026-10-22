@@ -1,0 +1,50 @@
+name: Audit past seasons
+
+on:
+  workflow_dispatch:
+    inputs:
+      repair:
+        description: "Fix unfinished tables (uses API requests). Untick for a report only."
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-standings
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - name: Check every past season
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: node scripts/audit-history.mjs ${{ inputs.repair && '--repair' || '' }}
+
+      - name: Show the report
+        run: cat data/history/AUDIT.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Rebuild pages
+        run: node scripts/build.mjs
+
+      - name: Commit if anything changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "pyramid-bot"
+          git config user.email "pyramid-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Audit past seasons"
+          git push
