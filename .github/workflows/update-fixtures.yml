@@ -4,7 +4,7 @@ on:
   schedule:
     # Every 6 hours: catches kick-off changes and postponements. Live scores on the day come from the live worker.
     # About 40 requests a run, 160 a day.
-    - cron: "35 */6 * * *"
+    - cron: "35 */2 * * *"
   workflow_dispatch: {}
 
 permissions:
