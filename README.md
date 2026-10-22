@@ -44,7 +44,7 @@ footballpyramids.com: Europe's top five leagues on the home page, and a full pyr
 
 ## Fixtures
 
-`scripts/update-fixtures.mjs` (GitHub: Update fixtures, every 6 hours) saves each league's season fixtures to `data/fixtures/<country>/<league>.json`, divided into the league's rounds. `build.mjs` makes a page per league at `/<country>/<league>/fixtures/`, opening on the current round; each table links to it. Pages show kick-off times in the visitor's time zone (with a switch to UK time), live scores from the live worker, results with half-time scores, and postponed, cancelled and "time to be confirmed" games. When a kick-off time changes, the old time is kept and shown as "Moved from …" for three weeks.
+`scripts/update-fixtures.mjs` (GitHub: Update fixtures, every 2 hours) saves each league's season fixtures to `data/fixtures/<country>/<league>.json`, divided into the league's rounds. `build.mjs` makes a page per league at `/<country>/<league>/fixtures/`, opening on the current round; each table links to it. Pages show kick-off times in the visitor's time zone (with a switch to UK time), live scores from the live worker, results with half-time scores, and postponed, cancelled and "time to be confirmed" games. When a kick-off time changes, the old time is kept and shown as "Moved from …" for three weeks.
 
 ## European competitions
 

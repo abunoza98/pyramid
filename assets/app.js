@@ -52,9 +52,18 @@
     try { if (myClub) localStorage.setItem(STORE_KEY, myClub); else localStorage.removeItem(STORE_KEY); } catch (e) {}
   }
 
-  /* ---------- Club finder (searches every country) ---------- */
-  var clubs = null;   // [{team, country, countryName, league}]
+  /* ---------- Club finder (searches every country, current and past clubs) ----------
+     A combobox: type, pick from the list with the mouse or the arrow keys, Enter opens the club's page.
+     Matching ignores accents, case and punctuation, so "koln" finds "1. FC Köln". Used by the header box on every
+     page and the big box on the home page. */
+  var clubs = null;   // [{team, country, countryName, league, tier, past?, path?, _n}]
   var clubsLoading = null;
+  function norm(s) {
+    var t = String(s || "").toLowerCase();
+    try { t = t.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); } catch (e) {}
+    return t.replace(/ø/g, "o").replace(/ł/g, "l").replace(/ß/g, "ss").replace(/ı/g, "i").replace(/&/g, " and ")
+      .replace(/[^a-z0-9]+/g, " ").trim();
+  }
   function loadClubs() {
     if (clubs) return Promise.resolve(clubs);
     if (clubsLoading) return clubsLoading;
@@ -62,24 +71,30 @@
       .then(function (r) { return r.ok ? r.json() : []; })
       .catch(function () { return []; })
       .then(function (list) {
+        list.forEach(function (c) { c._n = norm(c.team); });
         clubs = list;
-        $("club-list").innerHTML = list.map(function (c) {
-          return '<option value="' + c.team.replace(/"/g, "&quot;") + '">' + c.league + ", " + c.countryName + "</option>";
-        }).join("");
         return list;
       });
     return clubsLoading;
   }
-  function matchClub(q) {
-    q = q.trim().toLowerCase();
-    if (!q || !clubs) return null;
-    if (ALIASES[q]) q = ALIASES[q].toLowerCase();
-    var exact = clubs.filter(function (c) { return c.team.toLowerCase() === q; })[0];
-    if (exact) return exact;
-    var starts = clubs.filter(function (c) { return c.team.toLowerCase().indexOf(q) === 0; });
-    var has = clubs.filter(function (c) { return c.team.toLowerCase().indexOf(q) > -1; });
-    return has.length === 1 ? has[0] : (starts[0] || has[0] || null);
+  // Best matches first: exact name, then names starting with the text, then a word starting with it, then anywhere.
+  // Clubs in this season's tables come before clubs only seen in past seasons, and higher tiers before lower.
+  function searchClubs(q, max) {
+    if (!clubs) return [];
+    var raw = q.trim().toLowerCase();
+    var n = norm(ALIASES[raw] || raw);
+    if (!n) return [];
+    var out = [];
+    clubs.forEach(function (c) {
+      var s = c._n === n ? 0 : c._n.indexOf(n) === 0 ? 1 : (" " + c._n).indexOf(" " + n) > -1 ? 2 : c._n.indexOf(n) > -1 ? 3 : -1;
+      if (s > -1) out.push({ c: c, s: s });
+    });
+    out.sort(function (a, b) {
+      return a.s - b.s || (a.c.past ? 1 : 0) - (b.c.past ? 1 : 0) || (a.c.tier || 9) - (b.c.tier || 9) || a.c.team.localeCompare(b.c.team);
+    });
+    return out.slice(0, max || 8).map(function (x) { return x.c; });
   }
+  function matchClub(q) { return searchClubs(q, 1)[0] || null; }
   var toastTimer;
   function toast(msg) {
     var t = $("toast");
@@ -87,36 +102,89 @@
     clearTimeout(toastTimer);
     toastTimer = setTimeout(function () { t.hidden = true; }, 3200);
   }
-  function goToClub(c) {
+  function goToClub(c, input) {
     setClub(c.team);
-    $("club-find").value = c.team;
-    $("club-find").blur();
+    if (input) { input.value = c.team; input.blur(); }
     // Open the club's page (it stays highlighted in every table from now on).
     if (c.path) { location.href = BASE + c.path + SUFFIX; return; }
     // No club page: show it in its table instead.
     if (applyClub(true)) return;
     location.href = BASE + c.country + "/" + SUFFIX + "#club";
   }
-  function submitFind() {
-    var q = $("club-find").value;
-    if (!q.trim()) return;
-    loadClubs().then(function () {
-      var m = matchClub(q);
-      if (m) goToClub(m);
-      else toast("No club called “" + q.trim() + "” in these leagues yet.");
+  function finder(input) {
+    var list = $(input.getAttribute("aria-controls"));
+    var results = [], active = -1, closeTimer;
+    function close() {
+      list.hidden = true; input.setAttribute("aria-expanded", "false"); input.removeAttribute("aria-activedescendant"); active = -1;
+    }
+    function setActive(i) {
+      active = i;
+      var items = list.querySelectorAll("[role=option]");
+      for (var k = 0; k < items.length; k++) {
+        var on = k === i;
+        items[k].classList.toggle("on", on); items[k].setAttribute("aria-selected", on ? "true" : "false");
+        if (on) { input.setAttribute("aria-activedescendant", items[k].id); items[k].scrollIntoView({ block: "nearest" }); }
+      }
+      if (i < 0) input.removeAttribute("aria-activedescendant");
+    }
+    function show() {
+      var q = input.value;
+      if (!q.trim()) { close(); return; }
+      results = searchClubs(q, 8);
+      if (!results.length) {
+        list.innerHTML = '<li class="finder-none" role="presentation">No club called “' + FP.esc(q.trim()) + "” in these leagues yet.</li>";
+      } else {
+        list.innerHTML = results.map(function (c, i) {
+          var meta = c.past ? c.countryName + " · last seen " + c.past + ", " + c.league : c.league + " · " + c.countryName;
+          return '<li role="option" id="' + list.id + "-" + i + '" aria-selected="false" data-i="' + i + '">' +
+            FP.flag(c.country) + '<span class="fl-name">' + FP.esc(c.team) + '</span><span class="fl-meta">' + FP.esc(meta) + "</span></li>";
+        }).join("");
+      }
+      list.hidden = false; input.setAttribute("aria-expanded", "true");
+      setActive(results.length ? 0 : -1);
+    }
+    function choose() {
+      var q = input.value;
+      if (!q.trim()) return;
+      loadClubs().then(function () {
+        var c = results[active] || matchClub(q);
+        if (c) { close(); goToClub(c, input); }
+        else toast("No club called “" + q.trim() + "” in these leagues yet.");
+      });
+    }
+    input.addEventListener("focus", function () {
+      // The header box shows the remembered club; select it so typing starts a new search.
+      if (input.value && input.value === myClub) { try { input.select(); } catch (e) {} }
+      loadClubs().then(function () { if (input.value && document.activeElement === input && input.value !== myClub) show(); });
+    });
+    input.addEventListener("input", function () {
+      if (input === $("club-find") && !input.value) { setClub(null); applyClub(false); }
+      loadClubs().then(show);
+    });
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        if (list.hidden) { loadClubs().then(show); return; }
+        if (!results.length) return;
+        setActive((active + (e.key === "ArrowDown" ? 1 : -1) + results.length) % results.length);
+      } else if (e.key === "Enter") {
+        e.preventDefault(); choose();
+      } else if (e.key === "Escape") {
+        if (!list.hidden) { e.preventDefault(); close(); }
+      }
+    });
+    input.addEventListener("blur", function () { closeTimer = setTimeout(close, 150); });
+    // mousedown keeps the focus in the box, so the list doesn't close before the click lands.
+    list.addEventListener("mousedown", function (e) { e.preventDefault(); clearTimeout(closeTimer); });
+    list.addEventListener("click", function (e) {
+      var li = e.target.closest && e.target.closest("[role=option]");
+      if (!li) return;
+      var c = results[Number(li.getAttribute("data-i"))];
+      if (c) { close(); goToClub(c, input); }
     });
   }
-  $("club-find").addEventListener("focus", loadClubs, { once: true });
-  $("club-find").addEventListener("change", submitFind);
-  $("club-find").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); submitFind(); } });
-  $("club-find").addEventListener("input", function () {
-    var v = this.value;
-    if (!v) { setClub(null); applyClub(false); return; }
-    if (clubs) {
-      var exact = clubs.filter(function (c) { return c.team === v; })[0];
-      if (exact) goToClub(exact);
-    }
-  });
+  finder($("club-find"));
+  if ($("hero-find")) finder($("hero-find"));
   $("club-clear").addEventListener("click", function () {
     $("club-find").value = "";
     setClub(null);
@@ -168,7 +236,10 @@
     // Keep open/closed sections as the visitor left them (only those with an id, plus the seasons list).
     var key = function (d) { return d.id || (d.classList.contains("seasons") ? "seasons" : null); };
     document.querySelectorAll("#main-content details").forEach(function (d) { var k = key(d); if (k) open[k] = d.open; });
+    // The home page's club search is moved across rather than redrawn, so typing (and focus) survives a live update.
+    var heroFind = $("hero-find-box");
     $("main-content").innerHTML = html;
+    if (heroFind && $("hero-find-box")) $("hero-find-box").replaceWith(heroFind);
     document.querySelectorAll("#main-content details").forEach(function (d) {
       var k = key(d);
       if (k && k in open) d.open = open[k];

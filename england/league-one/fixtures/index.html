@@ -14,12 +14,12 @@
 <meta property="og:image" content="https://footballpyramids.com/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Football Pyramids: every league table from the top flight down, on one page.">
+<meta property="og:image:alt" content="Football Pyramids: football league tables, from the top flight down.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%226%22%20fill%3D%22%23121B2A%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%227%22%20width%3D%228%22%20height%3D%224%22%20rx%3D%221%22%20fill%3D%22%238EA2FF%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2214%22%20width%3D%2216%22%20height%3D%224%22%20rx%3D%221%22%20fill%3D%22%238EA2FF%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%2221%22%20width%3D%2224%22%20height%3D%224%22%20rx%3D%221%22%20fill%3D%22%238EA2FF%22%2F%3E%3C%2Fsvg%3E">
 <link rel="preload" href="../../../assets/fonts/big-shoulders-display-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../../../assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../../assets/style.css?v=839dfe53">
+<link rel="stylesheet" href="../../../assets/style.css?v=c1acab21">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3336933659025894" crossorigin="anonymous"></script>
 </head>
 <body class="no-ads" data-page="fixtures" data-base="../../../" data-index="" data-country="england" data-countries="england,spain,germany,france,italy" data-stamps="{}" data-live="https://footballpyramids-live.shrill-breeze-e2a5.workers.dev/live.json" data-league="league-one" data-table="../../#league-one">
@@ -33,8 +33,8 @@
     <div class="finder">
       <label class="sr-only" for="club-find">Find a club</label>
       <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
-      <input id="club-find" type="search" list="club-list" placeholder="Find a club" autocomplete="off" enterkeyhint="search">
-      <datalist id="club-list"></datalist>
+      <input id="club-find" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="club-find-list" placeholder="Find a club" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">
+      <ul class="finder-list" id="club-find-list" role="listbox" aria-label="Matching clubs" hidden></ul>
       <button id="club-clear" type="button" aria-label="Clear highlighted club" hidden>×</button>
     </div>
   </div>
@@ -69,7 +69,7 @@
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-<script src="../../../assets/render.js?v=3850e1aa"></script>
-<script src="../../../assets/app.js?v=434aeff2"></script>
+<script src="../../../assets/render.js?v=350793b3"></script>
+<script src="../../../assets/app.js?v=3e3e3eb6"></script>
 </body>
 </html>
