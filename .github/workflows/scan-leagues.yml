@@ -1,0 +1,35 @@
+name: Scan leagues
+
+# Run by hand: Actions > Scan leagues > Run workflow. Type the countries to scan
+# (e.g. Portugal Netherlands England:43,50,51). Read the result in the job's log.
+on:
+  workflow_dispatch:
+    inputs:
+      countries:
+        description: "Countries to scan"
+        required: true
+        default: "England:43,50,51 Portugal Netherlands Scotland Belgium Turkey Croatia"
+
+concurrency:
+  group: update-standings
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - name: Scan
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          COUNTRIES: ${{ github.event.inputs.countries }}
+        run: node scripts/scan-leagues.mjs $COUNTRIES | tee scan.txt
+      - name: Save the result as a download
+        uses: actions/upload-artifact@v4
+        with:
+          name: scan
+          path: scan.txt
