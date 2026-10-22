@@ -824,9 +824,13 @@ tbody tr.is-this .c-club { font-weight: 700; }
 .jmore > summary::before { content: "▸"; color: var(--accent); transition: transform 0.15s; }
 .jmore[open] > summary::before { transform: rotate(90deg); }
 .jmore > summary span { font-weight: 400; color: var(--muted); font-size: 13px; }
-.lx { grid-column: 2; position: relative; height: 22px; }
-.lx span { position: absolute; top: 5px; transform: translateX(-50%); font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap; }
-@media (max-width: 600px) { .lx span.odd { display: none; } }
+.lx { grid-column: 2; position: relative; height: 26px; }
+.lx span { position: absolute; top: 8px; transform: translateX(-50%); font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap; }
+.lx span::before { content: ""; position: absolute; left: 50%; top: -8px; width: 1px; height: 5px; background: var(--rule-strong); }
+.lx span.hw { color: transparent; }
+.lx span.first { transform: translateX(-6px); } .lx span.first::before { left: 6px; }
+.lx span.last { transform: translateX(calc(-100% + 6px)); } .lx span.last::before { left: auto; right: 6px; }
+@media (max-width: 600px) { .lx span.hn { color: transparent; } }
 .jlist b em { display: block; font-style: normal; font-weight: 400; font-size: 11px; color: var(--muted); text-align: right; }
 .jlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 14px; }
 .jlist li { display: grid; grid-template-columns: 70px 34px minmax(0, 1fr) auto; align-items: center; gap: 8px; padding: 6px 2px; border-bottom: 1px solid var(--rule); }

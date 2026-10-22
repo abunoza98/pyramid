@@ -1018,10 +1018,14 @@
           esc(x.season + ": " + x.league + ", " + ord(x.pos)) + '"';
         return href ? "<a" + attrs + ' href="' + esc(href) + '">' + tip + "</a>" : "<span" + attrs + ' tabindex="0">' + tip + "</span>";
       }).join("");
-      var every = n > 10 ? 2 : 1;
+      // Season labels, thinned so they never overlap: at most 9 on a wide screen and 5 on a phone,
+      // always keeping the newest. A tick marks every season.
+      var wide = Math.ceil(n / 9), narrow = Math.ceil(n / 5);
       var xl = j.map(function (x, k) {
-        var lab = x.now ? "Now" : String(x.season).replace(/^\d\d(\d\d)[–-]\d\d(\d\d)$/, "$1–$2").replace(/^\d\d(\d\d)$/, "$1");
-        return '<span class="' + ((n - 1 - k) % every ? "odd" : "") + '" style="left:' + pct(X(k), 1000) + '">' + esc(lab) + "</span>";
+        var back = n - 1 - k;
+        var lab = x.now ? "Now" : String(x.season).replace(/^\d\d(\d\d)[–-]\d\d(\d\d)$/, "$1–$2").replace(/^\d\d(\d\d)[–-](\d\d)$/, "$1–$2").replace(/^\d\d(\d\d)$/, "$1");
+        var cls = (back % wide ? "hw" : back % narrow ? "hn" : "") + (k === 0 && n > 1 ? " first" : back === 0 && n > 1 ? " last" : "");
+        return '<span class="' + cls + '" style="left:' + pct(X(k), 1000) + '">' + esc(lab) + "</span>";
       }).join("");
       var h = Math.max(200, Math.min(380, Math.round(ymax * 2.6)));
       var total = off(latest, depth);

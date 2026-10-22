@@ -10,6 +10,8 @@ import { readFile, writeFile, mkdir, copyFile, readdir } from "node:fs/promises"
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import path from "node:path";
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
 import { COUNTRIES, EUROPE, SITE, CONTACT, ADS, ADSENSE_CLIENT, LIVE_URL } from "./leagues.mjs";
 import { zoneAt, applyPlayoffRules, labelCupPlaces } from "./zones.mjs";
 import { regroupEurope } from "./rounds.mjs";
@@ -19,6 +21,9 @@ import { contactPage, privacyPage } from "./pages.mjs";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const require = createRequire(import.meta.url);
 const FP = require(path.join(ROOT, "assets/render.js"));
+// A short fingerprint per asset, added to its URL, so browsers and Cloudflare fetch the new file after each change.
+const VER = Object.fromEntries(["style.css", "render.js", "app.js"].map((f) =>
+  [f, createHash("sha1").update(readFileSync(path.join(ROOT, "assets", f))).digest("hex").slice(0, 8)]));
 
 const FAVICON = "data:image/svg+xml," + encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#121B2A"/>' +
@@ -73,7 +78,7 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
 <link rel="icon" href="${FAVICON}">
 <link rel="preload" href="${base}assets/fonts/big-shoulders-display-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${base}assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="${base}assets/style.css">
+<link rel="stylesheet" href="${base}assets/style.css?v=${VER["style.css"]}">
 ${ADSENSE_CLIENT && !suffix ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>\n` : ""}</head>
 <body${ADS ? "" : ' class="no-ads"'} data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${featured.map((c) => c.country).join(",")}"${page === "home" ? ` data-others="${esc(JSON.stringify(others.map(FP.summary)))}"` : ""} data-stamps="${esc(JSON.stringify(stamps))}"${seasons ? ` data-seasons="${esc(JSON.stringify(seasons))}"` : ""}${LIVE_URL && ["home", "country", "fixtures", "europe", "comp", "cup", "club"].includes(page) ? ` data-live="${esc(LIVE_URL)}"` : ""}${Object.entries(attrs).map(([k, v]) => ` data-${k}="${esc(typeof v === "string" ? v : JSON.stringify(v))}"`).join("")}>
 <header class="bar">
@@ -122,8 +127,8 @@ ${ADSENSE_CLIENT && !suffix ? `<script async src="https://pagead2.googlesyndicat
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-<script src="${base}assets/render.js"></script>
-<script src="${base}assets/app.js"></script>
+<script src="${base}assets/render.js?v=${VER["render.js"]}"></script>
+<script src="${base}assets/app.js?v=${VER["app.js"]}"></script>
 </body>
 </html>
 `;
