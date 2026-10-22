@@ -142,6 +142,43 @@ function seasonList(current, past, rel, suffix, onYear) {
   ];
 }
 
+/* ---------- Play-off results ----------
+   The API doesn't say who won a play-off, but the next season does: a play-off club that turns up a tier higher
+   next season won it. Same for relegation play-offs (stayed up or went down). Marks rows with `out`. */
+const teamsByTier = (s) => new Map(s.leagues.map((lg) => [lg.tier,
+  new Set((lg.groups ? lg.groups.flatMap((g) => g.rows) : lg.rows || []).map((r) => r.team))]));
+function zoneAt(lg, pos) { return (lg.zones || []).find((z) => pos >= z.from && pos <= z.to) || null; }
+
+export function markOutcomes(season, next) {
+  if (!next) return season;
+  const tiers = teamsByTier(next);
+  for (const lg of season.leagues) {
+    const up = tiers.get(lg.tier - 1), same = tiers.get(lg.tier), down = tiers.get(lg.tier + 1);
+    for (const r of lg.groups ? lg.groups.flatMap((g) => g.rows) : lg.rows || []) {
+      const z = zoneAt(lg, r.pos);
+      if (!z || !/play/i.test(z.label)) continue;
+      if (z.kind !== "down" && up?.has(r.team)) r.out = "po-won";
+      else if (z.kind === "down" && same?.has(r.team)) r.out = "po-stayed";
+      else if (z.kind === "down" && down?.has(r.team)) r.out = "po-lost";
+    }
+  }
+  return season;
+}
+
+/* European places that come from winning a cup (e.g. 12th in Europa League because they won the FA Cup)
+   sit apart from the main block at the top. Label those so the key doesn't read "17th Champions League". */
+export function labelCupPlaces(season) {
+  for (const lg of season.leagues) {
+    let topEnd = 0;
+    for (const z of lg.zones || []) {
+      if (z.kind === "down") continue;
+      if (z.from === topEnd + 1) { topEnd = z.to; continue; }
+      if (/league|europe/i.test(z.label) && !/promotion|play/i.test(z.label)) { z.label += " (cup winners)"; z.kind = "cup"; }
+    }
+  }
+  return season;
+}
+
 function tierNames(c) {
   const first = c.leagues[0].name, last = c.leagues[c.leagues.length - 1].name;
   return { first, last };
@@ -179,7 +216,10 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null) })
     }));
     // Past seasons
+    const liveYear = Number(String(c.season).slice(0, 4));
     for (const h of history[c.country]) {
+      const next = h.year + 1 === liveYear ? c : history[c.country].find((x) => x.year === h.year + 1);
+      labelCupPlaces(markOutcomes(h, next));
       const n = tierNames(h);
       const seasons = seasonList(c, history[c.country], "../", suffix, h.year);
       await write(`${c.country}/${slug(h.year)}/index.html`, shell({

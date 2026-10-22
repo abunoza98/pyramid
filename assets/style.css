@@ -249,6 +249,8 @@ a.pyr-row:hover .pyr-label span { text-decoration: underline; text-underline-off
 .legend .k-top i { color: var(--up); }
 .legend .k-mid i { color: var(--mid); }
 .legend .k-down i { color: var(--down); }
+.legend .k-cup i { color: var(--mid); background: transparent; border: 2px solid currentColor; }
+tr.z-cup .c-pos { box-shadow: inset 4px 0 0 transparent, inset 2px 0 0 var(--mid); }
 
 .table-wrap { background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; overflow-x: auto; }
 table { width: 100%; border-collapse: separate; border-spacing: 0; font-variant-numeric: tabular-nums; font-size: 14px; }
@@ -271,6 +273,7 @@ tbody tr:hover > * { background: var(--hover); }
 tr.z-top .c-pos { box-shadow: inset 4px 0 0 var(--up); color: var(--up); }
 tr.z-mid .c-pos { box-shadow: inset 4px 0 0 var(--mid); color: var(--mid); }
 tr.z-down .c-pos { box-shadow: inset 4px 0 0 var(--down); color: var(--down); }
+tr.z-cup .c-pos { box-shadow: inset 4px 0 0 var(--mid); color: var(--mid); }
 tbody tr.edge > * { border-bottom: 2px solid var(--rule-strong); }
 tbody tr.is-mine > * { background: var(--accent-soft); }
 tbody tr.is-mine .c-club { font-weight: 700; }
@@ -284,6 +287,13 @@ tbody tr.is-mine .c-club::before { content: ""; display: inline-block; width: 7p
   font-family: var(--mono); font-size: 11px; font-weight: 500; line-height: 18px; vertical-align: 1px;
   color: var(--down); border: 1px solid currentColor;
 }
+.out {
+  display: inline-block; margin-left: 8px; padding: 0 6px; border-radius: 4px; white-space: nowrap;
+  font-family: var(--mono); font-size: 11px; font-weight: 500; line-height: 18px; vertical-align: 1px;
+  color: var(--sheet); background: var(--up);
+}
+.out.po-lost { background: var(--down); }
+.out.po-stayed { background: var(--muted); }
 .form { display: inline-flex; gap: 3px; }
 .form b { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 3px; font-family: var(--mono); font-size: 10px; font-weight: 500; color: var(--sheet); }
 .form .W { background: var(--up); } .form .D { background: var(--muted); } .form .L { background: var(--down); }

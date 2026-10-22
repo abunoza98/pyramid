@@ -40,6 +40,9 @@
   function clubCount(lg) { return groupsOf(lg).reduce(function (n, g) { return n + g.rows.length; }, 0); }
   function countryClubs(c) { return c.leagues.reduce(function (n, lg) { return n + clubCount(lg); }, 0); }
 
+  // Play-off results, worked out by scripts/build.mjs from the next season's tables.
+  var OUT = { "po-won": "▲ Won play-off", "po-stayed": "Stayed up", "po-lost": "▼ Lost play-off" };
+
   /* ---------- Pieces ---------- */
   function rowHTML(lg, rows, r, i, hasForm) {
     var z = zoneOf(lg, r.pos);
@@ -57,7 +60,8 @@
     return '<tr class="' + cls.join(" ") + '" data-team="' + esc(r.team) + '">' +
       '<td class="c-pos">' + r.pos + "</td>" +
       '<th scope="row" class="c-club">' + esc(r.team) +
-        (r.ded ? '<span class="ded" title="' + r.ded + ' points deducted">−' + r.ded + "</span>" : "") + "</th>" +
+        (r.ded ? '<span class="ded" title="' + r.ded + ' points deducted">−' + r.ded + "</span>" : "") +
+        (r.out ? '<span class="out ' + r.out + '">' + OUT[r.out] + "</span>" : "") + "</th>" +
       '<td class="c-n">' + r.p + "</td>" +
       '<td class="c-n c-w">' + r.w + "</td>" +
       '<td class="c-n c-d">' + r.d + "</td>" +
