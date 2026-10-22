@@ -43,6 +43,94 @@
   // Play-off results, worked out by scripts/build.mjs from the next season's tables.
   var OUT = { "po-won": "▲ Won play-off", "po-stayed": "Stayed up", "po-lost": "▼ Lost play-off" };
 
+  /* ---------- Live scores ----------
+     The live worker sends today's fixtures. applyLive() copies a country's official tables, adds the score of every
+     game in progress (and finished games the official table hasn't caught up with), and re-sorts: "as it stands". */
+  var LIVE_ST = ["1H", "HT", "2H", "ET", "BT", "P", "SUSP", "INT", "LIVE"];
+  var DONE_ST = ["FT", "AET", "PEN"];
+  var OFF_ST = { PST: "Postponed", CANC: "Cancelled", ABD: "Abandoned", AWD: "Awarded", WO: "Walkover", TBD: "TBC" };
+  function isLive(f) { return LIVE_ST.indexOf(f.st) > -1; }
+  function isDone(f) { return DONE_ST.indexOf(f.st) > -1; }
+
+  // "67′", "HT", "45+′" etc. Worked out from when each half kicked off, so it ticks without new data.
+  function clock(f, now) {
+    now = (now || Date.now()) / 1000;
+    if (f.st === "1H" && f.p1) { var m = Math.floor((now - f.p1) / 60) + 1; return m > 45 ? "45+′" : Math.max(1, m) + "′"; }
+    if (f.st === "2H" && f.p2) { var n = 45 + Math.floor((now - f.p2) / 60) + 1; return n > 90 ? "90+′" : Math.max(46, n) + "′"; }
+    return { HT: "HT", ET: "ET", BT: "ET", P: "Pens", SUSP: "Susp.", INT: "Stopped", FT: "FT", AET: "AET", PEN: "Pens" }[f.st] || "Live";
+  }
+
+  function cmpRows(a, b) {
+    return b.pts - a.pts || (b.gf - b.ga) - (a.gf - a.ga) || b.gf - a.gf || a.pos - b.pos;
+  }
+
+  function applyLive(c, live, now) {
+    var fx = live && live.fixtures ? live.fixtures.filter(function (f) { return f.c === c.country; }) : [];
+    if (!fx.length) return c;
+    var d = JSON.parse(JSON.stringify(c));
+    d.liveCount = 0;
+    d.leagues.forEach(function (lg) {
+      var mine = fx.filter(function (f) { return f.l === lg.id; });
+      if (!mine.length) return;
+      var names = {};
+      groupsOf(lg).forEach(function (g) { g.rows.forEach(function (r) { if (r.tid) names[r.tid] = r.team; }); });
+      lg.today = mine.map(function (f) {
+        return { st: f.st, ko: f.ko, clock: isLive(f) || isDone(f) ? clock(f, now) : "", off: OFF_ST[f.st] || "",
+          g: f.g, live: isLive(f), home: names[f.h.id] || f.h.n, away: names[f.a.id] || f.a.n, hg: f.h.g, ag: f.a.g };
+      });
+      mine.forEach(function (f) { if (isLive(f)) d.liveCount++; });
+      groupsOf(lg).forEach(function (g) {
+        var byTid = {}, touched = false;
+        g.rows.forEach(function (r) { if (r.tid) byTid[r.tid] = r; });
+        mine.forEach(function (f) {
+          var on = isLive(f), done = isDone(f);
+          if ((!on && !done) || f.h.g == null || f.a.g == null) return;
+          [["h", "a"], ["a", "h"]].forEach(function (pr) {
+            var me = f[pr[0]], them = f[pr[1]], r = byTid[me.id];
+            if (!r) return;
+            // Skip if the official table already has this result (or, for a finished game, we can't tell).
+            if (me.b == null ? done : r.p !== me.b) return;
+            r.p++; r.gf += me.g; r.ga += them.g;
+            if (me.g > them.g) { r.w++; r.pts += 3; } else if (me.g === them.g) { r.d++; r.pts += 1; } else r.l++;
+            r.live = { on: on, clock: clock(f, now), gf: me.g, ga: them.g, opp: names[them.id] || them.n, home: pr[0] === "h" };
+            touched = true;
+          });
+        });
+        if (touched) {
+          var was = {};
+          g.rows.forEach(function (r) { was[r.team] = r.pos; });
+          g.rows.sort(cmpRows);
+          g.rows.forEach(function (r, i) { r.pos = i + 1; r.move = was[r.team] - r.pos; });
+          lg.asItStands = true;
+        }
+      });
+    });
+    return d;
+  }
+
+  function todayHTML(lg) {
+    if (!lg.today || !lg.today.length) return "";
+    var live = lg.today.filter(function (f) { return f.live; }).length;
+    var grouped = lg.groups && lg.groups.length > 1;
+    var items = lg.today.map(function (f) {
+      var started = f.hg != null && f.ag != null && !f.off;
+      var t = f.off || (started ? f.clock : ukClock(f.ko));
+      return '<li class="fx' + (f.live ? " on" : "") + '"><span class="fx-t">' + esc(t) + "</span>" +
+        '<span class="fx-h">' + esc(f.home) + "</span>" +
+        '<span class="fx-s">' + (started ? f.hg + "–" + f.ag : "v") + "</span>" +
+        '<span class="fx-a">' + esc(f.away) + "</span>" +
+        (grouped && f.g ? '<span class="fx-g">' + esc(f.g) + "</span>" : "") + "</li>";
+    }).join("");
+    return '<details class="today" id="today-' + esc(lg.id) + '"><summary>' +
+      (live ? '<span class="live-dot" aria-hidden="true"></span>' : "") + "Today: " + lg.today.length + " game" + (lg.today.length === 1 ? "" : "s") +
+      (live ? " · " + live + " live" : "") + "</summary><ul>" + items + "</ul></details>";
+  }
+  function ukClock(ts) {
+    try {
+      return new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date(ts * 1000));
+    } catch (e) { return ""; }
+  }
+
   /* ---------- Pieces ---------- */
   function rowHTML(lg, rows, r, i, hasForm) {
     var z = zoneOf(lg, r.pos);
@@ -58,10 +146,14 @@
         }).join("") + "</span></td>";
     }
     return '<tr class="' + cls.join(" ") + '" data-team="' + esc(r.team) + '">' +
-      '<td class="c-pos">' + r.pos + "</td>" +
+      '<td class="c-pos">' + r.pos +
+        (r.move ? '<span class="mv ' + (r.move > 0 ? "mv-up" : "mv-down") + '" title="' + (r.move > 0 ? "Up " : "Down ") + Math.abs(r.move) + ' as it stands">' + (r.move > 0 ? "▲" : "▼") + "</span>" : "") + "</td>" +
       '<th scope="row" class="c-club">' + esc(r.team) +
         (r.ded ? '<span class="ded" title="' + r.ded + ' points deducted">−' + r.ded + "</span>" : "") +
-        (r.out ? '<span class="out ' + r.out + '">' + OUT[r.out] + "</span>" : "") + "</th>" +
+        (r.out ? '<span class="out ' + r.out + '">' + OUT[r.out] + "</span>" : "") +
+        (r.live ? '<span class="lv ' + (r.live.gf > r.live.ga ? "lv-w" : r.live.gf < r.live.ga ? "lv-l" : "lv-d") + (r.live.on ? " on" : "") +
+          '" title="' + esc((r.live.home ? r.team + " " + r.live.gf + "–" + r.live.ga + " " + r.live.opp : r.live.opp + " " + r.live.ga + "–" + r.live.gf + " " + r.team) + " (" + r.live.clock + ")") + '">' +
+          esc(r.live.clock) + " " + r.live.gf + "–" + r.live.ga + "</span>" : "") + "</th>" +
       '<td class="c-n">' + r.p + "</td>" +
       '<td class="c-n c-w">' + r.w + "</td>" +
       '<td class="c-n c-d">' + r.d + "</td>" +
@@ -109,7 +201,7 @@
   function tierHTML(lg, opts) {
     opts = opts || {};
     var grouped = !!(lg.groups && lg.groups.length);
-    var meta = clubCount(lg) + " clubs · " + (lg.final ? "final table" : "updated " + ukTime(lg.updated));
+    var meta = clubCount(lg) + " clubs · " + (lg.final ? "final table" : lg.asItStands ? "as it stands" : "updated " + ukTime(lg.updated));
     var body = grouped
       ? lg.groups.map(function (g) {
           var stamp = g.updated && g.updated !== lg.updated ? "updated " + ukTime(g.updated) : "";
@@ -121,13 +213,13 @@
     if (grouped) {
       var dates = lg.groups.map(function (g) { return g.updated || lg.updated; });
       var newest = dates.slice().sort().pop();
-      meta = clubCount(lg) + " clubs in " + lg.groups.length + " groups · " + (lg.final ? "final tables" : "updated " + ukTime(newest));
+      meta = clubCount(lg) + " clubs in " + lg.groups.length + " groups · " + (lg.final ? "final tables" : lg.asItStands ? "as they stand" : "updated " + ukTime(newest));
     }
     return '<section class="tier" id="' + esc(lg.id) + '" aria-labelledby="h-' + esc(lg.id) + '">' +
       '<header class="tier-head"><p class="tier-num">' + esc(opts.eyebrow || "Tier " + lg.tier) + "</p>" +
       '<h2 id="h-' + esc(lg.id) + '">' + esc(lg.name) + "</h2>" +
       '<p class="tier-meta">' + meta + "</p></header>" +
-      legendHTML(lg, grouped) + body + notesHTML(lg) +
+      todayHTML(lg) + legendHTML(lg, grouped) + body + notesHTML(lg) +
       (opts.more ? '<a class="more" href="' + esc(opts.more.href) + '">' + esc(opts.more.text) + ' <span aria-hidden="true">→</span></a>' : "") +
       "</section>";
   }
@@ -141,7 +233,9 @@
       "</div>";
   }
 
-  function stampHTML(mode, updated) {
+  function stampHTML(mode, updated, liveCount) {
+    if (liveCount) return '<p class="stamp live now" id="stamp"><span class="dot"></span><span>' + liveCount + " game" + (liveCount === 1 ? "" : "s") +
+      " live · tables show scores as they stand</span></p>";
     if (mode === "final") return '<p class="stamp final" id="stamp"><span class="dot"></span><span>Final tables</span></p>';
     var live = mode === "live";
     return '<p class="stamp' + (live ? " live" : "") + '" id="stamp"><span class="dot"></span><span>' +
@@ -197,7 +291,7 @@
           ", from " + esc(c.leagues[0].name) + " down to " + esc(last.name) + ". Promotion, play-off and relegation places are marked from each league's records.</p>"
         : '<p class="lede">Every league in the top ' + n + " tiers of " + esc(c.adjective) + " football, from " + esc(c.leagues[0].name) +
           " down to " + esc(last.name) + ". Promotion, play-off and relegation places are marked on every table.</p>") +
-      stampHTML(c.mode, c.updated) + pyramidHTML(c) + "</section>";
+      stampHTML(c.mode, c.updated, c.liveCount) + pyramidHTML(c) + "</section>";
     c.leagues.forEach(function (lg, i) {
       html += tierHTML(lg) + bandHTML(lg, c.leagues[i + 1] || null, c.belowNote);
       if (i === 1) html += INLINE_AD;
@@ -224,7 +318,7 @@
       '<p class="eyebrow">Europe · ' + esc(countries[0].season) + "</p>" +
       '<h1 id="intro-h">Europe’s top five leagues, with every tier below them.</h1>' +
       '<p class="lede">The Premier League, La Liga, Bundesliga, Ligue 1 and Serie A on one page. Open a country to see its whole pyramid, from the top flight down.</p>' +
-      stampHTML(live ? "live" : "snapshot", newest) +
+      stampHTML(live ? "live" : "snapshot", newest, countries.reduce(function (n, c) { return n + (c.liveCount || 0); }, 0)) +
       '<ul class="countries" aria-label="Country pyramids">' + cards + "</ul></section>";
     countries.forEach(function (c, i) {
       var top = c.leagues[0];
@@ -239,6 +333,6 @@
 
   return {
     esc: esc, ukTime: ukTime, clubCount: clubCount, countryClubs: countryClubs, groupsOf: groupsOf,
-    countryMain: countryMain, homeMain: homeMain
+    countryMain: countryMain, homeMain: homeMain, applyLive: applyLive, clock: clock, isLive: isLive
   };
 });
