@@ -280,8 +280,7 @@
 
   /* ---------- "More" countries menu: close it when tapping elsewhere ---------- */
   document.addEventListener("click", function (e) {
-    var open = document.querySelector(".nav-more[open]");
-    if (open && !open.contains(e.target)) open.open = false;
+    document.querySelectorAll(".nav-more[open]").forEach(function (open) { if (!open.contains(e.target)) open.open = false; });
   });
   document.addEventListener("keydown", function (e) {
     var open = document.querySelector(".nav-more[open]");

@@ -489,6 +489,9 @@ body.no-ads main { justify-self: center !important; }
 .nav-more[open] summary::after { content: " ▴"; }
 .nav-more summary:hover, .nav-more[open] summary { color: var(--ink); background: var(--sheet); }
 .nav-more:has(.nav-panel a[aria-current]) summary { color: var(--ink); }
+.nav-euro.is-here summary, .nav-euro.is-here:has(.nav-panel a[aria-current]) summary { color: var(--paper); background: var(--ink); }
+.nav-euro .nav-panel { right: auto; left: 0; min-width: 230px; }
+.nav-euro .nav-panel .comp-dot { margin-right: 10px; }
 .nav-panel {
   position: absolute; z-index: 30; top: calc(100% + 6px); right: 0; min-width: 200px;
   display: grid; gap: 2px; padding: 6px;
@@ -504,7 +507,7 @@ body.no-ads main { justify-self: center !important; }
 @media (max-width: 699px) {
   .nav-more { flex: 1; }
   .nav-more summary { text-align: center; }
-  .nav-panel { right: 0; }
+  .nav-panel, .nav-euro .nav-panel { right: 0; left: auto; }
 }
 
 /* ---------- Home: more pyramids ---------- */
