@@ -6,7 +6,7 @@
 //
 // Output: index.html, <country>/index.html, data/clubs.json, sitemap.xml, robots.txt
 
-import { readFile, writeFile, mkdir, copyFile, readdir } from "node:fs/promises";
+import { readFile, writeFile, mkdir, copyFile, readdir, rm } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import path from "node:path";
@@ -44,7 +44,14 @@ function footNotes(page, snapshot) {
   return "";
 }   // set by build() once the European tables exist
 
-function shell({ title, description, canonical, base, suffix, page, country, stamps, main, countries, seasons, attrs = {} }) {
+// Structured data (schema.org JSON-LD). Only for things the page visibly shows: the site itself on the home page,
+// and on club and past-season pages the trail of links at the top, plus the club as a team.
+const crumbs = (items) => ({ "@context": "https://schema.org", "@type": "BreadcrumbList",
+  itemListElement: items.map(([name, url], i) => ({ "@type": "ListItem", position: i + 1, name, item: url })) });
+const ldScript = (data) => data ? (Array.isArray(data) ? data : [data]).map((d) =>
+  `<script type="application/ld+json">${JSON.stringify(d).replace(/</g, "\\u003c")}</script>\n`).join("") : "";
+
+function shell({ title, description, canonical, base, suffix, page, country, stamps, main, countries, seasons, attrs = {}, jsonld = null }) {
   const snapshot = countries.some((c) => c.mode !== "live");
   const home = base || "./";
   const homeHref = suffix ? base + suffix : home;
@@ -84,7 +91,7 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
 <link rel="preload" href="${base}assets/fonts/big-shoulders-display-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${base}assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${base}assets/style.css?v=${VER["style.css"]}">
-${ADSENSE_CLIENT && !suffix ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>\n` : ""}</head>
+${suffix ? "" : ldScript(jsonld)}${ADSENSE_CLIENT && !suffix ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>\n` : ""}</head>
 <body${ADS ? "" : ' class="no-ads"'} data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${featured.map((c) => c.country).join(",")}"${page === "home" ? ` data-others="${esc(JSON.stringify(others.map(FP.summary)))}"` : ""} data-stamps="${esc(JSON.stringify(stamps))}"${seasons ? ` data-seasons="${esc(JSON.stringify(seasons))}"` : ""}${LIVE_URL && ["home", "country", "fixtures", "europe", "comp", "cup", "club"].includes(page) ? ` data-live="${esc(LIVE_URL)}"` : ""}${Object.entries(attrs).map(([k, v]) => ` data-${k}="${esc(typeof v === "string" ? v : JSON.stringify(v))}"`).join("")}>
 <header class="bar">
   <div class="bar-inner">
@@ -309,6 +316,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     title: "Football Pyramids: league tables from the top flight down",
     description: `League tables for ${countries.length} countries (${countries.map((c) => c.name).join(", ")}), each country's divisions on one page with promotion and relegation places marked. Fixtures, past seasons and live scores.`,
     canonical: SITE + "/", base: "", suffix, page: "home", stamps, countries,
+    jsonld: { "@context": "https://schema.org", "@type": "WebSite", name: "Football Pyramids", url: SITE + "/" },
     attrs: { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/fixtures/${suffix}` } : {}) },
       ...(europe ? { europe: "1", clubpaths: pathsFor(europe.leagues[0]) } : {}), cupsmap: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])) },
     main: FP.homeMain(countries.filter((c) => c.featured), "", suffix, countries.filter((c) => !c.featured).map(FP.summary),
@@ -365,6 +373,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         title: `${c.adjective} football pyramid ${h.season}: ${n.first} to ${n.last} final tables | Football Pyramids`,
         description: `Final ${h.season} tables for ${c.adjective} football, from ${n.first} down to ${n.last}, with promotion and relegation marked.`,
         canonical: `${SITE}/${c.country}/${slug(h.year)}/`, base: "../../", suffix, page: "history", country: c.country,
+        jsonld: crumbs([["Football Pyramids", SITE + "/"], [c.name, `${SITE}/${c.country}/`], [h.season, `${SITE}/${c.country}/${slug(h.year)}/`]]),
         stamps: {}, countries, main: FP.countryMain(h, { seasons, clubPaths: pathByName[c.country], root: "../../", suffix })
       }));
     }
@@ -535,6 +544,9 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         title: `${r.team} fixtures, results and table ${c.season} | Football Pyramids`,
         description: `${r.team}: ${ordinal(r.pos)} ${FP.inLeague(lg.name)}. Every fixture and result this season across league, cups and Europe, and the club's journey through the ${c.adjective} pyramid.`,
         canonical: `${SITE}/${k.path}`, base, suffix, page: "club", country: c.country, stamps: {}, countries,
+        jsonld: [crumbs([["Football Pyramids", SITE + "/"], [c.name, `${SITE}/${c.country}/`], [r.team, `${SITE}/${k.path}`]]),
+          { "@context": "https://schema.org", "@type": "SportsTeam", name: r.team, sport: "Soccer", url: `${SITE}/${k.path}`,
+            memberOf: { "@type": "SportsOrganization", name: lg.name } }],
         main: FP.clubMain(data, { tz: "venue" })
       }));
       clubUrls.push(`/${k.path}`);
@@ -551,6 +563,8 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         title: `${k.name}: seasons in the ${k.c.adjective} football pyramid | Football Pyramids`,
         description: `${k.name}'s seasons in the ${k.c.adjective} football pyramid: tier, league and finishing position each season.`,
         canonical: `${SITE}/${k.path}`, base, suffix, page: "club", country: k.c.country, stamps: {}, countries,
+        jsonld: [crumbs([["Football Pyramids", SITE + "/"], [k.c.name, `${SITE}/${k.c.country}/`], [k.name, `${SITE}/${k.path}`]]),
+          { "@context": "https://schema.org", "@type": "SportsTeam", name: k.name, sport: "Soccer", url: `${SITE}/${k.path}` }],
         main: FP.clubMain(data, { tz: "venue" })
       }));
       clubUrls.push(`/${k.path}`);
@@ -558,13 +572,31 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     }
   }
 
+  // Club pages from earlier builds that this build no longer writes (a club renamed in the data, or a past season
+  // dropped by `historyFrom`) would otherwise stay online with stale content and no links to them.
+  if (!preview) {
+    const keep = new Set(clubUrls.map((u) => u.slice(1)));
+    for (const c of countries) {
+      let dirs = [];
+      try { dirs = await readdir(path.join(outDir, c.country, "club"), { withFileTypes: true }); } catch {}
+      for (const d of dirs) {
+        const rel = `${c.country}/club/${d.name}/`;
+        if (d.isDirectory() && !keep.has(rel)) await rm(path.join(outDir, rel), { recursive: true, force: true });
+      }
+    }
+  }
+
   // About & contact, and the privacy policy
   const snapshot = countries.some((c) => c.mode !== "live");
   await write(`contact/index.html`, shell({
-    title: "About and contact | Football Pyramids",
-    description: "What Football Pyramids covers, where its tables come from, and how to get in touch.",
+    title: "About Football Pyramids: coverage, data and contact",
+    description: "Why Football Pyramids exists, which countries and tiers it covers, where the tables come from, how often they update and how to report a mistake.",
     canonical: `${SITE}/contact/`, base: "../", suffix, page: "static", stamps: {}, countries,
-    main: contactPage({ contact: CONTACT, snapshot, countryNames: countries.map((c) => c.name) })
+    main: contactPage({ contact: CONTACT, snapshot, europe: europe ? europe.leagues.map((l) => l.name) : [],
+      countries: countries.map((c) => {
+        const t = tierNames(c), oldest = (history[c.country] || []).slice(-1)[0];
+        return { name: c.name, first: t.first, last: t.last, tiers: new Set(c.leagues.map((l) => l.tier)).size, since: oldest ? oldest.season : null };
+      }) })
   }));
   await write(`privacy/index.html`, shell({
     title: "Privacy policy | Football Pyramids",
@@ -596,16 +628,26 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   await write("data/live-leagues.json", JSON.stringify(live));
 
   if (!preview) {
-    const today = new Date().toISOString().slice(0, 10);
-    const urls = ["/", ...countries.map((c) => `/${c.country}/`), ...(europe ? ["/europe/", ...europe.leagues.map((c) => `/europe/${c.id}/`)] : []), "/contact/", "/privacy/"];
+    // lastmod is the date the page's data last changed (not the build date, which moves every hour whether or not
+    // anything did), so search engines can trust it. Pages with no data date (About, past seasons) carry none.
+    const day = (iso) => (iso ? String(iso).slice(0, 10) : "");
+    const dated = (u, iso, freq) => `  <url><loc>${SITE}${u}</loc>${day(iso) ? `<lastmod>${day(iso)}</lastmod>` : ""}<changefreq>${freq}</changefreq></url>`;
+    const countryDate = Object.fromEntries(countries.map((c) => [c.country, c.updated]));
+    const newestOf = (...xs) => xs.filter(Boolean).map(String).sort().pop();
+    const fxDate = (k) => (fixtures[k] || {}).updated;
+    const urls = [["/", newestOf(...countries.map((c) => c.updated))], ...countries.map((c) => [`/${c.country}/`, c.updated]),
+      ...(europe ? [["/europe/", europe.updated], ...europe.leagues.map((c) => [`/europe/${c.id}/`, newestOf(europe.updated, fxDate(`europe/${c.id}`))])] : []),
+      ["/contact/", null], ["/privacy/", null]];
     const past = countries.flatMap((c) => history[c.country].map((h) => `/${c.country}/${slug(h.year)}/`));
-    const fxUrls = Object.keys(fixtures).filter((k) => (europe && k.startsWith("europe/")) || countries.some((c) => c.country === k.split("/")[0])).map((k) => `/${k}/fixtures/`);
+    const fxKeys = Object.keys(fixtures).filter((k) => (europe && k.startsWith("europe/")) || countries.some((c) => c.country === k.split("/")[0]));
+    // A club page changes with its country's tables and its fixtures; the country date is the honest lower bound.
+    const clubDate = (u) => newestOf(countryDate[u.split("/")[1]], ...fxKeys.filter((k) => k.startsWith(u.split("/")[1] + "/")).map(fxDate));
     await write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>hourly</changefreq></url>`).join("\n")}
-${clubUrls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>daily</changefreq></url>`).join("\n")}
-${cupUrls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>daily</changefreq></url>`).join("\n")}
-${fxUrls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>daily</changefreq></url>`).join("\n")}
+${urls.map(([u, d]) => dated(u, d, "hourly")).join("\n")}
+${clubUrls.map((u) => dated(u, clubDate(u), "daily")).join("\n")}
+${cupUrls.map((u) => dated(u, fxDate(u.slice(1, -1)), "daily")).join("\n")}
+${fxKeys.map((k) => dated(`/${k}/fixtures/`, fxDate(k), "daily")).join("\n")}
 ${past.concat(euroPast).map((u) => `  <url><loc>${SITE}${u}</loc><changefreq>yearly</changefreq></url>`).join("\n")}
 </urlset>
 `);

@@ -2,7 +2,7 @@
 // Edit the wording here, then run `node scripts/build.mjs`.
 // When the policy changes, update POLICY_DATE.
 
-export const POLICY_DATE = "22 October 2026";
+export const POLICY_DATE = "23 October 2026";
 
 function esc(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -13,26 +13,46 @@ function emailLine(email) {
     `<button type="button" class="copy" data-copy="${esc(email)}">Copy address</button></p>`;
 }
 
-export function contactPage({ contact, snapshot, countryNames }) {
-  const list = countryNames.slice(0, -1).join(", ") + " and " + countryNames[countryNames.length - 1];
+// countries: [{ name, first, last, tiers, since }] in site order. europe: competition names, or [].
+export function contactPage({ contact, snapshot, countries, europe = [] }) {
+  const coverage = countries.map((c) => `<li><strong>${esc(c.name)}:</strong> ${c.tiers} tier${c.tiers === 1 ? "" : "s"}, ${esc(c.first)} down to ${esc(c.last)}` +
+    (c.since ? `. Final tables back to ${esc(c.since)}.` : ".") + "</li>").join("\n  ");
   return `<article class="prose" aria-labelledby="page-h">
 <p class="eyebrow">About</p>
-<h1 id="page-h">About Football Pyramids</h1>
-<p class="lede">Each country's league system on one long page: the top division first, then every tier below it, with promotion, play-off and relegation places marked on each table.</p>
+<h1 id="page-h">Why Football Pyramids exists</h1>
+<p class="lede">League tables are usually shown one division at a time. Football Pyramids puts a country's divisions on one page, top flight first, so you can see how they connect: who goes up, who comes down, and where any club sits in the wider pyramid.</p>
 
 <h2>What's covered</h2>
-<p>The home page shows the top divisions of ${esc(list)}. Each country has its own page with the tiers below. More tiers and countries will be added over time.</p>
+<ul>
+  ${coverage}
+</ul>
+${europe.length ? `<p>Plus the ${esc(europe.slice(0, -1).join(", "))} and ${esc(europe[europe.length - 1])}: tables, brackets and qualifying.</p>` : ""}
+<p>Each country goes as deep as we can get reliable data for, so some don't reach as far down as others yet. More tiers and countries will follow. Every club has a page with its fixtures, results and its journey through the pyramid season by season.</p>
 
 <h2>Where the tables come from</h2>
 ${snapshot
   ? "<p>For now the tables are a sample snapshot gathered by hand, and each table shows the date it is from. Once the live data feed is switched on, they will update through the day as results come in.</p>"
-  : "<p>The tables come from a football data provider and update through the day as results come in, usually within an hour of full time. Each table shows when it was last updated.</p>"}
+  : `<p>Tables, fixtures and results come from a commercial football data provider.</p>
+<ul>
+  <li><strong>Standings</strong> are checked hourly through the afternoon and evening (UK time) and once in the morning. Each table says which date it is as of: the last time it changed, so a table can show an older date after a quiet week without anything being wrong.</li>
+  <li><strong>Fixtures and kick-off times</strong> are checked every two hours. Postponed, cancelled and "time to be confirmed" games are marked as such, and a moved kick-off shows its old time for three weeks.</li>
+  <li><strong>Live scores</strong> update about every minute while games are on, and the tables show how they stand until the official tables catch up.</li>
+</ul>`}
+
+<h2>How the tables are worked out</h2>
+<ul>
+  <li>Positions are as published, which follows each league's own tie-break rules.</li>
+  <li>The feed doesn't list points deductions, so we work them out from wins, draws and points and note each one under its table.</li>
+  <li>Promotion, play-off and relegation places are set for each league from its competition rules. Where places change from year to year (European spots, for example), they're taken from the data provider's labels instead.</li>
+  <li>For past seasons, where the provider's final table stopped short of the last matchday, we rebuilt it from the results where we could; a few are still being checked by hand. Seasons cut short by Covid are shown as they ended.</li>
+</ul>
+
+<h2>Spotted a mistake?</h2>
+<p>Tell us the league, the club and what looks wrong, and we'll check it against the official record:</p>
+${emailLine(contact.email)}
 
 <h2>Contact</h2>
-<p>Email us at:</p>
-${emailLine(contact.email)}
 <ul>
-  <li><strong>Spotted a mistake in a table?</strong> Tell us the league and the club, and we'll check it.</li>
   <li><strong>Want another country or tier added?</strong> Let us know which one.</li>
   <li><strong>Advertising and partnerships:</strong> use the same address.</li>
 </ul>
@@ -68,6 +88,7 @@ ${emailLine(contact.email)}
 
 <h2>What's stored in your browser</h2>
 <p>If you use the club finder, the site remembers the club you picked in your browser's local storage, so it's highlighted on your next visit. This stays on your device and is never sent to us. To remove it, clear the club finder with the × button or clear your browser's data for this site.</p>
+<p>On fixtures pages, if you switch between times in your own time zone and local kick-off times, that choice is stored the same way.</p>
 
 <h2>Advertising</h2>
 <p>Football Pyramids is paid for by advertising, shown through Google AdSense.</p>
