@@ -775,19 +775,27 @@
   function europeMain(e, opts) {
     opts = opts || {};
     var base = opts.base || "", suffix = opts.suffix || "";
+    // Each competition opens in place to its full table; knockouts, qualifying and fixtures stay on its own page.
     var cards = e.leagues.map(function (c) {
       var top = (c.rows || []).slice(0, 3);
-      return '<li><a class="ecard" href="' + base + c.id + "/" + suffix + '">' +
+      var href = base + c.id + "/" + suffix;
+      var lg = opts.clubPaths ? Object.assign({}, c, { _paths: opts.clubPaths, _root: opts.root || "", _suffix: suffix }) : c;
+      var hasTable = (c.rows && c.rows.length) || (c.groups && c.groups.length);
+      return '<li><details class="ecomp" id="ec-' + esc(c.id) + '"><summary class="ecard">' +
         '<span class="ecard-name"><span class="comp-dot c-' + esc(c.id) + '" aria-hidden="true"></span>' + esc(c.name) + "</span>" +
         '<span class="ecard-status">' + esc((opts.statuses || {})[c.id] || "League phase") + "</span>" +
         '<ol class="ecard-top">' + top.map(function (r) {
           return "<li><span>" + r.pos + "</span>" + esc(r.team) + (r.live ? ' <i class="lv on">' + esc(r.live.clock) + " " + r.live.gf + "–" + r.live.ga + "</i>" : "") + "<b>" + r.pts + " pts</b></li>";
-        }).join("") + "</ol></a></li>";
+        }).join("") + "</ol>" +
+        '<span class="ecard-toggle" aria-hidden="true"><span class="when-closed">Full table</span><span class="when-open">Hide table</span></span></summary>' +
+        '<div class="ecomp-body">' + (hasTable ? tierHTML(lg, { eyebrow: c.groups ? "Group stage" : "League phase",
+          more: { href: href, text: "Knockouts, qualifying and every fixture" } })
+          : '<p class="ko-empty">No table yet. <a href="' + esc(href) + '">Qualifying and fixtures →</a></p>') + "</div></details></li>";
     }).join("");
     return '<section class="intro" aria-labelledby="intro-h"><p class="eyebrow">UEFA club competitions · ' + esc(e.season) + "</p>" +
       '<h1 id="intro-h">Champions League, Europa League and Conference League</h1>' +
       '<p class="lede">League-phase tables, knockout brackets that fill in after each draw, every qualifying tie and every fixture, with live scores on European nights.</p>' +
-      stampHTML(e.mode, e.updated, e.liveCount) + '</section><ul class="ecards">' + cards + "</ul>" +
+      stampHTML(e.mode, e.updated, e.liveCount) + '</section><ul class="ecards ecomps">' + cards + "</ul>" +
       (opts.stripLive ? stripHTML(opts.stripLive, [summary(e)], base.replace(/europe\/$/, ""), suffix, {}) : "");
   }
 

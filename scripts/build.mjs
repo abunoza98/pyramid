@@ -363,12 +363,13 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   // European competitions
   const euroPast = [];
   if (europe) {
+    const euroPaths = Object.assign({}, ...europe.leagues.map(pathsFor));
     await write(`europe/index.html`, shell({
       title: `Champions League, Europa League and Conference League tables ${europe.season} | Football Pyramids`,
       description: "League-phase tables, knockout brackets, qualifying ties and fixtures for the Champions League, Europa League and Conference League, with live scores.",
       canonical: `${SITE}/europe/`, base: "../", suffix, page: "europe", country: "europe", stamps: { europe: europe.updated }, countries,
-      attrs: { statuses },
-      main: FP.europeMain(europe, { statuses, base: "", suffix })
+      attrs: { statuses, clubpaths: euroPaths },
+      main: FP.europeMain(europe, { statuses, base: "", suffix, clubPaths: euroPaths, root: "../" })
     }));
     const euroHistory = await loadEuropeHistory(root);
     for (const comp of europe.leagues) {

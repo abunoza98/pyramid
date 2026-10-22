@@ -680,6 +680,28 @@ body.no-ads main { justify-self: center !important; }
 .ecard-top b { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
 .ecard-top i { font-style: normal; }
 .ecards.compact .ecard { padding: 12px 14px; }
+/* Europe hub: competitions stacked, each opening to its full table */
+.ecards.ecomps { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+.ecards.ecomps > li { display: block; }
+.ecomp > summary { list-style: none; cursor: pointer; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 20px; }
+.ecomp > summary::-webkit-details-marker { display: none; }
+.ecomp > summary .ecard-name, .ecomp > summary .ecard-status { grid-column: 1; }
+.ecomp > summary .ecard-top { grid-column: 1 / -1; }
+.ecomp > summary .ecard-toggle { grid-column: 2; grid-row: 1 / span 2; font-size: 13px; font-weight: 600; color: var(--accent); white-space: nowrap; }
+.ecomp > summary .ecard-toggle::after { content: " ▾"; }
+.ecomp[open] > summary .ecard-toggle::after { content: " ▴"; }
+.ecomp .when-open, .ecomp[open] .when-closed, .ecomp[open] .ecard-top { display: none; }
+.ecomp[open] .when-open { display: inline; }
+.ecomp[open] > summary { border-color: var(--accent); }
+.ecomp-body .tier-head h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ecomp-body { padding: 4px 0 8px; }
+.ecomp-body .tier { margin-top: 12px; }
+@media (min-width: 720px) {
+  .ecomp > summary { grid-template-columns: minmax(180px, 1fr) minmax(0, 1.4fr) auto; }
+  .ecomp > summary .ecard-top { grid-column: 2; grid-row: 1 / span 2; margin: 0; }
+  .ecomp > summary .ecard-toggle { grid-row: 1 / span 2; }
+  .ecomp > summary .ecard-toggle { grid-column: 3; }
+}
 .ecards.compact .ecard-name { font-size: 19px; }
 .euro-home .section-h { margin-top: 36px; }
 .comp-tabs { margin-top: 28px; }

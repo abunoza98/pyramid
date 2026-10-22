@@ -211,7 +211,7 @@
       if (!compFx) return;
       html = FP.cupMain({ name: compFx.name, country: COUNTRY }, compFx, { tz: fxState.tz, live: live, fixturesHref: body.getAttribute("data-fx") || "" });
     }
-    else if (PAGE === "europe") html = FP.europeMain(withLive[0], { statuses: STATUSES, base: "", suffix: SUFFIX });
+    else if (PAGE === "europe") html = FP.europeMain(withLive[0], { statuses: STATUSES, base: "", suffix: SUFFIX, clubPaths: CLUBPATHS, root: BASE });
     else if (PAGE === "comp") {
       var id = body.getAttribute("data-league");
       var comp = withLive[0].leagues.filter(function (l) { return l.id === id; })[0];
