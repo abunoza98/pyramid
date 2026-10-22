@@ -3,8 +3,8 @@
  "name": "England",
  "adjective": "English",
  "season": "2026–27",
- "mode": "snapshot",
- "updated": "2026-10-20T21:52:35+01:00",
+ "mode": "live",
+ "updated": "2026-10-21T00:00:00.000Z",
  "belowNote": "National League champions and play-off winner come up",
  "later": [
   {
@@ -25,7 +25,6 @@
    "tier": 1,
    "name": "Premier League",
    "short": "PL",
-   "updated": "2026-10-19T21:58:19+01:00",
    "zones": [
     {
      "from": 1,
@@ -58,7 +57,8 @@
      "l": 0,
      "gf": 19,
      "ga": 7,
-     "pts": 21
+     "pts": 21,
+     "form": "WWWWW"
     },
     {
      "pos": 2,
@@ -69,7 +69,8 @@
      "l": 1,
      "gf": 11,
      "ga": 5,
-     "pts": 18
+     "pts": 18,
+     "form": "WWLWW"
     },
     {
      "pos": 3,
@@ -80,7 +81,8 @@
      "l": 1,
      "gf": 23,
      "ga": 5,
-     "pts": 16
+     "pts": 16,
+     "form": "DWWWW"
     },
     {
      "pos": 4,
@@ -91,7 +93,8 @@
      "l": 2,
      "gf": 17,
      "ga": 13,
-     "pts": 13
+     "pts": 13,
+     "form": "LDLWW"
     },
     {
      "pos": 5,
@@ -102,7 +105,8 @@
      "l": 1,
      "gf": 9,
      "ga": 8,
-     "pts": 12
+     "pts": 12,
+     "form": "WDWLW"
     },
     {
      "pos": 6,
@@ -113,7 +117,8 @@
      "l": 1,
      "gf": 13,
      "ga": 8,
-     "pts": 10
+     "pts": 10,
+     "form": "DDWDL"
     },
     {
      "pos": 7,
@@ -124,7 +129,8 @@
      "l": 1,
      "gf": 9,
      "ga": 6,
-     "pts": 10
+     "pts": 10,
+     "form": "DWDLD"
     },
     {
      "pos": 8,
@@ -135,7 +141,8 @@
      "l": 1,
      "gf": 8,
      "ga": 7,
-     "pts": 10
+     "pts": 10,
+     "form": "DDWDL"
     },
     {
      "pos": 9,
@@ -146,7 +153,8 @@
      "l": 2,
      "gf": 8,
      "ga": 7,
-     "pts": 9
+     "pts": 9,
+     "form": "DDLDL"
     },
     {
      "pos": 10,
@@ -157,7 +165,8 @@
      "l": 4,
      "gf": 11,
      "ga": 15,
-     "pts": 9
+     "pts": 9,
+     "form": "LWLWL"
     },
     {
      "pos": 11,
@@ -168,7 +177,8 @@
      "l": 3,
      "gf": 10,
      "ga": 14,
-     "pts": 8
+     "pts": 8,
+     "form": "DLWLL"
     },
     {
      "pos": 12,
@@ -179,7 +189,8 @@
      "l": 3,
      "gf": 7,
      "ga": 11,
-     "pts": 8
+     "pts": 8,
+     "form": "DLWDW"
     },
     {
      "pos": 13,
@@ -190,7 +201,8 @@
      "l": 2,
      "gf": 10,
      "ga": 10,
-     "pts": 7
+     "pts": 7,
+     "form": "DLDDD"
     },
     {
      "pos": 14,
@@ -201,7 +213,8 @@
      "l": 4,
      "gf": 9,
      "ga": 17,
-     "pts": 7
+     "pts": 7,
+     "form": "WLDWL"
     },
     {
      "pos": 15,
@@ -212,7 +225,8 @@
      "l": 3,
      "gf": 9,
      "ga": 13,
-     "pts": 6
+     "pts": 6,
+     "form": "DDLLW"
     },
     {
      "pos": 16,
@@ -223,7 +237,8 @@
      "l": 3,
      "gf": 6,
      "ga": 10,
-     "pts": 6
+     "pts": 6,
+     "form": "DDLDW"
     },
     {
      "pos": 17,
@@ -234,7 +249,8 @@
      "l": 5,
      "gf": 6,
      "ga": 14,
-     "pts": 6
+     "pts": 6,
+     "form": "LLWWL"
     },
     {
      "pos": 18,
@@ -245,7 +261,8 @@
      "l": 4,
      "gf": 7,
      "ga": 10,
-     "pts": 5
+     "pts": 5,
+     "form": "LDDLW"
     },
     {
      "pos": 19,
@@ -256,7 +273,8 @@
      "l": 4,
      "gf": 5,
      "ga": 9,
-     "pts": 5
+     "pts": 5,
+     "form": "DWLLL"
     },
     {
      "pos": 20,
@@ -267,16 +285,17 @@
      "l": 5,
      "gf": 6,
      "ga": 14,
-     "pts": 4
+     "pts": 4,
+     "form": "DLLLL"
     }
-   ]
+   ],
+   "updated": "2026-10-20T00:00:00.000Z"
   },
   {
    "id": "championship",
    "tier": 2,
    "name": "Championship",
    "short": "CH",
-   "updated": "2026-10-20T21:41:32+01:00",
    "zones": [
     {
      "from": 1,
@@ -301,7 +320,7 @@
    "relegationNote": "22nd–24th drop to League One",
    "notes": [
     "Play-offs: 3rd and 4th go straight to the semi-finals; 5th to 8th play eliminators first.",
-    "Southampton: 4 points deducted by the EFL."
+    "Southampton: 4 points deducted."
    ],
    "rows": [
     {
@@ -313,7 +332,8 @@
      "l": 2,
      "gf": 16,
      "ga": 8,
-     "pts": 23
+     "pts": 23,
+     "form": "WWWWL"
     },
     {
      "pos": 2,
@@ -324,7 +344,8 @@
      "l": 1,
      "gf": 30,
      "ga": 12,
-     "pts": 22
+     "pts": 22,
+     "form": "WDDWW"
     },
     {
      "pos": 3,
@@ -335,7 +356,8 @@
      "l": 1,
      "gf": 22,
      "ga": 16,
-     "pts": 22
+     "pts": 22,
+     "form": "DDWWD"
     },
     {
      "pos": 4,
@@ -346,7 +368,8 @@
      "l": 1,
      "gf": 20,
      "ga": 11,
-     "pts": 20
+     "pts": 20,
+     "form": "WDWWW"
     },
     {
      "pos": 5,
@@ -357,7 +380,8 @@
      "l": 3,
      "gf": 15,
      "ga": 12,
-     "pts": 20
+     "pts": 20,
+     "form": "DLLWW"
     },
     {
      "pos": 6,
@@ -368,7 +392,8 @@
      "l": 4,
      "gf": 18,
      "ga": 16,
-     "pts": 19
+     "pts": 19,
+     "form": "WWWLW"
     },
     {
      "pos": 7,
@@ -379,7 +404,8 @@
      "l": 3,
      "gf": 19,
      "ga": 16,
-     "pts": 18
+     "pts": 18,
+     "form": "WLLWD"
     },
     {
      "pos": 8,
@@ -391,7 +417,8 @@
      "gf": 21,
      "ga": 10,
      "pts": 17,
-     "ded": 4
+     "ded": 4,
+     "form": "WLWWD"
     },
     {
      "pos": 9,
@@ -402,7 +429,8 @@
      "l": 2,
      "gf": 15,
      "ga": 12,
-     "pts": 17
+     "pts": 17,
+     "form": "DDDWL"
     },
     {
      "pos": 10,
@@ -413,7 +441,8 @@
      "l": 4,
      "gf": 17,
      "ga": 16,
-     "pts": 15
+     "pts": 15,
+     "form": "WDWWL"
     },
     {
      "pos": 11,
@@ -424,7 +453,8 @@
      "l": 4,
      "gf": 15,
      "ga": 14,
-     "pts": 15
+     "pts": 15,
+     "form": "LLWLW"
     },
     {
      "pos": 12,
@@ -435,7 +465,8 @@
      "l": 4,
      "gf": 18,
      "ga": 18,
-     "pts": 15
+     "pts": 15,
+     "form": "DDWLD"
     },
     {
      "pos": 13,
@@ -446,7 +477,8 @@
      "l": 4,
      "gf": 14,
      "ga": 14,
-     "pts": 15
+     "pts": 15,
+     "form": "DLWWD"
     },
     {
      "pos": 14,
@@ -457,7 +489,8 @@
      "l": 3,
      "gf": 15,
      "ga": 16,
-     "pts": 14
+     "pts": 14,
+     "form": "LWDLW"
     },
     {
      "pos": 15,
@@ -468,7 +501,8 @@
      "l": 5,
      "gf": 15,
      "ga": 18,
-     "pts": 14
+     "pts": 14,
+     "form": "WWLWD"
     },
     {
      "pos": 16,
@@ -479,7 +513,8 @@
      "l": 5,
      "gf": 12,
      "ga": 15,
-     "pts": 14
+     "pts": 14,
+     "form": "LWDLL"
     },
     {
      "pos": 17,
@@ -490,7 +525,8 @@
      "l": 3,
      "gf": 10,
      "ga": 15,
-     "pts": 14
+     "pts": 14,
+     "form": "DLDDL"
     },
     {
      "pos": 18,
@@ -501,7 +537,8 @@
      "l": 5,
      "gf": 9,
      "ga": 19,
-     "pts": 12
+     "pts": 12,
+     "form": "WLLLD"
     },
     {
      "pos": 19,
@@ -512,7 +549,8 @@
      "l": 4,
      "gf": 18,
      "ga": 17,
-     "pts": 11
+     "pts": 11,
+     "form": "LWLWD"
     },
     {
      "pos": 20,
@@ -523,7 +561,8 @@
      "l": 6,
      "gf": 10,
      "ga": 19,
-     "pts": 11
+     "pts": 11,
+     "form": "LLLLW"
     },
     {
      "pos": 21,
@@ -534,7 +573,8 @@
      "l": 8,
      "gf": 17,
      "ga": 21,
-     "pts": 9
+     "pts": 9,
+     "form": "LLLLL"
     },
     {
      "pos": 22,
@@ -545,7 +585,8 @@
      "l": 5,
      "gf": 16,
      "ga": 21,
-     "pts": 8
+     "pts": 8,
+     "form": "LDWDL"
     },
     {
      "pos": 23,
@@ -556,7 +597,8 @@
      "l": 7,
      "gf": 9,
      "ga": 20,
-     "pts": 6
+     "pts": 6,
+     "form": "LDDLL"
     },
     {
      "pos": 24,
@@ -567,16 +609,17 @@
      "l": 9,
      "gf": 9,
      "ga": 24,
-     "pts": 4
+     "pts": 4,
+     "form": "LDLLL"
     }
-   ]
+   ],
+   "updated": "2026-10-20T00:00:00.000Z"
   },
   {
    "id": "league-one",
    "tier": 3,
    "name": "League One",
    "short": "L1",
-   "updated": "2026-10-20T21:43:07+01:00",
    "zones": [
     {
      "from": 1,
@@ -610,7 +653,8 @@
      "l": 3,
      "gf": 23,
      "ga": 11,
-     "pts": 22
+     "pts": 22,
+     "form": "DWWWW"
     },
     {
      "pos": 2,
@@ -621,7 +665,8 @@
      "l": 1,
      "gf": 22,
      "ga": 10,
-     "pts": 22
+     "pts": 22,
+     "form": "LWDWW"
     },
     {
      "pos": 3,
@@ -632,7 +677,8 @@
      "l": 2,
      "gf": 10,
      "ga": 5,
-     "pts": 21
+     "pts": 21,
+     "form": "WDDWD"
     },
     {
      "pos": 4,
@@ -643,7 +689,8 @@
      "l": 1,
      "gf": 18,
      "ga": 14,
-     "pts": 20
+     "pts": 20,
+     "form": "DDWWD"
     },
     {
      "pos": 5,
@@ -654,10 +701,23 @@
      "l": 5,
      "gf": 18,
      "ga": 17,
-     "pts": 19
+     "pts": 19,
+     "form": "LWWLL"
     },
     {
      "pos": 6,
+     "team": "Reading",
+     "p": 11,
+     "w": 5,
+     "d": 3,
+     "l": 3,
+     "gf": 23,
+     "ga": 12,
+     "pts": 18,
+     "form": "DDWLW"
+    },
+    {
+     "pos": 7,
      "team": "Sheffield Wednesday",
      "p": 10,
      "w": 5,
@@ -665,10 +725,11 @@
      "l": 2,
      "gf": 20,
      "ga": 10,
-     "pts": 18
+     "pts": 18,
+     "form": "DDDWL"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Oxford United",
      "p": 9,
      "w": 5,
@@ -676,18 +737,8 @@
      "l": 1,
      "gf": 18,
      "ga": 10,
-     "pts": 18
-    },
-    {
-     "pos": 8,
-     "team": "Reading",
-     "p": 10,
-     "w": 4,
-     "d": 3,
-     "l": 3,
-     "gf": 22,
-     "ga": 12,
-     "pts": 15
+     "pts": 18,
+     "form": "WDWDW"
     },
     {
      "pos": 9,
@@ -698,7 +749,8 @@
      "l": 3,
      "gf": 15,
      "ga": 10,
-     "pts": 15
+     "pts": 15,
+     "form": "WLWLW"
     },
     {
      "pos": 10,
@@ -709,7 +761,8 @@
      "l": 3,
      "gf": 16,
      "ga": 15,
-     "pts": 15
+     "pts": 15,
+     "form": "WDLWW"
     },
     {
      "pos": 11,
@@ -720,18 +773,20 @@
      "l": 3,
      "gf": 16,
      "ga": 15,
-     "pts": 15
+     "pts": 15,
+     "form": "DDWDW"
     },
     {
      "pos": 12,
      "team": "Leyton Orient",
-     "p": 10,
+     "p": 11,
      "w": 4,
      "d": 2,
-     "l": 4,
+     "l": 5,
      "gf": 15,
-     "ga": 11,
-     "pts": 14
+     "ga": 12,
+     "pts": 14,
+     "form": "WLDWL"
     },
     {
      "pos": 13,
@@ -742,7 +797,8 @@
      "l": 4,
      "gf": 19,
      "ga": 18,
-     "pts": 14
+     "pts": 14,
+     "form": "LLWLW"
     },
     {
      "pos": 14,
@@ -753,7 +809,8 @@
      "l": 4,
      "gf": 16,
      "ga": 18,
-     "pts": 14
+     "pts": 14,
+     "form": "WLLDD"
     },
     {
      "pos": 15,
@@ -764,7 +821,8 @@
      "l": 3,
      "gf": 18,
      "ga": 22,
-     "pts": 14
+     "pts": 14,
+     "form": "WDLWD"
     },
     {
      "pos": 16,
@@ -775,7 +833,8 @@
      "l": 5,
      "gf": 7,
      "ga": 18,
-     "pts": 12
+     "pts": 12,
+     "form": "DDLLL"
     },
     {
      "pos": 17,
@@ -786,7 +845,8 @@
      "l": 5,
      "gf": 15,
      "ga": 16,
-     "pts": 11
+     "pts": 11,
+     "form": "DLLLW"
     },
     {
      "pos": 18,
@@ -797,7 +857,8 @@
      "l": 4,
      "gf": 10,
      "ga": 13,
-     "pts": 10
+     "pts": 10,
+     "form": "LLLLW"
     },
     {
      "pos": 19,
@@ -808,7 +869,8 @@
      "l": 5,
      "gf": 10,
      "ga": 13,
-     "pts": 9
+     "pts": 9,
+     "form": "LWWLL"
     },
     {
      "pos": 20,
@@ -819,7 +881,8 @@
      "l": 3,
      "gf": 11,
      "ga": 18,
-     "pts": 9
+     "pts": 9,
+     "form": "DDLWL"
     },
     {
      "pos": 21,
@@ -830,7 +893,8 @@
      "l": 6,
      "gf": 10,
      "ga": 20,
-     "pts": 9
+     "pts": 9,
+     "form": "LLWDL"
     },
     {
      "pos": 22,
@@ -841,7 +905,8 @@
      "l": 6,
      "gf": 10,
      "ga": 19,
-     "pts": 8
+     "pts": 8,
+     "form": "LDLLL"
     },
     {
      "pos": 23,
@@ -852,7 +917,8 @@
      "l": 6,
      "gf": 9,
      "ga": 25,
-     "pts": 8
+     "pts": 8,
+     "form": "DWLLL"
     },
     {
      "pos": 24,
@@ -863,16 +929,17 @@
      "l": 7,
      "gf": 7,
      "ga": 15,
-     "pts": 7
+     "pts": 7,
+     "form": "DLLWL"
     }
-   ]
+   ],
+   "updated": "2026-10-21T00:00:00.000Z"
   },
   {
    "id": "league-two",
    "tier": 4,
    "name": "League Two",
    "short": "L2",
-   "updated": "2026-10-20T21:52:35+01:00",
    "zones": [
     {
      "from": 1,
@@ -906,7 +973,8 @@
      "l": 3,
      "gf": 19,
      "ga": 12,
-     "pts": 25
+     "pts": 25,
+     "form": "WWWWW"
     },
     {
      "pos": 2,
@@ -917,7 +985,8 @@
      "l": 1,
      "gf": 23,
      "ga": 15,
-     "pts": 21
+     "pts": 21,
+     "form": "WWWWL"
     },
     {
      "pos": 3,
@@ -928,7 +997,8 @@
      "l": 1,
      "gf": 15,
      "ga": 11,
-     "pts": 21
+     "pts": 21,
+     "form": "DWWWL"
     },
     {
      "pos": 4,
@@ -939,7 +1009,8 @@
      "l": 0,
      "gf": 16,
      "ga": 7,
-     "pts": 19
+     "pts": 19,
+     "form": "WDDDW"
     },
     {
      "pos": 5,
@@ -950,18 +1021,20 @@
      "l": 4,
      "gf": 21,
      "ga": 22,
-     "pts": 18
+     "pts": 18,
+     "form": "WLLLW"
     },
     {
      "pos": 6,
-     "team": "York City",
+     "team": "York",
      "p": 11,
      "w": 4,
      "d": 5,
      "l": 2,
      "gf": 19,
      "ga": 13,
-     "pts": 17
+     "pts": 17,
+     "form": "LWDDD"
     },
     {
      "pos": 7,
@@ -972,7 +1045,8 @@
      "l": 3,
      "gf": 17,
      "ga": 14,
-     "pts": 17
+     "pts": 17,
+     "form": "LDWLD"
     },
     {
      "pos": 8,
@@ -983,7 +1057,8 @@
      "l": 5,
      "gf": 13,
      "ga": 17,
-     "pts": 17
+     "pts": 17,
+     "form": "DWLWW"
     },
     {
      "pos": 9,
@@ -994,7 +1069,8 @@
      "l": 4,
      "gf": 18,
      "ga": 16,
-     "pts": 16
+     "pts": 16,
+     "form": "LWDLD"
     },
     {
      "pos": 10,
@@ -1005,7 +1081,8 @@
      "l": 4,
      "gf": 8,
      "ga": 6,
-     "pts": 16
+     "pts": 16,
+     "form": "LWWDW"
     },
     {
      "pos": 11,
@@ -1016,7 +1093,8 @@
      "l": 3,
      "gf": 17,
      "ga": 16,
-     "pts": 15
+     "pts": 15,
+     "form": "DWDWD"
     },
     {
      "pos": 12,
@@ -1027,7 +1105,8 @@
      "l": 3,
      "gf": 16,
      "ga": 15,
-     "pts": 15
+     "pts": 15,
+     "form": "WDWDD"
     },
     {
      "pos": 13,
@@ -1038,7 +1117,8 @@
      "l": 3,
      "gf": 15,
      "ga": 15,
-     "pts": 15
+     "pts": 15,
+     "form": "DLDLW"
     },
     {
      "pos": 14,
@@ -1049,7 +1129,8 @@
      "l": 5,
      "gf": 15,
      "ga": 17,
-     "pts": 15
+     "pts": 15,
+     "form": "WWDLD"
     },
     {
      "pos": 15,
@@ -1060,7 +1141,8 @@
      "l": 5,
      "gf": 13,
      "ga": 16,
-     "pts": 15
+     "pts": 15,
+     "form": "DLLDW"
     },
     {
      "pos": 16,
@@ -1071,7 +1153,8 @@
      "l": 7,
      "gf": 16,
      "ga": 20,
-     "pts": 15
+     "pts": 15,
+     "form": "WLLLL"
     },
     {
      "pos": 17,
@@ -1082,7 +1165,8 @@
      "l": 4,
      "gf": 15,
      "ga": 15,
-     "pts": 14
+     "pts": 14,
+     "form": "LLLLD"
     },
     {
      "pos": 18,
@@ -1093,7 +1177,8 @@
      "l": 4,
      "gf": 14,
      "ga": 15,
-     "pts": 14
+     "pts": 14,
+     "form": "LLDWL"
     },
     {
      "pos": 19,
@@ -1104,7 +1189,8 @@
      "l": 3,
      "gf": 11,
      "ga": 14,
-     "pts": 12
+     "pts": 12,
+     "form": "DDLDD"
     },
     {
      "pos": 20,
@@ -1115,7 +1201,8 @@
      "l": 4,
      "gf": 6,
      "ga": 10,
-     "pts": 12
+     "pts": 12,
+     "form": "WLWWD"
     },
     {
      "pos": 21,
@@ -1126,7 +1213,8 @@
      "l": 6,
      "gf": 13,
      "ga": 17,
-     "pts": 11
+     "pts": 11,
+     "form": "LLDWL"
     },
     {
      "pos": 22,
@@ -1137,7 +1225,8 @@
      "l": 5,
      "gf": 14,
      "ga": 20,
-     "pts": 11
+     "pts": 11,
+     "form": "DLLLD"
     },
     {
      "pos": 23,
@@ -1148,7 +1237,8 @@
      "l": 4,
      "gf": 6,
      "ga": 8,
-     "pts": 10
+     "pts": 10,
+     "form": "LLDWL"
     },
     {
      "pos": 24,
@@ -1159,9 +1249,11 @@
      "l": 7,
      "gf": 11,
      "ga": 20,
-     "pts": 5
+     "pts": 5,
+     "form": "LLDLL"
     }
-   ]
+   ],
+   "updated": "2026-10-20T00:00:00.000Z"
   }
  ]
 }

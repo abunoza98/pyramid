@@ -3,7 +3,8 @@
  "name": "Germany",
  "adjective": "German",
  "season": "2026–27",
- "mode": "snapshot",
+ "mode": "live",
+ "updated": "2026-10-20T00:00:00.000Z",
  "belowNote": "Regionalliga champions come up, some through a play-off",
  "leagues": [
   {
@@ -11,7 +12,6 @@
    "tier": 1,
    "name": "Bundesliga",
    "short": "BL",
-   "updated": "2026-10-18T18:23:47+01:00",
    "zones": [
     {
      "from": 1,
@@ -56,7 +56,8 @@
      "l": 0,
      "gf": 22,
      "ga": 5,
-     "pts": 14
+     "pts": 14,
+     "form": "DWWDW"
     },
     {
      "pos": 2,
@@ -67,7 +68,8 @@
      "l": 0,
      "gf": 11,
      "ga": 4,
-     "pts": 14
+     "pts": 14,
+     "form": "WWWDD"
     },
     {
      "pos": 3,
@@ -78,7 +80,8 @@
      "l": 1,
      "gf": 15,
      "ga": 6,
-     "pts": 13
+     "pts": 13,
+     "form": "WWDWL"
     },
     {
      "pos": 4,
@@ -89,18 +92,20 @@
      "l": 1,
      "gf": 16,
      "ga": 9,
-     "pts": 13
+     "pts": 13,
+     "form": "WDWWW"
     },
     {
      "pos": 5,
-     "team": "Mainz 05",
+     "team": "FSV Mainz 05",
      "p": 6,
      "w": 3,
      "d": 1,
      "l": 2,
      "gf": 14,
      "ga": 10,
-     "pts": 10
+     "pts": 10,
+     "form": "WLWLW"
     },
     {
      "pos": 6,
@@ -111,7 +116,8 @@
      "l": 2,
      "gf": 12,
      "ga": 11,
-     "pts": 10
+     "pts": 10,
+     "form": "WLDLW"
     },
     {
      "pos": 7,
@@ -122,7 +128,8 @@
      "l": 3,
      "gf": 16,
      "ga": 11,
-     "pts": 9
+     "pts": 9,
+     "form": "LWLWL"
     },
     {
      "pos": 8,
@@ -133,7 +140,8 @@
      "l": 1,
      "gf": 12,
      "ga": 12,
-     "pts": 9
+     "pts": 9,
+     "form": "WDWDD"
     },
     {
      "pos": 9,
@@ -144,7 +152,8 @@
      "l": 3,
      "gf": 6,
      "ga": 15,
-     "pts": 9
+     "pts": 9,
+     "form": "LLWWW"
     },
     {
      "pos": 10,
@@ -155,7 +164,8 @@
      "l": 2,
      "gf": 16,
      "ga": 12,
-     "pts": 8
+     "pts": 8,
+     "form": "WDLDL"
     },
     {
      "pos": 11,
@@ -166,7 +176,8 @@
      "l": 2,
      "gf": 10,
      "ga": 16,
-     "pts": 8
+     "pts": 8,
+     "form": "LWDLW"
     },
     {
      "pos": 12,
@@ -177,7 +188,8 @@
      "l": 3,
      "gf": 8,
      "ga": 11,
-     "pts": 7
+     "pts": 7,
+     "form": "LDLWL"
     },
     {
      "pos": 13,
@@ -188,7 +200,8 @@
      "l": 4,
      "gf": 8,
      "ga": 10,
-     "pts": 6
+     "pts": 6,
+     "form": "WLLWL"
     },
     {
      "pos": 14,
@@ -199,7 +212,8 @@
      "l": 4,
      "gf": 11,
      "ga": 14,
-     "pts": 6
+     "pts": 6,
+     "form": "LWLLW"
     },
     {
      "pos": 15,
@@ -210,18 +224,20 @@
      "l": 3,
      "gf": 4,
      "ga": 7,
-     "pts": 5
+     "pts": 5,
+     "form": "DWDLL"
     },
     {
      "pos": 16,
-     "team": "SC Paderborn",
+     "team": "SC Paderborn 07",
      "p": 6,
      "w": 1,
      "d": 2,
      "l": 3,
      "gf": 5,
      "ga": 9,
-     "pts": 5
+     "pts": 5,
+     "form": "LLWLD"
     },
     {
      "pos": 17,
@@ -232,7 +248,8 @@
      "l": 3,
      "gf": 5,
      "ga": 17,
-     "pts": 5
+     "pts": 5,
+     "form": "LLLWD"
     },
     {
      "pos": 18,
@@ -243,16 +260,17 @@
      "l": 6,
      "gf": 8,
      "ga": 20,
-     "pts": 0
+     "pts": 0,
+     "form": "LLLLL"
     }
-   ]
+   ],
+   "updated": "2026-10-20T00:00:00.000Z"
   },
   {
    "id": "2-bundesliga",
    "tier": 2,
    "name": "2. Bundesliga",
    "short": "2BL",
-   "updated": "2026-10-18",
    "zones": [
     {
      "from": 1,
@@ -292,7 +310,8 @@
      "l": 0,
      "gf": 19,
      "ga": 8,
-     "pts": 22
+     "pts": 22,
+     "form": "WWWWD"
     },
     {
      "pos": 2,
@@ -303,7 +322,8 @@
      "l": 0,
      "gf": 21,
      "ga": 11,
-     "pts": 18
+     "pts": 18,
+     "form": "DWWDD"
     },
     {
      "pos": 3,
@@ -314,7 +334,8 @@
      "l": 1,
      "gf": 22,
      "ga": 13,
-     "pts": 15
+     "pts": 15,
+     "form": "DLWDW"
     },
     {
      "pos": 4,
@@ -325,7 +346,8 @@
      "l": 1,
      "gf": 8,
      "ga": 4,
-     "pts": 15
+     "pts": 15,
+     "form": "WLWDW"
     },
     {
      "pos": 5,
@@ -336,7 +358,8 @@
      "l": 2,
      "gf": 15,
      "ga": 15,
-     "pts": 14
+     "pts": 14,
+     "form": "WWDDL"
     },
     {
      "pos": 6,
@@ -347,7 +370,8 @@
      "l": 3,
      "gf": 14,
      "ga": 11,
-     "pts": 13
+     "pts": 13,
+     "form": "LWDWL"
     },
     {
      "pos": 7,
@@ -358,7 +382,8 @@
      "l": 1,
      "gf": 11,
      "ga": 9,
-     "pts": 11
+     "pts": 11,
+     "form": "DWDWD"
     },
     {
      "pos": 8,
@@ -369,7 +394,8 @@
      "l": 3,
      "gf": 13,
      "ga": 13,
-     "pts": 11
+     "pts": 11,
+     "form": "DLDWW"
     },
     {
      "pos": 9,
@@ -380,18 +406,20 @@
      "l": 3,
      "gf": 16,
      "ga": 17,
-     "pts": 9
+     "pts": 9,
+     "form": "DWDLD"
     },
     {
      "pos": 10,
-     "team": "Greuther Fürth",
+     "team": "SpVgg Greuther Fürth",
      "p": 8,
      "w": 2,
      "d": 3,
      "l": 3,
      "gf": 12,
      "ga": 13,
-     "pts": 9
+     "pts": 9,
+     "form": "LDDLW"
     },
     {
      "pos": 11,
@@ -402,7 +430,8 @@
      "l": 4,
      "gf": 11,
      "ga": 15,
-     "pts": 8
+     "pts": 8,
+     "form": "LDLDW"
     },
     {
      "pos": 12,
@@ -413,7 +442,8 @@
      "l": 4,
      "gf": 11,
      "ga": 15,
-     "pts": 8
+     "pts": 8,
+     "form": "WLDDL"
     },
     {
      "pos": 13,
@@ -424,7 +454,8 @@
      "l": 4,
      "gf": 10,
      "ga": 14,
-     "pts": 8
+     "pts": 8,
+     "form": "DLLLW"
     },
     {
      "pos": 14,
@@ -435,7 +466,8 @@
      "l": 4,
      "gf": 8,
      "ga": 13,
-     "pts": 8
+     "pts": 8,
+     "form": "DLWLD"
     },
     {
      "pos": 15,
@@ -446,7 +478,8 @@
      "l": 5,
      "gf": 13,
      "ga": 15,
-     "pts": 7
+     "pts": 7,
+     "form": "LDLWL"
     },
     {
      "pos": 16,
@@ -457,18 +490,20 @@
      "l": 5,
      "gf": 5,
      "ga": 9,
-     "pts": 7
+     "pts": 7,
+     "form": "WDLLL"
     },
     {
      "pos": 17,
-     "team": "Darmstadt 98",
+     "team": "SV Darmstadt 98",
      "p": 8,
      "w": 2,
      "d": 1,
      "l": 5,
      "gf": 8,
      "ga": 18,
-     "pts": 7
+     "pts": 7,
+     "form": "LWLWL"
     },
     {
      "pos": 18,
@@ -479,16 +514,17 @@
      "l": 3,
      "gf": 7,
      "ga": 11,
-     "pts": 5
+     "pts": 5,
+     "form": "DLDLD"
     }
-   ]
+   ],
+   "updated": "2026-10-20T00:00:00.000Z"
   },
   {
    "id": "3-liga",
    "tier": 3,
    "name": "3. Liga",
    "short": "3L",
-   "updated": "2026-10-18",
    "zones": [
     {
      "from": 1,
@@ -524,51 +560,56 @@
      "l": 1,
      "gf": 27,
      "ga": 12,
-     "pts": 25
+     "pts": 25,
+     "form": "WWWWD"
     },
     {
      "pos": 2,
-     "team": "Viktoria Köln",
+     "team": "FC Viktoria Köln",
      "p": 10,
      "w": 6,
      "d": 2,
      "l": 2,
      "gf": 27,
      "ga": 14,
-     "pts": 20
+     "pts": 20,
+     "form": "WWWDD"
     },
     {
      "pos": 3,
-     "team": "Rot-Weiss Essen",
+     "team": "Rot-Weiß Essen",
      "p": 10,
      "w": 5,
      "d": 3,
      "l": 2,
      "gf": 18,
      "ga": 13,
-     "pts": 18
+     "pts": 18,
+     "form": "WDDWL"
     },
     {
      "pos": 4,
-     "team": "1. FC Saarbrücken",
+     "team": "FC Saarbrücken",
      "p": 10,
      "w": 5,
      "d": 2,
      "l": 3,
      "gf": 24,
      "ga": 17,
-     "pts": 17
+     "pts": 17,
+     "form": "DWDLW"
     },
     {
      "pos": 5,
-     "team": "TSG Hoffenheim II",
+     "team": "Hoffenheim II",
      "p": 10,
      "w": 5,
      "d": 1,
      "l": 4,
      "gf": 20,
      "ga": 15,
-     "pts": 16
+     "pts": 16,
+     "form": "WWLLW"
     },
     {
      "pos": 6,
@@ -579,18 +620,20 @@
      "l": 3,
      "gf": 17,
      "ga": 19,
-     "pts": 15
+     "pts": 15,
+     "form": "WDWLL"
     },
     {
      "pos": 7,
-     "team": "VfB Stuttgart II",
+     "team": "Stuttgart II",
      "p": 10,
      "w": 4,
      "d": 2,
      "l": 4,
      "gf": 17,
      "ga": 18,
-     "pts": 14
+     "pts": 14,
+     "form": "LDDWW"
     },
     {
      "pos": 8,
@@ -601,18 +644,20 @@
      "l": 4,
      "gf": 15,
      "ga": 16,
-     "pts": 14
+     "pts": 14,
+     "form": "LWLLW"
     },
     {
      "pos": 9,
-     "team": "FC Ingolstadt",
+     "team": "FC Ingolstadt 04",
      "p": 10,
      "w": 4,
      "d": 2,
      "l": 4,
      "gf": 13,
      "ga": 15,
-     "pts": 14
+     "pts": 14,
+     "form": "LLLWW"
     },
     {
      "pos": 10,
@@ -623,7 +668,8 @@
      "l": 4,
      "gf": 11,
      "ga": 13,
-     "pts": 14
+     "pts": 14,
+     "form": "WLDWL"
     },
     {
      "pos": 11,
@@ -634,7 +680,8 @@
      "l": 5,
      "gf": 16,
      "ga": 16,
-     "pts": 13
+     "pts": 13,
+     "form": "LWWLL"
     },
     {
      "pos": 12,
@@ -645,40 +692,44 @@
      "l": 4,
      "gf": 18,
      "ga": 21,
-     "pts": 12
+     "pts": 12,
+     "form": "DLDLL"
     },
     {
      "pos": 13,
-     "team": "Wehen Wiesbaden",
+     "team": "SV Wehen",
      "p": 10,
      "w": 3,
      "d": 3,
      "l": 4,
      "gf": 12,
      "ga": 15,
-     "pts": 12
+     "pts": 12,
+     "form": "WLWWD"
     },
     {
      "pos": 14,
-     "team": "SC Verl",
+     "team": "Verl",
      "p": 10,
      "w": 3,
      "d": 3,
      "l": 4,
      "gf": 15,
      "ga": 19,
-     "pts": 12
+     "pts": 12,
+     "form": "DWDDL"
     },
     {
      "pos": 15,
-     "team": "Sonnenhof Großaspach",
+     "team": "SG Sonnenhof Grossaspach",
      "p": 10,
      "w": 3,
      "d": 3,
      "l": 4,
      "gf": 12,
      "ga": 18,
-     "pts": 12
+     "pts": 12,
+     "form": "DLLDW"
     },
     {
      "pos": 16,
@@ -689,7 +740,8 @@
      "l": 5,
      "gf": 15,
      "ga": 19,
-     "pts": 11
+     "pts": 11,
+     "form": "WLLDW"
     },
     {
      "pos": 17,
@@ -700,18 +752,20 @@
      "l": 5,
      "gf": 12,
      "ga": 17,
-     "pts": 11
+     "pts": 11,
+     "form": "LLDWD"
     },
     {
      "pos": 18,
-     "team": "Jahn Regensburg",
+     "team": "SSV Jahn Regensburg",
      "p": 10,
      "w": 2,
      "d": 4,
      "l": 4,
      "gf": 20,
      "ga": 19,
-     "pts": 10
+     "pts": 10,
+     "form": "LDWDD"
     },
     {
      "pos": 19,
@@ -722,21 +776,23 @@
      "l": 4,
      "gf": 8,
      "ga": 11,
-     "pts": 10
+     "pts": 10,
+     "form": "LWDLL"
     },
     {
      "pos": 20,
-     "team": "TSV Havelse",
+     "team": "Havelse",
      "p": 10,
      "w": 1,
      "d": 3,
      "l": 6,
      "gf": 13,
      "ga": 23,
-     "pts": 6
+     "pts": 6,
+     "form": "LLLDD"
     }
-   ]
+   ],
+   "updated": "2026-10-20T00:00:00.000Z"
   }
- ],
- "updated": "2026-10-18T18:23:47+01:00"
+ ]
 }

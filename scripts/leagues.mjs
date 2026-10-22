@@ -46,7 +46,8 @@ export const COUNTRIES = [
         zones: [Z(1, 2, "top", "Promotion"), Z(3, 6, "mid", "Play-offs"), Z(19, 22, "down", "Relegation")],
         promotionNote: "1st, 2nd and the play-off winner go up", relegationNote: "19th–22nd drop to Primera Federación",
         notes: [RESERVES] },
-      { apiId: 435, id: "primera-federacion", tier: 3, name: "Primera Federación", short: "PF", clubs: 20, groups: true,
+      { id: "primera-federacion", tier: 3, name: "Primera Federación", short: "PF", clubs: 20,
+        groups: [{ apiId: 435, name: "Group 1" }, { apiId: 436, name: "Group 2" }],
         zones: [Z(1, 1, "top", "Promotion"), Z(2, 5, "mid", "Play-offs"), Z(16, 20, "down", "Relegation")],
         promotionNote: "Each group winner goes up, plus two play-off winners",
         relegationNote: "16th–20th in each group drop to Segunda Federación", notes: [] }
@@ -82,7 +83,7 @@ export const COUNTRIES = [
         zones: [Z(1, 2, "top", "Promotion"), Z(3, 5, "mid", "Play-offs"), Z(16, 16, "down", "Relegation play-off"), Z(17, 18, "down", "Relegation")],
         promotionNote: "1st and 2nd go up; the play-off winner (3rd–5th) plays Ligue 1's 16th",
         relegationNote: "17th–18th drop to Ligue 3; 16th plays a relegation play-off", notes: [] },
-      // Ligue 3 is new for 2026–27. Confirm its ID with --check (it may have replaced National's 63).
+      // Ligue 3 is new for 2026–27 (API-Football ID 63, confirmed October 2026).
       { apiId: 63, id: "ligue-3", tier: 3, name: "Ligue 3", short: "L3", clubs: 18,
         zones: [Z(1, 2, "top", "Promotion"), Z(3, 6, "mid", "Play-offs"), Z(16, 18, "down", "Relegation")],
         promotionNote: "1st and 2nd go up; the play-off winner (3rd–6th) plays Ligue 2's 16th",
@@ -102,7 +103,8 @@ export const COUNTRIES = [
         promotionNote: "1st, 2nd and the play-off winner go up",
         relegationNote: "18th–20th drop to Serie C; 16th and 17th play a play-out",
         notes: ["Play-offs: 3rd and 4th go straight to the semi-finals; 5th to 8th play a preliminary round first."] },
-      { apiId: 138, id: "serie-c", tier: 3, name: "Serie C", short: "SC", clubs: 20, groups: true,
+      { id: "serie-c", tier: 3, name: "Serie C", short: "SC", clubs: 20,
+        groups: [{ apiId: 138, name: "Girone A" }, { apiId: 942, name: "Girone B" }, { apiId: 943, name: "Girone C" }],
         zones: [Z(1, 1, "top", "Promotion"), Z(2, 10, "mid", "Play-offs"), Z(17, 18, "down", "Play-out"), Z(19, 20, "down", "Relegation")],
         promotionNote: "Each group winner goes up, plus one play-off winner",
         relegationNote: "19th–20th in each group drop to Serie D; 17th and 18th play a play-out", notes: [] }

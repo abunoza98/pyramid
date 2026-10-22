@@ -3,7 +3,8 @@
  "name": "France",
  "adjective": "French",
  "season": "2026–27",
- "mode": "snapshot",
+ "mode": "live",
+ "updated": "2026-10-20T00:00:00.000Z",
  "belowNote": "Promoted clubs from National 1 come up",
  "leagues": [
   {
@@ -11,7 +12,6 @@
    "tier": 1,
    "name": "Ligue 1",
    "short": "L1",
-   "updated": "2026-10-18T21:42:00+01:00",
    "zones": [
     {
      "from": 1,
@@ -62,7 +62,8 @@
      "l": 1,
      "gf": 13,
      "ga": 5,
-     "pts": 14
+     "pts": 14,
+     "form": "WDWLW"
     },
     {
      "pos": 2,
@@ -73,7 +74,8 @@
      "l": 1,
      "gf": 14,
      "ga": 9,
-     "pts": 14
+     "pts": 14,
+     "form": "LWWWW"
     },
     {
      "pos": 3,
@@ -84,7 +86,8 @@
      "l": 1,
      "gf": 12,
      "ga": 7,
-     "pts": 14
+     "pts": 14,
+     "form": "WDWLW"
     },
     {
      "pos": 4,
@@ -95,7 +98,8 @@
      "l": 1,
      "gf": 10,
      "ga": 5,
-     "pts": 14
+     "pts": 14,
+     "form": "WWLWD"
     },
     {
      "pos": 5,
@@ -106,7 +110,8 @@
      "l": 1,
      "gf": 10,
      "ga": 6,
-     "pts": 14
+     "pts": 14,
+     "form": "WDWDL"
     },
     {
      "pos": 6,
@@ -117,7 +122,8 @@
      "l": 2,
      "gf": 15,
      "ga": 14,
-     "pts": 13
+     "pts": 13,
+     "form": "WWLWL"
     },
     {
      "pos": 7,
@@ -128,7 +134,8 @@
      "l": 2,
      "gf": 7,
      "ga": 6,
-     "pts": 11
+     "pts": 11,
+     "form": "WDLWW"
     },
     {
      "pos": 8,
@@ -139,7 +146,8 @@
      "l": 3,
      "gf": 14,
      "ga": 11,
-     "pts": 10
+     "pts": 10,
+     "form": "LDLWW"
     },
     {
      "pos": 9,
@@ -150,7 +158,8 @@
      "l": 4,
      "gf": 14,
      "ga": 10,
-     "pts": 9
+     "pts": 9,
+     "form": "LLLWW"
     },
     {
      "pos": 10,
@@ -161,7 +170,8 @@
      "l": 2,
      "gf": 13,
      "ga": 10,
-     "pts": 9
+     "pts": 9,
+     "form": "WLLWD"
     },
     {
      "pos": 11,
@@ -172,7 +182,8 @@
      "l": 2,
      "gf": 12,
      "ga": 11,
-     "pts": 9
+     "pts": 9,
+     "form": "LDWDW"
     },
     {
      "pos": 12,
@@ -183,7 +194,8 @@
      "l": 4,
      "gf": 11,
      "ga": 17,
-     "pts": 9
+     "pts": 9,
+     "form": "LWWLW"
     },
     {
      "pos": 13,
@@ -194,7 +206,8 @@
      "l": 3,
      "gf": 6,
      "ga": 9,
-     "pts": 8
+     "pts": 8,
+     "form": "DLWWL"
     },
     {
      "pos": 14,
@@ -205,7 +218,8 @@
      "l": 4,
      "gf": 12,
      "ga": 15,
-     "pts": 7
+     "pts": 7,
+     "form": "WDLLL"
     },
     {
      "pos": 15,
@@ -216,7 +230,8 @@
      "l": 4,
      "gf": 9,
      "ga": 15,
-     "pts": 7
+     "pts": 7,
+     "form": "LDWLL"
     },
     {
      "pos": 16,
@@ -227,18 +242,20 @@
      "l": 3,
      "gf": 10,
      "ga": 15,
-     "pts": 6
+     "pts": 6,
+     "form": "DDWLL"
     },
     {
      "pos": 17,
-     "team": "Troyes",
+     "team": "Estac Troyes",
      "p": 7,
      "w": 1,
      "d": 1,
      "l": 5,
      "gf": 5,
      "ga": 16,
-     "pts": 4
+     "pts": 4,
+     "form": "LLLLL"
     },
     {
      "pos": 18,
@@ -249,16 +266,17 @@
      "l": 5,
      "gf": 5,
      "ga": 11,
-     "pts": 2
+     "pts": 2,
+     "form": "LDLLL"
     }
-   ]
+   ],
+   "updated": "2026-10-20T00:00:00.000Z"
   },
   {
    "id": "ligue-2",
    "tier": 2,
    "name": "Ligue 2",
    "short": "L2",
-   "updated": "2026-10-19",
    "zones": [
     {
      "from": 1,
@@ -298,7 +316,8 @@
      "l": 1,
      "gf": 22,
      "ga": 8,
-     "pts": 22
+     "pts": 22,
+     "form": "WLDWW"
     },
     {
      "pos": 2,
@@ -309,7 +328,8 @@
      "l": 1,
      "gf": 11,
      "ga": 5,
-     "pts": 18
+     "pts": 18,
+     "form": "LWDWW"
     },
     {
      "pos": 3,
@@ -320,18 +340,20 @@
      "l": 0,
      "gf": 19,
      "ga": 11,
-     "pts": 17
+     "pts": 17,
+     "form": "DWDDW"
     },
     {
      "pos": 4,
-     "team": "Red Star",
+     "team": "RED Star FC 93",
      "p": 9,
      "w": 5,
      "d": 2,
      "l": 2,
      "gf": 12,
      "ga": 10,
-     "pts": 17
+     "pts": 17,
+     "form": "WWWWL"
     },
     {
      "pos": 5,
@@ -342,18 +364,20 @@
      "l": 3,
      "gf": 11,
      "ga": 8,
-     "pts": 16
+     "pts": 16,
+     "form": "LLWWW"
     },
     {
      "pos": 6,
-     "team": "Pau",
+     "team": "PAU",
      "p": 9,
      "w": 4,
      "d": 2,
      "l": 3,
      "gf": 11,
      "ga": 9,
-     "pts": 14
+     "pts": 14,
+     "form": "DLWWW"
     },
     {
      "pos": 7,
@@ -364,7 +388,8 @@
      "l": 2,
      "gf": 15,
      "ga": 13,
-     "pts": 13
+     "pts": 13,
+     "form": "WLDLW"
     },
     {
      "pos": 8,
@@ -375,7 +400,8 @@
      "l": 4,
      "gf": 11,
      "ga": 11,
-     "pts": 13
+     "pts": 13,
+     "form": "WLLWL"
     },
     {
      "pos": 9,
@@ -386,7 +412,8 @@
      "l": 3,
      "gf": 16,
      "ga": 16,
-     "pts": 12
+     "pts": 12,
+     "form": "DWWWL"
     },
     {
      "pos": 10,
@@ -397,7 +424,8 @@
      "l": 4,
      "gf": 13,
      "ga": 15,
-     "pts": 11
+     "pts": 11,
+     "form": "DWLLW"
     },
     {
      "pos": 11,
@@ -408,7 +436,8 @@
      "l": 2,
      "gf": 7,
      "ga": 9,
-     "pts": 11
+     "pts": 11,
+     "form": "DWDDL"
     },
     {
      "pos": 12,
@@ -419,7 +448,8 @@
      "l": 2,
      "gf": 6,
      "ga": 6,
-     "pts": 9
+     "pts": 9,
+     "form": "DDLDW"
     },
     {
      "pos": 13,
@@ -430,7 +460,8 @@
      "l": 5,
      "gf": 11,
      "ga": 15,
-     "pts": 8
+     "pts": 8,
+     "form": "DWLLL"
     },
     {
      "pos": 14,
@@ -441,7 +472,8 @@
      "l": 5,
      "gf": 11,
      "ga": 16,
-     "pts": 8
+     "pts": 8,
+     "form": "WLWDL"
     },
     {
      "pos": 15,
@@ -452,18 +484,20 @@
      "l": 5,
      "gf": 8,
      "ga": 15,
-     "pts": 8
+     "pts": 8,
+     "form": "LWDLL"
     },
     {
      "pos": 16,
-     "team": "Clermont",
+     "team": "Clermont Foot",
      "p": 9,
      "w": 0,
      "d": 7,
      "l": 2,
      "gf": 9,
      "ga": 12,
-     "pts": 7
+     "pts": 7,
+     "form": "DDDLD"
     },
     {
      "pos": 17,
@@ -474,7 +508,8 @@
      "l": 6,
      "gf": 14,
      "ga": 21,
-     "pts": 7
+     "pts": 7,
+     "form": "LLLLL"
     },
     {
      "pos": 18,
@@ -485,16 +520,17 @@
      "l": 5,
      "gf": 13,
      "ga": 20,
-     "pts": 6
+     "pts": 6,
+     "form": "LLDLD"
     }
-   ]
+   ],
+   "updated": "2026-10-20T00:00:00.000Z"
   },
   {
    "id": "ligue-3",
    "tier": 3,
    "name": "Ligue 3",
    "short": "L3",
-   "updated": "2026-10-21",
    "zones": [
     {
      "from": 1,
@@ -523,14 +559,15 @@
    "rows": [
     {
      "pos": 1,
-     "team": "La Roche",
+     "team": "La Roche VF",
      "p": 10,
      "w": 6,
      "d": 3,
      "l": 1,
      "gf": 16,
      "ga": 10,
-     "pts": 21
+     "pts": 21,
+     "form": "DWWWL"
     },
     {
      "pos": 2,
@@ -541,7 +578,8 @@
      "l": 2,
      "gf": 18,
      "ga": 8,
-     "pts": 20
+     "pts": 20,
+     "form": "WWLWL"
     },
     {
      "pos": 3,
@@ -552,7 +590,8 @@
      "l": 3,
      "gf": 15,
      "ga": 13,
-     "pts": 19
+     "pts": 19,
+     "form": "WDWWW"
     },
     {
      "pos": 4,
@@ -563,7 +602,8 @@
      "l": 4,
      "gf": 19,
      "ga": 13,
-     "pts": 18
+     "pts": 18,
+     "form": "WLWLW"
     },
     {
      "pos": 5,
@@ -574,10 +614,23 @@
      "l": 1,
      "gf": 13,
      "ga": 9,
-     "pts": 17
+     "pts": 17,
+     "form": "WWDWD"
     },
     {
      "pos": 6,
+     "team": "Le Puy Foot",
+     "p": 10,
+     "w": 5,
+     "d": 1,
+     "l": 4,
+     "gf": 12,
+     "ga": 9,
+     "pts": 16,
+     "form": "LWLWW"
+    },
+    {
+     "pos": 7,
      "team": "Amiens",
      "p": 10,
      "w": 4,
@@ -585,18 +638,8 @@
      "l": 2,
      "gf": 13,
      "ga": 4,
-     "pts": 16
-    },
-    {
-     "pos": 7,
-     "team": "Le Puy",
-     "p": 10,
-     "w": 5,
-     "d": 1,
-     "l": 4,
-     "gf": 12,
-     "ga": 9,
-     "pts": 16
+     "pts": 16,
+     "form": "DWDWD"
     },
     {
      "pos": 8,
@@ -607,51 +650,56 @@
      "l": 1,
      "gf": 12,
      "ga": 6,
-     "pts": 15
+     "pts": 15,
+     "form": "DDDWL"
     },
     {
      "pos": 9,
-     "team": "Fleury",
+     "team": "Fleury 91",
      "p": 10,
      "w": 4,
      "d": 3,
      "l": 3,
      "gf": 16,
      "ga": 12,
-     "pts": 15
+     "pts": 15,
+     "form": "WDLWW"
     },
     {
      "pos": 10,
-     "team": "Paris 13 Atletico",
+     "team": "Gobelins",
      "p": 10,
      "w": 4,
      "d": 3,
      "l": 3,
      "gf": 10,
      "ga": 10,
-     "pts": 15
+     "pts": 15,
+     "form": "LDWLW"
     },
     {
      "pos": 11,
-     "team": "Quevilly-Rouen",
+     "team": "Quevilly",
      "p": 10,
      "w": 3,
      "d": 4,
      "l": 3,
      "gf": 11,
      "ga": 14,
-     "pts": 13
+     "pts": 13,
+     "form": "WDDLW"
     },
     {
      "pos": 12,
-     "team": "Thionville",
+     "team": "Thionville Lusitanos",
      "p": 10,
      "w": 3,
      "d": 3,
      "l": 4,
      "gf": 15,
      "ga": 16,
-     "pts": 12
+     "pts": 12,
+     "form": "LDLLL"
     },
     {
      "pos": 13,
@@ -662,7 +710,8 @@
      "l": 4,
      "gf": 8,
      "ga": 12,
-     "pts": 12
+     "pts": 12,
+     "form": "WDLDD"
     },
     {
      "pos": 14,
@@ -673,18 +722,20 @@
      "l": 5,
      "gf": 10,
      "ga": 15,
-     "pts": 9
+     "pts": 9,
+     "form": "LLWLD"
     },
     {
      "pos": 15,
-     "team": "Orléans",
+     "team": "Orleans",
      "p": 10,
      "w": 2,
      "d": 3,
      "l": 5,
      "gf": 9,
      "ga": 14,
-     "pts": 9
+     "pts": 9,
+     "form": "LLDDL"
     },
     {
      "pos": 16,
@@ -695,7 +746,8 @@
      "l": 7,
      "gf": 6,
      "ga": 13,
-     "pts": 7
+     "pts": 7,
+     "form": "LLWLL"
     },
     {
      "pos": 17,
@@ -706,21 +758,23 @@
      "l": 7,
      "gf": 9,
      "ga": 23,
-     "pts": 7
+     "pts": 7,
+     "form": "DLLLW"
     },
     {
      "pos": 18,
-     "team": "Bourg-Péronnas",
+     "team": "Bourg-en-bresse 01",
      "p": 10,
      "w": 1,
      "d": 2,
      "l": 7,
      "gf": 5,
      "ga": 16,
-     "pts": 5
+     "pts": 5,
+     "form": "LDDLL"
     }
-   ]
+   ],
+   "updated": "2026-10-20T00:00:00.000Z"
   }
- ],
- "updated": "2026-10-21"
+ ]
 }

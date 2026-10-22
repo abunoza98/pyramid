@@ -2,7 +2,7 @@
 // Football Pyramids: pulls the latest tables from API-Football, writes data/<country>.json,
 // then rebuilds the pages. The pages also re-read the data files every five minutes.
 //
-//   API_FOOTBALL_KEY=xxxx node scripts/update-standings.mjs           update everything (16 requests)
+//   API_FOOTBALL_KEY=xxxx node scripts/update-standings.mjs           update everything (19 requests)
 //   API_FOOTBALL_KEY=xxxx node scripts/update-standings.mjs --check   plan, quota and league IDs (5 requests)
 //   node scripts/update-standings.mjs --fixture test/api-football-sample.json --out /tmp/fp-test   offline test, no key
 //
@@ -62,26 +62,31 @@ function toRows(table, notes) {
   return { rows, updated: latest ? new Date(latest).toISOString() : new Date().toISOString() };
 }
 
-// Turn one API-Football /standings response into a league object for the site.
-export function toLeague(cfg, body) {
+function firstTable(body, label, apiId) {
   const standings = body?.response?.[0]?.league?.standings;
-  if (!Array.isArray(standings) || !standings.length) {
-    throw new Error(`${cfg.name}: no table in the response (check league ID ${cfg.apiId} and season ${SEASON})`);
+  if (!Array.isArray(standings) || !standings.length || !standings[0]?.length) {
+    throw new Error(`${label}: no table in the response (check league ID ${apiId} and season ${SEASON})`);
   }
+  return standings[0];
+}
+
+// Turn API-Football /standings responses into a league object for the site.
+// A tier split into regional groups has one API league per group, so `body` is then a list, one per group.
+export function toLeague(cfg, body) {
   const { apiId, clubs, groups, ...meta } = cfg;
   const notes = [...cfg.notes];
   const league = { ...meta, notes };
   if (groups) {
-    league.groups = standings.filter((t) => Array.isArray(t) && t.length).map((t, i) => {
-      const { rows, updated } = toRows(t, notes);
-      return { name: groupName(t[0]?.group, i), updated, rows };
-    }).sort((a, b) => a.name.localeCompare(b.name, "en", { numeric: true }));
+    league.groups = groups.map((g, i) => {
+      const { rows, updated } = toRows(firstTable(body[i], `${cfg.name} ${g.name}`, g.apiId), notes);
+      return { name: g.name, updated, rows };
+    });
     league.updated = league.groups.map((g) => g.updated).sort().at(-1);
     for (const g of league.groups) {
       if (g.rows.length !== clubs) throw new Error(`${cfg.name} ${g.name}: expected ${clubs} clubs, got ${g.rows.length}.`);
     }
   } else {
-    const { rows, updated } = toRows(standings[0], notes);
+    const { rows, updated } = toRows(firstTable(body, cfg.name, apiId), notes);
     if (rows.length !== clubs) throw new Error(`${cfg.name}: expected ${clubs} clubs, got ${rows.length}.`);
     league.rows = rows;
     league.updated = updated;
@@ -108,7 +113,7 @@ async function check(key) {
   let missing = [];
   for (const c of COUNTRIES) {
     const body = await api(`/leagues?country=${encodeURIComponent(c.apiCountry)}&season=${SEASON}&type=league`, key);
-    const wanted = new Map(c.leagues.map((l) => [l.apiId, l.name]));
+    const wanted = new Map(c.leagues.flatMap((l) => l.groups ? l.groups.map((g) => [g.apiId, `${l.name} ${g.name}`]) : [[l.apiId, l.name]]));
     console.log(`${c.name}, season ${seasonLabel(SEASON)}:`);
     for (const item of body.response || []) {
       const season = (item.seasons || []).find((s) => s.year === SEASON) || item.seasons?.[0];
@@ -145,7 +150,8 @@ async function main() {
     const leagues = [];
     for (const cfg of c.leagues) {
       if (!fixture) console.log(`Fetching ${c.name}: ${cfg.name}…`);
-      const body = fixture ? fixture[cfg.apiId] : await api(`/standings?league=${cfg.apiId}&season=${SEASON}`, key);
+      const get = (id) => fixture ? fixture[id] : api(`/standings?league=${id}&season=${SEASON}`, key);
+      const body = cfg.groups ? await Promise.all(cfg.groups.map((g) => get(g.apiId))) : await get(cfg.apiId);
       leagues.push(toLeague(cfg, body));
     }
     const next = {
