@@ -295,15 +295,14 @@
      The page arrives showing the current round in UK time. Here it switches to the visitor's time zone,
      lets them move between rounds and groups, and lays today's live scores over the list. */
   var TZ_KEY = "pyramid:tz";
-  var LOCAL_IS_UK = false;
-  try { LOCAL_IS_UK = Intl.DateTimeFormat().resolvedOptions().timeZone === "Europe/London"; } catch (e) {}
+
   var fxData = null, fxState = { tz: "local", group: 0, round: null };
-  try { if (localStorage.getItem(TZ_KEY) === "uk") fxState.tz = "uk"; } catch (e) {}
+  try { var savedTz = localStorage.getItem(TZ_KEY); if (savedTz === "venue" || savedTz === "uk") fxState.tz = "venue"; } catch (e) {}
   function fxRender() {
     if (!fxData) return;
     var y = window.scrollY;
     $("main-content").innerHTML = FP.fixturesMain(fxData, {
-      tz: fxState.tz, group: fxState.group, round: fxState.round, live: live, myClub: myClub, localIsUk: LOCAL_IS_UK,
+      tz: fxState.tz, group: fxState.group, round: fxState.round, live: live, myClub: myClub,
       tableHref: body.getAttribute("data-table") || "",
       tableText: COUNTRY === "europe" && fxData ? fxData.name + (fxData.year ? " " + fxData.season : " table and bracket") : null
     });
@@ -323,14 +322,10 @@
         fxLive();
       });
     document.addEventListener("click", function (e) {
-      var t = e.target.closest && e.target.closest("[data-step], [data-group], .tz-toggle");
+      var t = e.target.closest && e.target.closest("[data-step], [data-group]");
       if (!t || !fxData) return;
       if (t.hasAttribute("data-step")) fxState.round = fxRound() + Number(t.getAttribute("data-step"));
-      else if (t.hasAttribute("data-group")) { fxState.group = Number(t.getAttribute("data-group")); fxState.round = null; }
-      else {
-        fxState.tz = t.getAttribute("data-tz");
-        try { localStorage.setItem(TZ_KEY, fxState.tz); } catch (err) {}
-      }
+      else { fxState.group = Number(t.getAttribute("data-group")); fxState.round = null; }
       fxRender();
     });
     document.addEventListener("change", function (e) {
@@ -339,6 +334,14 @@
       fxRender();
     });
   }
+  // Your time / local kick-off time switch (fixtures and competition pages). The choice is remembered.
+  document.addEventListener("click", function (e) {
+    var t = e.target.closest && e.target.closest(".tz-toggle");
+    if (!t) return;
+    fxState.tz = t.getAttribute("data-tz");
+    try { localStorage.setItem(TZ_KEY, fxState.tz); } catch (err) {}
+    if (PAGE === "fixtures") fxRender(); else if (PAGE === "comp") render();
+  });
   var fxTimer = null;
   function fxLive() {
     clearTimeout(fxTimer);

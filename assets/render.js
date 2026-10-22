@@ -127,7 +127,7 @@
   }
   function ukClock(ts) {
     try {
-      return new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date(ts * 1000));
+      return new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date(ts * 1000));
     } catch (e) { return ""; }
   }
 
@@ -440,21 +440,36 @@
   }
 
   /* ---------- Fixtures pages ----------
-     fx: data/fixtures/<country>/<league>.json. opts: { tz: "local" | "uk", now, live, group, round, tableHref, myClub }.
+     fx: data/fixtures/<country>/<league>.json. opts: { tz: "local" | "venue", now, live, group, round, tableHref, myClub }.
      Rounds are as the league names them; the page opens on the current one. */
+  // Times are shown either in the visitor's own time zone ("local") or in local kick-off time where the game is
+  // played ("venue"). European competitions use Central European Time, as UEFA does.
+  var VENUE_TZ = {
+    england: "Europe/London", scotland: "Europe/London", spain: "Europe/Madrid", germany: "Europe/Berlin",
+    france: "Europe/Paris", italy: "Europe/Rome", belgium: "Europe/Brussels", netherlands: "Europe/Amsterdam",
+    portugal: "Europe/Lisbon", croatia: "Europe/Zagreb", turkey: "Europe/Istanbul", europe: "Europe/Paris"
+  };
+  function zoneOfMode(mode, country) { return mode === "venue" ? VENUE_TZ[country] || "Europe/London" : "local"; }
+  function myZone() { try { return Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) { return ""; } }
+  // tz: "local", or an IANA zone such as "Europe/Madrid"
   function fmt(ts, tz, o) {
     var opt = {};
     for (var k in o) opt[k] = o[k];
-    if (tz === "uk") opt.timeZone = "Europe/London";
+    if (tz && tz !== "local") opt.timeZone = tz;
     try { return new Intl.DateTimeFormat("en-GB", opt).format(new Date(ts * 1000)); } catch (e) { return ""; }
   }
-  function tzName(tz) {
-    if (tz === "uk") return "UK time";
-    try { if (Intl.DateTimeFormat().resolvedOptions().timeZone === "Europe/London") return "UK time"; } catch (e) {}
-    try {
-      var zone = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
-      return "your time (" + (zone.split("/").pop() || "local").replace(/_/g, " ") + ")";
-    } catch (e) { return "your time"; }
+  function zoneCity(z) { return (String(z).split("/").pop() || "local").replace(/_/g, " "); }
+  function tzName(mode, country) {
+    if (mode === "venue") return country === "europe" ? "Central European Time, as UEFA lists them" : "local kick-off time (" + zoneCity(VENUE_TZ[country] || "Europe/London") + ")";
+    var z = myZone();
+    return z ? "your time (" + zoneCity(z) + ")" : "your time";
+  }
+  // The "Times in …" line, with a switch unless the visitor is already in the venue's time zone.
+  function tzLine(mode, country) {
+    var same = myZone() === VENUE_TZ[country];
+    return "<span>Times in " + esc(same ? "local time (" + zoneCity(myZone()) + ")" : tzName(mode, country)) + "</span>" +
+      (same ? "" : '<button type="button" class="tz-toggle" data-tz="' + (mode === "venue" ? "local" : "venue") + '">' +
+        (mode === "venue" ? "Use my time zone" : "Show local kick-off times") + "</button>");
   }
   function currentRound(rounds, now) {
     var t = (now || Date.now()) / 1000 - 2 * 86400;
@@ -497,7 +512,8 @@
 
   function fixturesMain(fx, opts) {
     opts = opts || {};
-    var tz = opts.tz || "uk", now = opts.now || Date.now();
+    var mode = opts.tz === "local" ? "local" : "venue", now = opts.now || Date.now();
+    var tz = zoneOfMode(mode, fx.country);
     var gi = Math.min(opts.group || 0, fx.groups.length - 1);
     var g = fx.groups[gi];
     var ri = opts.round == null ? currentRound(g.rounds, now) : Math.max(0, Math.min(opts.round, g.rounds.length - 1));
@@ -541,9 +557,7 @@
       '<p class="lede">' + (fx.year ? "Every " + esc(fx.name) + " game from " + esc(fx.season) + ", round by round, from the first qualifying round to the final."
         : "Every " + esc(fx.name) + " game this season, round by round, with results, postponements and kick-off changes.") + "</p>" +
       '<p class="fx-links">' + (opts.tableHref ? '<a href="' + esc(opts.tableHref) + '">' + esc(opts.tableText || fx.name + " table") + " →</a>" : "") +
-      '<span>Times in ' + esc(tzName(tz)) + "</span>" +
-      (opts.localIsUk ? "" : '<button type="button" class="tz-toggle" data-tz="' + (tz === "uk" ? "local" : "uk") + '">' +
-        (tz === "uk" ? "Use my time zone" : "Show UK times") + "</button>") + "</p></section>" +
+      tzLine(mode, fx.country) + "</p></section>" +
       groups +
       '<nav class="rnav" aria-label="Rounds">' +
       '<button type="button" class="rnav-step" data-step="-1"' + (ri === 0 ? " disabled" : "") + ' aria-label="Previous round">‹</button>' +
@@ -685,7 +699,8 @@
 
   function compMain(comp, fx, opts) {
     opts = opts || {};
-    var tz = opts.tz || "uk", now = opts.now || Date.now();
+    var mode = opts.tz === "local" ? "local" : "venue", now = opts.now || Date.now();
+    var tz = zoneOfMode(mode, "europe");
     var lpRounds = fx ? stageRounds(fx, "lp", opts.live) : [];
     var ko = fx ? stageRounds(fx, "ko", opts.live) : [];
     var q = fx ? stageRounds(fx, "q", opts.live) : [];
@@ -702,7 +717,7 @@
       '<p class="lede"><strong>' + esc(compStatus(comp, fx)) + "</strong> · " + (comp.final ? (comp.groups ? "The group-stage tables" : "The league-phase table") + ", the full knockout bracket and every qualifying tie."
         : "The league-phase table, the knockout bracket as each draw is made, and every qualifying tie.") + "</p>" +
       '<p class="fx-links">' + (opts.fixturesHref ? '<a href="' + esc(opts.fixturesHref) + '">Fixtures and results by round →</a>' : "") +
-      '<span>Times in ' + esc(tzName(tz)) + "</span></p></section>" +
+      tzLine(mode, "europe") + "</p></section>" +
       '<section class="comp" data-tabs="stage"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Stages">' +
       tab("lp", comp.groups ? "Group stage" : "League phase") + tab("ko", "Knockouts") + tab("q", "Qualifying") + "</div>" +
       panel("lp", (comp.rows && !comp.rows.length && !comp.groups ? '<p class="ko-empty">No table for this season.</p>' : tierHTML(comp, { eyebrow: comp.groups ? "Group stage" : "League phase" }))) +

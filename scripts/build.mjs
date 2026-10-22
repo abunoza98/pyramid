@@ -94,7 +94,7 @@ ${ADSENSE_CLIENT && !suffix ? `<script async src="https://pagead2.googlesyndicat
     <div id="main-content">${main}</div>
     <footer>
       ${snapshot ? "<p>These are sample standings gathered by hand, and each table shows the date it is from. Live updates start once the data feed is connected.</p>" : "<p>Tables update through the day as results come in.</p>"}
-      <p>Clubs are ranked by points, then by each league's own tie-break rules. Times are UK time.</p>
+      <p>Clubs are ranked by points, then by each league's own tie-break rules. Kick-off times are shown in your own time zone.</p>
       <p>Football Pyramids is an independent site and is not affiliated with any league, federation or club.</p>
       <p class="foot-links">
         <a href="${base}contact/${suffix}">About and contact</a>
@@ -263,7 +263,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         description: `Every ${fx.name} fixture and result for ${fx.season}, round by round, with kick-off times in your time zone, postponements and live scores.`,
         canonical: `${SITE}/${c.country}/${lg.id}/fixtures/`, base: "../../../", suffix, page: "fixtures", country: c.country,
         stamps: {}, countries, attrs: { league: lg.id, table: `../../${suffix}#${lg.id}` },
-        main: FP.fixturesMain(fx, { tz: "uk", tableHref: `../../${suffix}#${lg.id}` })
+        main: FP.fixturesMain(fx, { tz: "venue", tableHref: `../../${suffix}#${lg.id}` })
       }));
     }
     // Past seasons
@@ -305,14 +305,14 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
           title: `${comp.name} ${h.season}: ${h.comp.groups ? "group stage" : "league phase"}, knockout bracket and results | Football Pyramids`,
           description: `The ${comp.name} ${h.season}: ${h.comp.groups ? "every group-stage table" : "the league-phase table"}, the full knockout bracket and every qualifying tie.`,
           canonical: `${SITE}/europe/${comp.id}/${sl}/`, base: "../../../", suffix, page: "comp-history", country: "europe", stamps: {}, countries, seasons,
-          main: FP.compMain(h.comp, h.fx, { tz: "uk", seasons, fixturesHref: h.fx ? `fixtures/${suffix}` : "" })
+          main: FP.compMain(h.comp, h.fx, { tz: "venue", seasons, fixturesHref: h.fx ? `fixtures/${suffix}` : "" })
         }));
         if (h.fx) await write(`europe/${comp.id}/${sl}/fixtures/index.html`, shell({
           title: `${comp.name} fixtures and results ${h.season} | Football Pyramids`,
           description: `Every ${comp.name} fixture and result from ${h.season}, from qualifying to the final.`,
           canonical: `${SITE}/europe/${comp.id}/${sl}/fixtures/`, base: "../../../../", suffix, page: "fixtures", country: "europe", stamps: {}, countries,
           attrs: { league: comp.id, table: `../${suffix}`, fxfile: `data/history/europe/${comp.id}/${h.year}-fixtures.json` },
-          main: FP.fixturesMain(h.fx, { tz: "uk", tableHref: `../${suffix}`, tableText: `${comp.name} ${h.season}` })
+          main: FP.fixturesMain(h.fx, { tz: "venue", tableHref: `../${suffix}`, tableText: `${comp.name} ${h.season}` })
         }));
         euroPast.push(`/europe/${comp.id}/${sl}/`);
       }
@@ -321,14 +321,14 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         description: `The ${comp.name} league-phase table, the knockout bracket as each draw is made, every qualifying tie and live scores.`,
         canonical: `${SITE}/europe/${comp.id}/`, base: "../../", suffix, page: "comp", country: "europe", stamps: { europe: europe.updated }, countries,
         seasons: seasonsNow, attrs: { league: comp.id, fx: fx ? `fixtures/${suffix}` : "" },
-        main: FP.compMain(comp, fx, { tz: "uk", fixturesHref: fx ? `fixtures/${suffix}` : "", seasons: seasonsNow })
+        main: FP.compMain(comp, fx, { tz: "venue", fixturesHref: fx ? `fixtures/${suffix}` : "", seasons: seasonsNow })
       }));
       if (fx) await write(`europe/${comp.id}/fixtures/index.html`, shell({
         title: `${comp.name} fixtures and results ${fx.season} | Football Pyramids`,
         description: `Every ${comp.name} fixture and result for ${fx.season}, from qualifying to the final, with kick-off times in your time zone and live scores.`,
         canonical: `${SITE}/europe/${comp.id}/fixtures/`, base: "../../../", suffix, page: "fixtures", country: "europe", stamps: {}, countries,
         attrs: { league: comp.id, table: `../${suffix}` },
-        main: FP.fixturesMain(fx, { tz: "uk", tableHref: `../${suffix}`, tableText: `${comp.name} table and bracket` })
+        main: FP.fixturesMain(fx, { tz: "venue", tableHref: `../${suffix}`, tableText: `${comp.name} table and bracket` })
       }));
     }
   }
