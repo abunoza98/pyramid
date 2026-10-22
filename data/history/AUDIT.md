@@ -1,0 +1,417 @@
+# Past seasons audit
+
+Checked 2026-10-22. 396 findings. Repair mode: 190 API requests used.
+
+## Tables that stop before the end of the season (129)
+
+- **England 2017–18, Championship**: Clubs have played 31–32 games; a full season is 46. _rebuilt from results (1. Wolverhampton Wanderers 99, 2. Cardiff City 90, 3. Fulham 88); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **England 2017–18, League One**: Clubs have played 28–33 games; a full season is 46. _rebuilt from results (1. Wigan Athletic 98, 2. Blackburn Rovers 96, 3. Shrewsbury Town 87); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **England 2017–18, League Two**: Clubs have played 30–33 games; a full season is 46. _rebuilt from results (1. Accrington Stanley 93, 2. Luton Town 88, 3. Wycombe Wanderers 84); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **England 2019–20, League One**: Clubs have played 34–36 games; a full season is 44. _season stopped early (Covid): left as is._
+- **England 2019–20, League Two**: Clubs have played 36–37 games; a full season is 46. _season stopped early (Covid): left as is._
+- **Spain 2017–18, Segunda División**: Clubs have played 26 games; a full season is 42. _rebuilt from results (1. Rayo Vallecano 76, 2. Huesca 75, 3. Sporting Gijón 71); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Spain 2019–20, Primera Federación (Group 1)**: Clubs have played 17 games; a full season is 18. _season stopped early (Covid): left as is._
+- **Spain 2019–20, Primera Federación (Group 2)**: Clubs have played 19–20 games; a full season is 20. _season stopped early (Covid): left as is._
+- **Spain 2019–20, Primera Federación (Group 2)**: Clubs have played 17–18 games; a full season is 18. _season stopped early (Covid): left as is._
+- **Spain 2019–20, Primera Federación (Group 3)**: Clubs have played 19–20 games; a full season is 20. _season stopped early (Covid): left as is._
+- **Spain 2019–20, Primera Federación (Group 1)**: Clubs have played 28 games; a full season is 38. _season stopped early (Covid): left as is._
+- **Spain 2019–20, Primera Federación (Group 2)**: Clubs have played 28 games; a full season is 38. _season stopped early (Covid): left as is._
+- **Spain 2019–20, Primera Federación (Group 3)**: Clubs have played 28 games; a full season is 38. _season stopped early (Covid): left as is._
+- **Spain 2019–20, Primera Federación (Group 4)**: Clubs have played 28 games; a full season is 38. _season stopped early (Covid): left as is._
+- **Spain 2020–21, Primera Federación (Group 2 - 2nd Phase)**: Clubs have played 25–28 games; a full season is 26. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Germany 2017–18, 2. Bundesliga**: Clubs have played 21–22 games; a full season is 34. _rebuilt from results (1. Fortuna Dusseldorf 63, 2. FC Nurnberg 60, 3. Holstein Kiel 56); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Germany 2017–18, 3. Liga**: Clubs have played 23–24 games; a full season is 38. _rebuilt from results (1. FC Magdeburg 85, 2. SC Paderborn 83, 3. Karlsruher SC 69); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Germany 2021–22, 3. Liga**: Clubs have played 0–36 games; a full season is 38. _couldn't rebuild (results found for 20 clubs, not all complete): check by hand._
+- **France 2017–18, Ligue 2**: Clubs have played 25 games; a full season is 38. _rebuilt from results (1. Reims 88, 2. Nimes 73, 3. Ajaccio 68)._
+- **France 2017–18, Championnat National**: Clubs have played 18–20 games; a full season is 32. _rebuilt from results (1. Red Star 56, 2. Beziers 52, 3. Grenoble 51); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **France 2019–20, Ligue 1**: Clubs have played 27–28 games; a full season is 38. _season stopped early (Covid): left as is._
+- **France 2019–20, Ligue 2**: Clubs have played 28 games; a full season is 38. _season stopped early (Covid): left as is._
+- **France 2019–20, Championnat National**: Clubs have played 23–25 games; a full season is 34. _season stopped early (Covid): left as is._
+- **France 2022–23, Ligue 2**: Clubs have played 37–38 games; a full season is 38. _couldn't rebuild (results found for 20 clubs, not all complete): check by hand._
+- **France 2025–26, Ligue 1**: Clubs have played 33–34 games; a full season is 34. _rebuilt from results (1. Paris Saint-Germain 76, 2. Lens 70, 3. Lille 61); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Italy 2017–18, Serie B**: Clubs have played 25 games; a full season is 42. _rebuilt from results (1. Empoli 85, 2. Parma 72, 3. Frosinone 72); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Italy 2017–18, Serie C (Group 2)**: Clubs have played 0–34 games; a full season is 36. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Italy 2018–19, Serie C (Girone A)**: Clubs have played 0–37 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Italy 2018–19, Serie C (Girone C)**: Clubs have played 0–36 games; a full season is 36. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Italy 2019–20, Serie C (Girone A)**: Clubs have played 26–27 games; a full season is 38. _season stopped early (Covid): left as is._
+- **Italy 2019–20, Serie C (Girone B)**: Clubs have played 26–27 games; a full season is 38. _season stopped early (Covid): left as is._
+- **Italy 2019–20, Serie C (Girone C)**: Clubs have played 30 games; a full season is 38. _season stopped early (Covid): left as is._
+- **Italy 2020–21, Serie C (Girone C)**: Clubs have played 0–36 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Italy 2021–22, Serie C (Girone C)**: Clubs have played 0–36 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Belgium 2010–11, First Division A (Play-offs I)**: Clubs have played 10 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2010–11, First Division A (Play-offs II)**: Clubs have played 6 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2010–11, First Division A (Play-offs II)**: Clubs have played 6 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2011–12, First Division A (Play-offs II)**: Clubs have played 6 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2011–12, First Division A (Play-offs II)**: Clubs have played 6 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2011–12, First Division A (Play-offs I)**: Clubs have played 10 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2012–13, First Division A (Play-offs I)**: Clubs have played 10 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2012–13, First Division A (Play-offs II)**: Clubs have played 6 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2012–13, First Division A (Play-offs II)**: Clubs have played 6 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2013–14, First Division A (Play-offs II)**: Clubs have played 6 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2013–14, First Division A (Play-offs II)**: Clubs have played 6 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2013–14, First Division A (Play-offs III)**: Clubs have played 3 games; a full season is 4. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2013–14, First Division A (Play-offs I)**: Clubs have played 10 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2014–15, First Division A (Play-offs I)**: Clubs have played 10 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2014–15, First Division A (Play-offs II)**: Clubs have played 6 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2014–15, First Division A (Play-offs II)**: Clubs have played 6 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2015–16, First Division A (Play-offs II)**: Clubs have played 6 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2015–16, First Division A (Play-offs II)**: Clubs have played 6 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2015–16, First Division A (Play-offs I)**: Clubs have played 10 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2016–17, First Division A (Play-offs I)**: Clubs have played 10 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2016–17, First Division B (Closing)**: Clubs have played 14 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Belgium 2016–17, First Division B (Opening)**: Clubs have played 14 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Belgium 2017–18, First Division A**: Clubs have played 26 games; a full season is 30. _rebuilt from results (1. Club Brugge 67, 2. Anderlecht 55, 3. Charleroi 51); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Belgium 2017–18, First Division B (Closing)**: Clubs have played 12 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Belgium 2017–18, First Division B (Opening)**: Clubs have played 14 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Belgium 2018–19, First Division A (Playoffs 2A)**: Clubs have played 10 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2018–19, First Division A (Playoffs 2B)**: Clubs have played 10 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2018–19, First Division A (Championship Round)**: Clubs have played 10 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2018–19, First Division B (Group 1)**: Clubs have played 14 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Belgium 2018–19, First Division B (Group 2)**: Clubs have played 14 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Belgium 2019–20, First Division A**: Clubs have played 29 games; a full season is 30. _season stopped early (Covid): left as is._
+- **Belgium 2019–20, First Division B (Relegation Round)**: Clubs have played 0 games; a full season is 2. _season stopped early (Covid): left as is._
+- **Belgium 2019–20, First Division B (Closing)**: Clubs have played 13–14 games; a full season is 28. _season stopped early (Covid): left as is._
+- **Belgium 2019–20, First Division B (Opening)**: Clubs have played 14 games; a full season is 28. _season stopped early (Covid): left as is._
+- **Belgium 2021–22, First Division A (Championship Round)**: Clubs have played 6 games; a full season is 40. _couldn't rebuild (results found for 18 clubs, not all complete): check by hand._
+- **Belgium 2021–22, First Division A (Conference League Play-off Group)**: Clubs have played 6 games; a full season is 40. _couldn't rebuild (results found for 18 clubs, not all complete): check by hand._
+- **Belgium 2023–24, Pro League (Relegation Round)**: Clubs have played 36 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2024–25, Pro League (Relegation Round)**: Clubs have played 36 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2024–25, Challenger Pro League**: Clubs have played 0–28 games; a full season is 30. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Belgium 2025–26, Pro League (Relegation Round)**: Clubs have played 36 games; a full season is 40. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Croatia 2017–18, Prva HNL**: Clubs have played 21 games; a full season is 36. _rebuilt from results (1. Dinamo Zagreb 73, 2. Rijeka 70, 3. Hajduk Split 66); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Croatia 2017–18, Druga HNL**: Clubs have played 19 games; a full season is 33. _rebuilt from results (1. Varaždin 62, 2. Gorica 62, 3. Dinamo Zagreb II 61); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Croatia 2018–19, Druga HNL**: Clubs have played 25 games; a full season is 26. _rebuilt from results (1. Varaždin 51, 2. Sibenik 46, 3. NK Osijek II 44); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Croatia 2019–20, Druga HNL**: Clubs have played 19 games; a full season is 30. _season stopped early (Covid): left as is._
+- **Croatia 2021–22, Druga HNL**: Clubs have played 29–30 games; a full season is 30. _rebuilt from results (1. Varaždin 63, 2. Rudeš 56, 3. Inter Zaprešić 48); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Netherlands 2017–18, Eredivisie**: Clubs have played 23 games; a full season is 34. _rebuilt from results (1. PSV Eindhoven 83, 2. Ajax 79, 3. AZ Alkmaar 71); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Netherlands 2017–18, Eerste Divisie**: Clubs have played 24 games; a full season is 38. _rebuilt from results (1. Jong Ajax 79, 2. Fortuna Sittard 78, 3. NEC Nijmegen 74); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Netherlands 2017–18, Tweede Divisie**: Clubs have played 19–20 games; a full season is 34. _rebuilt from results (1. Katwijk 72, 2. Kozakken Boys 70, 3. HHC 59); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Netherlands 2019–20, Eredivisie**: Clubs have played 25–26 games; a full season is 34. _season stopped early (Covid): left as is._
+- **Netherlands 2019–20, Eerste Divisie**: Clubs have played 29 games; a full season is 38. _season stopped early (Covid): left as is._
+- **Netherlands 2019–20, Tweede Divisie**: Clubs have played 23–24 games; a full season is 34. _season stopped early (Covid): left as is._
+- **Netherlands 2020–21, Tweede Divisie**: Clubs have played 4–6 games; a full season is 34. _couldn't rebuild (results found for 18 clubs, not all complete): check by hand._
+- **Portugal 2017–18, Liga Portugal**: Clubs have played 21–22 games; a full season is 34. _rebuilt from results (1. FC Porto 88, 2. Benfica 81, 3. Sporting CP 78); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Portugal 2017–18, Liga Portugal 2**: Clubs have played 23–24 games; a full season is 38. _rebuilt from results (1. Nacional 71, 2. Santa Clara 66, 3. Académico de Viseu 64); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Portugal 2019–20, Liga Portugal 2**: Clubs have played 24 games; a full season is 34. _season stopped early (Covid): left as is._
+- **Scotland 2010–11, Premiership (1st Phase)**: Clubs have played 33 games; a full season is 38. _couldn't rebuild (results found for 12 clubs, not all complete): check by hand._
+- **Scotland 2011–12, Premiership (1st Phase)**: Clubs have played 33 games; a full season is 38. _couldn't rebuild (results found for 12 clubs, not all complete): check by hand._
+- **Scotland 2012–13, Premiership (1st Phase)**: Clubs have played 33 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Scotland 2013–14, Premiership (1st Phase)**: Clubs have played 33 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Scotland 2014–15, Premiership (1st Phase)**: Clubs have played 33 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Scotland 2015–16, Premiership (1st Phase)**: Clubs have played 33 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Scotland 2016–17, Premiership (1st Phase)**: Clubs have played 33 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Scotland 2017–18, Championship**: Clubs have played 22–24 games; a full season is 36. _rebuilt from results (1. St Mirren 74, 2. Livingston 62, 3. Dundee United 61)._
+- **Scotland 2017–18, League One**: Clubs have played 22–25 games; a full season is 36. _rebuilt from results (1. Ayr United 76, 2. Raith Rovers 75, 3. Alloa Athletic 60)._
+- **Scotland 2017–18, League Two**: Clubs have played 22–25 games; a full season is 36. _rebuilt from results (1. Montrose 77, 2. Peterhead 76, 3. Stirling Albion 55)._
+- **Scotland 2018–19, Premiership (1st Phase)**: Clubs have played 33 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Scotland 2019–20, Premiership**: Clubs have played 29–30 games; a full season is 38. _season stopped early (Covid): left as is._
+- **Scotland 2019–20, Championship**: Clubs have played 26–28 games; a full season is 36. _season stopped early (Covid): left as is._
+- **Scotland 2019–20, League One**: Clubs have played 27–28 games; a full season is 36. _season stopped early (Covid): left as is._
+- **Scotland 2019–20, League Two**: Clubs have played 26–28 games; a full season is 36. _season stopped early (Covid): left as is._
+- **Scotland 2020–21, Premiership (Regular Season)**: Clubs have played 33 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Scotland 2020–21, Championship**: Clubs have played 26 games; a full season is 36. _couldn't rebuild (results found for 10 clubs, not all complete): check by hand._
+- **Scotland 2020–21, League One (Regular Season)**: Clubs have played 18 games; a full season is 36. _couldn't rebuild (results found for 10 clubs, not all complete): check by hand._
+- **Scotland 2020–21, League Two (Regular Season)**: Clubs have played 18 games; a full season is 36. _couldn't rebuild (results found for 10 clubs, not all complete): check by hand._
+- **Scotland 2021–22, Premiership (Regular Season)**: Clubs have played 33 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Scotland 2022–23, Premiership (1st Phase)**: Clubs have played 33 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Scotland 2023–24, Premiership (Regular Season)**: Clubs have played 33 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Scotland 2024–25, Premiership (Premiership)**: Clubs have played 33 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Scotland 2025–26, Premiership (Premiership)**: Clubs have played 33 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Turkey 2013–14, 3. Lig (Group 1)**: Clubs have played 33–34 games; a full season is 34. _couldn't rebuild (results found for 19 clubs, not all complete): check by hand._
+- **Turkey 2014–15, 3. Lig (Group 1)**: Clubs have played 33–34 games; a full season is 34. _couldn't rebuild (results found for 18 clubs, not all complete): check by hand._
+- **Turkey 2017–18, 3. Lig (Group 1)**: Clubs have played 22 games; a full season is 34. _rebuilt from results (1. Manisa FK 75, 2. Bayburt İÖİ 62, 3. Kemerspor 2003 57); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Turkey 2017–18, 3. Lig (Group 2)**: Clubs have played 22 games; a full season is 34. _rebuilt from results (1. Darıca Gençlerbirliği 72, 2. Ankara Demirspor 71, 3. Diyarbekirspor 64); clubs level on points are ordered by goal difference, check if this league uses head-to-head._
+- **Turkey 2017–18, 3. Lig (Group 3)**: Clubs have played 22 games; a full season is 34. _couldn't rebuild (results found for 19 clubs, not all complete): check by hand._
+- **Turkey 2019–20, 2. Lig (Beyaz)**: Clubs have played 28 games; a full season is 34. _season stopped early (Covid): left as is._
+- **Turkey 2019–20, 2. Lig (Kirmizi)**: Clubs have played 28 games; a full season is 34. _season stopped early (Covid): left as is._
+- **Turkey 2019–20, 3. Lig (Group 1)**: Clubs have played 28 games; a full season is 34. _season stopped early (Covid): left as is._
+- **Turkey 2019–20, 3. Lig (Group 2)**: Clubs have played 25–27 games; a full season is 32. _season stopped early (Covid): left as is._
+- **Turkey 2019–20, 3. Lig (Group 3)**: Clubs have played 28 games; a full season is 34. _season stopped early (Covid): left as is._
+- **Turkey 2020–21, 3. Lig (Group 1)**: Clubs have played 29–30 games; a full season is 30. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Turkey 2021–22, 2. Lig (Beyaz)**: Clubs have played 0–34 games; a full season is 36. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Turkey 2022–23, 2. Lig (Kirmizi)**: Clubs have played 37–38 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Turkey 2022–23, 3. Lig (Group 3)**: Clubs have played 33–34 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Turkey 2023–24, 3. Lig (Group 2)**: Clubs have played 27–28 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Turkey 2025–26, 2. Lig (Kirmizi Grup)**: Clubs have played 33–34 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+
+## Promotion and relegation that don't fit the final positions (19)
+
+- **England 2011–12, League Two**: Crewe Alexandra finished 7 of 24 but played a tier higher in 2012–13.
+- **England 2012–13, League Two**: Bradford City finished 7 of 24 but played a tier higher in 2013–14.
+- **England 2015–16, League Two**: AFC Wimbledon finished 7 of 24 but played a tier higher in 2016–17.
+- **England 2016–17, League Two**: Blackpool finished 7 of 24 but played a tier higher in 2017–18.
+- **England 2017–18, League Two**: Coventry City finished 9 of 24 but played a tier higher in 2018–19.
+- **England 2023–24, League Two**: Crawley Town finished 7 of 24 but played a tier higher in 2024–25.
+- **Spain 2017–18, Segunda División**: Valladolid finished 10 of 22 but played a tier higher in 2018–19.
+- **Germany 2012–13, 2. Bundesliga**: MSV Duisburg finished 11 of 18 but played a tier lower in 2013–14.
+- **Germany 2017–18, 2. Bundesliga**: Eintracht Braunschweig finished 12 of 18 but played a tier lower in 2018–19.
+- **France 2017–18, Championnat National**: Beziers finished 10 of 17 but played a tier higher in 2018–19.
+- **France 2022–23, Ligue 2**: Sochaux finished 9 of 20 but played a tier lower in 2023–24.
+- **Italy 2017–18, Serie B**: Novara finished 14 of 22 but played a tier lower in 2018–19.
+- **Netherlands 2017–18, Eerste Divisie**: De Graafschap finished 7 of 20 but played a tier higher in 2018–19.
+- **Netherlands 2018–19, Eerste Divisie**: RKC Waalwijk finished 8 of 20 but played a tier higher in 2019–20.
+- **Netherlands 2020–21, Eerste Divisie**: NEC Nijmegen finished 7 of 20 but played a tier higher in 2021–22.
+- **Netherlands 2023–24, Eerste Divisie**: NAC Breda finished 8 of 20 but played a tier higher in 2024–25.
+- **Netherlands 2024–25, Eerste Divisie**: Telstar finished 7 of 20 but played a tier higher in 2025–26.
+- **Portugal 2017–18, Liga Portugal**: Pacos Ferreira finished 12 of 18 but played a tier lower in 2018–19.
+- **Portugal 2017–18, Liga Portugal 2**: Nacional finished 8 of 20 but played a tier higher in 2018–19.
+
+## Positions out of order (10)
+
+- **England 2019–20, League One**: Oxford United (60 pts) is below Wycombe Wanderers (59 pts).
+- **England 2019–20, League Two**: Exeter City (65 pts) is below Cheltenham Town (64 pts).
+- **Spain 2020–21, Primera Federación (Group 2 - 2nd Phase)**: Ejea (37 pts) is below Mutilvera (36 pts).
+- **Spain 2020–21, Primera Federación (Group 3 - 2nd Phase)**: Espanyol II (37 pts) is below Peña Deportiva (36 pts).
+- **Spain 2020–21, Primera Federación (Group 3 - 2nd Phase)**: Espanyol II (37 pts) is below Peña Deportiva (36 pts).
+- **Italy 2019–20, Serie C (Girone C)**: Picerno (32 pts) is below Rieti (15 pts).
+- **Scotland 2020–21, Premiership (Relegation Round)**: Positions aren't 1 to 6.
+- **Scotland 2021–22, Premiership (Relegation Round)**: Positions aren't 1 to 6.
+- **Scotland 2023–24, Premiership (Relegation Round)**: Positions aren't 1 to 6.
+- **Turkey 2025–26, 3. Lig (Group 2)**: Karaköprü Belediyespor (47 pts) is below Ağrı 1970 (45 pts).
+
+## Numbers that don't add up (81)
+
+- **Spain 2020–21, Primera Federación (Group 2 - 2nd Phase)**: Goals for (206) and against (133) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 2 - 2nd Phase)**: Goals for (201) and against (276) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 2 - 2nd Phase)**: Goals for (199) and against (197) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 1 - 2nd Phase)**: Goals for (182) and against (141) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 1 - 2nd Phase)**: Goals for (215) and against (275) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 1 - 2nd Phase)**: Goals for (153) and against (134) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 3 - 2nd Phase)**: Goals for (203) and against (143) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 3 - 2nd Phase)**: Goals for (212) and against (268) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 3 - 2nd Phase)**: Goals for (182) and against (186) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 4 - 2nd Phase)**: Goals for (169) and against (136) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 4 - 2nd Phase)**: Goals for (222) and against (279) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 4 - 2nd Phase)**: Goals for (169) and against (145) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 5 - 2nd Phase)**: Goals for (199) and against (139) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 5 - 2nd Phase)**: Goals for (183) and against (249) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 5 - 2nd Phase)**: Goals for (140) and against (134) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 2 - 2nd Phase)**: Goals for (206) and against (133) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 2 - 2nd Phase)**: Goals for (202) and against (277) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 2 - 2nd Phase)**: Goals for (199) and against (197) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 1 - 2nd Phase)**: Goals for (182) and against (141) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 1 - 2nd Phase)**: Goals for (215) and against (275) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 1 - 2nd Phase)**: Goals for (153) and against (134) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 3 - 2nd Phase)**: Goals for (203) and against (143) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 3 - 2nd Phase)**: Goals for (212) and against (268) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 3 - 2nd Phase)**: Goals for (182) and against (186) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 4 - 2nd Phase)**: Goals for (169) and against (136) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 4 - 2nd Phase)**: Goals for (222) and against (279) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 4 - 2nd Phase)**: Goals for (169) and against (145) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 5 - 2nd Phase)**: Goals for (199) and against (139) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 5 - 2nd Phase)**: Goals for (183) and against (249) don't match across the table.
+- **Spain 2020–21, Primera Federación (Group 5 - 2nd Phase)**: Goals for (140) and against (134) don't match across the table.
+- **Italy 2018–19, Serie C (Girone A)**: Goals for (819) and against (762) don't match across the table.
+- **Italy 2018–19, Serie C (Girone C)**: Goals for (779) and against (704) don't match across the table.
+- **Belgium 2022–23, Pro League (Championship Round)**: Goals for (306) and against (178) don't match across the table.
+- **Belgium 2022–23, Pro League (Conference League Play-off Group)**: Goals for (277) and against (226) don't match across the table.
+- **Belgium 2022–23, Challenger Pro League (Promotion Round)**: Goals for (334) and against (267) don't match across the table.
+- **Belgium 2022–23, Challenger Pro League (Relegation Round)**: Goals for (242) and against (309) don't match across the table.
+- **Belgium 2023–24, Pro League (Relegation Round)**: Goals for (134) and against (261) don't match across the table.
+- **Belgium 2023–24, Pro League (Championship Round)**: Goals for (411) and against (260) don't match across the table.
+- **Belgium 2023–24, Pro League (Conference League Play-off Group)**: Goals for (338) and against (362) don't match across the table.
+- **Belgium 2024–25, Pro League (Championship Round)**: Goals for (390) and against (269) don't match across the table.
+- **Belgium 2024–25, Pro League (Relegation Round)**: Goals for (165) and against (256) don't match across the table.
+- **Belgium 2024–25, Pro League (Qualifying Round)**: Goals for (305) and against (335) don't match across the table.
+- **Belgium 2025–26, Pro League (Championship Round)**: Goals for (378) and against (298) don't match across the table.
+- **Belgium 2025–26, Pro League (Relegation Round)**: Goals for (172) and against (223) don't match across the table.
+- **Belgium 2025–26, Pro League (Qualifying Round)**: Goals for (285) and against (314) don't match across the table.
+- **Scotland 2010–11, Premiership (2nd Phase)**: Goals for (374) and against (261) don't match across the table.
+- **Scotland 2010–11, Premiership (2nd Phase)**: Goals for (210) and against (323) don't match across the table.
+- **Scotland 2011–12, Premiership (2nd Phase)**: Goals for (360) and against (236) don't match across the table.
+- **Scotland 2011–12, Premiership (2nd Phase)**: Goals for (241) and against (365) don't match across the table.
+- **Scotland 2012–13, Premiership (2nd Phase)**: Goals for (366) and against (300) don't match across the table.
+- **Scotland 2012–13, Premiership (2nd Phase)**: Goals for (257) and against (323) don't match across the table.
+- **Scotland 2013–14, Premiership (2nd Phase)**: Goals for (376) and against (259) don't match across the table.
+- **Scotland 2013–14, Premiership (2nd Phase)**: Goals for (250) and against (367) don't match across the table.
+- **Scotland 2014–15, Premiership (2nd Phase)**: Goals for (331) and against (239) don't match across the table.
+- **Scotland 2014–15, Premiership (2nd Phase)**: Goals for (256) and against (348) don't match across the table.
+- **Scotland 2015–16, Premiership (2nd Phase)**: Goals for (374) and against (298) don't match across the table.
+- **Scotland 2015–16, Premiership (2nd Phase)**: Goals for (276) and against (352) don't match across the table.
+- **Scotland 2016–17, Premiership (2nd Phase)**: Goals for (379) and against (256) don't match across the table.
+- **Scotland 2016–17, Premiership (2nd Phase)**: Goals for (249) and against (372) don't match across the table.
+- **Scotland 2018–19, Premiership (2nd Phase - Championship Group - Cham)**: Goals for (359) and against (211) don't match across the table.
+- **Scotland 2018–19, Premiership (2nd Phase - Relegation Group - Relega)**: Goals for (219) and against (367) don't match across the table.
+- **Scotland 2020–21, Premiership (Championship Round)**: Goals for (332) and against (215) don't match across the table.
+- **Scotland 2020–21, Premiership (Relegation Round)**: Goals for (220) and against (337) don't match across the table.
+- **Scotland 2020–21, League One (Promotion Round)**: Goals for (165) and against (119) don't match across the table.
+- **Scotland 2020–21, League One (Relegation Round)**: Goals for (113) and against (159) don't match across the table.
+- **Scotland 2020–21, League Two (Relegation Round)**: Goals for (103) and against (178) don't match across the table.
+- **Scotland 2020–21, League Two (Promotion Round)**: Goals for (190) and against (115) don't match across the table.
+- **Scotland 2021–22, Premiership (Championship Round)**: Goals for (352) and against (263) don't match across the table.
+- **Scotland 2021–22, Premiership (Relegation Round)**: Goals for (211) and against (300) don't match across the table.
+- **Scotland 2022–23, Premiership (Championship Group)**: Goals for (426) and against (308) don't match across the table.
+- **Scotland 2023–24, Premiership (Championship Round)**: Goals for (377) and against (268) don't match across the table.
+- **Scotland 2023–24, Premiership (Relegation Round)**: Goals for (252) and against (361) don't match across the table.
+- **Scotland 2024–25, Premiership (Championship Round)**: Goals for (400) and against (291) don't match across the table.
+- **Scotland 2024–25, Premiership (Relegation Round)**: Goals for (275) and against (384) don't match across the table.
+- **Scotland 2025–26, Premiership (Championship Round)**: Goals for (383) and against (260) don't match across the table.
+- **Scotland 2025–26, Premiership (Relegation Round)**: Goals for (251) and against (374) don't match across the table.
+- **Turkey 2022–23, 1. Lig**: Goals for (915) and against (921) don't match across the table.
+- **Turkey 2025–26, 3. Lig (Group 2)**: Talasgücü Belediyespor: W 13 + D 11 + L 7 is not P 30.
+- **Turkey 2025–26, 3. Lig (Group 2)**: Karaköprü Belediyespor: W 13 + D 8 + L 10 is not P 30.
+- **Turkey 2025–26, 3. Lig (Group 2)**: Niğde Belediyesispor: W 11 + D 9 + L 11 is not P 30.
+- **Turkey 2025–26, 3. Lig (Group 2)**: Kırıkkale Büyük Anadolu: W 11 + D 7 + L 13 is not P 30.
+
+## Points that don't match wins and draws (77)
+
+- **Belgium 2010–11, First Division A (Play-offs I)**: Genk: 51 pts, but 6 wins and 1 draws make 19.
+- **Belgium 2010–11, First Division A (Play-offs I)**: Standard Liège: 51 pts, but 8 wins and 2 draws make 26.
+- **Belgium 2010–11, First Division A (Play-offs I)**: Anderlecht: 44 pts, but 3 wins and 2 draws make 11.
+- **Belgium 2010–11, First Division A (Play-offs I)**: Club Brugge: 43 pts, but 4 wins and 4 draws make 16.
+- **Belgium 2010–11, First Division A (Play-offs I)**: Gent: 33 pts, but 0 wins and 4 draws make 4.
+- **Belgium 2010–11, First Division A (Play-offs I)**: Lokeren: 31 pts, but 1 wins and 3 draws make 6.
+- **Belgium 2010–11, First Division A (Play-offs III)**: AS Eupen: 10 pts, but 2 wins and 1 draws make 7.
+- **Belgium 2011–12, First Division A (Play-offs III)**: Westerlo: 12 pts, but 3 wins and 0 draws make 9.
+- **Belgium 2011–12, First Division A (Play-offs I)**: Anderlecht: 52 pts, but 5 wins and 3 draws make 18.
+- **Belgium 2011–12, First Division A (Play-offs I)**: Club Brugge: 48 pts, but 5 wins and 2 draws make 17.
+- **Belgium 2011–12, First Division A (Play-offs I)**: Genk: 41 pts, but 6 wins and 0 draws make 18.
+- **Belgium 2011–12, First Division A (Play-offs I)**: Gent: 40 pts, but 4 wins and 0 draws make 12.
+- **Belgium 2011–12, First Division A (Play-offs I)**: Standard Liège: 35 pts, but 2 wins and 3 draws make 9.
+- **Belgium 2011–12, First Division A (Play-offs I)**: Kortrijk: 34 pts, but 3 wins and 2 draws make 11.
+- **Belgium 2012–13, First Division A (Play-offs I)**: Anderlecht: 49 pts, but 4 wins and 3 draws make 15.
+- **Belgium 2012–13, First Division A (Play-offs I)**: Zulte Waregem: 47 pts, but 4 wins and 3 draws make 15.
+- **Belgium 2012–13, First Division A (Play-offs I)**: Club Brugge: 46 pts, but 6 wins and 1 draws make 19.
+- **Belgium 2012–13, First Division A (Play-offs I)**: Standard Liège: 42 pts, but 5 wins and 2 draws make 17.
+- **Belgium 2012–13, First Division A (Play-offs I)**: Genk: 40 pts, but 3 wins and 3 draws make 12.
+- **Belgium 2012–13, First Division A (Play-offs I)**: Lokeren: 31 pts, but 1 wins and 2 draws make 5.
+- **Belgium 2012–13, First Division A (Play-offs III)**: Beerschot: 6 pts, but 1 wins and 0 draws make 3.
+- **Belgium 2013–14, First Division A (Play-offs III)**: OH Leuven: 10 pts, but 2 wins and 1 draws make 7.
+- **Belgium 2013–14, First Division A (Play-offs I)**: Anderlecht: 51 pts, but 7 wins and 1 draws make 22.
+- **Belgium 2013–14, First Division A (Play-offs I)**: Standard Liège: 49 pts, but 4 wins and 3 draws make 15.
+- **Belgium 2013–14, First Division A (Play-offs I)**: Club Brugge: 48 pts, but 5 wins and 1 draws make 16.
+- **Belgium 2013–14, First Division A (Play-offs I)**: Zulte Waregem: 41 pts, but 4 wins and 2 draws make 14.
+- **Belgium 2013–14, First Division A (Play-offs I)**: Lokeren: 34 pts, but 2 wins and 2 draws make 8.
+- **Belgium 2013–14, First Division A (Play-offs I)**: Genk: 32 pts, but 2 wins and 3 draws make 9.
+- **Belgium 2014–15, First Division A (Play-offs I)**: Gent: 49 pts, but 6 wins and 2 draws make 20.
+- **Belgium 2014–15, First Division A (Play-offs I)**: Club Brugge: 47 pts, but 5 wins and 1 draws make 16.
+- **Belgium 2014–15, First Division A (Play-offs I)**: Anderlecht: 46 pts, but 5 wins and 2 draws make 17.
+- **Belgium 2014–15, First Division A (Play-offs I)**: Standard Liège: 40 pts, but 4 wins and 1 draws make 13.
+- **Belgium 2014–15, First Division A (Play-offs I)**: Charleroi: 36 pts, but 3 wins and 2 draws make 11.
+- **Belgium 2014–15, First Division A (Play-offs I)**: Kortrijk: 34 pts, but 2 wins and 2 draws make 8.
+- **Belgium 2014–15, First Division A (Play-offs III)**: Cercle Brugge: 6 pts, but 1 wins and 0 draws make 3.
+- **Belgium 2015–16, First Division A (Play-offs I)**: Club Brugge: 54 pts, but 7 wins and 1 draws make 22.
+- **Belgium 2015–16, First Division A (Play-offs I)**: Anderlecht: 47 pts, but 6 wins and 1 draws make 19.
+- **Belgium 2015–16, First Division A (Play-offs I)**: Gent: 42 pts, but 3 wins and 3 draws make 12.
+- **Belgium 2015–16, First Division A (Play-offs I)**: Genk: 40 pts, but 5 wins and 1 draws make 16.
+- **Belgium 2015–16, First Division A (Play-offs I)**: Oostende: 36 pts, but 3 wins and 2 draws make 11.
+- **Belgium 2015–16, First Division A (Play-offs I)**: Zulte Waregem: 27 pts, but 1 wins and 2 draws make 5.
+- **Belgium 2016–17, First Division A (Play-offs I)**: Anderlecht: 52 pts, but 6 wins and 3 draws make 21.
+- **Belgium 2016–17, First Division A (Play-offs I)**: Club Brugge: 45 pts, but 4 wins and 3 draws make 15.
+- **Belgium 2016–17, First Division A (Play-offs I)**: Gent: 41 pts, but 4 wins and 4 draws make 16.
+- **Belgium 2016–17, First Division A (Play-offs I)**: Oostende: 37 pts, but 3 wins and 3 draws make 12.
+- **Belgium 2016–17, First Division A (Play-offs I)**: Charleroi: 35 pts, but 2 wins and 4 draws make 10.
+- **Belgium 2016–17, First Division A (Play-offs I)**: Zulte Waregem: 33 pts, but 1 wins and 3 draws make 6.
+- **Belgium 2016–17, First Division B (Relegation Round)**: Tubize: 24 pts, but 1 wins and 4 draws make 7.
+- **Belgium 2016–17, First Division B (Relegation Round)**: OH Leuven: 23 pts, but 2 wins and 2 draws make 8.
+- **Belgium 2016–17, First Division B (Relegation Round)**: Cercle Brugge: 23 pts, but 1 wins and 3 draws make 6.
+- **Belgium 2016–17, First Division B (Relegation Round)**: Lommel United: 19 pts, but 3 wins and 1 draws make 10.
+- **Belgium 2018–19, First Division A (Championship Round)**: Genk: 52 pts, but 6 wins and 2 draws make 20.
+- **Belgium 2018–19, First Division A (Championship Round)**: Club Brugge: 50 pts, but 7 wins and 1 draws make 22.
+- **Belgium 2018–19, First Division A (Championship Round)**: Standard Liège: 40 pts, but 4 wins and 1 draws make 13.
+- **Belgium 2018–19, First Division A (Championship Round)**: Antwerp: 39 pts, but 4 wins and 2 draws make 14.
+- **Belgium 2018–19, First Division A (Championship Round)**: Gent: 35 pts, but 3 wins and 1 draws make 10.
+- **Belgium 2018–19, First Division A (Championship Round)**: Anderlecht: 32 pts, but 1 wins and 3 draws make 6.
+- **Belgium 2018–19, First Division B (Group 3)**: OH Leuven: 28 pts, but 4 wins and 1 draws make 13.
+- **Belgium 2018–19, First Division B (Group 3)**: Roeselare: 25 pts, but 2 wins and 2 draws make 8.
+- **Belgium 2018–19, First Division B (Group 3)**: Lommel United: 23 pts, but 2 wins and 1 draws make 7.
+- **Belgium 2018–19, First Division B (Group 3)**: Tubize: 17 pts, but 1 wins and 2 draws make 5.
+- **Belgium 2021–22, First Division A (Championship Round)**: Club Brugge: 50 pts, but 4 wins and 2 draws make 14.
+- **Belgium 2021–22, First Division A (Championship Round)**: Union Saint-Gilloise: 46 pts, but 2 wins and 1 draws make 7.
+- **Belgium 2021–22, First Division A (Championship Round)**: Anderlecht: 40 pts, but 2 wins and 2 draws make 8.
+- **Belgium 2021–22, First Division A (Championship Round)**: Antwerp: 36 pts, but 1 wins and 1 draws make 4.
+- **Belgium 2021–22, First Division A (Conference League Play-off Group)**: Gent: 43 pts, but 4 wins and 0 draws make 12.
+- **Belgium 2021–22, First Division A (Conference League Play-off Group)**: Genk: 37 pts, but 3 wins and 2 draws make 11.
+- **Belgium 2021–22, First Division A (Conference League Play-off Group)**: Charleroi: 34 pts, but 2 wins and 1 draws make 7.
+- **Belgium 2021–22, First Division A (Conference League Play-off Group)**: KV Mechelen: 30 pts, but 1 wins and 1 draws make 4.
+- **Turkey 2011–12, Süper Lig (Championship Group)**: Galatasaray: 48 pts, but 2 wins and 3 draws make 9.
+- **Turkey 2011–12, Süper Lig (Championship Group)**: Fenerbahçe: 47 pts, but 4 wins and 1 draws make 13.
+- **Turkey 2011–12, Süper Lig (Championship Group)**: Trabzonspor: 33 pts, but 1 wins and 2 draws make 5.
+- **Turkey 2011–12, Süper Lig (Championship Group)**: Beşiktaş: 33 pts, but 1 wins and 2 draws make 5.
+- **Turkey 2011–12, Süper Lig (Europa League Group)**: Bursaspor: 37 pts, but 4 wins and 0 draws make 12.
+- **Turkey 2011–12, Süper Lig (Europa League Group)**: Eskişehirspor: 36 pts, but 3 wins and 2 draws make 11.
+- **Turkey 2011–12, Süper Lig (Europa League Group)**: Başakşehir: 32 pts, but 2 wins and 1 draws make 7.
+- **Turkey 2011–12, Süper Lig (Europa League Group)**: Sivasspor: 29 pts, but 1 wins and 1 draws make 4.
+
+## Clubs listed twice (80)
+
+- **Spain 2019–20, Primera Federación**: Deportivo La Coruña is also in the Segunda División this season.
+- **Spain 2019–20, Primera Federación**: Numancia is also in the Segunda División this season.
+- **Spain 2019–20, Primera Federación**: Racing Santander is also in the Segunda División this season.
+- **Spain 2019–20, Primera Federación**: Extremadura is also in the Segunda División this season.
+- **Belgium 2018–19, First Division B**: Union Saint-Gilloise is also in the First Division A this season.
+- **Belgium 2018–19, First Division B**: Beerschot Wilrijk is also in the First Division A this season.
+- **Belgium 2018–19, First Division B**: Westerlo is also in the First Division A this season.
+- **Turkey 2011–12, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2011–12, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2011–12, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2011–12, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2011–12, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2011–12, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2011–12, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2011–12, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2011–12, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2011–12, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2011–12, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2012–13, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2012–13, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2012–13, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2012–13, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2012–13, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2012–13, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2012–13, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2012–13, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2012–13, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2012–13, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2013–14, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2013–14, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2013–14, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2013–14, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2013–14, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2013–14, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2013–14, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2013–14, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2013–14, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2013–14, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2013–14, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2013–14, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2013–14, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2014–15, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2014–15, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2014–15, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2014–15, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2014–15, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2014–15, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2014–15, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2014–15, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2014–15, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2014–15, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2014–15, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2014–15, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2014–15, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2014–15, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2015–16, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2015–16, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2015–16, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2015–16, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2015–16, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2015–16, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2015–16, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2015–16, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2015–16, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2015–16, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2016–17, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2016–17, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2016–17, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2016–17, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2016–17, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2016–17, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2016–17, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2017–18, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2017–18, 3. Lig (Group 1)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2017–18, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2017–18, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2017–18, 3. Lig (Group 2)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2017–18, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2017–18, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
+- **Turkey 2017–18, 3. Lig (Group 3)**: Elazığ Belediyespor SK appears twice.
