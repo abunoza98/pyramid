@@ -11,6 +11,13 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
     });
   }
+  // "Brighton & Hove Albion" -> "brighton-hove-albion", "Atlético Madrid" -> "atletico-madrid" (also used by the build)
+  function slug(name) {
+    var t = String(name || "");
+    try { t = t.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); } catch (e) {}
+    return t.toLowerCase().replace(/ø/g, "o").replace(/ł/g, "l").replace(/ß/g, "ss").replace(/ı/g, "i")
+      .replace(/&/g, " ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "club";
+  }
   function ord(n) {
     var s = ["th", "st", "nd", "rd"], v = n % 100;
     return n + (s[(v - 20) % 10] || s[v] || s[0]);
@@ -138,6 +145,7 @@
     var cls = [];
     if (z) cls.push("z-" + z.kind);
     if (next && zoneOf(lg, next.pos) !== z) cls.push("edge");
+    if (lg._hl && r.tid === lg._hl) cls.push("is-this");
     var form = "";
     if (hasForm) {
       form = '<td class="c-form"><span class="form" aria-label="Last five, most recent last: ' + esc(r.form || "") + '">' +
@@ -148,7 +156,7 @@
     return '<tr class="' + cls.join(" ") + '" data-team="' + esc(r.team) + '">' +
       '<td class="c-pos">' + r.pos +
         (r.move ? '<span class="mv ' + (r.move > 0 ? "mv-up" : "mv-down") + '" title="' + (r.move > 0 ? "Up " : "Down ") + Math.abs(r.move) + ' as it stands">' + (r.move > 0 ? "▲" : "▼") + "</span>" : "") + "</td>" +
-      '<th scope="row" class="c-club">' + esc(r.team) +
+      '<th scope="row" class="c-club">' + (lg._club && r.tid ? '<a class="club-link" href="' + esc(lg._club + slug(r.team) + "/" + (lg._suffix || "")) + '">' + esc(r.team) + "</a>" : esc(r.team)) +
         (r.ded ? '<span class="ded" title="' + r.ded + ' points deducted">−' + r.ded + "</span>" : "") +
         (r.out ? '<span class="out ' + r.out + '">' + OUT[r.out] + "</span>" : "") +
         (r.live ? '<span class="lv ' + (r.live.gf > r.live.ga ? "lv-w" : r.live.gf < r.live.ga ? "lv-l" : "lv-d") + (r.live.on ? " on" : "") +
@@ -306,6 +314,7 @@
           " down to " + esc(last.name) + ". Promotion, play-off and relegation places are marked on every table.</p>") +
       stampHTML(c.mode, c.updated, c.liveCount) + pyramidHTML(c, "", opts.cups) + "</section>";
     c.leagues.forEach(function (lg, i) {
+      if (!past) { lg._club = "club/"; lg._suffix = opts.suffix || ""; }
       html += tierHTML(lg, { fixtures: (opts.fixtures || {})[c.country + "/" + lg.id] }) + bandHTML(lg, c.leagues[i + 1] || null, c.belowNote);
       if (i === 1) html += INLINE_AD;
     });
@@ -434,6 +443,7 @@
       explorerHTML(opts.europe ? all.slice(0, countries.length).concat([summary(opts.europe)], all.slice(countries.length)) : all, base, suffix, opts.cups) + INLINE_AD;
     // The top flights, one tab each, with the Champions League last when it's there.
     var items = countries.map(function (c) {
+      c.leagues[0]._club = base + c.country + "/club/"; c.leagues[0]._suffix = suffix;
       return { key: c.country, flagOf: c.country, label: c.leagues[0].name, lg: c.leagues[0],
         opt: { eyebrow: c.name + " · Tier 1", fixtures: (opts.fixtures || {})[c.country + "/" + c.leagues[0].id],
           more: { href: base + c.country + "/" + suffix, text: "See the full " + c.adjective + " pyramid: " + c.leagues.length + " tiers, " + countryClubs(c) + " clubs" } } };
@@ -843,8 +853,145 @@
       }).join("") + "</ul></section>";
   }
 
+  /* ---------- Club pages ----------
+     d: built by scripts/build.mjs for each club: its league table, every fixture it has in the league, cups and
+     Europe (newest data from the fixture files), and its "pyramid journey" from past seasons. */
+  // Dates and times that the browser re-formats in place when the time zone changes (club pages).
+  var TFMT = {
+    d: { day: "numeric", month: "short" },
+    t: { hour: "2-digit", minute: "2-digit", hour12: false },
+    long: { weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit", hour12: false }
+  };
+  function tt(ts, tz, f) { return '<time data-ts="' + ts + '" data-f="' + f + '">' + esc(fmt(ts, tz, TFMT[f])) + "</time>"; }
+  function retime(root, mode, country) {
+    var tz = zoneOfMode(mode, country);
+    root.querySelectorAll("time[data-ts]").forEach(function (el) { el.textContent = fmt(Number(el.getAttribute("data-ts")), tz, TFMT[el.getAttribute("data-f")]); });
+    var line = root.querySelector(".fx-links");
+    if (line) line.innerHTML = tzLine(mode, country);
+  }
+
+  function clubMain(d, opts) {
+    opts = opts || {};
+    var mode = opts.tz === "local" ? "local" : "venue", now = opts.now || Date.now();
+    var tz = zoneOfMode(mode, d.country);
+    var lm = liveMap(opts.live);
+    var fx = d.fx.map(function (f) {
+      var l = lm[f.id];
+      if (!l) return f;
+      var c = JSON.parse(JSON.stringify(f));
+      c.st = l.st; c.p1 = l.p1 || c.p1; c.p2 = l.p2 || c.p2;
+      if (l.h.g != null) { c.hg = l.h.g; c.ag = l.a.g; }
+      return c;
+    });
+    var played = fx.filter(function (f) { return (isDone(f) || f.st === "AWD") && f.hg != null; }).sort(function (a, b) { return b.ts - a.ts; });
+    var live = fx.filter(isLive);
+    var upcoming = fx.filter(function (f) { return !isDone(f) && !isLive(f) && !GONE[f.st] && f.st !== "AWD"; }).sort(function (a, b) { return a.ts - b.ts; });
+    var mine = function (f) { return f.home ? [f.hg, f.ag] : [f.ag, f.hg]; };
+    var res = function (f) {
+      var g = mine(f);
+      if (g[0] === g[1] && f.pen) { var p = f.home ? f.pen : [f.pen[1], f.pen[0]]; return p[0] > p[1] ? "W" : "L"; }
+      return g[0] > g[1] ? "W" : g[0] < g[1] ? "L" : "D";
+    };
+    fx.forEach(function (f) { if (typeof f.comp === "string") f.comp = d.comps[f.comp]; });
+    var opp = function (f) {
+      var href = f.opp.s ? d.root + f.opp.s + (d.suffix || "") : null;
+      return (href ? '<a href="' + esc(href) + '">' + esc(f.opp.n) + "</a>" : esc(f.opp.n)) +
+        (f.opp.t && f.comp.kind !== "league" ? ' <i class="tag tier-' + (f.opp.tier || 0) + '">' + esc(f.opp.t) + "</i>" : "");
+    };
+    var compTag = function (f) { return '<span class="ctag ctag-' + f.comp.kind + '" title="' + esc(f.comp.name) + '">' + esc(f.comp.short) + "</span>"; };
+    var when = function (f, o) {
+      return f.st === "TBD" ? fmt(f.ts, tz, { weekday: "short", day: "numeric", month: "short" }) + ", TBC" : fmt(f.ts, tz, o || { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", hour12: false });
+    };
+    var line = function (f, kind) {
+      var right;
+      if (kind === "result") {
+        var g = mine(f), r = res(f);
+        right = '<span class="cl-res"><b class="wdl wdl-' + r + '">' + r + "</b><span class=\"cl-score\">" + g[0] + "–" + g[1] + (f.st === "AET" ? " aet" : f.pen ? " p" : "") + "</span></span>";
+      } else if (kind === "live") {
+        var lg2 = mine(f);
+        right = '<span class="lv on">' + esc(clock(f, now)) + " " + lg2[0] + "–" + lg2[1] + "</span>";
+      } else right = '<span class="cl-time">' + (f.st === "TBD" ? "TBC" : tt(f.ts, tz, "t")) + "</span>";
+      return '<li class="cl-row"><span class="cl-date">' + tt(f.ts, tz, "d") + "</span>" + compTag(f) +
+        '<span class="cl-ha">' + (f.home ? "H" : "A") + '</span><span class="cl-opp">' + opp(f) + "</span>" + right + "</li>";
+    };
+    var list = function (arr, kind, first) {
+      if (!arr.length) return "";
+      var head = arr.slice(0, first).map(function (f) { return line(f, kind); }).join("");
+      var rest = arr.slice(first).map(function (f) { return line(f, kind); }).join("");
+      return '<ul class="cl-list">' + head + "</ul>" + (rest ? '<details class="cl-more" id="more-' + kind + '"><summary>All ' + arr.length + " " + (kind === "result" ? "results" : "fixtures") +
+        '</summary><ul class="cl-list">' + rest + "</ul></details>" : "");
+    };
+
+    // Next (or live) match
+    var nx = live[0] || upcoming[0];
+    var nextHTML = nx ? '<section class="next-match' + (isLive(nx) ? " on" : "") + '"><p class="nm-h">' + (isLive(nx) ? "Live now" : "Next match") + " · " + esc(nx.comp.name) +
+      (nx.round ? " · " + esc(nx.round) : "") + "</p>" +
+      '<p class="nm-teams"><span>' + (nx.home ? esc(d.name) : opp(nx)) + "</span><b>" +
+        (isLive(nx) ? nx.hg + "–" + nx.ag : "v") + "</b><span>" + (nx.home ? opp(nx) : esc(d.name)) + "</span></p>" +
+      '<p class="nm-when">' + (isLive(nx) ? esc(clock(nx, now)) : nx.st === "TBD" ? tt(nx.ts, tz, "d") + ", time TBC" : tt(nx.ts, tz, "long")) +
+      (nx.v ? " · " + esc(nx.v) : "") + "</p></section>" : "";
+
+    // Table: the club and the three places either side
+    var lg = d.league, tableHTMLs = "";
+    if (lg && lg.rows && lg.rows.length) {
+      var i = lg.rows.map(function (r) { return r.tid; }).indexOf(d.tid);
+      var from = Math.max(0, Math.min(i - 3, lg.rows.length - 7)), part = lg.rows.slice(from, from + 7);
+      var l2 = { id: lg.id, zones: lg.zones, _hl: d.tid, _club: lg._club, _suffix: lg._suffix };
+      tableHTMLs = '<section class="cl-sec"><div class="cl-sec-h"><h2>' + esc(lg.name) + (lg.group ? " · " + esc(lg.group) : "") + "</h2>" +
+        (lg.tableHref ? '<a href="' + esc(lg.tableHref) + '">Full table →</a>' : "") + "</div>" + legendHTML(l2, false) + tableHTML(l2, part, lg.name + " table around " + d.name) + "</section>";
+    }
+
+    // Each competition: where the club is up to
+    var comps = {}, order = [];
+    fx.forEach(function (f) { if (!comps[f.comp.key]) { comps[f.comp.key] = { comp: f.comp, list: [] }; order.push(f.comp.key); } comps[f.comp.key].list.push(f); });
+    var rank = { league: 0, europe: 1, cup: 2 };
+    order.sort(function (a, b) { return rank[comps[a].comp.kind] - rank[comps[b].comp.kind]; });
+    var compRows = order.map(function (k) {
+      var c = comps[k], st;
+      var up = c.list.filter(function (f) { return !isDone(f) && !GONE[f.st]; }).sort(function (a, b) { return a.ts - b.ts; })[0];
+      var last = c.list.filter(function (f) { return isDone(f) && f.hg != null; }).sort(function (a, b) { return b.ts - a.ts; })[0];
+      if (c.comp.kind === "league") st = d.pos ? ord(d.pos) + " of " + lg.rows.length + " · " + d.pts + " pts" : "";
+      else if (up) st = "Next: " + (up.round ? up.round + " " : "") + "v " + up.opp.n;
+      else if (last) { var g = mine(last); st = (last.round ? last.round + ": " : "") + res(last) + " " + g[0] + "–" + g[1] + " v " + last.opp.n; }
+      return '<li><span class="ctag ctag-' + c.comp.kind + '">' + esc(c.comp.short) + '</span><a href="' + esc(c.comp.href) + '">' + esc(c.comp.name) + "</a><span>" + esc(st || "") + "</span></li>";
+    }).join("");
+
+    // Pyramid journey: tier by season, oldest on the left
+    var j = (d.journey || []).slice().reverse();
+    var journey = "";
+    var moved = j.some(function (x) { return x.tier !== j[0].tier; });
+    if (j.length > 1) {
+      var maxT = Math.max.apply(null, j.map(function (x) { return x.tier; })), w = 640, h = 34 + maxT * 30, step = (w - 60) / Math.max(1, j.length - 1);
+      var pts = j.map(function (x, k) { return [30 + k * step, 20 + (x.tier - 1) * 30]; });
+      var svg = '<svg class="journey" viewBox="0 0 ' + w + " " + h + '" role="img" aria-label="Tier by season">' +
+        Array.apply(null, Array(maxT)).map(function (_, t) { return '<line x1="30" x2="' + (w - 30) + '" y1="' + (20 + t * 30) + '" y2="' + (20 + t * 30) + '" class="jl"/><text x="0" y="' + (24 + t * 30) + '" class="jt">T' + (t + 1) + "</text>"; }).join("") +
+        '<polyline class="jp" points="' + pts.map(function (p) { return p.join(","); }).join(" ") + '"/>' +
+        pts.map(function (p, k) { return '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="4.5" class="jd' + (k === pts.length - 1 ? " now" : "") + '"><title>' + esc(j[k].season + ": " + j[k].league + ", " + ord(j[k].pos)) + "</title></circle>"; }).join("") + "</svg>";
+      journey = '<section class="cl-sec"><div class="cl-sec-h"><h2>Pyramid journey</h2></div>' + (moved ? svg : "") +
+        '<ul class="jlist">' + (d.journey || []).map(function (x) {
+          return "<li><span>" + esc(x.season) + '</span><i class="tag tier-' + x.tier + '">T' + x.tier + "</i>" +
+            (x.href ? '<a href="' + esc(x.href) + '">' + esc(x.league) + "</a>" : esc(x.league)) + "<b>" + (x.pos ? ord(x.pos) + (x.of ? " of " + x.of : "") : "") + "</b></li>";
+        }).join("") + "</ul></section>";
+    }
+
+    var formStr = played.slice(0, 5).reverse().map(res).join("");
+    return '<section class="intro fx-intro" aria-labelledby="intro-h">' +
+      '<p class="eyebrow">' + esc(d.countryName) + (lg ? " · " + esc(lg.name) : "") + " · " + esc(d.season) + "</p>" +
+      '<h1 id="intro-h" class="cup-h">' + flag(d.country) + "<span>" + esc(d.name) + "</span></h1>" +
+      '<p class="lede">' + (d.pos ? "<strong>" + ord(d.pos) + " in the " + esc(lg.name) + "</strong>, " + d.pts + " points from " + d.p + " games." : "") +
+      (formStr ? ' Last five: <span class="form">' + formStr.split("").map(function (c) { return '<b class="' + c + '">' + c + "</b>"; }).join("") + "</span>" : "") + "</p>" +
+      '<p class="fx-links">' + tzLine(mode, d.country) + "</p></section>" +
+      nextHTML +
+      '<div class="cl-cols"><section class="cl-sec"><div class="cl-sec-h"><h2>Fixtures</h2></div>' +
+        (list(live, "live", 9) + list(upcoming, "fixture", 6) || '<p class="ko-empty">No fixtures scheduled yet.</p>') + "</section>" +
+      '<section class="cl-sec"><div class="cl-sec-h"><h2>Results</h2></div>' + (list(played, "result", 6) || '<p class="ko-empty">No results yet this season.</p>') + "</section></div>" +
+      tableHTMLs +
+      (compRows ? '<section class="cl-sec"><div class="cl-sec-h"><h2>Competitions</h2></div><ul class="cl-comps">' + compRows + "</ul></section>" : "") +
+      journey;
+  }
+
   return {
-    esc: esc, ukTime: ukTime, clubCount: clubCount, countryClubs: countryClubs, groupsOf: groupsOf,
-    countryMain: countryMain, homeMain: homeMain, summary: summary, flag: flag, fixturesMain: fixturesMain, currentRound: currentRound, compMain: compMain, europeMain: europeMain, cupMain: cupMain, cupStatus: cupStatus, cupSpan: cupSpan, compStatus: compStatus, tiesOf: tiesOf, applyLive: applyLive, clock: clock, isLive: isLive
+    slug: slug, esc: esc, ukTime: ukTime, clubCount: clubCount, countryClubs: countryClubs, groupsOf: groupsOf,
+    countryMain: countryMain, homeMain: homeMain, summary: summary, flag: flag, fixturesMain: fixturesMain, currentRound: currentRound, compMain: compMain, europeMain: europeMain, cupMain: cupMain, cupStatus: cupStatus, cupSpan: cupSpan, clubMain: clubMain, retime: retime, compStatus: compStatus, tiesOf: tiesOf, applyLive: applyLive, clock: clock, isLive: isLive
   };
 });

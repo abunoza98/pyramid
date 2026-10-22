@@ -354,7 +354,7 @@
     if (!t) return;
     fxState.tz = t.getAttribute("data-tz");
     try { localStorage.setItem(TZ_KEY, fxState.tz); } catch (err) {}
-    if (PAGE === "fixtures") fxRender(); else if (PAGE === "comp" || PAGE === "cup") render();
+    if (PAGE === "fixtures") fxRender(); else if (PAGE === "club") clubRender(); else if (PAGE === "comp" || PAGE === "cup") render();
   });
   var fxTimer = null;
   function fxLive() {
@@ -367,11 +367,17 @@
     });
   }
 
+  /* ---------- Club pages ----------
+     Rendered by the build; here the dates and times switch to the visitor's time zone. */
+  function clubRender() { if (window.FP) FP.retime($("main-content"), fxState.tz, COUNTRY); }
+
   /* ---------- Start ---------- */
   var arrivedForClub = location.hash === "#club";
   if (arrivedForClub && history.replaceState) history.replaceState(null, "", location.pathname + location.search);
   applyClub(arrivedForClub);
-  if (PAGE === "fixtures" && window.fetch && window.FP) {
+  if (PAGE === "club") {
+    clubRender();
+  } else if (PAGE === "fixtures" && window.fetch && window.FP) {
     fxStart();
     document.addEventListener("visibilitychange", function () { if (!document.hidden && fxData) fxLive(); });
   } else {

@@ -75,7 +75,7 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
 <link rel="preload" href="${base}assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${base}assets/style.css">
 ${ADSENSE_CLIENT && !suffix ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>\n` : ""}</head>
-<body${ADS ? "" : ' class="no-ads"'} data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${featured.map((c) => c.country).join(",")}"${page === "home" ? ` data-others="${esc(JSON.stringify(others.map(FP.summary)))}"` : ""} data-stamps="${esc(JSON.stringify(stamps))}"${seasons ? ` data-seasons="${esc(JSON.stringify(seasons))}"` : ""}${LIVE_URL && (page === "home" || page === "country" || page === "fixtures") ? ` data-live="${esc(LIVE_URL)}"` : ""}${Object.entries(attrs).map(([k, v]) => ` data-${k}="${esc(typeof v === "string" ? v : JSON.stringify(v))}"`).join("")}>
+<body${ADS ? "" : ' class="no-ads"'} data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${featured.map((c) => c.country).join(",")}"${page === "home" ? ` data-others="${esc(JSON.stringify(others.map(FP.summary)))}"` : ""} data-stamps="${esc(JSON.stringify(stamps))}"${seasons ? ` data-seasons="${esc(JSON.stringify(seasons))}"` : ""}${LIVE_URL && ["home", "country", "fixtures", "europe", "comp", "cup", "club"].includes(page) ? ` data-live="${esc(LIVE_URL)}"` : ""}${Object.entries(attrs).map(([k, v]) => ` data-${k}="${esc(typeof v === "string" ? v : JSON.stringify(v))}"`).join("")}>
 <header class="bar">
   <div class="bar-inner">
     <a class="brand" href="${homeHref}" aria-label="Football Pyramids, home">
@@ -181,6 +181,7 @@ export async function loadEuropeHistory(root = ROOT) {
   }
   return out;
 }
+const ordinal = (n) => { const v = n % 100, s = ["th", "st", "nd", "rd"]; return n + (s[(v - 20) % 10] || s[v] || s[0]); };
 const slug = (year) => `${year}-${String((year + 1) % 100).padStart(2, "0")}`;
 
 // The "Other seasons" list. rel is the path from the page to the country folder ("" or "../").
@@ -367,6 +368,77 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     }
   }
 
+  // Club pages: one per club in the current tables, from data the site already has (no extra API requests).
+  const clubUrls = [];
+  {
+    const index = new Map();   // club ID -> { c, lg, g, r, slug, path }
+    for (const c of countries) {
+      const seen = new Set();
+      for (const lg of c.leagues) for (const g of FP.groupsOf(lg)) for (const r of g.rows) {
+        if (!r.tid || index.has(r.tid)) continue;
+        const sl = FP.slug(r.team);
+        if (seen.has(sl)) continue;   // two clubs with the same name in one country: the first gets the page
+        seen.add(sl);
+        index.set(r.tid, { c, lg, g, r, slug: sl, path: `${c.country}/club/${sl}/` });
+      }
+    }
+    // Every fixture each club has, across its league, cups and Europe.
+    const cfgOf = (cc, id) => {
+      const owner = cc === "europe" ? EUROPE : COUNTRIES.find((x) => x.country === cc);
+      return owner && [...owner.leagues, ...(owner.cups || [])].find((l) => l.id === id);
+    };
+    const games = new Map();
+    for (const [key, fx] of Object.entries(fixtures)) {
+      const [cc, id] = key.split("/");
+      const cfg = cfgOf(cc, id) || {};
+      const kind = cc === "europe" ? "europe" : fx.cup ? "cup" : "league";
+      const comp = { key, kind, name: fx.name, short: cfg.short || fx.name,
+        path: kind === "league" ? `${cc}/${id}/fixtures/` : `${cc}/${id}/` };
+      for (const g of fx.groups) for (const r of g.rounds) for (const f of r.fixtures) {
+        for (const [me, them, home] of [[f.h, f.a, true], [f.a, f.h, false]]) {
+          if (!index.has(me.id)) continue;
+          if (!games.has(me.id)) games.set(me.id, []);
+          const { h, a, stage, moved, ...rest } = f;
+          games.get(me.id).push({ ...rest, home, round: kind === "league" ? "" : r.label, comp, opp: { id: them.id, n: them.n, t: them.t, tier: them.tier } });
+        }
+      }
+    }
+    const base = "../../../";
+    const tableOf = (c, lg) => ({ id: lg.id, name: lg.name, zones: lg.zones });
+    for (const [tid, k] of index) {
+      const { c, lg, g, r } = k;
+      const comps = {};
+      const fx = (games.get(tid) || []).map((f) => {
+        comps[f.comp.key] = { key: f.comp.key, kind: f.comp.kind, name: f.comp.name, short: f.comp.short, href: base + f.comp.path + suffix };
+        const o = index.get(f.opp.id);
+        // Opponents with a page on the site link to it (including clubs from other countries met in Europe).
+        return { ...f, comp: f.comp.key, opp: { n: f.opp.n, t: f.opp.t, tier: f.opp.tier, s: o ? o.path : null } };
+      }).sort((a, b) => a.ts - b.ts);
+      // Pyramid journey: this season, then each saved past season (matched by name).
+      const journey = [{ season: c.season, tier: lg.tier, league: lg.name, pos: r.pos, of: g.rows.length }];
+      for (const h of history[c.country] || []) {
+        found: for (const plg of h.leagues) for (const pg of FP.groupsOf(plg)) {
+          const pr = pg.rows.find((x) => x.team === r.team);
+          if (pr) { journey.push({ season: h.season, tier: plg.tier, league: plg.name, pos: pr.pos, of: pg.rows.length, href: `${base}${c.country}/${slug(h.year)}/${suffix}` }); break found; }
+        }
+      }
+      const data = {
+        tid, name: r.team, country: c.country, countryName: c.name, season: c.season, comps, root: base, suffix,
+        pos: r.pos, pts: r.pts, p: r.p,
+        league: { ...tableOf(c, lg), short: lg.short, group: FP.groupsOf(lg).length > 1 ? g.name : null, rows: g.rows,
+          tableHref: `${base}${c.country}/${suffix}#${lg.id}`, _club: `${base}${c.country}/club/`, _suffix: suffix },
+        fx, journey
+      };
+      await write(`${k.path}index.html`, shell({
+        title: `${r.team} fixtures, results and table ${c.season} | Football Pyramids`,
+        description: `${r.team}: ${ordinal(r.pos)} in the ${lg.name}. Every fixture and result this season across league, cups and Europe, and the club's journey through the ${c.adjective} pyramid.`,
+        canonical: `${SITE}/${k.path}`, base, suffix, page: "club", country: c.country, stamps: {}, countries,
+        main: FP.clubMain(data, { tz: "venue" })
+      }));
+      clubUrls.push(`/${k.path}`);
+    }
+  }
+
   // About & contact, and the privacy policy
   const snapshot = countries.some((c) => c.mode !== "live");
   await write(`contact/index.html`, shell({
@@ -409,6 +481,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     await write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>hourly</changefreq></url>`).join("\n")}
+${clubUrls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>daily</changefreq></url>`).join("\n")}
 ${cupUrls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>daily</changefreq></url>`).join("\n")}
 ${fxUrls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>daily</changefreq></url>`).join("\n")}
 ${past.concat(euroPast).map((u) => `  <url><loc>${SITE}${u}</loc><changefreq>yearly</changefreq></url>`).join("\n")}
