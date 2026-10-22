@@ -888,7 +888,7 @@ tbody tr.is-this .c-club { font-weight: 700; }
 .ld:hover, .ld:focus-visible, .ld.open { outline: none; z-index: 3; box-shadow: 0 0 0 4px var(--accent-flash); }
 .ltip { position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%);
   display: none; min-width: 168px; padding: 8px 10px; border-radius: 6px; background: var(--ink); color: var(--paper);
-  font: 400 12px/1.4 var(--body); text-align: left; white-space: nowrap; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18); }
+  font: 400 12px/1.4 var(--body); text-align: left; width: max-content; max-width: calc(100vw - 24px); white-space: normal; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18); }
 .ltip b { display: block; font-family: var(--mono); font-weight: 500; font-size: 11px; opacity: 0.75; }
 .ltip i { display: block; font-style: normal; opacity: 0.75; }
 .ltip u { display: block; margin-top: 4px; text-decoration: none; font-weight: 600; }
