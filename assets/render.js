@@ -245,10 +245,12 @@
   var INLINE_AD = '<div class="ad ad-inline"><span class="ad-tag">Advertisement</span>' +
     '<span class="ad-size"><span class="wide">728 × 90</span><span class="narrow">320 × 100</span></span></div>';
 
-  function pyramidHTML(c) {
+  // c: a country's data, or a home-page summary (whose leagues carry clubs/groups counts). link: page the bars link to.
+  function pyramidHTML(c, link) {
     var tiers = c.leagues.map(function (lg) {
       var g = lg.groups && lg.groups.length;
-      return { tier: lg.tier, name: lg.name, clubs: clubCount(lg), groups: g ? lg.groups.length : 0, href: "#" + lg.id };
+      return { tier: lg.tier, name: lg.name, short: lg.short, clubs: lg.clubs != null && !lg.rows && !lg.groups ? lg.clubs : clubCount(lg),
+        groups: lg.groupCount != null ? lg.groupCount : g ? lg.groups.length : 0, href: (link || "") + "#" + lg.id };
     }).concat(c.later || []);
     var max = Math.max.apply(null, tiers.map(function (t) { return t.clubs; }));
     var rows = tiers.map(function (t) {
@@ -299,50 +301,130 @@
     return html;
   }
 
-  // Small summary of a country for its card on the home page.
-  function summary(c) {
-    return { country: c.country, name: c.name, tiers: c.leagues.length, clubs: countryClubs(c), sizes: c.leagues.map(clubCount) };
-  }
-  function cardsHTML(list, base, suffix, cls) {
-    return '<ul class="countries' + (cls ? " " + cls : "") + '" aria-label="' + (cls ? "More country pyramids" : "Country pyramids") + '">' + list.map(function (c) {
-      var max = Math.max.apply(null, c.sizes);
-      return '<li><a href="' + base + c.country + "/" + suffix + '">' +
-        '<span class="c-name">' + esc(c.name) + "</span>" +
-        '<span class="mini" aria-hidden="true">' + c.sizes.map(function (n) {
-          return '<i style="--w:' + (n / max * 100).toFixed(1) + '%"></i>';
-        }).join("") + "</span>" +
-        '<span class="c-meta">' + c.tiers + " tier" + (c.tiers === 1 ? "" : "s") + " · " + c.clubs + " clubs</span></a></li>";
-    }).join("") + "</ul>";
+  /* ---------- Flags (simple SVGs, so they look the same on every device) ---------- */
+  var FLAGS = {
+    england: '<rect width="30" height="20" fill="#fff"/><rect x="12.5" width="5" height="20" fill="#CE1124"/><rect y="7.5" width="30" height="5" fill="#CE1124"/>',
+    spain: '<rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/>',
+    germany: '<rect width="30" height="20" fill="#FFCE00"/><rect width="30" height="13.33" fill="#DD0000"/><rect width="30" height="6.67" fill="#000"/>',
+    france: '<rect width="30" height="20" fill="#CE1126"/><rect width="20" height="20" fill="#fff"/><rect width="10" height="20" fill="#002654"/>',
+    italy: '<rect width="30" height="20" fill="#CE2B37"/><rect width="20" height="20" fill="#fff"/><rect width="10" height="20" fill="#009246"/>',
+    belgium: '<rect width="30" height="20" fill="#EF3340"/><rect width="20" height="20" fill="#FDDA24"/><rect width="10" height="20" fill="#000"/>',
+    croatia: '<rect width="30" height="20" fill="#171796"/><rect width="30" height="13.33" fill="#fff"/><rect width="30" height="6.67" fill="#FF0000"/>' +
+      '<rect x="12" y="5" width="6" height="7.5" fill="#fff"/><path d="M12 5h2v1.5h-2zM16 5h2v1.5h-2zM14 6.5h2v1.5h-2zM12 8h2v1.5h-2zM16 8h2v1.5h-2zM14 9.5h2v1.5h-2zM12 11h2v1.5h-2zM16 11h2v1.5h-2z" fill="#FF0000"/>',
+    netherlands: '<rect width="30" height="20" fill="#21468B"/><rect width="30" height="13.33" fill="#fff"/><rect width="30" height="6.67" fill="#AE1C28"/>',
+    portugal: '<rect width="30" height="20" fill="#FF0000"/><rect width="12" height="20" fill="#006600"/><circle cx="12" cy="10" r="3.6" fill="none" stroke="#FFE000" stroke-width="1.4"/>',
+    scotland: '<rect width="30" height="20" fill="#0065BD"/><path d="M0 0L30 20M30 0L0 20" stroke="#fff" stroke-width="3.6"/>',
+    turkey: '<rect width="30" height="20" fill="#E30A17"/><circle cx="11" cy="10" r="5" fill="#fff"/><circle cx="12.25" cy="10" r="4" fill="#E30A17"/>' +
+      '<path d="M15.6 10l3.7-1.2-2.3 3.15V8.05l2.3 3.15z" fill="#fff"/>'
+  };
+  function flag(country) {
+    var f = FLAGS[country];
+    return f ? '<svg class="flag" viewBox="0 0 30 20" aria-hidden="true">' + f + "</svg>" : "";
   }
 
-  // countries: the featured countries (full data). others: summaries of the rest, shown as cards only.
-  function homeMain(countries, base, suffix, others) {
+  // A country's summary for the home page: enough to draw its pyramid and card without the tables.
+  function summary(c) {
+    return {
+      country: c.country, name: c.name, adjective: c.adjective, code: c.code, featured: !!c.featured,
+      tiers: c.leagues.length, clubs: countryClubs(c), sizes: c.leagues.map(clubCount),
+      leagues: c.leagues.map(function (lg) {
+        return { id: lg.id, tier: lg.tier, name: lg.name, short: lg.short, clubs: clubCount(lg), groupCount: lg.groups ? lg.groups.length : 0 };
+      })
+    };
+  }
+
+  // Today's games across every country, for the strip under the headline.
+  function stripHTML(live, all, base, suffix, names, now) {
+    var fx = live && live.fixtures ? live.fixtures.slice() : [];
+    if (!fx.length) return "";
+    var nm = function (t) { return names[t.id] || t.n; };
+    var info = {};
+    all.forEach(function (s) { s.leagues.forEach(function (lg) { info[s.country + "/" + lg.id] = { short: lg.short || lg.name, tier: lg.tier }; }); });
+    var rank = function (f) { return isLive(f) ? 0 : f.st === "NS" ? 1 : isDone(f) ? 2 : 3; };
+    fx.sort(function (a, b) {
+      var ta = (info[a.c + "/" + a.l] || {}).tier || 9, tb = (info[b.c + "/" + b.l] || {}).tier || 9;
+      return rank(a) - rank(b) || ta - tb || a.ko - b.ko;
+    });
+    var liveN = fx.filter(isLive).length;
+    var countries = {};
+    fx.forEach(function (f) { countries[f.c] = 1; });
+    var nC = Object.keys(countries).length;
+    var chips = fx.slice(0, 24).map(function (f) {
+      var lg = info[f.c + "/" + f.l] || { short: "" };
+      var started = f.h.g != null && f.a.g != null && !OFF_ST[f.st];
+      var t = OFF_ST[f.st] || (started ? clock(f, now) : ukClock(f.ko));
+      return '<li><a class="chip' + (isLive(f) ? " on" : "") + '" href="' + base + f.c + "/" + suffix + "#" + esc(f.l) + '">' +
+        '<span class="chip-top">' + flag(f.c) + "<span>" + esc(lg.short) + "</span><b>" + esc(t) + "</b></span>" +
+        '<span class="chip-row"><span>' + esc(nm(f.h)) + "</span><b>" + (started ? f.h.g : "") + "</b></span>" +
+        '<span class="chip-row"><span>' + esc(nm(f.a)) + "</span><b>" + (started ? f.a.g : "") + "</b></span></a></li>";
+    }).join("");
+    return '<section class="strip" aria-label="Today’s games"><p class="strip-head">' +
+      (liveN ? '<span class="live-dot" aria-hidden="true"></span>' : "") + "Today: " + fx.length + " game" + (fx.length === 1 ? "" : "s") +
+      " in " + nC + " countr" + (nC === 1 ? "y" : "ies") + (liveN ? " · <strong>" + liveN + " live</strong>" : "") + "</p>" +
+      '<ul class="strip-list">' + chips + "</ul></section>";
+  }
+
+  // The pyramid explorer: a flag for each country, and that country's pyramid.
+  function explorerHTML(all, base, suffix) {
+    var tabs = all.map(function (s, i) {
+      return '<button type="button" role="tab" class="xp-tab' + (i === 0 ? " on" : "") + '" data-tab="' + s.country + '" aria-selected="' + (i === 0) + '">' +
+        flag(s.country) + "<span>" + esc(s.name) + "</span></button>";
+    }).join("");
+    var panels = all.map(function (s, i) {
+      var href = base + s.country + "/" + suffix;
+      return '<div class="xp-panel' + (i === 0 ? " on" : "") + '" data-panel="' + s.country + '" role="tabpanel">' +
+        '<div class="xp-head"><h2>' + flag(s.country) + "The " + esc(s.adjective) + " pyramid</h2>" +
+        "<p>" + s.tiers + " tier" + (s.tiers === 1 ? "" : "s") + " · " + s.clubs + " clubs</p></div>" +
+        pyramidHTML(s, href) +
+        '<a class="more" href="' + href + '">Open every ' + esc(s.adjective) + ' table <span aria-hidden="true">→</span></a></div>';
+    }).join("");
+    return '<section class="explorer" data-tabs="pyramid" aria-labelledby="xp-h"><h2 class="section-h" id="xp-h">Pick a pyramid</h2>' +
+      '<div class="xp"><div class="xp-tabs" role="tablist" aria-label="Countries">' + tabs + "</div>" +
+      '<div class="xp-panels">' + panels + "</div></div></section>";
+  }
+
+  // countries: the featured countries (full data). others: summaries of the rest.
+  // opts.live: today's games from the live worker, for the strip.
+  function homeMain(countries, base, suffix, others, opts) {
     suffix = suffix || "";
     others = others || [];
+    opts = opts || {};
+    var all = countries.map(summary).concat(others);
+    var names = {};   // club ID -> name as shown on the site, for the strip
+    countries.forEach(function (c) { c.leagues.forEach(function (lg) { groupsOf(lg).forEach(function (g) { g.rows.forEach(function (r) { if (r.tid) names[r.tid] = r.team; }); }); }); });
     var newest = countries.map(function (c) { return c.leagues[0].updated; }).sort().pop();
     var live = countries.every(function (c) { return c.mode === "live"; });
-    var cards = cardsHTML(countries.map(summary), base, suffix) +
-      (others.length ? '<h2 class="countries-more-h">More pyramids</h2>' + cardsHTML(others, base, suffix, "extra") : "");
+    var nLeagues = all.reduce(function (n, s) { return n + s.tiers; }, 0);
+    var nClubs = all.reduce(function (n, s) { return n + s.clubs; }, 0);
     var html =
-      '<section class="intro" aria-labelledby="intro-h">' +
-      '<p class="eyebrow">Europe · ' + esc(countries[0].season) + "</p>" +
-      '<h1 id="intro-h">Europe’s top five leagues, with every tier below them.</h1>' +
-      '<p class="lede">The Premier League, La Liga, Bundesliga, Ligue 1 and Serie A on one page. Open a country to see its whole pyramid, from the top flight down.</p>' +
+      '<section class="intro hero" aria-labelledby="intro-h">' +
+      '<p class="eyebrow">Football Pyramids · ' + esc(countries[0].season) + "</p>" +
+      '<h1 id="intro-h">Every league table, top to bottom.</h1>' +
+      '<p class="lede">' + all.length + " countries, " + nLeagues + " leagues and " + nClubs.toLocaleString("en-GB") +
+      " clubs. Each country’s whole football pyramid on one page, from the top flight down, with live scores on match days.</p>" +
       stampHTML(live ? "live" : "snapshot", newest, countries.reduce(function (n, c) { return n + (c.liveCount || 0); }, 0)) +
-      cards + "</section>";
-    countries.forEach(function (c, i) {
-      var top = c.leagues[0];
-      html += tierHTML(top, {
-        eyebrow: c.name + " · Tier 1",
-        more: { href: base + c.country + "/" + suffix, text: "See the full " + c.adjective + " pyramid: " + c.leagues.length + " tiers, " + countryClubs(c) + " clubs" }
-      });
-      if (i === 1) html += INLINE_AD;
-    });
+      "</section>" +
+      stripHTML(opts.live, all, base, suffix, names) +
+      explorerHTML(all, base, suffix) + INLINE_AD;
+    // The top flights, one tab each.
+    var tabs = countries.map(function (c, i) {
+      return '<button type="button" role="tab" class="tf-tab' + (i === 0 ? " on" : "") + '" data-tab="' + c.country + '" aria-selected="' + (i === 0) + '">' +
+        flag(c.country) + "<span>" + esc(c.leagues[0].name) + "</span></button>";
+    }).join("");
+    var panels = countries.map(function (c, i) {
+      return '<div class="tf-panel' + (i === 0 ? " on" : "") + '" data-panel="' + c.country + '" role="tabpanel">' +
+        tierHTML(c.leagues[0], {
+          eyebrow: c.name + " · Tier 1",
+          more: { href: base + c.country + "/" + suffix, text: "See the full " + c.adjective + " pyramid: " + c.leagues.length + " tiers, " + countryClubs(c) + " clubs" }
+        }) + "</div>";
+    }).join("");
+    html += '<section class="topflights" data-tabs="table" aria-labelledby="tf-h"><h2 class="section-h" id="tf-h">Top-flight tables</h2>' +
+      '<div class="tf-tabs" role="tablist" aria-label="Leagues">' + tabs + "</div>" + panels + "</section>";
     return html;
   }
 
   return {
     esc: esc, ukTime: ukTime, clubCount: clubCount, countryClubs: countryClubs, groupsOf: groupsOf,
-    countryMain: countryMain, homeMain: homeMain, summary: summary, applyLive: applyLive, clock: clock, isLive: isLive
+    countryMain: countryMain, homeMain: homeMain, summary: summary, flag: flag, applyLive: applyLive, clock: clock, isLive: isLive
   };
 });

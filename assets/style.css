@@ -438,7 +438,7 @@ body.no-ads main { justify-self: center !important; }
 .lv.on::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--down); }
 .lv-w { border-color: var(--up); }
 .lv-l { border-color: var(--down); }
-.mv { display: block; font-size: 8px; line-height: 1; margin-top: 1px; }
+.mv { display: inline-block; margin-left: 3px; font-size: 8px; line-height: 1; vertical-align: 2px; }
 .mv-up { color: var(--up); } .mv-down { color: var(--down); }
 
 .today { margin: 10px 0 0; border: 1px solid var(--rule); border-radius: 8px; background: var(--sheet); }
@@ -518,3 +518,78 @@ body.no-ads main { justify-self: center !important; }
   .countries.extra a { grid-template-columns: minmax(0, 1fr); grid-template-areas: "name" "meta"; }
   .countries.extra .mini { display: none; }
 }
+
+/* ---------- Flags ---------- */
+.flag { display: inline-block; width: 21px; height: 14px; flex: none; border-radius: 2px; box-shadow: 0 0 0 1px rgba(14, 20, 28, 0.14); vertical-align: -2px; }
+
+/* ---------- Home ---------- */
+.hero h1 { max-width: 19ch; font-size: clamp(2.6rem, 7.4vw, 4.6rem); }
+.section-h {
+  margin: 48px 0 14px; font-family: var(--mono); font-size: 12px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
+}
+
+/* Today's games */
+.strip { margin-top: 26px; }
+.strip-head {
+  display: flex; align-items: center; gap: 8px; margin: 0 0 10px;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+}
+.strip-head strong { color: var(--down); font-weight: 500; }
+.strip-list {
+  list-style: none; margin: 0; padding: 0 0 8px; display: flex; gap: 8px;
+  overflow-x: auto; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch;
+}
+.strip-list li { flex: none; scroll-snap-align: start; }
+.chip {
+  display: grid; gap: 4px; width: 176px; padding: 9px 11px; border-radius: 8px;
+  background: var(--sheet); border: 1px solid var(--rule); color: var(--ink); text-decoration: none; font-size: 13.5px;
+}
+.chip:hover { border-color: var(--accent); }
+.chip.on { border-color: var(--down); }
+.chip-top { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.chip-top .flag { width: 16px; height: 11px; }
+.chip-top b { margin-left: auto; font-weight: 500; }
+.chip.on .chip-top b { color: var(--down); }
+.chip-row { display: flex; gap: 8px; justify-content: space-between; }
+.chip-row span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chip-row b { font-variant-numeric: tabular-nums; }
+
+/* Pyramid explorer */
+.xp { display: grid; gap: 14px; }
+.xp-tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
+.xp-tab {
+  display: inline-flex; align-items: center; gap: 9px; flex: none; padding: 8px 12px; cursor: pointer;
+  font-family: var(--display); font-weight: 700; font-size: 17px; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--muted); background: transparent; border: 1px solid transparent; border-radius: 8px; text-align: left; white-space: nowrap;
+}
+.xp-tab:hover { color: var(--ink); }
+.xp-tab.on { color: var(--ink); background: var(--sheet); border-color: var(--rule); }
+.xp-tab:focus-visible, .tf-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.xp-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px; margin-bottom: 12px; }
+.xp-head h2 {
+  display: flex; align-items: center; gap: 10px; margin: 0;
+  font-family: var(--display); font-weight: 800; font-size: clamp(1.7rem, 4vw, 2.3rem); line-height: 1; letter-spacing: 0.02em; text-transform: uppercase;
+}
+.xp-head h2 .flag { width: 30px; height: 20px; }
+.xp-head p { margin: 0; font-size: 14px; color: var(--muted); }
+.xp-panel .pyr { margin: 0; }
+@media (min-width: 820px) {
+  .xp { grid-template-columns: 190px minmax(0, 1fr); gap: 22px; align-items: start; }
+  .xp-tabs { flex-direction: column; overflow: visible; padding: 0; }
+}
+
+/* Top-flight tabs */
+.tf-tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
+.tf-tab {
+  display: inline-flex; align-items: center; gap: 8px; flex: none; padding: 7px 13px; cursor: pointer;
+  font: inherit; font-size: 14px; font-weight: 600; color: var(--ink);
+  background: var(--sheet); border: 1px solid var(--rule); border-radius: 999px; white-space: nowrap;
+}
+.tf-tab:hover { border-color: var(--accent); }
+.tf-tab.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.tf-panel .tier { margin-top: 18px; }
+.js .xp-panel:not(.on), .js .tf-panel:not(.on) { display: none; }
+
+/* Flags in the More menu */
+.nav-panel a { display: flex; align-items: center; gap: 10px; }

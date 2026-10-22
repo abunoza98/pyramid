@@ -36,7 +36,7 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
   const here = others.find((c) => c.country === country);
   const nav = featured.map(link).join("") + (here ? link(here) : "") + (others.length
     ? `<details class="nav-more"><summary aria-label="More countries"><span class="short">More</span><span class="long">More</span></summary>` +
-      `<div class="nav-panel">${others.map((c) => `<a href="${base}${c.country}/${suffix}"${c.country === country ? ' aria-current="page"' : ""}>${esc(c.name)}</a>`).join("")}</div></details>`
+      `<div class="nav-panel">${others.map((c) => `<a href="${base}${c.country}/${suffix}"${c.country === country ? ' aria-current="page"' : ""}>${FP.flag(c.country)}${esc(c.name)}</a>`).join("")}</div></details>`
     : "");
   return `<!doctype html>
 <html lang="en-GB">
@@ -192,8 +192,8 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
 
   // Home
   await write("index.html", shell({
-    title: "Football Pyramids: Premier League, La Liga, Bundesliga, Ligue 1 and Serie A tables",
-    description: "Europe's top five league tables on one page, with every tier of each country's football pyramid below them.",
+    title: "Football Pyramids: every league table, top to bottom | Premier League, La Liga, Bundesliga, Ligue 1, Serie A",
+    description: `Every tier of ${countries.length} countries' football pyramids, each on one page: ${countries.map((c) => c.name).join(", ")}. Live scores on match days.`,
     canonical: SITE + "/", base: "", suffix, page: "home", stamps, countries,
     main: FP.homeMain(countries.filter((c) => c.featured), "", suffix, countries.filter((c) => !c.featured).map(FP.summary))
   }));

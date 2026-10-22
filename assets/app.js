@@ -134,6 +134,7 @@
   var seasons = null;
   try { seasons = JSON.parse(body.getAttribute("data-seasons") || "null"); } catch (e) {}
   var MINE = PAGE === "country" ? [COUNTRY] : COUNTRIES;
+  // The home page's strip shows every country's games, not just the featured ones.
   var OTHERS = [];   // the home page's "More pyramids" cards
   try { OTHERS = JSON.parse(body.getAttribute("data-others") || "[]"); } catch (e) {}
 
@@ -159,13 +160,37 @@
     applyClub(false);
     window.scrollTo(0, y);
   }
+  /* ---------- Tabs on the home page (pyramid explorer, top-flight tables) ---------- */
+  document.documentElement.classList.add("js");
+  var tabState = {};   // tab group -> chosen tab, kept when the page redraws
+  function applyTabs() {
+    document.querySelectorAll("[data-tabs]").forEach(function (box) {
+      var want = tabState[box.getAttribute("data-tabs")];
+      if (!want) return;
+      box.querySelectorAll("[data-tab]").forEach(function (b) {
+        var on = b.getAttribute("data-tab") === want;
+        b.classList.toggle("on", on); b.setAttribute("aria-selected", on);
+      });
+      box.querySelectorAll("[data-panel]").forEach(function (p) { p.classList.toggle("on", p.getAttribute("data-panel") === want); });
+    });
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-tab]");
+    if (!b) return;
+    var box = b.closest("[data-tabs]");
+    tabState[box.getAttribute("data-tabs")] = b.getAttribute("data-tab");
+    applyTabs();
+  });
+
   function relevant() {
-    return live && live.fixtures ? live.fixtures.filter(function (f) { return MINE.indexOf(f.c) > -1; }) : [];
+    if (!live || !live.fixtures) return [];
+    return PAGE === "home" ? live.fixtures : live.fixtures.filter(function (f) { return MINE.indexOf(f.c) > -1; });
   }
   function render() {
     if (!MINE.every(function (c) { return official[c]; })) return;
     var withLive = MINE.map(function (c) { return FP.applyLive(official[c], live); });
-    redraw(PAGE === "country" ? FP.countryMain(withLive[0], { seasons: seasons }) : FP.homeMain(withLive, BASE, SUFFIX, OTHERS));
+    redraw(PAGE === "country" ? FP.countryMain(withLive[0], { seasons: seasons }) : FP.homeMain(withLive, BASE, SUFFIX, OTHERS, { live: live }));
+    applyTabs();
     liveShown = relevant().length > 0;
   }
   function refreshTables() {
