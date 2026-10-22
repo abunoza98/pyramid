@@ -381,7 +381,8 @@
     for (var i = 0; i < open.length; i++) if (open[i] !== dot) open[i].classList.remove("open");
     if (!dot) return;
     var canHover = window.matchMedia && window.matchMedia("(hover: hover)").matches;
-    if (dot.classList.contains("fchip")) { dot.classList.toggle("open"); return; }   // form chips only show a label
+    // Form chips: hover only with a mouse; on touch screens a tap shows the label until something else is tapped.
+    if (dot.classList.contains("fchip")) { if (!canHover) dot.classList.toggle("open"); return; }
     if (!canHover && !dot.classList.contains("open")) { e.preventDefault(); dot.classList.add("open"); }
   });
   function clubRender() { if (window.FP) FP.retime($("main-content"), fxState.tz, COUNTRY); }
