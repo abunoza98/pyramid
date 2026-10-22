@@ -374,6 +374,15 @@
 
   /* ---------- Club pages ----------
      Rendered by the build; here the dates and times switch to the visitor's time zone. */
+  // Pyramid chart dots: on touch screens the first tap shows the label, a second tap opens the table.
+  document.addEventListener("click", function (e) {
+    var dot = e.target.closest ? e.target.closest(".ld") : null;
+    var open = document.querySelectorAll(".ld.open");
+    for (var i = 0; i < open.length; i++) if (open[i] !== dot) open[i].classList.remove("open");
+    if (!dot) return;
+    var canHover = window.matchMedia && window.matchMedia("(hover: hover)").matches;
+    if (!canHover && !dot.classList.contains("open")) { e.preventDefault(); dot.classList.add("open"); }
+  });
   function clubRender() { if (window.FP) FP.retime($("main-content"), fxState.tz, COUNTRY); }
 
   /* ---------- Start ---------- */

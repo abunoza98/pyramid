@@ -804,8 +804,26 @@ tbody tr.is-this .c-club { font-weight: 700; }
 .lplot .lb.alt { fill: var(--hatch); }
 .lplot .lb.top { fill: var(--accent-soft); }
 .lplot .lp { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; }
-.ld { position: absolute; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px; border-radius: 50%; background: var(--sheet); border: 2.5px solid var(--accent); box-sizing: border-box; }
+.ld { position: absolute; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px; border-radius: 50%; background: var(--sheet); border: 2.5px solid var(--accent); box-sizing: border-box; cursor: pointer; }
+.ld::before { content: ""; position: absolute; inset: -12px; border-radius: 50%; }   /* bigger target for fingers */
 .ld.now { background: var(--accent); box-shadow: 0 0 0 3px var(--accent-flash); }
+.ld:hover, .ld:focus-visible, .ld.open { outline: none; z-index: 3; box-shadow: 0 0 0 4px var(--accent-flash); }
+.ltip { position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%);
+  display: none; min-width: 168px; padding: 8px 10px; border-radius: 6px; background: var(--ink); color: var(--paper);
+  font: 400 12px/1.4 var(--body); text-align: left; white-space: nowrap; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18); }
+.ltip b { display: block; font-family: var(--mono); font-weight: 500; font-size: 11px; opacity: 0.75; }
+.ltip i { display: block; font-style: normal; opacity: 0.75; }
+.ltip u { display: block; margin-top: 4px; text-decoration: none; font-weight: 600; }
+.ltip.l { left: -6px; transform: none; }
+.ltip.r { left: auto; right: -6px; transform: none; }
+.ltip.below { bottom: auto; top: calc(100% + 10px); }
+.ld:hover .ltip, .ld:focus-visible .ltip, .ld.open .ltip { display: block; }
+.jmore { margin-top: 4px; }
+.jmore > summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 8px; padding: 8px 0; font-weight: 600; font-size: 14px; }
+.jmore > summary::-webkit-details-marker { display: none; }
+.jmore > summary::before { content: "▸"; color: var(--accent); transition: transform 0.15s; }
+.jmore[open] > summary::before { transform: rotate(90deg); }
+.jmore > summary span { font-weight: 400; color: var(--muted); font-size: 13px; }
 .lx { grid-column: 2; position: relative; height: 22px; }
 .lx span { position: absolute; top: 5px; transform: translateX(-50%); font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap; }
 @media (max-width: 600px) { .lx span.odd { display: none; } }

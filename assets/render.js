@@ -1008,9 +1008,15 @@
         if (!sz(latest, t)) return "";
         return '<span class="ls" style="top:' + pct(a, ymax) + ";height:" + pct(b - a, ymax) + '" title="' + esc(l.name) + '"><b>' + esc(l.short || l.name) + "</b><i>" + (a + 1) + "–" + b + "</i></span>";
       }).join("");
+      // Each dot opens a label with the season, league and position, linking to that season's table.
+      var tableNow = d.league && d.league.tableHref;
       var dots = j.map(function (x, k) {
-        return '<b class="ld' + (x.now ? " now" : "") + '" style="left:' + pct(X(k), 1000) + ";top:" + pct(yOf(x), ymax) + '" title="' +
-          esc(x.season + ": " + x.league + ", " + ord(x.pos) + " (" + ord(x.rank) + " in the pyramid)") + '"></b>';
+        var href = x.now ? tableNow : x.href, at = X(k) / 1000;
+        var tip = '<span class="ltip' + (at < 0.2 ? " l" : at > 0.8 ? " r" : "") + (yOf(x) / ymax < 0.25 ? " below" : "") + '"><b>' + esc(x.season) + "</b>" +
+          esc(x.league) + ": " + ord(x.pos) + (x.of ? " of " + x.of : "") + "<i>" + ord(x.rank) + " in the pyramid</i>" + (href ? "<u>View table →</u>" : "") + "</span>";
+        var attrs = ' class="ld' + (x.now ? " now" : "") + '" style="left:' + pct(X(k), 1000) + ";top:" + pct(yOf(x), ymax) + '" aria-label="' +
+          esc(x.season + ": " + x.league + ", " + ord(x.pos)) + '"';
+        return href ? "<a" + attrs + ' href="' + esc(href) + '">' + tip + "</a>" : "<span" + attrs + ' tabindex="0">' + tip + "</span>";
       }).join("");
       var every = n > 10 ? 2 : 1;
       var xl = j.map(function (x, k) {
@@ -1026,11 +1032,12 @@
         '<div class="lchart"><div class="lside">' + side + '</div><div class="lplot" style="height:' + h + 'px">' +
         '<svg viewBox="0 0 1000 ' + ymax + '" preserveAspectRatio="none" aria-hidden="true">' + rects + lpath + "</svg>" + dots + "</div>" +
         '<div class="lx">' + xl + "</div></div>" +
+        '<details class="jmore" id="club-seasons"><summary>Season by season <span>' + n + (n === 1 ? " season" : " seasons") + "</span></summary>" +
         '<ul class="jlist">' + d.journey.map(function (x) {
           return "<li><span>" + esc(x.season) + '</span><i class="tag tier-' + x.tier + '">T' + x.tier + "</i>" +
-            (x.href ? '<a href="' + esc(x.href) + '">' + esc(x.league) + "</a>" : esc(x.league)) + "<b>" + (x.pos ? ord(x.pos) + (x.of ? " of " + x.of : "") : "") +
+            ((x.href || (x.now && tableNow)) ? '<a href="' + esc(x.href || tableNow) + '">' + esc(x.league) + "</a>" : esc(x.league)) + "<b>" + (x.pos ? ord(x.pos) + (x.of ? " of " + x.of : "") : "") +
             (x.rank ? '<em>' + ord(x.rank) + " overall</em>" : "") + "</b></li>";
-        }).join("") + "</ul></section>";
+        }).join("") + "</ul></details></section>";
     }
 
     var formStr = played.slice(0, 5).reverse().map(res).join("");

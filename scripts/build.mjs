@@ -456,7 +456,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
           const pr = pg.rows.find((x) => x.team === name);
           if (pr) {
             out.push({ season: h.season, tier: plg.tier, league: plg.name, pos: pr.pos, of: pg.rows.length, rank: rankIn(sizes, plg.tier, pr.pos), sizes,
-              href: `${base}${c.country}/${slug(h.year)}/${suffix}` });
+              href: `${base}${c.country}/${slug(h.year)}/${suffix}${plg.id ? "#" + plg.id : ""}` });
             break found;
           }
         }
