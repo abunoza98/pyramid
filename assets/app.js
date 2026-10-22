@@ -161,6 +161,16 @@
     }
   }
 
+  /* ---------- Season dropdown ---------- */
+  document.addEventListener("change", function (e) {
+    var sel = e.target.closest && e.target.closest(".season-pick");
+    if (sel && sel.value) location.href = sel.value;
+  });
+  // Coming back with the Back button: show this page's season again, not the one picked before leaving.
+  window.addEventListener("pageshow", function () {
+    document.querySelectorAll(".season-pick option").forEach(function (o) { if (o.defaultSelected) o.selected = true; });
+  });
+
   /* ---------- Copy buttons (contact email) ---------- */
   document.addEventListener("click", function (e) {
     var btn = e.target.closest && e.target.closest(".copy");

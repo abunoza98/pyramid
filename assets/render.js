@@ -169,12 +169,14 @@
   }
 
   /* ---------- Whole pages (the inside of <main>) ---------- */
-  // seasons: [{ label, href, current }] for the past-seasons list
-  function seasonsHTML(seasons) {
-    if (!seasons || seasons.length < 2) return "";
-    return '<details class="seasons"><summary>Other seasons</summary><ul>' + seasons.map(function (s) {
-      return "<li>" + (s.current ? '<span aria-current="page">' + esc(s.label) + "</span>" : '<a href="' + esc(s.href) + '">' + esc(s.label) + "</a>") + "</li>";
-    }).join("") + "</ul></details>";
+  // "ENGLAND · [2026–27 ▾]". seasons: [{ label, href, current }]; app.js navigates when the pick changes.
+  function seasonsHTML(c, seasons) {
+    var pick = seasons && seasons.length > 1
+      ? '<span class="season-wrap"><select class="season-pick" aria-label="Season">' + seasons.map(function (s) {
+          return '<option value="' + esc(s.href) + '"' + (s.current ? " selected" : "") + ">" + esc(s.label) + "</option>";
+        }).join("") + "</select></span>"
+      : "<span>" + esc(c.season) + "</span>";
+    return '<div class="seasons"><span class="seasons-country">' + esc(c.name) + '</span><span class="sep" aria-hidden="true">·</span>' + pick + "</div>";
   }
 
   function countryMain(c, opts) {
@@ -184,14 +186,14 @@
     var past = c.mode === "final";
     var html =
       '<section class="intro" aria-labelledby="intro-h">' +
-      '<p class="eyebrow">' + esc(c.name) + " · " + esc(c.season) + "</p>" +
-      '<h1 id="intro-h">The ' + esc(c.adjective) + " football pyramid" + (past ? ", " + esc(c.season) : "") + "</h1>" +
+      '<h1 id="intro-h">The ' + esc(c.adjective) + " football pyramid</h1>" +
+      seasonsHTML(c, opts.seasons) +
       (past
         ? '<p class="lede">Final tables for the top ' + n + " tiers of " + esc(c.adjective) + " football in " + esc(c.season) +
           ", from " + esc(c.leagues[0].name) + " down to " + esc(last.name) + ". Promotion, play-off and relegation places are marked from each league's records.</p>"
         : '<p class="lede">Every league in the top ' + n + " tiers of " + esc(c.adjective) + " football, from " + esc(c.leagues[0].name) +
           " down to " + esc(last.name) + ". Promotion, play-off and relegation places are marked on every table.</p>") +
-      stampHTML(c.mode, c.updated) + seasonsHTML(opts.seasons) + pyramidHTML(c) + "</section>";
+      stampHTML(c.mode, c.updated) + pyramidHTML(c) + "</section>";
     c.leagues.forEach(function (lg, i) {
       html += tierHTML(lg) + bandHTML(lg, c.leagues[i + 1] || null, c.belowNote);
       if (i === 1) html += INLINE_AD;
