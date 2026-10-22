@@ -121,7 +121,7 @@
         '<span class="fx-a">' + esc(f.away) + "</span>" +
         (grouped && f.g ? '<span class="fx-g">' + esc(f.g) + "</span>" : "") + "</li>";
     }).join("");
-    return '<details class="today" id="today-' + esc(lg.id) + '"><summary>' +
+    return '<details class="today" id="today-' + esc(lg.id) + '"' + (live ? " open" : "") + "><summary>" +
       (live ? '<span class="live-dot" aria-hidden="true"></span>' : "") + "Today: " + lg.today.length + " game" + (lg.today.length === 1 ? "" : "s") +
       (live ? " · " + live + " live" : "") + "</summary><ul>" + items + "</ul></details>";
   }

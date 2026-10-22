@@ -8,6 +8,8 @@ export const SITE = "https://footballpyramids.com";
 // operator: leave empty to keep the company name off the site, or set e.g. "Arrow Sport Pty Ltd".
 // Ad slots stay hidden until AdSense is approved. Set to true when the ad code goes in.
 export const ADS = false;
+// Live scores come from a small Cloudflare Worker (worker/live.js). Set to "" to switch live scores off.
+export const LIVE_URL = "https://live.footballpyramids.com/live.json";
 // Google AdSense publisher ID. The AdSense script loads on every page and ads.txt is written from this.
 export const ADSENSE_CLIENT = "ca-pub-3336933659025894";
 

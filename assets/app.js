@@ -122,9 +122,19 @@
     $("club-find").focus();
   });
 
-  /* ---------- Live refresh ---------- */
+  /* ---------- Live refresh ----------
+     Official tables: data/<country>.json, re-read every 5 minutes.
+     Live scores: the live worker's /live.json, read every 30 seconds while a game is on and
+     every 5 minutes otherwise. The page is redrawn with FP.applyLive() laid over the official tables. */
+  var LIVE_URL = body.getAttribute("data-live") || "";
   var current = {};   // country -> updated stamp on screen
   try { current = JSON.parse(body.getAttribute("data-stamps") || "{}"); } catch (e) {}
+  var official = {};  // country -> official data
+  var live = null, liveText = "", liveShown = false, lastTables = 0;
+  var seasons = null;
+  try { seasons = JSON.parse(body.getAttribute("data-seasons") || "null"); } catch (e) {}
+  var MINE = PAGE === "country" ? [COUNTRY] : COUNTRIES;
+
   function valid(c) {
     return c && Array.isArray(c.leagues) && c.leagues.length && c.leagues.every(function (lg) {
       return lg && lg.id && Array.isArray(lg.zones) && ((lg.rows && lg.rows.length) || (lg.groups && lg.groups.length));
@@ -137,30 +147,69 @@
   }
   function redraw(html) {
     var y = window.scrollY;
-    var open = document.querySelector("details.seasons[open]");
+    var open = {};
+    document.querySelectorAll("#main-content details").forEach(function (d) { open[d.id || d.className] = d.open; });
     $("main-content").innerHTML = html;
-    if (open) { var d = document.querySelector("details.seasons"); if (d) d.open = true; }
+    document.querySelectorAll("#main-content details").forEach(function (d) {
+      var k = d.id || d.className;
+      if (k in open) d.open = open[k];
+    });
     applyClub(false);
     window.scrollTo(0, y);
   }
-  function refresh() {
+  function relevant() {
+    return live && live.fixtures ? live.fixtures.filter(function (f) { return MINE.indexOf(f.c) > -1; }) : [];
+  }
+  function render() {
+    if (!MINE.every(function (c) { return official[c]; })) return;
+    var withLive = MINE.map(function (c) { return FP.applyLive(official[c], live); });
+    redraw(PAGE === "country" ? FP.countryMain(withLive[0], { seasons: seasons }) : FP.homeMain(withLive, BASE, SUFFIX));
+    liveShown = relevant().length > 0;
+  }
+  function refreshTables() {
+    lastTables = Date.now();
+    return Promise.all(MINE.map(getCountry)).then(function (list) {
+      if (!list.every(valid)) return false;
+      var changed = list.some(function (c) { return current[c.country] && current[c.country] !== c.updated; });
+      list.forEach(function (c) { official[c.country] = c; current[c.country] = c.updated; });
+      return changed;
+    });
+  }
+  function refreshLive() {
+    if (!LIVE_URL) return Promise.resolve(false);
+    return fetch(LIVE_URL, { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.text() : null; })
+      .catch(function () { return null; })
+      .then(function (text) {
+        if (!text || text === liveText) return false;
+        try { live = JSON.parse(text); } catch (e) { return false; }
+        liveText = text;
+        return true;
+      });
+  }
+  // How long until the next look at live scores.
+  function nextDelay() {
+    var now = Date.now() / 1000, soon = false, on = false;
+    relevant().forEach(function (f) {
+      if (FP.isLive(f)) on = true;
+      else if (f.st === "NS" && f.ko - now < 15 * 60 && f.ko - now > -3 * 3600) soon = true;
+    });
+    return on || soon ? 30 * 1000 : 5 * 60 * 1000;
+  }
+  var timer = null;
+  function cycle() {
+    clearTimeout(timer);
     if (!window.fetch || !window.FP || (PAGE !== "home" && PAGE !== "country")) return;
-    if (PAGE === "country") {
-      getCountry(COUNTRY).then(function (c) {
-        if (!valid(c)) return;
-        var seasons = null;
-        try { seasons = JSON.parse(body.getAttribute("data-seasons") || "null"); } catch (e) {}
-        if (current[COUNTRY] && current[COUNTRY] !== c.updated) redraw(FP.countryMain(c, { seasons: seasons }));
-        current[COUNTRY] = c.updated;
-      });
-    } else {
-      Promise.all(COUNTRIES.map(getCountry)).then(function (list) {
-        if (!list.every(valid)) return;
-        var changed = list.some(function (c) { return current[c.country] && current[c.country] !== c.updated; });
-        if (changed) redraw(FP.homeMain(list, BASE, SUFFIX));
-        list.forEach(function (c) { current[c.country] = c.updated; });
-      });
-    }
+    if (document.hidden) return;
+    var needTables = !lastTables || Date.now() - lastTables > REFRESH_MS;
+    Promise.all([needTables ? refreshTables() : Promise.resolve(false), refreshLive()]).then(function (res) {
+      var tablesChanged = res[0], liveChanged = res[1];
+      var anyLive = relevant().some(FP.isLive);
+      // Redraw when the tables or scores change, every cycle while a game is on (the clock moves),
+      // and once more when the last game drops off so the page goes back to the official tables.
+      if (tablesChanged || (liveChanged && (relevant().length || liveShown)) || anyLive) render();
+      timer = setTimeout(cycle, nextDelay());
+    });
   }
 
   /* ---------- Copy buttons (contact email) ---------- */
@@ -189,7 +238,6 @@
   var arrivedForClub = location.hash === "#club";
   if (arrivedForClub && history.replaceState) history.replaceState(null, "", location.pathname + location.search);
   applyClub(arrivedForClub);
-  refresh();
-  setInterval(function () { if (!document.hidden) refresh(); }, REFRESH_MS);
-  document.addEventListener("visibilitychange", function () { if (!document.hidden) refresh(); });
+  cycle();
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) cycle(); });
 })();

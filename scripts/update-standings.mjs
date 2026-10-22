@@ -55,6 +55,7 @@ export function toRows(table, notes) {
     const row = { pos: t.rank, team, p: all.played ?? w + d + l, w, d, l,
       gf: all.goals?.for ?? 0, ga: all.goals?.against ?? 0, pts: t.points ?? 0 };
     if (ded) row.ded = ded;
+    if (t.team?.id) row.tid = t.team.id;   // API-Football's club ID, used to match live scores to rows
     // API-Football gives form newest-first ("DLDLW"). Store oldest-first so the latest result sits on the right.
     if (t.form) row.form = String(t.form).replace(/[^WDL]/g, "").slice(0, 5).split("").reverse().join("");
     return row;

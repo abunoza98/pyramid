@@ -10,7 +10,7 @@ import { readFile, writeFile, mkdir, copyFile, readdir } from "node:fs/promises"
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import path from "node:path";
-import { COUNTRIES, SITE, CONTACT, ADS, ADSENSE_CLIENT, PLAYOFF_RULES } from "./leagues.mjs";
+import { COUNTRIES, SITE, CONTACT, ADS, ADSENSE_CLIENT, PLAYOFF_RULES, LIVE_URL } from "./leagues.mjs";
 import { contactPage, privacyPage } from "./pages.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -55,7 +55,7 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
 <link rel="preload" href="${base}assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${base}assets/style.css">
 ${ADSENSE_CLIENT && !suffix ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>\n` : ""}</head>
-<body${ADS ? "" : ' class="no-ads"'} data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${countries.map((c) => c.country).join(",")}" data-stamps="${esc(JSON.stringify(stamps))}"${seasons ? ` data-seasons="${esc(JSON.stringify(seasons))}"` : ""}>
+<body${ADS ? "" : ' class="no-ads"'} data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${countries.map((c) => c.country).join(",")}" data-stamps="${esc(JSON.stringify(stamps))}"${seasons ? ` data-seasons="${esc(JSON.stringify(seasons))}"` : ""}${LIVE_URL && (page === "home" || page === "country") ? ` data-live="${esc(LIVE_URL)}"` : ""}>
 <header class="bar">
   <div class="bar-inner">
     <a class="brand" href="${homeHref}" aria-label="Football Pyramids, home">
@@ -289,6 +289,13 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   }
   clubs.sort((a, b) => a.team.localeCompare(b.team));
   await write("data/clubs.json", JSON.stringify(clubs));
+
+  // For the live-scores worker: which API-Football league IDs belong to which table on the site.
+  const live = { season: Number(String(countries[0].season).slice(0, 4)), leagues: {} };
+  for (const c of COUNTRIES) for (const lg of c.leagues) {
+    for (const g of lg.groups || [{ apiId: lg.apiId }]) live.leagues[g.apiId] = { c: c.country, l: lg.id, ...(g.name ? { g: g.name } : {}) };
+  }
+  await write("data/live-leagues.json", JSON.stringify(live));
 
   if (!preview) {
     const today = new Date().toISOString().slice(0, 10);
