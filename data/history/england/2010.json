@@ -1,0 +1,286 @@
+{
+ "country": "england",
+ "name": "England",
+ "adjective": "English",
+ "season": "2010–11",
+ "year": 2010,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "premier-league",
+   "tier": 1,
+   "name": "Premier League",
+   "short": "PL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 3,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 4,
+     "to": 4,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 5,
+     "to": 5,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 18,
+     "to": 20,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Manchester United",
+     "p": 38,
+     "w": 23,
+     "d": 11,
+     "l": 4,
+     "gf": 78,
+     "ga": 37,
+     "pts": 80,
+     "form": "WLWDW"
+    },
+    {
+     "pos": 2,
+     "team": "Chelsea",
+     "p": 38,
+     "w": 21,
+     "d": 8,
+     "l": 9,
+     "gf": 69,
+     "ga": 33,
+     "pts": 71,
+     "form": "WWLDL"
+    },
+    {
+     "pos": 3,
+     "team": "Manchester City",
+     "p": 38,
+     "w": 21,
+     "d": 8,
+     "l": 9,
+     "gf": 60,
+     "ga": 33,
+     "pts": 71,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 4,
+     "team": "Arsenal",
+     "p": 38,
+     "w": 19,
+     "d": 11,
+     "l": 8,
+     "gf": 72,
+     "ga": 43,
+     "pts": 68,
+     "form": "LWLLD"
+    },
+    {
+     "pos": 5,
+     "team": "Tottenham Hotspur",
+     "p": 38,
+     "w": 16,
+     "d": 14,
+     "l": 8,
+     "gf": 55,
+     "ga": 46,
+     "pts": 62,
+     "form": "LDLWW"
+    },
+    {
+     "pos": 6,
+     "team": "Liverpool",
+     "p": 38,
+     "w": 17,
+     "d": 7,
+     "l": 14,
+     "gf": 59,
+     "ga": 44,
+     "pts": 58,
+     "form": "WWWLL"
+    },
+    {
+     "pos": 7,
+     "team": "Everton",
+     "p": 38,
+     "w": 13,
+     "d": 15,
+     "l": 10,
+     "gf": 51,
+     "ga": 45,
+     "pts": 54,
+     "form": "LDWLW"
+    },
+    {
+     "pos": 8,
+     "team": "Fulham",
+     "p": 38,
+     "w": 11,
+     "d": 16,
+     "l": 11,
+     "gf": 49,
+     "ga": 43,
+     "pts": 49,
+     "form": "WWLWD"
+    },
+    {
+     "pos": 9,
+     "team": "Aston Villa",
+     "p": 38,
+     "w": 12,
+     "d": 12,
+     "l": 14,
+     "gf": 48,
+     "ga": 59,
+     "pts": 48,
+     "form": "DLDWW"
+    },
+    {
+     "pos": 10,
+     "team": "Sunderland",
+     "p": 38,
+     "w": 12,
+     "d": 11,
+     "l": 15,
+     "gf": 45,
+     "ga": 56,
+     "pts": 47,
+     "form": "WLWLW"
+    },
+    {
+     "pos": 11,
+     "team": "West Bromwich Albion",
+     "p": 38,
+     "w": 12,
+     "d": 11,
+     "l": 15,
+     "gf": 56,
+     "ga": 71,
+     "pts": 47,
+     "form": "DWLWD"
+    },
+    {
+     "pos": 12,
+     "team": "Newcastle United",
+     "p": 38,
+     "w": 11,
+     "d": 13,
+     "l": 14,
+     "gf": 56,
+     "ga": 57,
+     "pts": 46,
+     "form": "DLWDD"
+    },
+    {
+     "pos": 13,
+     "team": "Stoke City",
+     "p": 38,
+     "w": 13,
+     "d": 7,
+     "l": 18,
+     "gf": 46,
+     "ga": 48,
+     "pts": 46,
+     "form": "WDWLL"
+    },
+    {
+     "pos": 14,
+     "team": "Bolton Wanderers",
+     "p": 38,
+     "w": 12,
+     "d": 10,
+     "l": 16,
+     "gf": 52,
+     "ga": 56,
+     "pts": 46,
+     "form": "LLLLL"
+    },
+    {
+     "pos": 15,
+     "team": "Blackburn Rovers",
+     "p": 38,
+     "w": 11,
+     "d": 10,
+     "l": 17,
+     "gf": 46,
+     "ga": 59,
+     "pts": 43,
+     "form": "LWDDW"
+    },
+    {
+     "pos": 16,
+     "team": "Wigan Athletic",
+     "p": 38,
+     "w": 9,
+     "d": 15,
+     "l": 14,
+     "gf": 40,
+     "ga": 61,
+     "pts": 42,
+     "form": "LDDWW"
+    },
+    {
+     "pos": 17,
+     "team": "Wolverhampton Wanderers",
+     "p": 38,
+     "w": 11,
+     "d": 7,
+     "l": 20,
+     "gf": 46,
+     "ga": 66,
+     "pts": 40,
+     "form": "LDWWL"
+    },
+    {
+     "pos": 18,
+     "team": "Birmingham City",
+     "p": 38,
+     "w": 8,
+     "d": 15,
+     "l": 15,
+     "gf": 37,
+     "ga": 58,
+     "pts": 39,
+     "form": "LDLLL"
+    },
+    {
+     "pos": 19,
+     "team": "Blackpool",
+     "p": 38,
+     "w": 10,
+     "d": 9,
+     "l": 19,
+     "gf": 55,
+     "ga": 78,
+     "pts": 39,
+     "form": "DDDWL"
+    },
+    {
+     "pos": 20,
+     "team": "West Ham United",
+     "p": 38,
+     "w": 7,
+     "d": 12,
+     "l": 19,
+     "gf": 43,
+     "ga": 70,
+     "pts": 33,
+     "form": "LLDLL"
+    }
+   ]
+  }
+ ]
+}

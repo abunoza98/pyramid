@@ -1,0 +1,286 @@
+{
+ "country": "italy",
+ "name": "Italy",
+ "adjective": "Italian",
+ "season": "2013–14",
+ "year": 2013,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "serie-a",
+   "tier": 1,
+   "name": "Serie A",
+   "short": "SA",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 4,
+     "to": 5,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 18,
+     "to": 20,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Juventus",
+     "p": 38,
+     "w": 33,
+     "d": 3,
+     "l": 2,
+     "gf": 80,
+     "ga": 23,
+     "pts": 102,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
+     "team": "Roma",
+     "p": 38,
+     "w": 26,
+     "d": 7,
+     "l": 5,
+     "gf": 72,
+     "ga": 25,
+     "pts": 85,
+     "form": "WWLLL"
+    },
+    {
+     "pos": 3,
+     "team": "Napoli",
+     "p": 38,
+     "w": 23,
+     "d": 9,
+     "l": 6,
+     "gf": 77,
+     "ga": 39,
+     "pts": 78,
+     "form": "DDWWW"
+    },
+    {
+     "pos": 4,
+     "team": "Fiorentina",
+     "p": 38,
+     "w": 19,
+     "d": 8,
+     "l": 11,
+     "gf": 65,
+     "ga": 44,
+     "pts": 65,
+     "form": "LWLWD"
+    },
+    {
+     "pos": 5,
+     "team": "Inter Milan",
+     "p": 38,
+     "w": 15,
+     "d": 15,
+     "l": 8,
+     "gf": 62,
+     "ga": 39,
+     "pts": 60,
+     "form": "WDLWL"
+    },
+    {
+     "pos": 6,
+     "team": "Parma",
+     "p": 38,
+     "w": 15,
+     "d": 13,
+     "l": 10,
+     "gf": 58,
+     "ga": 46,
+     "pts": 58,
+     "form": "LLWDW"
+    },
+    {
+     "pos": 7,
+     "team": "Torino",
+     "p": 38,
+     "w": 15,
+     "d": 12,
+     "l": 11,
+     "gf": 58,
+     "ga": 48,
+     "pts": 57,
+     "form": "DWWDD"
+    },
+    {
+     "pos": 8,
+     "team": "AC Milan",
+     "p": 38,
+     "w": 16,
+     "d": 9,
+     "l": 13,
+     "gf": 57,
+     "ga": 49,
+     "pts": 57,
+     "form": "WLWLW"
+    },
+    {
+     "pos": 9,
+     "team": "Lazio",
+     "p": 38,
+     "w": 15,
+     "d": 11,
+     "l": 12,
+     "gf": 54,
+     "ga": 54,
+     "pts": 56,
+     "form": "DWDLW"
+    },
+    {
+     "pos": 10,
+     "team": "Verona",
+     "p": 38,
+     "w": 16,
+     "d": 6,
+     "l": 16,
+     "gf": 62,
+     "ga": 68,
+     "pts": 54,
+     "form": "WWDDL"
+    },
+    {
+     "pos": 11,
+     "team": "Atalanta",
+     "p": 38,
+     "w": 15,
+     "d": 5,
+     "l": 18,
+     "gf": 43,
+     "ga": 51,
+     "pts": 50,
+     "form": "LDLWL"
+    },
+    {
+     "pos": 12,
+     "team": "Sampdoria",
+     "p": 38,
+     "w": 12,
+     "d": 9,
+     "l": 17,
+     "gf": 48,
+     "ga": 62,
+     "pts": 45,
+     "form": "LWLLD"
+    },
+    {
+     "pos": 13,
+     "team": "Genoa",
+     "p": 38,
+     "w": 11,
+     "d": 11,
+     "l": 16,
+     "gf": 41,
+     "ga": 50,
+     "pts": 44,
+     "form": "LDDLW"
+    },
+    {
+     "pos": 14,
+     "team": "Udinese",
+     "p": 38,
+     "w": 12,
+     "d": 8,
+     "l": 18,
+     "gf": 46,
+     "ga": 57,
+     "pts": 44,
+     "form": "DLWDD"
+    },
+    {
+     "pos": 15,
+     "team": "Cagliari",
+     "p": 38,
+     "w": 9,
+     "d": 12,
+     "l": 17,
+     "gf": 34,
+     "ga": 53,
+     "pts": 39,
+     "form": "WWLLL"
+    },
+    {
+     "pos": 16,
+     "team": "Chievo",
+     "p": 38,
+     "w": 10,
+     "d": 6,
+     "l": 22,
+     "gf": 34,
+     "ga": 54,
+     "pts": 36,
+     "form": "LLLWW"
+    },
+    {
+     "pos": 17,
+     "team": "Sassuolo",
+     "p": 38,
+     "w": 9,
+     "d": 7,
+     "l": 22,
+     "gf": 43,
+     "ga": 72,
+     "pts": 34,
+     "form": "WLWWL"
+    },
+    {
+     "pos": 18,
+     "team": "Catania",
+     "p": 38,
+     "w": 8,
+     "d": 8,
+     "l": 22,
+     "gf": 34,
+     "ga": 66,
+     "pts": 32,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 19,
+     "team": "Bologna",
+     "p": 38,
+     "w": 5,
+     "d": 14,
+     "l": 19,
+     "gf": 28,
+     "ga": 58,
+     "pts": 29,
+     "form": "LLDLL"
+    },
+    {
+     "pos": 20,
+     "team": "Livorno",
+     "p": 38,
+     "w": 6,
+     "d": 7,
+     "l": 25,
+     "gf": 39,
+     "ga": 77,
+     "pts": 25,
+     "form": "LLLLL"
+    }
+   ]
+  }
+ ]
+}

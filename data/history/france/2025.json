@@ -1,0 +1,765 @@
+{
+ "country": "france",
+ "name": "France",
+ "adjective": "French",
+ "season": "2025–26",
+ "year": 2025,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "ligue-1",
+   "tier": 1,
+   "name": "Ligue 1",
+   "short": "L1",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 3,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 4,
+     "to": 4,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 5,
+     "to": 6,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 7,
+     "to": 7,
+     "kind": "mid",
+     "label": "Conference League"
+    },
+    {
+     "from": 16,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 17,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Paris Saint-Germain",
+     "p": 34,
+     "w": 24,
+     "d": 4,
+     "l": 6,
+     "gf": 74,
+     "ga": 29,
+     "pts": 76,
+     "form": "WDWWL"
+    },
+    {
+     "pos": 2,
+     "team": "Lens",
+     "p": 34,
+     "w": 22,
+     "d": 4,
+     "l": 8,
+     "gf": 66,
+     "ga": 35,
+     "pts": 70,
+     "form": "DDWLW"
+    },
+    {
+     "pos": 3,
+     "team": "Lille",
+     "p": 34,
+     "w": 18,
+     "d": 7,
+     "l": 9,
+     "gf": 52,
+     "ga": 37,
+     "pts": 61,
+     "form": "DWDWL"
+    },
+    {
+     "pos": 4,
+     "team": "Lyon",
+     "p": 34,
+     "w": 18,
+     "d": 6,
+     "l": 10,
+     "gf": 53,
+     "ga": 40,
+     "pts": 60,
+     "form": "WWWLL"
+    },
+    {
+     "pos": 5,
+     "team": "Marseille",
+     "p": 34,
+     "w": 18,
+     "d": 5,
+     "l": 11,
+     "gf": 63,
+     "ga": 45,
+     "pts": 59,
+     "form": "LDLWW"
+    },
+    {
+     "pos": 6,
+     "team": "Rennes",
+     "p": 34,
+     "w": 17,
+     "d": 8,
+     "l": 9,
+     "gf": 59,
+     "ga": 50,
+     "pts": 59,
+     "form": "WWLWL"
+    },
+    {
+     "pos": 7,
+     "team": "Monaco",
+     "p": 34,
+     "w": 16,
+     "d": 6,
+     "l": 12,
+     "gf": 60,
+     "ga": 54,
+     "pts": 54,
+     "form": "DDWLL"
+    },
+    {
+     "pos": 8,
+     "team": "Strasbourg",
+     "p": 34,
+     "w": 15,
+     "d": 8,
+     "l": 11,
+     "gf": 58,
+     "ga": 47,
+     "pts": 53,
+     "form": "WLDWW"
+    },
+    {
+     "pos": 9,
+     "team": "Lorient",
+     "p": 34,
+     "w": 11,
+     "d": 12,
+     "l": 11,
+     "gf": 48,
+     "ga": 51,
+     "pts": 45,
+     "form": "WLDWL"
+    },
+    {
+     "pos": 10,
+     "team": "Toulouse",
+     "p": 33,
+     "w": 12,
+     "d": 8,
+     "l": 13,
+     "gf": 47,
+     "ga": 46,
+     "pts": 44,
+     "form": "LLDWW"
+    },
+    {
+     "pos": 11,
+     "team": "Paris FC",
+     "p": 34,
+     "w": 11,
+     "d": 11,
+     "l": 12,
+     "gf": 47,
+     "ga": 50,
+     "pts": 44,
+     "form": "WLWLW"
+    },
+    {
+     "pos": 12,
+     "team": "Brest",
+     "p": 34,
+     "w": 10,
+     "d": 9,
+     "l": 15,
+     "gf": 43,
+     "ga": 55,
+     "pts": 39,
+     "form": "DLLLD"
+    },
+    {
+     "pos": 13,
+     "team": "Angers",
+     "p": 34,
+     "w": 9,
+     "d": 9,
+     "l": 16,
+     "gf": 29,
+     "ga": 48,
+     "pts": 36,
+     "form": "DLLDD"
+    },
+    {
+     "pos": 14,
+     "team": "Le Havre",
+     "p": 34,
+     "w": 7,
+     "d": 14,
+     "l": 13,
+     "gf": 32,
+     "ga": 44,
+     "pts": 35,
+     "form": "DDDLW"
+    },
+    {
+     "pos": 15,
+     "team": "Auxerre",
+     "p": 34,
+     "w": 8,
+     "d": 10,
+     "l": 16,
+     "gf": 34,
+     "ga": 44,
+     "pts": 34,
+     "form": "DLWWW"
+    },
+    {
+     "pos": 16,
+     "team": "Nice",
+     "p": 34,
+     "w": 7,
+     "d": 11,
+     "l": 16,
+     "gf": 37,
+     "ga": 60,
+     "pts": 32,
+     "form": "DLDDW"
+    },
+    {
+     "pos": 17,
+     "team": "Nantes",
+     "p": 33,
+     "w": 5,
+     "d": 8,
+     "l": 20,
+     "gf": 29,
+     "ga": 52,
+     "pts": 23,
+     "form": "DLLWL"
+    },
+    {
+     "pos": 18,
+     "team": "Metz",
+     "p": 34,
+     "w": 3,
+     "d": 8,
+     "l": 23,
+     "gf": 32,
+     "ga": 76,
+     "pts": 17,
+     "form": "LDLLD"
+    }
+   ]
+  },
+  {
+   "id": "ligue-2",
+   "tier": 2,
+   "name": "Ligue 2",
+   "short": "L2",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 3,
+     "to": 5,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 16,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 17,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Troyes",
+     "p": 34,
+     "w": 20,
+     "d": 7,
+     "l": 7,
+     "gf": 60,
+     "ga": 33,
+     "pts": 67,
+     "form": "LWWWL"
+    },
+    {
+     "pos": 2,
+     "team": "Le Mans",
+     "p": 34,
+     "w": 16,
+     "d": 14,
+     "l": 4,
+     "gf": 50,
+     "ga": 31,
+     "pts": 62,
+     "form": "DWDDW"
+    },
+    {
+     "pos": 3,
+     "team": "Saint-Étienne",
+     "p": 34,
+     "w": 18,
+     "d": 6,
+     "l": 10,
+     "gf": 59,
+     "ga": 38,
+     "pts": 60,
+     "form": "WLLLW"
+    },
+    {
+     "pos": 4,
+     "team": "Red Star",
+     "p": 34,
+     "w": 16,
+     "d": 10,
+     "l": 8,
+     "gf": 45,
+     "ga": 37,
+     "pts": 58,
+     "form": "WLWWD"
+    },
+    {
+     "pos": 5,
+     "team": "Rodez",
+     "p": 34,
+     "w": 15,
+     "d": 13,
+     "l": 6,
+     "gf": 45,
+     "ga": 39,
+     "pts": 58,
+     "form": "WWDWW"
+    },
+    {
+     "pos": 6,
+     "team": "Reims",
+     "p": 34,
+     "w": 14,
+     "d": 14,
+     "l": 6,
+     "gf": 53,
+     "ga": 35,
+     "pts": 56,
+     "form": "DWDDW"
+    },
+    {
+     "pos": 7,
+     "team": "Annecy",
+     "p": 34,
+     "w": 15,
+     "d": 7,
+     "l": 12,
+     "gf": 49,
+     "ga": 39,
+     "pts": 52,
+     "form": "DWWWL"
+    },
+    {
+     "pos": 8,
+     "team": "Montpellier",
+     "p": 34,
+     "w": 14,
+     "d": 9,
+     "l": 11,
+     "gf": 41,
+     "ga": 31,
+     "pts": 51,
+     "form": "DWWLD"
+    },
+    {
+     "pos": 9,
+     "team": "Pau",
+     "p": 34,
+     "w": 12,
+     "d": 9,
+     "l": 13,
+     "gf": 48,
+     "ga": 62,
+     "pts": 45,
+     "form": "WWLLL"
+    },
+    {
+     "pos": 10,
+     "team": "Dunkerque",
+     "p": 34,
+     "w": 11,
+     "d": 10,
+     "l": 13,
+     "gf": 53,
+     "ga": 45,
+     "pts": 43,
+     "form": "LLWLL"
+    },
+    {
+     "pos": 11,
+     "team": "Guingamp",
+     "p": 34,
+     "w": 10,
+     "d": 10,
+     "l": 14,
+     "gf": 42,
+     "ga": 49,
+     "pts": 40,
+     "form": "DLLLL"
+    },
+    {
+     "pos": 12,
+     "team": "Grenoble",
+     "p": 34,
+     "w": 8,
+     "d": 15,
+     "l": 11,
+     "gf": 33,
+     "ga": 39,
+     "pts": 39,
+     "form": "DLDWW"
+    },
+    {
+     "pos": 13,
+     "team": "Clermont",
+     "p": 34,
+     "w": 9,
+     "d": 10,
+     "l": 15,
+     "gf": 38,
+     "ga": 44,
+     "pts": 37,
+     "form": "DLDWW"
+    },
+    {
+     "pos": 14,
+     "team": "Nancy",
+     "p": 34,
+     "w": 9,
+     "d": 10,
+     "l": 15,
+     "gf": 35,
+     "ga": 52,
+     "pts": 37,
+     "form": "DLDWW"
+    },
+    {
+     "pos": 15,
+     "team": "Boulogne",
+     "p": 34,
+     "w": 9,
+     "d": 9,
+     "l": 16,
+     "gf": 34,
+     "ga": 49,
+     "pts": 36,
+     "form": "DLLLL"
+    },
+    {
+     "pos": 16,
+     "team": "Laval",
+     "p": 34,
+     "w": 6,
+     "d": 14,
+     "l": 14,
+     "gf": 30,
+     "ga": 48,
+     "pts": 32,
+     "form": "DLWDW"
+    },
+    {
+     "pos": 17,
+     "team": "Bastia",
+     "p": 34,
+     "w": 5,
+     "d": 13,
+     "l": 16,
+     "gf": 23,
+     "ga": 39,
+     "pts": 28,
+     "form": "LWDWL"
+    },
+    {
+     "pos": 18,
+     "team": "Amiens",
+     "p": 34,
+     "w": 6,
+     "d": 6,
+     "l": 22,
+     "gf": 37,
+     "ga": 65,
+     "pts": 24,
+     "form": "LLLLL"
+    }
+   ]
+  },
+  {
+   "id": "ligue-3",
+   "tier": 3,
+   "name": "Championnat National",
+   "short": "NAT",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 16,
+     "to": 17,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [
+    "Valenciennes: 1 point deducted.",
+    "Chateauroux: 1 point deducted."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Dijon",
+     "p": 32,
+     "w": 18,
+     "d": 11,
+     "l": 3,
+     "gf": 52,
+     "ga": 25,
+     "pts": 65,
+     "form": "DWLWW"
+    },
+    {
+     "pos": 2,
+     "team": "Sochaux",
+     "p": 32,
+     "w": 16,
+     "d": 10,
+     "l": 6,
+     "gf": 51,
+     "ga": 26,
+     "pts": 58,
+     "form": "DWDLD"
+    },
+    {
+     "pos": 3,
+     "team": "Rouen",
+     "p": 32,
+     "w": 14,
+     "d": 13,
+     "l": 5,
+     "gf": 43,
+     "ga": 29,
+     "pts": 55,
+     "form": "DWDLW"
+    },
+    {
+     "pos": 4,
+     "team": "Fleury",
+     "p": 32,
+     "w": 15,
+     "d": 9,
+     "l": 8,
+     "gf": 47,
+     "ga": 30,
+     "pts": 54,
+     "form": "WWWLL"
+    },
+    {
+     "pos": 5,
+     "team": "Versailles",
+     "p": 32,
+     "w": 15,
+     "d": 8,
+     "l": 9,
+     "gf": 46,
+     "ga": 34,
+     "pts": 53,
+     "form": "WDDWD"
+    },
+    {
+     "pos": 6,
+     "team": "Orléans",
+     "p": 32,
+     "w": 14,
+     "d": 9,
+     "l": 9,
+     "gf": 42,
+     "ga": 42,
+     "pts": 51,
+     "form": "WLDWL"
+    },
+    {
+     "pos": 7,
+     "team": "Le Puy",
+     "p": 32,
+     "w": 12,
+     "d": 11,
+     "l": 9,
+     "gf": 45,
+     "ga": 38,
+     "pts": 47,
+     "form": "DDLLD"
+    },
+    {
+     "pos": 8,
+     "team": "Caen",
+     "p": 32,
+     "w": 8,
+     "d": 16,
+     "l": 8,
+     "gf": 39,
+     "ga": 34,
+     "pts": 40,
+     "form": "WWWDL"
+    },
+    {
+     "pos": 9,
+     "team": "Concarneau",
+     "p": 32,
+     "w": 8,
+     "d": 14,
+     "l": 10,
+     "gf": 32,
+     "ga": 37,
+     "pts": 38,
+     "form": "DWDDD"
+    },
+    {
+     "pos": 10,
+     "team": "Valenciennes",
+     "p": 32,
+     "w": 10,
+     "d": 8,
+     "l": 14,
+     "gf": 35,
+     "ga": 44,
+     "pts": 37,
+     "ded": 1,
+     "form": "LLDLD"
+    },
+    {
+     "pos": 11,
+     "team": "Aubagne",
+     "p": 32,
+     "w": 9,
+     "d": 10,
+     "l": 13,
+     "gf": 38,
+     "ga": 46,
+     "pts": 37,
+     "form": "LLLDW"
+    },
+    {
+     "pos": 12,
+     "team": "Villefranche",
+     "p": 32,
+     "w": 10,
+     "d": 7,
+     "l": 15,
+     "gf": 34,
+     "ga": 45,
+     "pts": 37,
+     "form": "DWLLD"
+    },
+    {
+     "pos": 13,
+     "team": "Quevilly-Rouen",
+     "p": 32,
+     "w": 8,
+     "d": 9,
+     "l": 15,
+     "gf": 34,
+     "ga": 45,
+     "pts": 33,
+     "form": "DWDLW"
+    },
+    {
+     "pos": 14,
+     "team": "Paris 13 Atletico",
+     "p": 32,
+     "w": 7,
+     "d": 11,
+     "l": 14,
+     "gf": 26,
+     "ga": 41,
+     "pts": 32,
+     "form": "LLDDL"
+    },
+    {
+     "pos": 15,
+     "team": "Bourg-Péronnas",
+     "p": 32,
+     "w": 8,
+     "d": 7,
+     "l": 17,
+     "gf": 25,
+     "ga": 44,
+     "pts": 31,
+     "form": "LLLWW"
+    },
+    {
+     "pos": 16,
+     "team": "Chateauroux",
+     "p": 32,
+     "w": 6,
+     "d": 13,
+     "l": 13,
+     "gf": 35,
+     "ga": 49,
+     "pts": 30,
+     "ded": 1,
+     "form": "LLWWD"
+    },
+    {
+     "pos": 17,
+     "team": "Stade Briochin",
+     "p": 32,
+     "w": 5,
+     "d": 12,
+     "l": 15,
+     "gf": 35,
+     "ga": 50,
+     "pts": 27,
+     "form": "DLWWD"
+    }
+   ]
+  }
+ ]
+}

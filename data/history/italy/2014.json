@@ -1,0 +1,289 @@
+{
+ "country": "italy",
+ "name": "Italy",
+ "adjective": "Italian",
+ "season": "2014–15",
+ "year": 2014,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "serie-a",
+   "tier": 1,
+   "name": "Serie A",
+   "short": "SA",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 4,
+     "to": 5,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 18,
+     "to": 20,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [
+    "Parma: 7 points deducted."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Juventus",
+     "p": 38,
+     "w": 26,
+     "d": 9,
+     "l": 3,
+     "gf": 72,
+     "ga": 24,
+     "pts": 87,
+     "form": "WDWWD"
+    },
+    {
+     "pos": 2,
+     "team": "Roma",
+     "p": 38,
+     "w": 19,
+     "d": 13,
+     "l": 6,
+     "gf": 54,
+     "ga": 31,
+     "pts": 70,
+     "form": "WLWWL"
+    },
+    {
+     "pos": 3,
+     "team": "Lazio",
+     "p": 38,
+     "w": 21,
+     "d": 6,
+     "l": 11,
+     "gf": 71,
+     "ga": 38,
+     "pts": 69,
+     "form": "DLWLW"
+    },
+    {
+     "pos": 4,
+     "team": "Fiorentina",
+     "p": 38,
+     "w": 18,
+     "d": 10,
+     "l": 10,
+     "gf": 61,
+     "ga": 46,
+     "pts": 64,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 5,
+     "team": "Napoli",
+     "p": 38,
+     "w": 18,
+     "d": 9,
+     "l": 11,
+     "gf": 70,
+     "ga": 54,
+     "pts": 63,
+     "form": "WDWLL"
+    },
+    {
+     "pos": 6,
+     "team": "Genoa",
+     "p": 38,
+     "w": 16,
+     "d": 11,
+     "l": 11,
+     "gf": 62,
+     "ga": 47,
+     "pts": 59,
+     "form": "LWWWL"
+    },
+    {
+     "pos": 7,
+     "team": "Sampdoria",
+     "p": 38,
+     "w": 13,
+     "d": 17,
+     "l": 8,
+     "gf": 48,
+     "ga": 42,
+     "pts": 56,
+     "form": "LWLDD"
+    },
+    {
+     "pos": 8,
+     "team": "Inter Milan",
+     "p": 38,
+     "w": 14,
+     "d": 13,
+     "l": 11,
+     "gf": 59,
+     "ga": 48,
+     "pts": 55,
+     "form": "DWLLW"
+    },
+    {
+     "pos": 9,
+     "team": "Torino",
+     "p": 38,
+     "w": 14,
+     "d": 12,
+     "l": 12,
+     "gf": 48,
+     "ga": 45,
+     "pts": 54,
+     "form": "LLWLW"
+    },
+    {
+     "pos": 10,
+     "team": "AC Milan",
+     "p": 38,
+     "w": 13,
+     "d": 13,
+     "l": 12,
+     "gf": 56,
+     "ga": 50,
+     "pts": 52,
+     "form": "LWLWW"
+    },
+    {
+     "pos": 11,
+     "team": "Palermo",
+     "p": 38,
+     "w": 12,
+     "d": 13,
+     "l": 13,
+     "gf": 53,
+     "ga": 55,
+     "pts": 49,
+     "form": "DLWLW"
+    },
+    {
+     "pos": 12,
+     "team": "Sassuolo",
+     "p": 38,
+     "w": 12,
+     "d": 13,
+     "l": 13,
+     "gf": 49,
+     "ga": 57,
+     "pts": 49,
+     "form": "DWWWW"
+    },
+    {
+     "pos": 13,
+     "team": "Verona",
+     "p": 38,
+     "w": 11,
+     "d": 13,
+     "l": 14,
+     "gf": 49,
+     "ga": 65,
+     "pts": 46,
+     "form": "LDWDD"
+    },
+    {
+     "pos": 14,
+     "team": "Chievo",
+     "p": 38,
+     "w": 10,
+     "d": 13,
+     "l": 15,
+     "gf": 28,
+     "ga": 41,
+     "pts": 43,
+     "form": "DDLDL"
+    },
+    {
+     "pos": 15,
+     "team": "Empoli",
+     "p": 38,
+     "w": 8,
+     "d": 18,
+     "l": 12,
+     "gf": 46,
+     "ga": 52,
+     "pts": 42,
+     "form": "WLLDL"
+    },
+    {
+     "pos": 16,
+     "team": "Udinese",
+     "p": 38,
+     "w": 10,
+     "d": 11,
+     "l": 17,
+     "gf": 43,
+     "ga": 56,
+     "pts": 41,
+     "form": "WLLLL"
+    },
+    {
+     "pos": 17,
+     "team": "Atalanta",
+     "p": 38,
+     "w": 7,
+     "d": 16,
+     "l": 15,
+     "gf": 38,
+     "ga": 57,
+     "pts": 37,
+     "form": "DWLDL"
+    },
+    {
+     "pos": 18,
+     "team": "Cagliari",
+     "p": 38,
+     "w": 8,
+     "d": 10,
+     "l": 20,
+     "gf": 48,
+     "ga": 68,
+     "pts": 34,
+     "form": "WDLWW"
+    },
+    {
+     "pos": 19,
+     "team": "Cesena",
+     "p": 38,
+     "w": 4,
+     "d": 12,
+     "l": 22,
+     "gf": 36,
+     "ga": 73,
+     "pts": 24,
+     "form": "LLLLL"
+    },
+    {
+     "pos": 20,
+     "team": "Parma",
+     "p": 38,
+     "w": 6,
+     "d": 8,
+     "l": 24,
+     "gf": 33,
+     "ga": 75,
+     "pts": 19,
+     "ded": 7,
+     "form": "LDLDD"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,268 @@
+{
+ "country": "germany",
+ "name": "Germany",
+ "adjective": "German",
+ "season": "2010–11",
+ "year": 2010,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "bundesliga",
+   "tier": 1,
+   "name": "Bundesliga",
+   "short": "BL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 4,
+     "to": 5,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 16,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 17,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Borussia Dortmund",
+     "p": 34,
+     "w": 23,
+     "d": 6,
+     "l": 5,
+     "gf": 67,
+     "ga": 22,
+     "pts": 75,
+     "form": "WLWLW"
+    },
+    {
+     "pos": 2,
+     "team": "Bayer Leverkusen",
+     "p": 34,
+     "w": 20,
+     "d": 8,
+     "l": 6,
+     "gf": 64,
+     "ga": 44,
+     "pts": 68,
+     "form": "LWLDW"
+    },
+    {
+     "pos": 3,
+     "team": "Bayern Munich",
+     "p": 34,
+     "w": 19,
+     "d": 8,
+     "l": 7,
+     "gf": 81,
+     "ga": 40,
+     "pts": 65,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 4,
+     "team": "Hannover 96",
+     "p": 34,
+     "w": 19,
+     "d": 3,
+     "l": 12,
+     "gf": 49,
+     "ga": 45,
+     "pts": 60,
+     "form": "DWLLW"
+    },
+    {
+     "pos": 5,
+     "team": "Mainz 05",
+     "p": 34,
+     "w": 18,
+     "d": 4,
+     "l": 12,
+     "gf": 52,
+     "ga": 39,
+     "pts": 58,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 6,
+     "team": "FC Nurnberg",
+     "p": 34,
+     "w": 13,
+     "d": 8,
+     "l": 13,
+     "gf": 47,
+     "ga": 45,
+     "pts": 47,
+     "form": "WDLLL"
+    },
+    {
+     "pos": 7,
+     "team": "FC Kaiserslautern",
+     "p": 34,
+     "w": 13,
+     "d": 7,
+     "l": 14,
+     "gf": 48,
+     "ga": 51,
+     "pts": 46,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 8,
+     "team": "Hamburger SV",
+     "p": 34,
+     "w": 12,
+     "d": 9,
+     "l": 13,
+     "gf": 46,
+     "ga": 52,
+     "pts": 45,
+     "form": "DLLDD"
+    },
+    {
+     "pos": 9,
+     "team": "SC Freiburg",
+     "p": 34,
+     "w": 13,
+     "d": 5,
+     "l": 16,
+     "gf": 41,
+     "ga": 50,
+     "pts": 44,
+     "form": "LLWLL"
+    },
+    {
+     "pos": 10,
+     "team": "1. FC Köln",
+     "p": 34,
+     "w": 13,
+     "d": 5,
+     "l": 16,
+     "gf": 47,
+     "ga": 62,
+     "pts": 44,
+     "form": "LLWWW"
+    },
+    {
+     "pos": 11,
+     "team": "TSG Hoffenheim",
+     "p": 34,
+     "w": 11,
+     "d": 10,
+     "l": 13,
+     "gf": 50,
+     "ga": 50,
+     "pts": 43,
+     "form": "WLLWL"
+    },
+    {
+     "pos": 12,
+     "team": "VfB Stuttgart",
+     "p": 34,
+     "w": 12,
+     "d": 6,
+     "l": 16,
+     "gf": 60,
+     "ga": 59,
+     "pts": 42,
+     "form": "WWWWL"
+    },
+    {
+     "pos": 13,
+     "team": "Werder Bremen",
+     "p": 34,
+     "w": 10,
+     "d": 11,
+     "l": 13,
+     "gf": 47,
+     "ga": 61,
+     "pts": 41,
+     "form": "DWLWL"
+    },
+    {
+     "pos": 14,
+     "team": "Schalke 04",
+     "p": 34,
+     "w": 11,
+     "d": 7,
+     "l": 16,
+     "gf": 38,
+     "ga": 44,
+     "pts": 40,
+     "form": "DLLLL"
+    },
+    {
+     "pos": 15,
+     "team": "VfL Wolfsburg",
+     "p": 34,
+     "w": 9,
+     "d": 11,
+     "l": 14,
+     "gf": 43,
+     "ga": 48,
+     "pts": 38,
+     "form": "DWWLW"
+    },
+    {
+     "pos": 16,
+     "team": "Borussia Mönchengladbach",
+     "p": 34,
+     "w": 10,
+     "d": 6,
+     "l": 18,
+     "gf": 48,
+     "ga": 65,
+     "pts": 36,
+     "form": "LWWWD"
+    },
+    {
+     "pos": 17,
+     "team": "Eintracht Frankfurt",
+     "p": 34,
+     "w": 9,
+     "d": 7,
+     "l": 18,
+     "gf": 31,
+     "ga": 49,
+     "pts": 34,
+     "form": "LDLLL"
+    },
+    {
+     "pos": 18,
+     "team": "FC St. Pauli",
+     "p": 34,
+     "w": 8,
+     "d": 5,
+     "l": 21,
+     "gf": 35,
+     "ga": 68,
+     "pts": 29,
+     "form": "DLLLL"
+    }
+   ]
+  }
+ ]
+}

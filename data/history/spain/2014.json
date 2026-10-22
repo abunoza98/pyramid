@@ -1,0 +1,289 @@
+{
+ "country": "spain",
+ "name": "Spain",
+ "adjective": "Spanish",
+ "season": "2014–15",
+ "year": 2014,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "la-liga",
+   "tier": 1,
+   "name": "La Liga",
+   "short": "LL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 3,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 4,
+     "to": 4,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 5,
+     "to": 6,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 18,
+     "to": 20,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [
+    "Almería: 3 points deducted."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Barcelona",
+     "p": 38,
+     "w": 30,
+     "d": 4,
+     "l": 4,
+     "gf": 110,
+     "ga": 21,
+     "pts": 94,
+     "form": "WWWWD"
+    },
+    {
+     "pos": 2,
+     "team": "Real Madrid",
+     "p": 38,
+     "w": 30,
+     "d": 2,
+     "l": 6,
+     "gf": 118,
+     "ga": 38,
+     "pts": 92,
+     "form": "WWDWW"
+    },
+    {
+     "pos": 3,
+     "team": "Atlético Madrid",
+     "p": 38,
+     "w": 23,
+     "d": 9,
+     "l": 6,
+     "gf": 67,
+     "ga": 29,
+     "pts": 78,
+     "form": "WDDLD"
+    },
+    {
+     "pos": 4,
+     "team": "Valencia",
+     "p": 38,
+     "w": 22,
+     "d": 11,
+     "l": 5,
+     "gf": 70,
+     "ga": 32,
+     "pts": 77,
+     "form": "DWDDW"
+    },
+    {
+     "pos": 5,
+     "team": "Sevilla",
+     "p": 38,
+     "w": 23,
+     "d": 7,
+     "l": 8,
+     "gf": 71,
+     "ga": 45,
+     "pts": 76,
+     "form": "WLDWW"
+    },
+    {
+     "pos": 6,
+     "team": "Villarreal",
+     "p": 38,
+     "w": 16,
+     "d": 12,
+     "l": 10,
+     "gf": 48,
+     "ga": 37,
+     "pts": 60,
+     "form": "LDWWL"
+    },
+    {
+     "pos": 7,
+     "team": "Athletic Bilbao",
+     "p": 38,
+     "w": 15,
+     "d": 10,
+     "l": 13,
+     "gf": 42,
+     "ga": 41,
+     "pts": 55,
+     "form": "DDDWW"
+    },
+    {
+     "pos": 8,
+     "team": "Celta Vigo",
+     "p": 38,
+     "w": 13,
+     "d": 12,
+     "l": 13,
+     "gf": 47,
+     "ga": 44,
+     "pts": 51,
+     "form": "WDDDW"
+    },
+    {
+     "pos": 9,
+     "team": "Málaga",
+     "p": 38,
+     "w": 14,
+     "d": 8,
+     "l": 16,
+     "gf": 42,
+     "ga": 48,
+     "pts": 50,
+     "form": "LLWLL"
+    },
+    {
+     "pos": 10,
+     "team": "Espanyol",
+     "p": 38,
+     "w": 13,
+     "d": 10,
+     "l": 15,
+     "gf": 47,
+     "ga": 51,
+     "pts": 49,
+     "form": "WDWLL"
+    },
+    {
+     "pos": 11,
+     "team": "Rayo Vallecano",
+     "p": 38,
+     "w": 15,
+     "d": 4,
+     "l": 19,
+     "gf": 46,
+     "ga": 68,
+     "pts": 49,
+     "form": "DDWWL"
+    },
+    {
+     "pos": 12,
+     "team": "Real Sociedad",
+     "p": 38,
+     "w": 11,
+     "d": 13,
+     "l": 14,
+     "gf": 44,
+     "ga": 51,
+     "pts": 46,
+     "form": "DWLLW"
+    },
+    {
+     "pos": 13,
+     "team": "Elche",
+     "p": 38,
+     "w": 11,
+     "d": 8,
+     "l": 19,
+     "gf": 35,
+     "ga": 62,
+     "pts": 41,
+     "form": "WWLLD"
+    },
+    {
+     "pos": 14,
+     "team": "Levante",
+     "p": 38,
+     "w": 9,
+     "d": 10,
+     "l": 19,
+     "gf": 34,
+     "ga": 67,
+     "pts": 37,
+     "form": "WLDLD"
+    },
+    {
+     "pos": 15,
+     "team": "Getafe",
+     "p": 38,
+     "w": 10,
+     "d": 7,
+     "l": 21,
+     "gf": 33,
+     "ga": 64,
+     "pts": 37,
+     "form": "LLLDL"
+    },
+    {
+     "pos": 16,
+     "team": "Deportivo La Coruña",
+     "p": 38,
+     "w": 7,
+     "d": 14,
+     "l": 17,
+     "gf": 35,
+     "ga": 60,
+     "pts": 35,
+     "form": "LDDWD"
+    },
+    {
+     "pos": 17,
+     "team": "Granada",
+     "p": 38,
+     "w": 7,
+     "d": 14,
+     "l": 17,
+     "gf": 29,
+     "ga": 64,
+     "pts": 35,
+     "form": "LWWWD"
+    },
+    {
+     "pos": 18,
+     "team": "Eibar",
+     "p": 38,
+     "w": 9,
+     "d": 8,
+     "l": 21,
+     "gf": 34,
+     "ga": 55,
+     "pts": 35,
+     "form": "LLLDW"
+    },
+    {
+     "pos": 19,
+     "team": "Almería",
+     "p": 38,
+     "w": 8,
+     "d": 8,
+     "l": 22,
+     "gf": 35,
+     "ga": 64,
+     "pts": 29,
+     "ded": 3,
+     "form": "LDLLL"
+    },
+    {
+     "pos": 20,
+     "team": "Córdoba",
+     "p": 38,
+     "w": 3,
+     "d": 11,
+     "l": 24,
+     "gf": 22,
+     "ga": 68,
+     "pts": 20,
+     "form": "LLLLL"
+    }
+   ]
+  }
+ ]
+}

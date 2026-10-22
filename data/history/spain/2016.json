@@ -1,0 +1,580 @@
+{
+ "country": "spain",
+ "name": "Spain",
+ "adjective": "Spanish",
+ "season": "2016–17",
+ "year": 2016,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "la-liga",
+   "tier": 1,
+   "name": "La Liga",
+   "short": "LL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 3,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 4,
+     "to": 4,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 5,
+     "to": 6,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 18,
+     "to": 20,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Real Madrid",
+     "p": 38,
+     "w": 29,
+     "d": 6,
+     "l": 3,
+     "gf": 106,
+     "ga": 41,
+     "pts": 93,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
+     "team": "Barcelona",
+     "p": 38,
+     "w": 28,
+     "d": 6,
+     "l": 4,
+     "gf": 116,
+     "ga": 37,
+     "pts": 90,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 3,
+     "team": "Atlético Madrid",
+     "p": 38,
+     "w": 23,
+     "d": 9,
+     "l": 6,
+     "gf": 70,
+     "ga": 27,
+     "pts": 78,
+     "form": "LWWDW"
+    },
+    {
+     "pos": 4,
+     "team": "Sevilla",
+     "p": 38,
+     "w": 21,
+     "d": 9,
+     "l": 8,
+     "gf": 69,
+     "ga": 49,
+     "pts": 72,
+     "form": "WLDLW"
+    },
+    {
+     "pos": 5,
+     "team": "Villarreal",
+     "p": 38,
+     "w": 19,
+     "d": 10,
+     "l": 9,
+     "gf": 56,
+     "ga": 33,
+     "pts": 67,
+     "form": "WWLDW"
+    },
+    {
+     "pos": 6,
+     "team": "Real Sociedad",
+     "p": 38,
+     "w": 19,
+     "d": 7,
+     "l": 12,
+     "gf": 59,
+     "ga": 53,
+     "pts": 64,
+     "form": "WWDDD"
+    },
+    {
+     "pos": 7,
+     "team": "Athletic Bilbao",
+     "p": 38,
+     "w": 19,
+     "d": 6,
+     "l": 13,
+     "gf": 53,
+     "ga": 43,
+     "pts": 63,
+     "form": "WWLDL"
+    },
+    {
+     "pos": 8,
+     "team": "Espanyol",
+     "p": 38,
+     "w": 15,
+     "d": 11,
+     "l": 12,
+     "gf": 49,
+     "ga": 50,
+     "pts": 56,
+     "form": "DLWLW"
+    },
+    {
+     "pos": 9,
+     "team": "Alavés",
+     "p": 38,
+     "w": 14,
+     "d": 13,
+     "l": 11,
+     "gf": 41,
+     "ga": 43,
+     "pts": 55,
+     "form": "DWWWD"
+    },
+    {
+     "pos": 10,
+     "team": "Eibar",
+     "p": 38,
+     "w": 15,
+     "d": 9,
+     "l": 14,
+     "gf": 56,
+     "ga": 51,
+     "pts": 54,
+     "form": "DWLLL"
+    },
+    {
+     "pos": 11,
+     "team": "Málaga",
+     "p": 38,
+     "w": 12,
+     "d": 10,
+     "l": 16,
+     "gf": 49,
+     "ga": 55,
+     "pts": 46,
+     "form": "WWWDL"
+    },
+    {
+     "pos": 12,
+     "team": "Valencia",
+     "p": 38,
+     "w": 13,
+     "d": 7,
+     "l": 18,
+     "gf": 56,
+     "ga": 65,
+     "pts": 46,
+     "form": "LLWWL"
+    },
+    {
+     "pos": 13,
+     "team": "Celta Vigo",
+     "p": 38,
+     "w": 13,
+     "d": 6,
+     "l": 19,
+     "gf": 53,
+     "ga": 69,
+     "pts": 45,
+     "form": "LLLLD"
+    },
+    {
+     "pos": 14,
+     "team": "Las Palmas",
+     "p": 38,
+     "w": 10,
+     "d": 9,
+     "l": 19,
+     "gf": 53,
+     "ga": 74,
+     "pts": 39,
+     "form": "LLLLL"
+    },
+    {
+     "pos": 15,
+     "team": "Real Betis",
+     "p": 38,
+     "w": 10,
+     "d": 9,
+     "l": 19,
+     "gf": 41,
+     "ga": 64,
+     "pts": 39,
+     "form": "LLLDD"
+    },
+    {
+     "pos": 16,
+     "team": "Deportivo La Coruña",
+     "p": 38,
+     "w": 8,
+     "d": 12,
+     "l": 18,
+     "gf": 43,
+     "ga": 61,
+     "pts": 36,
+     "form": "LDLDW"
+    },
+    {
+     "pos": 17,
+     "team": "Leganés",
+     "p": 38,
+     "w": 8,
+     "d": 11,
+     "l": 19,
+     "gf": 36,
+     "ga": 55,
+     "pts": 35,
+     "form": "WLWDD"
+    },
+    {
+     "pos": 18,
+     "team": "Sporting Gijón",
+     "p": 38,
+     "w": 7,
+     "d": 10,
+     "l": 21,
+     "gf": 42,
+     "ga": 72,
+     "pts": 31,
+     "form": "DLWWD"
+    },
+    {
+     "pos": 19,
+     "team": "Osasuna",
+     "p": 38,
+     "w": 4,
+     "d": 10,
+     "l": 24,
+     "gf": 40,
+     "ga": 94,
+     "pts": 22,
+     "form": "LDLWL"
+    },
+    {
+     "pos": 20,
+     "team": "Granada",
+     "p": 38,
+     "w": 4,
+     "d": 8,
+     "l": 26,
+     "gf": 30,
+     "ga": 82,
+     "pts": 20,
+     "form": "LLLLL"
+    }
+   ]
+  },
+  {
+   "id": "segunda",
+   "tier": 2,
+   "name": "Segunda División",
+   "short": "SD",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 3,
+     "to": 6,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 19,
+     "to": 22,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Levante",
+     "p": 42,
+     "w": 25,
+     "d": 9,
+     "l": 8,
+     "gf": 57,
+     "ga": 32,
+     "pts": 84,
+     "form": "WDWLL"
+    },
+    {
+     "pos": 2,
+     "team": "Girona",
+     "p": 42,
+     "w": 20,
+     "d": 10,
+     "l": 12,
+     "gf": 65,
+     "ga": 45,
+     "pts": 70,
+     "form": "LDLDL"
+    },
+    {
+     "pos": 3,
+     "team": "Getafe",
+     "p": 42,
+     "w": 18,
+     "d": 14,
+     "l": 10,
+     "gf": 55,
+     "ga": 43,
+     "pts": 68,
+     "form": "LWLWD"
+    },
+    {
+     "pos": 4,
+     "team": "Tenerife",
+     "p": 42,
+     "w": 16,
+     "d": 18,
+     "l": 8,
+     "gf": 50,
+     "ga": 37,
+     "pts": 66,
+     "form": "DDWLW"
+    },
+    {
+     "pos": 5,
+     "team": "Cádiz",
+     "p": 42,
+     "w": 16,
+     "d": 16,
+     "l": 10,
+     "gf": 55,
+     "ga": 40,
+     "pts": 64,
+     "form": "DDDWL"
+    },
+    {
+     "pos": 6,
+     "team": "Huesca",
+     "p": 42,
+     "w": 16,
+     "d": 15,
+     "l": 11,
+     "gf": 53,
+     "ga": 43,
+     "pts": 63,
+     "form": "DLWDW"
+    },
+    {
+     "pos": 7,
+     "team": "Valladolid",
+     "p": 42,
+     "w": 18,
+     "d": 9,
+     "l": 15,
+     "gf": 52,
+     "ga": 47,
+     "pts": 63,
+     "form": "WDWLW"
+    },
+    {
+     "pos": 8,
+     "team": "Oviedo",
+     "p": 42,
+     "w": 17,
+     "d": 10,
+     "l": 15,
+     "gf": 47,
+     "ga": 47,
+     "pts": 61,
+     "form": "DDLWW"
+    },
+    {
+     "pos": 9,
+     "team": "Lugo",
+     "p": 42,
+     "w": 14,
+     "d": 13,
+     "l": 15,
+     "gf": 49,
+     "ga": 52,
+     "pts": 55,
+     "form": "DWLWL"
+    },
+    {
+     "pos": 10,
+     "team": "Córdoba",
+     "p": 42,
+     "w": 14,
+     "d": 13,
+     "l": 15,
+     "gf": 42,
+     "ga": 52,
+     "pts": 55,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 11,
+     "team": "Reus",
+     "p": 42,
+     "w": 13,
+     "d": 16,
+     "l": 13,
+     "gf": 31,
+     "ga": 29,
+     "pts": 55,
+     "form": "LWDWL"
+    },
+    {
+     "pos": 12,
+     "team": "Rayo Vallecano",
+     "p": 42,
+     "w": 14,
+     "d": 11,
+     "l": 17,
+     "gf": 44,
+     "ga": 44,
+     "pts": 53,
+     "form": "LWDLW"
+    },
+    {
+     "pos": 13,
+     "team": "Sevilla Atletico",
+     "p": 42,
+     "w": 13,
+     "d": 14,
+     "l": 15,
+     "gf": 55,
+     "ga": 56,
+     "pts": 53,
+     "form": "WLDLL"
+    },
+    {
+     "pos": 14,
+     "team": "Gimnàstic",
+     "p": 42,
+     "w": 12,
+     "d": 16,
+     "l": 14,
+     "gf": 47,
+     "ga": 51,
+     "pts": 52,
+     "form": "DLWWW"
+    },
+    {
+     "pos": 15,
+     "team": "Almería",
+     "p": 42,
+     "w": 14,
+     "d": 9,
+     "l": 19,
+     "gf": 44,
+     "ga": 49,
+     "pts": 51,
+     "form": "WLWLW"
+    },
+    {
+     "pos": 16,
+     "team": "Zaragoza",
+     "p": 42,
+     "w": 12,
+     "d": 14,
+     "l": 16,
+     "gf": 50,
+     "ga": 52,
+     "pts": 50,
+     "form": "DDDDL"
+    },
+    {
+     "pos": 17,
+     "team": "Numancia",
+     "p": 42,
+     "w": 11,
+     "d": 17,
+     "l": 14,
+     "gf": 40,
+     "ga": 49,
+     "pts": 50,
+     "form": "LLDDL"
+    },
+    {
+     "pos": 18,
+     "team": "Alcorcón",
+     "p": 42,
+     "w": 13,
+     "d": 11,
+     "l": 18,
+     "gf": 32,
+     "ga": 43,
+     "pts": 50,
+     "form": "WDLWW"
+    },
+    {
+     "pos": 19,
+     "team": "Ucam Murcia",
+     "p": 42,
+     "w": 11,
+     "d": 15,
+     "l": 16,
+     "gf": 42,
+     "ga": 51,
+     "pts": 48,
+     "form": "DWLLL"
+    },
+    {
+     "pos": 20,
+     "team": "Mallorca",
+     "p": 42,
+     "w": 9,
+     "d": 18,
+     "l": 15,
+     "gf": 42,
+     "ga": 50,
+     "pts": 45,
+     "form": "LWDDD"
+    },
+    {
+     "pos": 21,
+     "team": "Elche",
+     "p": 42,
+     "w": 11,
+     "d": 10,
+     "l": 21,
+     "gf": 49,
+     "ga": 63,
+     "pts": 43,
+     "form": "LLDLL"
+    },
+    {
+     "pos": 22,
+     "team": "Mirandés",
+     "p": 42,
+     "w": 9,
+     "d": 14,
+     "l": 19,
+     "gf": 40,
+     "ga": 66,
+     "pts": 41,
+     "form": "WDLDW"
+    }
+   ]
+  }
+ ]
+}

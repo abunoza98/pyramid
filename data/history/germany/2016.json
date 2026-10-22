@@ -1,0 +1,795 @@
+{
+ "country": "germany",
+ "name": "Germany",
+ "adjective": "German",
+ "season": "2016–17",
+ "year": 2016,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "bundesliga",
+   "tier": 1,
+   "name": "Bundesliga",
+   "short": "BL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 3,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 4,
+     "to": 4,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 5,
+     "to": 6,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 16,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 17,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Bayern Munich",
+     "p": 34,
+     "w": 25,
+     "d": 7,
+     "l": 2,
+     "gf": 89,
+     "ga": 22,
+     "pts": 82,
+     "form": "DWWWW"
+    },
+    {
+     "pos": 2,
+     "team": "RB Leipzig",
+     "p": 34,
+     "w": 20,
+     "d": 7,
+     "l": 7,
+     "gf": 66,
+     "ga": 39,
+     "pts": 67,
+     "form": "DDWLD"
+    },
+    {
+     "pos": 3,
+     "team": "Borussia Dortmund",
+     "p": 34,
+     "w": 18,
+     "d": 10,
+     "l": 6,
+     "gf": 72,
+     "ga": 40,
+     "pts": 64,
+     "form": "WDWDW"
+    },
+    {
+     "pos": 4,
+     "team": "TSG Hoffenheim",
+     "p": 34,
+     "w": 16,
+     "d": 14,
+     "l": 4,
+     "gf": 64,
+     "ga": 37,
+     "pts": 62,
+     "form": "DWLWD"
+    },
+    {
+     "pos": 5,
+     "team": "1. FC Köln",
+     "p": 34,
+     "w": 12,
+     "d": 13,
+     "l": 9,
+     "gf": 51,
+     "ga": 42,
+     "pts": 49,
+     "form": "DDWDW"
+    },
+    {
+     "pos": 6,
+     "team": "Hertha Berlin",
+     "p": 34,
+     "w": 15,
+     "d": 4,
+     "l": 15,
+     "gf": 43,
+     "ga": 47,
+     "pts": 49,
+     "form": "WLLWL"
+    },
+    {
+     "pos": 7,
+     "team": "SC Freiburg",
+     "p": 34,
+     "w": 14,
+     "d": 6,
+     "l": 14,
+     "gf": 42,
+     "ga": 60,
+     "pts": 48,
+     "form": "WLWDL"
+    },
+    {
+     "pos": 8,
+     "team": "Werder Bremen",
+     "p": 34,
+     "w": 13,
+     "d": 6,
+     "l": 15,
+     "gf": 61,
+     "ga": 64,
+     "pts": 45,
+     "form": "WWLLL"
+    },
+    {
+     "pos": 9,
+     "team": "Borussia Mönchengladbach",
+     "p": 34,
+     "w": 12,
+     "d": 9,
+     "l": 13,
+     "gf": 45,
+     "ga": 49,
+     "pts": 45,
+     "form": "LWDDD"
+    },
+    {
+     "pos": 10,
+     "team": "Schalke 04",
+     "p": 34,
+     "w": 11,
+     "d": 10,
+     "l": 13,
+     "gf": 45,
+     "ga": 40,
+     "pts": 43,
+     "form": "DWLDD"
+    },
+    {
+     "pos": 11,
+     "team": "Eintracht Frankfurt",
+     "p": 34,
+     "w": 11,
+     "d": 9,
+     "l": 14,
+     "gf": 36,
+     "ga": 43,
+     "pts": 42,
+     "form": "WLLLD"
+    },
+    {
+     "pos": 12,
+     "team": "Bayer Leverkusen",
+     "p": 34,
+     "w": 11,
+     "d": 8,
+     "l": 15,
+     "gf": 53,
+     "ga": 55,
+     "pts": 41,
+     "form": "LLDDW"
+    },
+    {
+     "pos": 13,
+     "team": "FC Augsburg",
+     "p": 34,
+     "w": 9,
+     "d": 11,
+     "l": 14,
+     "gf": 35,
+     "ga": 51,
+     "pts": 38,
+     "form": "LWDDD"
+    },
+    {
+     "pos": 14,
+     "team": "Hamburger SV",
+     "p": 34,
+     "w": 10,
+     "d": 8,
+     "l": 16,
+     "gf": 33,
+     "ga": 61,
+     "pts": 38,
+     "form": "LLDDW"
+    },
+    {
+     "pos": 15,
+     "team": "Mainz 05",
+     "p": 34,
+     "w": 10,
+     "d": 7,
+     "l": 17,
+     "gf": 44,
+     "ga": 55,
+     "pts": 37,
+     "form": "DLDWL"
+    },
+    {
+     "pos": 16,
+     "team": "VfL Wolfsburg",
+     "p": 34,
+     "w": 10,
+     "d": 7,
+     "l": 17,
+     "gf": 34,
+     "ga": 52,
+     "pts": 37,
+     "form": "LLWDL"
+    },
+    {
+     "pos": 17,
+     "team": "FC Ingolstadt",
+     "p": 34,
+     "w": 8,
+     "d": 8,
+     "l": 18,
+     "gf": 36,
+     "ga": 57,
+     "pts": 32,
+     "form": "LDDDD"
+    },
+    {
+     "pos": 18,
+     "team": "Darmstadt 98",
+     "p": 34,
+     "w": 7,
+     "d": 4,
+     "l": 23,
+     "gf": 28,
+     "ga": 63,
+     "pts": 25,
+     "form": "WWLLD"
+    }
+   ]
+  },
+  {
+   "id": "2-bundesliga",
+   "tier": 2,
+   "name": "2. Bundesliga",
+   "short": "2BL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 16,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 17,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "VfB Stuttgart",
+     "p": 34,
+     "w": 21,
+     "d": 6,
+     "l": 7,
+     "gf": 63,
+     "ga": 37,
+     "pts": 69,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 2,
+     "team": "Hannover 96",
+     "p": 34,
+     "w": 19,
+     "d": 10,
+     "l": 5,
+     "gf": 51,
+     "ga": 32,
+     "pts": 67,
+     "form": "DWWWD"
+    },
+    {
+     "pos": 3,
+     "team": "Eintracht Braunschweig",
+     "p": 34,
+     "w": 19,
+     "d": 9,
+     "l": 6,
+     "gf": 50,
+     "ga": 36,
+     "pts": 66,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 4,
+     "team": "Union Berlin",
+     "p": 34,
+     "w": 18,
+     "d": 6,
+     "l": 10,
+     "gf": 51,
+     "ga": 39,
+     "pts": 60,
+     "form": "LWLLW"
+    },
+    {
+     "pos": 5,
+     "team": "Dynamo Dresden",
+     "p": 34,
+     "w": 13,
+     "d": 11,
+     "l": 10,
+     "gf": 53,
+     "ga": 46,
+     "pts": 50,
+     "form": "LLLWD"
+    },
+    {
+     "pos": 6,
+     "team": "FC Heidenheim",
+     "p": 34,
+     "w": 12,
+     "d": 10,
+     "l": 12,
+     "gf": 43,
+     "ga": 39,
+     "pts": 46,
+     "form": "DLLWW"
+    },
+    {
+     "pos": 7,
+     "team": "FC St. Pauli",
+     "p": 34,
+     "w": 12,
+     "d": 9,
+     "l": 13,
+     "gf": 39,
+     "ga": 35,
+     "pts": 45,
+     "form": "WWWDW"
+    },
+    {
+     "pos": 8,
+     "team": "SpVgg Greuther Furth",
+     "p": 34,
+     "w": 12,
+     "d": 9,
+     "l": 13,
+     "gf": 33,
+     "ga": 40,
+     "pts": 45,
+     "form": "WDLDL"
+    },
+    {
+     "pos": 9,
+     "team": "VfL BOCHUM",
+     "p": 34,
+     "w": 10,
+     "d": 14,
+     "l": 10,
+     "gf": 42,
+     "ga": 47,
+     "pts": 44,
+     "form": "LWDWL"
+    },
+    {
+     "pos": 10,
+     "team": "SV Sandhausen",
+     "p": 34,
+     "w": 10,
+     "d": 12,
+     "l": 12,
+     "gf": 41,
+     "ga": 36,
+     "pts": 42,
+     "form": "WLLWD"
+    },
+    {
+     "pos": 11,
+     "team": "Fortuna Dusseldorf",
+     "p": 34,
+     "w": 10,
+     "d": 12,
+     "l": 12,
+     "gf": 37,
+     "ga": 39,
+     "pts": 42,
+     "form": "LLDWW"
+    },
+    {
+     "pos": 12,
+     "team": "FC Nurnberg",
+     "p": 34,
+     "w": 12,
+     "d": 6,
+     "l": 16,
+     "gf": 46,
+     "ga": 52,
+     "pts": 42,
+     "form": "DLWLL"
+    },
+    {
+     "pos": 13,
+     "team": "FC Kaiserslautern",
+     "p": 34,
+     "w": 10,
+     "d": 11,
+     "l": 13,
+     "gf": 29,
+     "ga": 33,
+     "pts": 41,
+     "form": "WWLLW"
+    },
+    {
+     "pos": 14,
+     "team": "Erzgebirge AUE",
+     "p": 34,
+     "w": 10,
+     "d": 9,
+     "l": 15,
+     "gf": 37,
+     "ga": 52,
+     "pts": 39,
+     "form": "DWLWL"
+    },
+    {
+     "pos": 15,
+     "team": "Arminia Bielefeld",
+     "p": 34,
+     "w": 8,
+     "d": 13,
+     "l": 13,
+     "gf": 50,
+     "ga": 54,
+     "pts": 37,
+     "form": "DDDWD"
+    },
+    {
+     "pos": 16,
+     "team": "TSV 1860 Munich",
+     "p": 34,
+     "w": 10,
+     "d": 6,
+     "l": 18,
+     "gf": 37,
+     "ga": 47,
+     "pts": 36,
+     "form": "LLWLL"
+    },
+    {
+     "pos": 17,
+     "team": "FC Wurzburger Kickers",
+     "p": 34,
+     "w": 7,
+     "d": 13,
+     "l": 14,
+     "gf": 32,
+     "ga": 41,
+     "pts": 34,
+     "form": "DLDLL"
+    },
+    {
+     "pos": 18,
+     "team": "Karlsruher SC",
+     "p": 34,
+     "w": 5,
+     "d": 10,
+     "l": 19,
+     "gf": 27,
+     "ga": 56,
+     "pts": 25,
+     "form": "LLWLL"
+    }
+   ]
+  },
+  {
+   "id": "3-liga",
+   "tier": 3,
+   "name": "3. Liga",
+   "short": "3L",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 18,
+     "to": 20,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [
+    "VfR Aalen: 9 points deducted.",
+    "FSV Frankfurt: 9 points deducted."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "MSV Duisburg",
+     "p": 38,
+     "w": 18,
+     "d": 14,
+     "l": 6,
+     "gf": 52,
+     "ga": 32,
+     "pts": 68,
+     "form": "WLDWW"
+    },
+    {
+     "pos": 2,
+     "team": "Holstein Kiel",
+     "p": 38,
+     "w": 18,
+     "d": 13,
+     "l": 7,
+     "gf": 59,
+     "ga": 25,
+     "pts": 67,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 3,
+     "team": "Jahn Regensburg",
+     "p": 38,
+     "w": 18,
+     "d": 9,
+     "l": 11,
+     "gf": 62,
+     "ga": 50,
+     "pts": 63,
+     "form": "DLWWW"
+    },
+    {
+     "pos": 4,
+     "team": "FC Magdeburg",
+     "p": 38,
+     "w": 16,
+     "d": 13,
+     "l": 9,
+     "gf": 53,
+     "ga": 36,
+     "pts": 61,
+     "form": "WDDDW"
+    },
+    {
+     "pos": 5,
+     "team": "FSV Zwickau",
+     "p": 38,
+     "w": 16,
+     "d": 8,
+     "l": 14,
+     "gf": 47,
+     "ga": 54,
+     "pts": 56,
+     "form": "WLDWL"
+    },
+    {
+     "pos": 6,
+     "team": "VfL Osnabruck",
+     "p": 38,
+     "w": 15,
+     "d": 9,
+     "l": 14,
+     "gf": 46,
+     "ga": 43,
+     "pts": 54,
+     "form": "WDLLD"
+    },
+    {
+     "pos": 7,
+     "team": "Wehen Wiesbaden",
+     "p": 38,
+     "w": 14,
+     "d": 11,
+     "l": 13,
+     "gf": 45,
+     "ga": 42,
+     "pts": 53,
+     "form": "DWDWW"
+    },
+    {
+     "pos": 8,
+     "team": "Chemnitzer FC",
+     "p": 38,
+     "w": 14,
+     "d": 10,
+     "l": 14,
+     "gf": 54,
+     "ga": 51,
+     "pts": 52,
+     "form": "LDLLW"
+    },
+    {
+     "pos": 9,
+     "team": "Preussen Munster",
+     "p": 38,
+     "w": 15,
+     "d": 6,
+     "l": 17,
+     "gf": 49,
+     "ga": 43,
+     "pts": 51,
+     "form": "DWWLL"
+    },
+    {
+     "pos": 10,
+     "team": "Sonnenhof Großaspach",
+     "p": 38,
+     "w": 14,
+     "d": 9,
+     "l": 15,
+     "gf": 48,
+     "ga": 48,
+     "pts": 51,
+     "form": "LDDLL"
+    },
+    {
+     "pos": 11,
+     "team": "VfR Aalen",
+     "p": 38,
+     "w": 14,
+     "d": 15,
+     "l": 9,
+     "gf": 52,
+     "ga": 36,
+     "pts": 48,
+     "ded": 9,
+     "form": "LWLDL"
+    },
+    {
+     "pos": 12,
+     "team": "Sportfreunde Lotte",
+     "p": 38,
+     "w": 13,
+     "d": 9,
+     "l": 16,
+     "gf": 46,
+     "ga": 47,
+     "pts": 48,
+     "form": "LDDDL"
+    },
+    {
+     "pos": 13,
+     "team": "Hallescher FC",
+     "p": 38,
+     "w": 10,
+     "d": 18,
+     "l": 10,
+     "gf": 34,
+     "ga": 39,
+     "pts": 48,
+     "form": "LDDLL"
+    },
+    {
+     "pos": 14,
+     "team": "Rot-weiss Erfurt",
+     "p": 38,
+     "w": 12,
+     "d": 11,
+     "l": 15,
+     "gf": 34,
+     "ga": 47,
+     "pts": 47,
+     "form": "DDLWW"
+    },
+    {
+     "pos": 15,
+     "team": "Hansa Rostock",
+     "p": 38,
+     "w": 10,
+     "d": 16,
+     "l": 12,
+     "gf": 44,
+     "ga": 46,
+     "pts": 46,
+     "form": "WLLLL"
+    },
+    {
+     "pos": 16,
+     "team": "Fortuna Koln",
+     "p": 38,
+     "w": 12,
+     "d": 10,
+     "l": 16,
+     "gf": 37,
+     "ga": 59,
+     "pts": 46,
+     "form": "LLWLL"
+    },
+    {
+     "pos": 17,
+     "team": "Werder Bremen II",
+     "p": 38,
+     "w": 12,
+     "d": 9,
+     "l": 17,
+     "gf": 32,
+     "ga": 48,
+     "pts": 45,
+     "form": "LDDWW"
+    },
+    {
+     "pos": 18,
+     "team": "SC Paderborn",
+     "p": 38,
+     "w": 12,
+     "d": 8,
+     "l": 18,
+     "gf": 38,
+     "ga": 57,
+     "pts": 44,
+     "form": "WWDWD"
+    },
+    {
+     "pos": 19,
+     "team": "FSV Mainz 05 II",
+     "p": 38,
+     "w": 11,
+     "d": 7,
+     "l": 20,
+     "gf": 41,
+     "ga": 58,
+     "pts": 40,
+     "form": "WWWDW"
+    },
+    {
+     "pos": 20,
+     "team": "FSV Frankfurt",
+     "p": 38,
+     "w": 7,
+     "d": 13,
+     "l": 18,
+     "gf": 38,
+     "ga": 50,
+     "pts": 25,
+     "ded": 9,
+     "form": "LLDLL"
+    }
+   ]
+  }
+ ]
+}

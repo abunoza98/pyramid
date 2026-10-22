@@ -1,0 +1,295 @@
+{
+ "country": "italy",
+ "name": "Italy",
+ "adjective": "Italian",
+ "season": "2012–13",
+ "year": 2012,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "serie-a",
+   "tier": 1,
+   "name": "Serie A",
+   "short": "SA",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 4,
+     "to": 5,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 18,
+     "to": 20,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [
+    "Sampdoria: 1 point deducted.",
+    "Atalanta: 2 points deducted.",
+    "Torino: 1 point deducted.",
+    "Robur Siena: 6 points deducted."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Juventus",
+     "p": 38,
+     "w": 27,
+     "d": 6,
+     "l": 5,
+     "gf": 71,
+     "ga": 24,
+     "pts": 87,
+     "form": "WWWDL"
+    },
+    {
+     "pos": 2,
+     "team": "Napoli",
+     "p": 38,
+     "w": 23,
+     "d": 9,
+     "l": 6,
+     "gf": 73,
+     "ga": 36,
+     "pts": 78,
+     "form": "WWWWL"
+    },
+    {
+     "pos": 3,
+     "team": "AC Milan",
+     "p": 38,
+     "w": 21,
+     "d": 9,
+     "l": 8,
+     "gf": 67,
+     "ga": 39,
+     "pts": 72,
+     "form": "WWWDW"
+    },
+    {
+     "pos": 4,
+     "team": "Fiorentina",
+     "p": 38,
+     "w": 21,
+     "d": 7,
+     "l": 10,
+     "gf": 72,
+     "ga": 44,
+     "pts": 70,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 5,
+     "team": "Udinese",
+     "p": 38,
+     "w": 18,
+     "d": 12,
+     "l": 8,
+     "gf": 59,
+     "ga": 45,
+     "pts": 66,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 6,
+     "team": "Roma",
+     "p": 38,
+     "w": 18,
+     "d": 8,
+     "l": 12,
+     "gf": 71,
+     "ga": 56,
+     "pts": 62,
+     "form": "WWLDW"
+    },
+    {
+     "pos": 7,
+     "team": "Lazio",
+     "p": 38,
+     "w": 18,
+     "d": 7,
+     "l": 13,
+     "gf": 51,
+     "ga": 42,
+     "pts": 61,
+     "form": "DWWWL"
+    },
+    {
+     "pos": 8,
+     "team": "Catania",
+     "p": 38,
+     "w": 15,
+     "d": 11,
+     "l": 12,
+     "gf": 50,
+     "ga": 46,
+     "pts": 56,
+     "form": "LWDWD"
+    },
+    {
+     "pos": 9,
+     "team": "Inter Milan",
+     "p": 38,
+     "w": 16,
+     "d": 6,
+     "l": 16,
+     "gf": 55,
+     "ga": 57,
+     "pts": 54,
+     "form": "LLLDL"
+    },
+    {
+     "pos": 10,
+     "team": "Parma",
+     "p": 38,
+     "w": 13,
+     "d": 10,
+     "l": 15,
+     "gf": 45,
+     "ga": 46,
+     "pts": 49,
+     "form": "DWWLW"
+    },
+    {
+     "pos": 11,
+     "team": "Cagliari",
+     "p": 38,
+     "w": 12,
+     "d": 11,
+     "l": 15,
+     "gf": 43,
+     "ga": 55,
+     "pts": 47,
+     "form": "LDLDW"
+    },
+    {
+     "pos": 12,
+     "team": "Chievo",
+     "p": 38,
+     "w": 12,
+     "d": 9,
+     "l": 17,
+     "gf": 37,
+     "ga": 52,
+     "pts": 45,
+     "form": "LDWDD"
+    },
+    {
+     "pos": 13,
+     "team": "Bologna",
+     "p": 38,
+     "w": 11,
+     "d": 11,
+     "l": 16,
+     "gf": 46,
+     "ga": 52,
+     "pts": 44,
+     "form": "DLLWD"
+    },
+    {
+     "pos": 14,
+     "team": "Sampdoria",
+     "p": 38,
+     "w": 11,
+     "d": 10,
+     "l": 17,
+     "gf": 43,
+     "ga": 51,
+     "pts": 42,
+     "ded": 1,
+     "form": "LLDLW"
+    },
+    {
+     "pos": 15,
+     "team": "Atalanta",
+     "p": 38,
+     "w": 11,
+     "d": 9,
+     "l": 18,
+     "gf": 39,
+     "ga": 56,
+     "pts": 40,
+     "ded": 2,
+     "form": "DLLLD"
+    },
+    {
+     "pos": 16,
+     "team": "Torino",
+     "p": 38,
+     "w": 8,
+     "d": 16,
+     "l": 14,
+     "gf": 46,
+     "ga": 55,
+     "pts": 39,
+     "ded": 1,
+     "form": "LLDDD"
+    },
+    {
+     "pos": 17,
+     "team": "Genoa",
+     "p": 38,
+     "w": 8,
+     "d": 14,
+     "l": 16,
+     "gf": 38,
+     "ga": 52,
+     "pts": 38,
+     "form": "WWDDD"
+    },
+    {
+     "pos": 18,
+     "team": "Palermo",
+     "p": 38,
+     "w": 6,
+     "d": 14,
+     "l": 18,
+     "gf": 34,
+     "ga": 54,
+     "pts": 32,
+     "form": "WLLLL"
+    },
+    {
+     "pos": 19,
+     "team": "Robur Siena",
+     "p": 38,
+     "w": 9,
+     "d": 9,
+     "l": 20,
+     "gf": 36,
+     "ga": 57,
+     "pts": 30,
+     "ded": 6,
+     "form": "LLLLL"
+    },
+    {
+     "pos": 20,
+     "team": "Pescara",
+     "p": 38,
+     "w": 6,
+     "d": 4,
+     "l": 28,
+     "gf": 27,
+     "ga": 84,
+     "pts": 22,
+     "form": "LLLLL"
+    }
+   ]
+  }
+ ]
+}

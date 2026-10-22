@@ -1,0 +1,286 @@
+{
+ "country": "spain",
+ "name": "Spain",
+ "adjective": "Spanish",
+ "season": "2011–12",
+ "year": 2011,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "la-liga",
+   "tier": 1,
+   "name": "La Liga",
+   "short": "LL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 3,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 4,
+     "to": 4,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 5,
+     "to": 6,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 18,
+     "to": 20,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Real Madrid",
+     "p": 38,
+     "w": 32,
+     "d": 4,
+     "l": 2,
+     "gf": 121,
+     "ga": 32,
+     "pts": 100,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
+     "team": "Barcelona",
+     "p": 38,
+     "w": 28,
+     "d": 7,
+     "l": 3,
+     "gf": 114,
+     "ga": 29,
+     "pts": 91,
+     "form": "LWWWD"
+    },
+    {
+     "pos": 3,
+     "team": "Valencia",
+     "p": 38,
+     "w": 17,
+     "d": 10,
+     "l": 11,
+     "gf": 59,
+     "ga": 44,
+     "pts": 61,
+     "form": "WLWWL"
+    },
+    {
+     "pos": 4,
+     "team": "Málaga",
+     "p": 38,
+     "w": 17,
+     "d": 7,
+     "l": 14,
+     "gf": 54,
+     "ga": 53,
+     "pts": 58,
+     "form": "DWLLW"
+    },
+    {
+     "pos": 5,
+     "team": "Atlético Madrid",
+     "p": 38,
+     "w": 15,
+     "d": 11,
+     "l": 12,
+     "gf": 53,
+     "ga": 46,
+     "pts": 56,
+     "form": "WDDWW"
+    },
+    {
+     "pos": 6,
+     "team": "Levante",
+     "p": 38,
+     "w": 16,
+     "d": 7,
+     "l": 15,
+     "gf": 54,
+     "ga": 50,
+     "pts": 55,
+     "form": "DWLLW"
+    },
+    {
+     "pos": 7,
+     "team": "Osasuna",
+     "p": 38,
+     "w": 13,
+     "d": 15,
+     "l": 10,
+     "gf": 44,
+     "ga": 61,
+     "pts": 54,
+     "form": "DDLWW"
+    },
+    {
+     "pos": 8,
+     "team": "Mallorca",
+     "p": 38,
+     "w": 14,
+     "d": 10,
+     "l": 14,
+     "gf": 42,
+     "ga": 46,
+     "pts": 52,
+     "form": "WWWWL"
+    },
+    {
+     "pos": 9,
+     "team": "Sevilla",
+     "p": 38,
+     "w": 13,
+     "d": 11,
+     "l": 14,
+     "gf": 48,
+     "ga": 47,
+     "pts": 50,
+     "form": "DLLWD"
+    },
+    {
+     "pos": 10,
+     "team": "Athletic Bilbao",
+     "p": 38,
+     "w": 12,
+     "d": 13,
+     "l": 13,
+     "gf": 49,
+     "ga": 52,
+     "pts": 49,
+     "form": "WLLDL"
+    },
+    {
+     "pos": 11,
+     "team": "Getafe",
+     "p": 38,
+     "w": 12,
+     "d": 11,
+     "l": 15,
+     "gf": 40,
+     "ga": 51,
+     "pts": 47,
+     "form": "LLDDL"
+    },
+    {
+     "pos": 12,
+     "team": "Real Sociedad",
+     "p": 38,
+     "w": 12,
+     "d": 11,
+     "l": 15,
+     "gf": 46,
+     "ga": 52,
+     "pts": 47,
+     "form": "DWDLW"
+    },
+    {
+     "pos": 13,
+     "team": "Real Betis",
+     "p": 38,
+     "w": 13,
+     "d": 8,
+     "l": 17,
+     "gf": 47,
+     "ga": 56,
+     "pts": 47,
+     "form": "LDWLD"
+    },
+    {
+     "pos": 14,
+     "team": "Espanyol",
+     "p": 38,
+     "w": 12,
+     "d": 10,
+     "l": 16,
+     "gf": 46,
+     "ga": 56,
+     "pts": 46,
+     "form": "LLLLD"
+    },
+    {
+     "pos": 15,
+     "team": "Rayo Vallecano",
+     "p": 38,
+     "w": 13,
+     "d": 4,
+     "l": 21,
+     "gf": 53,
+     "ga": 73,
+     "pts": 43,
+     "form": "LLLLW"
+    },
+    {
+     "pos": 16,
+     "team": "Zaragoza",
+     "p": 38,
+     "w": 12,
+     "d": 7,
+     "l": 19,
+     "gf": 36,
+     "ga": 61,
+     "pts": 43,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 17,
+     "team": "Granada",
+     "p": 38,
+     "w": 12,
+     "d": 6,
+     "l": 20,
+     "gf": 35,
+     "ga": 56,
+     "pts": 42,
+     "form": "WLWLL"
+    },
+    {
+     "pos": 18,
+     "team": "Villarreal",
+     "p": 38,
+     "w": 9,
+     "d": 14,
+     "l": 15,
+     "gf": 39,
+     "ga": 53,
+     "pts": 41,
+     "form": "DDWLL"
+    },
+    {
+     "pos": 19,
+     "team": "Sporting Gijón",
+     "p": 38,
+     "w": 10,
+     "d": 7,
+     "l": 21,
+     "gf": 42,
+     "ga": 69,
+     "pts": 37,
+     "form": "WWLWL"
+    },
+    {
+     "pos": 20,
+     "team": "Racing Santander",
+     "p": 38,
+     "w": 4,
+     "d": 15,
+     "l": 19,
+     "gf": 28,
+     "ga": 63,
+     "pts": 27,
+     "form": "LLDLL"
+    }
+   ]
+  }
+ ]
+}
