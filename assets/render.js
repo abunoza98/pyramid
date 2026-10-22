@@ -1046,7 +1046,9 @@
 
     var formStr = played.slice(0, 5).reverse().map(res).join("");
     return '<section class="intro fx-intro" aria-labelledby="intro-h">' +
-      '<p class="eyebrow">' + esc(d.countryName) + (lg ? " · " + esc(lg.name) : "") + " · " + esc(d.season) + "</p>" +
+      // Breadcrumb: the country's pyramid, then the club's league table on it.
+      '<p class="eyebrow crumbs"><a href="' + esc(d.root + d.country + "/" + d.suffix) + '">' + esc(d.countryName) + "</a>" +
+        (lg ? " · " + (lg.tableHref ? '<a href="' + esc(lg.tableHref) + '">' + esc(lg.name) + "</a>" : esc(lg.name)) : "") + " · " + esc(d.season) + "</p>" +
       '<h1 id="intro-h" class="cup-h">' + flag(d.country) + "<span>" + esc(d.name) + "</span></h1>" +
       '<p class="lede">' + (d.pos ? "<strong>" + ord(d.pos) + " " + esc(inLeague(lg.name)) + "</strong>, " + d.pts + " points from " + d.p + " games." : esc(d.note || "")) +
       (formStr ? ' Last five: <span class="form">' + formStr.split("").map(function (c) { return '<b class="' + c + '">' + c + "</b>"; }).join("") + "</span>" : "") + "</p>" +
