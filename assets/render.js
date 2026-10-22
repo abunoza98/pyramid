@@ -138,6 +138,21 @@
     } catch (e) { return ""; }
   }
 
+  // Where a club's name in a table links to: a map of club pages (by club ID, or "n:<slug>" by name) when the
+  // table comes with one (past seasons, Europe), otherwise the country's club folder for current tables.
+  // "in the Premier League" but "in League One", "in Serie A", "in La Liga".
+  function inLeague(name) {
+    return "in " + (/^(League (One|Two)|La Liga|Segunda|Primera|Ligue|Serie|Liga )/.test(name) ? "" : "the ") + name;
+  }
+
+  function clubHref(lg, r) {
+    if (lg._paths) {
+      var p = (r.tid && lg._paths[r.tid]) || lg._paths["n:" + slug(r.team)];
+      return p ? (lg._root || "") + p + (lg._suffix || "") : null;
+    }
+    return lg._club && r.tid ? lg._club + slug(r.team) + "/" + (lg._suffix || "") : null;
+  }
+
   /* ---------- Pieces ---------- */
   function rowHTML(lg, rows, r, i, hasForm) {
     var z = zoneOf(lg, r.pos);
@@ -156,7 +171,7 @@
     return '<tr class="' + cls.join(" ") + '" data-team="' + esc(r.team) + '">' +
       '<td class="c-pos">' + r.pos +
         (r.move ? '<span class="mv ' + (r.move > 0 ? "mv-up" : "mv-down") + '" title="' + (r.move > 0 ? "Up " : "Down ") + Math.abs(r.move) + ' as it stands">' + (r.move > 0 ? "▲" : "▼") + "</span>" : "") + "</td>" +
-      '<th scope="row" class="c-club">' + (lg._club && r.tid ? '<a class="club-link" href="' + esc(lg._club + slug(r.team) + "/" + (lg._suffix || "")) + '">' + esc(r.team) + "</a>" : esc(r.team)) +
+      '<th scope="row" class="c-club">' + (clubHref(lg, r) ? '<a class="club-link" href="' + esc(clubHref(lg, r)) + '">' + esc(r.team) + "</a>" : esc(r.team)) +
         (r.ded ? '<span class="ded" title="' + r.ded + ' points deducted">−' + r.ded + "</span>" : "") +
         (r.out ? '<span class="out ' + r.out + '">' + OUT[r.out] + "</span>" : "") +
         (r.live ? '<span class="lv ' + (r.live.gf > r.live.ga ? "lv-w" : r.live.gf < r.live.ga ? "lv-l" : "lv-d") + (r.live.on ? " on" : "") +
@@ -315,6 +330,7 @@
       stampHTML(c.mode, c.updated, c.liveCount) + pyramidHTML(c, "", opts.cups) + "</section>";
     c.leagues.forEach(function (lg, i) {
       if (!past) { lg._club = "club/"; lg._suffix = opts.suffix || ""; }
+      else if (opts.clubPaths) { lg._paths = opts.clubPaths; lg._root = opts.root || ""; lg._suffix = opts.suffix || ""; }
       html += tierHTML(lg, { fixtures: (opts.fixtures || {})[c.country + "/" + lg.id] }) + bandHTML(lg, c.leagues[i + 1] || null, c.belowNote);
       if (i === 1) html += INLINE_AD;
     });
@@ -449,6 +465,7 @@
           more: { href: base + c.country + "/" + suffix, text: "See the full " + c.adjective + " pyramid: " + c.leagues.length + " tiers, " + countryClubs(c) + " clubs" } } };
     });
     var ucl = opts.europe && opts.europe.leagues.filter(function (l) { return l.id === "champions-league"; })[0];
+    if (ucl && opts.clubPaths) { ucl._paths = opts.clubPaths; ucl._root = base; ucl._suffix = suffix; }
     if (ucl) items.push({ key: "ucl", flagOf: "europe", label: ucl.name, lg: ucl,
       opt: { eyebrow: "UEFA · League phase", fixtures: (opts.fixtures || {})["europe/champions-league"],
         more: { href: base + "europe/champions-league/" + suffix, text: "Champions League bracket, qualifying and past seasons" } } });
@@ -748,7 +765,8 @@
       tzLine(mode, "europe") + "</p></section>" +
       '<section class="comp" data-tabs="stage"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Stages">' +
       tab("lp", comp.groups ? "Group stage" : "League phase") + tab("ko", "Knockouts") + tab("q", "Qualifying") + "</div>" +
-      panel("lp", (comp.rows && !comp.rows.length && !comp.groups ? '<p class="ko-empty">No table for this season.</p>' : tierHTML(comp, { eyebrow: comp.groups ? "Group stage" : "League phase" }))) +
+      panel("lp", (comp.rows && !comp.rows.length && !comp.groups ? '<p class="ko-empty">No table for this season.</p>'
+        : tierHTML(opts.clubPaths ? Object.assign(comp, { _paths: opts.clubPaths, _root: opts.root || "", _suffix: opts.suffix || "" }) : comp, { eyebrow: comp.groups ? "Group stage" : "League phase" }))) +
       panel("ko", bracketHTML(ko, tz, now)) +
       panel("q", qualifyingHTML(q, tz, now)) + "</section>";
   }
@@ -956,21 +974,62 @@
       return '<li><span class="ctag ctag-' + c.comp.kind + '">' + esc(c.comp.short) + '</span><a href="' + esc(c.comp.href) + '">' + esc(c.comp.name) + "</a><span>" + esc(st || "") + "</span></li>";
     }).join("");
 
-    // Pyramid journey: tier by season, oldest on the left
-    var j = (d.journey || []).slice().reverse();
+    // Pyramid journey: each season's finishing position on one ladder for the whole pyramid
+    // (in England 1-20 is the Premier League, 21-44 the Championship and so on), oldest on the left.
     var journey = "";
-    var moved = j.some(function (x) { return x.tier !== j[0].tier; });
-    if (j.length > 1) {
-      var maxT = Math.max.apply(null, j.map(function (x) { return x.tier; })), w = 640, h = 34 + maxT * 30, step = (w - 60) / Math.max(1, j.length - 1);
-      var pts = j.map(function (x, k) { return [30 + k * step, 20 + (x.tier - 1) * 30]; });
-      var svg = '<svg class="journey" viewBox="0 0 ' + w + " " + h + '" role="img" aria-label="Tier by season">' +
-        Array.apply(null, Array(maxT)).map(function (_, t) { return '<line x1="30" x2="' + (w - 30) + '" y1="' + (20 + t * 30) + '" y2="' + (20 + t * 30) + '" class="jl"/><text x="0" y="' + (24 + t * 30) + '" class="jt">T' + (t + 1) + "</text>"; }).join("") +
-        '<polyline class="jp" points="' + pts.map(function (p) { return p.join(","); }).join(" ") + '"/>' +
-        pts.map(function (p, k) { return '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="4.5" class="jd' + (k === pts.length - 1 ? " now" : "") + '"><title>' + esc(j[k].season + ": " + j[k].league + ", " + ord(j[k].pos)) + "</title></circle>"; }).join("") + "</svg>";
-      journey = '<section class="cl-sec"><div class="cl-sec-h"><h2>Pyramid journey</h2></div>' + (moved ? svg : "") +
-        '<ul class="jlist">' + (d.journey || []).map(function (x) {
+    if ((d.journey || []).length) {
+      var j = d.journey.slice().reverse(), n = j.length;
+      var ladder = d.ladder || [];
+      var depth = 0;
+      while (depth < ladder.length && !ladder[depth].split) depth++;
+      depth = Math.max(depth, Math.max.apply(null, j.map(function (x) { return x.tier; })), 1);
+      var sz = function (x, t) { return (x.sizes && x.sizes[t]) || 0; };
+      var off = function (x, t) { var o = 0; for (var i = 0; i < t; i++) o += sz(x, i); return o; };
+      var ymax = Math.max.apply(null, j.map(function (x) { return off(x, depth); })) || 1;
+      var cell = 1000 / n, X = function (k) { return (k + 0.5) * cell; };
+      var pct = function (v, of) { return Math.round(v / of * 10000) / 100 + "%"; };
+      // Shaded bands per division, joined across seasons with the same division sizes.
+      var rects = "", runs = [];
+      j.forEach(function (x, k) {
+        var key = (x.sizes || []).slice(0, depth).join(",");
+        if (runs.length && runs[runs.length - 1].key === key) runs[runs.length - 1].to = k;
+        else runs.push({ key: key, from: k, to: k, x: x });
+      });
+      runs.forEach(function (r) {
+        for (var t = 0; t < depth; t++) if (sz(r.x, t)) rects += '<rect class="lb' + (t === 0 ? " top" : t % 2 ? " alt" : "") + '" x="' + (r.from * cell) + '" width="' + ((r.to - r.from + 1) * cell) +
+          '" y="' + off(r.x, t) + '" height="' + sz(r.x, t) + '"/>';
+      });
+      var yOf = function (x) { return x.rank - 0.5; };
+      var lpath = n > 1 ? '<polyline class="lp" vector-effect="non-scaling-stroke" points="' + j.map(function (x, k) { return X(k) + "," + yOf(x); }).join(" ") + '"/>' : "";
+      // Division labels down the side, placed for the newest season.
+      var latest = j[n - 1];
+      var side = ladder.slice(0, depth).map(function (l, t) {
+        var a = off(latest, t), b = a + sz(latest, t);
+        if (!sz(latest, t)) return "";
+        return '<span class="ls" style="top:' + pct(a, ymax) + ";height:" + pct(b - a, ymax) + '" title="' + esc(l.name) + '"><b>' + esc(l.short || l.name) + "</b><i>" + (a + 1) + "–" + b + "</i></span>";
+      }).join("");
+      var dots = j.map(function (x, k) {
+        return '<b class="ld' + (x.now ? " now" : "") + '" style="left:' + pct(X(k), 1000) + ";top:" + pct(yOf(x), ymax) + '" title="' +
+          esc(x.season + ": " + x.league + ", " + ord(x.pos) + " (" + ord(x.rank) + " in the pyramid)") + '"></b>';
+      }).join("");
+      var every = n > 10 ? 2 : 1;
+      var xl = j.map(function (x, k) {
+        var lab = x.now ? "Now" : String(x.season).replace(/^\d\d(\d\d)[–-]\d\d(\d\d)$/, "$1–$2").replace(/^\d\d(\d\d)$/, "$1");
+        return '<span class="' + ((n - 1 - k) % every ? "odd" : "") + '" style="left:' + pct(X(k), 1000) + '">' + esc(lab) + "</span>";
+      }).join("");
+      var h = Math.max(200, Math.min(380, Math.round(ymax * 2.6)));
+      var total = off(latest, depth);
+      var cap = latest.now ? "This season so far: " + ord(latest.pos) + " " + inLeague(latest.league) + ", " + ord(latest.rank) + " of " + total + " in the pyramid."
+        : "In " + latest.season + ": " + ord(latest.pos) + " " + inLeague(latest.league) + ", " + ord(latest.rank) + " of " + total + " in the pyramid.";
+      journey = '<section class="cl-sec"><div class="cl-sec-h"><h2>Pyramid journey</h2></div>' +
+        '<p class="lchart-cap">' + esc(cap) + "</p>" +
+        '<div class="lchart"><div class="lside">' + side + '</div><div class="lplot" style="height:' + h + 'px">' +
+        '<svg viewBox="0 0 1000 ' + ymax + '" preserveAspectRatio="none" aria-hidden="true">' + rects + lpath + "</svg>" + dots + "</div>" +
+        '<div class="lx">' + xl + "</div></div>" +
+        '<ul class="jlist">' + d.journey.map(function (x) {
           return "<li><span>" + esc(x.season) + '</span><i class="tag tier-' + x.tier + '">T' + x.tier + "</i>" +
-            (x.href ? '<a href="' + esc(x.href) + '">' + esc(x.league) + "</a>" : esc(x.league)) + "<b>" + (x.pos ? ord(x.pos) + (x.of ? " of " + x.of : "") : "") + "</b></li>";
+            (x.href ? '<a href="' + esc(x.href) + '">' + esc(x.league) + "</a>" : esc(x.league)) + "<b>" + (x.pos ? ord(x.pos) + (x.of ? " of " + x.of : "") : "") +
+            (x.rank ? '<em>' + ord(x.rank) + " overall</em>" : "") + "</b></li>";
         }).join("") + "</ul></section>";
     }
 
@@ -978,7 +1037,7 @@
     return '<section class="intro fx-intro" aria-labelledby="intro-h">' +
       '<p class="eyebrow">' + esc(d.countryName) + (lg ? " · " + esc(lg.name) : "") + " · " + esc(d.season) + "</p>" +
       '<h1 id="intro-h" class="cup-h">' + flag(d.country) + "<span>" + esc(d.name) + "</span></h1>" +
-      '<p class="lede">' + (d.pos ? "<strong>" + ord(d.pos) + " in the " + esc(lg.name) + "</strong>, " + d.pts + " points from " + d.p + " games." : "") +
+      '<p class="lede">' + (d.pos ? "<strong>" + ord(d.pos) + " " + esc(inLeague(lg.name)) + "</strong>, " + d.pts + " points from " + d.p + " games." : esc(d.note || "")) +
       (formStr ? ' Last five: <span class="form">' + formStr.split("").map(function (c) { return '<b class="' + c + '">' + c + "</b>"; }).join("") + "</span>" : "") + "</p>" +
       '<p class="fx-links">' + tzLine(mode, d.country) + "</p></section>" +
       nextHTML +
@@ -992,6 +1051,6 @@
 
   return {
     slug: slug, esc: esc, ukTime: ukTime, clubCount: clubCount, countryClubs: countryClubs, groupsOf: groupsOf,
-    countryMain: countryMain, homeMain: homeMain, summary: summary, flag: flag, fixturesMain: fixturesMain, currentRound: currentRound, compMain: compMain, europeMain: europeMain, cupMain: cupMain, cupStatus: cupStatus, cupSpan: cupSpan, clubMain: clubMain, retime: retime, compStatus: compStatus, tiesOf: tiesOf, applyLive: applyLive, clock: clock, isLive: isLive
+    countryMain: countryMain, homeMain: homeMain, summary: summary, flag: flag, fixturesMain: fixturesMain, currentRound: currentRound, compMain: compMain, europeMain: europeMain, cupMain: cupMain, cupStatus: cupStatus, cupSpan: cupSpan, inLeague: inLeague, clubMain: clubMain, retime: retime, compStatus: compStatus, tiesOf: tiesOf, applyLive: applyLive, clock: clock, isLive: isLive
   };
 });

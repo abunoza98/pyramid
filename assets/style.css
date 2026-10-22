@@ -789,12 +789,27 @@ tbody tr.is-this .c-club { font-weight: 700; }
 .cl-comps a { font-weight: 600; color: var(--ink); text-decoration: none; }
 .cl-comps a:hover { color: var(--accent); }
 .cl-comps li > span:last-child { margin-left: auto; color: var(--muted); }
-.journey { display: block; width: 100%; height: auto; margin: 4px 0 12px; }
-.journey .jl { stroke: var(--rule); stroke-width: 1; }
-.journey .jt { font-family: var(--mono); font-size: 11px; fill: var(--muted); }
-.journey .jp { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; }
-.journey .jd { fill: var(--sheet); stroke: var(--accent); stroke-width: 2.5; }
-.journey .jd.now { fill: var(--accent); }
+/* Pyramid journey: every season on one ladder for the whole pyramid */
+.lchart-cap { margin: 0 0 10px; font-size: 14px; color: var(--muted); }
+.lchart { display: grid; grid-template-columns: 54px minmax(0, 1fr); margin: 0 0 14px; }
+.lside { position: relative; border-right: 1px solid var(--rule-strong); }
+.ls { position: absolute; left: 0; right: 6px; display: flex; flex-direction: column; justify-content: center; align-items: flex-end;
+  line-height: 1.1; overflow: hidden; border-top: 1px solid var(--rule); }
+.ls:first-child { border-top: 0; }
+.ls b { font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--ink); }
+.ls i { font-family: var(--mono); font-size: 10px; font-style: normal; color: var(--muted); }
+.lplot { position: relative; }
+.lplot svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.lplot .lb { fill: transparent; stroke: none; }
+.lplot .lb.alt { fill: var(--hatch); }
+.lplot .lb.top { fill: var(--accent-soft); }
+.lplot .lp { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; }
+.ld { position: absolute; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px; border-radius: 50%; background: var(--sheet); border: 2.5px solid var(--accent); box-sizing: border-box; }
+.ld.now { background: var(--accent); box-shadow: 0 0 0 3px var(--accent-flash); }
+.lx { grid-column: 2; position: relative; height: 22px; }
+.lx span { position: absolute; top: 5px; transform: translateX(-50%); font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap; }
+@media (max-width: 600px) { .lx span.odd { display: none; } }
+.jlist b em { display: block; font-style: normal; font-weight: 400; font-size: 11px; color: var(--muted); text-align: right; }
 .jlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 14px; }
 .jlist li { display: grid; grid-template-columns: 70px 34px minmax(0, 1fr) auto; align-items: center; gap: 8px; padding: 6px 2px; border-bottom: 1px solid var(--rule); }
 .jlist li > span { font-family: var(--mono); font-size: 12px; color: var(--muted); }

@@ -141,6 +141,8 @@
   // The home page shows the Champions League table too, so it also loads data/europe.json.
   if (PAGE === "home" && body.getAttribute("data-europe")) MINE = MINE.concat(["europe"]);
   // The home page's strip shows every country's games, not just the featured ones.
+  var CLUBPATHS = null;   // club pages by club ID, for tables that mix countries (Europe)
+  try { CLUBPATHS = JSON.parse(body.getAttribute("data-clubpaths") || "null"); } catch (e) {}
   var CUPSMAP = {};   // the home page's cup chips, by country
   try { CUPSMAP = JSON.parse(body.getAttribute("data-cupsmap") || "{}"); } catch (e) {}
   var CUPS = [];   // a country page's cup cards
@@ -214,11 +216,12 @@
       var id = body.getAttribute("data-league");
       var comp = withLive[0].leagues.filter(function (l) { return l.id === id; })[0];
       if (!comp) return;
-      html = FP.compMain(comp, compFx, { tz: fxState.tz, live: live, fixturesHref: body.getAttribute("data-fx") || "", seasons: seasons });
+      html = FP.compMain(comp, compFx, { tz: fxState.tz, live: live, fixturesHref: body.getAttribute("data-fx") || "", seasons: seasons,
+        clubPaths: CLUBPATHS, root: BASE, suffix: SUFFIX });
     }
     else {
       var eu = MINE.indexOf("europe") > -1 ? withLive[MINE.indexOf("europe")] : null;
-      html = FP.homeMain(withLive.filter(function (c) { return c.country !== "europe"; }), BASE, SUFFIX, OTHERS, { live: live, fixtures: FIXLINKS, europe: eu, cups: CUPSMAP });
+      html = FP.homeMain(withLive.filter(function (c) { return c.country !== "europe"; }), BASE, SUFFIX, OTHERS, { live: live, fixtures: FIXLINKS, europe: eu, cups: CUPSMAP, clubPaths: CLUBPATHS });
     }
     redraw(html);
     applyTabs();

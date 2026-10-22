@@ -224,6 +224,44 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   const history = await loadHistory(root);
   const fixtures = await loadFixtures(root);
   const cupUrls = [];
+  // Every club that gets a page: those in the current tables (by club ID), plus clubs only found in past
+  // seasons (by name), so any table, current or past, can link to its clubs.
+  const index = new Map();          // club ID -> { c, lg, g, r, slug, path }
+  const pathByName = {};            // country -> { "n:<slug>": path }
+  const pastOnly = [];              // [{ c, name, slug, path }]
+  for (const c of countries) {
+    const seen = new Set();
+    pathByName[c.country] = {};
+    for (const lg of c.leagues) for (const g of FP.groupsOf(lg)) for (const r of g.rows) {
+      if (!r.tid || index.has(r.tid)) continue;
+      const sl = FP.slug(r.team);
+      if (seen.has(sl)) continue;   // two clubs with the same name in one country: the first gets the page
+      seen.add(sl);
+      index.set(r.tid, { c, lg, g, r, slug: sl, path: `${c.country}/club/${sl}/` });
+      pathByName[c.country]["n:" + sl] = `${c.country}/club/${sl}/`;
+    }
+    for (const h of history[c.country] || []) for (const plg of h.leagues) for (const pg of FP.groupsOf(plg)) for (const r of pg.rows) {
+      const sl = FP.slug(r.team);
+      if (seen.has(sl)) continue;
+      seen.add(sl);
+      pastOnly.push({ c, name: r.team, slug: sl, path: `${c.country}/club/${sl}/` });
+      pathByName[c.country]["n:" + sl] = `${c.country}/club/${sl}/`;
+    }
+  }
+  // Club ID -> path, for tables that mix countries (Europe).
+  const pathByTid = Object.fromEntries([...index].map(([tid, k]) => [tid, k.path]));
+  const anyByName = {};
+  for (const m of Object.values(pathByName)) for (const [k, v] of Object.entries(m)) if (!(k in anyByName)) anyByName[k] = v;
+  // Only the clubs in one European table, so each page carries a few dozen links rather than every club.
+  const pathsFor = (comp) => {
+    const out = {};
+    if (comp) for (const g of FP.groupsOf(comp)) for (const r of g.rows) {
+      const n = "n:" + FP.slug(r.team);
+      if (r.tid && pathByTid[r.tid]) out[r.tid] = pathByTid[r.tid];
+      else if (anyByName[n]) out[n] = anyByName[n];
+    }
+    return out;
+  };
   // Cards for a country's cups (status from the fixtures), with links relative to the country page.
   const cupCards = (c, rel) => ((COUNTRIES.find((x) => x.country === c.country) || {}).cups || [])
     .filter((cup) => fixtures[`${c.country}/${cup.id}`])
@@ -257,10 +295,10 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     description: `Every tier of ${countries.length} countries' football pyramids, each on one page: ${countries.map((c) => c.name).join(", ")}. Live scores on match days.`,
     canonical: SITE + "/", base: "", suffix, page: "home", stamps, countries,
     attrs: { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/fixtures/${suffix}` } : {}) },
-      ...(europe ? { europe: "1" } : {}), cupsmap: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])) },
+      ...(europe ? { europe: "1", clubpaths: pathsFor(europe.leagues[0]) } : {}), cupsmap: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])) },
     main: FP.homeMain(countries.filter((c) => c.featured), "", suffix, countries.filter((c) => !c.featured).map(FP.summary),
       { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/fixtures/${suffix}` } : {}) }, europe,
-        cups: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])) })
+        cups: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])), clubPaths: europe ? pathsFor(europe.leagues[0]) : null })
   }));
 
   // Country pages
@@ -312,7 +350,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         title: `${c.adjective} football pyramid ${h.season}: ${n.first} to ${n.last} final tables | Football Pyramids`,
         description: `Final ${h.season} tables for ${c.adjective} football, from ${n.first} down to ${n.last}, with promotion and relegation marked.`,
         canonical: `${SITE}/${c.country}/${slug(h.year)}/`, base: "../../", suffix, page: "history", country: c.country,
-        stamps: {}, countries, main: FP.countryMain(h, { seasons })
+        stamps: {}, countries, main: FP.countryMain(h, { seasons, clubPaths: pathByName[c.country], root: "../../", suffix })
       }));
     }
   }
@@ -340,7 +378,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
           title: `${comp.name} ${h.season}: ${h.comp.groups ? "group stage" : "league phase"}, knockout bracket and results | Football Pyramids`,
           description: `The ${comp.name} ${h.season}: ${h.comp.groups ? "every group-stage table" : "the league-phase table"}, the full knockout bracket and every qualifying tie.`,
           canonical: `${SITE}/europe/${comp.id}/${sl}/`, base: "../../../", suffix, page: "comp-history", country: "europe", stamps: {}, countries, seasons,
-          main: FP.compMain(h.comp, h.fx, { tz: "venue", seasons, fixturesHref: h.fx ? `fixtures/${suffix}` : "" })
+          main: FP.compMain(h.comp, h.fx, { tz: "venue", seasons, fixturesHref: h.fx ? `fixtures/${suffix}` : "", clubPaths: pathsFor(h.comp), root: "../../../", suffix })
         }));
         if (h.fx) await write(`europe/${comp.id}/${sl}/fixtures/index.html`, shell({
           title: `${comp.name} fixtures and results ${h.season} | Football Pyramids`,
@@ -355,8 +393,8 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         title: `${comp.name} ${europe.season}: table, knockout bracket and results | Football Pyramids`,
         description: `The ${comp.name} league-phase table, the knockout bracket as each draw is made, every qualifying tie and live scores.`,
         canonical: `${SITE}/europe/${comp.id}/`, base: "../../", suffix, page: "comp", country: "europe", stamps: { europe: europe.updated }, countries,
-        seasons: seasonsNow, attrs: { league: comp.id, fx: fx ? `fixtures/${suffix}` : "" },
-        main: FP.compMain(comp, fx, { tz: "venue", fixturesHref: fx ? `fixtures/${suffix}` : "", seasons: seasonsNow })
+        seasons: seasonsNow, attrs: { league: comp.id, fx: fx ? `fixtures/${suffix}` : "", clubpaths: pathsFor(comp) },
+        main: FP.compMain(comp, fx, { tz: "venue", fixturesHref: fx ? `fixtures/${suffix}` : "", seasons: seasonsNow, clubPaths: pathsFor(comp), root: "../../", suffix })
       }));
       if (fx) await write(`europe/${comp.id}/fixtures/index.html`, shell({
         title: `${comp.name} fixtures and results ${fx.season} | Football Pyramids`,
@@ -371,17 +409,6 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   // Club pages: one per club in the current tables, from data the site already has (no extra API requests).
   const clubUrls = [];
   {
-    const index = new Map();   // club ID -> { c, lg, g, r, slug, path }
-    for (const c of countries) {
-      const seen = new Set();
-      for (const lg of c.leagues) for (const g of FP.groupsOf(lg)) for (const r of g.rows) {
-        if (!r.tid || index.has(r.tid)) continue;
-        const sl = FP.slug(r.team);
-        if (seen.has(sl)) continue;   // two clubs with the same name in one country: the first gets the page
-        seen.add(sl);
-        index.set(r.tid, { c, lg, g, r, slug: sl, path: `${c.country}/club/${sl}/` });
-      }
-    }
     // Every fixture each club has, across its league, cups and Europe.
     const cfgOf = (cc, id) => {
       const owner = cc === "europe" ? EUROPE : COUNTRIES.find((x) => x.country === cc);
@@ -404,6 +431,38 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       }
     }
     const base = "../../../";
+    // Clubs per tier in one season (a tier split into groups counts one group), so a finishing
+    // position can be placed on one ladder for the whole pyramid: 1-20 Premier League, 21-44 Championship...
+    const sizesOf = (leagues) => {
+      const out = [];
+      for (const l of leagues) if (l.tier) out[l.tier - 1] = Math.max(out[l.tier - 1] || 0, ...FP.groupsOf(l).map((x) => x.rows.length));
+      return Array.from(out, (n) => n || 0);
+    };
+    const rankIn = (sizes, tier, pos) => sizes.slice(0, tier - 1).reduce((a, n) => a + n, 0) + pos;
+    // The ladder's divisions: every tier down to the last single national league, named as now.
+    const laddersOf = (c) => {
+      const out = [];
+      for (const l of c.leagues.slice().sort((a, b) => a.tier - b.tier)) {
+        if (out.some((x) => x.tier === l.tier)) continue;
+        out.push({ tier: l.tier, name: l.name, short: l.short, split: FP.groupsOf(l).length > 1 || c.leagues.filter((x) => x.tier === l.tier).length > 1 });
+      }
+      return out;
+    };
+    const pastSeasons = (c, name) => {
+      const out = [];
+      for (const h of history[c.country] || []) {
+        const sizes = sizesOf(h.leagues);
+        found: for (const plg of h.leagues) for (const pg of FP.groupsOf(plg)) {
+          const pr = pg.rows.find((x) => x.team === name);
+          if (pr) {
+            out.push({ season: h.season, tier: plg.tier, league: plg.name, pos: pr.pos, of: pg.rows.length, rank: rankIn(sizes, plg.tier, pr.pos), sizes,
+              href: `${base}${c.country}/${slug(h.year)}/${suffix}` });
+            break found;
+          }
+        }
+      }
+      return out;
+    };
     const tableOf = (c, lg) => ({ id: lg.id, name: lg.name, zones: lg.zones });
     for (const [tid, k] of index) {
       const { c, lg, g, r } = k;
@@ -415,24 +474,36 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         return { ...f, comp: f.comp.key, opp: { n: f.opp.n, t: f.opp.t, tier: f.opp.tier, s: o ? o.path : null } };
       }).sort((a, b) => a.ts - b.ts);
       // Pyramid journey: this season, then each saved past season (matched by name).
-      const journey = [{ season: c.season, tier: lg.tier, league: lg.name, pos: r.pos, of: g.rows.length }];
-      for (const h of history[c.country] || []) {
-        found: for (const plg of h.leagues) for (const pg of FP.groupsOf(plg)) {
-          const pr = pg.rows.find((x) => x.team === r.team);
-          if (pr) { journey.push({ season: h.season, tier: plg.tier, league: plg.name, pos: pr.pos, of: pg.rows.length, href: `${base}${c.country}/${slug(h.year)}/${suffix}` }); break found; }
-        }
-      }
+      const sizesNow = sizesOf(c.leagues);
+      const journey = [{ season: c.season, tier: lg.tier, league: lg.name, pos: r.pos, of: g.rows.length, rank: rankIn(sizesNow, lg.tier, r.pos), sizes: sizesNow, now: true },
+        ...pastSeasons(c, r.team)];
       const data = {
         tid, name: r.team, country: c.country, countryName: c.name, season: c.season, comps, root: base, suffix,
         pos: r.pos, pts: r.pts, p: r.p,
         league: { ...tableOf(c, lg), short: lg.short, group: FP.groupsOf(lg).length > 1 ? g.name : null, rows: g.rows,
           tableHref: `${base}${c.country}/${suffix}#${lg.id}`, _club: `${base}${c.country}/club/`, _suffix: suffix },
-        fx, journey
+        fx, journey, ladder: laddersOf(c)
       };
       await write(`${k.path}index.html`, shell({
         title: `${r.team} fixtures, results and table ${c.season} | Football Pyramids`,
-        description: `${r.team}: ${ordinal(r.pos)} in the ${lg.name}. Every fixture and result this season across league, cups and Europe, and the club's journey through the ${c.adjective} pyramid.`,
+        description: `${r.team}: ${ordinal(r.pos)} ${FP.inLeague(lg.name)}. Every fixture and result this season across league, cups and Europe, and the club's journey through the ${c.adjective} pyramid.`,
         canonical: `${SITE}/${k.path}`, base, suffix, page: "club", country: c.country, stamps: {}, countries,
+        main: FP.clubMain(data, { tz: "venue" })
+      }));
+      clubUrls.push(`/${k.path}`);
+    }
+    // Clubs only in past seasons: their journey through the pyramid and when they were last seen.
+    for (const k of pastOnly) {
+      const journey = pastSeasons(k.c, k.name);
+      if (!journey.length) continue;
+      const last = journey[0];
+      const data = { tid: null, name: k.name, country: k.c.country, countryName: k.c.name, season: k.c.season, comps: {}, root: base, suffix,
+        league: null, fx: [], journey, ladder: laddersOf(k.c),
+        note: `Not in the ${k.c.adjective} leagues covered here this season. Last seen in ${last.season}: ${last.league}, ${ordinal(last.pos)}.` };
+      await write(`${k.path}index.html`, shell({
+        title: `${k.name}: seasons in the ${k.c.adjective} football pyramid | Football Pyramids`,
+        description: `${k.name}'s seasons in the ${k.c.adjective} football pyramid: tier, league and finishing position each season.`,
+        canonical: `${SITE}/${k.path}`, base, suffix, page: "club", country: k.c.country, stamps: {}, countries,
         main: FP.clubMain(data, { tz: "venue" })
       }));
       clubUrls.push(`/${k.path}`);
