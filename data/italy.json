@@ -67,7 +67,7 @@
     },
     {
      "pos": 3,
-     "team": "AS Roma",
+     "team": "Roma",
      "p": 7,
      "w": 5,
      "d": 2,
@@ -516,7 +516,7 @@
     },
     {
      "pos": 17,
-     "team": "Vicenza Virtus",
+     "team": "Vicenza",
      "p": 7,
      "w": 1,
      "d": 3,
@@ -681,7 +681,7 @@
       },
       {
        "pos": 7,
-       "team": "Alcione",
+       "team": "Alcione Milano",
        "p": 10,
        "w": 3,
        "d": 6,
@@ -717,7 +717,7 @@
       },
       {
        "pos": 10,
-       "team": "Albinoleffe",
+       "team": "AlbinoLeffe",
        "p": 10,
        "w": 3,
        "d": 4,
@@ -729,7 +729,7 @@
       },
       {
        "pos": 11,
-       "team": "Desenzano Calvina",
+       "team": "Desenzano",
        "p": 10,
        "w": 3,
        "d": 4,
@@ -777,7 +777,7 @@
       },
       {
        "pos": 15,
-       "team": "Juventus U23",
+       "team": "Juventus Next Gen",
        "p": 10,
        "w": 2,
        "d": 4,
@@ -789,7 +789,7 @@
       },
       {
        "pos": 16,
-       "team": "Athletic Carpi",
+       "team": "Carpi",
        "p": 10,
        "w": 2,
        "d": 3,
@@ -801,7 +801,7 @@
       },
       {
        "pos": 17,
-       "team": "PRO Vercelli",
+       "team": "Pro Vercelli",
        "p": 10,
        "w": 2,
        "d": 3,
@@ -903,7 +903,7 @@
       },
       {
        "pos": 5,
-       "team": "Guidonia Montecelio 1937",
+       "team": "Guidonia Montecelio",
        "p": 10,
        "w": 4,
        "d": 4,
@@ -987,7 +987,7 @@
       },
       {
        "pos": 12,
-       "team": "Atalanta II",
+       "team": "Atalanta U23",
        "p": 9,
        "w": 4,
        "d": 0,
@@ -999,7 +999,7 @@
       },
       {
        "pos": 13,
-       "team": "Campobasso FC",
+       "team": "Campobasso",
        "p": 10,
        "w": 3,
        "d": 3,
@@ -1011,7 +1011,7 @@
       },
       {
        "pos": 14,
-       "team": "Forli",
+       "team": "Forlì",
        "p": 10,
        "w": 2,
        "d": 5,
@@ -1185,7 +1185,7 @@
       },
       {
        "pos": 8,
-       "team": "SS Monopoli",
+       "team": "Monopoli",
        "p": 10,
        "w": 4,
        "d": 3,
@@ -1221,7 +1221,7 @@
       },
       {
        "pos": 11,
-       "team": "Inter U23",
+       "team": "Inter Milan U23",
        "p": 9,
        "w": 4,
        "d": 1,
@@ -1233,7 +1233,7 @@
       },
       {
        "pos": 12,
-       "team": "AZ Picerno",
+       "team": "Picerno",
        "p": 10,
        "w": 4,
        "d": 0,
@@ -1281,7 +1281,7 @@
       },
       {
        "pos": 16,
-       "team": "Team Altamura",
+       "team": "Altamura",
        "p": 10,
        "w": 3,
        "d": 2,

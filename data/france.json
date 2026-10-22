@@ -247,7 +247,7 @@
     },
     {
      "pos": 17,
-     "team": "Estac Troyes",
+     "team": "Troyes",
      "p": 7,
      "w": 1,
      "d": 1,
@@ -345,7 +345,7 @@
     },
     {
      "pos": 4,
-     "team": "RED Star FC 93",
+     "team": "Red Star",
      "p": 9,
      "w": 5,
      "d": 2,
@@ -369,7 +369,7 @@
     },
     {
      "pos": 6,
-     "team": "PAU",
+     "team": "Pau",
      "p": 9,
      "w": 4,
      "d": 2,
@@ -489,7 +489,7 @@
     },
     {
      "pos": 16,
-     "team": "Clermont Foot",
+     "team": "Clermont",
      "p": 9,
      "w": 0,
      "d": 7,
@@ -559,7 +559,7 @@
    "rows": [
     {
      "pos": 1,
-     "team": "La Roche VF",
+     "team": "La Roche",
      "p": 10,
      "w": 6,
      "d": 3,
@@ -619,7 +619,7 @@
     },
     {
      "pos": 6,
-     "team": "Le Puy Foot",
+     "team": "Le Puy",
      "p": 10,
      "w": 5,
      "d": 1,
@@ -655,7 +655,7 @@
     },
     {
      "pos": 9,
-     "team": "Fleury 91",
+     "team": "Fleury",
      "p": 10,
      "w": 4,
      "d": 3,
@@ -667,7 +667,7 @@
     },
     {
      "pos": 10,
-     "team": "Gobelins",
+     "team": "Paris 13 Atletico",
      "p": 10,
      "w": 4,
      "d": 3,
@@ -679,7 +679,7 @@
     },
     {
      "pos": 11,
-     "team": "Quevilly",
+     "team": "Quevilly-Rouen",
      "p": 10,
      "w": 3,
      "d": 4,
@@ -691,7 +691,7 @@
     },
     {
      "pos": 12,
-     "team": "Thionville Lusitanos",
+     "team": "Thionville",
      "p": 10,
      "w": 3,
      "d": 3,
@@ -727,7 +727,7 @@
     },
     {
      "pos": 15,
-     "team": "Orleans",
+     "team": "Orléans",
      "p": 10,
      "w": 2,
      "d": 3,
@@ -763,7 +763,7 @@
     },
     {
      "pos": 18,
-     "team": "Bourg-en-bresse 01",
+     "team": "Bourg-Péronnas",
      "p": 10,
      "w": 1,
      "d": 2,

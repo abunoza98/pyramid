@@ -97,7 +97,7 @@
     },
     {
      "pos": 5,
-     "team": "FSV Mainz 05",
+     "team": "Mainz 05",
      "p": 6,
      "w": 3,
      "d": 1,
@@ -229,7 +229,7 @@
     },
     {
      "pos": 16,
-     "team": "SC Paderborn 07",
+     "team": "SC Paderborn",
      "p": 6,
      "w": 1,
      "d": 2,
@@ -411,7 +411,7 @@
     },
     {
      "pos": 10,
-     "team": "SpVgg Greuther Fürth",
+     "team": "Greuther Fürth",
      "p": 8,
      "w": 2,
      "d": 3,
@@ -495,7 +495,7 @@
     },
     {
      "pos": 17,
-     "team": "SV Darmstadt 98",
+     "team": "Darmstadt 98",
      "p": 8,
      "w": 2,
      "d": 1,
@@ -565,7 +565,7 @@
     },
     {
      "pos": 2,
-     "team": "FC Viktoria Köln",
+     "team": "Viktoria Köln",
      "p": 10,
      "w": 6,
      "d": 2,
@@ -577,7 +577,7 @@
     },
     {
      "pos": 3,
-     "team": "Rot-Weiß Essen",
+     "team": "Rot-Weiss Essen",
      "p": 10,
      "w": 5,
      "d": 3,
@@ -589,7 +589,7 @@
     },
     {
      "pos": 4,
-     "team": "FC Saarbrücken",
+     "team": "1. FC Saarbrücken",
      "p": 10,
      "w": 5,
      "d": 2,
@@ -601,7 +601,7 @@
     },
     {
      "pos": 5,
-     "team": "Hoffenheim II",
+     "team": "TSG Hoffenheim II",
      "p": 10,
      "w": 5,
      "d": 1,
@@ -625,7 +625,7 @@
     },
     {
      "pos": 7,
-     "team": "Stuttgart II",
+     "team": "VfB Stuttgart II",
      "p": 10,
      "w": 4,
      "d": 2,
@@ -649,7 +649,7 @@
     },
     {
      "pos": 9,
-     "team": "FC Ingolstadt 04",
+     "team": "FC Ingolstadt",
      "p": 10,
      "w": 4,
      "d": 2,
@@ -697,7 +697,7 @@
     },
     {
      "pos": 13,
-     "team": "SV Wehen",
+     "team": "Wehen Wiesbaden",
      "p": 10,
      "w": 3,
      "d": 3,
@@ -709,7 +709,7 @@
     },
     {
      "pos": 14,
-     "team": "Verl",
+     "team": "SC Verl",
      "p": 10,
      "w": 3,
      "d": 3,
@@ -721,7 +721,7 @@
     },
     {
      "pos": 15,
-     "team": "SG Sonnenhof Grossaspach",
+     "team": "Sonnenhof Großaspach",
      "p": 10,
      "w": 3,
      "d": 3,
@@ -757,7 +757,7 @@
     },
     {
      "pos": 18,
-     "team": "SSV Jahn Regensburg",
+     "team": "Jahn Regensburg",
      "p": 10,
      "w": 2,
      "d": 4,
@@ -781,7 +781,7 @@
     },
     {
      "pos": 20,
-     "team": "Havelse",
+     "team": "TSV Havelse",
      "p": 10,
      "w": 1,
      "d": 3,
