@@ -147,7 +147,7 @@ export async function loadHistory(root = ROOT) {
 // Fixture lists saved by scripts/update-fixtures.mjs: { "england/premier-league": data }
 export async function loadFixtures(root = ROOT) {
   const out = {};
-  for (const cfg of [...COUNTRIES, EUROPE]) for (const lg of cfg.leagues) {
+  for (const cfg of [...COUNTRIES, EUROPE]) for (const lg of [...cfg.leagues, ...(cfg.cups || [])]) {
     try {
       const fx = JSON.parse(await readFile(path.join(root, "data", "fixtures", cfg.country, `${lg.id}.json`), "utf8"));
       out[`${cfg.country}/${lg.id}`] = cfg === EUROPE ? regroupEurope(fx) : fx;
@@ -213,6 +213,11 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   const countries = await loadCountries(root);
   const history = await loadHistory(root);
   const fixtures = await loadFixtures(root);
+  const cupUrls = [];
+  // Cards for a country's cups (status from the fixtures), with links relative to the country page.
+  const cupCards = (c, rel) => ((COUNTRIES.find((x) => x.country === c.country) || {}).cups || [])
+    .filter((cup) => fixtures[`${c.country}/${cup.id}`])
+    .map((cup) => ({ id: cup.id, name: cup.name, status: FP.cupStatus(fixtures[`${c.country}/${cup.id}`]), href: `${rel}${cup.id}/${suffix}` }));
   let europe = null;
   try { europe = JSON.parse(await readFile(path.join(root, "data", "europe.json"), "utf8")); } catch {}
   HAS_EUROPE = !!europe;
@@ -252,19 +257,34 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       description: `Every ${c.adjective} league table from ${first} down to ${last} on one page, with promotion and relegation places marked.`,
       canonical: `${SITE}/${c.country}/`, base: "../", suffix, page: "country", country: c.country,
       stamps: { [c.country]: c.updated }, countries, seasons: seasonList(c, history[c.country], "", suffix, null),
-      attrs: { fixtures: fxLinks(false) },
-      main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null), fixtures: fxLinks(false) })
+      attrs: { fixtures: fxLinks(false), cups: cupCards(c, "") },
+      main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null), fixtures: fxLinks(false), cups: cupCards(c, "") })
     }));
-    // Fixtures pages, one per league
-    for (const lg of c.leagues) {
+    // Cup pages
+    for (const cup of (COUNTRIES.find((x) => x.country === c.country) || {}).cups || []) {
+      const fx = fixtures[`${c.country}/${cup.id}`];
+      if (!fx) continue;
+      await write(`${c.country}/${cup.id}/index.html`, shell({
+        title: `${cup.name} ${fx.season}: bracket, draw and results | Football Pyramids`,
+        description: `The ${cup.name} ${fx.season} round by round: every tie and result, the bracket from the last 16, and each club's league so the giant-killings stand out.`,
+        canonical: `${SITE}/${c.country}/${cup.id}/`, base: "../../", suffix, page: "cup", country: c.country, stamps: {}, countries,
+        attrs: { league: cup.id, fx: `fixtures/${suffix}` },
+        main: FP.cupMain(cup, fx, { tz: "venue", fixturesHref: `fixtures/${suffix}` })
+      }));
+      cupUrls.push(`/${c.country}/${cup.id}/`);
+    }
+    // Fixtures pages, one per league and cup
+    const cupsOf = (COUNTRIES.find((x) => x.country === c.country) || {}).cups || [];
+    for (const lg of [...c.leagues, ...cupsOf]) {
       const fx = fixtures[`${c.country}/${lg.id}`];
       if (!fx) continue;
+      const back = fx.cup ? `../${suffix}` : `../../${suffix}#${lg.id}`;
       await write(`${c.country}/${lg.id}/fixtures/index.html`, shell({
         title: `${fx.name} fixtures and results ${fx.season} | Football Pyramids`,
         description: `Every ${fx.name} fixture and result for ${fx.season}, round by round, with kick-off times in your time zone, postponements and live scores.`,
         canonical: `${SITE}/${c.country}/${lg.id}/fixtures/`, base: "../../../", suffix, page: "fixtures", country: c.country,
-        stamps: {}, countries, attrs: { league: lg.id, table: `../../${suffix}#${lg.id}` },
-        main: FP.fixturesMain(fx, { tz: "venue", tableHref: `../../${suffix}#${lg.id}` })
+        stamps: {}, countries, attrs: { league: lg.id, table: back },
+        main: FP.fixturesMain(fx, { tz: "venue", tableHref: back, tableText: fx.cup ? `${fx.name} bracket` : null })
       }));
     }
     // Past seasons
@@ -363,7 +383,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
 
   // For the live-scores worker: which API-Football league IDs belong to which table on the site.
   const live = { season: Number(String(countries[0].season).slice(0, 4)), leagues: {} };
-  for (const c of [...COUNTRIES, EUROPE]) for (const lg of c.leagues) {
+  for (const c of [...COUNTRIES, EUROPE]) for (const lg of [...c.leagues, ...(c.cups || [])]) {
     for (const g of lg.groups || [{ apiId: lg.apiId }]) live.leagues[g.apiId] = { c: c.country, l: lg.id, ...(g.name ? { g: g.name } : {}) };
   }
   await write("data/live-leagues.json", JSON.stringify(live));
@@ -376,6 +396,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     await write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>hourly</changefreq></url>`).join("\n")}
+${cupUrls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>daily</changefreq></url>`).join("\n")}
 ${fxUrls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>daily</changefreq></url>`).join("\n")}
 ${past.concat(euroPast).map((u) => `  <url><loc>${SITE}${u}</loc><changefreq>yearly</changefreq></url>`).join("\n")}
 </urlset>

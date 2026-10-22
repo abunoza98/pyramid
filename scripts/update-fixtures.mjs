@@ -14,7 +14,7 @@ import path from "node:path";
 import { COUNTRIES, EUROPE, NAMES } from "./leagues.mjs";
 import { api, seasonLabel } from "./update-standings.mjs";
 import { build } from "./build.mjs";
-import { roundLabel, europeRounds, toRounds } from "./rounds.mjs";
+import { roundLabel, europeRounds, toRounds, cupRounds } from "./rounds.mjs";
 export { roundLabel, europeRounds, toRounds };
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -72,7 +72,15 @@ async function main() {
 
   let saved = 0, failed = 0;
   for (const c of [...COUNTRIES, EUROPE]) {
-    for (const cfg of c.leagues) {
+    // Each club's league, for the tags in cup ties ("PL", "L2", "NL"…), from the country's tables.
+    const tags = new Map();
+    try {
+      const d = JSON.parse(await readFile(path.join(outRoot, "data", `${c.country}.json`), "utf8"));
+      for (const lg of d.leagues || []) for (const r of lg.groups ? lg.groups.flatMap((g) => g.rows) : lg.rows || []) {
+        if (r.tid) tags.set(r.tid, { s: lg.short || lg.name, tier: lg.tier });
+      }
+    } catch {}
+    for (const cfg of [...c.leagues, ...(c.cups || []).map((x) => ({ ...x, cup: true }))]) {
       const file = path.join(outRoot, "data", "fixtures", c.country, `${cfg.id}.json`);
       let prev = null;
       try { prev = JSON.parse(await readFile(file, "utf8")); } catch {}
@@ -85,11 +93,18 @@ async function main() {
           const body = await get(part.apiId);
           const list = (body.response || []).map((x) => ({ round: x.league?.round, f: slim(x, prevById.get(x.fixture.id)) }));
           if (c === EUROPE) europeRounds(list);
+          if (cfg.cup) {
+            cupRounds(list, cfg.rounds);
+            for (const { f } of list) for (const side of [f.h, f.a]) {
+              const t = tags.get(side.id);
+              if (t) { side.t = t.s; side.tier = t.tier; }
+            }
+          }
           if (!list.length) throw new Error(`no fixtures for league ${part.apiId}`);
           groups.push({ name: part.name, rounds: toRounds(list) });
         }
         const out = {
-          country: c.country, countryName: c.name, league: cfg.id, name: cfg.name, tier: cfg.tier,
+          country: c.country, countryName: c.name, league: cfg.id, name: cfg.name, tier: cfg.tier, ...(cfg.cup ? { cup: true } : {}),
           season: seasonLabel(SEASON), updated: now.toISOString(), groups
         };
         const text = JSON.stringify(out);

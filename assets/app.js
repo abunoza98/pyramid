@@ -133,12 +133,14 @@
   var live = null, liveText = "", liveShown = false, lastTables = 0;
   var seasons = null;
   try { seasons = JSON.parse(body.getAttribute("data-seasons") || "null"); } catch (e) {}
-  var MINE = PAGE === "country" ? [COUNTRY] : PAGE === "europe" || PAGE === "comp" ? ["europe"] : COUNTRIES;
+  var MINE = PAGE === "country" || PAGE === "cup" ? [COUNTRY] : PAGE === "europe" || PAGE === "comp" ? ["europe"] : COUNTRIES;
   var STATUSES = {}, EUROPE_SUM = null, compFx = null, compFxLoaded = false;
   try { STATUSES = JSON.parse(body.getAttribute("data-statuses") || "{}"); } catch (e) {}
   // The home page shows the Champions League table too, so it also loads data/europe.json.
   if (PAGE === "home" && body.getAttribute("data-europe")) MINE = MINE.concat(["europe"]);
   // The home page's strip shows every country's games, not just the featured ones.
+  var CUPS = [];   // a country page's cup cards
+  try { CUPS = JSON.parse(body.getAttribute("data-cups") || "[]"); } catch (e) {}
   var FIXLINKS = {};   // links from each table to its fixtures page
   try { FIXLINKS = JSON.parse(body.getAttribute("data-fixtures") || "{}"); } catch (e) {}
   var OTHERS = [];   // the home page's "More pyramids" cards
@@ -157,11 +159,13 @@
   function redraw(html) {
     var y = window.scrollY;
     var open = {};
-    document.querySelectorAll("#main-content details").forEach(function (d) { open[d.id || d.className] = d.open; });
+    // Keep open/closed sections as the visitor left them (only those with an id, plus the seasons list).
+    var key = function (d) { return d.id || (d.classList.contains("seasons") ? "seasons" : null); };
+    document.querySelectorAll("#main-content details").forEach(function (d) { var k = key(d); if (k) open[k] = d.open; });
     $("main-content").innerHTML = html;
     document.querySelectorAll("#main-content details").forEach(function (d) {
-      var k = d.id || d.className;
-      if (k in open) d.open = open[k];
+      var k = key(d);
+      if (k && k in open) d.open = open[k];
     });
     applyClub(false);
     window.scrollTo(0, y);
@@ -196,7 +200,11 @@
     if (!MINE.every(function (c) { return official[c]; })) return;
     var withLive = MINE.map(function (c) { return FP.applyLive(official[c], live); });
     var html;
-    if (PAGE === "country") html = FP.countryMain(withLive[0], { seasons: seasons, fixtures: FIXLINKS });
+    if (PAGE === "country") html = FP.countryMain(withLive[0], { seasons: seasons, fixtures: FIXLINKS, cups: CUPS });
+    else if (PAGE === "cup") {
+      if (!compFx) return;
+      html = FP.cupMain({ name: compFx.name, country: COUNTRY }, compFx, { tz: fxState.tz, live: live, fixturesHref: body.getAttribute("data-fx") || "" });
+    }
     else if (PAGE === "europe") html = FP.europeMain(withLive[0], { statuses: STATUSES, base: "", suffix: SUFFIX });
     else if (PAGE === "comp") {
       var id = body.getAttribute("data-league");
@@ -245,12 +253,12 @@
   var timer = null;
   function cycle() {
     clearTimeout(timer);
-    if (!window.fetch || !window.FP || ["home", "country", "europe", "comp"].indexOf(PAGE) < 0) return;
+    if (!window.fetch || !window.FP || ["home", "country", "europe", "comp", "cup"].indexOf(PAGE) < 0) return;
     if (document.hidden) return;
     var needTables = !lastTables || Date.now() - lastTables > REFRESH_MS;
     // A competition page also needs its fixtures (for the bracket and qualifying ties), once.
-    var needFx = PAGE === "comp" && !compFxLoaded;
-    var fxLoad = needFx ? fetch(BASE + "data/fixtures/europe/" + body.getAttribute("data-league") + ".json?t=" + Date.now(), { cache: "no-store" })
+    var needFx = (PAGE === "comp" || PAGE === "cup") && !compFxLoaded;
+    var fxLoad = needFx ? fetch(BASE + "data/fixtures/" + (PAGE === "cup" ? COUNTRY : "europe") + "/" + body.getAttribute("data-league") + ".json?t=" + Date.now(), { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
       .then(function (d) { compFx = d; compFxLoaded = true; return true; }) : Promise.resolve(false);
     Promise.all([needTables ? refreshTables() : Promise.resolve(false), refreshLive(), fxLoad]).then(function (res) {
@@ -344,7 +352,7 @@
     if (!t) return;
     fxState.tz = t.getAttribute("data-tz");
     try { localStorage.setItem(TZ_KEY, fxState.tz); } catch (err) {}
-    if (PAGE === "fixtures") fxRender(); else if (PAGE === "comp") render();
+    if (PAGE === "fixtures") fxRender(); else if (PAGE === "comp" || PAGE === "cup") render();
   });
   var fxTimer = null;
   function fxLive() {

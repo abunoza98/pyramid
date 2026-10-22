@@ -299,7 +299,7 @@
       html += tierHTML(lg, { fixtures: (opts.fixtures || {})[c.country + "/" + lg.id] }) + bandHTML(lg, c.leagues[i + 1] || null, c.belowNote);
       if (i === 1) html += INLINE_AD;
     });
-    return html;
+    return html + cupsHTML(opts.cups);
   }
 
   /* ---------- Flags (simple SVGs, so they look the same on every device) ---------- */
@@ -557,7 +557,7 @@
       return '<option value="' + i + '"' + (i === ri ? " selected" : "") + ">" + esc(x.label) + (range ? " · " + esc(range) : "") + "</option>";
     }).join("");
     return '<section class="intro fx-intro" aria-labelledby="intro-h">' +
-      '<p class="eyebrow">' + (fx.country === "europe" ? "UEFA" : esc(fx.countryName) + " · Tier " + fx.tier) + " · " + esc(fx.season) + "</p>" +
+      '<p class="eyebrow">' + (fx.country === "europe" ? "UEFA" : esc(fx.countryName) + (fx.cup ? " · Cup" : " · Tier " + fx.tier)) + " · " + esc(fx.season) + "</p>" +
       '<h1 id="intro-h">' + esc(fx.name) + " fixtures and results</h1>" +
       '<p class="lede">' + (fx.year ? "Every " + esc(fx.name) + " game from " + esc(fx.season) + ", round by round, from the first qualifying round to the final."
         : "Every " + esc(fx.name) + " game this season, round by round, with results, postponements and kick-off changes.") + "</p>" +
@@ -607,7 +607,7 @@
     return order.map(function (k) {
       var legs = by[k].sort(function (x, y) { return x.ts - y.ts; });
       var first = legs[0];
-      var teams = [{ id: first.h.id, n: first.h.n, agg: 0 }, { id: first.a.id, n: first.a.n, agg: 0 }];
+      var teams = [{ id: first.h.id, n: first.h.n, t: first.h.t, tier: first.h.tier, agg: 0 }, { id: first.a.id, n: first.a.n, t: first.a.t, tier: first.a.tier, agg: 0 }];
       var played = false, done = legs.every(function (f) { return isDone(f) || f.st === "AWD" || f.st === "WO"; });
       var on = legs.some(isLive);
       legs.forEach(function (f) {
@@ -623,7 +623,9 @@
         else if (last.w) { var wid = last.w === "h" ? last.h.id : last.a.id; winner = wid === teams[0].id ? 0 : 1; }
         if (last.st === "AET" && !how) how = "aet";
       }
-      return { teams: teams, legs: legs, played: played, done: done, on: on, winner: winner, how: how };
+      // A lower-league club knocking out a higher one (both tiers known).
+      var upset = winner != null && teams[winner].tier && teams[1 - winner].tier && teams[winner].tier > teams[1 - winner].tier;
+      return { teams: teams, legs: legs, played: played, done: done, on: on, winner: winner, how: how, upset: upset };
     });
   }
 
@@ -641,11 +643,12 @@
     if (t.how === "pens") { var lp = t.legs[t.legs.length - 1]; legNotes.push("won " + Math.max(lp.pen[0], lp.pen[1]) + "–" + Math.min(lp.pen[0], lp.pen[1]) + " on pens"); }
     var row = function (i) {
       var tm = t.teams[i];
-      return '<span class="tie-team' + (t.winner === i ? " tie-won" : t.winner === 1 - i ? " tie-lost" : "") + '"><span>' + esc(tm.n) + "</span>" +
+      return '<span class="tie-team' + (t.winner === i ? " tie-won" : t.winner === 1 - i ? " tie-lost" : "") + '"><span>' + esc(tm.n) +
+        (tm.t ? ' <i class="tag tier-' + (tm.tier || 0) + '" title="Plays in ' + esc(tm.t) + '">' + esc(tm.t) + "</i>" : "") + "</span>" +
         (t.played ? "<b>" + tm.agg + "</b>" : "") + "</span>";
     };
     return '<div class="tie' + (t.on ? " on" : "") + '" data-teams="' + esc(t.teams[0].n + "|" + t.teams[1].n) + '">' + row(0) + row(1) +
-      '<span class="tie-note">' + legNotes.map(esc).join(" · ") + "</span></div>";
+      '<span class="tie-note">' + (t.upset ? '<b class="upset">Upset</b> · ' : "") + legNotes.map(esc).join(" · ") + "</span></div>";
   }
 
   // The knockout bracket: one column per round. Each round's ties are put in the order of the round after it,
@@ -750,8 +753,75 @@
       (opts.stripLive ? stripHTML(opts.stripLive, [summary(e)], base.replace(/europe\/$/, ""), suffix, {}) : "");
   }
 
+  /* ---------- Domestic cups ----------
+     fx: data/fixtures/<country>/<cup>.json (cup: true). Each club carries its league ("t") and tier, so ties show
+     who's from where and lower-league wins are marked as upsets. */
+  function cupStatus(fx) {
+    if (!fx || !fx.groups[0].rounds.length) return "Draw to come";
+    var rounds = fx.groups[0].rounds;
+    var unfinished = function (f) { return !isDone(f) && !GONE[f.st] && f.st !== "AWD" && f.st !== "WO"; };
+    for (var i = 0; i < rounds.length; i++) {
+      var r = rounds[i], open = r.fixtures.filter(unfinished);
+      if (!open.length) continue;
+      var started = r.fixtures.some(function (f) { return isDone(f) || isLive(f); });
+      return (started ? "" : "Next: ") + r.label + (started ? " in progress" : "");
+    }
+    var last = rounds[rounds.length - 1], t = tiesOf(last)[0];
+    return /final/i.test(last.label) && t && t.winner != null ? "Won by " + t.teams[t.winner].n : "Latest: " + last.label;
+  }
+
+  function cupMain(cup, fx, opts) {
+    opts = opts || {};
+    var country = fx ? fx.country : cup.country;
+    var mode = opts.tz === "local" ? "local" : "venue", now = opts.now || Date.now();
+    var tz = zoneOfMode(mode, country);
+    var lm = liveMap(opts.live);
+    var rounds = fx ? fx.groups[0].rounds.map(function (r) {
+      return { key: r.key, label: r.label, mid: r.mid, fixtures: r.fixtures.map(function (f) { return mergeLive(f, lm); }) };
+    }) : [];
+    // The bracket starts at the last 16 (8 ties or fewer); earlier rounds are listed.
+    var startAt = -1;
+    for (var i = 0; i < rounds.length; i++) if (tiesOf(rounds[i]).length <= 8) { startAt = i; break; }
+    var bracketRounds = startAt > -1 ? rounds.slice(startAt) : [];
+    var first = bracketRounds.length ? "bracket" : "rounds";
+    var current = rounds.length - 1;
+    for (var j = 0; j < rounds.length; j++) {
+      if (rounds[j].fixtures.some(function (f) { return !isDone(f) && !GONE[f.st]; })) { current = j; break; }
+    }
+    var list = rounds.map(function (r, k) { return { r: r, k: k }; }).reverse().map(function (x) {
+      var ties = tiesOf(x.r), range = roundRange(x.r, tz);
+      return '<details class="q-round" id="round-' + x.k + '"' + (x.k === current ? " open" : "") + "><summary>" + esc(x.r.label) + " <span>" + ties.length + " tie" + (ties.length === 1 ? "" : "s") +
+        (range ? " · " + esc(range) : "") + "</span></summary>" +
+        '<div class="q-ties">' + ties.map(function (t) { return tieHTML(t, tz, now); }).join("") + "</div></details>";
+    }).join("");
+    var tab = function (k, label) {
+      return '<button type="button" role="tab" class="tf-tab' + (k === first ? " on" : "") + '" data-tab="' + k + '" aria-selected="' + (k === first) + '">' + label + "</button>";
+    };
+    var panel = function (k, html) { return '<div class="tf-panel' + (k === first ? " on" : "") + '" data-panel="' + k + '" role="tabpanel">' + html + "</div>"; };
+    return '<section class="intro fx-intro" aria-labelledby="intro-h">' +
+      '<p class="eyebrow">' + esc((fx && fx.countryName) || "") + " · Cup · " + esc(fx ? fx.season : "") + "</p>" +
+      '<h1 id="intro-h" class="cup-h">' + flag(country) + "<span>" + esc(cup.name) + "</span></h1>" +
+      '<p class="lede"><strong>' + esc(cupStatus(fx)) + "</strong> · Every round and every tie, with each club’s league next to its name, so the giant-killings stand out.</p>" +
+      '<p class="fx-links">' + (opts.fixturesHref ? '<a href="' + esc(opts.fixturesHref) + '">Fixtures and results by round →</a>' : "") +
+      tzLine(mode, country) + "</p></section>" +
+      '<section class="comp" data-tabs="cup"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Views">' +
+      tab("bracket", "Bracket") + tab("rounds", "Every round") + "</div>" +
+      panel("bracket", bracketRounds.length ? bracketHTML(bracketRounds, tz, now)
+        : '<p class="ko-empty">The bracket starts at the last 16 and appears once that draw is made. Until then, see every round so far.</p>') +
+      panel("rounds", list || '<p class="ko-empty">No ties yet. They appear as soon as the first draw is made.</p>') + "</section>";
+  }
+
+  // Country pages: the country's cups, under the tables.
+  function cupsHTML(cups) {
+    if (!cups || !cups.length) return "";
+    return '<section class="cups-sec" aria-labelledby="cups-h"><h2 class="section-h" id="cups-h">Cups</h2><ul class="ecards">' +
+      cups.map(function (c) {
+        return '<li><a class="ecard" href="' + esc(c.href) + '"><span class="ecard-name">' + esc(c.name) + '</span><span class="ecard-status">' + esc(c.status) + "</span></a></li>";
+      }).join("") + "</ul></section>";
+  }
+
   return {
     esc: esc, ukTime: ukTime, clubCount: clubCount, countryClubs: countryClubs, groupsOf: groupsOf,
-    countryMain: countryMain, homeMain: homeMain, summary: summary, flag: flag, fixturesMain: fixturesMain, currentRound: currentRound, compMain: compMain, europeMain: europeMain, compStatus: compStatus, tiesOf: tiesOf, applyLive: applyLive, clock: clock, isLive: isLive
+    countryMain: countryMain, homeMain: homeMain, summary: summary, flag: flag, fixturesMain: fixturesMain, currentRound: currentRound, compMain: compMain, europeMain: europeMain, cupMain: cupMain, cupStatus: cupStatus, compStatus: compStatus, tiesOf: tiesOf, applyLive: applyLive, clock: clock, isLive: isLive
   };
 });

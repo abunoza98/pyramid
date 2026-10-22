@@ -58,3 +58,17 @@ export function toRounds(list) {
   return rounds;
 }
 
+
+// Domestic cups: replays are played as separate "rounds" ("3rd Round Replays"); put them back with their round.
+// Then rename rounds: the cup's own map first ("1/128-finals" -> "First round" for the FA Cup), otherwise
+// "1/N-finals" becomes "Round of 2N".
+export function cupRounds(list, names = {}) {
+  for (const x of list) {
+    let r = String(x.round || "").trim();
+    const m = /^(.*?)\s*-?\s*replays?$/i.exec(r);
+    if (m && m[1]) r = m[1];
+    const k = /^1\/(\d+)-finals?$/i.exec(r);
+    x.round = names[r] || (k ? `Round of ${2 * Number(k[1])}` : r);
+  }
+  return list;
+}

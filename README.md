@@ -52,6 +52,10 @@ footballpyramids.com: Europe's top five leagues on the home page, and a full pyr
 
 Past European seasons come from `scripts/backfill-europe.mjs` (run by the Backfill history job, about 2 requests a season) into `data/history/europe/<competition>/`. Each gets a page at `/europe/<competition>/<season>/` with the group-stage tables (before 2024–25) or league-phase table, the full bracket and every qualifying tie, plus a fixtures page. Group-stage places come from the API's descriptions (`euroZone`).
 
+## Cups
+
+Each country's knockout cups are listed under `cups` in `leagues.mjs` (API-Football league IDs). The fixtures job saves them like the leagues, with each club tagged with its league (from the country's tables) so ties show "PL", "L2", "NL"… and lower-league wins are marked as upsets. Replays are folded back into their round. Pages: `/<country>/<cup>/` with a bracket from the last 16 and every round listed, plus a fixtures page; country pages list their cups under the tables.
+
 ## Live scores
 
 `worker/live.js` is a separate Cloudflare Worker at live.footballpyramids.com. Every minute it checks today's fixtures for every league on the site (it reads `data/live-leagues.json`, which `build.mjs` writes) and, only while a game is on, asks API-Football for live scores. It saves them in a KV namespace and serves them at `/live.json`. The country and home pages read that every 30 seconds during games, lay the scores over the official tables and re-sort them ("as it stands"). Each fixture remembers how many games each club had played before kick-off, so a result is never counted twice once the official table catches up. Set `LIVE_URL` to `""` in `leagues.mjs` to switch it off.

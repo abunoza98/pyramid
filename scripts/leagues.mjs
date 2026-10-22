@@ -18,11 +18,18 @@ export const CONTACT = { email: "hello@footballpyramids.com", operator: "Arrow S
 const Z = (from, to, kind, label) => ({ from, to, kind, label });
 const RESERVES = "Reserve teams can't be promoted to the same division as their first team.";
 
+// cups: each country's knockout cups (API-Football league IDs), shown as brackets on /<country>/<cup>/.
+// rounds: the API's round names -> the names fans use (its own naming isn't consistent between cups).
 // featured: shown in the header and with a table on the home page. Others sit under "More".
 export const COUNTRIES = [
   {
     country: "england", featured: true, code: "ENG", name: "England", adjective: "English", apiCountry: "England",
     belowNote: "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
+    cups: [{ apiId: 45, id: "fa-cup", name: "FA Cup", short: "FAC",
+      rounds: { "1st Round Qualifying": "First qualifying round", "2nd Round Qualifying": "Second qualifying round",
+        "3rd Round Qualifying": "Third qualifying round", "4th Round Qualifying": "Fourth qualifying round",
+        "1/128-finals": "First round", "1/64-finals": "Second round", "1/32-finals": "Third round", "1/16-finals": "Fourth round", "1/8-finals": "Fifth round" } }, { apiId: 48, id: "efl-cup", name: "EFL Cup", short: "EFL",
+      rounds: { "Round of 128": "First round", "Round of 64": "Second round", "Round of 32": "Third round", "Round of 16": "Fourth round" } }],
     leagues: [
       { apiId: 39, id: "premier-league", tier: 1, name: "Premier League", short: "PL", clubs: 20,
         zones: [Z(1, 4, "top", "Champions League"), Z(5, 5, "mid", "Europa League"), Z(18, 20, "down", "Relegation")],
@@ -52,6 +59,7 @@ export const COUNTRIES = [
   {
     country: "spain", featured: true, code: "ESP", name: "Spain", adjective: "Spanish", apiCountry: "Spain",
     belowNote: "Promoted clubs from Segunda Federación come up",
+    cups: [{ apiId: 143, id: "copa-del-rey", name: "Copa del Rey", short: "CDR", rounds: { "1/128-finals": "Preliminary round", "Round of 128": "First round", "Round of 64": "Second round" } }],
     leagues: [
       { apiId: 140, id: "la-liga", tier: 1, name: "La Liga", short: "LL", clubs: 20,
         zones: [Z(1, 4, "top", "Champions League"), Z(5, 5, "mid", "Europa League"), Z(6, 6, "mid", "Conference League"), Z(18, 20, "down", "Relegation")],
@@ -70,6 +78,7 @@ export const COUNTRIES = [
   {
     country: "germany", featured: true, code: "GER", name: "Germany", adjective: "German", apiCountry: "Germany",
     belowNote: "Regionalliga champions come up, some through a play-off",
+    cups: [{ apiId: 81, id: "dfb-pokal", name: "DFB-Pokal", short: "DFB", rounds: { "Round of 64": "First round", "Round of 32": "Second round" } }],
     leagues: [
       { apiId: 78, id: "bundesliga", tier: 1, name: "Bundesliga", short: "BL", clubs: 18,
         zones: [Z(1, 4, "top", "Champions League"), Z(5, 5, "mid", "Europa League"), Z(6, 6, "mid", "Conference League"),
@@ -88,6 +97,7 @@ export const COUNTRIES = [
   {
     country: "france", featured: true, code: "FRA", name: "France", adjective: "French", apiCountry: "France",
     belowNote: "Promoted clubs from National 1 come up",
+    cups: [{ apiId: 66, id: "coupe-de-france", name: "Coupe de France", short: "CDF" }],
     leagues: [
       { apiId: 61, id: "ligue-1", tier: 1, name: "Ligue 1", short: "L1", clubs: 18,
         zones: [Z(1, 3, "top", "Champions League"), Z(4, 4, "top", "Champions League qualifiers"), Z(5, 5, "mid", "Europa League"),
@@ -109,6 +119,7 @@ export const COUNTRIES = [
   {
     country: "italy", featured: true, code: "ITA", name: "Italy", adjective: "Italian", apiCountry: "Italy",
     belowNote: "Serie D group winners come up",
+    cups: [{ apiId: 137, id: "coppa-italia", name: "Coppa Italia", short: "CI" }],
     leagues: [
       { apiId: 135, id: "serie-a", tier: 1, name: "Serie A", short: "SA", clubs: 20,
         zones: [Z(1, 4, "top", "Champions League"), Z(5, 5, "mid", "Europa League"), Z(6, 6, "mid", "Conference League"), Z(18, 20, "down", "Relegation")],
@@ -130,6 +141,7 @@ export const COUNTRIES = [
   {
     country: "belgium", code: "BEL", name: "Belgium", adjective: "Belgian", apiCountry: "Belgium",
     belowNote: "The top amateur clubs come up",
+    cups: [{ apiId: 147, id: "belgian-cup", name: "Belgian Cup", short: "BC" }],
     leagues: [
       { apiId: 144, id: "pro-league", tier: 1, name: "Pro League", short: "JPL", clubs: 18, zones: "api",
         relegationNote: "17th–18th drop to the Challenger Pro League", notes: [],
@@ -144,6 +156,7 @@ export const COUNTRIES = [
   {
     country: "croatia", code: "CRO", name: "Croatia", adjective: "Croatian", apiCountry: "Croatia",
     belowNote: "Treća NL champions come up",
+    cups: [{ apiId: 212, id: "croatian-cup", name: "Croatian Cup", short: "HNK" }],
     leagues: [
       { apiId: 210, id: "hnl", tier: 1, name: "HNL", short: "HNL", clubs: 10, zones: "api",
         relegationNote: "10th drops to the Prva NL",
@@ -160,6 +173,7 @@ export const COUNTRIES = [
   {
     country: "netherlands", code: "NED", name: "Netherlands", adjective: "Dutch", apiCountry: "Netherlands",
     belowNote: "The top Derde Divisie clubs come up",
+    cups: [{ apiId: 90, id: "knvb-beker", name: "KNVB Beker", short: "KNVB" }],
     leagues: [
       { apiId: 88, id: "eredivisie", tier: 1, name: "Eredivisie", short: "ERE", clubs: 18, zones: "api",
         relegationNote: "17th–18th drop to the Eerste Divisie; 16th goes into the play-offs", notes: [] },
@@ -174,6 +188,7 @@ export const COUNTRIES = [
   {
     country: "portugal", code: "POR", name: "Portugal", adjective: "Portuguese", apiCountry: "Portugal",
     belowNote: "Liga 3's top clubs come up, one through a play-off",
+    cups: [{ apiId: 96, id: "taca-de-portugal", name: "Taça de Portugal", short: "TP", rounds: { "1/128-finals": "First round", "Round of 128": "Second round", "Round of 64": "Third round" } }],
     leagues: [
       { apiId: 94, id: "liga-portugal", tier: 1, name: "Liga Portugal", short: "LP", clubs: 18, zones: "api",
         relegationNote: "17th–18th drop to Liga Portugal 2; 16th plays Liga Portugal 2's 3rd", notes: [] },
@@ -186,6 +201,8 @@ export const COUNTRIES = [
   {
     country: "scotland", code: "SCO", name: "Scotland", adjective: "Scottish", apiCountry: "Scotland",
     belowNote: "The Highland/Lowland League play-off winner can come up",
+    cups: [{ apiId: 181, id: "scottish-cup", name: "Scottish Cup", short: "SC",
+      rounds: { "1st Round": "First round", "Round of 128": "Second round", "Round of 64": "Third round", "Round of 32": "Fourth round", "Round of 16": "Fifth round" } }, { apiId: 185, id: "scottish-league-cup", name: "Scottish League Cup", short: "SLC", rounds: { "Group Stage": "Group stage" } }],
     leagues: [
       { apiId: 179, id: "premiership", tier: 1, name: "Premiership", short: "PREM", clubs: 12,
         zones: [Z(11, 11, "down", "Relegation play-off"), Z(12, 12, "down", "Relegation")],
@@ -208,6 +225,7 @@ export const COUNTRIES = [
   {
     country: "turkey", code: "TUR", name: "Turkey", adjective: "Turkish", apiCountry: "Turkey",
     belowNote: "Regional amateur league champions come up",
+    cups: [{ apiId: 206, id: "turkish-cup", name: "Turkish Cup", short: "TC" }],
     leagues: [
       { apiId: 203, id: "super-lig", tier: 1, name: "Süper Lig", short: "SL", clubs: 18, zones: "api",
         relegationNote: "16th–18th drop to the 1. Lig", notes: [] },
