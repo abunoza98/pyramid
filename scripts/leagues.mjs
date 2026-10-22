@@ -226,6 +226,22 @@ export const COUNTRIES = [
   }
 ];
 
+// ---------- UEFA club competitions ----------
+// Shaped like a country so the same table, live-score and fixtures code works, but it isn't a pyramid:
+// it gets its own pages under /europe/. Knockout ties appear once each draw is made.
+const LEAGUE_PHASE = [Z(1, 8, "top", "Round of 16"), Z(9, 24, "mid", "Knockout play-offs"), Z(25, 36, "down", "Eliminated")];
+export const EUROPE = {
+  country: "europe", code: "EUR", name: "Europe", adjective: "European", apiCountry: "World",
+  leagues: [
+    { apiId: 2, id: "champions-league", tier: 1, name: "Champions League", short: "UCL", clubs: 36, zones: LEAGUE_PHASE, matchdays: 8,
+      notes: ["League phase: each club plays eight different opponents, four at home and four away."] },
+    { apiId: 3, id: "europa-league", tier: 2, name: "Europa League", short: "UEL", clubs: 36, zones: LEAGUE_PHASE, matchdays: 8,
+      notes: ["League phase: each club plays eight different opponents, four at home and four away."] },
+    { apiId: 848, id: "conference-league", tier: 3, name: "Conference League", short: "UECL", clubs: 36, zones: LEAGUE_PHASE, matchdays: 6,
+      notes: ["League phase: each club plays six different opponents, three at home and three away."] }
+  ]
+};
+
 // API-Football shortens or anglicises some names. Map them to the names shown on the site.
 // After the first live run, check the pages and add any that look odd.
 export const NAMES = {
@@ -305,7 +321,14 @@ export const NAMES = {
   "Dundee Utd": "Dundee United", "Partick": "Partick Thistle", "Inverness CT": "Inverness Caledonian Thistle",
   "Ayr Utd": "Ayr United", "Morton": "Greenock Morton", "Airdrie United": "Airdrieonians",
   // Turkey
-  "Gençlerbirliği S.K.": "Gençlerbirliği", "Manisa F.K.": "Manisa FK", "Amed": "Amed SK"
+  "Gençlerbirliği S.K.": "Gençlerbirliği", "Manisa F.K.": "Manisa FK", "Amed": "Amed SK",
+  // European competitions
+  "Olympiakos Piraeus": "Olympiacos", "Ferencvarosi TC": "Ferencváros", "Plzen": "Viktoria Plzeň", "Sparta Praha": "Sparta Prague",
+  "Slavia Praha": "Slavia Prague", "Bodo/Glimt": "Bodø/Glimt", "FK Crvena Zvezda": "Red Star Belgrade", "Lask Linz": "LASK",
+  "AEK Athens FC": "AEK Athens", "Lech Poznan": "Lech Poznań", "Jagiellonia": "Jagiellonia Białystok", "Lillestrom": "Lillestrøm",
+  "FC Nordsjaelland": "Nordsjælland", "Mjallby AIF": "Mjällby", "FC Midtjylland": "Midtjylland", "Sabah FC": "Sabah",
+  "Lincoln Red Imps FC": "Lincoln Red Imps", "Riga": "Riga FC", "FK Jablonec": "Jablonec", "FC Thun": "Thun",
+  "FC Lugano": "Lugano", "Aarhus": "AGF", "Kauno Žalgiris": "Kauno Žalgiris", "Tromso": "Tromsø"
 };
 
 /* ---------- Play-off places in past seasons ----------

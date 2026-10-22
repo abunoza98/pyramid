@@ -650,3 +650,61 @@ body.no-ads main { justify-self: center !important; }
   .g-note { grid-column: 1 / -1; }
   .round-pick { font-size: 17px; }
 }
+
+/* ---------- European competitions ---------- */
+.comp-dot { display: inline-block; width: 0.55em; height: 0.55em; margin-right: 0.3em; border-radius: 50%; vertical-align: 0.12em; background: var(--accent); }
+.comp-dot.c-champions-league { background: #24306E; }
+.comp-dot.c-europa-league { background: #E07A10; }
+.comp-dot.c-conference-league { background: #1E9E5A; }
+:root[data-theme="dark"] .comp-dot.c-champions-league { background: #8EA2FF; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .comp-dot.c-champions-league { background: #8EA2FF; } }
+.ecards { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 10px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 720px) { .ecards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.ecards li { display: flex; }
+.ecard {
+  flex: 1; display: grid; gap: 8px; align-content: start; padding: 14px 16px; border-radius: 10px;
+  background: var(--sheet); border: 1px solid var(--rule); color: var(--ink); text-decoration: none;
+}
+.ecard:hover { border-color: var(--accent); }
+.ecard-name { font-family: var(--display); font-weight: 800; font-size: 22px; line-height: 1; letter-spacing: 0.03em; text-transform: uppercase; }
+.ecard-status { font-size: 13px; color: var(--muted); }
+.ecard-top { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 4px; font-size: 14px; }
+.ecard-top li { display: flex; align-items: center; gap: 8px; }
+.ecard-top li > span { width: 18px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.ecard-top b { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
+.ecard-top i { font-style: normal; }
+.ecards.compact .ecard { padding: 12px 14px; }
+.ecards.compact .ecard-name { font-size: 19px; }
+.euro-home .section-h { margin-top: 36px; }
+.comp-tabs { margin-top: 28px; }
+.comp .tf-panel .tier { margin-top: 18px; }
+.ko-empty { margin: 22px 0 0; padding: 18px; border: 1px dashed var(--rule-strong); border-radius: 10px; color: var(--muted); font-size: 15px; }
+
+/* Bracket: a column per round, scrolls sideways on small screens */
+.bracket { display: flex; gap: 10px; margin-top: 20px; overflow-x: auto; padding-bottom: 10px; -webkit-overflow-scrolling: touch; }
+.br-col { flex: 1 0 150px; min-width: 0; display: flex; flex-direction: column; }
+.br-h { margin: 0 0 10px; font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.br-ties { flex: 1; display: flex; flex-direction: column; justify-content: space-around; gap: 10px; }
+.tie {
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 3px; padding: 8px 10px; border-radius: 8px;
+  background: var(--sheet); border: 1px solid var(--rule); font-size: 13.5px;
+}
+.tie.on { border-color: var(--down); }
+.tie-team { display: flex; justify-content: space-between; gap: 8px; }
+.tie-team span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tie-team b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; }
+.tie-team.tie-won { font-weight: 700; }
+.tie-team.tie-won b { font-weight: 700; }
+.tie-team.tie-lost { color: var(--muted); }
+.tie-note { margin-top: 2px; font-size: 11px; line-height: 1.35; color: var(--muted); }
+.q-ties .tie { font-size: 14px; }
+.q-round { margin-top: 12px; border: 1px solid var(--rule); border-radius: 10px; background: var(--sheet); }
+.q-round summary {
+  display: flex; align-items: center; gap: 10px; padding: 12px 14px; cursor: pointer; list-style: none;
+  font-family: var(--display); font-weight: 700; font-size: 19px; letter-spacing: 0.03em; text-transform: uppercase;
+}
+.q-round summary::-webkit-details-marker { display: none; }
+.q-round summary span { font-family: var(--sans, inherit); font-size: 13px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--muted); }
+.q-round summary::after { content: "▾"; margin-left: auto; font-size: 12px; color: var(--muted); }
+.q-round[open] summary::after { content: "▴"; }
+.q-ties { display: grid; gap: 8px; padding: 0 12px 12px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }

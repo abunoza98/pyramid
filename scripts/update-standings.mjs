@@ -11,7 +11,7 @@
 import { readFile, writeFile, rename, mkdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-import { COUNTRIES, NAMES } from "./leagues.mjs";
+import { COUNTRIES, EUROPE, NAMES } from "./leagues.mjs";
 import { build } from "./build.mjs";
 import { zonesFrom, applyPlayoffRules, labelCupPlaces } from "./zones.mjs";
 
@@ -169,7 +169,7 @@ async function main() {
   else if (!key) throw new Error("Set API_FOOTBALL_KEY (get one at dashboard.api-football.com).");
 
   let changed = 0, failures = 0;
-  for (const c of COUNTRIES) {
+  for (const c of [...COUNTRIES, EUROPE]) {
     const file = path.join(outRoot, "data", `${c.country}.json`);
     let prev = null;
     try { prev = JSON.parse(await readFile(file, "utf8")); } catch {}

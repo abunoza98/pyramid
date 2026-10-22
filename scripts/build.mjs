@@ -10,7 +10,7 @@ import { readFile, writeFile, mkdir, copyFile, readdir } from "node:fs/promises"
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import path from "node:path";
-import { COUNTRIES, SITE, CONTACT, ADS, ADSENSE_CLIENT, LIVE_URL } from "./leagues.mjs";
+import { COUNTRIES, EUROPE, SITE, CONTACT, ADS, ADSENSE_CLIENT, LIVE_URL } from "./leagues.mjs";
 import { zoneAt, applyPlayoffRules, labelCupPlaces } from "./zones.mjs";
 export { applyPlayoffRules, labelCupPlaces };
 import { contactPage, privacyPage } from "./pages.mjs";
@@ -26,6 +26,8 @@ const FAVICON = "data:image/svg+xml," + encodeURIComponent(
 
 const esc = FP.esc;
 
+let HAS_EUROPE = false;   // set by build() once the European tables exist
+
 function shell({ title, description, canonical, base, suffix, page, country, stamps, main, countries, seasons, attrs = {} }) {
   const snapshot = countries.some((c) => c.mode !== "live");
   const home = base || "./";
@@ -34,7 +36,8 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
     `<span class="short">${c.code || c.name.slice(0, 3).toUpperCase()}</span><span class="long">${esc(c.name)}</span></a>`;
   const featured = countries.filter((c) => c.featured), others = countries.filter((c) => !c.featured);
   const here = others.find((c) => c.country === country);
-  const nav = featured.map(link).join("") + (here ? link(here) : "") + (others.length
+  const euro = HAS_EUROPE ? `<a href="${base}europe/${suffix}"${country === "europe" ? ' aria-current="page"' : ""}><span class="short">EUR</span><span class="long">Europe</span></a>` : "";
+  const nav = featured.map(link).join("") + euro + (here ? link(here) : "") + (others.length
     ? `<details class="nav-more"><summary aria-label="More countries"><span class="short">More</span><span class="long">More</span></summary>` +
       `<div class="nav-panel">${others.map((c) => `<a href="${base}${c.country}/${suffix}"${c.country === country ? ' aria-current="page"' : ""}>${FP.flag(c.country)}${esc(c.name)}</a>`).join("")}</div></details>`
     : "");
@@ -143,7 +146,7 @@ export async function loadHistory(root = ROOT) {
 // Fixture lists saved by scripts/update-fixtures.mjs: { "england/premier-league": data }
 export async function loadFixtures(root = ROOT) {
   const out = {};
-  for (const cfg of COUNTRIES) for (const lg of cfg.leagues) {
+  for (const cfg of [...COUNTRIES, EUROPE]) for (const lg of cfg.leagues) {
     try { out[`${cfg.country}/${lg.id}`] = JSON.parse(await readFile(path.join(root, "data", "fixtures", cfg.country, `${lg.id}.json`), "utf8")); } catch {}
   }
   return out;
@@ -189,6 +192,11 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   const countries = await loadCountries(root);
   const history = await loadHistory(root);
   const fixtures = await loadFixtures(root);
+  let europe = null;
+  try { europe = JSON.parse(await readFile(path.join(root, "data", "europe.json"), "utf8")); } catch {}
+  HAS_EUROPE = !!europe;
+  const statuses = europe ? Object.fromEntries(europe.leagues.map((c) => [c.id, FP.compStatus(c, fixtures[`europe/${c.id}`])])) : {};
+  const euroSummary = europe ? FP.summary(europe) : null;
   // Links from tables to fixtures pages, relative to the home page or a country page.
   const fxLinks = (fromHome) => Object.fromEntries(Object.keys(fixtures).map((k) => {
     const [c, l] = k.split("/");
@@ -208,8 +216,10 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   await write("index.html", shell({
     title: "Football Pyramids: every league table, top to bottom | Premier League, La Liga, Bundesliga, Ligue 1, Serie A",
     description: `Every tier of ${countries.length} countries' football pyramids, each on one page: ${countries.map((c) => c.name).join(", ")}. Live scores on match days.`,
-    canonical: SITE + "/", base: "", suffix, page: "home", stamps, countries, attrs: { fixtures: fxLinks(true) },
-    main: FP.homeMain(countries.filter((c) => c.featured), "", suffix, countries.filter((c) => !c.featured).map(FP.summary), { fixtures: fxLinks(true) })
+    canonical: SITE + "/", base: "", suffix, page: "home", stamps, countries,
+    attrs: { fixtures: fxLinks(true), ...(europe ? { europe: euroSummary, statuses } : {}) },
+    main: FP.homeMain(countries.filter((c) => c.featured), "", suffix, countries.filter((c) => !c.featured).map(FP.summary),
+      { fixtures: fxLinks(true), europe: euroSummary, statuses })
   }));
 
   // Country pages
@@ -251,6 +261,34 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     }
   }
 
+  // European competitions
+  if (europe) {
+    await write(`europe/index.html`, shell({
+      title: `Champions League, Europa League and Conference League tables ${europe.season} | Football Pyramids`,
+      description: "League-phase tables, knockout brackets, qualifying ties and fixtures for the Champions League, Europa League and Conference League, with live scores.",
+      canonical: `${SITE}/europe/`, base: "../", suffix, page: "europe", country: "europe", stamps: { europe: europe.updated }, countries,
+      attrs: { statuses },
+      main: FP.europeMain(europe, { statuses, base: "", suffix })
+    }));
+    for (const comp of europe.leagues) {
+      const fx = fixtures[`europe/${comp.id}`];
+      await write(`europe/${comp.id}/index.html`, shell({
+        title: `${comp.name} ${europe.season}: table, knockout bracket and results | Football Pyramids`,
+        description: `The ${comp.name} league-phase table, the knockout bracket as each draw is made, every qualifying tie and live scores.`,
+        canonical: `${SITE}/europe/${comp.id}/`, base: "../../", suffix, page: "comp", country: "europe", stamps: { europe: europe.updated }, countries,
+        attrs: { league: comp.id, fx: fx ? `fixtures/${suffix}` : "" },
+        main: FP.compMain(comp, fx, { tz: "uk", fixturesHref: fx ? `fixtures/${suffix}` : "" })
+      }));
+      if (fx) await write(`europe/${comp.id}/fixtures/index.html`, shell({
+        title: `${comp.name} fixtures and results ${fx.season} | Football Pyramids`,
+        description: `Every ${comp.name} fixture and result for ${fx.season}, from qualifying to the final, with kick-off times in your time zone and live scores.`,
+        canonical: `${SITE}/europe/${comp.id}/fixtures/`, base: "../../../", suffix, page: "fixtures", country: "europe", stamps: {}, countries,
+        attrs: { league: comp.id, table: `../${suffix}` },
+        main: FP.fixturesMain(fx, { tz: "uk", tableHref: `../${suffix}`, tableText: `${comp.name} table and bracket` })
+      }));
+    }
+  }
+
   // About & contact, and the privacy policy
   const snapshot = countries.some((c) => c.mode !== "live");
   await write(`contact/index.html`, shell({
@@ -280,16 +318,16 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
 
   // For the live-scores worker: which API-Football league IDs belong to which table on the site.
   const live = { season: Number(String(countries[0].season).slice(0, 4)), leagues: {} };
-  for (const c of COUNTRIES) for (const lg of c.leagues) {
+  for (const c of [...COUNTRIES, EUROPE]) for (const lg of c.leagues) {
     for (const g of lg.groups || [{ apiId: lg.apiId }]) live.leagues[g.apiId] = { c: c.country, l: lg.id, ...(g.name ? { g: g.name } : {}) };
   }
   await write("data/live-leagues.json", JSON.stringify(live));
 
   if (!preview) {
     const today = new Date().toISOString().slice(0, 10);
-    const urls = ["/", ...countries.map((c) => `/${c.country}/`), "/contact/", "/privacy/"];
+    const urls = ["/", ...countries.map((c) => `/${c.country}/`), ...(europe ? ["/europe/", ...europe.leagues.map((c) => `/europe/${c.id}/`)] : []), "/contact/", "/privacy/"];
     const past = countries.flatMap((c) => history[c.country].map((h) => `/${c.country}/${slug(h.year)}/`));
-    const fxUrls = Object.keys(fixtures).filter((k) => countries.some((c) => c.country === k.split("/")[0])).map((k) => `/${k}/fixtures/`);
+    const fxUrls = Object.keys(fixtures).filter((k) => (europe && k.startsWith("europe/")) || countries.some((c) => c.country === k.split("/")[0])).map((k) => `/${k}/fixtures/`);
     await write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>hourly</changefreq></url>`).join("\n")}

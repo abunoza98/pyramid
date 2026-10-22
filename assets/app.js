@@ -133,7 +133,10 @@
   var live = null, liveText = "", liveShown = false, lastTables = 0;
   var seasons = null;
   try { seasons = JSON.parse(body.getAttribute("data-seasons") || "null"); } catch (e) {}
-  var MINE = PAGE === "country" ? [COUNTRY] : COUNTRIES;
+  var MINE = PAGE === "country" ? [COUNTRY] : PAGE === "europe" || PAGE === "comp" ? ["europe"] : COUNTRIES;
+  var STATUSES = {}, EUROPE_SUM = null, compFx = null, compFxLoaded = false;
+  try { STATUSES = JSON.parse(body.getAttribute("data-statuses") || "{}"); } catch (e) {}
+  try { EUROPE_SUM = JSON.parse(body.getAttribute("data-europe") || "null"); } catch (e) {}
   // The home page's strip shows every country's games, not just the featured ones.
   var FIXLINKS = {};   // links from each table to its fixtures page
   try { FIXLINKS = JSON.parse(body.getAttribute("data-fixtures") || "{}"); } catch (e) {}
@@ -191,8 +194,17 @@
   function render() {
     if (!MINE.every(function (c) { return official[c]; })) return;
     var withLive = MINE.map(function (c) { return FP.applyLive(official[c], live); });
-    redraw(PAGE === "country" ? FP.countryMain(withLive[0], { seasons: seasons, fixtures: FIXLINKS })
-      : FP.homeMain(withLive, BASE, SUFFIX, OTHERS, { live: live, fixtures: FIXLINKS }));
+    var html;
+    if (PAGE === "country") html = FP.countryMain(withLive[0], { seasons: seasons, fixtures: FIXLINKS });
+    else if (PAGE === "europe") html = FP.europeMain(withLive[0], { statuses: STATUSES, base: "", suffix: SUFFIX });
+    else if (PAGE === "comp") {
+      var id = body.getAttribute("data-league");
+      var comp = withLive[0].leagues.filter(function (l) { return l.id === id; })[0];
+      if (!comp) return;
+      html = FP.compMain(comp, compFx, { tz: fxState.tz, live: live, fixturesHref: body.getAttribute("data-fx") || "" });
+    }
+    else html = FP.homeMain(withLive, BASE, SUFFIX, OTHERS, { live: live, fixtures: FIXLINKS, europe: EUROPE_SUM, statuses: STATUSES });
+    redraw(html);
     applyTabs();
     liveShown = relevant().length > 0;
   }
@@ -229,11 +241,16 @@
   var timer = null;
   function cycle() {
     clearTimeout(timer);
-    if (!window.fetch || !window.FP || (PAGE !== "home" && PAGE !== "country")) return;
+    if (!window.fetch || !window.FP || ["home", "country", "europe", "comp"].indexOf(PAGE) < 0) return;
     if (document.hidden) return;
     var needTables = !lastTables || Date.now() - lastTables > REFRESH_MS;
-    Promise.all([needTables ? refreshTables() : Promise.resolve(false), refreshLive()]).then(function (res) {
-      var tablesChanged = res[0], liveChanged = res[1];
+    // A competition page also needs its fixtures (for the bracket and qualifying ties), once.
+    var needFx = PAGE === "comp" && !compFxLoaded;
+    var fxLoad = needFx ? fetch(BASE + "data/fixtures/europe/" + body.getAttribute("data-league") + ".json?t=" + Date.now(), { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
+      .then(function (d) { compFx = d; compFxLoaded = true; return true; }) : Promise.resolve(false);
+    Promise.all([needTables ? refreshTables() : Promise.resolve(false), refreshLive(), fxLoad]).then(function (res) {
+      var tablesChanged = res[0] || res[2], liveChanged = res[1];
       var anyLive = relevant().some(FP.isLive);
       // Redraw when the tables or scores change, every cycle while a game is on (the clock moves),
       // and once more when the last game drops off so the page goes back to the official tables.
@@ -287,7 +304,8 @@
     var y = window.scrollY;
     $("main-content").innerHTML = FP.fixturesMain(fxData, {
       tz: fxState.tz, group: fxState.group, round: fxState.round, live: live, myClub: myClub, localIsUk: LOCAL_IS_UK,
-      tableHref: body.getAttribute("data-table") || ""
+      tableHref: body.getAttribute("data-table") || "",
+      tableText: COUNTRY === "europe" && fxData ? fxData.name + " table and bracket" : null
     });
     window.scrollTo(0, y);
   }

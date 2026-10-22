@@ -11,7 +11,7 @@
 import { readFile, writeFile, mkdir, rename } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-import { COUNTRIES, NAMES } from "./leagues.mjs";
+import { COUNTRIES, EUROPE, NAMES } from "./leagues.mjs";
 import { api, seasonLabel } from "./update-standings.mjs";
 import { build } from "./build.mjs";
 
@@ -30,7 +30,25 @@ export function roundLabel(r) {
   if (m) return `Round ${m[1]}`;
   m = /^(.*?)\s*-\s*(\d+)$/.exec(s);
   if (m) return `${m[1].charAt(0).toUpperCase()}${m[1].slice(1).toLowerCase()} ${m[2]}`;
+  if (/^\d+(st|nd|rd|th) qualifying round$/i.test(s)) return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
   return s || "Other games";
+}
+
+// European competitions: "Play-offs" is used both for the last qualifying round and (after the league phase)
+// for the knockout play-offs, so name them apart by date. League phase rounds become "Matchday N".
+export function europeRounds(list) {
+  const lp = list.filter((x) => /league stage/i.test(x.round || "")).map((x) => x.f.ts);
+  const start = lp.length ? Math.min(...lp) : Infinity;
+  for (const x of list) {
+    const r = x.round || "";
+    const m = /^league stage\s*-\s*(\d+)$/i.exec(r);
+    if (m) x.round = `Matchday ${m[1]}`;
+    else if (/^play-?offs?$|^playoff round$/i.test(r) || /knockout round play-?offs/i.test(r)) {
+      x.round = x.f.ts < start ? "Qualifying play-offs" : "Knockout play-offs";
+    }
+    x.f.stage = /qualif/i.test(x.round) || x.f.ts < start ? "q" : /^Matchday/.test(x.round) ? "lp" : "ko";
+  }
+  return list;
 }
 
 // One API fixture -> what the pages need.
@@ -46,6 +64,7 @@ export function slim(x, prev) {
   const sc = x.score || {};
   if (sc.halftime?.home != null && f.hg != null) f.ht = [sc.halftime.home, sc.halftime.away];
   if (sc.penalty?.home != null) f.pen = [sc.penalty.home, sc.penalty.away];
+  if (x.teams?.home?.winner === true) f.w = "h"; else if (x.teams?.away?.winner === true) f.w = "a";
   if (x.fixture?.venue?.name) f.v = x.fixture.venue.name;
   if (x.fixture?.periods?.first) f.p1 = x.fixture.periods.first;
   if (x.fixture?.periods?.second) f.p2 = x.fixture.periods.second;
@@ -96,7 +115,7 @@ async function main() {
   };
 
   let saved = 0, failed = 0;
-  for (const c of COUNTRIES) {
+  for (const c of [...COUNTRIES, EUROPE]) {
     for (const cfg of c.leagues) {
       const file = path.join(outRoot, "data", "fixtures", c.country, `${cfg.id}.json`);
       let prev = null;
@@ -109,6 +128,7 @@ async function main() {
         for (const part of parts) {
           const body = await get(part.apiId);
           const list = (body.response || []).map((x) => ({ round: x.league?.round, f: slim(x, prevById.get(x.fixture.id)) }));
+          if (c === EUROPE) europeRounds(list);
           if (!list.length) throw new Error(`no fixtures for league ${part.apiId}`);
           groups.push({ name: part.name, rounds: toRounds(list) });
         }
