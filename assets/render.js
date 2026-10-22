@@ -489,7 +489,7 @@
     if (ucl && opts.clubPaths) { ucl._paths = opts.clubPaths; ucl._root = base; ucl._suffix = suffix; }
     if (ucl) items.push({ key: "ucl", flagOf: "europe", label: ucl.name, lg: ucl,
       opt: { eyebrow: "UEFA · League phase", fixtures: (opts.fixtures || {})["europe/champions-league"],
-        more: { href: base + "europe/champions-league/" + suffix, text: "Champions League bracket, qualifying and past seasons" } } });
+        more: { href: base + "europe/champions-league/" + suffix, text: "Champions League fixtures, knockouts, qualifying and past seasons" } } });
     var tabs = items.map(function (it, i) {
       return '<button type="button" role="tab" class="tf-tab' + (i === 0 ? " on" : "") + '" data-tab="' + it.key + '" aria-selected="' + (i === 0) + '">' +
         flag(it.flagOf) + "<span>" + esc(it.label) + "</span></button>";
