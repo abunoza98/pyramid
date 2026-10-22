@@ -1,0 +1,184 @@
+#!/usr/bin/env node
+// Football Pyramids: writes the website's pages from the data files.
+//
+//   node scripts/build.mjs                 builds into the project folder (what goes live)
+//   node scripts/build.mjs --preview DIR   builds a copy with explicit index.html links, for opening offline
+//
+// Output: index.html, <country>/index.html, data/clubs.json, sitemap.xml, robots.txt
+
+import { readFile, writeFile, mkdir, copyFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
+import { createRequire } from "node:module";
+import path from "node:path";
+import { COUNTRIES, SITE } from "./leagues.mjs";
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const require = createRequire(import.meta.url);
+const FP = require(path.join(ROOT, "assets/render.js"));
+
+const FAVICON = "data:image/svg+xml," + encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#121B2A"/>' +
+  '<rect x="12" y="7" width="8" height="4" rx="1" fill="#8EA2FF"/><rect x="8" y="14" width="16" height="4" rx="1" fill="#8EA2FF"/>' +
+  '<rect x="4" y="21" width="24" height="4" rx="1" fill="#8EA2FF"/></svg>');
+
+const esc = FP.esc;
+
+function shell({ title, description, canonical, base, suffix, page, country, stamps, main, countries }) {
+  const snapshot = countries.some((c) => c.mode !== "live");
+  const home = base || "./";
+  const homeHref = suffix ? base + suffix : home;
+  const nav = countries.map((c) =>
+    `<a href="${base}${c.country}/${suffix}"${c.country === country ? ' aria-current="page"' : ""}>` +
+    `<span class="short">${(COUNTRIES.find((x) => x.country === c.country) || {}).code || c.name.slice(0, 3).toUpperCase()}</span><span class="long">${esc(c.name)}</span></a>`
+  ).join("");
+  return `<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(description)}">
+<link rel="canonical" href="${canonical}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(description)}">
+<meta property="og:url" content="${canonical}">
+<link rel="icon" href="${FAVICON}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="${base}assets/style.css">
+</head>
+<body data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${countries.map((c) => c.country).join(",")}" data-stamps="${esc(JSON.stringify(stamps))}">
+<header class="bar">
+  <div class="bar-inner">
+    <a class="brand" href="${homeHref}" aria-label="Football Pyramids, home">
+      <span class="glyph" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-text" aria-hidden="true"><small>Football</small><span>Pyramids</span></span>
+    </a>
+    <nav class="nav" aria-label="Countries">${nav}</nav>
+    <div class="finder">
+      <label class="sr-only" for="club-find">Find a club</label>
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+      <input id="club-find" type="search" list="club-list" placeholder="Find a club" autocomplete="off" enterkeyhint="search">
+      <datalist id="club-list"></datalist>
+      <button id="club-clear" type="button" aria-label="Clear highlighted club" hidden>×</button>
+    </div>
+  </div>
+</header>
+
+<div class="shell" id="top">
+  <aside class="rail rail-left" aria-label="Advertisement">
+    <div class="stick">
+      <div class="ad" style="--h:600px"><span class="ad-tag">Advertisement</span><span class="ad-size">160 × 600</span><span class="ad-note">Skyscraper</span></div>
+    </div>
+  </aside>
+
+  <main>
+    <div id="main-content">${main}</div>
+    <footer>
+      ${snapshot ? "<p>These are sample standings gathered by hand, and each table shows the date it is from. Live updates start once the data feed is connected.</p>" : "<p>Tables update through the day as results come in.</p>"}
+      <p>Clubs are ranked by points, then by each league's own tie-break rules. Times are UK time.</p>
+      <p>Football Pyramids is an independent site and is not affiliated with any league, federation or club.</p>
+    </footer>
+  </main>
+
+  <aside class="rail rail-right" aria-label="Advertisement">
+    <div class="stick">
+      <div class="ad" style="--h:600px"><span class="ad-tag">Advertisement</span><span class="ad-size">300 × 600</span><span class="ad-note">Half page</span></div>
+      <div class="ad" style="--h:250px"><span class="ad-tag">Advertisement</span><span class="ad-size">300 × 250</span><span class="ad-note">Medium rectangle</span></div>
+    </div>
+  </aside>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script src="${base}assets/render.js"></script>
+<script src="${base}assets/app.js"></script>
+</body>
+</html>
+`;
+}
+
+export async function loadCountries(root = ROOT) {
+  const out = [];
+  for (const cfg of COUNTRIES) {
+    out.push(JSON.parse(await readFile(path.join(root, "data", cfg.country + ".json"), "utf8")));
+  }
+  return out;
+}
+
+function tierNames(c) {
+  const first = c.leagues[0].name, last = c.leagues[c.leagues.length - 1].name;
+  return { first, last };
+}
+
+export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}) {
+  const countries = await loadCountries(root);
+  const suffix = preview ? "index.html" : "";
+  const stamps = Object.fromEntries(countries.map((c) => [c.country, c.updated]));
+  const written = [];
+  const write = async (rel, text) => {
+    const file = path.join(outDir, rel);
+    await mkdir(path.dirname(file), { recursive: true });
+    await writeFile(file, text);
+    written.push(rel);
+  };
+
+  // Home
+  await write("index.html", shell({
+    title: "Football Pyramids: Premier League, La Liga, Bundesliga, Ligue 1 and Serie A tables",
+    description: "Europe's top five league tables on one page, with every tier of each country's football pyramid below them.",
+    canonical: SITE + "/", base: "", suffix, page: "home", stamps, countries,
+    main: FP.homeMain(countries, "", suffix)
+  }));
+
+  // Country pages
+  for (const c of countries) {
+    const { first, last } = tierNames(c);
+    await write(`${c.country}/index.html`, shell({
+      title: `${c.adjective} football pyramid: ${first} to ${last} tables | Football Pyramids`,
+      description: `Every ${c.adjective} league table from ${first} down to ${last} on one page, with promotion and relegation places marked.`,
+      canonical: `${SITE}/${c.country}/`, base: "../", suffix, page: "country", country: c.country,
+      stamps: { [c.country]: c.updated }, countries, main: FP.countryMain(c)
+    }));
+  }
+
+  // Club index for the finder
+  const clubs = [];
+  for (const c of countries) {
+    for (const lg of c.leagues) {
+      for (const g of FP.groupsOf(lg)) {
+        for (const r of g.rows) clubs.push({ team: r.team, country: c.country, countryName: c.name, league: lg.name });
+      }
+    }
+  }
+  clubs.sort((a, b) => a.team.localeCompare(b.team));
+  await write("data/clubs.json", JSON.stringify(clubs));
+
+  if (!preview) {
+    const today = new Date().toISOString().slice(0, 10);
+    const urls = ["/", ...countries.map((c) => `/${c.country}/`)];
+    await write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>hourly</changefreq></url>`).join("\n")}
+</urlset>
+`);
+    await write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
+  } else {
+    // The preview needs its own copy of the assets and data.
+    for (const rel of ["assets/style.css", "assets/render.js", "assets/app.js", ...countries.map((c) => `data/${c.country}.json`)]) {
+      await mkdir(path.dirname(path.join(outDir, rel)), { recursive: true });
+      await copyFile(path.join(root, rel), path.join(outDir, rel));
+    }
+  }
+  return written;
+}
+
+if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
+  const args = process.argv.slice(2);
+  const pi = args.indexOf("--preview");
+  const opts = pi > -1 ? { outDir: path.resolve(args[pi + 1]), preview: true } : {};
+  build(opts).then((files) => console.log(`Built ${files.length} files: ${files.join(", ")}`))
+    .catch((err) => { console.error(`Build failed: ${err.message}`); process.exit(1); });
+}

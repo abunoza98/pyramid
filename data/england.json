@@ -1,0 +1,1167 @@
+{
+ "country": "england",
+ "name": "England",
+ "adjective": "English",
+ "season": "2026–27",
+ "mode": "snapshot",
+ "updated": "2026-10-20T21:52:35+01:00",
+ "belowNote": "National League champions and play-off winner come up",
+ "later": [
+  {
+   "tier": 5,
+   "name": "National League",
+   "clubs": 24
+  },
+  {
+   "tier": 6,
+   "name": "National League North & South",
+   "short": "NL North & South",
+   "clubs": 48
+  }
+ ],
+ "leagues": [
+  {
+   "id": "premier-league",
+   "tier": 1,
+   "name": "Premier League",
+   "short": "PL",
+   "updated": "2026-10-19T21:58:19+01:00",
+   "zones": [
+    {
+     "from": 1,
+     "to": 4,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 5,
+     "to": 5,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 18,
+     "to": 20,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "relegationNote": "18th–20th drop to the Championship",
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Manchester City",
+     "p": 7,
+     "w": 7,
+     "d": 0,
+     "l": 0,
+     "gf": 19,
+     "ga": 7,
+     "pts": 21
+    },
+    {
+     "pos": 2,
+     "team": "Arsenal",
+     "p": 7,
+     "w": 6,
+     "d": 0,
+     "l": 1,
+     "gf": 11,
+     "ga": 5,
+     "pts": 18
+    },
+    {
+     "pos": 3,
+     "team": "Brighton & Hove Albion",
+     "p": 7,
+     "w": 5,
+     "d": 1,
+     "l": 1,
+     "gf": 23,
+     "ga": 5,
+     "pts": 16
+    },
+    {
+     "pos": 4,
+     "team": "Chelsea",
+     "p": 7,
+     "w": 4,
+     "d": 1,
+     "l": 2,
+     "gf": 17,
+     "ga": 13,
+     "pts": 13
+    },
+    {
+     "pos": 5,
+     "team": "Liverpool",
+     "p": 7,
+     "w": 3,
+     "d": 3,
+     "l": 1,
+     "gf": 9,
+     "ga": 8,
+     "pts": 12
+    },
+    {
+     "pos": 6,
+     "team": "Brentford",
+     "p": 7,
+     "w": 2,
+     "d": 4,
+     "l": 1,
+     "gf": 13,
+     "ga": 8,
+     "pts": 10
+    },
+    {
+     "pos": 7,
+     "team": "Leeds United",
+     "p": 7,
+     "w": 2,
+     "d": 4,
+     "l": 1,
+     "gf": 9,
+     "ga": 6,
+     "pts": 10
+    },
+    {
+     "pos": 8,
+     "team": "Everton",
+     "p": 7,
+     "w": 2,
+     "d": 4,
+     "l": 1,
+     "gf": 8,
+     "ga": 7,
+     "pts": 10
+    },
+    {
+     "pos": 9,
+     "team": "Hull City",
+     "p": 7,
+     "w": 2,
+     "d": 3,
+     "l": 2,
+     "gf": 8,
+     "ga": 7,
+     "pts": 9
+    },
+    {
+     "pos": 10,
+     "team": "Ipswich Town",
+     "p": 7,
+     "w": 3,
+     "d": 0,
+     "l": 4,
+     "gf": 11,
+     "ga": 15,
+     "pts": 9
+    },
+    {
+     "pos": 11,
+     "team": "Newcastle United",
+     "p": 7,
+     "w": 2,
+     "d": 2,
+     "l": 3,
+     "gf": 10,
+     "ga": 14,
+     "pts": 8
+    },
+    {
+     "pos": 12,
+     "team": "Aston Villa",
+     "p": 7,
+     "w": 2,
+     "d": 2,
+     "l": 3,
+     "gf": 7,
+     "ga": 11,
+     "pts": 8
+    },
+    {
+     "pos": 13,
+     "team": "Manchester United",
+     "p": 7,
+     "w": 1,
+     "d": 4,
+     "l": 2,
+     "gf": 10,
+     "ga": 10,
+     "pts": 7
+    },
+    {
+     "pos": 14,
+     "team": "Crystal Palace",
+     "p": 7,
+     "w": 2,
+     "d": 1,
+     "l": 4,
+     "gf": 9,
+     "ga": 17,
+     "pts": 7
+    },
+    {
+     "pos": 15,
+     "team": "AFC Bournemouth",
+     "p": 7,
+     "w": 1,
+     "d": 3,
+     "l": 3,
+     "gf": 9,
+     "ga": 13,
+     "pts": 6
+    },
+    {
+     "pos": 16,
+     "team": "Tottenham Hotspur",
+     "p": 7,
+     "w": 1,
+     "d": 3,
+     "l": 3,
+     "gf": 6,
+     "ga": 10,
+     "pts": 6
+    },
+    {
+     "pos": 17,
+     "team": "Coventry City",
+     "p": 7,
+     "w": 2,
+     "d": 0,
+     "l": 5,
+     "gf": 6,
+     "ga": 14,
+     "pts": 6
+    },
+    {
+     "pos": 18,
+     "team": "Fulham",
+     "p": 7,
+     "w": 1,
+     "d": 2,
+     "l": 4,
+     "gf": 7,
+     "ga": 10,
+     "pts": 5
+    },
+    {
+     "pos": 19,
+     "team": "Nottingham Forest",
+     "p": 7,
+     "w": 1,
+     "d": 2,
+     "l": 4,
+     "gf": 5,
+     "ga": 9,
+     "pts": 5
+    },
+    {
+     "pos": 20,
+     "team": "Sunderland",
+     "p": 7,
+     "w": 1,
+     "d": 1,
+     "l": 5,
+     "gf": 6,
+     "ga": 14,
+     "pts": 4
+    }
+   ]
+  },
+  {
+   "id": "championship",
+   "tier": 2,
+   "name": "Championship",
+   "short": "CH",
+   "updated": "2026-10-20T21:41:32+01:00",
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 3,
+     "to": 8,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 22,
+     "to": 24,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "promotionNote": "1st, 2nd and the play-off winner go up",
+   "relegationNote": "22nd–24th drop to League One",
+   "notes": [
+    "Play-offs: 3rd and 4th go straight to the semi-finals; 5th to 8th play eliminators first.",
+    "Southampton: 4 points deducted by the EFL."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Swansea City",
+     "p": 11,
+     "w": 7,
+     "d": 2,
+     "l": 2,
+     "gf": 16,
+     "ga": 8,
+     "pts": 23
+    },
+    {
+     "pos": 2,
+     "team": "West Ham United",
+     "p": 11,
+     "w": 6,
+     "d": 4,
+     "l": 1,
+     "gf": 30,
+     "ga": 12,
+     "pts": 22
+    },
+    {
+     "pos": 3,
+     "team": "Middlesbrough",
+     "p": 11,
+     "w": 6,
+     "d": 4,
+     "l": 1,
+     "gf": 22,
+     "ga": 16,
+     "pts": 22
+    },
+    {
+     "pos": 4,
+     "team": "Birmingham City",
+     "p": 11,
+     "w": 5,
+     "d": 5,
+     "l": 1,
+     "gf": 20,
+     "ga": 11,
+     "pts": 20
+    },
+    {
+     "pos": 5,
+     "team": "West Bromwich Albion",
+     "p": 11,
+     "w": 6,
+     "d": 2,
+     "l": 3,
+     "gf": 15,
+     "ga": 12,
+     "pts": 20
+    },
+    {
+     "pos": 6,
+     "team": "Stoke City",
+     "p": 11,
+     "w": 6,
+     "d": 1,
+     "l": 4,
+     "gf": 18,
+     "ga": 16,
+     "pts": 19
+    },
+    {
+     "pos": 7,
+     "team": "Wolverhampton Wanderers",
+     "p": 11,
+     "w": 5,
+     "d": 3,
+     "l": 3,
+     "gf": 19,
+     "ga": 16,
+     "pts": 18
+    },
+    {
+     "pos": 8,
+     "team": "Southampton",
+     "p": 11,
+     "w": 6,
+     "d": 3,
+     "l": 2,
+     "gf": 21,
+     "ga": 10,
+     "pts": 17,
+     "ded": 4
+    },
+    {
+     "pos": 9,
+     "team": "Queens Park Rangers",
+     "p": 11,
+     "w": 4,
+     "d": 5,
+     "l": 2,
+     "gf": 15,
+     "ga": 12,
+     "pts": 17
+    },
+    {
+     "pos": 10,
+     "team": "Blackburn Rovers",
+     "p": 11,
+     "w": 4,
+     "d": 3,
+     "l": 4,
+     "gf": 17,
+     "ga": 16,
+     "pts": 15
+    },
+    {
+     "pos": 11,
+     "team": "Sheffield United",
+     "p": 11,
+     "w": 4,
+     "d": 3,
+     "l": 4,
+     "gf": 15,
+     "ga": 14,
+     "pts": 15
+    },
+    {
+     "pos": 12,
+     "team": "Millwall",
+     "p": 11,
+     "w": 4,
+     "d": 3,
+     "l": 4,
+     "gf": 18,
+     "ga": 18,
+     "pts": 15
+    },
+    {
+     "pos": 13,
+     "team": "Portsmouth",
+     "p": 11,
+     "w": 4,
+     "d": 3,
+     "l": 4,
+     "gf": 14,
+     "ga": 14,
+     "pts": 15
+    },
+    {
+     "pos": 14,
+     "team": "Wrexham",
+     "p": 11,
+     "w": 3,
+     "d": 5,
+     "l": 3,
+     "gf": 15,
+     "ga": 16,
+     "pts": 14
+    },
+    {
+     "pos": 15,
+     "team": "Bolton Wanderers",
+     "p": 11,
+     "w": 4,
+     "d": 2,
+     "l": 5,
+     "gf": 15,
+     "ga": 18,
+     "pts": 14
+    },
+    {
+     "pos": 16,
+     "team": "Bristol City",
+     "p": 11,
+     "w": 4,
+     "d": 2,
+     "l": 5,
+     "gf": 12,
+     "ga": 15,
+     "pts": 14
+    },
+    {
+     "pos": 17,
+     "team": "Charlton Athletic",
+     "p": 11,
+     "w": 3,
+     "d": 5,
+     "l": 3,
+     "gf": 10,
+     "ga": 15,
+     "pts": 14
+    },
+    {
+     "pos": 18,
+     "team": "Lincoln City",
+     "p": 11,
+     "w": 3,
+     "d": 3,
+     "l": 5,
+     "gf": 9,
+     "ga": 19,
+     "pts": 12
+    },
+    {
+     "pos": 19,
+     "team": "Cardiff City",
+     "p": 11,
+     "w": 2,
+     "d": 5,
+     "l": 4,
+     "gf": 18,
+     "ga": 17,
+     "pts": 11
+    },
+    {
+     "pos": 20,
+     "team": "Watford",
+     "p": 11,
+     "w": 3,
+     "d": 2,
+     "l": 6,
+     "gf": 10,
+     "ga": 19,
+     "pts": 11
+    },
+    {
+     "pos": 21,
+     "team": "Norwich City",
+     "p": 11,
+     "w": 3,
+     "d": 0,
+     "l": 8,
+     "gf": 17,
+     "ga": 21,
+     "pts": 9
+    },
+    {
+     "pos": 22,
+     "team": "Burnley",
+     "p": 11,
+     "w": 1,
+     "d": 5,
+     "l": 5,
+     "gf": 16,
+     "ga": 21,
+     "pts": 8
+    },
+    {
+     "pos": 23,
+     "team": "Derby County",
+     "p": 11,
+     "w": 1,
+     "d": 3,
+     "l": 7,
+     "gf": 9,
+     "ga": 20,
+     "pts": 6
+    },
+    {
+     "pos": 24,
+     "team": "Preston North End",
+     "p": 11,
+     "w": 1,
+     "d": 1,
+     "l": 9,
+     "gf": 9,
+     "ga": 24,
+     "pts": 4
+    }
+   ]
+  },
+  {
+   "id": "league-one",
+   "tier": 3,
+   "name": "League One",
+   "short": "L1",
+   "updated": "2026-10-20T21:43:07+01:00",
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 3,
+     "to": 6,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 21,
+     "to": 24,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "promotionNote": "1st, 2nd and the play-off winner go up",
+   "relegationNote": "21st–24th drop to League Two",
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Stockport County",
+     "p": 11,
+     "w": 7,
+     "d": 1,
+     "l": 3,
+     "gf": 23,
+     "ga": 11,
+     "pts": 22
+    },
+    {
+     "pos": 2,
+     "team": "Huddersfield Town",
+     "p": 11,
+     "w": 6,
+     "d": 4,
+     "l": 1,
+     "gf": 22,
+     "ga": 10,
+     "pts": 22
+    },
+    {
+     "pos": 3,
+     "team": "Bradford City",
+     "p": 11,
+     "w": 6,
+     "d": 3,
+     "l": 2,
+     "gf": 10,
+     "ga": 5,
+     "pts": 21
+    },
+    {
+     "pos": 4,
+     "team": "Cambridge United",
+     "p": 11,
+     "w": 5,
+     "d": 5,
+     "l": 1,
+     "gf": 18,
+     "ga": 14,
+     "pts": 20
+    },
+    {
+     "pos": 5,
+     "team": "Plymouth Argyle",
+     "p": 12,
+     "w": 6,
+     "d": 1,
+     "l": 5,
+     "gf": 18,
+     "ga": 17,
+     "pts": 19
+    },
+    {
+     "pos": 6,
+     "team": "Sheffield Wednesday",
+     "p": 10,
+     "w": 5,
+     "d": 3,
+     "l": 2,
+     "gf": 20,
+     "ga": 10,
+     "pts": 18
+    },
+    {
+     "pos": 7,
+     "team": "Oxford United",
+     "p": 9,
+     "w": 5,
+     "d": 3,
+     "l": 1,
+     "gf": 18,
+     "ga": 10,
+     "pts": 18
+    },
+    {
+     "pos": 8,
+     "team": "Reading",
+     "p": 10,
+     "w": 4,
+     "d": 3,
+     "l": 3,
+     "gf": 22,
+     "ga": 12,
+     "pts": 15
+    },
+    {
+     "pos": 9,
+     "team": "Stevenage",
+     "p": 10,
+     "w": 4,
+     "d": 3,
+     "l": 3,
+     "gf": 15,
+     "ga": 10,
+     "pts": 15
+    },
+    {
+     "pos": 10,
+     "team": "Leicester City",
+     "p": 10,
+     "w": 4,
+     "d": 3,
+     "l": 3,
+     "gf": 16,
+     "ga": 15,
+     "pts": 15
+    },
+    {
+     "pos": 11,
+     "team": "Mansfield Town",
+     "p": 10,
+     "w": 4,
+     "d": 3,
+     "l": 3,
+     "gf": 16,
+     "ga": 15,
+     "pts": 15
+    },
+    {
+     "pos": 12,
+     "team": "Leyton Orient",
+     "p": 10,
+     "w": 4,
+     "d": 2,
+     "l": 4,
+     "gf": 15,
+     "ga": 11,
+     "pts": 14
+    },
+    {
+     "pos": 13,
+     "team": "Luton Town",
+     "p": 10,
+     "w": 4,
+     "d": 2,
+     "l": 4,
+     "gf": 19,
+     "ga": 18,
+     "pts": 14
+    },
+    {
+     "pos": 14,
+     "team": "Burton Albion",
+     "p": 12,
+     "w": 3,
+     "d": 5,
+     "l": 4,
+     "gf": 16,
+     "ga": 18,
+     "pts": 14
+    },
+    {
+     "pos": 15,
+     "team": "Wycombe Wanderers",
+     "p": 11,
+     "w": 3,
+     "d": 5,
+     "l": 3,
+     "gf": 18,
+     "ga": 22,
+     "pts": 14
+    },
+    {
+     "pos": 16,
+     "team": "AFC Wimbledon",
+     "p": 11,
+     "w": 3,
+     "d": 3,
+     "l": 5,
+     "gf": 7,
+     "ga": 18,
+     "pts": 12
+    },
+    {
+     "pos": 17,
+     "team": "Blackpool",
+     "p": 10,
+     "w": 3,
+     "d": 2,
+     "l": 5,
+     "gf": 15,
+     "ga": 16,
+     "pts": 11
+    },
+    {
+     "pos": 18,
+     "team": "Notts County",
+     "p": 10,
+     "w": 2,
+     "d": 4,
+     "l": 4,
+     "gf": 10,
+     "ga": 13,
+     "pts": 10
+    },
+    {
+     "pos": 19,
+     "team": "Doncaster Rovers",
+     "p": 10,
+     "w": 2,
+     "d": 3,
+     "l": 5,
+     "gf": 10,
+     "ga": 13,
+     "pts": 9
+    },
+    {
+     "pos": 20,
+     "team": "Milton Keynes Dons",
+     "p": 10,
+     "w": 1,
+     "d": 6,
+     "l": 3,
+     "gf": 11,
+     "ga": 18,
+     "pts": 9
+    },
+    {
+     "pos": 21,
+     "team": "Peterborough United",
+     "p": 11,
+     "w": 2,
+     "d": 3,
+     "l": 6,
+     "gf": 10,
+     "ga": 20,
+     "pts": 9
+    },
+    {
+     "pos": 22,
+     "team": "Barnsley",
+     "p": 10,
+     "w": 2,
+     "d": 2,
+     "l": 6,
+     "gf": 10,
+     "ga": 19,
+     "pts": 8
+    },
+    {
+     "pos": 23,
+     "team": "Bromley",
+     "p": 10,
+     "w": 2,
+     "d": 2,
+     "l": 6,
+     "gf": 9,
+     "ga": 25,
+     "pts": 8
+    },
+    {
+     "pos": 24,
+     "team": "Wigan Athletic",
+     "p": 10,
+     "w": 2,
+     "d": 1,
+     "l": 7,
+     "gf": 7,
+     "ga": 15,
+     "pts": 7
+    }
+   ]
+  },
+  {
+   "id": "league-two",
+   "tier": 4,
+   "name": "League Two",
+   "short": "L2",
+   "updated": "2026-10-20T21:52:35+01:00",
+   "zones": [
+    {
+     "from": 1,
+     "to": 3,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 4,
+     "to": 7,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 23,
+     "to": 24,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "promotionNote": "1st–3rd and the play-off winner go up",
+   "relegationNote": "23rd–24th drop to the National League",
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Salford City",
+     "p": 12,
+     "w": 8,
+     "d": 1,
+     "l": 3,
+     "gf": 19,
+     "ga": 12,
+     "pts": 25
+    },
+    {
+     "pos": 2,
+     "team": "Barnet",
+     "p": 10,
+     "w": 6,
+     "d": 3,
+     "l": 1,
+     "gf": 23,
+     "ga": 15,
+     "pts": 21
+    },
+    {
+     "pos": 3,
+     "team": "Crewe Alexandra",
+     "p": 12,
+     "w": 5,
+     "d": 6,
+     "l": 1,
+     "gf": 15,
+     "ga": 11,
+     "pts": 21
+    },
+    {
+     "pos": 4,
+     "team": "Walsall",
+     "p": 11,
+     "w": 4,
+     "d": 7,
+     "l": 0,
+     "gf": 16,
+     "ga": 7,
+     "pts": 19
+    },
+    {
+     "pos": 5,
+     "team": "Cheltenham Town",
+     "p": 12,
+     "w": 5,
+     "d": 3,
+     "l": 4,
+     "gf": 21,
+     "ga": 22,
+     "pts": 18
+    },
+    {
+     "pos": 6,
+     "team": "York City",
+     "p": 11,
+     "w": 4,
+     "d": 5,
+     "l": 2,
+     "gf": 19,
+     "ga": 13,
+     "pts": 17
+    },
+    {
+     "pos": 7,
+     "team": "Gillingham",
+     "p": 12,
+     "w": 4,
+     "d": 5,
+     "l": 3,
+     "gf": 17,
+     "ga": 14,
+     "pts": 17
+    },
+    {
+     "pos": 8,
+     "team": "Shrewsbury Town",
+     "p": 12,
+     "w": 5,
+     "d": 2,
+     "l": 5,
+     "gf": 13,
+     "ga": 17,
+     "pts": 17
+    },
+    {
+     "pos": 9,
+     "team": "Chesterfield",
+     "p": 12,
+     "w": 4,
+     "d": 4,
+     "l": 4,
+     "gf": 18,
+     "ga": 16,
+     "pts": 16
+    },
+    {
+     "pos": 10,
+     "team": "Exeter City",
+     "p": 12,
+     "w": 4,
+     "d": 4,
+     "l": 4,
+     "gf": 8,
+     "ga": 6,
+     "pts": 16
+    },
+    {
+     "pos": 11,
+     "team": "Accrington Stanley",
+     "p": 12,
+     "w": 3,
+     "d": 6,
+     "l": 3,
+     "gf": 17,
+     "ga": 16,
+     "pts": 15
+    },
+    {
+     "pos": 12,
+     "team": "Newport County",
+     "p": 12,
+     "w": 3,
+     "d": 6,
+     "l": 3,
+     "gf": 16,
+     "ga": 15,
+     "pts": 15
+    },
+    {
+     "pos": 13,
+     "team": "Tranmere Rovers",
+     "p": 12,
+     "w": 3,
+     "d": 6,
+     "l": 3,
+     "gf": 15,
+     "ga": 15,
+     "pts": 15
+    },
+    {
+     "pos": 14,
+     "team": "Rochdale",
+     "p": 12,
+     "w": 4,
+     "d": 3,
+     "l": 5,
+     "gf": 15,
+     "ga": 17,
+     "pts": 15
+    },
+    {
+     "pos": 15,
+     "team": "Swindon Town",
+     "p": 12,
+     "w": 4,
+     "d": 3,
+     "l": 5,
+     "gf": 13,
+     "ga": 16,
+     "pts": 15
+    },
+    {
+     "pos": 16,
+     "team": "Bristol Rovers",
+     "p": 12,
+     "w": 5,
+     "d": 0,
+     "l": 7,
+     "gf": 16,
+     "ga": 20,
+     "pts": 15
+    },
+    {
+     "pos": 17,
+     "team": "Grimsby Town",
+     "p": 12,
+     "w": 3,
+     "d": 5,
+     "l": 4,
+     "gf": 15,
+     "ga": 15,
+     "pts": 14
+    },
+    {
+     "pos": 18,
+     "team": "Fleetwood Town",
+     "p": 12,
+     "w": 3,
+     "d": 5,
+     "l": 4,
+     "gf": 14,
+     "ga": 15,
+     "pts": 14
+    },
+    {
+     "pos": 19,
+     "team": "Colchester United",
+     "p": 11,
+     "w": 2,
+     "d": 6,
+     "l": 3,
+     "gf": 11,
+     "ga": 14,
+     "pts": 12
+    },
+    {
+     "pos": 20,
+     "team": "Port Vale",
+     "p": 10,
+     "w": 3,
+     "d": 3,
+     "l": 4,
+     "gf": 6,
+     "ga": 10,
+     "pts": 12
+    },
+    {
+     "pos": 21,
+     "team": "Oldham Athletic",
+     "p": 11,
+     "w": 3,
+     "d": 2,
+     "l": 6,
+     "gf": 13,
+     "ga": 17,
+     "pts": 11
+    },
+    {
+     "pos": 22,
+     "team": "Rotherham United",
+     "p": 12,
+     "w": 2,
+     "d": 5,
+     "l": 5,
+     "gf": 14,
+     "ga": 20,
+     "pts": 11
+    },
+    {
+     "pos": 23,
+     "team": "Northampton Town",
+     "p": 10,
+     "w": 2,
+     "d": 4,
+     "l": 4,
+     "gf": 6,
+     "ga": 8,
+     "pts": 10
+    },
+    {
+     "pos": 24,
+     "team": "Crawley Town",
+     "p": 10,
+     "w": 1,
+     "d": 2,
+     "l": 7,
+     "gf": 11,
+     "ga": 20,
+     "pts": 5
+    }
+   ]
+  }
+ ]
+}

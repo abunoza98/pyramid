@@ -1,0 +1,742 @@
+{
+ "country": "germany",
+ "name": "Germany",
+ "adjective": "German",
+ "season": "2026–27",
+ "mode": "snapshot",
+ "belowNote": "Regionalliga champions come up, some through a play-off",
+ "leagues": [
+  {
+   "id": "bundesliga",
+   "tier": 1,
+   "name": "Bundesliga",
+   "short": "BL",
+   "updated": "2026-10-18T18:23:47+01:00",
+   "zones": [
+    {
+     "from": 1,
+     "to": 4,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 5,
+     "to": 5,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 6,
+     "to": 6,
+     "kind": "mid",
+     "label": "Conference League"
+    },
+    {
+     "from": 16,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 17,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "relegationNote": "17th–18th drop to 2. Bundesliga; 16th plays a relegation play-off",
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Bayern Munich",
+     "p": 6,
+     "w": 4,
+     "d": 2,
+     "l": 0,
+     "gf": 22,
+     "ga": 5,
+     "pts": 14
+    },
+    {
+     "pos": 2,
+     "team": "Borussia Dortmund",
+     "p": 6,
+     "w": 4,
+     "d": 2,
+     "l": 0,
+     "gf": 11,
+     "ga": 4,
+     "pts": 14
+    },
+    {
+     "pos": 3,
+     "team": "SC Freiburg",
+     "p": 6,
+     "w": 4,
+     "d": 1,
+     "l": 1,
+     "gf": 15,
+     "ga": 6,
+     "pts": 13
+    },
+    {
+     "pos": 4,
+     "team": "Bayer Leverkusen",
+     "p": 6,
+     "w": 4,
+     "d": 1,
+     "l": 1,
+     "gf": 16,
+     "ga": 9,
+     "pts": 13
+    },
+    {
+     "pos": 5,
+     "team": "Mainz 05",
+     "p": 6,
+     "w": 3,
+     "d": 1,
+     "l": 2,
+     "gf": 14,
+     "ga": 10,
+     "pts": 10
+    },
+    {
+     "pos": 6,
+     "team": "SV Elversberg",
+     "p": 6,
+     "w": 3,
+     "d": 1,
+     "l": 2,
+     "gf": 12,
+     "ga": 11,
+     "pts": 10
+    },
+    {
+     "pos": 7,
+     "team": "RB Leipzig",
+     "p": 6,
+     "w": 3,
+     "d": 0,
+     "l": 3,
+     "gf": 16,
+     "ga": 11,
+     "pts": 9
+    },
+    {
+     "pos": 8,
+     "team": "Werder Bremen",
+     "p": 6,
+     "w": 2,
+     "d": 3,
+     "l": 1,
+     "gf": 12,
+     "ga": 12,
+     "pts": 9
+    },
+    {
+     "pos": 9,
+     "team": "Hamburger SV",
+     "p": 6,
+     "w": 3,
+     "d": 0,
+     "l": 3,
+     "gf": 6,
+     "ga": 15,
+     "pts": 9
+    },
+    {
+     "pos": 10,
+     "team": "FC Augsburg",
+     "p": 6,
+     "w": 2,
+     "d": 2,
+     "l": 2,
+     "gf": 16,
+     "ga": 12,
+     "pts": 8
+    },
+    {
+     "pos": 11,
+     "team": "Eintracht Frankfurt",
+     "p": 6,
+     "w": 2,
+     "d": 2,
+     "l": 2,
+     "gf": 10,
+     "ga": 16,
+     "pts": 8
+    },
+    {
+     "pos": 12,
+     "team": "1. FC Köln",
+     "p": 6,
+     "w": 2,
+     "d": 1,
+     "l": 3,
+     "gf": 8,
+     "ga": 11,
+     "pts": 7
+    },
+    {
+     "pos": 13,
+     "team": "VfB Stuttgart",
+     "p": 6,
+     "w": 2,
+     "d": 0,
+     "l": 4,
+     "gf": 8,
+     "ga": 10,
+     "pts": 6
+    },
+    {
+     "pos": 14,
+     "team": "TSG Hoffenheim",
+     "p": 6,
+     "w": 2,
+     "d": 0,
+     "l": 4,
+     "gf": 11,
+     "ga": 14,
+     "pts": 6
+    },
+    {
+     "pos": 15,
+     "team": "Schalke 04",
+     "p": 6,
+     "w": 1,
+     "d": 2,
+     "l": 3,
+     "gf": 4,
+     "ga": 7,
+     "pts": 5
+    },
+    {
+     "pos": 16,
+     "team": "SC Paderborn",
+     "p": 6,
+     "w": 1,
+     "d": 2,
+     "l": 3,
+     "gf": 5,
+     "ga": 9,
+     "pts": 5
+    },
+    {
+     "pos": 17,
+     "team": "Union Berlin",
+     "p": 6,
+     "w": 1,
+     "d": 2,
+     "l": 3,
+     "gf": 5,
+     "ga": 17,
+     "pts": 5
+    },
+    {
+     "pos": 18,
+     "team": "Borussia Mönchengladbach",
+     "p": 6,
+     "w": 0,
+     "d": 0,
+     "l": 6,
+     "gf": 8,
+     "ga": 20,
+     "pts": 0
+    }
+   ]
+  },
+  {
+   "id": "2-bundesliga",
+   "tier": 2,
+   "name": "2. Bundesliga",
+   "short": "2BL",
+   "updated": "2026-10-18",
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "mid",
+     "label": "Promotion play-off"
+    },
+    {
+     "from": 16,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 17,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "promotionNote": "1st and 2nd go up; 3rd plays the Bundesliga's 16th",
+   "relegationNote": "17th–18th drop to 3. Liga; 16th plays a relegation play-off",
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Hertha BSC",
+     "p": 8,
+     "w": 7,
+     "d": 1,
+     "l": 0,
+     "gf": 19,
+     "ga": 8,
+     "pts": 22
+    },
+    {
+     "pos": 2,
+     "team": "1. FC Nürnberg",
+     "p": 8,
+     "w": 5,
+     "d": 3,
+     "l": 0,
+     "gf": 21,
+     "ga": 11,
+     "pts": 18
+    },
+    {
+     "pos": 3,
+     "team": "VfL Wolfsburg",
+     "p": 8,
+     "w": 4,
+     "d": 3,
+     "l": 1,
+     "gf": 22,
+     "ga": 13,
+     "pts": 15
+    },
+    {
+     "pos": 4,
+     "team": "1. FC Kaiserslautern",
+     "p": 8,
+     "w": 4,
+     "d": 3,
+     "l": 1,
+     "gf": 8,
+     "ga": 4,
+     "pts": 15
+    },
+    {
+     "pos": 5,
+     "team": "1. FC Heidenheim",
+     "p": 8,
+     "w": 4,
+     "d": 2,
+     "l": 2,
+     "gf": 15,
+     "ga": 15,
+     "pts": 14
+    },
+    {
+     "pos": 6,
+     "team": "1. FC Magdeburg",
+     "p": 8,
+     "w": 4,
+     "d": 1,
+     "l": 3,
+     "gf": 14,
+     "ga": 11,
+     "pts": 13
+    },
+    {
+     "pos": 7,
+     "team": "FC St. Pauli",
+     "p": 8,
+     "w": 2,
+     "d": 5,
+     "l": 1,
+     "gf": 11,
+     "ga": 9,
+     "pts": 11
+    },
+    {
+     "pos": 8,
+     "team": "Arminia Bielefeld",
+     "p": 8,
+     "w": 3,
+     "d": 2,
+     "l": 3,
+     "gf": 13,
+     "ga": 13,
+     "pts": 11
+    },
+    {
+     "pos": 9,
+     "team": "Energie Cottbus",
+     "p": 8,
+     "w": 2,
+     "d": 3,
+     "l": 3,
+     "gf": 16,
+     "ga": 17,
+     "pts": 9
+    },
+    {
+     "pos": 10,
+     "team": "Greuther Fürth",
+     "p": 8,
+     "w": 2,
+     "d": 3,
+     "l": 3,
+     "gf": 12,
+     "ga": 13,
+     "pts": 9
+    },
+    {
+     "pos": 11,
+     "team": "Dynamo Dresden",
+     "p": 8,
+     "w": 2,
+     "d": 2,
+     "l": 4,
+     "gf": 11,
+     "ga": 15,
+     "pts": 8
+    },
+    {
+     "pos": 12,
+     "team": "VfL Osnabrück",
+     "p": 8,
+     "w": 2,
+     "d": 2,
+     "l": 4,
+     "gf": 11,
+     "ga": 15,
+     "pts": 8
+    },
+    {
+     "pos": 13,
+     "team": "Karlsruher SC",
+     "p": 8,
+     "w": 2,
+     "d": 2,
+     "l": 4,
+     "gf": 10,
+     "ga": 14,
+     "pts": 8
+    },
+    {
+     "pos": 14,
+     "team": "Hannover 96",
+     "p": 8,
+     "w": 2,
+     "d": 2,
+     "l": 4,
+     "gf": 8,
+     "ga": 13,
+     "pts": 8
+    },
+    {
+     "pos": 15,
+     "team": "Eintracht Braunschweig",
+     "p": 8,
+     "w": 2,
+     "d": 1,
+     "l": 5,
+     "gf": 13,
+     "ga": 15,
+     "pts": 7
+    },
+    {
+     "pos": 16,
+     "team": "VfL Bochum",
+     "p": 8,
+     "w": 2,
+     "d": 1,
+     "l": 5,
+     "gf": 5,
+     "ga": 9,
+     "pts": 7
+    },
+    {
+     "pos": 17,
+     "team": "Darmstadt 98",
+     "p": 8,
+     "w": 2,
+     "d": 1,
+     "l": 5,
+     "gf": 8,
+     "ga": 18,
+     "pts": 7
+    },
+    {
+     "pos": 18,
+     "team": "Holstein Kiel",
+     "p": 8,
+     "w": 0,
+     "d": 5,
+     "l": 3,
+     "gf": 7,
+     "ga": 11,
+     "pts": 5
+    }
+   ]
+  },
+  {
+   "id": "3-liga",
+   "tier": 3,
+   "name": "3. Liga",
+   "short": "3L",
+   "updated": "2026-10-18",
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "mid",
+     "label": "Promotion play-off"
+    },
+    {
+     "from": 17,
+     "to": 20,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "promotionNote": "1st and 2nd go up; 3rd plays 2. Bundesliga's 16th",
+   "relegationNote": "17th–20th drop to the Regionalliga",
+   "notes": [
+    "Reserve teams can't be promoted to the same division as their first team."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "MSV Duisburg",
+     "p": 10,
+     "w": 8,
+     "d": 1,
+     "l": 1,
+     "gf": 27,
+     "ga": 12,
+     "pts": 25
+    },
+    {
+     "pos": 2,
+     "team": "Viktoria Köln",
+     "p": 10,
+     "w": 6,
+     "d": 2,
+     "l": 2,
+     "gf": 27,
+     "ga": 14,
+     "pts": 20
+    },
+    {
+     "pos": 3,
+     "team": "Rot-Weiss Essen",
+     "p": 10,
+     "w": 5,
+     "d": 3,
+     "l": 2,
+     "gf": 18,
+     "ga": 13,
+     "pts": 18
+    },
+    {
+     "pos": 4,
+     "team": "1. FC Saarbrücken",
+     "p": 10,
+     "w": 5,
+     "d": 2,
+     "l": 3,
+     "gf": 24,
+     "ga": 17,
+     "pts": 17
+    },
+    {
+     "pos": 5,
+     "team": "TSG Hoffenheim II",
+     "p": 10,
+     "w": 5,
+     "d": 1,
+     "l": 4,
+     "gf": 20,
+     "ga": 15,
+     "pts": 16
+    },
+    {
+     "pos": 6,
+     "team": "Hansa Rostock",
+     "p": 10,
+     "w": 4,
+     "d": 3,
+     "l": 3,
+     "gf": 17,
+     "ga": 19,
+     "pts": 15
+    },
+    {
+     "pos": 7,
+     "team": "VfB Stuttgart II",
+     "p": 10,
+     "w": 4,
+     "d": 2,
+     "l": 4,
+     "gf": 17,
+     "ga": 18,
+     "pts": 14
+    },
+    {
+     "pos": 8,
+     "team": "Alemannia Aachen",
+     "p": 10,
+     "w": 4,
+     "d": 2,
+     "l": 4,
+     "gf": 15,
+     "ga": 16,
+     "pts": 14
+    },
+    {
+     "pos": 9,
+     "team": "FC Ingolstadt",
+     "p": 10,
+     "w": 4,
+     "d": 2,
+     "l": 4,
+     "gf": 13,
+     "ga": 15,
+     "pts": 14
+    },
+    {
+     "pos": 10,
+     "team": "Fortuna Düsseldorf",
+     "p": 10,
+     "w": 4,
+     "d": 2,
+     "l": 4,
+     "gf": 11,
+     "ga": 13,
+     "pts": 14
+    },
+    {
+     "pos": 11,
+     "team": "Waldhof Mannheim",
+     "p": 10,
+     "w": 4,
+     "d": 1,
+     "l": 5,
+     "gf": 16,
+     "ga": 16,
+     "pts": 13
+    },
+    {
+     "pos": 12,
+     "team": "Preußen Münster",
+     "p": 10,
+     "w": 3,
+     "d": 3,
+     "l": 4,
+     "gf": 18,
+     "ga": 21,
+     "pts": 12
+    },
+    {
+     "pos": 13,
+     "team": "Wehen Wiesbaden",
+     "p": 10,
+     "w": 3,
+     "d": 3,
+     "l": 4,
+     "gf": 12,
+     "ga": 15,
+     "pts": 12
+    },
+    {
+     "pos": 14,
+     "team": "SC Verl",
+     "p": 10,
+     "w": 3,
+     "d": 3,
+     "l": 4,
+     "gf": 15,
+     "ga": 19,
+     "pts": 12
+    },
+    {
+     "pos": 15,
+     "team": "Sonnenhof Großaspach",
+     "p": 10,
+     "w": 3,
+     "d": 3,
+     "l": 4,
+     "gf": 12,
+     "ga": 18,
+     "pts": 12
+    },
+    {
+     "pos": 16,
+     "team": "Würzburger Kickers",
+     "p": 10,
+     "w": 3,
+     "d": 2,
+     "l": 5,
+     "gf": 15,
+     "ga": 19,
+     "pts": 11
+    },
+    {
+     "pos": 17,
+     "team": "SV Meppen",
+     "p": 10,
+     "w": 3,
+     "d": 2,
+     "l": 5,
+     "gf": 12,
+     "ga": 17,
+     "pts": 11
+    },
+    {
+     "pos": 18,
+     "team": "Jahn Regensburg",
+     "p": 10,
+     "w": 2,
+     "d": 4,
+     "l": 4,
+     "gf": 20,
+     "ga": 19,
+     "pts": 10
+    },
+    {
+     "pos": 19,
+     "team": "Fortuna Köln",
+     "p": 10,
+     "w": 2,
+     "d": 4,
+     "l": 4,
+     "gf": 8,
+     "ga": 11,
+     "pts": 10
+    },
+    {
+     "pos": 20,
+     "team": "TSV Havelse",
+     "p": 10,
+     "w": 1,
+     "d": 3,
+     "l": 6,
+     "gf": 13,
+     "ga": 23,
+     "pts": 6
+    }
+   ]
+  }
+ ],
+ "updated": "2026-10-18T18:23:47+01:00"
+}

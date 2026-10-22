@@ -1,0 +1,1249 @@
+{
+ "country": "italy",
+ "name": "Italy",
+ "adjective": "Italian",
+ "season": "2026–27",
+ "mode": "snapshot",
+ "belowNote": "Serie D group winners come up",
+ "leagues": [
+  {
+   "id": "serie-a",
+   "tier": 1,
+   "name": "Serie A",
+   "short": "SA",
+   "updated": "2026-10-19T21:37:46+01:00",
+   "zones": [
+    {
+     "from": 1,
+     "to": 4,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 5,
+     "to": 5,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 6,
+     "to": 6,
+     "kind": "mid",
+     "label": "Conference League"
+    },
+    {
+     "from": 18,
+     "to": 20,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "relegationNote": "18th–20th drop to Serie B",
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Inter Milan",
+     "p": 7,
+     "w": 6,
+     "d": 1,
+     "l": 0,
+     "gf": 21,
+     "ga": 9,
+     "pts": 19
+    },
+    {
+     "pos": 2,
+     "team": "Lazio",
+     "p": 7,
+     "w": 6,
+     "d": 1,
+     "l": 0,
+     "gf": 14,
+     "ga": 4,
+     "pts": 19
+    },
+    {
+     "pos": 3,
+     "team": "Roma",
+     "p": 7,
+     "w": 5,
+     "d": 2,
+     "l": 0,
+     "gf": 16,
+     "ga": 3,
+     "pts": 17
+    },
+    {
+     "pos": 4,
+     "team": "AC Milan",
+     "p": 7,
+     "w": 4,
+     "d": 3,
+     "l": 0,
+     "gf": 14,
+     "ga": 7,
+     "pts": 15
+    },
+    {
+     "pos": 5,
+     "team": "Como",
+     "p": 7,
+     "w": 4,
+     "d": 2,
+     "l": 1,
+     "gf": 12,
+     "ga": 7,
+     "pts": 14
+    },
+    {
+     "pos": 6,
+     "team": "Frosinone",
+     "p": 7,
+     "w": 4,
+     "d": 1,
+     "l": 2,
+     "gf": 13,
+     "ga": 9,
+     "pts": 13
+    },
+    {
+     "pos": 7,
+     "team": "Cagliari",
+     "p": 7,
+     "w": 4,
+     "d": 1,
+     "l": 2,
+     "gf": 6,
+     "ga": 7,
+     "pts": 13
+    },
+    {
+     "pos": 8,
+     "team": "Juventus",
+     "p": 7,
+     "w": 3,
+     "d": 2,
+     "l": 2,
+     "gf": 9,
+     "ga": 8,
+     "pts": 11
+    },
+    {
+     "pos": 9,
+     "team": "Napoli",
+     "p": 7,
+     "w": 3,
+     "d": 1,
+     "l": 3,
+     "gf": 10,
+     "ga": 7,
+     "pts": 10
+    },
+    {
+     "pos": 10,
+     "team": "Torino",
+     "p": 7,
+     "w": 3,
+     "d": 1,
+     "l": 3,
+     "gf": 10,
+     "ga": 9,
+     "pts": 10
+    },
+    {
+     "pos": 11,
+     "team": "Atalanta",
+     "p": 7,
+     "w": 3,
+     "d": 0,
+     "l": 4,
+     "gf": 10,
+     "ga": 11,
+     "pts": 9
+    },
+    {
+     "pos": 12,
+     "team": "Lecce",
+     "p": 7,
+     "w": 3,
+     "d": 0,
+     "l": 4,
+     "gf": 9,
+     "ga": 12,
+     "pts": 9
+    },
+    {
+     "pos": 13,
+     "team": "Sassuolo",
+     "p": 7,
+     "w": 2,
+     "d": 2,
+     "l": 3,
+     "gf": 12,
+     "ga": 14,
+     "pts": 8
+    },
+    {
+     "pos": 14,
+     "team": "Monza",
+     "p": 7,
+     "w": 2,
+     "d": 1,
+     "l": 4,
+     "gf": 13,
+     "ga": 15,
+     "pts": 7
+    },
+    {
+     "pos": 15,
+     "team": "Bologna",
+     "p": 7,
+     "w": 1,
+     "d": 2,
+     "l": 4,
+     "gf": 6,
+     "ga": 10,
+     "pts": 5
+    },
+    {
+     "pos": 16,
+     "team": "Udinese",
+     "p": 7,
+     "w": 1,
+     "d": 1,
+     "l": 5,
+     "gf": 9,
+     "ga": 16,
+     "pts": 4
+    },
+    {
+     "pos": 17,
+     "team": "Genoa",
+     "p": 7,
+     "w": 1,
+     "d": 1,
+     "l": 5,
+     "gf": 5,
+     "ga": 13,
+     "pts": 4
+    },
+    {
+     "pos": 18,
+     "team": "Fiorentina",
+     "p": 7,
+     "w": 1,
+     "d": 1,
+     "l": 5,
+     "gf": 8,
+     "ga": 17,
+     "pts": 4
+    },
+    {
+     "pos": 19,
+     "team": "Parma",
+     "p": 7,
+     "w": 1,
+     "d": 1,
+     "l": 5,
+     "gf": 4,
+     "ga": 13,
+     "pts": 4
+    },
+    {
+     "pos": 20,
+     "team": "Venezia",
+     "p": 7,
+     "w": 1,
+     "d": 0,
+     "l": 6,
+     "gf": 6,
+     "ga": 16,
+     "pts": 3
+    }
+   ]
+  },
+  {
+   "id": "serie-b",
+   "tier": 2,
+   "name": "Serie B",
+   "short": "SB",
+   "updated": "2026-10-21T14:52:00+02:00",
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 3,
+     "to": 8,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 16,
+     "to": 17,
+     "kind": "down",
+     "label": "Play-out"
+    },
+    {
+     "from": 18,
+     "to": 20,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "promotionNote": "1st, 2nd and the play-off winner go up",
+   "relegationNote": "18th–20th drop to Serie C; 16th and 17th play a play-out",
+   "notes": [
+    "Play-offs: 3rd and 4th go straight to the semi-finals; 5th to 8th play a preliminary round first.",
+    "Juve Stabia: 4 points deducted."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Palermo",
+     "p": 7,
+     "w": 6,
+     "d": 1,
+     "l": 0,
+     "gf": 16,
+     "ga": 7,
+     "pts": 19
+    },
+    {
+     "pos": 2,
+     "team": "Mantova",
+     "p": 7,
+     "w": 4,
+     "d": 2,
+     "l": 1,
+     "gf": 13,
+     "ga": 8,
+     "pts": 14
+    },
+    {
+     "pos": 3,
+     "team": "Pisa",
+     "p": 7,
+     "w": 4,
+     "d": 1,
+     "l": 2,
+     "gf": 14,
+     "ga": 9,
+     "pts": 13
+    },
+    {
+     "pos": 4,
+     "team": "Modena",
+     "p": 7,
+     "w": 4,
+     "d": 1,
+     "l": 2,
+     "gf": 12,
+     "ga": 8,
+     "pts": 13
+    },
+    {
+     "pos": 5,
+     "team": "Südtirol",
+     "p": 7,
+     "w": 3,
+     "d": 3,
+     "l": 1,
+     "gf": 9,
+     "ga": 6,
+     "pts": 12
+    },
+    {
+     "pos": 6,
+     "team": "Ascoli",
+     "p": 7,
+     "w": 3,
+     "d": 3,
+     "l": 1,
+     "gf": 8,
+     "ga": 5,
+     "pts": 12
+    },
+    {
+     "pos": 7,
+     "team": "Avellino",
+     "p": 7,
+     "w": 3,
+     "d": 2,
+     "l": 2,
+     "gf": 12,
+     "ga": 8,
+     "pts": 11
+    },
+    {
+     "pos": 8,
+     "team": "Benevento",
+     "p": 7,
+     "w": 3,
+     "d": 2,
+     "l": 2,
+     "gf": 10,
+     "ga": 7,
+     "pts": 11
+    },
+    {
+     "pos": 9,
+     "team": "Arezzo",
+     "p": 7,
+     "w": 3,
+     "d": 1,
+     "l": 3,
+     "gf": 8,
+     "ga": 14,
+     "pts": 10
+    },
+    {
+     "pos": 10,
+     "team": "Virtus Entella",
+     "p": 7,
+     "w": 2,
+     "d": 3,
+     "l": 2,
+     "gf": 10,
+     "ga": 8,
+     "pts": 9
+    },
+    {
+     "pos": 11,
+     "team": "Hellas Verona",
+     "p": 7,
+     "w": 2,
+     "d": 2,
+     "l": 3,
+     "gf": 14,
+     "ga": 12,
+     "pts": 8
+    },
+    {
+     "pos": 12,
+     "team": "Cesena",
+     "p": 7,
+     "w": 1,
+     "d": 5,
+     "l": 1,
+     "gf": 8,
+     "ga": 9,
+     "pts": 8
+    },
+    {
+     "pos": 13,
+     "team": "Carrarese",
+     "p": 7,
+     "w": 2,
+     "d": 1,
+     "l": 4,
+     "gf": 6,
+     "ga": 7,
+     "pts": 7
+    },
+    {
+     "pos": 14,
+     "team": "Empoli",
+     "p": 7,
+     "w": 2,
+     "d": 1,
+     "l": 4,
+     "gf": 7,
+     "ga": 11,
+     "pts": 7
+    },
+    {
+     "pos": 15,
+     "team": "Padova",
+     "p": 7,
+     "w": 2,
+     "d": 1,
+     "l": 4,
+     "gf": 6,
+     "ga": 10,
+     "pts": 7
+    },
+    {
+     "pos": 16,
+     "team": "Cremonese",
+     "p": 7,
+     "w": 1,
+     "d": 3,
+     "l": 3,
+     "gf": 6,
+     "ga": 10,
+     "pts": 6
+    },
+    {
+     "pos": 17,
+     "team": "Vicenza",
+     "p": 7,
+     "w": 1,
+     "d": 3,
+     "l": 3,
+     "gf": 9,
+     "ga": 15,
+     "pts": 6
+    },
+    {
+     "pos": 18,
+     "team": "Juve Stabia",
+     "p": 7,
+     "w": 2,
+     "d": 3,
+     "l": 2,
+     "gf": 8,
+     "ga": 8,
+     "pts": 5,
+     "ded": 4
+    },
+    {
+     "pos": 19,
+     "team": "Catanzaro",
+     "p": 7,
+     "w": 1,
+     "d": 1,
+     "l": 5,
+     "gf": 8,
+     "ga": 14,
+     "pts": 4
+    },
+    {
+     "pos": 20,
+     "team": "Sampdoria",
+     "p": 7,
+     "w": 1,
+     "d": 1,
+     "l": 5,
+     "gf": 7,
+     "ga": 15,
+     "pts": 4
+    }
+   ]
+  },
+  {
+   "id": "serie-c",
+   "tier": 3,
+   "name": "Serie C",
+   "short": "SC",
+   "updated": "2026-10-21",
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 2,
+     "to": 10,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 17,
+     "to": 18,
+     "kind": "down",
+     "label": "Play-out"
+    },
+    {
+     "from": 19,
+     "to": 20,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "promotionNote": "Each group winner goes up, plus one play-off winner",
+   "relegationNote": "19th–20th in each group drop to Serie D; 17th and 18th play a play-out",
+   "notes": [
+    "Crotone: 6 points deducted."
+   ],
+   "groups": [
+    {
+     "name": "Girone A",
+     "updated": "2026-10-21",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Cittadella",
+       "p": 10,
+       "w": 9,
+       "d": 0,
+       "l": 1,
+       "gf": 17,
+       "ga": 4,
+       "pts": 27
+      },
+      {
+       "pos": 2,
+       "team": "Trento",
+       "p": 10,
+       "w": 5,
+       "d": 5,
+       "l": 0,
+       "gf": 15,
+       "ga": 5,
+       "pts": 20
+      },
+      {
+       "pos": 3,
+       "team": "Union Brescia",
+       "p": 10,
+       "w": 5,
+       "d": 4,
+       "l": 1,
+       "gf": 17,
+       "ga": 8,
+       "pts": 19
+      },
+      {
+       "pos": 4,
+       "team": "Ospitaletto",
+       "p": 10,
+       "w": 5,
+       "d": 3,
+       "l": 2,
+       "gf": 17,
+       "ga": 9,
+       "pts": 18
+      },
+      {
+       "pos": 5,
+       "team": "Arzignano Valchiampo",
+       "p": 10,
+       "w": 5,
+       "d": 2,
+       "l": 3,
+       "gf": 14,
+       "ga": 11,
+       "pts": 17
+      },
+      {
+       "pos": 6,
+       "team": "Treviso",
+       "p": 10,
+       "w": 4,
+       "d": 4,
+       "l": 2,
+       "gf": 10,
+       "ga": 7,
+       "pts": 16
+      },
+      {
+       "pos": 7,
+       "team": "Alcione Milano",
+       "p": 10,
+       "w": 3,
+       "d": 6,
+       "l": 1,
+       "gf": 17,
+       "ga": 15,
+       "pts": 15
+      },
+      {
+       "pos": 8,
+       "team": "Pergolettese",
+       "p": 10,
+       "w": 3,
+       "d": 5,
+       "l": 2,
+       "gf": 8,
+       "ga": 8,
+       "pts": 14
+      },
+      {
+       "pos": 9,
+       "team": "Lecco",
+       "p": 10,
+       "w": 3,
+       "d": 4,
+       "l": 3,
+       "gf": 12,
+       "ga": 9,
+       "pts": 13
+      },
+      {
+       "pos": 10,
+       "team": "AlbinoLeffe",
+       "p": 10,
+       "w": 3,
+       "d": 4,
+       "l": 3,
+       "gf": 16,
+       "ga": 15,
+       "pts": 13
+      },
+      {
+       "pos": 11,
+       "team": "Desenzano",
+       "p": 10,
+       "w": 3,
+       "d": 4,
+       "l": 3,
+       "gf": 9,
+       "ga": 11,
+       "pts": 13
+      },
+      {
+       "pos": 12,
+       "team": "Lumezzane",
+       "p": 10,
+       "w": 3,
+       "d": 3,
+       "l": 4,
+       "gf": 11,
+       "ga": 14,
+       "pts": 12
+      },
+      {
+       "pos": 13,
+       "team": "Novara",
+       "p": 10,
+       "w": 2,
+       "d": 4,
+       "l": 4,
+       "gf": 10,
+       "ga": 14,
+       "pts": 10
+      },
+      {
+       "pos": 14,
+       "team": "Juventus Next Gen",
+       "p": 10,
+       "w": 2,
+       "d": 4,
+       "l": 4,
+       "gf": 10,
+       "ga": 16,
+       "pts": 10
+      },
+      {
+       "pos": 15,
+       "team": "Dolomiti Bellunesi",
+       "p": 10,
+       "w": 2,
+       "d": 4,
+       "l": 4,
+       "gf": 7,
+       "ga": 12,
+       "pts": 10
+      },
+      {
+       "pos": 16,
+       "team": "Pro Vercelli",
+       "p": 10,
+       "w": 2,
+       "d": 3,
+       "l": 5,
+       "gf": 8,
+       "ga": 18,
+       "pts": 9
+      },
+      {
+       "pos": 17,
+       "team": "Carpi",
+       "p": 10,
+       "w": 2,
+       "d": 3,
+       "l": 5,
+       "gf": 14,
+       "ga": 20,
+       "pts": 9
+      },
+      {
+       "pos": 18,
+       "team": "Giana Erminio",
+       "p": 10,
+       "w": 1,
+       "d": 5,
+       "l": 4,
+       "gf": 10,
+       "ga": 13,
+       "pts": 8
+      },
+      {
+       "pos": 19,
+       "team": "Folgore Caratese",
+       "p": 10,
+       "w": 1,
+       "d": 3,
+       "l": 6,
+       "gf": 9,
+       "ga": 15,
+       "pts": 6
+      },
+      {
+       "pos": 20,
+       "team": "Renate",
+       "p": 10,
+       "w": 0,
+       "d": 4,
+       "l": 6,
+       "gf": 9,
+       "ga": 16,
+       "pts": 4
+      }
+     ]
+    },
+    {
+     "name": "Girone B",
+     "updated": "2026-09-06",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Reggiana",
+       "p": 3,
+       "w": 2,
+       "d": 1,
+       "l": 0,
+       "gf": 6,
+       "ga": 3,
+       "pts": 7
+      },
+      {
+       "pos": 2,
+       "team": "Grosseto",
+       "p": 3,
+       "w": 2,
+       "d": 1,
+       "l": 0,
+       "gf": 5,
+       "ga": 2,
+       "pts": 7
+      },
+      {
+       "pos": 3,
+       "team": "Perugia",
+       "p": 3,
+       "w": 2,
+       "d": 1,
+       "l": 0,
+       "gf": 5,
+       "ga": 3,
+       "pts": 7
+      },
+      {
+       "pos": 4,
+       "team": "Spezia",
+       "p": 3,
+       "w": 2,
+       "d": 1,
+       "l": 0,
+       "gf": 4,
+       "ga": 2,
+       "pts": 7
+      },
+      {
+       "pos": 5,
+       "team": "Livorno",
+       "p": 3,
+       "w": 2,
+       "d": 1,
+       "l": 0,
+       "gf": 3,
+       "ga": 1,
+       "pts": 7
+      },
+      {
+       "pos": 6,
+       "team": "Guidonia Montecelio",
+       "p": 3,
+       "w": 2,
+       "d": 0,
+       "l": 1,
+       "gf": 5,
+       "ga": 2,
+       "pts": 6
+      },
+      {
+       "pos": 7,
+       "team": "Ravenna",
+       "p": 3,
+       "w": 1,
+       "d": 2,
+       "l": 0,
+       "gf": 4,
+       "ga": 2,
+       "pts": 5
+      },
+      {
+       "pos": 8,
+       "team": "Forlì",
+       "p": 3,
+       "w": 1,
+       "d": 1,
+       "l": 1,
+       "gf": 8,
+       "ga": 7,
+       "pts": 4
+      },
+      {
+       "pos": 9,
+       "team": "Latina",
+       "p": 3,
+       "w": 1,
+       "d": 1,
+       "l": 1,
+       "gf": 3,
+       "ga": 3,
+       "pts": 4
+      },
+      {
+       "pos": 10,
+       "team": "Vado",
+       "p": 3,
+       "w": 1,
+       "d": 1,
+       "l": 1,
+       "gf": 3,
+       "ga": 3,
+       "pts": 4
+      },
+      {
+       "pos": 11,
+       "team": "Pescara",
+       "p": 3,
+       "w": 1,
+       "d": 1,
+       "l": 1,
+       "gf": 5,
+       "ga": 6,
+       "pts": 4
+      },
+      {
+       "pos": 12,
+       "team": "Campobasso",
+       "p": 3,
+       "w": 1,
+       "d": 0,
+       "l": 2,
+       "gf": 4,
+       "ga": 5,
+       "pts": 3
+      },
+      {
+       "pos": 13,
+       "team": "Ostia Mare",
+       "p": 3,
+       "w": 1,
+       "d": 0,
+       "l": 2,
+       "gf": 3,
+       "ga": 4,
+       "pts": 3
+      },
+      {
+       "pos": 14,
+       "team": "Gubbio",
+       "p": 3,
+       "w": 1,
+       "d": 0,
+       "l": 2,
+       "gf": 5,
+       "ga": 7,
+       "pts": 3
+      },
+      {
+       "pos": 15,
+       "team": "Atalanta U23",
+       "p": 3,
+       "w": 1,
+       "d": 0,
+       "l": 2,
+       "gf": 2,
+       "ga": 4,
+       "pts": 3
+      },
+      {
+       "pos": 16,
+       "team": "Torres",
+       "p": 3,
+       "w": 1,
+       "d": 0,
+       "l": 2,
+       "gf": 2,
+       "ga": 4,
+       "pts": 3
+      },
+      {
+       "pos": 17,
+       "team": "Pineto",
+       "p": 3,
+       "w": 0,
+       "d": 2,
+       "l": 1,
+       "gf": 1,
+       "ga": 2,
+       "pts": 2
+      },
+      {
+       "pos": 18,
+       "team": "Sambenedettese",
+       "p": 3,
+       "w": 0,
+       "d": 1,
+       "l": 2,
+       "gf": 3,
+       "ga": 5,
+       "pts": 1
+      },
+      {
+       "pos": 19,
+       "team": "Vis Pesaro",
+       "p": 3,
+       "w": 0,
+       "d": 1,
+       "l": 2,
+       "gf": 3,
+       "ga": 6,
+       "pts": 1
+      },
+      {
+       "pos": 20,
+       "team": "Pianese",
+       "p": 3,
+       "w": 0,
+       "d": 1,
+       "l": 2,
+       "gf": 0,
+       "ga": 3,
+       "pts": 1
+      }
+     ]
+    },
+    {
+     "name": "Girone C",
+     "updated": "2026-09-06",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Potenza",
+       "p": 3,
+       "w": 3,
+       "d": 0,
+       "l": 0,
+       "gf": 7,
+       "ga": 2,
+       "pts": 9
+      },
+      {
+       "pos": 2,
+       "team": "Sorrento",
+       "p": 3,
+       "w": 3,
+       "d": 0,
+       "l": 0,
+       "gf": 5,
+       "ga": 1,
+       "pts": 9
+      },
+      {
+       "pos": 3,
+       "team": "Picerno",
+       "p": 2,
+       "w": 2,
+       "d": 0,
+       "l": 0,
+       "gf": 5,
+       "ga": 2,
+       "pts": 6
+      },
+      {
+       "pos": 4,
+       "team": "Audace Cerignola",
+       "p": 3,
+       "w": 2,
+       "d": 0,
+       "l": 1,
+       "gf": 6,
+       "ga": 4,
+       "pts": 6
+      },
+      {
+       "pos": 5,
+       "team": "Bari",
+       "p": 3,
+       "w": 2,
+       "d": 0,
+       "l": 1,
+       "gf": 4,
+       "ga": 3,
+       "pts": 6
+      },
+      {
+       "pos": 6,
+       "team": "Barletta",
+       "p": 3,
+       "w": 1,
+       "d": 2,
+       "l": 0,
+       "gf": 8,
+       "ga": 5,
+       "pts": 5
+      },
+      {
+       "pos": 7,
+       "team": "Casertana",
+       "p": 3,
+       "w": 1,
+       "d": 2,
+       "l": 0,
+       "gf": 7,
+       "ga": 6,
+       "pts": 5
+      },
+      {
+       "pos": 8,
+       "team": "Inter Milan U23",
+       "p": 2,
+       "w": 1,
+       "d": 1,
+       "l": 0,
+       "gf": 3,
+       "ga": 2,
+       "pts": 4
+      },
+      {
+       "pos": 9,
+       "team": "Cavese",
+       "p": 3,
+       "w": 1,
+       "d": 1,
+       "l": 1,
+       "gf": 4,
+       "ga": 5,
+       "pts": 4
+      },
+      {
+       "pos": 10,
+       "team": "Altamura",
+       "p": 3,
+       "w": 1,
+       "d": 1,
+       "l": 1,
+       "gf": 2,
+       "ga": 3,
+       "pts": 4
+      },
+      {
+       "pos": 11,
+       "team": "Foggia",
+       "p": 3,
+       "w": 1,
+       "d": 1,
+       "l": 1,
+       "gf": 2,
+       "ga": 3,
+       "pts": 4
+      },
+      {
+       "pos": 12,
+       "team": "Savoia",
+       "p": 3,
+       "w": 1,
+       "d": 0,
+       "l": 2,
+       "gf": 5,
+       "ga": 5,
+       "pts": 3
+      },
+      {
+       "pos": 13,
+       "team": "Monopoli",
+       "p": 3,
+       "w": 1,
+       "d": 0,
+       "l": 2,
+       "gf": 2,
+       "ga": 2,
+       "pts": 3
+      },
+      {
+       "pos": 14,
+       "team": "Casarano",
+       "p": 3,
+       "w": 1,
+       "d": 0,
+       "l": 2,
+       "gf": 5,
+       "ga": 8,
+       "pts": 3
+      },
+      {
+       "pos": 15,
+       "team": "Salernitana",
+       "p": 3,
+       "w": 0,
+       "d": 2,
+       "l": 1,
+       "gf": 3,
+       "ga": 4,
+       "pts": 2
+      },
+      {
+       "pos": 16,
+       "team": "Scafatese",
+       "p": 3,
+       "w": 0,
+       "d": 2,
+       "l": 1,
+       "gf": 5,
+       "ga": 7,
+       "pts": 2
+      },
+      {
+       "pos": 17,
+       "team": "Giugliano",
+       "p": 3,
+       "w": 0,
+       "d": 1,
+       "l": 2,
+       "gf": 6,
+       "ga": 9,
+       "pts": 1
+      },
+      {
+       "pos": 18,
+       "team": "Cosenza",
+       "p": 2,
+       "w": 0,
+       "d": 0,
+       "l": 2,
+       "gf": 2,
+       "ga": 5,
+       "pts": 0
+      },
+      {
+       "pos": 19,
+       "team": "Catania",
+       "p": 2,
+       "w": 0,
+       "d": 0,
+       "l": 2,
+       "gf": 1,
+       "ga": 4,
+       "pts": 0
+      },
+      {
+       "pos": 20,
+       "team": "Crotone",
+       "p": 3,
+       "w": 0,
+       "d": 1,
+       "l": 2,
+       "gf": 2,
+       "ga": 4,
+       "pts": -5,
+       "ded": 6
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "updated": "2026-10-21T14:52:00+02:00"
+}

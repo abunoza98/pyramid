@@ -1,0 +1,726 @@
+{
+ "country": "france",
+ "name": "France",
+ "adjective": "French",
+ "season": "2026–27",
+ "mode": "snapshot",
+ "belowNote": "Promoted clubs from National 1 come up",
+ "leagues": [
+  {
+   "id": "ligue-1",
+   "tier": 1,
+   "name": "Ligue 1",
+   "short": "L1",
+   "updated": "2026-10-18T21:42:00+01:00",
+   "zones": [
+    {
+     "from": 1,
+     "to": 3,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 4,
+     "to": 4,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 5,
+     "to": 5,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 6,
+     "to": 6,
+     "kind": "mid",
+     "label": "Conference League"
+    },
+    {
+     "from": 16,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 17,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "relegationNote": "17th–18th drop to Ligue 2; 16th plays a relegation play-off",
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Lyon",
+     "p": 7,
+     "w": 4,
+     "d": 2,
+     "l": 1,
+     "gf": 13,
+     "ga": 5,
+     "pts": 14
+    },
+    {
+     "pos": 2,
+     "team": "Paris Saint-Germain",
+     "p": 7,
+     "w": 4,
+     "d": 2,
+     "l": 1,
+     "gf": 14,
+     "ga": 9,
+     "pts": 14
+    },
+    {
+     "pos": 3,
+     "team": "Paris FC",
+     "p": 7,
+     "w": 4,
+     "d": 2,
+     "l": 1,
+     "gf": 12,
+     "ga": 7,
+     "pts": 14
+    },
+    {
+     "pos": 4,
+     "team": "Lille",
+     "p": 7,
+     "w": 4,
+     "d": 2,
+     "l": 1,
+     "gf": 10,
+     "ga": 5,
+     "pts": 14
+    },
+    {
+     "pos": 5,
+     "team": "Monaco",
+     "p": 7,
+     "w": 4,
+     "d": 2,
+     "l": 1,
+     "gf": 10,
+     "ga": 6,
+     "pts": 14
+    },
+    {
+     "pos": 6,
+     "team": "Rennes",
+     "p": 7,
+     "w": 4,
+     "d": 1,
+     "l": 2,
+     "gf": 15,
+     "ga": 14,
+     "pts": 13
+    },
+    {
+     "pos": 7,
+     "team": "Lorient",
+     "p": 7,
+     "w": 3,
+     "d": 2,
+     "l": 2,
+     "gf": 7,
+     "ga": 6,
+     "pts": 11
+    },
+    {
+     "pos": 8,
+     "team": "Lens",
+     "p": 7,
+     "w": 3,
+     "d": 1,
+     "l": 3,
+     "gf": 14,
+     "ga": 11,
+     "pts": 10
+    },
+    {
+     "pos": 9,
+     "team": "Marseille",
+     "p": 7,
+     "w": 3,
+     "d": 0,
+     "l": 4,
+     "gf": 14,
+     "ga": 10,
+     "pts": 9
+    },
+    {
+     "pos": 10,
+     "team": "Brest",
+     "p": 7,
+     "w": 2,
+     "d": 3,
+     "l": 2,
+     "gf": 13,
+     "ga": 10,
+     "pts": 9
+    },
+    {
+     "pos": 11,
+     "team": "Toulouse",
+     "p": 7,
+     "w": 2,
+     "d": 3,
+     "l": 2,
+     "gf": 12,
+     "ga": 11,
+     "pts": 9
+    },
+    {
+     "pos": 12,
+     "team": "Auxerre",
+     "p": 7,
+     "w": 3,
+     "d": 0,
+     "l": 4,
+     "gf": 11,
+     "ga": 17,
+     "pts": 9
+    },
+    {
+     "pos": 13,
+     "team": "Nice",
+     "p": 7,
+     "w": 2,
+     "d": 2,
+     "l": 3,
+     "gf": 6,
+     "ga": 9,
+     "pts": 8
+    },
+    {
+     "pos": 14,
+     "team": "Strasbourg",
+     "p": 7,
+     "w": 2,
+     "d": 1,
+     "l": 4,
+     "gf": 12,
+     "ga": 15,
+     "pts": 7
+    },
+    {
+     "pos": 15,
+     "team": "Angers",
+     "p": 7,
+     "w": 2,
+     "d": 1,
+     "l": 4,
+     "gf": 9,
+     "ga": 15,
+     "pts": 7
+    },
+    {
+     "pos": 16,
+     "team": "Le Mans",
+     "p": 7,
+     "w": 1,
+     "d": 3,
+     "l": 3,
+     "gf": 10,
+     "ga": 15,
+     "pts": 6
+    },
+    {
+     "pos": 17,
+     "team": "Troyes",
+     "p": 7,
+     "w": 1,
+     "d": 1,
+     "l": 5,
+     "gf": 5,
+     "ga": 16,
+     "pts": 4
+    },
+    {
+     "pos": 18,
+     "team": "Le Havre",
+     "p": 7,
+     "w": 0,
+     "d": 2,
+     "l": 5,
+     "gf": 5,
+     "ga": 11,
+     "pts": 2
+    }
+   ]
+  },
+  {
+   "id": "ligue-2",
+   "tier": 2,
+   "name": "Ligue 2",
+   "short": "L2",
+   "updated": "2026-10-19",
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 3,
+     "to": 5,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 16,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 17,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "promotionNote": "1st and 2nd go up; the play-off winner (3rd–5th) plays Ligue 1's 16th",
+   "relegationNote": "17th–18th drop to Ligue 3; 16th plays a relegation play-off",
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Saint-Étienne",
+     "p": 9,
+     "w": 7,
+     "d": 1,
+     "l": 1,
+     "gf": 22,
+     "ga": 8,
+     "pts": 22
+    },
+    {
+     "pos": 2,
+     "team": "Montpellier",
+     "p": 9,
+     "w": 5,
+     "d": 3,
+     "l": 1,
+     "gf": 11,
+     "ga": 5,
+     "pts": 18
+    },
+    {
+     "pos": 3,
+     "team": "Reims",
+     "p": 9,
+     "w": 4,
+     "d": 5,
+     "l": 0,
+     "gf": 19,
+     "ga": 11,
+     "pts": 17
+    },
+    {
+     "pos": 4,
+     "team": "Red Star",
+     "p": 9,
+     "w": 5,
+     "d": 2,
+     "l": 2,
+     "gf": 12,
+     "ga": 10,
+     "pts": 17
+    },
+    {
+     "pos": 5,
+     "team": "Nancy",
+     "p": 9,
+     "w": 5,
+     "d": 1,
+     "l": 3,
+     "gf": 11,
+     "ga": 8,
+     "pts": 16
+    },
+    {
+     "pos": 6,
+     "team": "Pau",
+     "p": 9,
+     "w": 4,
+     "d": 2,
+     "l": 3,
+     "gf": 11,
+     "ga": 9,
+     "pts": 14
+    },
+    {
+     "pos": 7,
+     "team": "Metz",
+     "p": 9,
+     "w": 3,
+     "d": 4,
+     "l": 2,
+     "gf": 15,
+     "ga": 13,
+     "pts": 13
+    },
+    {
+     "pos": 8,
+     "team": "Annecy",
+     "p": 9,
+     "w": 4,
+     "d": 1,
+     "l": 4,
+     "gf": 11,
+     "ga": 11,
+     "pts": 13
+    },
+    {
+     "pos": 9,
+     "team": "Dijon",
+     "p": 9,
+     "w": 3,
+     "d": 3,
+     "l": 3,
+     "gf": 16,
+     "ga": 16,
+     "pts": 12
+    },
+    {
+     "pos": 10,
+     "team": "Dunkerque",
+     "p": 9,
+     "w": 3,
+     "d": 2,
+     "l": 4,
+     "gf": 13,
+     "ga": 15,
+     "pts": 11
+    },
+    {
+     "pos": 11,
+     "team": "Sochaux",
+     "p": 9,
+     "w": 2,
+     "d": 5,
+     "l": 2,
+     "gf": 7,
+     "ga": 9,
+     "pts": 11
+    },
+    {
+     "pos": 12,
+     "team": "Boulogne",
+     "p": 9,
+     "w": 1,
+     "d": 6,
+     "l": 2,
+     "gf": 6,
+     "ga": 6,
+     "pts": 9
+    },
+    {
+     "pos": 13,
+     "team": "Guingamp",
+     "p": 9,
+     "w": 2,
+     "d": 2,
+     "l": 5,
+     "gf": 11,
+     "ga": 15,
+     "pts": 8
+    },
+    {
+     "pos": 14,
+     "team": "Nantes",
+     "p": 9,
+     "w": 2,
+     "d": 2,
+     "l": 5,
+     "gf": 11,
+     "ga": 16,
+     "pts": 8
+    },
+    {
+     "pos": 15,
+     "team": "Grenoble",
+     "p": 9,
+     "w": 2,
+     "d": 2,
+     "l": 5,
+     "gf": 8,
+     "ga": 15,
+     "pts": 8
+    },
+    {
+     "pos": 16,
+     "team": "Clermont",
+     "p": 9,
+     "w": 0,
+     "d": 7,
+     "l": 2,
+     "gf": 9,
+     "ga": 12,
+     "pts": 7
+    },
+    {
+     "pos": 17,
+     "team": "Rodez",
+     "p": 9,
+     "w": 2,
+     "d": 1,
+     "l": 6,
+     "gf": 14,
+     "ga": 21,
+     "pts": 7
+    },
+    {
+     "pos": 18,
+     "team": "Laval",
+     "p": 9,
+     "w": 1,
+     "d": 3,
+     "l": 5,
+     "gf": 13,
+     "ga": 20,
+     "pts": 6
+    }
+   ]
+  },
+  {
+   "id": "ligue-3",
+   "tier": 3,
+   "name": "Ligue 3",
+   "short": "L3",
+   "updated": "2026-10-21",
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 3,
+     "to": 6,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 16,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "promotionNote": "1st and 2nd go up; the play-off winner (3rd–6th) plays Ligue 2's 16th",
+   "relegationNote": "16th–18th drop to National 1",
+   "notes": [
+    "Ligue 3 replaced the Championnat National as France's third tier this season."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "La Roche",
+     "p": 10,
+     "w": 6,
+     "d": 3,
+     "l": 1,
+     "gf": 16,
+     "ga": 10,
+     "pts": 21
+    },
+    {
+     "pos": 2,
+     "team": "Rouen",
+     "p": 10,
+     "w": 6,
+     "d": 2,
+     "l": 2,
+     "gf": 18,
+     "ga": 8,
+     "pts": 20
+    },
+    {
+     "pos": 3,
+     "team": "Versailles",
+     "p": 10,
+     "w": 6,
+     "d": 1,
+     "l": 3,
+     "gf": 15,
+     "ga": 13,
+     "pts": 19
+    },
+    {
+     "pos": 4,
+     "team": "Caen",
+     "p": 10,
+     "w": 6,
+     "d": 0,
+     "l": 4,
+     "gf": 19,
+     "ga": 13,
+     "pts": 18
+    },
+    {
+     "pos": 5,
+     "team": "Concarneau",
+     "p": 10,
+     "w": 4,
+     "d": 5,
+     "l": 1,
+     "gf": 13,
+     "ga": 9,
+     "pts": 17
+    },
+    {
+     "pos": 6,
+     "team": "Amiens",
+     "p": 10,
+     "w": 4,
+     "d": 4,
+     "l": 2,
+     "gf": 13,
+     "ga": 4,
+     "pts": 16
+    },
+    {
+     "pos": 7,
+     "team": "Le Puy",
+     "p": 10,
+     "w": 5,
+     "d": 1,
+     "l": 4,
+     "gf": 12,
+     "ga": 9,
+     "pts": 16
+    },
+    {
+     "pos": 8,
+     "team": "Cannes",
+     "p": 10,
+     "w": 3,
+     "d": 6,
+     "l": 1,
+     "gf": 12,
+     "ga": 6,
+     "pts": 15
+    },
+    {
+     "pos": 9,
+     "team": "Fleury",
+     "p": 10,
+     "w": 4,
+     "d": 3,
+     "l": 3,
+     "gf": 16,
+     "ga": 12,
+     "pts": 15
+    },
+    {
+     "pos": 10,
+     "team": "Paris 13 Atletico",
+     "p": 10,
+     "w": 4,
+     "d": 3,
+     "l": 3,
+     "gf": 10,
+     "ga": 10,
+     "pts": 15
+    },
+    {
+     "pos": 11,
+     "team": "Quevilly-Rouen",
+     "p": 10,
+     "w": 3,
+     "d": 4,
+     "l": 3,
+     "gf": 11,
+     "ga": 14,
+     "pts": 13
+    },
+    {
+     "pos": 12,
+     "team": "Thionville",
+     "p": 10,
+     "w": 3,
+     "d": 3,
+     "l": 4,
+     "gf": 15,
+     "ga": 16,
+     "pts": 12
+    },
+    {
+     "pos": 13,
+     "team": "Bastia",
+     "p": 10,
+     "w": 3,
+     "d": 3,
+     "l": 4,
+     "gf": 8,
+     "ga": 12,
+     "pts": 12
+    },
+    {
+     "pos": 14,
+     "team": "Valenciennes",
+     "p": 10,
+     "w": 2,
+     "d": 3,
+     "l": 5,
+     "gf": 10,
+     "ga": 15,
+     "pts": 9
+    },
+    {
+     "pos": 15,
+     "team": "Orléans",
+     "p": 10,
+     "w": 2,
+     "d": 3,
+     "l": 5,
+     "gf": 9,
+     "ga": 14,
+     "pts": 9
+    },
+    {
+     "pos": 16,
+     "team": "Aubagne",
+     "p": 10,
+     "w": 2,
+     "d": 1,
+     "l": 7,
+     "gf": 6,
+     "ga": 13,
+     "pts": 7
+    },
+    {
+     "pos": 17,
+     "team": "Villefranche",
+     "p": 10,
+     "w": 2,
+     "d": 1,
+     "l": 7,
+     "gf": 9,
+     "ga": 23,
+     "pts": 7
+    },
+    {
+     "pos": 18,
+     "team": "Bourg-Péronnas",
+     "p": 10,
+     "w": 1,
+     "d": 2,
+     "l": 7,
+     "gf": 5,
+     "ga": 16,
+     "pts": 5
+    }
+   ]
+  }
+ ],
+ "updated": "2026-10-21"
+}
