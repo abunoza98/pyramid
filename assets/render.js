@@ -385,16 +385,20 @@
     if (!fx.length) return "";
     var nm = function (t) { return names[t.id] || t.n; };
     var info = {};
-    all.forEach(function (s) { s.leagues.forEach(function (lg) { info[s.country + "/" + lg.id] = { short: lg.short || lg.name, tier: lg.tier }; }); });
+    all.forEach(function (s) { s.leagues.forEach(function (lg) { info[s.country + "/" + lg.id] = { short: lg.short || lg.name, name: lg.name, tier: lg.tier }; }); });
     var rank = function (f) { return isLive(f) ? 0 : f.st === "NS" ? 1 : isDone(f) ? 2 : 3; };
     fx.sort(function (a, b) {
       var ta = (info[a.c + "/" + a.l] || {}).tier || 9, tb = (info[b.c + "/" + b.l] || {}).tier || 9;
       return rank(a) - rank(b) || ta - tb || a.ko - b.ko;
     });
     var liveN = fx.filter(isLive).length;
-    var countries = {};
-    fx.forEach(function (f) { countries[f.c] = 1; });
-    var nC = Object.keys(countries).length;
+    // Count competitions, not countries: a night of European games is one "country" (Europe) but several
+    // competitions, and the clubs come from all over. One or two are named; more are counted.
+    var comps = [];
+    fx.forEach(function (f) { var k = f.c + "/" + f.l; if (comps.indexOf(k) < 0) comps.push(k); });
+    var where = comps.length <= 2
+      ? "the " + comps.map(function (k) { return esc((info[k] || {}).name || "league"); }).join(" and the ")
+      : comps.length + " competitions";
     var chips = fx.slice(0, 24).map(function (f) {
       var lg = info[f.c + "/" + f.l] || { short: "" };
       var started = f.h.g != null && f.a.g != null && !OFF_ST[f.st];
@@ -407,7 +411,7 @@
     }).join("");
     return '<section class="strip" aria-label="Today’s games"><p class="strip-head">' +
       (liveN ? '<span class="live-dot" aria-hidden="true"></span>' : "") + "Today: " + fx.length + " game" + (fx.length === 1 ? "" : "s") +
-      " in " + nC + " countr" + (nC === 1 ? "y" : "ies") + (liveN ? " · <strong>" + liveN + " live</strong>" : "") + "</p>" +
+      " in " + where + (liveN ? " · <strong>" + liveN + " live</strong>" : "") + "</p>" +
       '<ul class="strip-list">' + chips + "</ul></section>";
   }
 
