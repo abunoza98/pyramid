@@ -6,7 +6,7 @@
 //
 // Output: index.html, <country>/index.html, data/clubs.json, sitemap.xml, robots.txt
 
-import { readFile, writeFile, mkdir, copyFile } from "node:fs/promises";
+import { readFile, writeFile, mkdir, copyFile, readdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import path from "node:path";
@@ -24,7 +24,7 @@ const FAVICON = "data:image/svg+xml," + encodeURIComponent(
 
 const esc = FP.esc;
 
-function shell({ title, description, canonical, base, suffix, page, country, stamps, main, countries }) {
+function shell({ title, description, canonical, base, suffix, page, country, stamps, main, countries, seasons }) {
   const snapshot = countries.some((c) => c.mode !== "live");
   const home = base || "./";
   const homeHref = suffix ? base + suffix : home;
@@ -55,7 +55,7 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
 <link rel="preload" href="${base}assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${base}assets/style.css">
 ${ADSENSE_CLIENT && !suffix ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>\n` : ""}</head>
-<body${ADS ? "" : ' class="no-ads"'} data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${countries.map((c) => c.country).join(",")}" data-stamps="${esc(JSON.stringify(stamps))}">
+<body${ADS ? "" : ' class="no-ads"'} data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${countries.map((c) => c.country).join(",")}" data-stamps="${esc(JSON.stringify(stamps))}"${seasons ? ` data-seasons="${esc(JSON.stringify(seasons))}"` : ""}>
 <header class="bar">
   <div class="bar-inner">
     <a class="brand" href="${homeHref}" aria-label="Football Pyramids, home">
@@ -118,6 +118,30 @@ export async function loadCountries(root = ROOT) {
   return out;
 }
 
+// Past seasons saved by scripts/backfill-history.mjs, newest first.
+export async function loadHistory(root = ROOT) {
+  const out = {};
+  for (const cfg of COUNTRIES) {
+    const dir = path.join(root, "data", "history", cfg.country);
+    let files = [];
+    try { files = (await readdir(dir)).filter((f) => /^\d{4}\.json$/.test(f)); } catch {}
+    const list = [];
+    for (const f of files) list.push(JSON.parse(await readFile(path.join(dir, f), "utf8")));
+    out[cfg.country] = list.sort((a, b) => b.year - a.year);
+  }
+  return out;
+}
+const slug = (year) => `${year}-${String((year + 1) % 100).padStart(2, "0")}`;
+
+// The "Other seasons" list. rel is the path from the page to the country folder ("" or "../").
+function seasonList(current, past, rel, suffix, onYear) {
+  if (!past.length) return null;
+  return [
+    { label: `${current.season} (live)`, href: (rel || "./") + suffix, current: onYear == null },
+    ...past.map((h) => ({ label: h.season, href: `${rel}${slug(h.year)}/${suffix}`, current: onYear === h.year }))
+  ];
+}
+
 function tierNames(c) {
   const first = c.leagues[0].name, last = c.leagues[c.leagues.length - 1].name;
   return { first, last };
@@ -125,6 +149,7 @@ function tierNames(c) {
 
 export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}) {
   const countries = await loadCountries(root);
+  const history = await loadHistory(root);
   const suffix = preview ? "index.html" : "";
   const stamps = Object.fromEntries(countries.map((c) => [c.country, c.updated]));
   const written = [];
@@ -150,8 +175,20 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       title: `${c.adjective} football pyramid: ${first} to ${last} tables | Football Pyramids`,
       description: `Every ${c.adjective} league table from ${first} down to ${last} on one page, with promotion and relegation places marked.`,
       canonical: `${SITE}/${c.country}/`, base: "../", suffix, page: "country", country: c.country,
-      stamps: { [c.country]: c.updated }, countries, main: FP.countryMain(c)
+      stamps: { [c.country]: c.updated }, countries, seasons: seasonList(c, history[c.country], "", suffix, null),
+      main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null) })
     }));
+    // Past seasons
+    for (const h of history[c.country]) {
+      const n = tierNames(h);
+      const seasons = seasonList(c, history[c.country], "../", suffix, h.year);
+      await write(`${c.country}/${slug(h.year)}/index.html`, shell({
+        title: `${c.adjective} football pyramid ${h.season}: ${n.first} to ${n.last} final tables | Football Pyramids`,
+        description: `Final ${h.season} tables for ${c.adjective} football, from ${n.first} down to ${n.last}, with promotion and relegation marked.`,
+        canonical: `${SITE}/${c.country}/${slug(h.year)}/`, base: "../../", suffix, page: "history", country: c.country,
+        stamps: {}, countries, main: FP.countryMain(h, { seasons })
+      }));
+    }
   }
 
   // About & contact, and the privacy policy
@@ -184,9 +221,11 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   if (!preview) {
     const today = new Date().toISOString().slice(0, 10);
     const urls = ["/", ...countries.map((c) => `/${c.country}/`), "/contact/", "/privacy/"];
+    const past = countries.flatMap((c) => history[c.country].map((h) => `/${c.country}/${slug(h.year)}/`));
     await write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>hourly</changefreq></url>`).join("\n")}
+${past.map((u) => `  <url><loc>${SITE}${u}</loc><changefreq>yearly</changefreq></url>`).join("\n")}
 </urlset>
 `);
     await write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);

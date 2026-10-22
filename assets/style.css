@@ -230,6 +230,7 @@ a.pyr-row:hover .pyr-label span { text-decoration: underline; text-underline-off
   .pyr-row { grid-template-columns: 44px minmax(0, 1fr); gap: 6px; }
   .pyr-tier { font-size: 10px; letter-spacing: 0.02em; }
   .pyr-label { font-size: 15px; gap: 6px; }
+  .pyr-bar { min-width: 56%; }
 }
 
 /* ---------- Tier sections ---------- */
@@ -366,6 +367,24 @@ tbody tr.is-mine .c-club::before { content: ""; display: inline-block; width: 7p
   color: var(--ink); background: var(--sheet); border: 1px solid var(--rule-strong);
 }
 .copy:hover { border-color: var(--accent); }
+
+/* ---------- Other seasons ---------- */
+.seasons { margin: 14px 0 0; }
+.seasons summary {
+  display: inline-flex; align-items: center; gap: 6px; cursor: pointer; list-style: none;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);
+}
+.seasons summary::-webkit-details-marker { display: none; }
+.seasons summary::after { content: "▾"; font-size: 11px; }
+.seasons[open] summary::after { content: "▴"; }
+.seasons ul { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.seasons a, .seasons span {
+  display: inline-block; padding: 5px 9px; border-radius: 6px; font-size: 13px; font-variant-numeric: tabular-nums;
+  border: 1px solid var(--rule); background: var(--sheet); color: var(--ink); text-decoration: none;
+}
+.seasons a:hover { border-color: var(--accent); }
+.seasons span[aria-current] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.stamp.final .dot { background: var(--muted); }
 
 /* ---------- Footer ---------- */
 footer { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--rule); display: grid; gap: 6px; font-size: 13px; color: var(--muted); }

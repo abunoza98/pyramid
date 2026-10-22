@@ -146,7 +146,9 @@
     if (PAGE === "country") {
       getCountry(COUNTRY).then(function (c) {
         if (!valid(c)) return;
-        if (current[COUNTRY] && current[COUNTRY] !== c.updated) redraw(FP.countryMain(c));
+        var seasons = null;
+        try { seasons = JSON.parse(body.getAttribute("data-seasons") || "null"); } catch (e) {}
+        if (current[COUNTRY] && current[COUNTRY] !== c.updated) redraw(FP.countryMain(c, { seasons: seasons }));
         current[COUNTRY] = c.updated;
       });
     } else {

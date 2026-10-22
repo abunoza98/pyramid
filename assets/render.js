@@ -89,6 +89,7 @@
   }
 
   function legendHTML(lg, grouped) {
+    if (!lg.zones || !lg.zones.length) return "";
     return '<ul class="legend" aria-label="Table key">' + lg.zones.map(function (z) {
       return '<li class="k-' + z.kind + '"><i></i>' + range(z) + (grouped ? " in each group " : " ") + esc(z.label) + "</li>";
     }).join("") + "</ul>";
@@ -104,7 +105,7 @@
   function tierHTML(lg, opts) {
     opts = opts || {};
     var grouped = !!(lg.groups && lg.groups.length);
-    var meta = clubCount(lg) + " clubs · updated " + ukTime(lg.updated);
+    var meta = clubCount(lg) + " clubs · " + (lg.final ? "final table" : "updated " + ukTime(lg.updated));
     var body = grouped
       ? lg.groups.map(function (g) {
           var stamp = g.updated && g.updated !== lg.updated ? "updated " + ukTime(g.updated) : "";
@@ -116,7 +117,7 @@
     if (grouped) {
       var dates = lg.groups.map(function (g) { return g.updated || lg.updated; });
       var newest = dates.slice().sort().pop();
-      meta = clubCount(lg) + " clubs in " + lg.groups.length + " groups · updated " + ukTime(newest);
+      meta = clubCount(lg) + " clubs in " + lg.groups.length + " groups · " + (lg.final ? "final tables" : "updated " + ukTime(newest));
     }
     return '<section class="tier" id="' + esc(lg.id) + '" aria-labelledby="h-' + esc(lg.id) + '">' +
       '<header class="tier-head"><p class="tier-num">' + esc(opts.eyebrow || "Tier " + lg.tier) + "</p>" +
@@ -128,6 +129,7 @@
   }
 
   function bandHTML(upper, lower, belowNote) {
+    if (!upper.relegationNote) return "";
     return '<div class="band" role="note">' +
       '<p class="band-label">Tier ' + upper.tier + " ⇅ Tier " + (upper.tier + 1) + "</p>" +
       '<p class="band-down"><span class="arw" aria-hidden="true">▼</span><strong>' + esc(upper.name) + ":</strong> " + esc(upper.relegationNote) + "</p>" +
@@ -136,6 +138,7 @@
   }
 
   function stampHTML(mode, updated) {
+    if (mode === "final") return '<p class="stamp final" id="stamp"><span class="dot"></span><span>Final tables</span></p>';
     var live = mode === "live";
     return '<p class="stamp' + (live ? " live" : "") + '" id="stamp"><span class="dot"></span><span>' +
       (live ? "Live · updated " : "Sample snapshot · standings as of ") + ukTime(updated) + " UK</span></p>";
@@ -166,16 +169,29 @@
   }
 
   /* ---------- Whole pages (the inside of <main>) ---------- */
-  function countryMain(c) {
+  // seasons: [{ label, href, current }] for the past-seasons list
+  function seasonsHTML(seasons) {
+    if (!seasons || seasons.length < 2) return "";
+    return '<details class="seasons"><summary>Other seasons</summary><ul>' + seasons.map(function (s) {
+      return "<li>" + (s.current ? '<span aria-current="page">' + esc(s.label) + "</span>" : '<a href="' + esc(s.href) + '">' + esc(s.label) + "</a>") + "</li>";
+    }).join("") + "</ul></details>";
+  }
+
+  function countryMain(c, opts) {
+    opts = opts || {};
     var last = c.leagues[c.leagues.length - 1];
+    var n = ["", "one", "two", "three", "four", "five", "six"][c.leagues.length];
+    var past = c.mode === "final";
     var html =
       '<section class="intro" aria-labelledby="intro-h">' +
       '<p class="eyebrow">' + esc(c.name) + " · " + esc(c.season) + "</p>" +
-      '<h1 id="intro-h">The ' + esc(c.adjective) + " football pyramid</h1>" +
-      '<p class="lede">Every league in the top ' + ["", "one", "two", "three", "four", "five", "six"][c.leagues.length] + " tiers of " +
-        esc(c.adjective) + " football, from " + esc(c.leagues[0].name) + " down to " + esc(last.name) +
-        ". Promotion, play-off and relegation places are marked on every table.</p>" +
-      stampHTML(c.mode, c.updated) + pyramidHTML(c) + "</section>";
+      '<h1 id="intro-h">The ' + esc(c.adjective) + " football pyramid" + (past ? ", " + esc(c.season) : "") + "</h1>" +
+      (past
+        ? '<p class="lede">Final tables for the top ' + n + " tiers of " + esc(c.adjective) + " football in " + esc(c.season) +
+          ", from " + esc(c.leagues[0].name) + " down to " + esc(last.name) + ". Promotion, play-off and relegation places are marked from each league's records.</p>"
+        : '<p class="lede">Every league in the top ' + n + " tiers of " + esc(c.adjective) + " football, from " + esc(c.leagues[0].name) +
+          " down to " + esc(last.name) + ". Promotion, play-off and relegation places are marked on every table.</p>") +
+      stampHTML(c.mode, c.updated) + seasonsHTML(opts.seasons) + pyramidHTML(c) + "</section>";
     c.leagues.forEach(function (lg, i) {
       html += tierHTML(lg) + bandHTML(lg, c.leagues[i + 1] || null, c.belowNote);
       if (i === 1) html += INLINE_AD;

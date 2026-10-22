@@ -93,6 +93,7 @@ export const COUNTRIES = [
         zones: [Z(1, 2, "top", "Promotion"), Z(3, 6, "mid", "Play-offs"), Z(16, 18, "down", "Relegation")],
         promotionNote: "1st and 2nd go up; the play-off winner (3rd–6th) plays Ligue 2's 16th",
         relegationNote: "16th–18th drop to National 1",
+        history: [{ until: 2025, name: "Championnat National", short: "NAT" }],
         notes: ["Ligue 3 replaced the Championnat National as France's third tier this season."] }
     ]
   },
@@ -112,7 +113,8 @@ export const COUNTRIES = [
         groups: [{ apiId: 138, name: "Girone A" }, { apiId: 942, name: "Girone B" }, { apiId: 943, name: "Girone C" }],
         zones: [Z(1, 1, "top", "Promotion"), Z(2, 10, "mid", "Play-offs"), Z(17, 18, "down", "Play-out"), Z(19, 20, "down", "Relegation")],
         promotionNote: "Each group winner goes up, plus one play-off winner",
-        relegationNote: "19th–20th in each group drop to Serie D; 17th and 18th play a play-out", notes: [] }
+        relegationNote: "19th–20th in each group drop to Serie D; 17th and 18th play a play-out", notes: [],
+        history: [{ until: 2016, name: "Lega Pro", short: "LP" }] }
     ]
   }
 ];

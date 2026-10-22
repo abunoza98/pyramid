@@ -21,9 +21,9 @@ const API = "https://v3.football.api-sports.io";
 const SEASON = Number(process.env.SEASON || seasonFor(new Date()));
 
 function seasonFor(d) { return d.getUTCMonth() >= 6 ? d.getUTCFullYear() : d.getUTCFullYear() - 1; }
-function seasonLabel(y) { return `${y}–${String((y + 1) % 100).padStart(2, "0")}`; }
+export function seasonLabel(y) { return `${y}–${String((y + 1) % 100).padStart(2, "0")}`; }
 
-async function api(pathAndQuery, key) {
+export async function api(pathAndQuery, key) {
   const res = await fetch(API + pathAndQuery, { headers: { "x-apisports-key": key } });
   if (!res.ok) throw new Error(`API-Football ${res.status} on ${pathAndQuery}`);
   const body = await res.json();
@@ -35,13 +35,13 @@ async function api(pathAndQuery, key) {
 }
 
 // "Serie C: Girone A" -> "Girone A"; "Primera Federación, Group 1" -> "Group 1"
-function groupName(raw, i) {
+export function groupName(raw, i) {
   if (!raw) return `Group ${i + 1}`;
   const parts = String(raw).split(/[:,]/);
   return parts[parts.length - 1].trim() || `Group ${i + 1}`;
 }
 
-function toRows(table, notes) {
+export function toRows(table, notes) {
   let latest = 0;
   const rows = table.slice().sort((a, b) => a.rank - b.rank).map((t) => {
     const all = t.all || {};

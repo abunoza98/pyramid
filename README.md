@@ -31,15 +31,20 @@ footballpyramids.com: Europe's top five leagues on the home page, and a full pyr
 3. Run `API_FOOTBALL_KEY=yourkey node scripts/update-standings.mjs` once and look at the pages (`npx serve .`, then http://localhost:3000). Fix any odd club names.
 4. On GitHub, add the key under Settings → Secrets and variables → Actions as `API_FOOTBALL_KEY`, and upload `.github/workflows/update-standings.yml`.
 
+## Past seasons
+
+`scripts/backfill-history.mjs` saves every past season's final tables that API-Football has to `data/history/<country>/<year>.json`; `build.mjs` turns each into a page at `/<country>/<season>/` (e.g. `/england/2015-16/`) and adds an "Other seasons" list to every country page. Run it from GitHub: Actions → Backfill history → Run workflow (about 300 requests the first time). It skips seasons already saved and runs itself each August to add the season just finished. Zones come from each row's description in the API data, because formats have changed over the years. Old league names go in `history` on the league in `leagues.mjs`.
+
 ## Testing without a key
 
 ```
 node scripts/update-standings.mjs --fixture test/api-football-sample.json --out /tmp/fp-test
+SEASON=2026 node scripts/backfill-history.mjs --fixture test/history-sample.json --out /tmp/fp-hist
 ```
 
 ## Things to know
 
-- **Request budget.** 16 leagues per run, 14 runs a day = 224 requests. Pro allows 7,500.
+- **Request budget.** 19 requests per run (Spain's and Italy's regional groups count separately), 14 runs a day = 266 requests. Pro allows 7,500.
 - **"Live" means within about an hour.** API-Football refreshes standings hourly.
 - **Points deductions.** The API has no deduction field, so the updater works them out from wins, draws and points and adds a note under the table.
 - **No crests.** API-Football's docs say club logos may need permission from the clubs or leagues. The site shows names only.
