@@ -810,8 +810,8 @@
         }).join("") + "</ol>" +
         '<span class="ecard-toggle" aria-hidden="true"><span class="when-closed">Full table</span><span class="when-open">Hide table</span></span></summary>' +
         '<div class="ecomp-body">' + (hasTable ? tierHTML(lg, { eyebrow: c.groups ? "Group stage" : "League phase",
-          more: { href: href, text: "Knockouts, qualifying and every fixture" } })
-          : '<p class="ko-empty">No table yet. <a href="' + esc(href) + '">Qualifying and fixtures →</a></p>') + "</div></details></li>";
+          more: { href: href, text: "Fixtures, knockouts and qualifying" } })
+          : '<p class="ko-empty">No table yet. <a href="' + esc(href) + '">Fixtures and qualifying →</a></p>') + "</div></details></li>";
     }).join("");
     return '<section class="intro" aria-labelledby="intro-h"><p class="eyebrow">UEFA club competitions · ' + esc(e.season) + "</p>" +
       '<h1 id="intro-h">Champions League, Europa League and Conference League</h1>' +
