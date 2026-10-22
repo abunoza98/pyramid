@@ -78,7 +78,7 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
 <meta property="og:image" content="${SITE}/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Football Pyramids: every league table from the top flight down, on one page.">
+<meta property="og:image:alt" content="Football Pyramids: football league tables, from the top flight down.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="${FAVICON}">
 <link rel="preload" href="${base}assets/fonts/big-shoulders-display-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -306,8 +306,8 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
 
   // Home
   await write("index.html", shell({
-    title: "Football Pyramids: every league table, top to bottom | Premier League, La Liga, Bundesliga, Ligue 1, Serie A",
-    description: `Every tier of ${countries.length} countries' football pyramids, each on one page: ${countries.map((c) => c.name).join(", ")}. Live scores on match days.`,
+    title: "Football Pyramids: league tables from the top flight down",
+    description: `League tables for ${countries.length} countries (${countries.map((c) => c.name).join(", ")}), each country's divisions on one page with promotion and relegation places marked. Fixtures, past seasons and live scores.`,
     canonical: SITE + "/", base: "", suffix, page: "home", stamps, countries,
     attrs: { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/fixtures/${suffix}` } : {}) },
       ...(europe ? { europe: "1", clubpaths: pathsFor(europe.leagues[0]) } : {}), cupsmap: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])) },

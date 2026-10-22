@@ -25,10 +25,14 @@
   function range(z) { return z.from === z.to ? ord(z.from) : z.from + "–" + z.to; }
   function gd(r) { var d = r.gf - r.ga; return d > 0 ? "+" + d : d < 0 ? "−" + Math.abs(d) : "0"; }
 
-  // "2026-10-21" is a date only; anything longer carries a time.
+  // "2026-10-21" is a date only; anything longer carries a time. API-Football's standings stamp is a date sent as
+  // midnight UTC ("2026-10-21T00:00:00.000Z"), so that counts as a date only too: showing it as "01:00" would claim a
+  // time nobody recorded.
+  function isDateOnly(iso) { return /^\d{4}-\d{2}-\d{2}(T00:00(:00(\.0+)?)?(Z|\+00:00))?$/.test(String(iso || "")); }
   function ukTime(iso) {
     if (!iso) return "";
-    var dateOnly = /^\d{4}-\d{2}-\d{2}$/.test(iso);
+    var dateOnly = isDateOnly(iso);
+    if (dateOnly) iso = String(iso).slice(0, 10);
     try {
       var opts = { timeZone: "Europe/London", day: "numeric", month: "short" };
       if (!dateOnly) { opts.hour = "2-digit"; opts.minute = "2-digit"; opts.hour12 = false; }
@@ -224,10 +228,10 @@
   function tierHTML(lg, opts) {
     opts = opts || {};
     var grouped = !!(lg.groups && lg.groups.length);
-    var meta = clubCount(lg) + " clubs · " + (lg.final ? "final table" : lg.asItStands ? "as it stands" : "updated " + ukTime(lg.updated));
+    var meta = clubCount(lg) + " clubs · " + (lg.final ? "final table" : lg.asItStands ? "as it stands" : "as of " + ukTime(lg.updated));
     var body = grouped
       ? lg.groups.map(function (g) {
-          var stamp = g.updated && g.updated !== lg.updated ? "updated " + ukTime(g.updated) : "";
+          var stamp = g.updated && g.updated !== lg.updated ? "as of " + ukTime(g.updated) : "";
           return '<div class="group"><div class="group-head"><h3>' + esc(g.name) + "</h3>" +
             (stamp ? "<span>" + stamp + "</span>" : "") + "</div>" +
             tableHTML(lg, g.rows, lg.name + ", " + g.name) + "</div>";
@@ -236,7 +240,7 @@
     if (grouped) {
       var dates = lg.groups.map(function (g) { return g.updated || lg.updated; });
       var newest = dates.slice().sort().pop();
-      meta = clubCount(lg) + " clubs in " + lg.groups.length + " groups · " + (lg.final ? "final tables" : lg.asItStands ? "as they stand" : "updated " + ukTime(newest));
+      meta = clubCount(lg) + " clubs in " + lg.groups.length + " groups · " + (lg.final ? "final tables" : lg.asItStands ? "as they stand" : "as of " + ukTime(newest));
     }
     return '<section class="tier" id="' + esc(lg.id) + '" aria-labelledby="h-' + esc(lg.id) + '">' +
       '<header class="tier-head"><p class="tier-num">' + esc(opts.eyebrow || "Tier " + lg.tier) + "</p>" +
@@ -261,9 +265,12 @@
     if (liveCount) return '<p class="stamp live now" id="stamp"><span class="dot"></span><span>' + liveCount + " game" + (liveCount === 1 ? "" : "s") +
       " live · tables show scores as they stand</span></p>";
     if (mode === "final") return '<p class="stamp final" id="stamp"><span class="dot"></span><span>Final tables</span></p>';
+    // The date is when the newest table last changed (in practice its latest matchday), not when the site last
+    // checked: a quiet midweek keeps an older date even though the feed is working.
     var live = mode === "live";
     return '<p class="stamp' + (live ? " live" : "") + '" id="stamp"><span class="dot"></span><span>' +
-      (live ? "Live · updated " : "Sample snapshot · standings as of ") + ukTime(updated) + " UK</span></p>";
+      (live ? "Standings as of " : "Sample snapshot · standings as of ") + ukTime(updated) + (isDateOnly(updated) ? "" : " UK") +
+      (live ? " · checked through the day" : "") + "</span></p>";
   }
 
   var INLINE_AD = '<div class="ad ad-inline"><span class="ad-tag">Advertisement</span>' +
@@ -449,9 +456,10 @@
     var html =
       '<section class="intro hero" aria-labelledby="intro-h">' +
       '<p class="eyebrow">Football Pyramids · ' + esc(countries[0].season) + "</p>" +
-      '<h1 id="intro-h">Every league table, top to bottom.</h1>' +
+      '<h1 id="intro-h">Football league tables, from the top flight down.</h1>' +
       '<p class="lede">' + all.length + " countries, " + nLeagues + " leagues and " + nClubs.toLocaleString("en-GB") +
-      " clubs. Each country’s whole football pyramid on one page, from the top flight down, with live scores on match days.</p>" +
+      " clubs. Each country’s divisions sit on one page in pyramid order, with the promotion and relegation places that connect them. " +
+      "Fixtures, past seasons and live scores on match days.</p>" +
       stampHTML(live ? "live" : "snapshot", newest, countries.reduce(function (n, c) { return n + (c.liveCount || 0); }, 0)) +
       "</section>" +
       stripHTML(opts.live, opts.europe ? all.concat([summary(opts.europe)]) : all, base, suffix, names) +
