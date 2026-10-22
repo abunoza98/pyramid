@@ -957,30 +957,56 @@
       '<p class="nm-when">' + (isLive(nx) ? esc(clock(nx, now)) : nx.st === "TBD" ? tt(nx.ts, tz, "d") + ", time TBC" : tt(nx.ts, tz, "long")) +
       (nx.v ? " · " + esc(nx.v) : "") + "</p></section>" : "";
 
-    // Table: the club and the three places either side
-    var lg = d.league, tableHTMLs = "";
-    if (lg && lg.rows && lg.rows.length) {
-      var i = lg.rows.map(function (r) { return r.tid; }).indexOf(d.tid);
-      var from = Math.max(0, Math.min(i - 3, lg.rows.length - 7)), part = lg.rows.slice(from, from + 7);
-      var l2 = { id: lg.id, zones: lg.zones, _hl: d.tid, _club: lg._club, _suffix: lg._suffix };
-      tableHTMLs = '<section class="cl-sec"><div class="cl-sec-h"><h2>' + esc(lg.name) + (lg.group ? " · " + esc(lg.group) : "") + "</h2>" +
-        (lg.tableHref ? '<a href="' + esc(lg.tableHref) + '">Full table →</a>' : "") + "</div>" + legendHTML(l2, false) + tableHTML(l2, part, lg.name + " table around " + d.name) + "</section>";
-    }
-
-    // Each competition: where the club is up to
+    // Competitions: one tab per competition the club is in this season (league first, then Europe, then cups).
+    // League and Europe show the table around the club; every tab lists the club's games in it.
+    var lg = d.league;
+    var excerpt = function (t, rows, name) {
+      var i = rows.map(function (r) { return r.tid; }).indexOf(d.tid);
+      var from = Math.max(0, Math.min(i - 3, rows.length - 7)), part = rows.slice(from, from + 7);
+      return legendHTML(t, false) + tableHTML(t, part, name + " table around " + d.name);
+    };
     var comps = {}, order = [];
     fx.forEach(function (f) { if (!comps[f.comp.key]) { comps[f.comp.key] = { comp: f.comp, list: [] }; order.push(f.comp.key); } comps[f.comp.key].list.push(f); });
     var rank = { league: 0, europe: 1, cup: 2 };
     order.sort(function (a, b) { return rank[comps[a].comp.kind] - rank[comps[b].comp.kind]; });
-    var compRows = order.map(function (k) {
-      var c = comps[k], st;
+    var games = function (list) {
+      var shown = list.filter(function (f) { return !GONE[f.st]; }).sort(function (a, b) { return a.ts - b.ts; });
+      if (!shown.length) return "";
+      return '<ul class="cl-list">' + shown.map(function (f) { return line(f, isLive(f) ? "live" : (isDone(f) || f.st === "AWD") && f.hg != null ? "result" : "fixture"); }).join("") + "</ul>";
+    };
+    var compTabs = order.map(function (k) {
+      var c = comps[k], st, body = "", more = "Competition page";
       var up = c.list.filter(function (f) { return !isDone(f) && !GONE[f.st]; }).sort(function (a, b) { return a.ts - b.ts; })[0];
       var last = c.list.filter(function (f) { return isDone(f) && f.hg != null; }).sort(function (a, b) { return b.ts - a.ts; })[0];
-      if (c.comp.kind === "league") st = d.pos ? ord(d.pos) + " of " + lg.rows.length + " · " + d.pts + " pts" : "";
-      else if (up) st = "Next: " + (up.round ? up.round + " " : "") + "v " + up.opp.n;
+      if (c.comp.kind === "league") {
+        st = d.pos && lg ? ord(d.pos) + " of " + lg.rows.length + " · " + d.pts + " pts" : "";
+        if (lg && lg.rows && lg.rows.length) body = excerpt({ id: lg.id, zones: lg.zones, _hl: d.tid, _club: lg._club, _suffix: lg._suffix }, lg.rows, lg.name);
+        more = "Full table";
+        return { k: k, c: c, st: st, href: (lg && lg.tableHref) || c.comp.href, more: more, body: body };
+      }
+      if (up) st = "Next: " + (up.round ? up.round + " " : "") + "v " + up.opp.n;
       else if (last) { var g = mine(last); st = (last.round ? last.round + ": " : "") + res(last) + " " + g[0] + "–" + g[1] + " v " + last.opp.n; }
-      return '<li><span class="ctag ctag-' + c.comp.kind + '">' + esc(c.comp.short) + '</span><a href="' + esc(c.comp.href) + '">' + esc(c.comp.name) + "</a><span>" + esc(st || "") + "</span></li>";
-    }).join("");
+      var et = c.comp.kind === "europe" && d.euro && d.euro[k];
+      if (et) {
+        st = ord(et.pos) + " of " + et.of + " in the league phase · " + et.pts + " pts" + (st ? " · " + st : "");
+        body = excerpt({ id: et.id, zones: et.zones, _hl: d.tid, _paths: et.paths, _root: d.root, _suffix: d.suffix }, et.rows, et.name);
+      }
+      more = c.comp.kind === "cup" ? "Full bracket" : "Tables and bracket";
+      return { k: k, c: c, st: st, href: c.comp.href, more: more, body: body + games(c.list) };
+    });
+    var compSection = "";
+    if (compTabs.length) {
+      var first = compTabs[0].k;
+      compSection = '<section class="cl-sec cl-comps-sec" data-tabs="club-comps"><div class="cl-sec-h"><h2>Competitions</h2></div>' +
+        '<div class="tf-tabs cl-tabs" role="tablist" aria-label="Competitions">' + compTabs.map(function (t) {
+          return '<button type="button" role="tab" class="tf-tab' + (t.k === first ? " on" : "") + '" data-tab="' + esc(t.k) + '" aria-selected="' + (t.k === first) + '">' +
+            '<span class="ctag ctag-' + t.c.comp.kind + '">' + esc(t.c.comp.short) + "</span>" + esc(t.c.comp.name) + "</button>";
+        }).join("") + "</div>" +
+        compTabs.map(function (t) {
+          return '<div class="tf-panel' + (t.k === first ? " on" : "") + '" data-panel="' + esc(t.k) + '" role="tabpanel">' +
+            '<div class="cl-tab-h"><p>' + esc(t.st || "") + '</p><a href="' + esc(t.href) + '">' + t.more + " →</a></div>" + t.body + "</div>";
+        }).join("") + "</section>";
+    }
 
     // Pyramid journey: each season's finishing position on one ladder for the whole pyramid
     // (in England 1-20 is the Premier League, 21-44 the Championship and so on), oldest on the left.
@@ -1075,8 +1101,7 @@
       '<div class="cl-cols"><section class="cl-sec"><div class="cl-sec-h"><h2>Fixtures</h2></div>' +
         (list(live, "live", 9) + list(upcoming, "fixture", 6) || '<p class="ko-empty">No fixtures scheduled yet.</p>') + "</section>" +
       '<section class="cl-sec"><div class="cl-sec-h"><h2>Results</h2></div>' + (list(played, "result", 6) || '<p class="ko-empty">No results yet this season.</p>') + "</section></div>" +
-      tableHTMLs +
-      (compRows ? '<section class="cl-sec"><div class="cl-sec-h"><h2>Competitions</h2></div><ul class="cl-comps">' + compRows + "</ul></section>" : "") +
+      compSection +
       journey;
   }
 

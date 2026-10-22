@@ -876,3 +876,13 @@ tbody tr.is-this .c-club { font-weight: 700; }
 }
 
 .cl-res { display: inline-flex; align-items: center; white-space: nowrap; }
+
+/* Club page: one tab per competition */
+.cl-tabs { margin: 0 0 12px; flex-wrap: wrap; overflow: visible; }
+.cl-tabs .tf-tab { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.cl-tabs .tf-tab .ctag { margin: 0; }
+.cl-tab-h { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; margin: 0 0 10px; }
+.cl-tab-h p { margin: 0; font-weight: 600; }
+.cl-tab-h a { color: var(--accent); font-weight: 600; text-decoration: none; white-space: nowrap; }
+.cl-tab-h a:hover { text-decoration: underline; }
+.cl-comps-sec .tf-panel .cl-list { margin-top: 12px; }

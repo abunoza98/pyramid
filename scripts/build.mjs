@@ -489,6 +489,18 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         // Opponents with a page on the site link to it (including clubs from other countries met in Europe).
         return { ...f, comp: f.comp.key, opp: { n: f.opp.n, t: f.opp.t, tier: f.opp.tier, s: o ? o.path : null } };
       }).sort((a, b) => a.ts - b.ts);
+      // European league-phase tables: the club and the three places either side, for its Competitions tab.
+      const euro = {};
+      for (const k of Object.keys(comps)) {
+        if (comps[k].kind !== "europe" || !europe) continue;
+        const el = europe.leagues.find((l) => l.id === k.split("/")[1]);
+        const eg = el && FP.groupsOf(el).find((x) => x.rows.some((y) => y.tid === tid));
+        if (!eg) continue;
+        const me = eg.rows.find((y) => y.tid === tid), i = eg.rows.indexOf(me);
+        const from = Math.max(0, Math.min(i - 3, eg.rows.length - 7)), part = eg.rows.slice(from, from + 7);
+        euro[k] = { id: el.id, name: el.name, zones: el.zones, of: eg.rows.length, pos: me.pos, pts: me.pts, rows: part,
+          paths: Object.fromEntries(part.filter((y) => pathByTid[y.tid]).map((y) => [y.tid, pathByTid[y.tid]])) };
+      }
       // Pyramid journey: this season, then each saved past season (matched by name).
       const sizesNow = sizesOf(c.leagues);
       const journey = [{ season: c.season, tier: lg.tier, league: lg.name, pos: r.pos, of: g.rows.length, rank: rankIn(sizesNow, lg.tier, r.pos), sizes: sizesNow, now: true },
@@ -498,7 +510,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         pos: r.pos, pts: r.pts, p: r.p,
         league: { ...tableOf(c, lg), short: lg.short, group: FP.groupsOf(lg).length > 1 ? g.name : null, rows: g.rows,
           tableHref: `${base}${c.country}/${suffix}#${lg.id}`, _club: `${base}${c.country}/club/`, _suffix: suffix },
-        fx, journey, ladder: laddersOf(c)
+        fx, journey, ladder: laddersOf(c), euro
       };
       await write(`${k.path}index.html`, shell({
         title: `${r.team} fixtures, results and table ${c.season} | Football Pyramids`,
