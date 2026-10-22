@@ -4,7 +4,7 @@
  "adjective": "European",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-21T00:00:00.000Z",
+ "updated": "2026-10-22T00:00:00.000Z",
  "leagues": [
   {
    "id": "champions-league",
@@ -504,7 +504,7 @@
      "form": "LLL"
     }
    ],
-   "updated": "2026-10-21T00:00:00.000Z"
+   "updated": "2026-10-22T00:00:00.000Z"
   },
   {
    "id": "europa-league",
@@ -1005,7 +1005,7 @@
      "form": "LL"
     }
    ],
-   "updated": "2026-10-19T00:00:00.000Z"
+   "updated": "2026-10-22T00:00:00.000Z"
   },
   {
    "id": "conference-league",
@@ -1039,6 +1039,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Panathinaikos",
+     "p": 2,
+     "w": 2,
+     "d": 0,
+     "l": 0,
+     "gf": 7,
+     "ga": 2,
+     "pts": 6,
+     "tid": 617,
+     "form": "WW"
+    },
+    {
+     "pos": 2,
      "team": "Brighton & Hove Albion",
      "p": 1,
      "w": 1,
@@ -1051,7 +1064,7 @@
      "form": "W"
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "FC Copenhagen",
      "p": 1,
      "w": 1,
@@ -1064,7 +1077,7 @@
      "form": "W"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Trabzonspor",
      "p": 1,
      "w": 1,
@@ -1077,7 +1090,7 @@
      "form": "W"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Atalanta",
      "p": 1,
      "w": 1,
@@ -1090,7 +1103,7 @@
      "form": "W"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Mjällby",
      "p": 1,
      "w": 1,
@@ -1103,7 +1116,7 @@
      "form": "W"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Sint-Truiden",
      "p": 1,
      "w": 1,
@@ -1116,7 +1129,7 @@
      "form": "W"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "SC Freiburg",
      "p": 1,
      "w": 1,
@@ -1129,7 +1142,7 @@
      "form": "W"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Lugano",
      "p": 1,
      "w": 1,
@@ -1142,7 +1155,7 @@
      "form": "W"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Monaco",
      "p": 1,
      "w": 1,
@@ -1155,7 +1168,7 @@
      "form": "W"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Hajduk Split",
      "p": 1,
      "w": 1,
@@ -1165,19 +1178,6 @@
      "ga": 1,
      "pts": 3,
      "tid": 608,
-     "form": "W"
-    },
-    {
-     "pos": 11,
-     "team": "Panathinaikos",
-     "p": 1,
-     "w": 1,
-     "d": 0,
-     "l": 0,
-     "gf": 2,
-     "ga": 1,
-     "pts": 3,
-     "tid": 617,
      "form": "W"
     },
     {
@@ -1260,19 +1260,6 @@
     },
     {
      "pos": 18,
-     "team": "Kairat Almaty",
-     "p": 1,
-     "w": 0,
-     "d": 1,
-     "l": 0,
-     "gf": 1,
-     "ga": 1,
-     "pts": 1,
-     "tid": 664,
-     "form": "D"
-    },
-    {
-     "pos": 19,
      "team": "Heart of Midlothian",
      "p": 1,
      "w": 0,
@@ -1285,7 +1272,7 @@
      "form": "D"
     },
     {
-     "pos": 20,
+     "pos": 19,
      "team": "Egnatia Rrogozhinë",
      "p": 1,
      "w": 0,
@@ -1298,7 +1285,7 @@
      "form": "D"
     },
     {
-     "pos": 21,
+     "pos": 20,
      "team": "Universitatea Craiova",
      "p": 1,
      "w": 0,
@@ -1311,7 +1298,7 @@
      "form": "D"
     },
     {
-     "pos": 22,
+     "pos": 21,
      "team": "Riga FC",
      "p": 1,
      "w": 0,
@@ -1322,6 +1309,19 @@
      "pts": 1,
      "tid": 10124,
      "form": "D"
+    },
+    {
+     "pos": 22,
+     "team": "Kairat Almaty",
+     "p": 2,
+     "w": 0,
+     "d": 1,
+     "l": 1,
+     "gf": 2,
+     "ga": 6,
+     "pts": 1,
+     "tid": 664,
+     "form": "DL"
     },
     {
      "pos": 23,
@@ -1506,7 +1506,7 @@
      "form": "L"
     }
    ],
-   "updated": "2026-10-21T00:00:00.000Z"
+   "updated": "2026-10-22T00:00:00.000Z"
   }
  ]
 }
