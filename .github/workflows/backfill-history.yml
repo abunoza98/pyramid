@@ -1,0 +1,47 @@
+name: Backfill history
+
+on:
+  # Run it by hand once (Actions > Backfill history > Run workflow).
+  workflow_dispatch: {}
+  schedule:
+    # Then once a year in early August, to add the season that has just finished.
+    - cron: "17 4 3 8 *"
+
+permissions:
+  contents: write
+
+# Same group as the hourly job, so the two never run (and push) at the same time.
+concurrency:
+  group: update-standings
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - name: Fetch past seasons (only ones not already saved)
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: node scripts/backfill-history.mjs
+
+      - name: Rebuild pages
+        run: node scripts/build.mjs
+
+      - name: Commit if anything changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "pyramid-bot"
+          git config user.email "pyramid-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Add past seasons"
+          git push
