@@ -370,7 +370,22 @@ tbody tr.is-mine .c-club::before { content: ""; display: inline-block; width: 7p
 
 /* ---------- Other seasons ---------- */
 .seasons { margin: 14px 0 0; }
-.seasons-country { display: block; font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.seasons-head {
+  display: inline-flex; align-items: center; gap: 8px; list-style: none;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
+}
+.seasons-head .sep { color: var(--muted); }
+summary.seasons-head { cursor: pointer; }
+summary.seasons-head::-webkit-details-marker { display: none; }
+.seasons-more {
+  display: inline-flex; align-items: center; gap: 6px; margin-left: 4px; padding: 4px 9px;
+  border: 1px solid var(--rule-strong); border-radius: 6px; background: var(--sheet);
+  font-size: 11px; letter-spacing: 0.08em; color: var(--ink);
+}
+.seasons-more::after { content: "▾"; font-size: 10px; }
+.seasons[open] .seasons-more::after { content: "▴"; }
+summary.seasons-head:hover .seasons-more { border-color: var(--accent); }
+summary.seasons-head:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 .seasons ul { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
 .seasons a, .seasons li span {
   display: inline-block; padding: 5px 9px; border-radius: 6px; font-size: 13px; font-variant-numeric: tabular-nums;

@@ -137,7 +137,9 @@
   }
   function redraw(html) {
     var y = window.scrollY;
+    var open = document.querySelector("details.seasons[open]");
     $("main-content").innerHTML = html;
+    if (open) { var d = document.querySelector("details.seasons"); if (d) d.open = true; }
     applyClub(false);
     window.scrollTo(0, y);
   }

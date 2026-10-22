@@ -169,12 +169,14 @@
   }
 
   /* ---------- Whole pages (the inside of <main>) ---------- */
-  // "ENGLAND" then a button per season. seasons: [{ label, href, current }]
+  // "ENGLAND · 2026–27 ▾" that opens to a button per season. seasons: [{ label, href, current }]
   function seasonsHTML(c, seasons) {
-    var list = seasons && seasons.length > 1 ? seasons : [{ label: c.season, current: true }];
-    return '<nav class="seasons" aria-label="Seasons"><span class="seasons-country">' + esc(c.name) + "</span><ul>" + list.map(function (s) {
-      return "<li>" + (s.current ? '<span aria-current="page">' + esc(s.label) + "</span>" : '<a href="' + esc(s.href) + '">' + esc(s.label) + "</a>") + "</li>";
-    }).join("") + "</ul></nav>";
+    var head = esc(c.name) + '<span class="sep" aria-hidden="true">·</span>' + esc(c.season);
+    if (!seasons || seasons.length < 2) return '<p class="seasons"><span class="seasons-head">' + head + "</span></p>";
+    return '<details class="seasons"><summary class="seasons-head">' + head + '<span class="seasons-more">Seasons</span></summary>' +
+      '<ul aria-label="Seasons">' + seasons.map(function (s) {
+        return "<li>" + (s.current ? '<span aria-current="page">' + esc(s.label) + "</span>" : '<a href="' + esc(s.href) + '">' + esc(s.label) + "</a>") + "</li>";
+      }).join("") + "</ul></details>";
   }
 
   function countryMain(c, opts) {
