@@ -782,10 +782,13 @@
       (opts.seasons ? seasonsHTML({ name: comp.name, season: fx ? fx.season : "" }, opts.seasons) : "") +
       '<p class="lede"><strong>' + esc(compStatus(comp, fx)) + "</strong> · " + (comp.final ? (comp.groups ? "The group-stage tables" : "The league-phase table") + ", the full knockout bracket and every qualifying tie."
         : "The league-phase table, the knockout bracket as each draw is made, and every qualifying tie.") + "</p>" +
-      '<p class="fx-links">' + (opts.fixturesHref ? '<a href="' + esc(opts.fixturesHref) + '">Fixtures and results by round →</a>' : "") +
-      tzLine(mode, "europe") + "</p></section>" +
-      '<section class="comp" data-tabs="stage"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Stages">' +
-      tab("lp", comp.groups ? "Group stage" : "League phase") + tab("ko", "Knockouts") + tab("q", "Qualifying") + "</div>" +
+      '<p class="fx-links">' + tzLine(mode, "europe") + "</p></section>" +
+      // Fixtures sit first in the row, as a button that opens the competition's fixtures page (it's a link, so it
+      // stays outside the tab list).
+      '<section class="comp" data-tabs="stage"><div class="comp-bar">' +
+      (opts.fixturesHref ? '<a class="tf-tab tf-go" href="' + esc(opts.fixturesHref) + '">Fixtures and results <span aria-hidden="true">→</span></a>' : "") +
+      '<div class="tf-tabs comp-tabs" role="tablist" aria-label="Stages">' +
+      tab("lp", comp.groups ? "Group stage" : "League phase") + tab("ko", "Knockouts") + tab("q", "Qualifying") + "</div></div>" +
       panel("lp", (comp.rows && !comp.rows.length && !comp.groups ? '<p class="ko-empty">No table for this season.</p>'
         : tierHTML(opts.clubPaths ? Object.assign(comp, { _paths: opts.clubPaths, _root: opts.root || "", _suffix: opts.suffix || "" }) : comp, { eyebrow: comp.groups ? "Group stage" : "League phase" }))) +
       panel("ko", bracketHTML(ko, tz, now)) +
