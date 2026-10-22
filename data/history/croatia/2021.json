@@ -1,0 +1,402 @@
+{
+ "country": "croatia",
+ "name": "Croatia",
+ "adjective": "Croatian",
+ "season": "2021–22",
+ "year": 2021,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "hnl",
+   "tier": 1,
+   "name": "Prva HNL",
+   "short": "1HNL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 2,
+     "to": 3,
+     "kind": "mid",
+     "label": "Conference League"
+    },
+    {
+     "from": 10,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Dinamo Zagreb",
+     "p": 36,
+     "w": 24,
+     "d": 7,
+     "l": 5,
+     "gf": 68,
+     "ga": 22,
+     "pts": 79,
+     "tid": 620,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 2,
+     "team": "Hajduk Split",
+     "p": 36,
+     "w": 21,
+     "d": 9,
+     "l": 6,
+     "gf": 64,
+     "ga": 31,
+     "pts": 72,
+     "tid": 608,
+     "form": "DWWWL"
+    },
+    {
+     "pos": 3,
+     "team": "Osijek",
+     "p": 36,
+     "w": 19,
+     "d": 12,
+     "l": 5,
+     "gf": 49,
+     "ga": 29,
+     "pts": 69,
+     "tid": 616,
+     "form": "LDLWD"
+    },
+    {
+     "pos": 4,
+     "team": "Rijeka",
+     "p": 36,
+     "w": 20,
+     "d": 5,
+     "l": 11,
+     "gf": 71,
+     "ga": 51,
+     "pts": 65,
+     "tid": 561,
+     "form": "WWLDW"
+    },
+    {
+     "pos": 5,
+     "team": "Lokomotiva",
+     "p": 36,
+     "w": 12,
+     "d": 13,
+     "l": 11,
+     "gf": 55,
+     "ga": 50,
+     "pts": 49,
+     "tid": 1017,
+     "form": "DDDLW"
+    },
+    {
+     "pos": 6,
+     "team": "Gorica",
+     "p": 36,
+     "w": 12,
+     "d": 9,
+     "l": 15,
+     "gf": 43,
+     "ga": 50,
+     "pts": 45,
+     "tid": 1068,
+     "form": "LLDWD"
+    },
+    {
+     "pos": 7,
+     "team": "Slaven Belupo",
+     "p": 36,
+     "w": 9,
+     "d": 9,
+     "l": 18,
+     "gf": 35,
+     "ga": 54,
+     "pts": 36,
+     "tid": 1018,
+     "form": "DWDDL"
+    },
+    {
+     "pos": 8,
+     "team": "Sibenik",
+     "p": 36,
+     "w": 9,
+     "d": 5,
+     "l": 22,
+     "gf": 46,
+     "ga": 75,
+     "pts": 32,
+     "tid": 1475,
+     "form": "LLWLL"
+    },
+    {
+     "pos": 9,
+     "team": "Istra 1961",
+     "p": 36,
+     "w": 7,
+     "d": 10,
+     "l": 19,
+     "gf": 42,
+     "ga": 67,
+     "pts": 31,
+     "tid": 1016,
+     "form": "DDLLW"
+    },
+    {
+     "pos": 10,
+     "team": "Hrvatski Dragovoljac",
+     "p": 36,
+     "w": 4,
+     "d": 7,
+     "l": 25,
+     "gf": 31,
+     "ga": 75,
+     "pts": 19,
+     "tid": 1472,
+     "form": "WLDLL"
+    }
+   ]
+  },
+  {
+   "id": "prva-nl",
+   "tier": 2,
+   "name": "Druga HNL",
+   "short": "2HNL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 12,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Varaždin",
+     "p": 29,
+     "w": 18,
+     "d": 6,
+     "l": 5,
+     "gf": 53,
+     "ga": 27,
+     "pts": 60,
+     "tid": 1483,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 2,
+     "team": "Rudeš",
+     "p": 29,
+     "w": 17,
+     "d": 5,
+     "l": 7,
+     "gf": 54,
+     "ga": 24,
+     "pts": 56,
+     "tid": 1019,
+     "form": "LWWDW"
+    },
+    {
+     "pos": 3,
+     "team": "Inter Zaprešić",
+     "p": 29,
+     "w": 13,
+     "d": 9,
+     "l": 7,
+     "gf": 34,
+     "ga": 28,
+     "pts": 48,
+     "tid": 1020,
+     "form": "DWDWW"
+    },
+    {
+     "pos": 4,
+     "team": "Jarun",
+     "p": 30,
+     "w": 11,
+     "d": 11,
+     "l": 8,
+     "gf": 46,
+     "ga": 38,
+     "pts": 44,
+     "tid": 8605,
+     "form": "WLDWL"
+    },
+    {
+     "pos": 5,
+     "team": "Dinamo Zagreb II",
+     "p": 29,
+     "w": 11,
+     "d": 8,
+     "l": 10,
+     "gf": 35,
+     "ga": 41,
+     "pts": 41,
+     "tid": 1476,
+     "form": "WWWLL"
+    },
+    {
+     "pos": 6,
+     "team": "Kustošija",
+     "p": 29,
+     "w": 10,
+     "d": 9,
+     "l": 10,
+     "gf": 36,
+     "ga": 33,
+     "pts": 39,
+     "tid": 1481,
+     "form": "WDDWW"
+    },
+    {
+     "pos": 7,
+     "team": "Dubrava Zagreb",
+     "p": 29,
+     "w": 11,
+     "d": 6,
+     "l": 12,
+     "gf": 37,
+     "ga": 36,
+     "pts": 39,
+     "tid": 6255,
+     "form": "LLLLW"
+    },
+    {
+     "pos": 8,
+     "team": "Cibalia",
+     "p": 29,
+     "w": 10,
+     "d": 8,
+     "l": 11,
+     "gf": 43,
+     "ga": 42,
+     "pts": 38,
+     "tid": 1021,
+     "form": "DDDWW"
+    },
+    {
+     "pos": 9,
+     "team": "Croatia Zmijavci",
+     "p": 29,
+     "w": 11,
+     "d": 5,
+     "l": 13,
+     "gf": 32,
+     "ga": 42,
+     "pts": 38,
+     "tid": 6254,
+     "form": "LDWWL"
+    },
+    {
+     "pos": 10,
+     "team": "BSK Bijelo Brdo",
+     "p": 29,
+     "w": 11,
+     "d": 5,
+     "l": 13,
+     "gf": 29,
+     "ga": 40,
+     "pts": 38,
+     "tid": 1487,
+     "form": "WWDLL"
+    },
+    {
+     "pos": 11,
+     "team": "Solin",
+     "p": 29,
+     "w": 10,
+     "d": 7,
+     "l": 12,
+     "gf": 40,
+     "ga": 41,
+     "pts": 37,
+     "tid": 1480,
+     "form": "WLWWL"
+    },
+    {
+     "pos": 12,
+     "team": "Dugopolje",
+     "p": 29,
+     "w": 10,
+     "d": 7,
+     "l": 12,
+     "gf": 37,
+     "ga": 44,
+     "pts": 37,
+     "tid": 1471,
+     "form": "LWLWL"
+    },
+    {
+     "pos": 13,
+     "team": "Orijent 1919",
+     "p": 29,
+     "w": 11,
+     "d": 4,
+     "l": 14,
+     "gf": 41,
+     "ga": 49,
+     "pts": 37,
+     "tid": 6256,
+     "form": "LLLLW"
+    },
+    {
+     "pos": 14,
+     "team": "Sesvete",
+     "p": 30,
+     "w": 9,
+     "d": 7,
+     "l": 14,
+     "gf": 37,
+     "ga": 41,
+     "pts": 34,
+     "tid": 1479,
+     "form": "DDLLW"
+    },
+    {
+     "pos": 15,
+     "team": "NK Osijek II",
+     "p": 29,
+     "w": 9,
+     "d": 6,
+     "l": 14,
+     "gf": 24,
+     "ga": 35,
+     "pts": 33,
+     "tid": 1486,
+     "form": "LLLLL"
+    },
+    {
+     "pos": 16,
+     "team": "Opatija",
+     "p": 29,
+     "w": 6,
+     "d": 7,
+     "l": 16,
+     "gf": 27,
+     "ga": 44,
+     "pts": 25,
+     "tid": 6246,
+     "form": "WLDLL"
+    }
+   ]
+  }
+ ]
+}

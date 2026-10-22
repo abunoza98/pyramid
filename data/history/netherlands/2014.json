@@ -1,0 +1,295 @@
+{
+ "country": "netherlands",
+ "name": "Netherlands",
+ "adjective": "Dutch",
+ "season": "2014–15",
+ "year": 2014,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "eredivisie",
+   "tier": 1,
+   "name": "Eredivisie",
+   "short": "ERE",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 2,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 4,
+     "to": 7,
+     "kind": "mid",
+     "label": "Europa League play-offs"
+    },
+    {
+     "from": 16,
+     "to": 17,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 18,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [
+    "Twente: 6 points deducted."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "PSV Eindhoven",
+     "p": 34,
+     "w": 29,
+     "d": 1,
+     "l": 4,
+     "gf": 92,
+     "ga": 31,
+     "pts": 88,
+     "tid": 197,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
+     "team": "Ajax",
+     "p": 34,
+     "w": 21,
+     "d": 8,
+     "l": 5,
+     "gf": 69,
+     "ga": 29,
+     "pts": 71,
+     "tid": 194,
+     "form": "WDDWL"
+    },
+    {
+     "pos": 3,
+     "team": "AZ Alkmaar",
+     "p": 34,
+     "w": 19,
+     "d": 5,
+     "l": 10,
+     "gf": 63,
+     "ga": 56,
+     "pts": 62,
+     "tid": 201,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 4,
+     "team": "Feyenoord",
+     "p": 34,
+     "w": 17,
+     "d": 8,
+     "l": 9,
+     "gf": 56,
+     "ga": 39,
+     "pts": 59,
+     "tid": 209,
+     "form": "DLDLL"
+    },
+    {
+     "pos": 5,
+     "team": "Vitesse",
+     "p": 34,
+     "w": 16,
+     "d": 10,
+     "l": 8,
+     "gf": 66,
+     "ga": 43,
+     "pts": 58,
+     "tid": 200,
+     "form": "WWLWD"
+    },
+    {
+     "pos": 6,
+     "team": "PEC Zwolle",
+     "p": 34,
+     "w": 16,
+     "d": 5,
+     "l": 13,
+     "gf": 59,
+     "ga": 43,
+     "pts": 53,
+     "tid": 193,
+     "form": "LLDWW"
+    },
+    {
+     "pos": 7,
+     "team": "Heerenveen",
+     "p": 34,
+     "w": 13,
+     "d": 11,
+     "l": 10,
+     "gf": 53,
+     "ga": 46,
+     "pts": 50,
+     "tid": 210,
+     "form": "WLDDL"
+    },
+    {
+     "pos": 8,
+     "team": "Groningen",
+     "p": 34,
+     "w": 11,
+     "d": 13,
+     "l": 10,
+     "gf": 49,
+     "ga": 53,
+     "pts": 46,
+     "tid": 202,
+     "form": "WWDLW"
+    },
+    {
+     "pos": 9,
+     "team": "Willem II",
+     "p": 34,
+     "w": 13,
+     "d": 7,
+     "l": 14,
+     "gf": 46,
+     "ga": 50,
+     "pts": 46,
+     "tid": 195,
+     "form": "DLDWW"
+    },
+    {
+     "pos": 10,
+     "team": "Twente",
+     "p": 34,
+     "w": 13,
+     "d": 10,
+     "l": 11,
+     "gf": 56,
+     "ga": 51,
+     "pts": 43,
+     "ded": 6,
+     "tid": 415,
+     "form": "WLLWW"
+    },
+    {
+     "pos": 11,
+     "team": "Utrecht",
+     "p": 34,
+     "w": 11,
+     "d": 8,
+     "l": 15,
+     "gf": 60,
+     "ga": 62,
+     "pts": 41,
+     "tid": 207,
+     "form": "LWWDD"
+    },
+    {
+     "pos": 12,
+     "team": "Cambuur",
+     "p": 34,
+     "w": 11,
+     "d": 8,
+     "l": 15,
+     "gf": 46,
+     "ga": 56,
+     "pts": 41,
+     "tid": 420,
+     "form": "LDDLL"
+    },
+    {
+     "pos": 13,
+     "team": "ADO Den Haag",
+     "p": 34,
+     "w": 9,
+     "d": 10,
+     "l": 15,
+     "gf": 44,
+     "ga": 53,
+     "pts": 37,
+     "tid": 198,
+     "form": "WLWLL"
+    },
+    {
+     "pos": 14,
+     "team": "Heracles",
+     "p": 34,
+     "w": 11,
+     "d": 4,
+     "l": 19,
+     "gf": 47,
+     "ga": 64,
+     "pts": 37,
+     "tid": 206,
+     "form": "LWWLW"
+    },
+    {
+     "pos": 15,
+     "team": "Excelsior",
+     "p": 34,
+     "w": 6,
+     "d": 14,
+     "l": 14,
+     "gf": 47,
+     "ga": 63,
+     "pts": 32,
+     "tid": 196,
+     "form": "LDLDL"
+    },
+    {
+     "pos": 16,
+     "team": "NAC Breda",
+     "p": 34,
+     "w": 6,
+     "d": 10,
+     "l": 18,
+     "gf": 36,
+     "ga": 68,
+     "pts": 28,
+     "tid": 203,
+     "form": "DDLLL"
+    },
+    {
+     "pos": 17,
+     "team": "Go Ahead Eagles",
+     "p": 34,
+     "w": 7,
+     "d": 6,
+     "l": 21,
+     "gf": 29,
+     "ga": 59,
+     "pts": 27,
+     "tid": 410,
+     "form": "LWLDL"
+    },
+    {
+     "pos": 18,
+     "team": "FC Dordrecht",
+     "p": 34,
+     "w": 4,
+     "d": 8,
+     "l": 22,
+     "gf": 24,
+     "ga": 76,
+     "pts": 20,
+     "tid": 409,
+     "form": "DLDLW"
+    }
+   ]
+  }
+ ]
+}

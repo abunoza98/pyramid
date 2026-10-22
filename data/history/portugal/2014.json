@@ -1,0 +1,280 @@
+{
+ "country": "portugal",
+ "name": "Portugal",
+ "adjective": "Portuguese",
+ "season": "2014–15",
+ "year": 2014,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "liga-portugal",
+   "tier": 1,
+   "name": "Liga Portugal",
+   "short": "LP",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 4,
+     "to": 5,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 17,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Benfica",
+     "p": 34,
+     "w": 27,
+     "d": 4,
+     "l": 3,
+     "gf": 86,
+     "ga": 16,
+     "pts": 85,
+     "tid": 211,
+     "form": "DWWDW"
+    },
+    {
+     "pos": 2,
+     "team": "FC Porto",
+     "p": 34,
+     "w": 25,
+     "d": 7,
+     "l": 2,
+     "gf": 74,
+     "ga": 13,
+     "pts": 82,
+     "tid": 212,
+     "form": "DWWDW"
+    },
+    {
+     "pos": 3,
+     "team": "Sporting CP",
+     "p": 34,
+     "w": 22,
+     "d": 10,
+     "l": 2,
+     "gf": 67,
+     "ga": 29,
+     "pts": 76,
+     "tid": 228,
+     "form": "WWDWW"
+    },
+    {
+     "pos": 4,
+     "team": "Braga",
+     "p": 34,
+     "w": 17,
+     "d": 7,
+     "l": 10,
+     "gf": 55,
+     "ga": 28,
+     "pts": 58,
+     "tid": 217,
+     "form": "DDLLW"
+    },
+    {
+     "pos": 5,
+     "team": "Guimaraes",
+     "p": 34,
+     "w": 15,
+     "d": 10,
+     "l": 9,
+     "gf": 50,
+     "ga": 35,
+     "pts": 55,
+     "tid": 224,
+     "form": "DWDDW"
+    },
+    {
+     "pos": 6,
+     "team": "Belenenses",
+     "p": 34,
+     "w": 12,
+     "d": 12,
+     "l": 10,
+     "gf": 34,
+     "ga": 35,
+     "pts": 48,
+     "tid": 221,
+     "form": "DLDDW"
+    },
+    {
+     "pos": 7,
+     "team": "Nacional",
+     "p": 34,
+     "w": 13,
+     "d": 8,
+     "l": 13,
+     "gf": 45,
+     "ga": 46,
+     "pts": 47,
+     "tid": 225,
+     "form": "WLDWW"
+    },
+    {
+     "pos": 8,
+     "team": "Pacos Ferreira",
+     "p": 34,
+     "w": 12,
+     "d": 11,
+     "l": 11,
+     "gf": 40,
+     "ga": 45,
+     "pts": 47,
+     "tid": 234,
+     "form": "WDDWL"
+    },
+    {
+     "pos": 9,
+     "team": "Marítimo",
+     "p": 34,
+     "w": 12,
+     "d": 8,
+     "l": 14,
+     "gf": 46,
+     "ga": 45,
+     "pts": 44,
+     "tid": 214,
+     "form": "DDWWL"
+    },
+    {
+     "pos": 10,
+     "team": "Rio Ave",
+     "p": 34,
+     "w": 10,
+     "d": 13,
+     "l": 11,
+     "gf": 38,
+     "ga": 42,
+     "pts": 43,
+     "tid": 226,
+     "form": "DWDLL"
+    },
+    {
+     "pos": 11,
+     "team": "Moreirense",
+     "p": 34,
+     "w": 11,
+     "d": 10,
+     "l": 13,
+     "gf": 33,
+     "ga": 42,
+     "pts": 43,
+     "tid": 215,
+     "form": "LLWDW"
+    },
+    {
+     "pos": 12,
+     "team": "Estoril",
+     "p": 34,
+     "w": 9,
+     "d": 13,
+     "l": 12,
+     "gf": 38,
+     "ga": 56,
+     "pts": 40,
+     "tid": 230,
+     "form": "DLDDW"
+    },
+    {
+     "pos": 13,
+     "team": "Boavista",
+     "p": 34,
+     "w": 9,
+     "d": 7,
+     "l": 18,
+     "gf": 27,
+     "ga": 50,
+     "pts": 34,
+     "tid": 222,
+     "form": "DWDLL"
+    },
+    {
+     "pos": 14,
+     "team": "Vitoria Setubal",
+     "p": 34,
+     "w": 7,
+     "d": 8,
+     "l": 19,
+     "gf": 24,
+     "ga": 56,
+     "pts": 29,
+     "tid": 219,
+     "form": "DLLWL"
+    },
+    {
+     "pos": 15,
+     "team": "Académica",
+     "p": 34,
+     "w": 4,
+     "d": 17,
+     "l": 13,
+     "gf": 26,
+     "ga": 46,
+     "pts": 29,
+     "tid": 239,
+     "form": "LDDLL"
+    },
+    {
+     "pos": 16,
+     "team": "Arouca",
+     "p": 34,
+     "w": 7,
+     "d": 7,
+     "l": 20,
+     "gf": 26,
+     "ga": 50,
+     "pts": 28,
+     "tid": 240,
+     "form": "LDDLL"
+    },
+    {
+     "pos": 17,
+     "team": "Gil Vicente",
+     "p": 34,
+     "w": 4,
+     "d": 11,
+     "l": 19,
+     "gf": 25,
+     "ga": 60,
+     "pts": 23,
+     "tid": 762,
+     "form": "WLLLL"
+    },
+    {
+     "pos": 18,
+     "team": "Penafiel",
+     "p": 34,
+     "w": 5,
+     "d": 7,
+     "l": 22,
+     "gf": 29,
+     "ga": 69,
+     "pts": 22,
+     "tid": 235,
+     "form": "LDLWL"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,260 @@
+{
+ "country": "portugal",
+ "name": "Portugal",
+ "adjective": "Portuguese",
+ "season": "2013–14",
+ "year": 2013,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "liga-portugal",
+   "tier": 1,
+   "name": "Liga Portugal",
+   "short": "LP",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 4,
+     "to": 5,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 15,
+     "to": 15,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 16,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Benfica",
+     "p": 30,
+     "w": 23,
+     "d": 5,
+     "l": 2,
+     "gf": 58,
+     "ga": 18,
+     "pts": 74,
+     "tid": 211,
+     "form": "WWWDL"
+    },
+    {
+     "pos": 2,
+     "team": "Sporting CP",
+     "p": 30,
+     "w": 20,
+     "d": 7,
+     "l": 3,
+     "gf": 54,
+     "ga": 20,
+     "pts": 67,
+     "tid": 228,
+     "form": "WWWDL"
+    },
+    {
+     "pos": 3,
+     "team": "FC Porto",
+     "p": 30,
+     "w": 19,
+     "d": 4,
+     "l": 7,
+     "gf": 57,
+     "ga": 25,
+     "pts": 61,
+     "tid": 212,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 4,
+     "team": "Estoril",
+     "p": 30,
+     "w": 15,
+     "d": 9,
+     "l": 6,
+     "gf": 42,
+     "ga": 26,
+     "pts": 54,
+     "tid": 230,
+     "form": "WWDDW"
+    },
+    {
+     "pos": 5,
+     "team": "Nacional",
+     "p": 30,
+     "w": 11,
+     "d": 12,
+     "l": 7,
+     "gf": 43,
+     "ga": 33,
+     "pts": 45,
+     "tid": 225,
+     "form": "LWWDL"
+    },
+    {
+     "pos": 6,
+     "team": "Marítimo",
+     "p": 30,
+     "w": 11,
+     "d": 8,
+     "l": 11,
+     "gf": 40,
+     "ga": 44,
+     "pts": 41,
+     "tid": 214,
+     "form": "WLWDW"
+    },
+    {
+     "pos": 7,
+     "team": "Vitoria Setubal",
+     "p": 30,
+     "w": 10,
+     "d": 9,
+     "l": 11,
+     "gf": 41,
+     "ga": 41,
+     "pts": 39,
+     "tid": 219,
+     "form": "WDDDW"
+    },
+    {
+     "pos": 8,
+     "team": "Académica",
+     "p": 30,
+     "w": 9,
+     "d": 10,
+     "l": 11,
+     "gf": 25,
+     "ga": 35,
+     "pts": 37,
+     "tid": 239,
+     "form": "LDLDW"
+    },
+    {
+     "pos": 9,
+     "team": "Braga",
+     "p": 30,
+     "w": 10,
+     "d": 7,
+     "l": 13,
+     "gf": 39,
+     "ga": 37,
+     "pts": 37,
+     "tid": 217,
+     "form": "WLDDL"
+    },
+    {
+     "pos": 10,
+     "team": "Guimaraes",
+     "p": 30,
+     "w": 10,
+     "d": 5,
+     "l": 15,
+     "gf": 30,
+     "ga": 35,
+     "pts": 35,
+     "tid": 224,
+     "form": "LLLDW"
+    },
+    {
+     "pos": 11,
+     "team": "Rio Ave",
+     "p": 30,
+     "w": 8,
+     "d": 8,
+     "l": 14,
+     "gf": 21,
+     "ga": 35,
+     "pts": 32,
+     "tid": 226,
+     "form": "LLLDL"
+    },
+    {
+     "pos": 12,
+     "team": "Arouca",
+     "p": 30,
+     "w": 8,
+     "d": 7,
+     "l": 15,
+     "gf": 28,
+     "ga": 42,
+     "pts": 31,
+     "tid": 240,
+     "form": "LLWWL"
+    },
+    {
+     "pos": 13,
+     "team": "Gil Vicente",
+     "p": 30,
+     "w": 8,
+     "d": 7,
+     "l": 15,
+     "gf": 23,
+     "ga": 37,
+     "pts": 31,
+     "tid": 762,
+     "form": "LLDLW"
+    },
+    {
+     "pos": 14,
+     "team": "Belenenses",
+     "p": 30,
+     "w": 6,
+     "d": 10,
+     "l": 14,
+     "gf": 19,
+     "ga": 33,
+     "pts": 28,
+     "tid": 221,
+     "form": "WWLDW"
+    },
+    {
+     "pos": 15,
+     "team": "Pacos Ferreira",
+     "p": 30,
+     "w": 6,
+     "d": 6,
+     "l": 18,
+     "gf": 28,
+     "ga": 59,
+     "pts": 24,
+     "tid": 234,
+     "form": "LLLDL"
+    },
+    {
+     "pos": 16,
+     "team": "Olhanense",
+     "p": 30,
+     "w": 6,
+     "d": 6,
+     "l": 18,
+     "gf": 21,
+     "ga": 49,
+     "pts": 24,
+     "tid": 807,
+     "form": "LWLWL"
+    }
+   ]
+  }
+ ]
+}

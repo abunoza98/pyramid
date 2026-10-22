@@ -1,0 +1,280 @@
+{
+ "country": "portugal",
+ "name": "Portugal",
+ "adjective": "Portuguese",
+ "season": "2015–16",
+ "year": 2015,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "liga-portugal",
+   "tier": 1,
+   "name": "Liga Portugal",
+   "short": "LP",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 4,
+     "to": 5,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 17,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Benfica",
+     "p": 34,
+     "w": 29,
+     "d": 1,
+     "l": 4,
+     "gf": 88,
+     "ga": 22,
+     "pts": 88,
+     "tid": 211,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
+     "team": "Sporting CP",
+     "p": 34,
+     "w": 27,
+     "d": 5,
+     "l": 2,
+     "gf": 79,
+     "ga": 21,
+     "pts": 86,
+     "tid": 228,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 3,
+     "team": "FC Porto",
+     "p": 34,
+     "w": 23,
+     "d": 4,
+     "l": 7,
+     "gf": 67,
+     "ga": 30,
+     "pts": 73,
+     "tid": 212,
+     "form": "WWLWW"
+    },
+    {
+     "pos": 4,
+     "team": "Braga",
+     "p": 34,
+     "w": 16,
+     "d": 10,
+     "l": 8,
+     "gf": 54,
+     "ga": 35,
+     "pts": 58,
+     "tid": 217,
+     "form": "WLWDL"
+    },
+    {
+     "pos": 5,
+     "team": "Arouca",
+     "p": 34,
+     "w": 13,
+     "d": 15,
+     "l": 6,
+     "gf": 47,
+     "ga": 38,
+     "pts": 54,
+     "tid": 240,
+     "form": "DWWDD"
+    },
+    {
+     "pos": 6,
+     "team": "Rio Ave",
+     "p": 34,
+     "w": 14,
+     "d": 8,
+     "l": 12,
+     "gf": 44,
+     "ga": 44,
+     "pts": 50,
+     "tid": 226,
+     "form": "DLDLW"
+    },
+    {
+     "pos": 7,
+     "team": "Pacos Ferreira",
+     "p": 34,
+     "w": 13,
+     "d": 10,
+     "l": 11,
+     "gf": 43,
+     "ga": 42,
+     "pts": 49,
+     "tid": 234,
+     "form": "WWWLD"
+    },
+    {
+     "pos": 8,
+     "team": "Estoril",
+     "p": 34,
+     "w": 13,
+     "d": 8,
+     "l": 13,
+     "gf": 40,
+     "ga": 41,
+     "pts": 47,
+     "tid": 230,
+     "form": "WDWDL"
+    },
+    {
+     "pos": 9,
+     "team": "Belenenses",
+     "p": 34,
+     "w": 10,
+     "d": 11,
+     "l": 13,
+     "gf": 44,
+     "ga": 66,
+     "pts": 41,
+     "tid": 221,
+     "form": "DLLDW"
+    },
+    {
+     "pos": 10,
+     "team": "Guimaraes",
+     "p": 34,
+     "w": 9,
+     "d": 13,
+     "l": 12,
+     "gf": 45,
+     "ga": 53,
+     "pts": 40,
+     "tid": 224,
+     "form": "LDLWD"
+    },
+    {
+     "pos": 11,
+     "team": "Nacional",
+     "p": 34,
+     "w": 10,
+     "d": 8,
+     "l": 16,
+     "gf": 40,
+     "ga": 56,
+     "pts": 38,
+     "tid": 225,
+     "form": "LLLDL"
+    },
+    {
+     "pos": 12,
+     "team": "Moreirense",
+     "p": 34,
+     "w": 9,
+     "d": 9,
+     "l": 16,
+     "gf": 38,
+     "ga": 54,
+     "pts": 36,
+     "tid": 215,
+     "form": "LWDLW"
+    },
+    {
+     "pos": 13,
+     "team": "Marítimo",
+     "p": 34,
+     "w": 10,
+     "d": 5,
+     "l": 19,
+     "gf": 45,
+     "ga": 63,
+     "pts": 35,
+     "tid": 214,
+     "form": "WLLLL"
+    },
+    {
+     "pos": 14,
+     "team": "Boavista",
+     "p": 34,
+     "w": 8,
+     "d": 9,
+     "l": 17,
+     "gf": 24,
+     "ga": 41,
+     "pts": 33,
+     "tid": 222,
+     "form": "LWDWL"
+    },
+    {
+     "pos": 15,
+     "team": "Vitoria Setubal",
+     "p": 34,
+     "w": 6,
+     "d": 12,
+     "l": 16,
+     "gf": 40,
+     "ga": 61,
+     "pts": 30,
+     "tid": 219,
+     "form": "LLLLD"
+    },
+    {
+     "pos": 16,
+     "team": "Tondela",
+     "p": 34,
+     "w": 8,
+     "d": 6,
+     "l": 20,
+     "gf": 34,
+     "ga": 54,
+     "pts": 30,
+     "tid": 218,
+     "form": "LWDWW"
+    },
+    {
+     "pos": 17,
+     "team": "U. Madeira",
+     "p": 34,
+     "w": 7,
+     "d": 8,
+     "l": 19,
+     "gf": 27,
+     "ga": 50,
+     "pts": 29,
+     "tid": 763,
+     "form": "LLWLL"
+    },
+    {
+     "pos": 18,
+     "team": "Académica",
+     "p": 34,
+     "w": 5,
+     "d": 10,
+     "l": 19,
+     "gf": 32,
+     "ga": 60,
+     "pts": 25,
+     "tid": 239,
+     "form": "DLLDL"
+    }
+   ]
+  }
+ ]
+}

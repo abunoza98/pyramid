@@ -1,0 +1,776 @@
+{
+ "country": "scotland",
+ "name": "Scotland",
+ "adjective": "Scottish",
+ "season": "2022–23",
+ "year": 2022,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "premiership",
+   "tier": 1,
+   "name": "Premiership",
+   "short": "PREM",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 2,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 3,
+     "to": 4,
+     "kind": "mid",
+     "label": "Conference League"
+    }
+   ],
+   "notes": [],
+   "groups": [
+    {
+     "name": "Championship Group",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Celtic",
+       "p": 38,
+       "w": 32,
+       "d": 3,
+       "l": 3,
+       "gf": 114,
+       "ga": 34,
+       "pts": 99,
+       "tid": 247,
+       "form": "WLDLW"
+      },
+      {
+       "pos": 2,
+       "team": "Rangers",
+       "p": 38,
+       "w": 29,
+       "d": 5,
+       "l": 4,
+       "gf": 93,
+       "ga": 37,
+       "pts": 92,
+       "tid": 257,
+       "form": "WWWDW"
+      },
+      {
+       "pos": 3,
+       "team": "Aberdeen",
+       "p": 38,
+       "w": 18,
+       "d": 3,
+       "l": 17,
+       "gf": 56,
+       "ga": 60,
+       "pts": 57,
+       "tid": 252,
+       "form": "LDLWL"
+      },
+      {
+       "pos": 4,
+       "team": "Heart OF Midlothian",
+       "p": 38,
+       "w": 15,
+       "d": 9,
+       "l": 14,
+       "gf": 63,
+       "ga": 57,
+       "pts": 54,
+       "tid": 254,
+       "form": "LDWDD"
+      },
+      {
+       "pos": 5,
+       "team": "Hibernian",
+       "p": 38,
+       "w": 15,
+       "d": 7,
+       "l": 16,
+       "gf": 57,
+       "ga": 59,
+       "pts": 52,
+       "tid": 249,
+       "form": "WDLWD"
+      },
+      {
+       "pos": 6,
+       "team": "St Mirren",
+       "p": 38,
+       "w": 12,
+       "d": 10,
+       "l": 16,
+       "gf": 43,
+       "ga": 61,
+       "pts": 46,
+       "tid": 251,
+       "form": "LDDLL"
+      }
+     ]
+    },
+    {
+     "name": "1st Phase",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Celtic",
+       "p": 33,
+       "w": 30,
+       "d": 2,
+       "l": 1,
+       "gf": 103,
+       "ga": 25,
+       "pts": 92,
+       "tid": 247,
+       "form": "WWWWD"
+      },
+      {
+       "pos": 2,
+       "team": "Rangers",
+       "p": 33,
+       "w": 25,
+       "d": 4,
+       "l": 4,
+       "gf": 81,
+       "ga": 34,
+       "pts": 79,
+       "tid": 257,
+       "form": "WWLWL"
+      },
+      {
+       "pos": 3,
+       "team": "Aberdeen",
+       "p": 33,
+       "w": 17,
+       "d": 2,
+       "l": 14,
+       "gf": 52,
+       "ga": 52,
+       "pts": 53,
+       "tid": 252,
+       "form": "WWWWW"
+      },
+      {
+       "pos": 4,
+       "team": "Heart OF Midlothian",
+       "p": 33,
+       "w": 14,
+       "d": 6,
+       "l": 13,
+       "gf": 56,
+       "ga": 49,
+       "pts": 48,
+       "tid": 254,
+       "form": "LLLLW"
+      },
+      {
+       "pos": 5,
+       "team": "Hibernian",
+       "p": 33,
+       "w": 13,
+       "d": 5,
+       "l": 15,
+       "gf": 49,
+       "ga": 52,
+       "pts": 44,
+       "tid": 249,
+       "form": "LLLWD"
+      },
+      {
+       "pos": 6,
+       "team": "St Mirren",
+       "p": 33,
+       "w": 12,
+       "d": 8,
+       "l": 13,
+       "gf": 38,
+       "ga": 49,
+       "pts": 44,
+       "tid": 251,
+       "form": "DWWLL"
+      },
+      {
+       "pos": 7,
+       "team": "Livingston",
+       "p": 33,
+       "w": 12,
+       "d": 6,
+       "l": 15,
+       "gf": 33,
+       "ga": 52,
+       "pts": 42,
+       "tid": 255,
+       "form": "WLLWL"
+      },
+      {
+       "pos": 8,
+       "team": "Motherwell",
+       "p": 33,
+       "w": 10,
+       "d": 7,
+       "l": 16,
+       "gf": 44,
+       "ga": 48,
+       "pts": 37,
+       "tid": 256,
+       "form": "LWWLD"
+      },
+      {
+       "pos": 9,
+       "team": "St Johnstone",
+       "p": 33,
+       "w": 9,
+       "d": 6,
+       "l": 18,
+       "gf": 34,
+       "ga": 54,
+       "pts": 33,
+       "tid": 258,
+       "form": "DLLLD"
+      },
+      {
+       "pos": 10,
+       "team": "Dundee United",
+       "p": 33,
+       "w": 8,
+       "d": 7,
+       "l": 18,
+       "gf": 36,
+       "ga": 58,
+       "pts": 31,
+       "tid": 1386,
+       "form": "DLWWW"
+      },
+      {
+       "pos": 11,
+       "team": "Kilmarnock",
+       "p": 33,
+       "w": 8,
+       "d": 7,
+       "l": 18,
+       "gf": 29,
+       "ga": 58,
+       "pts": 31,
+       "tid": 250,
+       "form": "DWLLW"
+      },
+      {
+       "pos": 12,
+       "team": "Ross County",
+       "p": 33,
+       "w": 7,
+       "d": 6,
+       "l": 20,
+       "gf": 28,
+       "ga": 52,
+       "pts": 27,
+       "tid": 902,
+       "form": "LLWLL"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "scottish-championship",
+   "tier": 2,
+   "name": "Championship",
+   "short": "CH",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 2,
+     "to": 4,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 9,
+     "to": 9,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 10,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Dundee",
+     "p": 36,
+     "w": 17,
+     "d": 12,
+     "l": 7,
+     "gf": 66,
+     "ga": 40,
+     "pts": 63,
+     "tid": 253,
+     "form": "WDDDW"
+    },
+    {
+     "pos": 2,
+     "team": "Ayr United",
+     "p": 36,
+     "w": 16,
+     "d": 10,
+     "l": 10,
+     "gf": 61,
+     "ga": 43,
+     "pts": 58,
+     "tid": 1387,
+     "form": "DDDWW"
+    },
+    {
+     "pos": 3,
+     "team": "Queen's Park",
+     "p": 36,
+     "w": 17,
+     "d": 7,
+     "l": 12,
+     "gf": 63,
+     "ga": 52,
+     "pts": 58,
+     "tid": 6778,
+     "form": "LWDLL"
+    },
+    {
+     "pos": 4,
+     "team": "Partick Thistle",
+     "p": 36,
+     "w": 16,
+     "d": 9,
+     "l": 11,
+     "gf": 65,
+     "ga": 45,
+     "pts": 57,
+     "tid": 901,
+     "form": "WDDWD"
+    },
+    {
+     "pos": 5,
+     "team": "Greenock Morton",
+     "p": 36,
+     "w": 15,
+     "d": 12,
+     "l": 9,
+     "gf": 53,
+     "ga": 43,
+     "pts": 57,
+     "tid": 1383,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 6,
+     "team": "Inverness Caledonian Thistle",
+     "p": 36,
+     "w": 15,
+     "d": 10,
+     "l": 11,
+     "gf": 52,
+     "ga": 47,
+     "pts": 55,
+     "tid": 903,
+     "form": "WWWDL"
+    },
+    {
+     "pos": 7,
+     "team": "Raith Rovers",
+     "p": 36,
+     "w": 11,
+     "d": 10,
+     "l": 15,
+     "gf": 46,
+     "ga": 49,
+     "pts": 43,
+     "tid": 1385,
+     "form": "LDLLD"
+    },
+    {
+     "pos": 8,
+     "team": "Arbroath",
+     "p": 36,
+     "w": 6,
+     "d": 16,
+     "l": 14,
+     "gf": 29,
+     "ga": 47,
+     "pts": 34,
+     "tid": 4249,
+     "form": "LDLLD"
+    },
+    {
+     "pos": 9,
+     "team": "Hamilton Academical",
+     "p": 36,
+     "w": 7,
+     "d": 10,
+     "l": 19,
+     "gf": 31,
+     "ga": 63,
+     "pts": 31,
+     "tid": 248,
+     "form": "LLLDD"
+    },
+    {
+     "pos": 10,
+     "team": "Cove Rangers",
+     "p": 36,
+     "w": 7,
+     "d": 10,
+     "l": 19,
+     "gf": 38,
+     "ga": 75,
+     "pts": 31,
+     "tid": 6763,
+     "form": "DLWDL"
+    }
+   ]
+  },
+  {
+   "id": "scottish-league-one",
+   "tier": 3,
+   "name": "League One",
+   "short": "L1",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 2,
+     "to": 4,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 9,
+     "to": 9,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 10,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Dunfermline",
+     "p": 36,
+     "w": 23,
+     "d": 12,
+     "l": 1,
+     "gf": 63,
+     "ga": 21,
+     "pts": 81,
+     "tid": 1388,
+     "form": "WWDWW"
+    },
+    {
+     "pos": 2,
+     "team": "Falkirk",
+     "p": 36,
+     "w": 19,
+     "d": 10,
+     "l": 7,
+     "gf": 70,
+     "ga": 39,
+     "pts": 67,
+     "tid": 1389,
+     "form": "WDLWW"
+    },
+    {
+     "pos": 3,
+     "team": "Airdrieonians",
+     "p": 36,
+     "w": 17,
+     "d": 9,
+     "l": 10,
+     "gf": 82,
+     "ga": 51,
+     "pts": 60,
+     "tid": 4668,
+     "form": "WDDLW"
+    },
+    {
+     "pos": 4,
+     "team": "Alloa Athletic",
+     "p": 36,
+     "w": 17,
+     "d": 6,
+     "l": 13,
+     "gf": 56,
+     "ga": 47,
+     "pts": 57,
+     "tid": 1391,
+     "form": "LWLWL"
+    },
+    {
+     "pos": 5,
+     "team": "Queen of the South",
+     "p": 36,
+     "w": 16,
+     "d": 6,
+     "l": 14,
+     "gf": 59,
+     "ga": 59,
+     "pts": 54,
+     "tid": 1384,
+     "form": "WLLWW"
+    },
+    {
+     "pos": 6,
+     "team": "Edinburgh City",
+     "p": 36,
+     "w": 15,
+     "d": 6,
+     "l": 15,
+     "gf": 60,
+     "ga": 55,
+     "pts": 51,
+     "tid": 6766,
+     "form": "LLWDL"
+    },
+    {
+     "pos": 7,
+     "team": "Montrose",
+     "p": 36,
+     "w": 13,
+     "d": 9,
+     "l": 14,
+     "gf": 50,
+     "ga": 55,
+     "pts": 48,
+     "tid": 4251,
+     "form": "LWWLL"
+    },
+    {
+     "pos": 8,
+     "team": "Kelty Hearts",
+     "p": 36,
+     "w": 10,
+     "d": 10,
+     "l": 16,
+     "gf": 39,
+     "ga": 54,
+     "pts": 40,
+     "tid": 6773,
+     "form": "DLDWL"
+    },
+    {
+     "pos": 9,
+     "team": "Clyde",
+     "p": 36,
+     "w": 5,
+     "d": 9,
+     "l": 22,
+     "gf": 35,
+     "ga": 68,
+     "pts": 24,
+     "tid": 6762,
+     "form": "DWDLW"
+    },
+    {
+     "pos": 10,
+     "team": "Peterhead",
+     "p": 36,
+     "w": 3,
+     "d": 7,
+     "l": 26,
+     "gf": 19,
+     "ga": 84,
+     "pts": 16,
+     "tid": 6777,
+     "form": "LLDLL"
+    }
+   ]
+  },
+  {
+   "id": "scottish-league-two",
+   "tier": 4,
+   "name": "League Two",
+   "short": "L2",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 2,
+     "to": 4,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 10,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation play-off"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Stirling Albion",
+     "p": 36,
+     "w": 21,
+     "d": 10,
+     "l": 5,
+     "gf": 67,
+     "ga": 37,
+     "pts": 73,
+     "tid": 4669,
+     "form": "WDWWL"
+    },
+    {
+     "pos": 2,
+     "team": "Dumbarton",
+     "p": 36,
+     "w": 18,
+     "d": 8,
+     "l": 10,
+     "gf": 49,
+     "ga": 39,
+     "pts": 62,
+     "tid": 1382,
+     "form": "WDWLD"
+    },
+    {
+     "pos": 3,
+     "team": "Annan Athletic",
+     "p": 36,
+     "w": 14,
+     "d": 9,
+     "l": 13,
+     "gf": 61,
+     "ga": 51,
+     "pts": 51,
+     "tid": 6757,
+     "form": "WWLDL"
+    },
+    {
+     "pos": 4,
+     "team": "East Fife",
+     "p": 36,
+     "w": 14,
+     "d": 8,
+     "l": 14,
+     "gf": 54,
+     "ga": 50,
+     "pts": 50,
+     "tid": 6764,
+     "form": "DWLWL"
+    },
+    {
+     "pos": 5,
+     "team": "Forfar Athletic",
+     "p": 36,
+     "w": 13,
+     "d": 9,
+     "l": 14,
+     "gf": 37,
+     "ga": 43,
+     "pts": 48,
+     "tid": 4250,
+     "form": "DLLLW"
+    },
+    {
+     "pos": 6,
+     "team": "Stenhousemuir",
+     "p": 36,
+     "w": 12,
+     "d": 11,
+     "l": 13,
+     "gf": 51,
+     "ga": 55,
+     "pts": 47,
+     "tid": 6784,
+     "form": "DLLLW"
+    },
+    {
+     "pos": 7,
+     "team": "Stranraer",
+     "p": 36,
+     "w": 12,
+     "d": 9,
+     "l": 15,
+     "gf": 43,
+     "ga": 57,
+     "pts": 45,
+     "tid": 6785,
+     "form": "DLWWD"
+    },
+    {
+     "pos": 8,
+     "team": "Bonnyrigg Rose Athletic",
+     "p": 36,
+     "w": 11,
+     "d": 9,
+     "l": 16,
+     "gf": 36,
+     "ga": 47,
+     "pts": 42,
+     "tid": 7431,
+     "form": "DLWDW"
+    },
+    {
+     "pos": 9,
+     "team": "Elgin City",
+     "p": 36,
+     "w": 11,
+     "d": 7,
+     "l": 18,
+     "gf": 44,
+     "ga": 62,
+     "pts": 40,
+     "tid": 6767,
+     "form": "DWLWL"
+    },
+    {
+     "pos": 10,
+     "team": "Albion Rovers",
+     "p": 36,
+     "w": 11,
+     "d": 6,
+     "l": 19,
+     "gf": 47,
+     "ga": 48,
+     "pts": 39,
+     "tid": 6756,
+     "form": "WLWLW"
+    }
+   ]
+  }
+ ]
+}

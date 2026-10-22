@@ -1,0 +1,490 @@
+{
+ "country": "belgium",
+ "name": "Belgium",
+ "adjective": "Belgian",
+ "season": "2012–13",
+ "year": 2012,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "pro-league",
+   "tier": 1,
+   "name": "First Division A",
+   "short": "D1A",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 2,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 4,
+     "to": 4,
+     "kind": "mid",
+     "label": "Europa League play-offs"
+    }
+   ],
+   "notes": [
+    "Kortrijk: 3 points deducted."
+   ],
+   "groups": [
+    {
+     "name": "Play-offs I",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Anderlecht",
+       "p": 10,
+       "w": 4,
+       "d": 3,
+       "l": 3,
+       "gf": 16,
+       "ga": 11,
+       "pts": 49,
+       "tid": 554,
+       "form": "LWWWD"
+      },
+      {
+       "pos": 2,
+       "team": "Zulte Waregem",
+       "p": 10,
+       "w": 4,
+       "d": 3,
+       "l": 3,
+       "gf": 20,
+       "ga": 20,
+       "pts": 47,
+       "tid": 600,
+       "form": "LLWWD"
+      },
+      {
+       "pos": 3,
+       "team": "Club Brugge",
+       "p": 10,
+       "w": 6,
+       "d": 1,
+       "l": 3,
+       "gf": 21,
+       "ga": 17,
+       "pts": 46,
+       "tid": 569,
+       "form": "WWWLW"
+      },
+      {
+       "pos": 4,
+       "team": "Standard Liège",
+       "p": 10,
+       "w": 5,
+       "d": 2,
+       "l": 3,
+       "gf": 18,
+       "ga": 17,
+       "pts": 42,
+       "tid": 733,
+       "form": "WLLDW"
+      },
+      {
+       "pos": 5,
+       "team": "Genk",
+       "p": 10,
+       "w": 3,
+       "d": 3,
+       "l": 4,
+       "gf": 11,
+       "ga": 12,
+       "pts": 40,
+       "tid": 742,
+       "form": "DWLDL"
+      },
+      {
+       "pos": 6,
+       "team": "Lokeren",
+       "p": 10,
+       "w": 1,
+       "d": 2,
+       "l": 7,
+       "gf": 15,
+       "ga": 24,
+       "pts": 31,
+       "tid": 737,
+       "form": "DLLLL"
+      }
+     ]
+    },
+    {
+     "name": "Play-offs II",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Gent",
+       "p": 6,
+       "w": 4,
+       "d": 2,
+       "l": 0,
+       "gf": 9,
+       "ga": 3,
+       "pts": 14,
+       "tid": 631,
+       "form": "DWWWD"
+      },
+      {
+       "pos": 2,
+       "team": "Mons",
+       "p": 6,
+       "w": 3,
+       "d": 1,
+       "l": 2,
+       "gf": 7,
+       "ga": 8,
+       "pts": 10,
+       "tid": 4653,
+       "form": "WLWWD"
+      },
+      {
+       "pos": 3,
+       "team": "Lierse",
+       "p": 6,
+       "w": 1,
+       "d": 1,
+       "l": 4,
+       "gf": 5,
+       "ga": 8,
+       "pts": 4,
+       "tid": 1392,
+       "form": "LLLLW"
+      },
+      {
+       "pos": 4,
+       "team": "Kortrijk",
+       "p": 6,
+       "w": 1,
+       "d": 2,
+       "l": 3,
+       "gf": 4,
+       "ga": 6,
+       "pts": 2,
+       "ded": 3,
+       "tid": 734,
+       "form": "DWLLL"
+      }
+     ]
+    },
+    {
+     "name": "Play-offs II",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "OH Leuven",
+       "p": 6,
+       "w": 3,
+       "d": 1,
+       "l": 2,
+       "gf": 9,
+       "ga": 8,
+       "pts": 10,
+       "tid": 260,
+       "form": "LLWDW"
+      },
+      {
+       "pos": 2,
+       "team": "KV Mechelen",
+       "p": 6,
+       "w": 3,
+       "d": 1,
+       "l": 2,
+       "gf": 8,
+       "ga": 7,
+       "pts": 10,
+       "tid": 266,
+       "form": "LWLWW"
+      },
+      {
+       "pos": 3,
+       "team": "Charleroi",
+       "p": 6,
+       "w": 1,
+       "d": 4,
+       "l": 1,
+       "gf": 5,
+       "ga": 3,
+       "pts": 7,
+       "tid": 736,
+       "form": "WDDDL"
+      },
+      {
+       "pos": 4,
+       "team": "Waasland-beveren",
+       "p": 6,
+       "w": 1,
+       "d": 2,
+       "l": 3,
+       "gf": 3,
+       "ga": 7,
+       "pts": 5,
+       "tid": 738,
+       "form": "WDDLL"
+      }
+     ]
+    },
+    {
+     "name": "Play-offs III",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Cercle Brugge",
+       "p": 4,
+       "w": 3,
+       "d": 0,
+       "l": 1,
+       "gf": 5,
+       "ga": 3,
+       "pts": 9,
+       "tid": 741,
+       "form": "LWWW"
+      },
+      {
+       "pos": 2,
+       "team": "Beerschot",
+       "p": 4,
+       "w": 1,
+       "d": 0,
+       "l": 3,
+       "gf": 3,
+       "ga": 5,
+       "pts": 6,
+       "tid": 4654,
+       "form": "WLLL"
+      }
+     ]
+    },
+    {
+     "name": "Regular Season",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Anderlecht",
+       "p": 30,
+       "w": 20,
+       "d": 7,
+       "l": 3,
+       "gf": 69,
+       "ga": 27,
+       "pts": 67,
+       "tid": 554,
+       "form": "WDLWD"
+      },
+      {
+       "pos": 2,
+       "team": "Zulte Waregem",
+       "p": 30,
+       "w": 19,
+       "d": 6,
+       "l": 5,
+       "gf": 49,
+       "ga": 29,
+       "pts": 63,
+       "tid": 600,
+       "form": "WWWLW"
+      },
+      {
+       "pos": 3,
+       "team": "Genk",
+       "p": 30,
+       "w": 15,
+       "d": 10,
+       "l": 5,
+       "gf": 63,
+       "ga": 40,
+       "pts": 55,
+       "tid": 742,
+       "form": "WWDWW"
+      },
+      {
+       "pos": 4,
+       "team": "Club Brugge",
+       "p": 30,
+       "w": 15,
+       "d": 9,
+       "l": 6,
+       "gf": 66,
+       "ga": 43,
+       "pts": 54,
+       "tid": 569,
+       "form": "DDWWW"
+      },
+      {
+       "pos": 5,
+       "team": "Lokeren",
+       "p": 30,
+       "w": 14,
+       "d": 9,
+       "l": 7,
+       "gf": 53,
+       "ga": 38,
+       "pts": 51,
+       "tid": 737,
+       "form": "DDDDW"
+      },
+      {
+       "pos": 6,
+       "team": "Standard Liège",
+       "p": 30,
+       "w": 15,
+       "d": 5,
+       "l": 10,
+       "gf": 54,
+       "ga": 33,
+       "pts": 50,
+       "tid": 733,
+       "form": "LWDWL"
+      },
+      {
+       "pos": 7,
+       "team": "Mons",
+       "p": 30,
+       "w": 13,
+       "d": 5,
+       "l": 12,
+       "gf": 48,
+       "ga": 53,
+       "pts": 44,
+       "tid": 4653,
+       "form": "WLWWL"
+      },
+      {
+       "pos": 8,
+       "team": "KV Mechelen",
+       "p": 30,
+       "w": 12,
+       "d": 5,
+       "l": 13,
+       "gf": 44,
+       "ga": 42,
+       "pts": 41,
+       "tid": 266,
+       "form": "WWLLL"
+      },
+      {
+       "pos": 9,
+       "team": "Kortrijk",
+       "p": 30,
+       "w": 11,
+       "d": 6,
+       "l": 13,
+       "gf": 31,
+       "ga": 30,
+       "pts": 39,
+       "tid": 734,
+       "form": "WLLLD"
+      },
+      {
+       "pos": 10,
+       "team": "OH Leuven",
+       "p": 30,
+       "w": 8,
+       "d": 12,
+       "l": 10,
+       "gf": 46,
+       "ga": 51,
+       "pts": 36,
+       "tid": 260,
+       "form": "LDWLD"
+      },
+      {
+       "pos": 11,
+       "team": "Charleroi",
+       "p": 30,
+       "w": 10,
+       "d": 4,
+       "l": 16,
+       "gf": 30,
+       "ga": 49,
+       "pts": 34,
+       "tid": 736,
+       "form": "LWLDW"
+      },
+      {
+       "pos": 12,
+       "team": "Gent",
+       "p": 30,
+       "w": 8,
+       "d": 10,
+       "l": 12,
+       "gf": 33,
+       "ga": 40,
+       "pts": 34,
+       "tid": 631,
+       "form": "LWWLD"
+      },
+      {
+       "pos": 13,
+       "team": "Waasland-beveren",
+       "p": 30,
+       "w": 7,
+       "d": 9,
+       "l": 14,
+       "gf": 28,
+       "ga": 49,
+       "pts": 30,
+       "tid": 738,
+       "form": "LLDWL"
+      },
+      {
+       "pos": 14,
+       "team": "Lierse",
+       "p": 30,
+       "w": 5,
+       "d": 11,
+       "l": 14,
+       "gf": 28,
+       "ga": 53,
+       "pts": 26,
+       "tid": 1392,
+       "form": "LLWWL"
+      },
+      {
+       "pos": 15,
+       "team": "Beerschot",
+       "p": 30,
+       "w": 6,
+       "d": 5,
+       "l": 19,
+       "gf": 31,
+       "ga": 61,
+       "pts": 23,
+       "tid": 4654,
+       "form": "LDLLW"
+      },
+      {
+       "pos": 16,
+       "team": "Cercle Brugge",
+       "p": 30,
+       "w": 3,
+       "d": 5,
+       "l": 22,
+       "gf": 30,
+       "ga": 65,
+       "pts": 14,
+       "tid": 741,
+       "form": "LLLLL"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

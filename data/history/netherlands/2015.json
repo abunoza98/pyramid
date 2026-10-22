@@ -1,0 +1,295 @@
+{
+ "country": "netherlands",
+ "name": "Netherlands",
+ "adjective": "Dutch",
+ "season": "2015–16",
+ "year": 2015,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "eredivisie",
+   "tier": 1,
+   "name": "Eredivisie",
+   "short": "ERE",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 2,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 4,
+     "to": 7,
+     "kind": "mid",
+     "label": "Europa League play-offs"
+    },
+    {
+     "from": 16,
+     "to": 17,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 18,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [
+    "Twente: 3 points deducted."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "PSV Eindhoven",
+     "p": 34,
+     "w": 26,
+     "d": 6,
+     "l": 2,
+     "gf": 88,
+     "ga": 32,
+     "pts": 84,
+     "tid": 197,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
+     "team": "Ajax",
+     "p": 34,
+     "w": 25,
+     "d": 7,
+     "l": 2,
+     "gf": 81,
+     "ga": 21,
+     "pts": 82,
+     "tid": 194,
+     "form": "WDWWD"
+    },
+    {
+     "pos": 3,
+     "team": "Feyenoord",
+     "p": 34,
+     "w": 19,
+     "d": 6,
+     "l": 9,
+     "gf": 62,
+     "ga": 40,
+     "pts": 63,
+     "tid": 209,
+     "form": "WDDWW"
+    },
+    {
+     "pos": 4,
+     "team": "AZ Alkmaar",
+     "p": 34,
+     "w": 18,
+     "d": 5,
+     "l": 11,
+     "gf": 70,
+     "ga": 53,
+     "pts": 59,
+     "tid": 201,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 5,
+     "team": "Utrecht",
+     "p": 34,
+     "w": 15,
+     "d": 8,
+     "l": 11,
+     "gf": 57,
+     "ga": 48,
+     "pts": 53,
+     "tid": 207,
+     "form": "WDLWL"
+    },
+    {
+     "pos": 6,
+     "team": "Heracles",
+     "p": 34,
+     "w": 14,
+     "d": 9,
+     "l": 11,
+     "gf": 47,
+     "ga": 49,
+     "pts": 51,
+     "tid": 206,
+     "form": "WDDDL"
+    },
+    {
+     "pos": 7,
+     "team": "Groningen",
+     "p": 34,
+     "w": 14,
+     "d": 8,
+     "l": 12,
+     "gf": 41,
+     "ga": 48,
+     "pts": 50,
+     "tid": 202,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 8,
+     "team": "PEC Zwolle",
+     "p": 34,
+     "w": 14,
+     "d": 6,
+     "l": 14,
+     "gf": 56,
+     "ga": 54,
+     "pts": 48,
+     "tid": 193,
+     "form": "WLWDL"
+    },
+    {
+     "pos": 9,
+     "team": "Vitesse",
+     "p": 34,
+     "w": 12,
+     "d": 10,
+     "l": 12,
+     "gf": 55,
+     "ga": 38,
+     "pts": 46,
+     "tid": 200,
+     "form": "DDLLD"
+    },
+    {
+     "pos": 10,
+     "team": "NEC Nijmegen",
+     "p": 34,
+     "w": 13,
+     "d": 7,
+     "l": 14,
+     "gf": 37,
+     "ga": 42,
+     "pts": 46,
+     "tid": 413,
+     "form": "LWLLL"
+    },
+    {
+     "pos": 11,
+     "team": "ADO Den Haag",
+     "p": 34,
+     "w": 10,
+     "d": 13,
+     "l": 11,
+     "gf": 48,
+     "ga": 49,
+     "pts": 43,
+     "tid": 198,
+     "form": "DWLDD"
+    },
+    {
+     "pos": 12,
+     "team": "Heerenveen",
+     "p": 34,
+     "w": 11,
+     "d": 9,
+     "l": 14,
+     "gf": 46,
+     "ga": 61,
+     "pts": 42,
+     "tid": 210,
+     "form": "WDLLD"
+    },
+    {
+     "pos": 13,
+     "team": "Twente",
+     "p": 34,
+     "w": 12,
+     "d": 7,
+     "l": 15,
+     "gf": 49,
+     "ga": 64,
+     "pts": 40,
+     "ded": 3,
+     "tid": 415,
+     "form": "LDWLD"
+    },
+    {
+     "pos": 14,
+     "team": "Roda JC",
+     "p": 34,
+     "w": 8,
+     "d": 10,
+     "l": 16,
+     "gf": 34,
+     "ga": 55,
+     "pts": 34,
+     "tid": 414,
+     "form": "LLLWL"
+    },
+    {
+     "pos": 15,
+     "team": "Excelsior",
+     "p": 34,
+     "w": 7,
+     "d": 9,
+     "l": 18,
+     "gf": 34,
+     "ga": 60,
+     "pts": 30,
+     "tid": 196,
+     "form": "LDLDW"
+    },
+    {
+     "pos": 16,
+     "team": "Willem II",
+     "p": 34,
+     "w": 6,
+     "d": 11,
+     "l": 17,
+     "gf": 35,
+     "ga": 53,
+     "pts": 29,
+     "tid": 195,
+     "form": "LLDLW"
+    },
+    {
+     "pos": 17,
+     "team": "De Graafschap",
+     "p": 34,
+     "w": 5,
+     "d": 8,
+     "l": 21,
+     "gf": 39,
+     "ga": 66,
+     "pts": 23,
+     "tid": 199,
+     "form": "LDWLD"
+    },
+    {
+     "pos": 18,
+     "team": "Cambuur",
+     "p": 34,
+     "w": 3,
+     "d": 9,
+     "l": 22,
+     "gf": 33,
+     "ga": 79,
+     "pts": 18,
+     "tid": 420,
+     "form": "LLDLL"
+    }
+   ]
+  }
+ ]
+}

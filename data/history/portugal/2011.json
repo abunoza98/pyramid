@@ -1,0 +1,254 @@
+{
+ "country": "portugal",
+ "name": "Portugal",
+ "adjective": "Portuguese",
+ "season": "2011–12",
+ "year": 2011,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "liga-portugal",
+   "tier": 1,
+   "name": "Liga Portugal",
+   "short": "LP",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 4,
+     "to": 5,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 15,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "FC Porto",
+     "p": 30,
+     "w": 23,
+     "d": 6,
+     "l": 1,
+     "gf": 69,
+     "ga": 19,
+     "pts": 75,
+     "tid": 212,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
+     "team": "Benfica",
+     "p": 30,
+     "w": 21,
+     "d": 6,
+     "l": 3,
+     "gf": 66,
+     "ga": 27,
+     "pts": 69,
+     "tid": 211,
+     "form": "LWDWW"
+    },
+    {
+     "pos": 3,
+     "team": "Braga",
+     "p": 30,
+     "w": 19,
+     "d": 5,
+     "l": 6,
+     "gf": 59,
+     "ga": 29,
+     "pts": 62,
+     "tid": 217,
+     "form": "LDLWL"
+    },
+    {
+     "pos": 4,
+     "team": "Sporting CP",
+     "p": 30,
+     "w": 18,
+     "d": 5,
+     "l": 7,
+     "gf": 47,
+     "ga": 26,
+     "pts": 59,
+     "tid": 228,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 5,
+     "team": "Marítimo",
+     "p": 30,
+     "w": 14,
+     "d": 8,
+     "l": 8,
+     "gf": 41,
+     "ga": 38,
+     "pts": 50,
+     "tid": 214,
+     "form": "LLLDD"
+    },
+    {
+     "pos": 6,
+     "team": "Guimaraes",
+     "p": 30,
+     "w": 14,
+     "d": 3,
+     "l": 13,
+     "gf": 40,
+     "ga": 40,
+     "pts": 45,
+     "tid": 224,
+     "form": "LWLWL"
+    },
+    {
+     "pos": 7,
+     "team": "Nacional",
+     "p": 30,
+     "w": 13,
+     "d": 5,
+     "l": 12,
+     "gf": 48,
+     "ga": 50,
+     "pts": 44,
+     "tid": 225,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 8,
+     "team": "Olhanense",
+     "p": 30,
+     "w": 9,
+     "d": 12,
+     "l": 9,
+     "gf": 36,
+     "ga": 38,
+     "pts": 39,
+     "tid": 807,
+     "form": "LWWDW"
+    },
+    {
+     "pos": 9,
+     "team": "Gil Vicente",
+     "p": 30,
+     "w": 8,
+     "d": 10,
+     "l": 12,
+     "gf": 31,
+     "ga": 42,
+     "pts": 34,
+     "tid": 762,
+     "form": "DDWLW"
+    },
+    {
+     "pos": 10,
+     "team": "Pacos Ferreira",
+     "p": 30,
+     "w": 8,
+     "d": 7,
+     "l": 15,
+     "gf": 35,
+     "ga": 53,
+     "pts": 31,
+     "tid": 234,
+     "form": "WDLDD"
+    },
+    {
+     "pos": 11,
+     "team": "Vitoria Setubal",
+     "p": 30,
+     "w": 8,
+     "d": 6,
+     "l": 16,
+     "gf": 24,
+     "ga": 49,
+     "pts": 30,
+     "tid": 219,
+     "form": "WLLLL"
+    },
+    {
+     "pos": 12,
+     "team": "Académica",
+     "p": 30,
+     "w": 7,
+     "d": 8,
+     "l": 15,
+     "gf": 27,
+     "ga": 38,
+     "pts": 29,
+     "tid": 239,
+     "form": "LLLWW"
+    },
+    {
+     "pos": 13,
+     "team": "Beira-Mar",
+     "p": 30,
+     "w": 8,
+     "d": 5,
+     "l": 17,
+     "gf": 26,
+     "ga": 38,
+     "pts": 29,
+     "tid": 4661,
+     "form": "WLWLL"
+    },
+    {
+     "pos": 14,
+     "team": "Rio Ave",
+     "p": 30,
+     "w": 7,
+     "d": 7,
+     "l": 16,
+     "gf": 33,
+     "ga": 42,
+     "pts": 28,
+     "tid": 226,
+     "form": "DDDDL"
+    },
+    {
+     "pos": 15,
+     "team": "Feirense",
+     "p": 30,
+     "w": 5,
+     "d": 9,
+     "l": 16,
+     "gf": 27,
+     "ga": 49,
+     "pts": 24,
+     "tid": 213,
+     "form": "DWWLL"
+    },
+    {
+     "pos": 16,
+     "team": "União de Leiria",
+     "p": 30,
+     "w": 5,
+     "d": 4,
+     "l": 21,
+     "gf": 25,
+     "ga": 56,
+     "pts": 19,
+     "tid": 4662,
+     "form": "DLLLL"
+    }
+   ]
+  }
+ ]
+}

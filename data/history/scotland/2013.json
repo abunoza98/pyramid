@@ -1,0 +1,532 @@
+{
+ "country": "scotland",
+ "name": "Scotland",
+ "adjective": "Scottish",
+ "season": "2013–14",
+ "year": 2013,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "premiership",
+   "tier": 1,
+   "name": "Premiership",
+   "short": "PREM",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 2,
+     "to": 3,
+     "kind": "mid",
+     "label": "Europa League"
+    }
+   ],
+   "notes": [
+    "Heart OF Midlothian: 15 points deducted.",
+    "Heart OF Midlothian: 15 points deducted."
+   ],
+   "groups": [
+    {
+     "name": "2nd Phase",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Celtic",
+       "p": 38,
+       "w": 31,
+       "d": 6,
+       "l": 1,
+       "gf": 102,
+       "ga": 25,
+       "pts": 99,
+       "tid": 247,
+       "form": "DWWDW"
+      },
+      {
+       "pos": 2,
+       "team": "Motherwell",
+       "p": 38,
+       "w": 22,
+       "d": 4,
+       "l": 12,
+       "gf": 64,
+       "ga": 60,
+       "pts": 70,
+       "tid": 256,
+       "form": "DLWWW"
+      },
+      {
+       "pos": 3,
+       "team": "Aberdeen",
+       "p": 38,
+       "w": 20,
+       "d": 8,
+       "l": 10,
+       "gf": 53,
+       "ga": 38,
+       "pts": 68,
+       "tid": 252,
+       "form": "DDLWL"
+      },
+      {
+       "pos": 4,
+       "team": "Dundee United",
+       "p": 38,
+       "w": 16,
+       "d": 10,
+       "l": 12,
+       "gf": 65,
+       "ga": 50,
+       "pts": 58,
+       "tid": 1386,
+       "form": "LWDLL"
+      },
+      {
+       "pos": 5,
+       "team": "Inverness Caledonian Thistle",
+       "p": 38,
+       "w": 16,
+       "d": 9,
+       "l": 13,
+       "gf": 44,
+       "ga": 44,
+       "pts": 57,
+       "tid": 903,
+       "form": "DLDLW"
+      },
+      {
+       "pos": 6,
+       "team": "St Johnstone",
+       "p": 38,
+       "w": 15,
+       "d": 8,
+       "l": 15,
+       "gf": 48,
+       "ga": 42,
+       "pts": 53,
+       "tid": 258,
+       "form": "WDLDL"
+      }
+     ]
+    },
+    {
+     "name": "2nd Phase",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Ross County",
+       "p": 38,
+       "w": 11,
+       "d": 7,
+       "l": 20,
+       "gf": 44,
+       "ga": 62,
+       "pts": 40,
+       "tid": 902,
+       "form": "LWLWW"
+      },
+      {
+       "pos": 2,
+       "team": "St Mirren",
+       "p": 38,
+       "w": 10,
+       "d": 9,
+       "l": 19,
+       "gf": 39,
+       "ga": 58,
+       "pts": 39,
+       "tid": 251,
+       "form": "WDWLD"
+      },
+      {
+       "pos": 3,
+       "team": "Kilmarnock",
+       "p": 38,
+       "w": 11,
+       "d": 6,
+       "l": 21,
+       "gf": 45,
+       "ga": 66,
+       "pts": 39,
+       "tid": 250,
+       "form": "LLLWW"
+      },
+      {
+       "pos": 4,
+       "team": "Partick Thistle",
+       "p": 38,
+       "w": 8,
+       "d": 14,
+       "l": 16,
+       "gf": 46,
+       "ga": 65,
+       "pts": 38,
+       "tid": 901,
+       "form": "WDDWL"
+      },
+      {
+       "pos": 5,
+       "team": "Hibernian",
+       "p": 38,
+       "w": 8,
+       "d": 11,
+       "l": 19,
+       "gf": 31,
+       "ga": 51,
+       "pts": 35,
+       "tid": 249,
+       "form": "LLDLL"
+      },
+      {
+       "pos": 6,
+       "team": "Heart OF Midlothian",
+       "p": 38,
+       "w": 10,
+       "d": 8,
+       "l": 20,
+       "gf": 45,
+       "ga": 65,
+       "pts": 23,
+       "ded": 15,
+       "tid": 254,
+       "form": "WWWLD"
+      }
+     ]
+    },
+    {
+     "name": "1st Phase",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Celtic",
+       "p": 33,
+       "w": 28,
+       "d": 4,
+       "l": 1,
+       "gf": 82,
+       "ga": 16,
+       "pts": 88,
+       "tid": 247,
+       "form": "WWWDW"
+      },
+      {
+       "pos": 2,
+       "team": "Aberdeen",
+       "p": 33,
+       "w": 19,
+       "d": 6,
+       "l": 8,
+       "gf": 47,
+       "ga": 30,
+       "pts": 63,
+       "tid": 252,
+       "form": "WDDDW"
+      },
+      {
+       "pos": 3,
+       "team": "Motherwell",
+       "p": 33,
+       "w": 19,
+       "d": 3,
+       "l": 11,
+       "gf": 55,
+       "ga": 50,
+       "pts": 60,
+       "tid": 256,
+       "form": "WWLWL"
+      },
+      {
+       "pos": 4,
+       "team": "Dundee United",
+       "p": 33,
+       "w": 15,
+       "d": 9,
+       "l": 9,
+       "gf": 57,
+       "ga": 40,
+       "pts": 54,
+       "tid": 1386,
+       "form": "WWWDL"
+      },
+      {
+       "pos": 5,
+       "team": "Inverness Caledonian Thistle",
+       "p": 33,
+       "w": 15,
+       "d": 7,
+       "l": 11,
+       "gf": 40,
+       "ga": 35,
+       "pts": 52,
+       "tid": 903,
+       "form": "WLDLW"
+      },
+      {
+       "pos": 6,
+       "team": "St Johnstone",
+       "p": 33,
+       "w": 14,
+       "d": 6,
+       "l": 13,
+       "gf": 41,
+       "ga": 34,
+       "pts": 48,
+       "tid": 258,
+       "form": "LWWDW"
+      },
+      {
+       "pos": 7,
+       "team": "Hibernian",
+       "p": 33,
+       "w": 8,
+       "d": 10,
+       "l": 15,
+       "gf": 29,
+       "ga": 44,
+       "pts": 34,
+       "tid": 249,
+       "form": "DLLLL"
+      },
+      {
+       "pos": 8,
+       "team": "Kilmarnock",
+       "p": 33,
+       "w": 9,
+       "d": 6,
+       "l": 18,
+       "gf": 41,
+       "ga": 57,
+       "pts": 33,
+       "tid": 250,
+       "form": "WLLWL"
+      },
+      {
+       "pos": 9,
+       "team": "Ross County",
+       "p": 33,
+       "w": 8,
+       "d": 7,
+       "l": 18,
+       "gf": 38,
+       "ga": 56,
+       "pts": 31,
+       "tid": 902,
+       "form": "WLDDL"
+      },
+      {
+       "pos": 10,
+       "team": "St Mirren",
+       "p": 33,
+       "w": 8,
+       "d": 7,
+       "l": 18,
+       "gf": 34,
+       "ga": 55,
+       "pts": 31,
+       "tid": 251,
+       "form": "LLLDW"
+      },
+      {
+       "pos": 11,
+       "team": "Partick Thistle",
+       "p": 33,
+       "w": 6,
+       "d": 12,
+       "l": 15,
+       "gf": 36,
+       "ga": 57,
+       "pts": 30,
+       "tid": 901,
+       "form": "WLLDL"
+      },
+      {
+       "pos": 12,
+       "team": "Heart OF Midlothian",
+       "p": 33,
+       "w": 7,
+       "d": 7,
+       "l": 19,
+       "gf": 33,
+       "ga": 59,
+       "pts": 13,
+       "ded": 15,
+       "tid": 254,
+       "form": "LLWDW"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "scottish-championship",
+   "tier": 2,
+   "name": "Championship",
+   "short": "CH",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 2,
+     "to": 4,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 9,
+     "to": 9,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 10,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Dundee",
+     "p": 36,
+     "w": 21,
+     "d": 6,
+     "l": 9,
+     "gf": 54,
+     "ga": 26,
+     "pts": 69,
+     "tid": 253,
+     "form": "DWLWW"
+    },
+    {
+     "pos": 2,
+     "team": "Hamilton Academical",
+     "p": 36,
+     "w": 19,
+     "d": 10,
+     "l": 7,
+     "gf": 68,
+     "ga": 41,
+     "pts": 67,
+     "tid": 248,
+     "form": "DDWLW"
+    },
+    {
+     "pos": 3,
+     "team": "Falkirk",
+     "p": 36,
+     "w": 19,
+     "d": 9,
+     "l": 8,
+     "gf": 59,
+     "ga": 33,
+     "pts": 66,
+     "tid": 1389,
+     "form": "WWWDW"
+    },
+    {
+     "pos": 4,
+     "team": "Queen of the South",
+     "p": 36,
+     "w": 16,
+     "d": 7,
+     "l": 13,
+     "gf": 53,
+     "ga": 39,
+     "pts": 55,
+     "tid": 1384,
+     "form": "LLWWD"
+    },
+    {
+     "pos": 5,
+     "team": "Dumbarton",
+     "p": 36,
+     "w": 15,
+     "d": 6,
+     "l": 15,
+     "gf": 65,
+     "ga": 64,
+     "pts": 51,
+     "tid": 1382,
+     "form": "WWLWL"
+    },
+    {
+     "pos": 6,
+     "team": "Livingston",
+     "p": 36,
+     "w": 13,
+     "d": 7,
+     "l": 16,
+     "gf": 51,
+     "ga": 56,
+     "pts": 46,
+     "tid": 255,
+     "form": "LDLLW"
+    },
+    {
+     "pos": 7,
+     "team": "Raith Rovers",
+     "p": 36,
+     "w": 11,
+     "d": 9,
+     "l": 16,
+     "gf": 48,
+     "ga": 61,
+     "pts": 42,
+     "tid": 1385,
+     "form": "LWLLL"
+    },
+    {
+     "pos": 8,
+     "team": "Alloa Athletic",
+     "p": 36,
+     "w": 11,
+     "d": 7,
+     "l": 18,
+     "gf": 34,
+     "ga": 51,
+     "pts": 40,
+     "tid": 1391,
+     "form": "LWLLL"
+    },
+    {
+     "pos": 9,
+     "team": "Cowdenbeath",
+     "p": 36,
+     "w": 11,
+     "d": 7,
+     "l": 18,
+     "gf": 50,
+     "ga": 72,
+     "pts": 40,
+     "tid": 4667,
+     "form": "LLWWD"
+    },
+    {
+     "pos": 10,
+     "team": "Greenock Morton",
+     "p": 36,
+     "w": 6,
+     "d": 8,
+     "l": 22,
+     "gf": 32,
+     "ga": 71,
+     "pts": 26,
+     "tid": 1383,
+     "form": "WLWDL"
+    }
+   ]
+  }
+ ]
+}

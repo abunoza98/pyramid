@@ -1,0 +1,292 @@
+{
+ "country": "netherlands",
+ "name": "Netherlands",
+ "adjective": "Dutch",
+ "season": "2012–13",
+ "year": 2012,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "eredivisie",
+   "tier": 1,
+   "name": "Eredivisie",
+   "short": "ERE",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 2,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 3,
+     "to": 4,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 5,
+     "to": 8,
+     "kind": "mid",
+     "label": "Europa League play-offs"
+    },
+    {
+     "from": 16,
+     "to": 17,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 18,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Ajax",
+     "p": 34,
+     "w": 22,
+     "d": 10,
+     "l": 2,
+     "gf": 83,
+     "ga": 31,
+     "pts": 76,
+     "tid": 194,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 2,
+     "team": "PSV Eindhoven",
+     "p": 34,
+     "w": 22,
+     "d": 3,
+     "l": 9,
+     "gf": 103,
+     "ga": 43,
+     "pts": 69,
+     "tid": 197,
+     "form": "LWWWL"
+    },
+    {
+     "pos": 3,
+     "team": "Feyenoord",
+     "p": 34,
+     "w": 21,
+     "d": 6,
+     "l": 7,
+     "gf": 64,
+     "ga": 38,
+     "pts": 69,
+     "tid": 209,
+     "form": "DWWLW"
+    },
+    {
+     "pos": 4,
+     "team": "Vitesse",
+     "p": 34,
+     "w": 19,
+     "d": 7,
+     "l": 8,
+     "gf": 68,
+     "ga": 42,
+     "pts": 64,
+     "tid": 200,
+     "form": "DLWLL"
+    },
+    {
+     "pos": 5,
+     "team": "Utrecht",
+     "p": 34,
+     "w": 19,
+     "d": 6,
+     "l": 9,
+     "gf": 55,
+     "ga": 41,
+     "pts": 63,
+     "tid": 207,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 6,
+     "team": "Twente",
+     "p": 34,
+     "w": 17,
+     "d": 11,
+     "l": 6,
+     "gf": 60,
+     "ga": 33,
+     "pts": 62,
+     "tid": 415,
+     "form": "WDWDW"
+    },
+    {
+     "pos": 7,
+     "team": "Groningen",
+     "p": 34,
+     "w": 12,
+     "d": 7,
+     "l": 15,
+     "gf": 36,
+     "ga": 53,
+     "pts": 43,
+     "tid": 202,
+     "form": "WWLDL"
+    },
+    {
+     "pos": 8,
+     "team": "Heerenveen",
+     "p": 34,
+     "w": 11,
+     "d": 9,
+     "l": 14,
+     "gf": 50,
+     "ga": 63,
+     "pts": 42,
+     "tid": 210,
+     "form": "WDLLL"
+    },
+    {
+     "pos": 9,
+     "team": "ADO Den Haag",
+     "p": 34,
+     "w": 9,
+     "d": 13,
+     "l": 12,
+     "gf": 49,
+     "ga": 63,
+     "pts": 40,
+     "tid": 198,
+     "form": "LLDWL"
+    },
+    {
+     "pos": 10,
+     "team": "AZ Alkmaar",
+     "p": 34,
+     "w": 10,
+     "d": 9,
+     "l": 15,
+     "gf": 56,
+     "ga": 54,
+     "pts": 39,
+     "tid": 201,
+     "form": "WLWWL"
+    },
+    {
+     "pos": 11,
+     "team": "PEC Zwolle",
+     "p": 34,
+     "w": 10,
+     "d": 9,
+     "l": 15,
+     "gf": 42,
+     "ga": 55,
+     "pts": 39,
+     "tid": 193,
+     "form": "WWLLW"
+    },
+    {
+     "pos": 12,
+     "team": "Heracles",
+     "p": 34,
+     "w": 9,
+     "d": 11,
+     "l": 14,
+     "gf": 58,
+     "ga": 71,
+     "pts": 38,
+     "tid": 206,
+     "form": "LWLDL"
+    },
+    {
+     "pos": 13,
+     "team": "NAC Breda",
+     "p": 34,
+     "w": 10,
+     "d": 8,
+     "l": 16,
+     "gf": 40,
+     "ga": 56,
+     "pts": 38,
+     "tid": 203,
+     "form": "WLLWL"
+    },
+    {
+     "pos": 14,
+     "team": "RKC Waalwijk",
+     "p": 34,
+     "w": 9,
+     "d": 10,
+     "l": 15,
+     "gf": 39,
+     "ga": 48,
+     "pts": 37,
+     "tid": 417,
+     "form": "DLLWW"
+    },
+    {
+     "pos": 15,
+     "team": "NEC Nijmegen",
+     "p": 34,
+     "w": 10,
+     "d": 7,
+     "l": 17,
+     "gf": 44,
+     "ga": 66,
+     "pts": 37,
+     "tid": 413,
+     "form": "LLLLL"
+    },
+    {
+     "pos": 16,
+     "team": "Roda JC",
+     "p": 34,
+     "w": 7,
+     "d": 12,
+     "l": 15,
+     "gf": 51,
+     "ga": 69,
+     "pts": 33,
+     "tid": 414,
+     "form": "DLWLW"
+    },
+    {
+     "pos": 17,
+     "team": "VVV Venlo",
+     "p": 34,
+     "w": 6,
+     "d": 10,
+     "l": 18,
+     "gf": 33,
+     "ga": 62,
+     "pts": 28,
+     "tid": 204,
+     "form": "LDDDW"
+    },
+    {
+     "pos": 18,
+     "team": "Willem II",
+     "p": 34,
+     "w": 5,
+     "d": 8,
+     "l": 21,
+     "gf": 33,
+     "ga": 76,
+     "pts": 23,
+     "tid": 195,
+     "form": "LWLLW"
+    }
+   ]
+  }
+ ]
+}

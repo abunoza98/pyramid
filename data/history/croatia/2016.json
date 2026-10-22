@@ -1,0 +1,362 @@
+{
+ "country": "croatia",
+ "name": "Croatia",
+ "adjective": "Croatian",
+ "season": "2016–17",
+ "year": 2016,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "hnl",
+   "tier": 1,
+   "name": "Prva HNL",
+   "short": "1HNL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 2,
+     "to": 3,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 9,
+     "to": 9,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 10,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Rijeka",
+     "p": 36,
+     "w": 27,
+     "d": 7,
+     "l": 2,
+     "gf": 71,
+     "ga": 23,
+     "pts": 88,
+     "tid": 561,
+     "form": "LWWWL"
+    },
+    {
+     "pos": 2,
+     "team": "Dinamo Zagreb",
+     "p": 36,
+     "w": 27,
+     "d": 5,
+     "l": 4,
+     "gf": 68,
+     "ga": 24,
+     "pts": 86,
+     "tid": 620,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 3,
+     "team": "Hajduk Split",
+     "p": 36,
+     "w": 20,
+     "d": 9,
+     "l": 7,
+     "gf": 70,
+     "ga": 31,
+     "pts": 69,
+     "tid": 608,
+     "form": "WLDWW"
+    },
+    {
+     "pos": 4,
+     "team": "Osijek",
+     "p": 36,
+     "w": 20,
+     "d": 6,
+     "l": 10,
+     "gf": 52,
+     "ga": 37,
+     "pts": 66,
+     "tid": 616,
+     "form": "LWDLW"
+    },
+    {
+     "pos": 5,
+     "team": "Lokomotiva",
+     "p": 36,
+     "w": 12,
+     "d": 8,
+     "l": 16,
+     "gf": 41,
+     "ga": 38,
+     "pts": 44,
+     "tid": 1017,
+     "form": "WWDWD"
+    },
+    {
+     "pos": 6,
+     "team": "Istra 1961",
+     "p": 36,
+     "w": 10,
+     "d": 9,
+     "l": 17,
+     "gf": 33,
+     "ga": 49,
+     "pts": 39,
+     "tid": 1016,
+     "form": "LLLWW"
+    },
+    {
+     "pos": 7,
+     "team": "Slaven Belupo",
+     "p": 36,
+     "w": 9,
+     "d": 11,
+     "l": 16,
+     "gf": 36,
+     "ga": 45,
+     "pts": 38,
+     "tid": 1018,
+     "form": "WLLLL"
+    },
+    {
+     "pos": 8,
+     "team": "Inter Zaprešić",
+     "p": 36,
+     "w": 5,
+     "d": 13,
+     "l": 18,
+     "gf": 26,
+     "ga": 57,
+     "pts": 28,
+     "tid": 1020,
+     "form": "LLWLL"
+    },
+    {
+     "pos": 9,
+     "team": "Cibalia",
+     "p": 36,
+     "w": 4,
+     "d": 9,
+     "l": 23,
+     "gf": 26,
+     "ga": 79,
+     "pts": 21,
+     "tid": 1021,
+     "form": "WWDLD"
+    },
+    {
+     "pos": 10,
+     "team": "RNK Split",
+     "p": 36,
+     "w": 3,
+     "d": 9,
+     "l": 24,
+     "gf": 12,
+     "ga": 52,
+     "pts": 18,
+     "tid": 1022,
+     "form": "LLLLL"
+    }
+   ]
+  },
+  {
+   "id": "prva-nl",
+   "tier": 2,
+   "name": "Druga HNL",
+   "short": "2HNL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 2,
+     "to": 2,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 10,
+     "to": 12,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Rudeš",
+     "p": 33,
+     "w": 17,
+     "d": 9,
+     "l": 7,
+     "gf": 43,
+     "ga": 28,
+     "pts": 60,
+     "tid": 1019,
+     "form": "WWWLL"
+    },
+    {
+     "pos": 2,
+     "team": "Gorica",
+     "p": 33,
+     "w": 15,
+     "d": 12,
+     "l": 6,
+     "gf": 53,
+     "ga": 31,
+     "pts": 57,
+     "tid": 1068,
+     "form": "WLWWD"
+    },
+    {
+     "pos": 3,
+     "team": "Solin",
+     "p": 33,
+     "w": 16,
+     "d": 7,
+     "l": 10,
+     "gf": 40,
+     "ga": 36,
+     "pts": 55,
+     "tid": 1480,
+     "form": "WDLWD"
+    },
+    {
+     "pos": 4,
+     "team": "Sesvete",
+     "p": 33,
+     "w": 15,
+     "d": 7,
+     "l": 11,
+     "gf": 53,
+     "ga": 36,
+     "pts": 52,
+     "tid": 1479,
+     "form": "LWLWW"
+    },
+    {
+     "pos": 5,
+     "team": "Dinamo Zagreb II",
+     "p": 33,
+     "w": 12,
+     "d": 11,
+     "l": 10,
+     "gf": 39,
+     "ga": 32,
+     "pts": 47,
+     "tid": 1476,
+     "form": "LDWWL"
+    },
+    {
+     "pos": 6,
+     "team": "Dugopolje",
+     "p": 33,
+     "w": 12,
+     "d": 10,
+     "l": 11,
+     "gf": 36,
+     "ga": 32,
+     "pts": 46,
+     "tid": 1471,
+     "form": "WLDLD"
+    },
+    {
+     "pos": 7,
+     "team": "Sibenik",
+     "p": 33,
+     "w": 12,
+     "d": 9,
+     "l": 12,
+     "gf": 32,
+     "ga": 33,
+     "pts": 45,
+     "tid": 1475,
+     "form": "WDWDW"
+    },
+    {
+     "pos": 8,
+     "team": "Novigrad",
+     "p": 33,
+     "w": 11,
+     "d": 9,
+     "l": 13,
+     "gf": 28,
+     "ga": 35,
+     "pts": 42,
+     "tid": 1478,
+     "form": "LDLDL"
+    },
+    {
+     "pos": 9,
+     "team": "Lučko",
+     "p": 33,
+     "w": 9,
+     "d": 11,
+     "l": 13,
+     "gf": 34,
+     "ga": 48,
+     "pts": 38,
+     "tid": 1477,
+     "form": "LWWWD"
+    },
+    {
+     "pos": 10,
+     "team": "Hrvatski Dragovoljac",
+     "p": 33,
+     "w": 9,
+     "d": 9,
+     "l": 15,
+     "gf": 30,
+     "ga": 39,
+     "pts": 36,
+     "tid": 1472,
+     "form": "WLLLW"
+    },
+    {
+     "pos": 11,
+     "team": "Imotski",
+     "p": 33,
+     "w": 8,
+     "d": 7,
+     "l": 18,
+     "gf": 36,
+     "ga": 58,
+     "pts": 31,
+     "tid": 1473,
+     "form": "LLDLW"
+    },
+    {
+     "pos": 12,
+     "team": "NK Zagreb",
+     "p": 33,
+     "w": 6,
+     "d": 11,
+     "l": 16,
+     "gf": 34,
+     "ga": 50,
+     "pts": 29,
+     "tid": 1474,
+     "form": "LWLLL"
+    }
+   ]
+  }
+ ]
+}

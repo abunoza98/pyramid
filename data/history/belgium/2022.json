@@ -1,0 +1,755 @@
+{
+ "country": "belgium",
+ "name": "Belgium",
+ "adjective": "Belgian",
+ "season": "2022–23",
+ "year": 2022,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "pro-league",
+   "tier": 1,
+   "name": "Pro League",
+   "short": "JPL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 4,
+     "to": 4,
+     "kind": "mid",
+     "label": "Conference League"
+    }
+   ],
+   "notes": [
+    "Antwerp: 36 points deducted.",
+    "Genk: 37 points deducted.",
+    "Union Saint-Gilloise: 37 points deducted.",
+    "Club Brugge: 29 points deducted.",
+    "Gent: 28 points deducted.",
+    "Cercle Brugge: 25 points deducted.",
+    "Standard Liège: 27 points deducted.",
+    "Westerlo: 25 points deducted."
+   ],
+   "groups": [
+    {
+     "name": "Championship Round",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Antwerp",
+       "p": 40,
+       "w": 25,
+       "d": 8,
+       "l": 7,
+       "gf": 69,
+       "ga": 34,
+       "pts": 47,
+       "ded": 36,
+       "tid": 740,
+       "form": "WWLDD"
+      },
+      {
+       "pos": 2,
+       "team": "Genk",
+       "p": 40,
+       "w": 25,
+       "d": 8,
+       "l": 7,
+       "gf": 88,
+       "ga": 47,
+       "pts": 46,
+       "ded": 37,
+       "tid": 742,
+       "form": "LLDWD"
+      },
+      {
+       "pos": 3,
+       "team": "Union Saint-Gilloise",
+       "p": 40,
+       "w": 25,
+       "d": 8,
+       "l": 7,
+       "gf": 78,
+       "ga": 49,
+       "pts": 46,
+       "ded": 37,
+       "tid": 1393,
+       "form": "WWDDL"
+      },
+      {
+       "pos": 4,
+       "team": "Club Brugge",
+       "p": 40,
+       "w": 18,
+       "d": 11,
+       "l": 11,
+       "gf": 71,
+       "ga": 48,
+       "pts": 36,
+       "ded": 29,
+       "tid": 569,
+       "form": "LLWLW"
+      }
+     ]
+    },
+    {
+     "name": "Conference League Play-off Group",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Gent",
+       "p": 40,
+       "w": 21,
+       "d": 9,
+       "l": 10,
+       "gf": 81,
+       "ga": 44,
+       "pts": 44,
+       "ded": 28,
+       "tid": 631,
+       "form": "WWDWW"
+      },
+      {
+       "pos": 2,
+       "team": "Cercle Brugge",
+       "p": 40,
+       "w": 16,
+       "d": 13,
+       "l": 11,
+       "gf": 63,
+       "ga": 55,
+       "pts": 36,
+       "ded": 25,
+       "tid": 741,
+       "form": "WLDWW"
+      },
+      {
+       "pos": 3,
+       "team": "Standard Liège",
+       "p": 40,
+       "w": 16,
+       "d": 9,
+       "l": 15,
+       "gf": 62,
+       "ga": 59,
+       "pts": 30,
+       "ded": 27,
+       "tid": 733,
+       "form": "LDLLL"
+      },
+      {
+       "pos": 4,
+       "team": "Westerlo",
+       "p": 40,
+       "w": 15,
+       "d": 10,
+       "l": 15,
+       "gf": 71,
+       "ga": 68,
+       "pts": 30,
+       "ded": 25,
+       "tid": 261,
+       "form": "LDWLL"
+      }
+     ]
+    },
+    {
+     "name": "Regular Season",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Genk",
+       "p": 34,
+       "w": 23,
+       "d": 6,
+       "l": 5,
+       "gf": 78,
+       "ga": 37,
+       "pts": 75,
+       "tid": 742,
+       "form": "DWLWD"
+      },
+      {
+       "pos": 2,
+       "team": "Union Saint-Gilloise",
+       "p": 34,
+       "w": 23,
+       "d": 6,
+       "l": 5,
+       "gf": 70,
+       "ga": 41,
+       "pts": 75,
+       "tid": 1393,
+       "form": "WWDWW"
+      },
+      {
+       "pos": 3,
+       "team": "Antwerp",
+       "p": 34,
+       "w": 22,
+       "d": 6,
+       "l": 6,
+       "gf": 59,
+       "ga": 26,
+       "pts": 72,
+       "tid": 740,
+       "form": "LWWWW"
+      },
+      {
+       "pos": 4,
+       "team": "Club Brugge",
+       "p": 34,
+       "w": 16,
+       "d": 11,
+       "l": 7,
+       "gf": 61,
+       "ga": 36,
+       "pts": 59,
+       "tid": 569,
+       "form": "LWWDW"
+      },
+      {
+       "pos": 5,
+       "team": "Gent",
+       "p": 34,
+       "w": 16,
+       "d": 8,
+       "l": 10,
+       "gf": 64,
+       "ga": 38,
+       "pts": 56,
+       "tid": 631,
+       "form": "WWDDL"
+      },
+      {
+       "pos": 6,
+       "team": "Standard Liège",
+       "p": 34,
+       "w": 16,
+       "d": 7,
+       "l": 11,
+       "gf": 58,
+       "ga": 45,
+       "pts": 55,
+       "tid": 733,
+       "form": "DWWWL"
+      },
+      {
+       "pos": 7,
+       "team": "Westerlo",
+       "p": 34,
+       "w": 14,
+       "d": 9,
+       "l": 11,
+       "gf": 61,
+       "ga": 53,
+       "pts": 51,
+       "tid": 261,
+       "form": "WLDDD"
+      },
+      {
+       "pos": 8,
+       "team": "Cercle Brugge",
+       "p": 34,
+       "w": 13,
+       "d": 11,
+       "l": 10,
+       "gf": 50,
+       "ga": 46,
+       "pts": 50,
+       "tid": 741,
+       "form": "DWLWW"
+      },
+      {
+       "pos": 9,
+       "team": "Charleroi",
+       "p": 34,
+       "w": 14,
+       "d": 6,
+       "l": 14,
+       "gf": 45,
+       "ga": 52,
+       "pts": 48,
+       "tid": 736,
+       "form": "WWWLD"
+      },
+      {
+       "pos": 10,
+       "team": "OH Leuven",
+       "p": 34,
+       "w": 13,
+       "d": 9,
+       "l": 12,
+       "gf": 56,
+       "ga": 48,
+       "pts": 48,
+       "tid": 260,
+       "form": "LLWWW"
+      },
+      {
+       "pos": 11,
+       "team": "Anderlecht",
+       "p": 34,
+       "w": 13,
+       "d": 7,
+       "l": 14,
+       "gf": 49,
+       "ga": 46,
+       "pts": 46,
+       "tid": 554,
+       "form": "WWDLL"
+      },
+      {
+       "pos": 12,
+       "team": "Sint-Truiden",
+       "p": 34,
+       "w": 11,
+       "d": 9,
+       "l": 14,
+       "gf": 37,
+       "ga": 40,
+       "pts": 42,
+       "tid": 735,
+       "form": "WLWLL"
+      },
+      {
+       "pos": 13,
+       "team": "KV Mechelen",
+       "p": 34,
+       "w": 11,
+       "d": 7,
+       "l": 16,
+       "gf": 49,
+       "ga": 63,
+       "pts": 40,
+       "tid": 266,
+       "form": "LLLDW"
+      },
+      {
+       "pos": 14,
+       "team": "Kortrijk",
+       "p": 34,
+       "w": 8,
+       "d": 7,
+       "l": 19,
+       "gf": 37,
+       "ga": 61,
+       "pts": 31,
+       "tid": 734,
+       "form": "WLDLL"
+      },
+      {
+       "pos": 15,
+       "team": "AS Eupen",
+       "p": 34,
+       "w": 7,
+       "d": 7,
+       "l": 20,
+       "gf": 40,
+       "ga": 75,
+       "pts": 28,
+       "tid": 739,
+       "form": "LLDLL"
+      },
+      {
+       "pos": 16,
+       "team": "Oostende",
+       "p": 34,
+       "w": 7,
+       "d": 6,
+       "l": 21,
+       "gf": 37,
+       "ga": 76,
+       "pts": 27,
+       "tid": 624,
+       "form": "LLLLW"
+      },
+      {
+       "pos": 17,
+       "team": "Zulte Waregem",
+       "p": 34,
+       "w": 6,
+       "d": 9,
+       "l": 19,
+       "gf": 50,
+       "ga": 78,
+       "pts": 27,
+       "tid": 600,
+       "form": "DLLWL"
+      },
+      {
+       "pos": 18,
+       "team": "Seraing United",
+       "p": 34,
+       "w": 5,
+       "d": 5,
+       "l": 24,
+       "gf": 28,
+       "ga": 68,
+       "pts": 20,
+       "tid": 10244,
+       "form": "LLLLD"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "challenger-pro-league",
+   "tier": 2,
+   "name": "Challenger Pro League",
+   "short": "CPL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Promotion"
+    }
+   ],
+   "notes": [],
+   "groups": [
+    {
+     "name": "Promotion Round",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "RWDM",
+       "p": 32,
+       "w": 21,
+       "d": 6,
+       "l": 5,
+       "gf": 65,
+       "ga": 29,
+       "pts": 69,
+       "tid": 6224,
+       "form": "WDWWW"
+      },
+      {
+       "pos": 2,
+       "team": "Waasland-beveren",
+       "p": 32,
+       "w": 20,
+       "d": 8,
+       "l": 4,
+       "gf": 76,
+       "ga": 34,
+       "pts": 68,
+       "tid": 738,
+       "form": "WDWWW"
+      },
+      {
+       "pos": 3,
+       "team": "Beerschot Wilrijk",
+       "p": 32,
+       "w": 15,
+       "d": 4,
+       "l": 13,
+       "gf": 43,
+       "ga": 41,
+       "pts": 49,
+       "tid": 263,
+       "form": "LWLWL"
+      },
+      {
+       "pos": 4,
+       "team": "Club Brugge II",
+       "p": 32,
+       "w": 14,
+       "d": 7,
+       "l": 11,
+       "gf": 51,
+       "ga": 48,
+       "pts": 49,
+       "tid": 14130,
+       "form": "LLDLL"
+      },
+      {
+       "pos": 5,
+       "team": "Lierse Kempenzonen",
+       "p": 32,
+       "w": 14,
+       "d": 4,
+       "l": 14,
+       "gf": 53,
+       "ga": 59,
+       "pts": 46,
+       "tid": 6219,
+       "form": "WDLLW"
+      },
+      {
+       "pos": 6,
+       "team": "Anderlecht II",
+       "p": 32,
+       "w": 9,
+       "d": 10,
+       "l": 13,
+       "gf": 46,
+       "ga": 56,
+       "pts": 37,
+       "tid": 19046,
+       "form": "LDDLL"
+      }
+     ]
+    },
+    {
+     "name": "Relegation Round",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Lommel United",
+       "p": 32,
+       "w": 16,
+       "d": 3,
+       "l": 13,
+       "gf": 53,
+       "ga": 46,
+       "pts": 51,
+       "tid": 259,
+       "form": "WWWLW"
+      },
+      {
+       "pos": 2,
+       "team": "Deinze",
+       "p": 32,
+       "w": 15,
+       "d": 4,
+       "l": 13,
+       "gf": 49,
+       "ga": 47,
+       "pts": 49,
+       "tid": 6214,
+       "form": "WLWWW"
+      },
+      {
+       "pos": 3,
+       "team": "Dender",
+       "p": 32,
+       "w": 11,
+       "d": 6,
+       "l": 15,
+       "gf": 41,
+       "ga": 47,
+       "pts": 39,
+       "tid": 6215,
+       "form": "WWDWL"
+      },
+      {
+       "pos": 4,
+       "team": "Standard Liège II",
+       "p": 32,
+       "w": 5,
+       "d": 12,
+       "l": 15,
+       "gf": 31,
+       "ga": 60,
+       "pts": 27,
+       "tid": 19047,
+       "form": "LDDDL"
+      },
+      {
+       "pos": 5,
+       "team": "Genk II",
+       "p": 32,
+       "w": 6,
+       "d": 8,
+       "l": 18,
+       "gf": 36,
+       "ga": 58,
+       "pts": 26,
+       "tid": 19045,
+       "form": "LDLLL"
+      },
+      {
+       "pos": 6,
+       "team": "Excelsior Virton",
+       "p": 32,
+       "w": 5,
+       "d": 10,
+       "l": 17,
+       "gf": 32,
+       "ga": 51,
+       "pts": 25,
+       "tid": 4715,
+       "form": "LLLDW"
+      }
+     ]
+    },
+    {
+     "name": "Regular Season",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "RWDM",
+       "p": 22,
+       "w": 14,
+       "d": 4,
+       "l": 4,
+       "gf": 41,
+       "ga": 21,
+       "pts": 46,
+       "tid": 6224,
+       "form": "WWWWW"
+      },
+      {
+       "pos": 2,
+       "team": "Waasland-beveren",
+       "p": 22,
+       "w": 12,
+       "d": 7,
+       "l": 3,
+       "gf": 52,
+       "ga": 25,
+       "pts": 43,
+       "tid": 738,
+       "form": "DWDDW"
+      },
+      {
+       "pos": 3,
+       "team": "Beerschot Wilrijk",
+       "p": 22,
+       "w": 12,
+       "d": 2,
+       "l": 8,
+       "gf": 33,
+       "ga": 28,
+       "pts": 38,
+       "tid": 263,
+       "form": "LLWLL"
+      },
+      {
+       "pos": 4,
+       "team": "Lierse Kempenzonen",
+       "p": 22,
+       "w": 11,
+       "d": 3,
+       "l": 8,
+       "gf": 42,
+       "ga": 42,
+       "pts": 36,
+       "tid": 6219,
+       "form": "DLLWW"
+      },
+      {
+       "pos": 5,
+       "team": "Club Brugge II",
+       "p": 22,
+       "w": 10,
+       "d": 6,
+       "l": 6,
+       "gf": 38,
+       "ga": 30,
+       "pts": 36,
+       "tid": 14130,
+       "form": "WLWWD"
+      },
+      {
+       "pos": 6,
+       "team": "Anderlecht II",
+       "p": 22,
+       "w": 9,
+       "d": 7,
+       "l": 6,
+       "gf": 42,
+       "ga": 35,
+       "pts": 34,
+       "tid": 19046,
+       "form": "LDWDW"
+      },
+      {
+       "pos": 7,
+       "team": "Lommel United",
+       "p": 22,
+       "w": 10,
+       "d": 2,
+       "l": 10,
+       "gf": 33,
+       "ga": 36,
+       "pts": 32,
+       "tid": 259,
+       "form": "WLDDL"
+      },
+      {
+       "pos": 8,
+       "team": "Deinze",
+       "p": 22,
+       "w": 9,
+       "d": 3,
+       "l": 10,
+       "gf": 29,
+       "ga": 33,
+       "pts": 30,
+       "tid": 6214,
+       "form": "WLWWL"
+      },
+      {
+       "pos": 9,
+       "team": "Genk II",
+       "p": 22,
+       "w": 5,
+       "d": 5,
+       "l": 12,
+       "gf": 28,
+       "ga": 40,
+       "pts": 20,
+       "tid": 19045,
+       "form": "WLDWD"
+      },
+      {
+       "pos": 10,
+       "team": "Dender",
+       "p": 22,
+       "w": 5,
+       "d": 4,
+       "l": 13,
+       "gf": 27,
+       "ga": 40,
+       "pts": 19,
+       "tid": 6215,
+       "form": "LLDLL"
+      },
+      {
+       "pos": 11,
+       "team": "Standard Liège II",
+       "p": 22,
+       "w": 4,
+       "d": 7,
+       "l": 11,
+       "gf": 25,
+       "ga": 43,
+       "pts": 19,
+       "tid": 19047,
+       "form": "LDLDD"
+      },
+      {
+       "pos": 12,
+       "team": "Excelsior Virton",
+       "p": 22,
+       "w": 2,
+       "d": 8,
+       "l": 12,
+       "gf": 21,
+       "ga": 38,
+       "pts": 14,
+       "tid": 4715,
+       "form": "DWLLL"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

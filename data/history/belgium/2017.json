@@ -1,0 +1,478 @@
+{
+ "country": "belgium",
+ "name": "Belgium",
+ "adjective": "Belgian",
+ "season": "2017–18",
+ "year": 2017,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "pro-league",
+   "tier": 1,
+   "name": "First Division A",
+   "short": "D1A",
+   "final": true,
+   "zones": [
+    {
+     "from": 7,
+     "to": 15,
+     "kind": "mid",
+     "label": "Europa League play-offs"
+    },
+    {
+     "from": 16,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Club Brugge",
+     "p": 26,
+     "w": 18,
+     "d": 5,
+     "l": 3,
+     "gf": 62,
+     "ga": 29,
+     "pts": 59,
+     "tid": 569,
+     "form": "DWLDD"
+    },
+    {
+     "pos": 2,
+     "team": "Charleroi",
+     "p": 26,
+     "w": 13,
+     "d": 9,
+     "l": 4,
+     "gf": 44,
+     "ga": 26,
+     "pts": 48,
+     "tid": 736,
+     "form": "WLDDD"
+    },
+    {
+     "pos": 3,
+     "team": "Anderlecht",
+     "p": 26,
+     "w": 13,
+     "d": 7,
+     "l": 6,
+     "gf": 39,
+     "ga": 35,
+     "pts": 46,
+     "tid": 554,
+     "form": "WDDDL"
+    },
+    {
+     "pos": 4,
+     "team": "Gent",
+     "p": 26,
+     "w": 12,
+     "d": 7,
+     "l": 7,
+     "gf": 37,
+     "ga": 20,
+     "pts": 43,
+     "tid": 631,
+     "form": "WDWDW"
+    },
+    {
+     "pos": 5,
+     "team": "Genk",
+     "p": 26,
+     "w": 9,
+     "d": 10,
+     "l": 7,
+     "gf": 36,
+     "ga": 32,
+     "pts": 37,
+     "tid": 742,
+     "form": "LWDWW"
+    },
+    {
+     "pos": 6,
+     "team": "Antwerp",
+     "p": 26,
+     "w": 9,
+     "d": 10,
+     "l": 7,
+     "gf": 35,
+     "ga": 34,
+     "pts": 37,
+     "tid": 740,
+     "form": "DDDLL"
+    },
+    {
+     "pos": 7,
+     "team": "Kortrijk",
+     "p": 26,
+     "w": 10,
+     "d": 6,
+     "l": 10,
+     "gf": 38,
+     "ga": 36,
+     "pts": 36,
+     "tid": 734,
+     "form": "LWDWW"
+    },
+    {
+     "pos": 8,
+     "team": "Standard Liège",
+     "p": 26,
+     "w": 9,
+     "d": 9,
+     "l": 8,
+     "gf": 35,
+     "ga": 35,
+     "pts": 36,
+     "tid": 733,
+     "form": "WLDWW"
+    },
+    {
+     "pos": 9,
+     "team": "Waasland-beveren",
+     "p": 26,
+     "w": 9,
+     "d": 7,
+     "l": 10,
+     "gf": 47,
+     "ga": 44,
+     "pts": 34,
+     "tid": 738,
+     "form": "WDDWD"
+    },
+    {
+     "pos": 10,
+     "team": "Sint-Truiden",
+     "p": 26,
+     "w": 8,
+     "d": 9,
+     "l": 9,
+     "gf": 28,
+     "ga": 38,
+     "pts": 33,
+     "tid": 735,
+     "form": "LWDLL"
+    },
+    {
+     "pos": 11,
+     "team": "Oostende",
+     "p": 26,
+     "w": 8,
+     "d": 5,
+     "l": 13,
+     "gf": 35,
+     "ga": 36,
+     "pts": 29,
+     "tid": 624,
+     "form": "WLLDW"
+    },
+    {
+     "pos": 12,
+     "team": "Royal Excel Mouscron",
+     "p": 26,
+     "w": 8,
+     "d": 5,
+     "l": 13,
+     "gf": 34,
+     "ga": 46,
+     "pts": 29,
+     "tid": 743,
+     "form": "LLWLL"
+    },
+    {
+     "pos": 13,
+     "team": "Zulte Waregem",
+     "p": 26,
+     "w": 8,
+     "d": 4,
+     "l": 14,
+     "gf": 39,
+     "ga": 47,
+     "pts": 28,
+     "tid": 600,
+     "form": "WWDDL"
+    },
+    {
+     "pos": 14,
+     "team": "Lokeren",
+     "p": 26,
+     "w": 7,
+     "d": 7,
+     "l": 12,
+     "gf": 29,
+     "ga": 42,
+     "pts": 28,
+     "tid": 737,
+     "form": "LLWLD"
+    },
+    {
+     "pos": 15,
+     "team": "KV Mechelen",
+     "p": 26,
+     "w": 5,
+     "d": 7,
+     "l": 14,
+     "gf": 24,
+     "ga": 43,
+     "pts": 22,
+     "tid": 266,
+     "form": "LLLDW"
+    },
+    {
+     "pos": 16,
+     "team": "AS Eupen",
+     "p": 26,
+     "w": 4,
+     "d": 9,
+     "l": 13,
+     "gf": 31,
+     "ga": 50,
+     "pts": 21,
+     "tid": 739,
+     "form": "LWDDL"
+    }
+   ]
+  },
+  {
+   "id": "challenger-pro-league",
+   "tier": 2,
+   "name": "First Division B",
+   "short": "D1B",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "mid",
+     "label": "Play-offs"
+    }
+   ],
+   "notes": [],
+   "groups": [
+    {
+     "name": "Closing",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Cercle Brugge",
+       "p": 12,
+       "w": 7,
+       "d": 4,
+       "l": 1,
+       "gf": 24,
+       "ga": 11,
+       "pts": 25,
+       "tid": 741,
+       "form": "WWWDD"
+      },
+      {
+       "pos": 2,
+       "team": "Lierse",
+       "p": 12,
+       "w": 7,
+       "d": 0,
+       "l": 5,
+       "gf": 14,
+       "ga": 18,
+       "pts": 21,
+       "tid": 1392,
+       "form": "WLWLL"
+      },
+      {
+       "pos": 3,
+       "team": "OH Leuven",
+       "p": 12,
+       "w": 5,
+       "d": 4,
+       "l": 3,
+       "gf": 13,
+       "ga": 10,
+       "pts": 19,
+       "tid": 260,
+       "form": "WWLDW"
+      },
+      {
+       "pos": 4,
+       "team": "Union Saint-Gilloise",
+       "p": 12,
+       "w": 4,
+       "d": 4,
+       "l": 4,
+       "gf": 14,
+       "ga": 13,
+       "pts": 16,
+       "tid": 1393,
+       "form": "LDLWW"
+      },
+      {
+       "pos": 5,
+       "team": "Beerschot Wilrijk",
+       "p": 12,
+       "w": 4,
+       "d": 3,
+       "l": 5,
+       "gf": 11,
+       "ga": 15,
+       "pts": 15,
+       "tid": 263,
+       "form": "LDWLD"
+      },
+      {
+       "pos": 6,
+       "team": "Westerlo",
+       "p": 12,
+       "w": 3,
+       "d": 4,
+       "l": 5,
+       "gf": 14,
+       "ga": 12,
+       "pts": 13,
+       "tid": 261,
+       "form": "DDWWD"
+      },
+      {
+       "pos": 7,
+       "team": "Tubize",
+       "p": 12,
+       "w": 2,
+       "d": 5,
+       "l": 5,
+       "gf": 10,
+       "ga": 13,
+       "pts": 11,
+       "tid": 262,
+       "form": "LLLDD"
+      },
+      {
+       "pos": 8,
+       "team": "Roeselare",
+       "p": 12,
+       "w": 2,
+       "d": 4,
+       "l": 6,
+       "gf": 8,
+       "ga": 16,
+       "pts": 10,
+       "tid": 264,
+       "form": "DDLDL"
+      }
+     ]
+    },
+    {
+     "name": "Opening",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Beerschot Wilrijk",
+       "p": 14,
+       "w": 8,
+       "d": 5,
+       "l": 1,
+       "gf": 29,
+       "ga": 10,
+       "pts": 29,
+       "tid": 263,
+       "form": "LDDWW"
+      },
+      {
+       "pos": 2,
+       "team": "OH Leuven",
+       "p": 14,
+       "w": 7,
+       "d": 5,
+       "l": 2,
+       "gf": 28,
+       "ga": 15,
+       "pts": 26,
+       "tid": 260,
+       "form": "WWDWL"
+      },
+      {
+       "pos": 3,
+       "team": "Cercle Brugge",
+       "p": 14,
+       "w": 7,
+       "d": 2,
+       "l": 5,
+       "gf": 24,
+       "ga": 21,
+       "pts": 23,
+       "tid": 741,
+       "form": "WDLDW"
+      },
+      {
+       "pos": 4,
+       "team": "Roeselare",
+       "p": 14,
+       "w": 6,
+       "d": 3,
+       "l": 5,
+       "gf": 15,
+       "ga": 25,
+       "pts": 21,
+       "tid": 264,
+       "form": "WDDLW"
+      },
+      {
+       "pos": 5,
+       "team": "Lierse",
+       "p": 14,
+       "w": 4,
+       "d": 5,
+       "l": 5,
+       "gf": 19,
+       "ga": 26,
+       "pts": 17,
+       "tid": 1392,
+       "form": "DLWWW"
+      },
+      {
+       "pos": 6,
+       "team": "Union Saint-Gilloise",
+       "p": 14,
+       "w": 4,
+       "d": 2,
+       "l": 8,
+       "gf": 16,
+       "ga": 18,
+       "pts": 14,
+       "tid": 1393,
+       "form": "LWLLL"
+      },
+      {
+       "pos": 7,
+       "team": "Westerlo",
+       "p": 14,
+       "w": 2,
+       "d": 6,
+       "l": 6,
+       "gf": 16,
+       "ga": 22,
+       "pts": 12,
+       "tid": 261,
+       "form": "LDDLL"
+      },
+      {
+       "pos": 8,
+       "team": "Tubize",
+       "p": 14,
+       "w": 2,
+       "d": 4,
+       "l": 8,
+       "gf": 10,
+       "ga": 20,
+       "pts": 10,
+       "tid": 262,
+       "form": "DLWDL"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
