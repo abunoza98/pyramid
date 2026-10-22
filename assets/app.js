@@ -136,7 +136,8 @@
   var MINE = PAGE === "country" ? [COUNTRY] : PAGE === "europe" || PAGE === "comp" ? ["europe"] : COUNTRIES;
   var STATUSES = {}, EUROPE_SUM = null, compFx = null, compFxLoaded = false;
   try { STATUSES = JSON.parse(body.getAttribute("data-statuses") || "{}"); } catch (e) {}
-  try { EUROPE_SUM = JSON.parse(body.getAttribute("data-europe") || "null"); } catch (e) {}
+  // The home page shows the Champions League table too, so it also loads data/europe.json.
+  if (PAGE === "home" && body.getAttribute("data-europe")) MINE = MINE.concat(["europe"]);
   // The home page's strip shows every country's games, not just the featured ones.
   var FIXLINKS = {};   // links from each table to its fixtures page
   try { FIXLINKS = JSON.parse(body.getAttribute("data-fixtures") || "{}"); } catch (e) {}
@@ -203,7 +204,10 @@
       if (!comp) return;
       html = FP.compMain(comp, compFx, { tz: fxState.tz, live: live, fixturesHref: body.getAttribute("data-fx") || "", seasons: seasons });
     }
-    else html = FP.homeMain(withLive, BASE, SUFFIX, OTHERS, { live: live, fixtures: FIXLINKS, europe: EUROPE_SUM, statuses: STATUSES });
+    else {
+      var eu = MINE.indexOf("europe") > -1 ? withLive[MINE.indexOf("europe")] : null;
+      html = FP.homeMain(withLive.filter(function (c) { return c.country !== "europe"; }), BASE, SUFFIX, OTHERS, { live: live, fixtures: FIXLINKS, europe: eu });
+    }
     redraw(html);
     applyTabs();
     liveShown = relevant().length > 0;

@@ -251,7 +251,7 @@
     var tiers = c.leagues.map(function (lg) {
       var g = lg.groups && lg.groups.length;
       return { tier: lg.tier, name: lg.name, short: lg.short, clubs: lg.clubs != null && !lg.rows && !lg.groups ? lg.clubs : clubCount(lg),
-        groups: lg.groupCount != null ? lg.groupCount : g ? lg.groups.length : 0, href: (link || "") + "#" + lg.id };
+        groups: lg.groupCount != null ? lg.groupCount : g ? lg.groups.length : 0, href: c.country === "europe" ? (link || "") + lg.id + "/" : (link || "") + "#" + lg.id };
     }).concat(c.later || []);
     var max = Math.max.apply(null, tiers.map(function (t) { return t.clubs; }));
     var rows = tiers.map(function (t) {
@@ -386,12 +386,12 @@
         flag(s.country) + "<span>" + esc(s.name) + "</span></button>";
     }).join("");
     var panels = all.map(function (s, i) {
-      var href = base + s.country + "/" + suffix;
+      var href = base + s.country + "/" + suffix, eu = s.country === "europe";
       return '<div class="xp-panel' + (i === 0 ? " on" : "") + '" data-panel="' + s.country + '" role="tabpanel">' +
-        '<div class="xp-head"><h2>' + flag(s.country) + "The " + esc(s.adjective) + " pyramid</h2>" +
-        "<p>" + s.tiers + " tier" + (s.tiers === 1 ? "" : "s") + " · " + s.clubs + " clubs</p></div>" +
-        pyramidHTML(s, href) +
-        '<a class="more" href="' + href + '">Open every ' + esc(s.adjective) + ' table <span aria-hidden="true">→</span></a></div>';
+        '<div class="xp-head"><h2>' + flag(s.country) + (eu ? "European competitions" : "The " + esc(s.adjective) + " pyramid") + "</h2>" +
+        "<p>" + (eu ? s.tiers + " competitions · " + s.clubs + " clubs in the league phase" : s.tiers + " tier" + (s.tiers === 1 ? "" : "s") + " · " + s.clubs + " clubs") + "</p></div>" +
+        pyramidHTML(s, eu ? base + "europe/" : href) +
+        '<a class="more" href="' + href + '">' + (eu ? "Open the European tables and brackets" : "Open every " + esc(s.adjective) + " table") + ' <span aria-hidden="true">→</span></a></div>';
     }).join("");
     return '<section class="explorer" data-tabs="pyramid" aria-labelledby="xp-h"><h2 class="section-h" id="xp-h">Pick a pyramid</h2>' +
       '<div class="xp"><div class="xp-tabs" role="tablist" aria-label="Countries">' + tabs + "</div>" +
@@ -419,20 +419,25 @@
       " clubs. Each country’s whole football pyramid on one page, from the top flight down, with live scores on match days.</p>" +
       stampHTML(live ? "live" : "snapshot", newest, countries.reduce(function (n, c) { return n + (c.liveCount || 0); }, 0)) +
       "</section>" +
-      stripHTML(opts.live, opts.europe ? all.concat([opts.europe]) : all, base, suffix, names) +
-      europeCardsHTML(opts.europe, opts.statuses, base, suffix) +
-      explorerHTML(all, base, suffix) + INLINE_AD;
-    // The top flights, one tab each.
-    var tabs = countries.map(function (c, i) {
-      return '<button type="button" role="tab" class="tf-tab' + (i === 0 ? " on" : "") + '" data-tab="' + c.country + '" aria-selected="' + (i === 0) + '">' +
-        flag(c.country) + "<span>" + esc(c.leagues[0].name) + "</span></button>";
+      stripHTML(opts.live, opts.europe ? all.concat([summary(opts.europe)]) : all, base, suffix, names) +
+      // England first (the default), Europe straight after the big five.
+      explorerHTML(opts.europe ? all.slice(0, countries.length).concat([summary(opts.europe)], all.slice(countries.length)) : all, base, suffix) + INLINE_AD;
+    // The top flights, one tab each, with the Champions League last when it's there.
+    var items = countries.map(function (c) {
+      return { key: c.country, flagOf: c.country, label: c.leagues[0].name, lg: c.leagues[0],
+        opt: { eyebrow: c.name + " · Tier 1", fixtures: (opts.fixtures || {})[c.country + "/" + c.leagues[0].id],
+          more: { href: base + c.country + "/" + suffix, text: "See the full " + c.adjective + " pyramid: " + c.leagues.length + " tiers, " + countryClubs(c) + " clubs" } } };
+    });
+    var ucl = opts.europe && opts.europe.leagues.filter(function (l) { return l.id === "champions-league"; })[0];
+    if (ucl) items.push({ key: "ucl", flagOf: "europe", label: ucl.name, lg: ucl,
+      opt: { eyebrow: "UEFA · League phase", fixtures: (opts.fixtures || {})["europe/champions-league"],
+        more: { href: base + "europe/champions-league/" + suffix, text: "Champions League bracket, qualifying and past seasons" } } });
+    var tabs = items.map(function (it, i) {
+      return '<button type="button" role="tab" class="tf-tab' + (i === 0 ? " on" : "") + '" data-tab="' + it.key + '" aria-selected="' + (i === 0) + '">' +
+        flag(it.flagOf) + "<span>" + esc(it.label) + "</span></button>";
     }).join("");
-    var panels = countries.map(function (c, i) {
-      return '<div class="tf-panel' + (i === 0 ? " on" : "") + '" data-panel="' + c.country + '" role="tabpanel">' +
-        tierHTML(c.leagues[0], {
-          eyebrow: c.name + " · Tier 1", fixtures: (opts.fixtures || {})[c.country + "/" + c.leagues[0].id],
-          more: { href: base + c.country + "/" + suffix, text: "See the full " + c.adjective + " pyramid: " + c.leagues.length + " tiers, " + countryClubs(c) + " clubs" }
-        }) + "</div>";
+    var panels = items.map(function (it, i) {
+      return '<div class="tf-panel' + (i === 0 ? " on" : "") + '" data-panel="' + it.key + '" role="tabpanel">' + tierHTML(it.lg, it.opt) + "</div>";
     }).join("");
     html += '<section class="topflights" data-tabs="table" aria-labelledby="tf-h"><h2 class="section-h" id="tf-h">Top-flight tables</h2>' +
       '<div class="tf-tabs" role="tablist" aria-label="Leagues">' + tabs + "</div>" + panels + "</section>";

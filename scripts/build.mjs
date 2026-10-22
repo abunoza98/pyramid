@@ -238,9 +238,10 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     title: "Football Pyramids: every league table, top to bottom | Premier League, La Liga, Bundesliga, Ligue 1, Serie A",
     description: `Every tier of ${countries.length} countries' football pyramids, each on one page: ${countries.map((c) => c.name).join(", ")}. Live scores on match days.`,
     canonical: SITE + "/", base: "", suffix, page: "home", stamps, countries,
-    attrs: { fixtures: fxLinks(true), ...(europe ? { europe: euroSummary, statuses } : {}) },
+    attrs: { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/fixtures/${suffix}` } : {}) },
+      ...(europe ? { europe: "1" } : {}) },
     main: FP.homeMain(countries.filter((c) => c.featured), "", suffix, countries.filter((c) => !c.featured).map(FP.summary),
-      { fixtures: fxLinks(true), europe: euroSummary, statuses })
+      { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/fixtures/${suffix}` } : {}) }, europe })
   }));
 
   // Country pages
