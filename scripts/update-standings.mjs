@@ -171,7 +171,9 @@ async function main() {
     console.log(`${c.name}: updated (${leagues.length} leagues).`);
   }
 
-  if (!changed) { console.log("Nothing changed. Pages left as they are."); return; }
+  // Always rebuild: cheap, and it picks up changes to the site settings or design.
+  // GitHub only commits files that actually changed.
+  if (!changed) console.log("No table changes. Rebuilding pages anyway.");
   const files = await build({ root: outRoot, outDir: outRoot });
   console.log(`Rebuilt ${files.length} files.`);
 }

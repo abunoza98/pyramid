@@ -10,7 +10,7 @@ import { readFile, writeFile, mkdir, copyFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import path from "node:path";
-import { COUNTRIES, SITE, CONTACT, ADS } from "./leagues.mjs";
+import { COUNTRIES, SITE, CONTACT, ADS, ADSENSE_CLIENT } from "./leagues.mjs";
 import { contactPage, privacyPage } from "./pages.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -48,7 +48,7 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
 <link rel="preload" href="${base}assets/fonts/big-shoulders-display-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${base}assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${base}assets/style.css">
-</head>
+${ADSENSE_CLIENT && !suffix ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>\n` : ""}</head>
 <body${ADS ? "" : ' class="no-ads"'} data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${countries.map((c) => c.country).join(",")}" data-stamps="${esc(JSON.stringify(stamps))}">
 <header class="bar">
   <div class="bar-inner">
@@ -184,6 +184,7 @@ ${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><chan
 </urlset>
 `);
     await write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
+    if (ADSENSE_CLIENT) await write("ads.txt", `google.com, ${ADSENSE_CLIENT.replace("ca-", "")}, DIRECT, f08c47fec0942fa0\n`);
   } else {
     // The preview needs its own copy of the assets and data.
     const fonts = ["big-shoulders-display-latin-700-normal", "big-shoulders-display-latin-800-normal", "ibm-plex-sans-latin-400-normal",
