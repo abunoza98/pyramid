@@ -172,3 +172,25 @@ export const NAMES = {
   "Campobasso FC": "Campobasso", "Forli": "Forlì", "SS Monopoli": "Monopoli", "AZ Picerno": "Picerno",
   "Team Altamura": "Altamura", "Inter U23": "Inter Milan U23"
 };
+
+/* ---------- Play-off places in past seasons ----------
+   API-Football's old tables don't always mark play-off places (e.g. every Bundesliga season shows 16th as plain
+   "Relegation"), so these rules set them for the leagues where we know the format. Years are the season's start
+   year (2016 = 2016–17). A year no rule covers means that league had no play-offs that season.
+   rel: relegation play-off places (play the team from the tier below); promo: promotion play-off places.
+   Leagues not listed here use whatever the API data says. */
+export const PLAYOFF_RULES = {
+  "bundesliga":   [{ from: 2008, rel: [16] }],
+  "2-bundesliga": [{ from: 2008, promo: [3], rel: [16] }],
+  "3-liga":       [{ from: 2008, promo: [3] }],
+  "ligue-1": [
+    { from: 2016, to: 2018, rel: [18] },   // barrage v Ligue 2 play-off winner
+    { from: 2020, to: 2021, rel: [18] },   // 2019–20 was cut short; 2022–23 had four relegated and no barrage
+    { from: 2023, rel: [16] }              // 18-club league
+  ],
+  "ligue-2": [
+    { from: 2016, to: 2018, promo: [3, 4, 5] },
+    { from: 2020, to: 2021, promo: [3, 4, 5] },
+    { from: 2023, promo: [3, 4, 5] }
+  ]
+};

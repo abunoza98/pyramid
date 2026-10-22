@@ -10,7 +10,7 @@ import { readFile, writeFile, mkdir, copyFile, readdir } from "node:fs/promises"
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import path from "node:path";
-import { COUNTRIES, SITE, CONTACT, ADS, ADSENSE_CLIENT } from "./leagues.mjs";
+import { COUNTRIES, SITE, CONTACT, ADS, ADSENSE_CLIENT, PLAYOFF_RULES } from "./leagues.mjs";
 import { contactPage, privacyPage } from "./pages.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -149,6 +149,38 @@ const teamsByTier = (s) => new Map(s.leagues.map((lg) => [lg.tier,
   new Set((lg.groups ? lg.groups.flatMap((g) => g.rows) : lg.rows || []).map((r) => r.team))]));
 function zoneAt(lg, pos) { return (lg.zones || []).find((z) => pos >= z.from && pos <= z.to) || null; }
 
+// Rewrite a past season's zones using PLAYOFF_RULES, for the leagues listed there.
+export function applyPlayoffRules(season, rules = PLAYOFF_RULES) {
+  for (const lg of season.leagues) {
+    const list = rules[lg.id];
+    if (!list) continue;
+    const rule = list.find((r) => season.year >= r.from && season.year <= (r.to ?? 9999)) || {};
+    const rel = rule.rel || [], promo = rule.promo || [];
+    // Only take over the kinds of play-off this league has rules for; leave the rest as the API has them.
+    const doesRel = list.some((r) => r.rel), doesPromo = list.some((r) => r.promo);
+    const size = Math.max(0, ...(lg.groups ? lg.groups.map((g) => g.rows.length) : [(lg.rows || []).length]));
+    const at = [];
+    for (let pos = 1; pos <= size; pos++) {
+      let z = zoneAt(lg, pos);
+      z = z ? { kind: z.kind, label: z.label } : null;
+      const playoffish = z && /play/i.test(z.label) && (z.kind === "down" ? doesRel : doesPromo);
+      if (rel.includes(pos)) z = { kind: "down", label: "Relegation play-off" };
+      else if (promo.includes(pos)) z = { kind: "mid", label: "Play-offs" };
+      else if (playoffish) z = null;   // a play-off place the rules say didn't exist
+      at.push(z);
+    }
+    const zones = [];
+    at.forEach((z, i) => {
+      if (!z) return;
+      const last = zones[zones.length - 1];
+      if (last && last.to === i && last.kind === z.kind && last.label === z.label) last.to = i + 1;
+      else zones.push({ from: i + 1, to: i + 1, ...z });
+    });
+    lg.zones = zones;
+  }
+  return season;
+}
+
 export function markOutcomes(season, next) {
   if (!next) return season;
   const tiers = teamsByTier(next);
@@ -219,7 +251,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     const liveYear = Number(String(c.season).slice(0, 4));
     for (const h of history[c.country]) {
       const next = h.year + 1 === liveYear ? c : history[c.country].find((x) => x.year === h.year + 1);
-      labelCupPlaces(markOutcomes(h, next));
+      labelCupPlaces(markOutcomes(applyPlayoffRules(h), next));
       const n = tierNames(h);
       const seasons = seasonList(c, history[c.country], "../", suffix, h.year);
       await write(`${c.country}/${slug(h.year)}/index.html`, shell({
