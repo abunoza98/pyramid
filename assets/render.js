@@ -489,7 +489,7 @@
     if (ucl && opts.clubPaths) { ucl._paths = opts.clubPaths; ucl._root = base; ucl._suffix = suffix; }
     if (ucl) items.push({ key: "ucl", flagOf: "europe", label: ucl.name, lg: ucl,
       opt: { eyebrow: "UEFA · League phase", fixtures: (opts.fixtures || {})["europe/champions-league"],
-        more: { href: base + "europe/champions-league/" + suffix, text: "Champions League bracket, qualifying and past seasons" } } });
+        more: { href: base + "europe/champions-league/" + suffix, text: "Champions League fixtures, knockouts, qualifying and past seasons" } } });
     var tabs = items.map(function (it, i) {
       return '<button type="button" role="tab" class="tf-tab' + (i === 0 ? " on" : "") + '" data-tab="' + it.key + '" aria-selected="' + (i === 0) + '">' +
         flag(it.flagOf) + "<span>" + esc(it.label) + "</span></button>";
@@ -810,8 +810,8 @@
         }).join("") + "</ol>" +
         '<span class="ecard-toggle" aria-hidden="true"><span class="when-closed">Full table</span><span class="when-open">Hide table</span></span></summary>' +
         '<div class="ecomp-body">' + (hasTable ? tierHTML(lg, { eyebrow: c.groups ? "Group stage" : "League phase",
-          more: { href: href, text: "Knockouts, qualifying and every fixture" } })
-          : '<p class="ko-empty">No table yet. <a href="' + esc(href) + '">Qualifying and fixtures →</a></p>') + "</div></details></li>";
+          more: { href: href, text: "Fixtures, knockouts and qualifying" } })
+          : '<p class="ko-empty">No table yet. <a href="' + esc(href) + '">Fixtures and qualifying →</a></p>') + "</div></details></li>";
     }).join("");
     return '<section class="intro" aria-labelledby="intro-h"><p class="eyebrow">UEFA club competitions · ' + esc(e.season) + "</p>" +
       '<h1 id="intro-h">Champions League, Europa League and Conference League</h1>' +
