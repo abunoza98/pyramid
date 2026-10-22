@@ -180,6 +180,11 @@ export const NAMES = {
    rel: relegation play-off places (play the team from the tier below); promo: promotion play-off places.
    Leagues not listed here use whatever the API data says. */
 export const PLAYOFF_RULES = {
+  // England: unchanged since the 2000s. The API marks all six of League One 2025–26 as "Promotion".
+  "championship": [{ from: 2000, promo: [3, 4, 5, 6] }],
+  "league-one":   [{ from: 2000, promo: [3, 4, 5, 6] }],
+  "league-two":   [{ from: 2000, promo: [4, 5, 6, 7] }],
+  "segunda":      [{ from: 2010, promo: [3, 4, 5, 6] }],
   "bundesliga":   [{ from: 2008, rel: [16] }],
   "2-bundesliga": [{ from: 2008, promo: [3], rel: [16] }],
   "3-liga":       [{ from: 2008, promo: [3] }],
