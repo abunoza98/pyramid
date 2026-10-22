@@ -297,7 +297,11 @@ tbody tr.is-mine .c-club::before { content: ""; display: inline-block; width: 7p
 .out.po-lost { background: var(--down); }
 .out.po-stayed { background: var(--muted); }
 .form { display: inline-flex; gap: 3px; }
-.form b { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 3px; font-family: var(--mono); font-size: 10px; font-weight: 500; color: var(--sheet); }
+.form > b { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 3px; font-family: var(--mono); font-size: 10px; font-weight: 500; color: var(--sheet); }
+.form .fchip { position: relative; cursor: pointer; outline: none; }
+.form .fchip:hover, .form .fchip:focus-visible, .form .fchip.open { box-shadow: 0 0 0 2px var(--accent-flash); z-index: 3; }
+.form .fchip .ltip { bottom: calc(100% + 8px); }
+.fchip:hover .ltip, .fchip:focus-visible .ltip, .fchip.open .ltip { display: block; }
 .form .W { background: var(--up); } .form .D { background: var(--muted); } .form .L { background: var(--down); }
 .tier-notes { margin: 10px 0 0; padding: 0; list-style: none; display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
 

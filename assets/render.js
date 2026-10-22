@@ -1044,14 +1044,24 @@
         }).join("") + "</ul></details></section>";
     }
 
-    var formStr = played.slice(0, 5).reverse().map(res).join("");
+    // Last five, oldest first; each chip shows the match on hover (or tap on a phone).
+    var form5 = played.slice(0, 5).reverse();
+    var formStr = form5.map(res).join("");
+    var formChips = form5.map(function (f, k) {
+      var r = res(f), g = mine(f);
+      var score = g[0] + "–" + g[1] + (f.st === "AET" ? " after extra time" : "");
+      if (f.pen) { var p = f.home ? f.pen : [f.pen[1], f.pen[0]]; score += ", " + p[0] + "–" + p[1] + " on penalties"; }
+      var tip = '<span class="ltip' + (k < 2 ? " l" : k > 3 ? " r" : "") + '"><b>' + tt(f.ts, tz, "d") + " · " + esc(f.comp.name) + (f.round ? " · " + esc(f.round) : "") + "</b>" +
+        (f.home ? "Home v " : "Away at ") + esc(f.opp.n) + "<i>" + ({ W: "Won", D: "Drew", L: "Lost" })[r] + " " + score + "</i></span>";
+      return '<b class="fchip ' + r + '" tabindex="0">' + r + tip + "</b>";
+    }).join("");
     return '<section class="intro fx-intro" aria-labelledby="intro-h">' +
       // Breadcrumb: the country's pyramid, then the club's league table on it.
       '<p class="eyebrow crumbs"><a href="' + esc(d.root + d.country + "/" + d.suffix) + '">' + esc(d.countryName) + "</a>" +
         (lg ? " · " + (lg.tableHref ? '<a href="' + esc(lg.tableHref) + '">' + esc(lg.name) + "</a>" : esc(lg.name)) : "") + " · " + esc(d.season) + "</p>" +
       '<h1 id="intro-h" class="cup-h">' + flag(d.country) + "<span>" + esc(d.name) + "</span></h1>" +
       '<p class="lede">' + (d.pos ? "<strong>" + ord(d.pos) + " " + esc(inLeague(lg.name)) + "</strong>, " + d.pts + " points from " + d.p + " games." : esc(d.note || "")) +
-      (formStr ? ' Last five: <span class="form">' + formStr.split("").map(function (c) { return '<b class="' + c + '">' + c + "</b>"; }).join("") + "</span>" : "") + "</p>" +
+      (formStr ? ' Last five: <span class="form">' + formChips + "</span>" : "") + "</p>" +
       '<p class="fx-links">' + tzLine(mode, d.country) + "</p></section>" +
       nextHTML +
       '<div class="cl-cols"><section class="cl-sec"><div class="cl-sec-h"><h2>Fixtures</h2></div>' +
