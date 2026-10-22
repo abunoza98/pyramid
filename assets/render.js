@@ -130,8 +130,8 @@
   function bandHTML(upper, lower, belowNote) {
     return '<div class="band" role="note">' +
       '<p class="band-label">Tier ' + upper.tier + " ⇅ Tier " + (upper.tier + 1) + "</p>" +
-      '<p class="band-down"><span class="arw" aria-hidden="true">▼</span>' + esc(upper.relegationNote) + "</p>" +
-      '<p class="band-up"><span class="arw" aria-hidden="true">▲</span>' + esc(lower ? lower.promotionNote : belowNote) + "</p>" +
+      '<p class="band-down"><span class="arw" aria-hidden="true">▼</span><strong>' + esc(upper.name) + ":</strong> " + esc(upper.relegationNote) + "</p>" +
+      '<p class="band-up"><span class="arw" aria-hidden="true">▲</span>' + (lower ? "<strong>" + esc(lower.name) + ":</strong> " + esc(lower.promotionNote) : esc(belowNote)) + "</p>" +
       "</div>";
   }
 
