@@ -48,7 +48,7 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
   const snapshot = countries.some((c) => c.mode !== "live");
   const home = base || "./";
   const homeHref = suffix ? base + suffix : home;
-  const link = (c) => `<a href="${base}${c.country}/${suffix}"${c.country === country ? ' aria-current="page"' : ""}>` +
+  const link = (c, extra) => `<a href="${base}${c.country}/${suffix}"${c.country === country ? ' aria-current="page"' : ""}${extra ? ' class="nav-here"' : ""}>` +
     `<span class="short">${c.code || c.name.slice(0, 3).toUpperCase()}</span><span class="long">${esc(c.name)}</span></a>`;
   const featured = countries.filter((c) => c.featured), others = countries.filter((c) => !c.featured);
   const here = others.find((c) => c.country === country);
@@ -58,7 +58,7 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
     `<div class="nav-panel"><a href="${base}europe/${suffix}"${euroHere === "hub" ? ' aria-current="page"' : ""}>${FP.flag("europe")}All competitions</a>` +
     EUROPE.leagues.map((l) => `<a href="${base}europe/${l.id}/${suffix}"${euroHere === l.id ? ' aria-current="page"' : ""}><span class="comp-dot c-${l.id}" aria-hidden="true"></span>${esc(l.name)}</a>`).join("") +
     `</div></details>` : "";
-  const nav = featured.map(link).join("") + euro + (here ? link(here) : "") + (others.length
+  const nav = featured.map((c) => link(c)).join("") + euro + (here ? link(here, true) : "") + (others.length
     ? `<details class="nav-more"><summary aria-label="More countries"><span class="short">More</span><span class="long">More</span></summary>` +
       `<div class="nav-panel">${others.map((c) => `<a href="${base}${c.country}/${suffix}"${c.country === country ? ' aria-current="page"' : ""}>${FP.flag(c.country)}${esc(c.name)}</a>`).join("")}</div></details>`
     : "");

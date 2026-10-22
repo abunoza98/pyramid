@@ -173,7 +173,8 @@
         }).join("") + "</span></td>";
     }
     return '<tr class="' + cls.join(" ") + '" data-team="' + esc(r.team) + '">' +
-      '<td class="c-pos">' + r.pos +
+      // The zone colour is repeated as text for screen readers, so the table never relies on colour alone.
+      '<td class="c-pos">' + r.pos + (z ? '<span class="sr-only"> (' + esc(z.label) + ")</span>" : "") +
         (r.move ? '<span class="mv ' + (r.move > 0 ? "mv-up" : "mv-down") + '" title="' + (r.move > 0 ? "Up " : "Down ") + Math.abs(r.move) + ' as it stands">' + (r.move > 0 ? "▲" : "▼") + "</span>" : "") + "</td>" +
       '<th scope="row" class="c-club">' + (clubHref(lg, r) ? '<a class="club-link" href="' + esc(clubHref(lg, r)) + '">' + esc(r.team) + "</a>" : esc(r.team)) +
         (r.ded ? '<span class="ded" title="' + r.ded + ' points deducted">−' + r.ded + "</span>" : "") +

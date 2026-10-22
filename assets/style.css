@@ -491,6 +491,18 @@ body.no-ads main { justify-self: center !important; }
 .nav-more:has(.nav-panel a[aria-current]) summary { color: var(--ink); }
 .nav-euro.is-here summary, .nav-euro.is-here:has(.nav-panel a[aria-current]) summary { color: var(--paper); background: var(--ink); }
 .nav-euro .nav-panel { right: auto; left: 0; min-width: 230px; }
+/* Phones: seven nav items have to fit in 288px at 320px wide. Tighter spacing, and on a "More" country's page its
+   own link drops out of the row; the "More" button is marked as the current section instead. */
+@media (max-width: 479px) {
+  .nav { gap: 0; }
+  .nav a, .nav-more summary { padding: 8px 4px; font-size: 16px; letter-spacing: 0.02em; }
+  .nav-more summary::after { font-size: 9px; }
+  .nav a.nav-here { display: none; }
+  .nav-more:not(.nav-euro):has(.nav-panel a[aria-current]) summary { color: var(--paper); background: var(--ink); }
+}
+@media (max-width: 359px) {
+  .nav a, .nav-more summary { padding-inline: 3px; font-size: 15px; letter-spacing: 0; }
+}
 .nav-euro .nav-panel .comp-dot { margin-right: 10px; }
 .nav-panel {
   position: absolute; z-index: 30; top: calc(100% + 6px); right: 0; min-width: 200px;
