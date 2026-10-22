@@ -17,7 +17,7 @@ import { api, toRows, groupName, seasonLabel } from "./update-standings.mjs";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const now = new Date();
 const CURRENT = Number(process.env.SEASON || (now.getUTCMonth() >= 6 ? now.getUTCFullYear() : now.getUTCFullYear() - 1));
-const PAUSE_MS = 250;   // stay well under the per-minute limit
+const PAUSE_MS = 1500;  // API-Football refuses requests sent back to back
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 export { classify, zonesFrom } from "./zones.mjs";
@@ -44,8 +44,13 @@ async function main() {
     if (fixture) return fixture[q] || { response: [] };
     requests++;
     await sleep(PAUSE_MS);
-    try { return await api(q, key); }
-    catch (e) { console.log(`  skipped ${q}: ${e.message}`); return { response: [] }; }
+    for (let i = 1; ; i++) {
+      try { return await api(q, key); }
+      catch (e) {
+        if (i < 3 && /too many|limit|429/i.test(e.message)) { await sleep(8000); continue; }
+        console.log(`  skipped ${q}: ${e.message}`); return { response: [] };
+      }
+    }
   };
 
   let saved = 0;
@@ -73,7 +78,9 @@ async function main() {
         for (const id of ids) {
           const body = await get(`/standings?league=${id}&season=${year}`);
           const st = body?.response?.[0]?.league?.standings || [];
-          st.filter((t) => Array.isArray(t) && t.length).forEach((t) => tables.push({ id, t }));
+          const list = st.filter((t) => Array.isArray(t) && t.length);
+          // single: the API also sends extra tables we don't want (e.g. the Eerste Divisie's period tables).
+          (cfg.single ? list.slice(0, 1) : list).forEach((t) => tables.push({ id, t }));
         }
         if (!tables.length) continue;
         const notes = [];

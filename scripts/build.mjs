@@ -10,7 +10,9 @@ import { readFile, writeFile, mkdir, copyFile, readdir } from "node:fs/promises"
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import path from "node:path";
-import { COUNTRIES, SITE, CONTACT, ADS, ADSENSE_CLIENT, PLAYOFF_RULES, LIVE_URL } from "./leagues.mjs";
+import { COUNTRIES, SITE, CONTACT, ADS, ADSENSE_CLIENT, LIVE_URL } from "./leagues.mjs";
+import { zoneAt, applyPlayoffRules, labelCupPlaces } from "./zones.mjs";
+export { applyPlayoffRules, labelCupPlaces };
 import { contactPage, privacyPage } from "./pages.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -28,10 +30,14 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
   const snapshot = countries.some((c) => c.mode !== "live");
   const home = base || "./";
   const homeHref = suffix ? base + suffix : home;
-  const nav = countries.map((c) =>
-    `<a href="${base}${c.country}/${suffix}"${c.country === country ? ' aria-current="page"' : ""}>` +
-    `<span class="short">${(COUNTRIES.find((x) => x.country === c.country) || {}).code || c.name.slice(0, 3).toUpperCase()}</span><span class="long">${esc(c.name)}</span></a>`
-  ).join("");
+  const link = (c) => `<a href="${base}${c.country}/${suffix}"${c.country === country ? ' aria-current="page"' : ""}>` +
+    `<span class="short">${c.code || c.name.slice(0, 3).toUpperCase()}</span><span class="long">${esc(c.name)}</span></a>`;
+  const featured = countries.filter((c) => c.featured), others = countries.filter((c) => !c.featured);
+  const here = others.find((c) => c.country === country);
+  const nav = featured.map(link).join("") + (here ? link(here) : "") + (others.length
+    ? `<details class="nav-more"><summary aria-label="More countries"><span class="short">More</span><span class="long">More</span></summary>` +
+      `<div class="nav-panel">${others.map((c) => `<a href="${base}${c.country}/${suffix}"${c.country === country ? ' aria-current="page"' : ""}>${esc(c.name)}</a>`).join("")}</div></details>`
+    : "");
   return `<!doctype html>
 <html lang="en-GB">
 <head>
@@ -55,7 +61,7 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
 <link rel="preload" href="${base}assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${base}assets/style.css">
 ${ADSENSE_CLIENT && !suffix ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>\n` : ""}</head>
-<body${ADS ? "" : ' class="no-ads"'} data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${countries.map((c) => c.country).join(",")}" data-stamps="${esc(JSON.stringify(stamps))}"${seasons ? ` data-seasons="${esc(JSON.stringify(seasons))}"` : ""}${LIVE_URL && (page === "home" || page === "country") ? ` data-live="${esc(LIVE_URL)}"` : ""}>
+<body${ADS ? "" : ' class="no-ads"'} data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${featured.map((c) => c.country).join(",")}"${page === "home" ? ` data-others="${esc(JSON.stringify(others.map(FP.summary)))}"` : ""} data-stamps="${esc(JSON.stringify(stamps))}"${seasons ? ` data-seasons="${esc(JSON.stringify(seasons))}"` : ""}${LIVE_URL && (page === "home" || page === "country") ? ` data-live="${esc(LIVE_URL)}"` : ""}>
 <header class="bar">
   <div class="bar-inner">
     <a class="brand" href="${homeHref}" aria-label="Football Pyramids, home">
@@ -113,7 +119,10 @@ ${ADSENSE_CLIENT && !suffix ? `<script async src="https://pagead2.googlesyndicat
 export async function loadCountries(root = ROOT) {
   const out = [];
   for (const cfg of COUNTRIES) {
-    out.push(JSON.parse(await readFile(path.join(root, "data", cfg.country + ".json"), "utf8")));
+    // A country only appears once its first tables have been fetched.
+    let d;
+    try { d = JSON.parse(await readFile(path.join(root, "data", cfg.country + ".json"), "utf8")); } catch { continue; }
+    out.push(Object.assign(d, { featured: !!cfg.featured, code: cfg.code }));
   }
   return out;
 }
@@ -147,40 +156,6 @@ function seasonList(current, past, rel, suffix, onYear) {
    next season won it. Same for relegation play-offs (stayed up or went down). Marks rows with `out`. */
 const teamsByTier = (s) => new Map(s.leagues.map((lg) => [lg.tier,
   new Set((lg.groups ? lg.groups.flatMap((g) => g.rows) : lg.rows || []).map((r) => r.team))]));
-function zoneAt(lg, pos) { return (lg.zones || []).find((z) => pos >= z.from && pos <= z.to) || null; }
-
-// Rewrite a past season's zones using PLAYOFF_RULES, for the leagues listed there.
-export function applyPlayoffRules(season, rules = PLAYOFF_RULES) {
-  for (const lg of season.leagues) {
-    const list = rules[lg.id];
-    if (!list) continue;
-    const rule = list.find((r) => season.year >= r.from && season.year <= (r.to ?? 9999)) || {};
-    const rel = rule.rel || [], promo = rule.promo || [];
-    // Only take over the kinds of play-off this league has rules for; leave the rest as the API has them.
-    const doesRel = list.some((r) => r.rel), doesPromo = list.some((r) => r.promo);
-    const size = Math.max(0, ...(lg.groups ? lg.groups.map((g) => g.rows.length) : [(lg.rows || []).length]));
-    const at = [];
-    for (let pos = 1; pos <= size; pos++) {
-      let z = zoneAt(lg, pos);
-      z = z ? { kind: z.kind, label: z.label } : null;
-      const playoffish = z && /play/i.test(z.label) && (z.kind === "down" ? doesRel : doesPromo);
-      if (rel.includes(pos)) z = { kind: "down", label: "Relegation play-off" };
-      else if (promo.includes(pos)) z = { kind: "mid", label: "Play-offs" };
-      else if (playoffish) z = null;   // a play-off place the rules say didn't exist
-      at.push(z);
-    }
-    const zones = [];
-    at.forEach((z, i) => {
-      if (!z) return;
-      const last = zones[zones.length - 1];
-      if (last && last.to === i && last.kind === z.kind && last.label === z.label) last.to = i + 1;
-      else zones.push({ from: i + 1, to: i + 1, ...z });
-    });
-    lg.zones = zones;
-  }
-  return season;
-}
-
 export function markOutcomes(season, next) {
   if (!next) return season;
   const tiers = teamsByTier(next);
@@ -192,20 +167,6 @@ export function markOutcomes(season, next) {
       if (z.kind !== "down" && up?.has(r.team)) r.out = "po-won";
       else if (z.kind === "down" && same?.has(r.team)) r.out = "po-stayed";
       else if (z.kind === "down" && down?.has(r.team)) r.out = "po-lost";
-    }
-  }
-  return season;
-}
-
-/* European places that come from winning a cup (e.g. 12th in Europa League because they won the FA Cup)
-   sit apart from the main block at the top. Label those so the key doesn't read "17th Champions League". */
-export function labelCupPlaces(season) {
-  for (const lg of season.leagues) {
-    let topEnd = 0;
-    for (const z of lg.zones || []) {
-      if (z.kind === "down") continue;
-      if (z.from === topEnd + 1) { topEnd = z.to; continue; }
-      if (/league|europe/i.test(z.label) && !/promotion|play/i.test(z.label)) { z.label += " (cup winners)"; z.kind = "cup"; }
     }
   }
   return season;
@@ -234,7 +195,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     title: "Football Pyramids: Premier League, La Liga, Bundesliga, Ligue 1 and Serie A tables",
     description: "Europe's top five league tables on one page, with every tier of each country's football pyramid below them.",
     canonical: SITE + "/", base: "", suffix, page: "home", stamps, countries,
-    main: FP.homeMain(countries, "", suffix)
+    main: FP.homeMain(countries.filter((c) => c.featured), "", suffix, countries.filter((c) => !c.featured).map(FP.summary))
   }));
 
   // Country pages

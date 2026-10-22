@@ -35,6 +35,13 @@ footballpyramids.com: Europe's top five leagues on the home page, and a full pyr
 
 `scripts/backfill-history.mjs` saves every past season's final tables that API-Football has to `data/history/<country>/<year>.json`; `build.mjs` turns each into a page at `/<country>/<season>/` (e.g. `/england/2015-16/`) and adds an "Other seasons" list to every country page. Run it from GitHub: Actions → Backfill history → Run workflow (about 300 requests the first time). It skips seasons already saved and runs itself each August to add the season just finished. Zones come from each row's description in the API data, because formats have changed over the years. Old league names go in `history` on the league in `leagues.mjs`.
 
+## Adding a country
+
+1. Actions → Scan leagues → Run workflow, with the country names (e.g. `Portugal Netherlands`, or `England:43,50,51` for chosen league IDs). The log, also saved as a download, lists each league's ID, club count, groups, the API's promotion and relegation labels and the club names.
+2. Add the country to `COUNTRIES` in `scripts/leagues.mjs`. Use `zones: "api"` to take the places from the API's labels (best where European places change each year), or set them by hand like Scotland. `groups` is for a tier split into separate API leagues; `splitGroups: true` for one API league that returns several group tables; `single: true` for a league that also returns extra tables (the Eerste Divisie's period tables).
+3. Fix odd club names in `NAMES`. Countries without `featured: true` sit under the header's "More" menu and as cards on the home page.
+4. Run Update standings, then Backfill history for past seasons. The live-scores worker picks the new leagues up by itself.
+
 ## Live scores
 
 `worker/live.js` is a separate Cloudflare Worker at live.footballpyramids.com. Every minute it checks today's fixtures for every league on the site (it reads `data/live-leagues.json`, which `build.mjs` writes) and, only while a game is on, asks API-Football for live scores. It saves them in a KV namespace and serves them at `/live.json`. The country and home pages read that every 30 seconds during games, lay the scores over the official tables and re-sort them ("as it stands"). Each fixture remembers how many games each club had played before kick-off, so a result is never counted twice once the official table catches up. Set `LIVE_URL` to `""` in `leagues.mjs` to switch it off.

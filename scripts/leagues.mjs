@@ -18,14 +18,11 @@ export const CONTACT = { email: "hello@footballpyramids.com", operator: "Arrow S
 const Z = (from, to, kind, label) => ({ from, to, kind, label });
 const RESERVES = "Reserve teams can't be promoted to the same division as their first team.";
 
+// featured: shown in the header and with a table on the home page. Others sit under "More".
 export const COUNTRIES = [
   {
-    country: "england", code: "ENG", name: "England", adjective: "English", apiCountry: "England",
-    belowNote: "National League champions and play-off winner come up",
-    later: [
-      { tier: 5, name: "National League", clubs: 24 },
-      { tier: 6, name: "National League North & South", short: "NL North & South", clubs: 48 }
-    ],
+    country: "england", featured: true, code: "ENG", name: "England", adjective: "English", apiCountry: "England",
+    belowNote: "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
     leagues: [
       { apiId: 39, id: "premier-league", tier: 1, name: "Premier League", short: "PL", clubs: 20,
         zones: [Z(1, 4, "top", "Champions League"), Z(5, 5, "mid", "Europa League"), Z(18, 20, "down", "Relegation")],
@@ -39,11 +36,21 @@ export const COUNTRIES = [
         promotionNote: "1st, 2nd and the play-off winner go up", relegationNote: "21st–24th drop to League Two", notes: [] },
       { apiId: 42, id: "league-two", tier: 4, name: "League Two", short: "L2", clubs: 24,
         zones: [Z(1, 3, "top", "Promotion"), Z(4, 7, "mid", "Play-offs"), Z(23, 24, "down", "Relegation")],
-        promotionNote: "1st–3rd and the play-off winner go up", relegationNote: "23rd–24th drop to the National League", notes: [] }
+        promotionNote: "1st–3rd and the play-off winner go up", relegationNote: "23rd–24th drop to the National League", notes: [] },
+      { apiId: 43, id: "national-league", tier: 5, name: "National League", short: "NL", clubs: 24, zones: "api",
+        promotionNote: "1st and the play-off winner go up", relegationNote: "21st–24th drop to National League North or South",
+        notes: ["Play-offs: 2nd and 3rd go straight to the semi-finals; 4th to 7th play quarter-finals first."],
+        history: [{ until: 2014, name: "Conference Premier", short: "CONF" }] },
+      { id: "national-league-north-south", tier: 6, name: "National League North & South", short: "NL N & S", clubs: 24, zones: "api",
+        groups: [{ apiId: 50, name: "North" }, { apiId: 51, name: "South" }],
+        promotionNote: "Each division's champion and play-off winner go up",
+        relegationNote: "21st–24th in each division drop to step 3",
+        notes: ["Play-offs: 2nd and 3rd go straight to the semi-finals; 4th to 7th play quarter-finals first."],
+        history: [{ until: 2014, name: "Conference North & South", short: "CONF N & S" }] }
     ]
   },
   {
-    country: "spain", code: "ESP", name: "Spain", adjective: "Spanish", apiCountry: "Spain",
+    country: "spain", featured: true, code: "ESP", name: "Spain", adjective: "Spanish", apiCountry: "Spain",
     belowNote: "Promoted clubs from Segunda Federación come up",
     leagues: [
       { apiId: 140, id: "la-liga", tier: 1, name: "La Liga", short: "LL", clubs: 20,
@@ -61,7 +68,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "germany", code: "GER", name: "Germany", adjective: "German", apiCountry: "Germany",
+    country: "germany", featured: true, code: "GER", name: "Germany", adjective: "German", apiCountry: "Germany",
     belowNote: "Regionalliga champions come up, some through a play-off",
     leagues: [
       { apiId: 78, id: "bundesliga", tier: 1, name: "Bundesliga", short: "BL", clubs: 18,
@@ -79,7 +86,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "france", code: "FRA", name: "France", adjective: "French", apiCountry: "France",
+    country: "france", featured: true, code: "FRA", name: "France", adjective: "French", apiCountry: "France",
     belowNote: "Promoted clubs from National 1 come up",
     leagues: [
       { apiId: 61, id: "ligue-1", tier: 1, name: "Ligue 1", short: "L1", clubs: 18,
@@ -100,7 +107,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "italy", code: "ITA", name: "Italy", adjective: "Italian", apiCountry: "Italy",
+    country: "italy", featured: true, code: "ITA", name: "Italy", adjective: "Italian", apiCountry: "Italy",
     belowNote: "Serie D group winners come up",
     leagues: [
       { apiId: 135, id: "serie-a", tier: 1, name: "Serie A", short: "SA", clubs: 20,
@@ -117,6 +124,104 @@ export const COUNTRIES = [
         promotionNote: "Each group winner goes up, plus one play-off winner",
         relegationNote: "19th–20th in each group drop to Serie D; 17th and 18th play a play-out", notes: [],
         history: [{ until: 2016, name: "Lega Pro", short: "LP" }] }
+    ]
+  },
+  // ---------- More pyramids (added October 2026). zones: "api" takes the places from API-Football's own labels. ----------
+  {
+    country: "belgium", code: "BEL", name: "Belgium", adjective: "Belgian", apiCountry: "Belgium",
+    belowNote: "The top amateur clubs come up",
+    leagues: [
+      { apiId: 144, id: "pro-league", tier: 1, name: "Pro League", short: "JPL", clubs: 18, zones: "api",
+        relegationNote: "17th–18th drop to the Challenger Pro League", notes: [],
+        history: [{ until: 2021, name: "First Division A", short: "D1A" }] },
+      { apiId: 145, id: "challenger-pro-league", tier: 2, name: "Challenger Pro League", short: "CPL", clubs: 15, zones: "api",
+        promotionNote: "1st goes up; 2nd–5th go into the promotion play-offs",
+        relegationNote: "14th–15th drop to the amateur divisions",
+        notes: ["Reserve (II) teams can't be promoted to the Pro League."],
+        history: [{ until: 2021, name: "First Division B", short: "D1B" }] }
+    ]
+  },
+  {
+    country: "croatia", code: "CRO", name: "Croatia", adjective: "Croatian", apiCountry: "Croatia",
+    belowNote: "Treća NL champions come up",
+    leagues: [
+      { apiId: 210, id: "hnl", tier: 1, name: "HNL", short: "HNL", clubs: 10, zones: "api",
+        relegationNote: "10th drops to the Prva NL",
+        notes: ["Ten clubs play each other four times."],
+        history: [{ until: 2021, name: "Prva HNL", short: "1HNL" }] },
+      { apiId: 211, id: "prva-nl", tier: 2, name: "Prva NL", short: "1NL", clubs: 16, zones: "api",
+        promotionNote: "1st goes up", relegationNote: "16th drops to the Druga NL",
+        notes: ["Reserve sides can't be promoted to the HNL."],
+        history: [{ until: 2021, name: "Druga HNL", short: "2HNL" }] },
+      { apiId: 946, id: "druga-nl", tier: 3, name: "Druga NL", short: "2NL", clubs: 16, zones: "api",
+        promotionNote: "1st goes up", relegationNote: "16th drops to the Treća NL", notes: [] }
+    ]
+  },
+  {
+    country: "netherlands", code: "NED", name: "Netherlands", adjective: "Dutch", apiCountry: "Netherlands",
+    belowNote: "The top Derde Divisie clubs come up",
+    leagues: [
+      { apiId: 88, id: "eredivisie", tier: 1, name: "Eredivisie", short: "ERE", clubs: 18, zones: "api",
+        relegationNote: "17th–18th drop to the Eerste Divisie; 16th goes into the play-offs", notes: [] },
+      { apiId: 89, id: "eerste-divisie", tier: 2, name: "Eerste Divisie", short: "EED", clubs: 20, zones: "api", single: true,
+        promotionNote: "1st and 2nd go up; the play-off winner joins them",
+        notes: ["Jong teams (reserve sides) can't be promoted.",
+                "Play-off places include the winners of the season's four periods, so they can shift."] },
+      { apiId: 492, id: "tweede-divisie", tier: 3, name: "Tweede Divisie", short: "TWD", clubs: 18, zones: "api",
+        relegationNote: "18th drops to the Derde Divisie; 16th and 17th play relegation play-offs", notes: [] }
+    ]
+  },
+  {
+    country: "portugal", code: "POR", name: "Portugal", adjective: "Portuguese", apiCountry: "Portugal",
+    belowNote: "Liga 3's top clubs come up, one through a play-off",
+    leagues: [
+      { apiId: 94, id: "liga-portugal", tier: 1, name: "Liga Portugal", short: "LP", clubs: 18, zones: "api",
+        relegationNote: "17th–18th drop to Liga Portugal 2; 16th plays Liga Portugal 2's 3rd", notes: [] },
+      { apiId: 95, id: "liga-portugal-2", tier: 2, name: "Liga Portugal 2", short: "LP2", clubs: 18, zones: "api",
+        promotionNote: "1st and 2nd go up; 3rd plays Liga Portugal's 16th",
+        relegationNote: "17th–18th drop to Liga 3; 16th plays a relegation play-off",
+        notes: [RESERVES] }
+    ]
+  },
+  {
+    country: "scotland", code: "SCO", name: "Scotland", adjective: "Scottish", apiCountry: "Scotland",
+    belowNote: "The Highland/Lowland League play-off winner can come up",
+    leagues: [
+      { apiId: 179, id: "premiership", tier: 1, name: "Premiership", short: "PREM", clubs: 12,
+        zones: [Z(11, 11, "down", "Relegation play-off"), Z(12, 12, "down", "Relegation")],
+        relegationNote: "12th drops to the Championship; 11th plays the Championship play-off winner",
+        notes: ["After 33 games the league splits into a top six and a bottom six for the last five rounds."] },
+      { apiId: 180, id: "scottish-championship", tier: 2, name: "Championship", short: "CH", clubs: 10,
+        zones: [Z(1, 1, "top", "Promotion"), Z(2, 4, "mid", "Play-offs"), Z(9, 9, "down", "Relegation play-off"), Z(10, 10, "down", "Relegation")],
+        promotionNote: "1st goes up; 2nd–4th play off for a final against the Premiership's 11th",
+        relegationNote: "10th drops to League One; 9th plays in League One's play-offs", notes: [] },
+      { apiId: 183, id: "scottish-league-one", tier: 3, name: "League One", short: "L1", clubs: 10,
+        zones: [Z(1, 1, "top", "Promotion"), Z(2, 4, "mid", "Play-offs"), Z(9, 9, "down", "Relegation play-off"), Z(10, 10, "down", "Relegation")],
+        promotionNote: "1st goes up; 2nd–4th play off with the Championship's 9th",
+        relegationNote: "10th drops to League Two; 9th plays in League Two's play-offs", notes: [] },
+      { apiId: 184, id: "scottish-league-two", tier: 4, name: "League Two", short: "L2", clubs: 10,
+        zones: [Z(1, 1, "top", "Promotion"), Z(2, 4, "mid", "Play-offs"), Z(10, 10, "down", "Relegation play-off")],
+        promotionNote: "1st goes up; 2nd–4th play off with League One's 9th",
+        relegationNote: "10th plays the Highland/Lowland League play-off winner", notes: [] }
+    ]
+  },
+  {
+    country: "turkey", code: "TUR", name: "Turkey", adjective: "Turkish", apiCountry: "Turkey",
+    belowNote: "Regional amateur league champions come up",
+    leagues: [
+      { apiId: 203, id: "super-lig", tier: 1, name: "Süper Lig", short: "SL", clubs: 18, zones: "api",
+        relegationNote: "16th–18th drop to the 1. Lig", notes: [] },
+      { apiId: 204, id: "1-lig", tier: 2, name: "1. Lig", short: "1L", clubs: 20, zones: "api",
+        promotionNote: "1st and 2nd go up, plus the play-off winner (3rd–7th)",
+        relegationNote: "17th–20th drop to the 2. Lig",
+        notes: ["Play-offs: 3rd goes straight to the final; 4th to 7th play quarter-finals and semi-finals first."] },
+      { apiId: 205, id: "2-lig", tier: 3, name: "2. Lig", short: "2L", zones: "api", splitGroups: true,
+        promotionNote: "Each group winner goes up, plus each group's play-off winner (2nd–5th)",
+        relegationNote: "The bottom clubs in each group drop to the 3. Lig", notes: [] },
+      { id: "3-lig", tier: 4, name: "3. Lig", short: "3L", clubs: 18, zones: "api",
+        groups: [{ apiId: 552, name: "Group 1" }, { apiId: 553, name: "Group 2" }, { apiId: 554, name: "Group 3" }],
+        promotionNote: "The top clubs in each group go up",
+        notes: ["API-Football doesn't mark this league's promotion and relegation places yet, so they aren't coloured."] }
     ]
   }
 ];
@@ -172,7 +277,35 @@ export const NAMES = {
   "Albinoleffe": "AlbinoLeffe", "Desenzano Calvina": "Desenzano", "Juventus U23": "Juventus Next Gen", "Athletic Carpi": "Carpi",
   "PRO Vercelli": "Pro Vercelli", "Guidonia Montecelio 1937": "Guidonia Montecelio", "Atalanta II": "Atalanta U23",
   "Campobasso FC": "Campobasso", "Forli": "Forlì", "SS Monopoli": "Monopoli", "AZ Picerno": "Picerno",
-  "Team Altamura": "Altamura", "Inter U23": "Inter Milan U23"
+  "Team Altamura": "Altamura", "Inter U23": "Inter Milan U23",
+  // England: National League, North and South
+  "Southend": "Southend United", "Hartlepool": "Hartlepool United", "Scunthorpe": "Scunthorpe United",
+  "Maidstone Utd": "Maidstone United", "Torquay": "Torquay United", "Braintree": "Braintree Town",
+  "Maidenhead": "Maidenhead United", "Dover": "Dover Athletic", "Hampton & Richmond": "Hampton & Richmond Borough",
+  "Darlington 1883": "Darlington",
+  // Belgium
+  "Club Brugge KV": "Club Brugge", "Union St. Gilloise": "Union Saint-Gilloise", "KVC Westerlo": "Westerlo",
+  "Standard Liege": "Standard Liège", "St. Truiden": "Sint-Truiden", "RAAL La Louvière": "La Louvière",
+  "K. Lierse S.K.": "Lierse", "KAA Gent II": "Gent II", "KRC Genk II": "Genk II", "RSC Anderlecht II": "Anderlecht II",
+  // Croatia
+  "HNK Hajduk Split": "Hajduk Split", "NK Varazdin": "Varaždin", "NK Osijek": "Osijek", "HNK Rijeka": "Rijeka",
+  "NK Lokomotiva Zagreb": "Lokomotiva", "NK Slaven Belupo": "Slaven Belupo", "Rudes": "Rudeš", "HNK Gorica": "Gorica",
+  "Bsk Bijelo Brdo": "BSK Bijelo Brdo", "HNK Cibalia": "Cibalia", "Kustosija": "Kustošija", "Lucko": "Lučko",
+  "Dinamo Zagreb U21": "Dinamo Zagreb II", "Inter Zapresic": "Inter Zaprešić", "Grobničan Čavle": "Grobničan",
+  // Netherlands
+  "GO Ahead Eagles": "Go Ahead Eagles", "Waalwijk": "RKC Waalwijk", "Roda": "Roda JC", "Jong PSV U21": "Jong PSV",
+  "FC OSS": "TOP Oss", "Den Bosch": "FC Den Bosch", "Dordrecht": "FC Dordrecht", "Almere City FC": "Almere City",
+  "Ijsselmeervogels": "IJsselmeervogels",
+  // Portugal
+  "GIL Vicente": "Gil Vicente", "Academico Viseu": "Académico de Viseu", "SC Braga": "Braga", "Famalicao": "Famalicão",
+  "Maritimo": "Marítimo", "Estrela": "Estrela da Amadora", "Vitória SC": "Vitória de Guimarães", "Leixoes": "Leixões",
+  "Academica": "Académica",
+  // Scotland
+  "Heart Of Midlothian": "Heart of Midlothian", "ST Johnstone": "St Johnstone", "ST Mirren": "St Mirren",
+  "Dundee Utd": "Dundee United", "Partick": "Partick Thistle", "Inverness CT": "Inverness Caledonian Thistle",
+  "Ayr Utd": "Ayr United", "Morton": "Greenock Morton", "Airdrie United": "Airdrieonians",
+  // Turkey
+  "Gençlerbirliği S.K.": "Gençlerbirliği", "Manisa F.K.": "Manisa FK", "Amed": "Amed SK"
 };
 
 /* ---------- Play-off places in past seasons ----------

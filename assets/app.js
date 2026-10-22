@@ -134,6 +134,8 @@
   var seasons = null;
   try { seasons = JSON.parse(body.getAttribute("data-seasons") || "null"); } catch (e) {}
   var MINE = PAGE === "country" ? [COUNTRY] : COUNTRIES;
+  var OTHERS = [];   // the home page's "More pyramids" cards
+  try { OTHERS = JSON.parse(body.getAttribute("data-others") || "[]"); } catch (e) {}
 
   function valid(c) {
     return c && Array.isArray(c.leagues) && c.leagues.length && c.leagues.every(function (lg) {
@@ -163,7 +165,7 @@
   function render() {
     if (!MINE.every(function (c) { return official[c]; })) return;
     var withLive = MINE.map(function (c) { return FP.applyLive(official[c], live); });
-    redraw(PAGE === "country" ? FP.countryMain(withLive[0], { seasons: seasons }) : FP.homeMain(withLive, BASE, SUFFIX));
+    redraw(PAGE === "country" ? FP.countryMain(withLive[0], { seasons: seasons }) : FP.homeMain(withLive, BASE, SUFFIX, OTHERS));
     liveShown = relevant().length > 0;
   }
   function refreshTables() {
@@ -211,6 +213,16 @@
       timer = setTimeout(cycle, nextDelay());
     });
   }
+
+  /* ---------- "More" countries menu: close it when tapping elsewhere ---------- */
+  document.addEventListener("click", function (e) {
+    var open = document.querySelector(".nav-more[open]");
+    if (open && !open.contains(e.target)) open.open = false;
+  });
+  document.addEventListener("keydown", function (e) {
+    var open = document.querySelector(".nav-more[open]");
+    if (open && e.key === "Escape") { open.open = false; open.querySelector("summary").focus(); }
+  });
 
   /* ---------- Copy buttons (contact email) ---------- */
   document.addEventListener("click", function (e) {

@@ -337,7 +337,7 @@ tbody tr.is-mine .c-club::before { content: ""; display: inline-block; width: 7p
 .mini { grid-area: mini; }
 @media (min-width: 640px) {
   .countries { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
-  .countries a { grid-template-columns: minmax(0, 1fr); grid-template-areas: "name" "mini" "meta"; gap: 10px; padding: 14px 14px 12px; }
+  .countries a { grid-template-columns: minmax(0, 1fr); grid-template-areas: "name" "mini" "meta"; gap: 10px; padding: 14px 14px 12px; align-content: space-between; }
   .countries .mini { width: 100%; max-width: 84px; justify-self: start; }
 }
 .countries a:hover { border-color: var(--accent); }
@@ -466,4 +466,55 @@ body.no-ads main { justify-self: center !important; }
 .fx-g { grid-column: 2 / -1; margin-top: -4px; font-size: 11px; color: var(--muted); text-align: center; }
 @media (max-width: 480px) {
   .fx { grid-template-columns: 44px minmax(0, 1fr) 40px minmax(0, 1fr); gap: 6px; padding: 7px 10px; font-size: 13px; }
+}
+
+/* ---------- Header: "More" countries ---------- */
+.nav-more { position: relative; }
+.nav-more summary {
+  display: block; list-style: none; cursor: pointer;
+  font-family: var(--display); font-weight: 700; font-size: 18px; line-height: 1;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  padding: 8px 10px; border-radius: 6px; color: var(--muted); white-space: nowrap;
+}
+.nav-more summary::-webkit-details-marker { display: none; }
+.nav-more summary::after { content: " ▾"; font-size: 11px; }
+.nav-more[open] summary::after { content: " ▴"; }
+.nav-more summary:hover, .nav-more[open] summary { color: var(--ink); background: var(--sheet); }
+.nav-more:has(.nav-panel a[aria-current]) summary { color: var(--ink); }
+.nav-panel {
+  position: absolute; z-index: 30; top: calc(100% + 6px); right: 0; min-width: 200px;
+  display: grid; gap: 2px; padding: 6px;
+  background: var(--sheet); border: 1px solid var(--rule-strong); border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(14, 20, 28, 0.14);
+}
+.nav-panel a {
+  display: block; padding: 9px 12px; border-radius: 6px; text-decoration: none; color: var(--ink);
+  font-family: var(--display); font-weight: 700; font-size: 18px; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;
+}
+.nav-panel a:hover { background: var(--hover); }
+.nav-panel a[aria-current="page"] { background: var(--ink); color: var(--paper); }
+@media (max-width: 699px) {
+  .nav-more { flex: 1; }
+  .nav-more summary { text-align: center; }
+  .nav-panel { right: 0; }
+}
+
+/* ---------- Home: more pyramids ---------- */
+.countries-more-h {
+  margin: 26px 0 0; font-family: var(--mono); font-size: 12px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
+}
+.countries.extra { margin-top: 10px; }
+@media (min-width: 640px) {
+  .countries.extra { grid-template-columns: repeat(auto-fill, minmax(126px, 1fr)); }
+  .countries.extra .c-name { font-size: 18px; }
+  .countries.extra a { padding: 12px 10px 10px; }
+  .countries.extra .c-meta { font-size: 12px; white-space: nowrap; }
+}
+.countries li { display: flex; }
+.countries li > a { flex: 1; }
+@media (max-width: 639px) {
+  .countries.extra { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .countries.extra a { grid-template-columns: minmax(0, 1fr); grid-template-areas: "name" "meta"; }
+  .countries.extra .mini { display: none; }
 }

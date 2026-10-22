@@ -299,27 +299,37 @@
     return html;
   }
 
-  function homeMain(countries, base, suffix) {
-    suffix = suffix || "";
-    var newest = countries.map(function (c) { return c.leagues[0].updated; }).sort().pop();
-    var live = countries.every(function (c) { return c.mode === "live"; });
-    var cards = countries.map(function (c) {
-      var sizes = c.leagues.map(clubCount);
-      var max = Math.max.apply(null, sizes);
+  // Small summary of a country for its card on the home page.
+  function summary(c) {
+    return { country: c.country, name: c.name, tiers: c.leagues.length, clubs: countryClubs(c), sizes: c.leagues.map(clubCount) };
+  }
+  function cardsHTML(list, base, suffix, cls) {
+    return '<ul class="countries' + (cls ? " " + cls : "") + '" aria-label="' + (cls ? "More country pyramids" : "Country pyramids") + '">' + list.map(function (c) {
+      var max = Math.max.apply(null, c.sizes);
       return '<li><a href="' + base + c.country + "/" + suffix + '">' +
         '<span class="c-name">' + esc(c.name) + "</span>" +
-        '<span class="mini" aria-hidden="true">' + sizes.map(function (n) {
+        '<span class="mini" aria-hidden="true">' + c.sizes.map(function (n) {
           return '<i style="--w:' + (n / max * 100).toFixed(1) + '%"></i>';
         }).join("") + "</span>" +
-        '<span class="c-meta">' + c.leagues.length + " tiers · " + countryClubs(c) + " clubs</span></a></li>";
-    }).join("");
+        '<span class="c-meta">' + c.tiers + " tier" + (c.tiers === 1 ? "" : "s") + " · " + c.clubs + " clubs</span></a></li>";
+    }).join("") + "</ul>";
+  }
+
+  // countries: the featured countries (full data). others: summaries of the rest, shown as cards only.
+  function homeMain(countries, base, suffix, others) {
+    suffix = suffix || "";
+    others = others || [];
+    var newest = countries.map(function (c) { return c.leagues[0].updated; }).sort().pop();
+    var live = countries.every(function (c) { return c.mode === "live"; });
+    var cards = cardsHTML(countries.map(summary), base, suffix) +
+      (others.length ? '<h2 class="countries-more-h">More pyramids</h2>' + cardsHTML(others, base, suffix, "extra") : "");
     var html =
       '<section class="intro" aria-labelledby="intro-h">' +
       '<p class="eyebrow">Europe · ' + esc(countries[0].season) + "</p>" +
       '<h1 id="intro-h">Europe’s top five leagues, with every tier below them.</h1>' +
       '<p class="lede">The Premier League, La Liga, Bundesliga, Ligue 1 and Serie A on one page. Open a country to see its whole pyramid, from the top flight down.</p>' +
       stampHTML(live ? "live" : "snapshot", newest, countries.reduce(function (n, c) { return n + (c.liveCount || 0); }, 0)) +
-      '<ul class="countries" aria-label="Country pyramids">' + cards + "</ul></section>";
+      cards + "</section>";
     countries.forEach(function (c, i) {
       var top = c.leagues[0];
       html += tierHTML(top, {
@@ -333,6 +343,6 @@
 
   return {
     esc: esc, ukTime: ukTime, clubCount: clubCount, countryClubs: countryClubs, groupsOf: groupsOf,
-    countryMain: countryMain, homeMain: homeMain, applyLive: applyLive, clock: clock, isLive: isLive
+    countryMain: countryMain, homeMain: homeMain, summary: summary, applyLive: applyLive, clock: clock, isLive: isLive
   };
 });
