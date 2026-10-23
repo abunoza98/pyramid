@@ -114,6 +114,19 @@
     },
     {
      "pos": 6,
+     "team": "Kocaelispor",
+     "p": 9,
+     "w": 5,
+     "d": 0,
+     "l": 4,
+     "gf": 11,
+     "ga": 9,
+     "pts": 15,
+     "tid": 7411,
+     "form": "LWLLW"
+    },
+    {
+     "pos": 7,
      "team": "Çorum FK",
      "p": 8,
      "w": 4,
@@ -126,7 +139,7 @@
      "form": "WWLWW"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Kasımpaşa",
      "p": 8,
      "w": 3,
@@ -139,30 +152,17 @@
      "form": "DWDLW"
     },
     {
-     "pos": 8,
-     "team": "Kocaelispor",
-     "p": 8,
-     "w": 4,
-     "d": 0,
-     "l": 4,
-     "gf": 9,
-     "ga": 8,
-     "pts": 12,
-     "tid": 7411,
-     "form": "WLWLL"
-    },
-    {
      "pos": 9,
      "team": "Alanyaspor",
-     "p": 8,
+     "p": 9,
      "w": 3,
      "d": 3,
-     "l": 2,
-     "gf": 8,
-     "ga": 9,
+     "l": 3,
+     "gf": 9,
+     "ga": 11,
      "pts": 12,
      "tid": 996,
-     "form": "WDWDL"
+     "form": "DWDLL"
     },
     {
      "pos": 10,

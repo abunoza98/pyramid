@@ -602,6 +602,19 @@
     },
     {
      "pos": 2,
+     "team": "Rot-Weiss Essen",
+     "p": 11,
+     "w": 6,
+     "d": 3,
+     "l": 2,
+     "gf": 19,
+     "ga": 13,
+     "pts": 21,
+     "tid": 1621,
+     "form": "DDWLW"
+    },
+    {
+     "pos": 3,
      "team": "Viktoria Köln",
      "p": 10,
      "w": 6,
@@ -612,19 +625,6 @@
      "pts": 20,
      "tid": 1620,
      "form": "WWWDD"
-    },
-    {
-     "pos": 3,
-     "team": "Rot-Weiss Essen",
-     "p": 10,
-     "w": 5,
-     "d": 3,
-     "l": 2,
-     "gf": 18,
-     "ga": 13,
-     "pts": 18,
-     "tid": 1621,
-     "form": "WDDWL"
     },
     {
      "pos": 4,
@@ -811,15 +811,15 @@
     {
      "pos": 18,
      "team": "Jahn Regensburg",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 4,
-     "l": 4,
+     "l": 5,
      "gf": 20,
-     "ga": 19,
+     "ga": 20,
      "pts": 10,
      "tid": 177,
-     "form": "LDWDD"
+     "form": "DWDDL"
     },
     {
      "pos": 19,
