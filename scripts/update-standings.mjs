@@ -238,6 +238,7 @@ async function main() {
     const next = {
       country: c.country, name: c.name, adjective: c.adjective, season: seasonLabel(shown, c), mode: "live",
       updated: leagues.map((l) => l.updated).sort().at(-1), belowNote: c.belowNote,
+      ...(c.system ? { system: c.system } : {}), ...(c.systemNote ? { systemNote: c.systemNote } : {}), ...(c.closed ? { closed: true } : {}),
       ...(c.later ? { later: c.later } : {}), leagues
     };
     if (prev && prev.mode === "live" && tablesOf(prev) === tablesOf(next)) {

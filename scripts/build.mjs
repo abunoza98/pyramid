@@ -178,7 +178,8 @@ export async function loadCountries(root = ROOT) {
     // A country only appears once its first tables have been fetched.
     let d;
     try { d = JSON.parse(await readFile(path.join(root, "data", cfg.country + ".json"), "utf8")); } catch { continue; }
-    out.push(Object.assign(d, { featured: !!cfg.featured, code: cfg.code, region: cfg.region }));
+    out.push(Object.assign(d, { featured: !!cfg.featured, code: cfg.code, region: cfg.region,
+      system: cfg.system || null, systemNote: cfg.systemNote || null, closed: !!cfg.closed }));
   }
   return out;
 }
@@ -443,22 +444,23 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   for (const c of countries) {
     const { first, last } = tierNames(c);
     await write(`${c.country}/index.html`, shell({
-      title: `${c.adjective} football pyramid: ${first} to ${last} tables | Football Pyramids`,
-      description: `Every ${c.adjective} league table from ${first} down to ${last} on one page, with promotion and relegation places marked.`,
+      title: `${c.system ? c.system.charAt(0).toUpperCase() + c.system.slice(1) : c.adjective + " football pyramid"}: ${first} to ${last} tables | Football Pyramids`,
+      description: `Every ${c.adjective} league table from ${first} down to ${last} on one page, with ${c.closed ? "play-off" : "promotion, relegation and play-off"} places marked.`,
       canonical: `${SITE}/${c.country}/`, base: "../", suffix, page: "country", country: c.country,
       stamps: { [c.country]: c.updated }, countries, seasons: seasonList(c, history[c.country], "", suffix, null),
-      attrs: { fixtures: fxLinks(false), cups: cupCards(c, ""), races: `races/${suffix}` },
-      main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null), fixtures: fxLinks(false), cups: cupCards(c, ""), racesHref: `races/${suffix}` })
+      attrs: { fixtures: fxLinks(false), cups: cupCards(c, ""), races: c.closed ? "" : `races/${suffix}` },
+      main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null), fixtures: fxLinks(false), cups: cupCards(c, ""), racesHref: c.closed ? "" : `races/${suffix}` })
     }));
     // Promotion and relegation races: each league's zones and the clubs just outside them, from the current tables.
-    await write(`${c.country}/races/index.html`, shell({
+    // Not for a league system without promotion and relegation (the USA).
+    if (!c.closed) await write(`${c.country}/races/index.html`, shell({
       title: `${c.adjective} football promotion and relegation races ${c.season} | Football Pyramids`,
       description: `Who's in the promotion, play-off and relegation places in every ${c.adjective} league covered here, who's just outside, and the points gap at each line.`,
       canonical: `${SITE}/${c.country}/races/`, base: "../../", suffix, page: "races", country: c.country, stamps: { [c.country]: c.updated }, countries,
       jsonld: crumbs([["Football Pyramids", SITE + "/"], [c.name, `${SITE}/${c.country}/`], ["Promotion and relegation races", `${SITE}/${c.country}/races/`]]),
       main: FP.racesMain(c, { root: "../../", suffix, tableHref: `../${suffix}` })
     }));
-    racesUrls.push(`/${c.country}/races/`);
+    if (!c.closed) racesUrls.push(`/${c.country}/races/`);
     // Cup pages
     // Cup pages: this season at /<country>/<cup>/, each past season at /<country>/<cup>/<season>/, with a Seasons
     // picker. A cup with no current season yet (or one that has ended) shows its latest finished season there.
@@ -519,11 +521,11 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       const n = tierNames(h);
       const seasons = seasonList(c, history[c.country], "../", suffix, h.year);
       await write(`${c.country}/${slug(h.year, c.country)}/index.html`, shell({
-        title: `${c.adjective} football pyramid ${h.season}: ${n.first} to ${n.last} final tables | Football Pyramids`,
+        title: `${c.system ? c.system.charAt(0).toUpperCase() + c.system.slice(1) : c.adjective + " football pyramid"} ${h.season}: ${n.first} to ${n.last} final tables | Football Pyramids`,
         description: `Final ${h.season} tables for ${c.adjective} football, from ${n.first} down to ${n.last}, with promotion and relegation marked.`,
         canonical: `${SITE}/${c.country}/${slug(h.year, c.country)}/`, base: "../../", suffix, page: "history", country: c.country,
         jsonld: crumbs([["Football Pyramids", SITE + "/"], [c.name, `${SITE}/${c.country}/`], [h.season, `${SITE}/${c.country}/${slug(h.year, c.country)}/`]]),
-        stamps: {}, countries, main: FP.countryMain(h, { seasons, clubPaths: pathByName[c.country], root: "../../", suffix, cups: pastCupCards(c, h.year, "../") })
+        stamps: {}, countries, main: FP.countryMain(Object.assign(h, { system: c.system, closed: c.closed }), { seasons, clubPaths: pathByName[c.country], root: "../../", suffix, cups: pastCupCards(c, h.year, "../") })
       }));
     }
   }
