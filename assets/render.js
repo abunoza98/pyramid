@@ -1185,9 +1185,14 @@
       var since = cr.seasons.length ? " since " + cr.seasons[0] : "";
       var shown = wins.length ? (wins.length === 1 ? "Won it in " + cr.seasons[wins[0].i] : "Won it " + wins.length + " times" + since + ": " + wins.map(function (w) { return cr.seasons[w.i]; }).join(", ")) + "."
         : best ? "Best run" + since + ": " + LEVELS[levelOf(best.d)].toLowerCase().replace("earlier rounds", "the early rounds") + " (" + cr.seasons[best.i] + ")." : "";
-      // A club missing from the latest seasons wasn't in the draw (it didn't qualify), not missing data: say so.
+      // A club missing from the latest seasons: say so, so empty recent seasons don't read as missing data.
       var lastRun = cr.runs[cr.runs.length - 1];
-      var absent = lastRun && lastRun.i < n - 1 ? " Not in the draw after " + cr.seasons[lastRun.i] + "." : "";
+      // Only finished seasons count: while this season's cup is still going, a club that isn't in it yet may just
+      // not have entered yet (Premier League clubs join the FA Cup in January).
+      var lastDone = cr.open ? n - 2 : n - 1;
+      // Worded neutrally: some cups' saved data starts after regional rounds (the Coupe de France at the last 256), so
+      // a missing season can mean out early as well as not qualifying.
+      var absent = lastRun && lastRun.i < lastDone ? " Hasn't featured since " + cr.seasons[lastRun.i] + "." : "";
       var cap = allTime + shown + absent;
       var head = cupList.length > 1 ? '<div class="cr-h"><p>' + esc(cap) + "</p>" + (cr.href ? '<a href="' + esc(cr.href) + '">' + esc(cr.name) + " this season →</a>" : "") + "</div>"
         : '<div class="cr-h"><h3>' + (cr.href ? '<a href="' + esc(cr.href) + '">' + esc(cr.name) + "</a>" : esc(cr.name)) + "</h3><p>" + esc(cap) + "</p></div>";
