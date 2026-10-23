@@ -15,7 +15,7 @@ import { COUNTRIES, EUROPE, clubName } from "./leagues.mjs";
 import { api } from "./update-standings.mjs";
 import { seasonFor, seasonLabel } from "./season.mjs";
 import { build } from "./build.mjs";
-import { roundLabel, europeRounds, toRounds, cupRounds } from "./rounds.mjs";
+import { roundLabel, europeRounds, toRounds, cupRounds, cupStage } from "./rounds.mjs";
 export { roundLabel, europeRounds, toRounds };
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -102,7 +102,10 @@ async function main() {
             used = first - 1;
             body = await get(part.apiId, used);
           }
-          const list = (body.response || []).map((x) => ({ round: x.league?.round, f: slim(x, prevById.get(x.fixture.id)) }));
+          let list = (body.response || []).map((x) => ({ round: x.league?.round, f: slim(x, prevById.get(x.fixture.id)) }));
+          if (cfg.cup) list = cupStage(list, cfg);
+          // A cup that's a stage of a league (the MLS playoffs) has nothing to save until that stage is drawn.
+          if (cfg.cup && cfg.only && !list.length) { groups.length = 0; break; }
           if (c === EUROPE) europeRounds(list);
           if (cfg.cup) {
             cupRounds(list, cfg.rounds);
@@ -114,6 +117,7 @@ async function main() {
           if (!list.length) throw new Error(`no fixtures for league ${part.apiId}`);
           groups.push({ name: part.name, rounds: toRounds(list) });
         }
+        if (!groups.length) continue;
         const out = {
           country: c.country, countryName: c.name, league: cfg.id, name: cfg.name, tier: cfg.tier, ...(cfg.cup ? { cup: true } : {}),
           season: seasonLabel(used, cfg.calendar ? { calendar: true } : c), updated: now.toISOString(), groups

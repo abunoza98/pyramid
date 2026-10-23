@@ -14,7 +14,7 @@ import { COUNTRIES } from "./leagues.mjs";
 import { api } from "./update-standings.mjs";
 import { seasonFor, seasonLabel } from "./season.mjs";
 import { slim } from "./update-fixtures.mjs";
-import { toRounds, cupRounds } from "./rounds.mjs";
+import { toRounds, cupRounds, cupStage } from "./rounds.mjs";
 import { summarise, learnLabels } from "./cupruns.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -69,7 +69,7 @@ async function main() {
       const file = path.join(dir, `${year}.json`), fxFile = path.join(dir, `${year}-fixtures.json`);
       if (!force && await exists(file) && await exists(fxFile)) { try { done.push(JSON.parse(await readFile(file, "utf8"))); } catch {} continue; }
       const fx = await get(`/fixtures?league=${cup.apiId}&season=${year}&timezone=UTC`);
-      const list = (fx.response || []).map((x) => ({ round: x.league?.round, f: slim(x) }));
+      const list = cupStage((fx.response || []).map((x) => ({ round: x.league?.round, f: slim(x) })), cup);
       if (!list.length) continue;
       cupRounds(list, cup.rounds);
       // Each club's league that season ("PL", "L2"…), from the saved tables, for the tags and giant-killings.
@@ -79,7 +79,7 @@ async function main() {
         if (t) { side.t = t.s; side.tier = t.tier; }
       }
       const rounds = toRounds(list);
-      const s = summarise(rounds, learnLabels(done));
+      const s = summarise(rounds, { ...learnLabels(done), ...(cup.dist || {}) });
       const out = { country: c.country, cup: cup.id, name: cup.name, season: seasonLabel(year, c), year, ...s };
       await mkdir(dir, { recursive: true });
       await writeFile(fxFile, JSON.stringify({ country: c.country, countryName: c.name, league: cup.id, name: cup.name, cup: true,

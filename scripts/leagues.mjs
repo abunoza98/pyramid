@@ -415,6 +415,14 @@ export const COUNTRIES = [
   },
   {
     country: "usa", region: "north-america", calendar: true, code: "USA", name: "USA", adjective: "American", apiCountry: "USA",
+    // The Open Cup is the national knockout cup. The MLS Cup playoffs aren't a separate competition in API-Football:
+    // they come in league 253 after the regular season, so only those rounds are kept. Round One is best of three.
+    // Round names are set without the "Play-offs - " prefix the API may use; dist says how far each is from the final.
+    cups: [{ apiId: 257, id: "us-open-cup", name: "US Open Cup", short: "USOC" },
+      { apiId: 253, id: "mls-cup-playoffs", name: "MLS Cup Playoffs", short: "MLSP",
+        only: "^(?!Regular Season|Group Stage)", strip: "^(play-?offs?|playoffs?)\\s*-\\s*", series: "^(1/8-finals|round one)",
+        rounds: { "1/16-finals": "Wild card", "1/8-finals": "Round One", "Quarter-finals": "Conference semi-finals", "Semi-finals": "Conference finals", "Final": "MLS Cup final" },
+        dist: { "Wild card": 4, "Round One": 3, "Conference semi-finals": 2, "Conference finals": 1, "MLS Cup final": 0 } }],
     belowNote: "There's no promotion or relegation between US leagues; these are the professional divisions from the top",
     names: { "Los Angeles Galaxy": "LA Galaxy", "San Diego": "San Diego FC", "Austin": "Austin FC", "Charlotte": "Charlotte FC",
       "Atlanta United FC": "Atlanta United", "Minnesota United FC": "Minnesota United", "DC United": "D.C. United",
