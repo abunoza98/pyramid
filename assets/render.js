@@ -564,6 +564,29 @@
       '<div class="xp-panels">' + panels + "</div></div></section>";
   }
 
+  // "Up and down": each country's moves between its top two divisions since last season, one line each.
+  // movers: [{ country, name, top, second, last, up: [{ n, path, pos }], down: [...] }], built by scripts/build.mjs.
+  function moversHTML(movers, base, suffix) {
+    if (!movers || !movers.length) return "";
+    var names = function (list) {
+      return list.map(function (m) { return m.path ? '<a class="club-link" href="' + esc(base + m.path + suffix) + '">' + esc(m.n) + "</a>" : esc(m.n); }).join(", ");
+    };
+    var the = function (n) { return inLeague(n).slice(3); };
+    var line = function (c) {
+      return '<li><a class="mv-c" href="' + esc(base + c.country + "/" + suffix) + '">' + flag(c.country) + "<span>" + esc(c.name) + "</span></a>" +
+        '<span class="mvl-up"><b aria-hidden="true">▲</b><span class="sr-only">Promoted to ' + esc(the(c.top)) + ": </span>" + (c.up.length ? names(c.up) : "None") + "</span>" +
+        '<span class="mvl-down"><b aria-hidden="true">▼</b><span class="sr-only">Relegated to ' + esc(the(c.second)) + ": </span>" + (c.down.length ? names(c.down) : "None") + "</span></li>";
+    };
+    // The featured countries show; the rest fold away so the section stays short.
+    var main = movers.filter(function (c) { return c.featured; }), more = movers.filter(function (c) { return !c.featured; });
+    if (!main.length) { main = more; more = []; }
+    return '<section class="movers" aria-labelledby="mv-h"><h2 class="section-h" id="mv-h">Up and down this season</h2>' +
+      '<p class="mv-lede">Clubs that moved between each country’s top two divisions since last season. <span class="mv-key"><b class="u">▲</b> up into the top flight <b class="d">▼</b> down from it</span></p>' +
+      '<ul class="mv-list">' + main.map(line).join("") + "</ul>" +
+      (more.length ? '<details class="mv-more" id="movers-more"><summary>' + more.length + " more countr" + (more.length === 1 ? "y" : "ies") + '</summary><ul class="mv-list">' + more.map(line).join("") + "</ul></details>" : "") +
+      "</section>";
+  }
+
   // countries: the featured countries (full data). others: summaries of the rest.
   // opts.live: today's games from the live worker, for the strip.
   function homeMain(countries, base, suffix, others, opts) {
@@ -601,7 +624,8 @@
       "</section>" +
       stripHTML(opts.live, opts.europe ? all.concat([summary(opts.europe)]) : all, base, suffix, names) +
       // England first (the default), Europe straight after the big five.
-      explorerHTML(opts.europe ? all.slice(0, countries.length).concat([summary(opts.europe)], all.slice(countries.length)) : all, base, suffix, opts.cups) + INLINE_AD;
+      explorerHTML(opts.europe ? all.slice(0, countries.length).concat([summary(opts.europe)], all.slice(countries.length)) : all, base, suffix, opts.cups) +
+      moversHTML(opts.movers, base, suffix) + INLINE_AD;
     // The top flights, one tab each, with the Champions League last when it's there.
     var items = countries.map(function (c) {
       c.leagues[0]._club = base + c.country + "/club/"; c.leagues[0]._suffix = suffix;
