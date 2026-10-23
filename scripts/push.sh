@@ -1,0 +1,32 @@
+#!/bin/bash
+# Commit what a GitHub job changed and push it. Someone (another job, or a code change) may have pushed to main
+# while the job was running, so it catches up first and tries a few times before giving up.
+#
+#   bash scripts/push.sh "Update standings"
+#
+# Where both sides changed the same file (usually a generated page), the job's version wins; the next hourly
+# run rebuilds every page anyway.
+set -u
+msg="$1"
+
+if [ -z "$(git status --porcelain)" ]; then
+  echo "No changes."
+  exit 0
+fi
+git config user.name "pyramid-bot"
+git config user.email "pyramid-bot@users.noreply.github.com"
+git add -A
+git commit -q -m "$msg"
+
+branch="$(git rev-parse --abbrev-ref HEAD)"
+for try in 1 2 3; do
+  if git pull -q --rebase -X theirs origin "$branch" && git push -q origin "HEAD:$branch"; then
+    echo "Pushed: $msg"
+    exit 0
+  fi
+  git rebase --abort 2>/dev/null || true
+  echo "Push failed (try $try of 3), trying again."
+  sleep $((try * 15))
+done
+echo "Couldn't push after 3 tries."
+exit 1
