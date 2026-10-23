@@ -341,6 +341,19 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     }
     return out;
   };
+  // Cups on a past season's pyramid: who won each that season, linking to that season's cup page when it has one
+  // (its ties have been saved by scripts/backfill-cups.mjs), otherwise shown without a link.
+  const pastCupCards = (c, year, rel) => ((COUNTRIES.find((x) => x.country === c.country) || {}).cups || []).map((cup) => {
+    const sum = ((cupHistory[c.country] || {})[cup.id] || []).find((x) => x.year === year);
+    if (!sum) return null;
+    const fx = fixtures[`${c.country}/${cup.id}`];
+    const past = (cupPast[`${c.country}/${cup.id}`] || []).filter((p) => !fx || p.season !== fx.season);
+    const own = (fx ? past : past.slice(1)).some((p) => p.year === year);
+    const href = own ? `${rel}${cup.id}/${slug(year)}/${suffix}` : !fx && past[0] && past[0].year === year ? `${rel}${cup.id}/${suffix}` : null;
+    const w = sum.winner, fin = w && sum.clubs && sum.clubs[w.id];
+    const status = w ? `Won by ${w.n}` + (fin && fin[3] ? ` (beat ${fin[3]}${fin[4] ? " " + fin[4] : ""} in the final)` : "") : "";
+    return { id: cup.id, name: cup.name, status, span: "", href };
+  }).filter(Boolean);
   // Cards for a country's cups (status from the fixtures), with links relative to the country page.
   const cupCards = (c, rel) => ((COUNTRIES.find((x) => x.country === c.country) || {}).cups || [])
     .filter((cup) => fixtures[`${c.country}/${cup.id}`] || cupPast[`${c.country}/${cup.id}`])
@@ -458,7 +471,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         description: `Final ${h.season} tables for ${c.adjective} football, from ${n.first} down to ${n.last}, with promotion and relegation marked.`,
         canonical: `${SITE}/${c.country}/${slug(h.year)}/`, base: "../../", suffix, page: "history", country: c.country,
         jsonld: crumbs([["Football Pyramids", SITE + "/"], [c.name, `${SITE}/${c.country}/`], [h.season, `${SITE}/${c.country}/${slug(h.year)}/`]]),
-        stamps: {}, countries, main: FP.countryMain(h, { seasons, clubPaths: pathByName[c.country], root: "../../", suffix })
+        stamps: {}, countries, main: FP.countryMain(h, { seasons, clubPaths: pathByName[c.country], root: "../../", suffix, cups: pastCupCards(c, h.year, "../") })
       }));
     }
   }

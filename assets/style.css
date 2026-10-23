@@ -1023,3 +1023,6 @@ tbody tr.is-this .c-club { font-weight: 700; }
 .lkey i.m-up { background: var(--up); }
 .lkey i.m-down { background: var(--down); }
 .cup-note { margin: 8px 0 0; padding: 10px 12px; border-radius: 8px; background: var(--hover); border: 1px solid var(--rule); font-size: 14px; color: var(--muted); max-width: 70ch; }
+/* A past season's cup with no page of its own yet */
+.cup-chip.no-link { cursor: default; }
+.cup-chip.no-link:hover { border-color: var(--accent-line); background: var(--accent-soft); }

@@ -337,8 +337,10 @@
   function cupChipsHTML(cups) {
     if (!cups || !cups.length) return "";
     return '<div class="pyr-cups"><span class="pyr-cups-h">Cups</span>' + cups.map(function (c) {
-      return '<a class="cup-chip" href="' + esc(c.href) + '">' + CUP_ICON + '<span class="cup-chip-name">' + esc(c.name) + "</span>" +
-        '<span class="cup-chip-meta">' + esc([c.span, c.status].filter(Boolean).join(" · ")) + "</span></a>";
+      // A chip without a page to open (a past season whose ties aren't saved yet) is shown but not linked.
+      var tag = c.href ? 'a class="cup-chip" href="' + esc(c.href) + '"' : 'span class="cup-chip no-link"';
+      return "<" + tag + ">" + CUP_ICON + '<span class="cup-chip-name">' + esc(c.name) + "</span>" +
+        '<span class="cup-chip-meta">' + esc([c.span, c.status].filter(Boolean).join(" · ")) + "</span></" + tag.split(" ")[0] + ">";
     }).join("") + "</div>";
   }
 
