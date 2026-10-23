@@ -204,6 +204,10 @@
   }
 
   /* ---------- Pieces ---------- */
+  // Points from the last five games (form is stored oldest first).
+  function formPts(form) {
+    return String(form || "").slice(-5).split("").reduce(function (a, c) { return a + (c === "W" ? 3 : c === "D" ? 1 : 0); }, 0);
+  }
   function rowHTML(lg, rows, r, i, hasForm) {
     var z = zoneOf(lg, r.pos);
     var next = rows[i + 1];
@@ -218,7 +222,7 @@
           return /[WDL]/.test(c) ? '<b class="' + c + '">' + c + "</b>" : "";
         }).join("") + "</span></td>";
     }
-    return '<tr class="' + cls.join(" ") + '" data-team="' + esc(r.team) + '">' +
+    return '<tr class="' + cls.join(" ") + '" data-team="' + esc(r.team) + '" data-pos="' + r.pos + '" data-fp="' + formPts(r.form) + '">' +
       // The zone colour is repeated as text for screen readers, so the table never relies on colour alone.
       '<td class="c-pos">' + r.pos + (z ? '<span class="sr-only"> (' + esc(z.label) + ")</span>" : "") +
         (r.move ? '<span class="mv ' + (r.move > 0 ? "mv-up" : "mv-down") + '" title="' + (r.move > 0 ? "Up " : "Down ") + Math.abs(r.move) + ' as it stands">' + (r.move > 0 ? "▲" : "▼") + "</span>" : "") + "</td>" +
@@ -236,7 +240,7 @@
       '<td class="c-n c-gf">' + r.gf + "</td>" +
       '<td class="c-n c-ga">' + r.ga + "</td>" +
       '<td class="c-gd">' + gd(r) + "</td>" + form +
-      '<td class="c-pts">' + r.pts + "</td></tr>";
+      '<td class="c-pts"><span class="v-t">' + r.pts + '</span><span class="v-f">' + formPts(r.form) + "</span></td></tr>";
   }
 
   function tableHTML(lg, rows, caption) {
@@ -253,7 +257,7 @@
         '<th scope="col" class="c-n c-ga"><abbr title="Goals against">GA</abbr></th>' +
         '<th scope="col" class="c-gd"><abbr title="Goal difference">GD</abbr></th>' +
         (hasForm ? '<th scope="col" class="c-form"><abbr title="Last five league games, most recent on the right">Form</abbr></th>' : "") +
-        '<th scope="col" class="c-pts"><abbr title="Points">Pts</abbr></th>' +
+        '<th scope="col" class="c-pts"><abbr class="v-t" title="Points">Pts</abbr><abbr class="v-f" title="Points from the last five games">L5</abbr></th>' +
       "</tr></thead><tbody>" +
       rows.map(function (r, i) { return rowHTML(lg, rows, r, i, hasForm); }).join("") +
       "</tbody></table></div>";
@@ -294,7 +298,10 @@
       '<header class="tier-head"><p class="tier-num">' + esc(opts.eyebrow || "Tier " + lg.tier) + "</p>" +
       '<h2 id="h-' + esc(lg.id) + '">' + esc(lg.name) + "</h2>" +
       '<p class="tier-meta">' + meta + "</p>" +
-      (opts.fixtures ? '<a class="tier-fx" href="' + esc(opts.fixtures) + '">Fixtures and results <span aria-hidden="true">→</span></a>' : "") + "</header>" +
+      (opts.fixtures ? '<a class="tier-fx" href="' + esc(opts.fixtures) + '">Fixtures and results <span aria-hidden="true">→</span></a>' : "") +
+      (groupsOf(lg).some(function (g) { return g.rows.some(function (r) { return r.form; }); }) && !lg.final
+        ? '<div class="tview" role="group" aria-label="Sort by"><button type="button" class="on" data-view="table" aria-pressed="true">Table</button>' +
+          '<button type="button" data-view="form" aria-pressed="false">Form <span>last 5</span></button></div>' : "") + "</header>" +
       todayHTML(lg) + legendHTML(lg, grouped) + body + notesHTML(lg) +
       (opts.more ? '<a class="more" href="' + esc(opts.more.href) + '">' + esc(opts.more.text) + ' <span aria-hidden="true">→</span></a>' : "") +
       "</section>";
