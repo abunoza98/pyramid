@@ -557,13 +557,19 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         });
         // All-time titles: the honours list up to its season, plus wins in our data after it.
         const ct = cupTitles[`${c.country}/${cup.id}`];
-        let titles = null;
+        // Lost finals the same way: the honours list's, plus any lost in our data after it (year the final was played).
+        let titles = null, finals = null;
         if (ct) {
           const e = ct.titles.find((x) => (tid && x.tid ? x.tid === tid : FP.slug(x.n) === sl));
-          const later = runs.filter((r) => r.res === "W" && Number(String(cs.list[r.i].year || cs.list[r.i].season).slice(0, 4)) > ct.through).length;
-          titles = (e ? e.v : 0) + later;
+          const yearOf = (r) => Number(String(cs.list[r.i].year || cs.list[r.i].season).slice(0, 4));
+          const after = runs.filter((r) => yearOf(r) > ct.through);
+          titles = (e ? e.v : 0) + after.filter((r) => r.res === "W").length;
+          const lostLater = after.filter((r) => r.res === "L" && r.d === 0).map((r) => yearOf(r) + 1);
+          const lost = (e && e.lost ? e.lost : 0) + lostLater.length;
+          finals = { lost, years: e && e.lostYears ? e.lostYears.concat(lostLater) : (!e || !e.lost ? lostLater : null),
+            last: lostLater.length ? lostLater[lostLater.length - 1] : (e && (e.lastLost || (e.lostYears || []).slice(-1)[0])) || null };
         }
-        if (runs.length || titles) out.push({ id: cup.id, name: cs.name, href: cs.href, seasons: cs.list.map((s) => s.season), runs, titles });
+        if (runs.length || titles) out.push({ id: cup.id, name: cs.name, href: cs.href, seasons: cs.list.map((s) => s.season), runs, titles, finals });
       }
       return out;
     };
