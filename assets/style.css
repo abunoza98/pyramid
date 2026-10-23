@@ -998,3 +998,15 @@ tbody tr.is-this .c-club { font-weight: 700; }
 .cr-h > a:hover { text-decoration: underline; }
 .cr-won { margin-left: 6px; padding: 0 5px; border-radius: 4px; font: 600 11px/16px var(--mono); color: #5C4200; background: #E8B931; }
 .cr.tf-panel { margin-top: 0; }
+
+/* Pyramid journey: champions, promotions, relegations */
+.ld.m-champ { background: #E8B931; border-color: #B8860B; box-shadow: 0 0 0 3px rgba(232, 185, 49, 0.35); }
+.ld.m-up { background: var(--up); border-color: var(--up); }
+.ld.m-down { background: var(--down); border-color: var(--down); }
+.ltip em { font-style: normal; font-weight: 600; }
+.lkey { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: -4px 0 12px 54px; padding: 0; list-style: none; font-size: 12px; color: var(--muted); }
+.lkey li { display: flex; align-items: center; gap: 6px; }
+.lkey i { width: 10px; height: 10px; border-radius: 50%; }
+.lkey i.m-champ { background: #E8B931; box-shadow: 0 0 0 2px rgba(232, 185, 49, 0.35); }
+.lkey i.m-up { background: var(--up); }
+.lkey i.m-down { background: var(--down); }
