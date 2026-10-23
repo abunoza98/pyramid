@@ -15,6 +15,7 @@ import { readFileSync } from "node:fs";
 import { COUNTRIES, EUROPE, SITE, CONTACT, ADS, ADSENSE_CLIENT, LIVE_URL } from "./leagues.mjs";
 import { zoneAt, applyPlayoffRules, labelCupPlaces } from "./zones.mjs";
 import { regroupEurope } from "./rounds.mjs";
+import { summarise, learnLabels } from "./cupruns.mjs";
 export { applyPlayoffRules, labelCupPlaces };
 import { contactPage, privacyPage } from "./pages.mjs";
 
@@ -176,6 +177,19 @@ export async function loadHistory(root = ROOT) {
   return out;
 }
 // Fixture lists saved by scripts/update-fixtures.mjs: { "england/premier-league": data }
+// Past cup seasons saved by scripts/backfill-cups.mjs: { country: { cupId: [season summaries, oldest first] } }
+export async function loadCupHistory(root = ROOT) {
+  const out = {};
+  for (const c of COUNTRIES) for (const cup of c.cups || []) {
+    const dir = path.join(root, "data", "history", c.country, "cups", cup.id);
+    let files = [];
+    try { files = (await readdir(dir)).filter((f) => /^\d{4}\.json$/.test(f)); } catch { continue; }
+    const list = [];
+    for (const f of files) list.push(JSON.parse(await readFile(path.join(dir, f), "utf8")));
+    (out[c.country] ||= {})[cup.id] = list.sort((a, b) => a.year - b.year);
+  }
+  return out;
+}
 export async function loadFixtures(root = ROOT) {
   const out = {};
   for (const cfg of [...COUNTRIES, EUROPE]) for (const lg of [...cfg.leagues, ...(cfg.cups || [])]) {
@@ -245,6 +259,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   const countries = await loadCountries(root);
   const history = await loadHistory(root);
   const fixtures = await loadFixtures(root);
+  const cupHistory = await loadCupHistory(root);
   const cupUrls = [];
   // Every club that gets a page: those in the current tables (by club ID), plus clubs only found in past
   // seasons (by name), so any table, current or past, can link to its clubs.
@@ -478,6 +493,31 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     // countries' history files carry it), otherwise on the name's slug, so spellings that differ only in accents,
     // case or punctuation ("1.FC Köln" / "1. FC Köln", "Besiktas" / "Beşiktaş") count as the same club. A row whose
     // ID differs is a different club, even with the same name.
+    // Cup runs: every season of each of the country's cups (saved past ones plus this one), and how far the club got.
+    const cupSeasons = {};
+    for (const c of countries) for (const cup of (COUNTRIES.find((x) => x.country === c.country) || {}).cups || []) {
+      const past = (cupHistory[c.country] || {})[cup.id] || [];
+      const fx = fixtures[`${c.country}/${cup.id}`];
+      const now = fx && fx.groups[0].rounds.length ? { ...summarise(fx.groups[0].rounds, learnLabels(past)), season: fx.season, now: true } : null;
+      const list = [...past, ...(now ? [now] : [])];
+      if (list.length) cupSeasons[`${c.country}/${cup.id}`] = { name: cup.name, href: fx ? `${base}${c.country}/${cup.id}/${suffix}` : null, list };
+    }
+    const cupRunsOf = (c, name, tid) => {
+      const out = [], sl = FP.slug(name);
+      for (const cup of (COUNTRIES.find((x) => x.country === c.country) || {}).cups || []) {
+        const cs = cupSeasons[`${c.country}/${cup.id}`];
+        if (!cs) continue;
+        const runs = [];
+        cs.list.forEach((s, i) => {
+          const hit = (tid && s.clubs[tid]) || Object.values(s.clubs).find((x) => FP.slug(x[0]) === sl);
+          if (!hit) return;
+          const [, ri, res, opp, score] = hit;
+          runs.push({ i, d: res === "W" ? -1 : s.dist[ri] == null ? 9 : s.dist[ri], round: s.rounds[ri], res, opp, score, now: !!s.now });
+        });
+        if (runs.length) out.push({ id: cup.id, name: cs.name, href: cs.href, seasons: cs.list.map((s) => s.season), runs });
+      }
+      return out;
+    };
     const pastSeasons = (c, name, tid) => {
       const out = [];
       const sl = FP.slug(name);
@@ -538,7 +578,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         pos: r.pos, pts: r.pts, p: r.p,
         league: { ...tableOf(c, lg), short: lg.short, group: FP.groupsOf(lg).length > 1 ? g.name : null, rows: g.rows,
           tableHref: `${base}${c.country}/${suffix}#${lg.id}`, _club: `${base}${c.country}/club/`, _suffix: suffix },
-        fx, journey, ladder: laddersOf(c), euro
+        fx, journey, ladder: laddersOf(c), euro, cupRuns: cupRunsOf(c, r.team, tid)
       };
       await write(`${k.path}index.html`, shell({
         title: `${r.team} fixtures, results and table ${c.season} | Football Pyramids`,
@@ -557,7 +597,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       if (!journey.length) continue;
       const last = journey[0];
       const data = { tid: null, name: k.name, country: k.c.country, countryName: k.c.name, adjective: k.c.adjective, season: k.c.season, comps: {}, root: base, suffix,
-        league: null, fx: [], journey, ladder: laddersOf(k.c),
+        league: null, fx: [], journey, ladder: laddersOf(k.c), cupRuns: cupRunsOf(k.c, k.name, null),
         note: `Not in the ${k.c.adjective} leagues covered here this season. Last seen in ${last.season}: ${last.league}, ${ordinal(last.pos)}.` };
       await write(`${k.path}index.html`, shell({
         title: `${k.name}: seasons in the ${k.c.adjective} football pyramid | Football Pyramids`,

@@ -980,3 +980,17 @@ tbody tr.is-this .c-club { font-weight: 700; }
 /* In form view the last five show on every screen, in place of goal difference on phones */
 @media (max-width: 899px) { .by-form .c-form { display: table-cell; } }
 @media (max-width: 599px) { .by-form .c-gd { display: none; } }
+/* Club page: cup runs */
+.cr + .cr { margin-top: 22px; }
+.cr-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 0 0 8px; }
+.cr-h h3 { margin: 0; font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: 0.02em; text-transform: uppercase; }
+.cr-h h3 a { color: var(--ink); text-decoration: none; }
+.cr-h h3 a:hover { color: var(--accent); }
+.cr-h p { margin: 0; font-size: 14px; color: var(--muted); }
+.cr-chart { grid-template-columns: 62px minmax(0, 1fr); }
+.cr-l { border-top: 0; }
+.cr-l b { font-size: 10px; font-weight: 500; color: var(--muted); }
+.cr-line line { stroke: var(--accent); stroke-width: 2; opacity: 0.55; }
+.cr-dot { width: 12px; height: 12px; margin: -6px 0 0 -6px; }
+.cr-dot.won { background: #E8B931; border-color: #B8860B; box-shadow: 0 0 0 3px rgba(232, 185, 49, 0.35); }
+.cr-dot.now:not(.won) { background: var(--accent); }

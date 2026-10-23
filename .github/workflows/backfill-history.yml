@@ -41,6 +41,11 @@ jobs:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: node scripts/backfill-europe.mjs
 
+      - name: Fetch past cup seasons (only ones not already saved)
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: node scripts/backfill-cups.mjs
+
       - name: Rebuild pages
         run: node scripts/build.mjs
 
