@@ -598,7 +598,13 @@
   var GONE = { PST: "Postponed", CANC: "Cancelled", ABD: "Abandoned", AWD: "Awarded", WO: "Walkover", SUSP: "Suspended", INT: "Interrupted" };
 
   // tags: show each club's league next to its name, and mark upsets (cup fixtures).
-  function gameHTML(f, tz, now, myClub, tags) {
+  // A club's name as a link to its page on the site, when it has one. links: { paths, root, suffix }, where paths
+  // maps API club IDs (or "n:<slug>" for clubs known only by name) to club page paths.
+  function clubName(tm, links) {
+    var p = links && links.paths && ((tm.id && links.paths[tm.id]) || links.paths["n:" + slug(tm.n)]);
+    return p ? '<a class="club-link" href="' + esc((links.root || "") + p + (links.suffix || "")) + '">' + esc(tm.n) + "</a>" : esc(tm.n);
+  }
+  function gameHTML(f, tz, now, myClub, tags, links) {
     var on = isLive(f), done = isDone(f) || f.st === "AWD" || f.st === "WO";
     var tag = function (t) { return tags && t.t ? ' <i class="tag tier-' + (t.tier || 0) + '" title="Plays in ' + esc(t.t) + '">' + esc(t.t) + "</i>" : ""; };
     var hasScore = f.hg != null && f.ag != null;
@@ -621,9 +627,9 @@
     var mine = myClub && (f.h.n === myClub || f.a.n === myClub);
     return '<li class="g' + (on ? " on" : "") + (GONE[f.st] && !on ? " off" : "") + (mine ? " is-mine" : "") + '">' +
       '<span class="g-time">' + esc(time) + "</span>" +
-      '<span class="g-h' + (win === "h" ? " w" : "") + '">' + esc(f.h.n) + tag(f.h) + "</span>" +
+      '<span class="g-h' + (win === "h" ? " w" : "") + '">' + clubName(f.h, links) + tag(f.h) + "</span>" +
       '<span class="g-s">' + score + "</span>" +
-      '<span class="g-a' + (win === "a" ? " w" : "") + '">' + esc(f.a.n) + tag(f.a) + "</span>" +
+      '<span class="g-a' + (win === "a" ? " w" : "") + '">' + clubName(f.a, links) + tag(f.a) + "</span>" +
       (notes.length ? '<span class="g-note">' + notes.join(" · ") + "</span>" : "") + "</li>";
   }
 
@@ -638,11 +644,11 @@
   }
 
   // One round's games: listed by day, or as ties with aggregate scores for qualifying rounds and two-legged cup rounds.
-  function roundBodyHTML(fx, games, tz, now, myClub) {
+  function roundBodyHTML(fx, games, tz, now, myClub, links) {
     if (!games.length) return '<p class="ko-empty">No games in this round yet.</p>';
     var tags = !!fx.cup;
     var ties = games[0].stage === "q" || (fx.cup && tiesOf({ fixtures: games }).some(function (t) { return t.legs.length > 1; }));
-    if (ties) return '<div class="q-ties fx-ties">' + tiesOf({ fixtures: games }).map(function (t) { return tieHTML(t, tz, now); }).join("") + "</div>";
+    if (ties) return '<div class="q-ties fx-ties">' + tiesOf({ fixtures: games }).map(function (t) { return tieHTML(t, tz, now, links); }).join("") + "</div>";
     // Group by day in the chosen time zone; postponed and cancelled games go last.
     var days = [], byDay = {}, off = [];
     games.forEach(function (f) {
@@ -653,9 +659,9 @@
     });
     return days.map(function (d) {
       return '<h3 class="fx-date">' + esc(d) + '</h3><ul class="fx-list">' +
-        byDay[d].map(function (f) { return gameHTML(f, tz, now, myClub, tags); }).join("") + "</ul>";
+        byDay[d].map(function (f) { return gameHTML(f, tz, now, myClub, tags, links); }).join("") + "</ul>";
     }).join("") + (off.length ? '<h3 class="fx-date">Postponed and cancelled</h3><ul class="fx-list">' +
-        off.map(function (f) { return gameHTML(f, tz, now, myClub, tags); }).join("") + "</ul>" : "");
+        off.map(function (f) { return gameHTML(f, tz, now, myClub, tags, links); }).join("") + "</ul>" : "");
   }
 
   // The "Fixtures and results" tab on competition and cup pages: every round is on the page and the round
@@ -681,7 +687,7 @@
         var liveN = games.filter(isLive).length;
         return '<div class="fx-round" data-round="' + i + '"' + (i === ri ? "" : " hidden") + ">" +
           (liveN ? '<p class="stamp live now"><span class="dot"></span><span>' + liveN + " game" + (liveN === 1 ? "" : "s") + " live</span></p>" : "") +
-          roundBodyHTML(fx, games, tz, now, opts.myClub) + "</div>";
+          roundBodyHTML(fx, games, tz, now, opts.myClub, opts.links) + "</div>";
       }).join("");
   }
 
@@ -695,7 +701,7 @@
     var r = g.rounds[ri];
     var lm = liveMap(opts.live);
     var games = r.fixtures.map(function (f) { return mergeLive(f, lm); });
-    var list = roundBodyHTML(fx, games, tz, now, opts.myClub);
+    var list = roundBodyHTML(fx, games, tz, now, opts.myClub, opts.links);
     var liveN = games.filter(isLive).length;
 
     var groups = fx.groups.length > 1 ? '<div class="tf-tabs fx-groups" role="tablist" aria-label="Groups">' + fx.groups.map(function (x, i) {
@@ -780,7 +786,7 @@
 
   // A tie, laid out like a scoreboard: one row per club. Two-legged ties (and cup replays) get a column per game
   // and a bold aggregate; extra time, penalties and upcoming kick-offs go in a line underneath.
-  function tieHTML(t, tz, now) {
+  function tieHTML(t, tz, now, links) {
     var multi = t.legs.length > 1;
     var shown = function (f) { return f.hg != null && (isDone(f) || isLive(f) || f.st === "AWD"); };
     var goals = function (f, i) { return f.h.id === t.teams[i].id ? f.hg : f.ag; };
@@ -793,7 +799,7 @@
       var cells = multi ? t.legs.map(function (f) {
         return '<span class="tie-g' + (isLive(f) ? " live" : "") + '">' + (shown(f) ? goals(f, i) : "") + "</span>";
       }).join("") : "";
-      return '<span class="tie-team' + (t.winner === i ? " tie-won" : t.winner === 1 - i ? " tie-lost" : "") + '"><span class="tie-name">' + esc(tm.n) +
+      return '<span class="tie-team' + (t.winner === i ? " tie-won" : t.winner === 1 - i ? " tie-lost" : "") + '"><span class="tie-name">' + clubName(tm, links) +
         (tm.t ? ' <i class="tag tier-' + (tm.tier || 0) + '" title="Plays in ' + esc(tm.t) + '">' + esc(tm.t) + "</i>" : "") + "</span>" +
         cells + "<b>" + (t.played ? tm.agg : "") + "</b></span>";
     };
@@ -816,7 +822,7 @@
 
   // The knockout bracket: one column per round. Each round's ties are put in the order of the round after it,
   // so winners line up with where they go next. Rounds not yet drawn simply aren't there yet.
-  function bracketHTML(rounds, tz, now) {
+  function bracketHTML(rounds, tz, now, links) {
     if (!rounds.length) return '<p class="ko-empty">The knockout ties appear here as soon as each draw is made, after the league phase.</p>';
     var cols = rounds.map(function (r) { return { label: r.label, ties: tiesOf(r) }; });
     for (var k = cols.length - 2; k >= 0; k--) {
@@ -833,16 +839,16 @@
     }
     return '<div class="bracket" role="list">' + cols.map(function (c) {
       return '<div class="br-col" role="listitem"><h3 class="br-h">' + esc(c.label) + '</h3><div class="br-ties">' +
-        c.ties.map(function (t) { return tieHTML(t, tz, now); }).join("") + "</div></div>";
+        c.ties.map(function (t) { return tieHTML(t, tz, now, links); }).join("") + "</div></div>";
     }).join("") + "</div>";
   }
 
-  function qualifyingHTML(rounds, tz, now) {
+  function qualifyingHTML(rounds, tz, now, links) {
     if (!rounds.length) return '<p class="ko-empty">No qualifying rounds this season.</p>';
     return rounds.slice().reverse().map(function (r) {
       var ties = tiesOf(r);
       return '<details class="q-round"><summary>' + esc(r.label) + " <span>" + ties.length + " ties</span></summary>" +
-        '<div class="q-ties">' + ties.map(function (t) { return tieHTML(t, tz, now); }).join("") + "</div></details>";
+        '<div class="q-ties">' + ties.map(function (t) { return tieHTML(t, tz, now, links); }).join("") + "</div></details>";
     }).join("");
   }
 
@@ -870,6 +876,7 @@
 
   function compMain(comp, fx, opts) {
     opts = opts || {};
+    var links = opts.fxPaths || opts.clubPaths ? { paths: opts.fxPaths || opts.clubPaths, root: opts.root || "", suffix: opts.suffix || "" } : null;
     var mode = opts.tz === "local" ? "local" : "venue", now = opts.now || Date.now();
     var tz = zoneOfMode(mode, "europe");
     var lpRounds = fx ? stageRounds(fx, "lp", opts.live) : [];
@@ -896,9 +903,9 @@
       tab("ko", "Knockouts") + (inQual ? tab("q", "Qualifying") : "") + "</div>" +
       panel("lp", (comp.rows && !comp.rows.length && !comp.groups ? '<p class="ko-empty">No table for this season.</p>'
         : tierHTML(markQualified(opts.clubPaths ? Object.assign(comp, { _paths: opts.clubPaths, _root: opts.root || "", _suffix: opts.suffix || "" }) : comp), { eyebrow: comp.groups ? "Group stage" : "League phase" }))) +
-      (fx ? panel("fx", fxTabHTML(fx, { tzZone: tz, tzLine: tzLine(mode, "europe"), now: now, live: opts.live, round: opts.fxRound, myClub: opts.myClub })) : "") +
-      panel("ko", !ko.length && !comp.final && projectedHTML(comp) ? projectedHTML(comp) : bracketHTML(ko, tz, now)) +
-      (inQual ? panel("q", qualifyingHTML(q, tz, now)) : "") + "</section>";
+      (fx ? panel("fx", fxTabHTML(fx, { tzZone: tz, tzLine: tzLine(mode, "europe"), now: now, live: opts.live, round: opts.fxRound, myClub: opts.myClub, links: links })) : "") +
+      panel("ko", !ko.length && !comp.final && projectedHTML(comp) ? projectedHTML(comp) : bracketHTML(ko, tz, now, links)) +
+      (inQual ? panel("q", qualifyingHTML(q, tz, now, links)) : "") + "</section>";
   }
 
   // The /europe/ page: a card per competition.
@@ -960,6 +967,7 @@
   }
 
   function cupMain(cup, fx, opts) {
+    var links = opts && opts.fxPaths ? { paths: opts.fxPaths, root: opts.root || "", suffix: opts.suffix || "" } : null;
     opts = opts || {};
     var country = fx ? fx.country : cup.country;
     var mode = opts.tz === "local" ? "local" : "venue", now = opts.now || Date.now();
@@ -991,8 +999,8 @@
       '<p class="lede"><strong>' + esc(cupStatus(fx)) + "</strong> · Every tie and result, round by round, with each club’s league next to its name, so the giant-killings stand out.</p></section>" +
       '<section class="comp" data-tabs="cup"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Views">' +
       tab("fx", "Fixtures and results") + tab("bracket", "Bracket") + "</div>" +
-      panel("fx", fxTabHTML(fx, { tzZone: tz, tzLine: tzLine(mode, country), now: now, live: opts.live, round: opts.fxRound, myClub: opts.myClub })) +
-      panel("bracket", bracketRounds.length ? bracketHTML(bracketRounds, tz, now)
+      panel("fx", fxTabHTML(fx, { tzZone: tz, tzLine: tzLine(mode, country), now: now, live: opts.live, round: opts.fxRound, myClub: opts.myClub, links: links })) +
+      panel("bracket", bracketRounds.length ? bracketHTML(bracketRounds, tz, now, links)
         : '<p class="ko-empty">The bracket starts once the cup is down to 64 clubs or fewer and that draw is made. Until then, see Fixtures and results.</p>') + "</section>";
   }
 

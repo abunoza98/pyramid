@@ -341,6 +341,18 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     }
     return out;
   };
+  // Every club in a cup or European competition's ties that has a page here: by club ID, else by name (within the
+  // country for a domestic cup). Used to link club names in brackets, tie lists and fixture rows.
+  const pathsForFx = (fx, country) => {
+    const out = {}, byName = country ? pathByName[country] || {} : anyByName;
+    if (fx) for (const g of fx.groups || []) for (const r of g.rounds || []) for (const f of r.fixtures || []) for (const t of [f.h, f.a]) {
+      if (!t) continue;
+      if (t.id && pathByTid[t.id]) { out[t.id] = pathByTid[t.id]; continue; }
+      const n = "n:" + FP.slug(t.n);
+      if (byName[n]) out[n] = byName[n];
+    }
+    return out;
+  };
   // Cups on a past season's pyramid: who won each that season, linking to that season's cup page when it has one
   // (its ties have been saved by scripts/backfill-cups.mjs), otherwise shown without a link.
   const pastCupCards = (c, year, rel) => ((COUNTRIES.find((x) => x.country === c.country) || {}).cups || []).map((cup) => {
@@ -426,8 +438,8 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         description: `The ${cup.name} ${top.season} round by round: every tie and result, the bracket, and each club's league so the giant-killings stand out.`,
         canonical: `${SITE}/${c.country}/${cup.id}/`, base: "../../", suffix, page: fx ? "cup" : "cup-history", country: c.country, stamps: {}, countries,
         seasons: older.length ? picker("", null) : null,
-        attrs: fx ? { league: cup.id } : {},
-        main: FP.cupMain(cup, top, { tz: "venue", seasons: older.length ? picker("", null) : null, note })
+        attrs: fx ? { league: cup.id, clubpaths: pathsForFx(top, c.country) } : {},
+        main: FP.cupMain(cup, top, { tz: "venue", seasons: older.length ? picker("", null) : null, note, fxPaths: pathsForFx(top, c.country), root: "../../", suffix })
       }));
       cupUrls.push(`/${c.country}/${cup.id}/`);
       for (const p of older) {
@@ -436,7 +448,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
           description: `The ${cup.name} ${p.season}: every round, every tie and the bracket, with each club's league that season.`,
           canonical: `${SITE}/${c.country}/${cup.id}/${slug(p.year)}/`, base: "../../../", suffix, page: "cup-history", country: c.country, stamps: {}, countries,
           seasons: picker("../", p.year),
-          main: FP.cupMain(cup, p, { tz: "venue", seasons: picker("../", p.year) })
+          main: FP.cupMain(cup, p, { tz: "venue", seasons: picker("../", p.year), fxPaths: pathsForFx(p, c.country), root: "../../../", suffix })
         }));
         cupPastUrls.push(`/${c.country}/${cup.id}/${slug(p.year)}/`);
       }
@@ -500,7 +512,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
           title: `${comp.name} ${h.season}: ${h.comp.groups ? "group stage" : "league phase"}, knockout bracket and results | Football Pyramids`,
           description: `The ${comp.name} ${h.season}: ${h.comp.groups ? "every group-stage table" : "the league-phase table"}, the full knockout bracket and every qualifying tie.`,
           canonical: `${SITE}/europe/${comp.id}/${sl}/`, base: "../../../", suffix, page: "comp-history", country: "europe", stamps: {}, countries, seasons,
-          main: FP.compMain(h.comp, h.fx, { tz: "venue", seasons, clubPaths: pathsFor(h.comp), root: "../../../", suffix })
+          main: FP.compMain(h.comp, h.fx, { tz: "venue", seasons, clubPaths: { ...pathsForFx(h.fx), ...pathsFor(h.comp) }, root: "../../../", suffix })
         }));
         if (h.fx) await write(`europe/${comp.id}/${sl}/fixtures/index.html`,
           redirectPage(`../${suffix}#fixtures`, `${SITE}/europe/${comp.id}/${sl}/`, `${comp.name} ${h.season}`));
@@ -510,8 +522,8 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         title: `${comp.name} ${europe.season}: table, knockout bracket and results | Football Pyramids`,
         description: `The ${comp.name} league-phase table, the knockout bracket as each draw is made, every qualifying tie and live scores.`,
         canonical: `${SITE}/europe/${comp.id}/`, base: "../../", suffix, page: "comp", country: "europe", stamps: { europe: europe.updated }, countries,
-        seasons: seasonsNow, attrs: { league: comp.id, clubpaths: pathsFor(comp) },
-        main: FP.compMain(comp, fx, { tz: "venue", seasons: seasonsNow, clubPaths: pathsFor(comp), root: "../../", suffix })
+        seasons: seasonsNow, attrs: { league: comp.id, clubpaths: { ...pathsForFx(fx), ...pathsFor(comp) } },
+        main: FP.compMain(comp, fx, { tz: "venue", seasons: seasonsNow, clubPaths: { ...pathsForFx(fx), ...pathsFor(comp) }, root: "../../", suffix })
       }));
       if (fx) await write(`europe/${comp.id}/fixtures/index.html`, redirectPage(`../${suffix}#fixtures`, `${SITE}/europe/${comp.id}/`, comp.name));
     }
