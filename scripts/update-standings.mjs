@@ -11,7 +11,7 @@
 import { readFile, writeFile, rename, mkdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-import { COUNTRIES, EUROPE, NAMES } from "./leagues.mjs";
+import { COUNTRIES, EUROPE, clubName } from "./leagues.mjs";
 import { build } from "./build.mjs";
 import { zonesFrom, applyPlayoffRules, labelCupPlaces } from "./zones.mjs";
 import { seasonFor, seasonLabel } from "./season.mjs";
@@ -42,13 +42,17 @@ export function groupName(raw, i) {
   return parts[parts.length - 1].trim() || `Group ${i + 1}`;
 }
 
+// The country being worked on, for its own club-name fixes. Callers set it with namesFor(country).
+let NAME_COUNTRY = null;
+export function namesFor(country) { NAME_COUNTRY = country; }
+
 export function toRows(table, notes) {
   let latest = 0;
   const rows = table.slice().sort((a, b) => a.rank - b.rank).map((t) => {
     const all = t.all || {};
     const w = all.win ?? 0, d = all.draw ?? 0, l = all.lose ?? 0;
     const raw = String(t.team?.name || "Unknown").trim();
-    const team = NAMES[raw] || raw;
+    const team = clubName(raw, NAME_COUNTRY);
     // API-Football has no deduction field, so work it out from the points.
     const ded = Math.max(0, 3 * w + d - (t.points ?? 0));
     if (ded) notes.push(`${team}: ${ded} point${ded === 1 ? "" : "s"} deducted.`);
@@ -76,11 +80,24 @@ function firstTable(body, label, apiId) {
 // Turn API-Football /standings responses into a league object for the site.
 // A tier split into regional groups has one API league per group, so `body` is then a list, one per group.
 export function toLeague(cfg, body) {
-  const { apiId, clubs, groups, ...meta } = cfg;
+  const { apiId, clubs, groups, groupNames, latestStage, calendar, ...meta } = cfg;
   const notes = [...(cfg.notes || [])];
   const league = { ...meta, notes };
   const warn = (what, n) => { if (clubs && n !== clubs) console.log(`  note: ${what} has ${n} clubs (expected ${clubs}).`); };
   let first;
+  // latestStage: the season has stages with their own tables (Argentina's Apertura then Clausura, Liga MX's
+  // Apertura and Clausura), and the API returns all of them. Keep only the stage being played now, the last one.
+  let stageName = null;
+  if (cfg.latestStage) {
+    const all = (body?.response?.[0]?.league?.standings || []).filter((t) => Array.isArray(t) && t.length);
+    const stageOf = (t) => String(t[0]?.group || "").split(/\s+-\s+|:/)[0].trim();
+    if (all.length > 1) {
+      stageName = stageOf(all[all.length - 1]);
+      const now = all.filter((t) => stageOf(t) === stageName);
+      body = { response: [{ league: { standings: cfg.splitGroups ? now : [now[now.length - 1]] } }] };
+      if (stageName) notes.unshift(`${cfg.splitGroups ? "These are the" : "This is the"} ${stageName} ${cfg.splitGroups ? "tables" : "table"}.`);
+    }
+  }
   if (cfg.splitGroups) {
     // One API league whose response holds several tables, one per group (e.g. Turkey's 2. Lig).
     const tables = (body?.response?.[0]?.league?.standings || []).filter((t) => Array.isArray(t) && t.length);
@@ -88,7 +105,10 @@ export function toLeague(cfg, body) {
     first = tables[0];
     league.groups = tables.map((t, i) => {
       const { rows, updated } = toRows(t, notes);
-      return { name: groupName(t[0]?.group, i), updated, rows };
+      // groupNames: names to use when the API gives every table the same name (the USL Championship's conferences).
+      let name = (cfg.groupNames && cfg.groupNames[i]) || groupName(t[0]?.group, i);
+      if (stageName && name.startsWith(stageName)) name = name.slice(stageName.length).replace(/^\s*-\s*/, "") || name;
+      return { name, updated, rows };
     });
     league.updated = league.groups.map((g) => g.updated).sort().at(-1);
   } else if (groups) {
@@ -175,6 +195,7 @@ async function main() {
     let prev = null;
     try { prev = JSON.parse(await readFile(file, "utf8")); } catch {}
     const leagues = [];
+    namesFor(c);
     const year = seasonFor(c);
     let shown = year;   // the season the top tier's table comes from
     for (const cfg of c.leagues) {
@@ -190,17 +211,20 @@ async function main() {
         return toLeague(cfg, cfg.groups ? body : await get(cfg.apiId));
       };
       try {
-        SEASON = year;
+        // A league can play within a calendar year in a country that doesn't (Australia's state NPLs).
+        const cal = c.calendar || cfg.calendar;
+        const yr = cfg.calendar && !c.calendar ? seasonFor({ calendar: true }) : year;
+        SEASON = yr;
         let lg;
         try { lg = await fetchAll(); }
         catch (err) {
           // A calendar-year league early in the year may not have started yet: show last year's final table until it does.
-          if (!c.calendar || !/no table/.test(err.message)) throw err;
-          SEASON = year - 1;
-          console.log(`  ${cfg.name}: ${year} hasn't started yet, showing ${year - 1}.`);
+          if (!cal || !/no table/.test(err.message)) throw err;
+          SEASON = yr - 1;
+          console.log(`  ${cfg.name}: ${yr} hasn't started yet, showing ${yr - 1}.`);
           lg = await fetchAll();
         }
-        if (!leagues.length) shown = SEASON;
+        if (!leagues.length && !cfg.calendar) shown = SEASON;
         leagues.push(lg);
       } catch (err) {
         // One league failing shouldn't stop the rest: keep its last good table, or leave it out for now.

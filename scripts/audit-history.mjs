@@ -21,9 +21,9 @@
 import { readFile, writeFile, readdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-import { COUNTRIES, NAMES } from "./leagues.mjs";
+import { COUNTRIES, clubName } from "./leagues.mjs";
 import { zoneAt } from "./zones.mjs";
-import { api, toRows } from "./update-standings.mjs";
+import { api, toRows, namesFor } from "./update-standings.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const HIST = process.env.HIST_DIR ? path.resolve(process.env.HIST_DIR) : path.join(ROOT, "data", "history");
@@ -80,7 +80,7 @@ export function tableFromFixtures(list, keep, opts = {}) {
   const t = new Map();
   const side = (team) => {
     const raw = String(team.name).trim();
-    const name = NAMES[raw] || raw;
+    const name = clubName(raw, opts.country);
     if (!t.has(team.id)) t.set(team.id, { team: name, tid: team.id, p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, res: [] });
     return t.get(team.id);
   };
@@ -163,6 +163,7 @@ export async function main() {
   const add = (o) => { findings.push(o); console.log(`${o.country} ${label(o.year)} ${o.league}${o.group ? ` (${o.group})` : ""}: ${o.text}${o.action ? ` -> ${o.action}` : ""}`); };
 
   for (const c of COUNTRIES) {
+    namesFor(c);
     let files = [];
     try { files = (await readdir(path.join(HIST, c.country))).filter((f) => /^\d{4}\.json$/.test(f)); } catch { continue; }
     const seasons = new Map();
@@ -212,7 +213,7 @@ export async function main() {
             // 2. Rebuild from the season's results, keeping deductions already shown.
             const fx = await get(`/fixtures?league=${id}&season=${year}`);
             const keep = new Map(g.rows.filter((r) => r.ded).map((r) => [r.team, r.ded]));
-            const built = tableFromFixtures(fx?.response || [], keep, { h2h: H2H.has(c.country) });
+            const built = tableFromFixtures(fx?.response || [], keep, { h2h: H2H.has(c.country), country: c });
             const ok = built.rows.length === g.rows.length && !checkTable(built.rows, expected).some((x) => x.kind === "unfinished");
             if (!ok) { add({ ...base, ...issue, action: `couldn't rebuild (results found for ${built.rows.length} clubs, not all complete): check by hand` }); continue; }
             const top = built.rows.slice(0, 3).map((r) => `${r.pos}. ${r.team} ${r.pts}`).join(", ");
@@ -231,7 +232,7 @@ export async function main() {
             if (!id) continue;
             const fx = await get(`/fixtures?league=${id}&season=${year}`);
             const keep = new Map(g.rows.filter((r) => r.ded).map((r) => [r.team, r.ded]));
-            const built = tableFromFixtures(fx?.response || [], keep, { h2h: H2H.has(c.country) });
+            const built = tableFromFixtures(fx?.response || [], keep, { h2h: H2H.has(c.country), country: c });
             const base = { country: c.name, year, league: lg.name, group: g.name, kind: "rebuilt" };
             if (built.rows.length !== g.rows.length || built.rows.some((r) => r.p !== g.rows[0].p && r.p < Math.max(...g.rows.map((x) => x.p)))) {
               add({ ...base, text: "Asked to rebuild.", action: `results incomplete (${built.rows.length} clubs): kept the saved table` }); continue;
@@ -252,7 +253,7 @@ export async function main() {
           const top = new Set(full.rows.filter((r) => r.pos <= cfg.split).map((r) => r.team));
           const fx = await get(`/fixtures?league=${cfg.apiId}&season=${year}`);
           const keep = new Map(full.rows.filter((r) => r.ded).map((r) => [r.team, r.ded]));
-          const built = tableFromFixtures(fx?.response || [], keep, { allRounds: true, split: top });
+          const built = tableFromFixtures(fx?.response || [], keep, { allRounds: true, split: top, country: c });
           const games = new Set(built.rows.map((r) => r.p));
           if (built.rows.length !== full.rows.length || games.size !== 1 || [...games][0] <= full.rows[0].p) {
             add({ ...base, text: "Split season.", action: `couldn't combine (results for ${built.rows.length} clubs, games played ${[...games].join("/")}): left as is` }); continue;

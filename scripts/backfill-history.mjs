@@ -12,7 +12,7 @@ import { readFile, writeFile, mkdir, access } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { COUNTRIES } from "./leagues.mjs";
-import { api, toRows, groupName } from "./update-standings.mjs";
+import { api, toRows, groupName, namesFor } from "./update-standings.mjs";
 import { seasonFor, seasonLabel } from "./season.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -55,6 +55,7 @@ async function main() {
 
   let saved = 0;
   for (const c of COUNTRIES) {
+    namesFor(c);
     // Which past seasons does each league have tables for?
     const years = new Map();   // apiId -> Set(year)
     for (const cfg of c.leagues) {

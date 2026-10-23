@@ -11,7 +11,7 @@
 import { readFile, writeFile, mkdir, rename } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-import { COUNTRIES, EUROPE, NAMES } from "./leagues.mjs";
+import { COUNTRIES, EUROPE, clubName } from "./leagues.mjs";
 import { api } from "./update-standings.mjs";
 import { seasonFor, seasonLabel } from "./season.mjs";
 import { build } from "./build.mjs";
@@ -23,7 +23,8 @@ const now = new Date();
 const MOVED_DAYS = 21;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-const name = (t) => { const raw = String(t?.name || "Unknown").trim(); return NAMES[raw] || raw; };
+let NAME_COUNTRY = null;   // the country being worked on, for its own club-name fixes
+const name = (t) => clubName(String(t?.name || "Unknown").trim(), NAME_COUNTRY);
 
 // One API fixture -> what the pages need.
 export function slim(x, prev) {
@@ -73,6 +74,7 @@ async function main() {
   let saved = 0, failed = 0;
   for (const c of [...COUNTRIES, EUROPE]) {
     const year = seasonFor(c);
+    NAME_COUNTRY = c;
     // Each club's league, for the tags in cup ties ("PL", "L2", "NL"…), from the country's tables.
     const tags = new Map();
     try {
@@ -90,12 +92,14 @@ async function main() {
       const parts = cfg.groups ? cfg.groups.map((g) => ({ apiId: g.apiId, name: g.name })) : [{ apiId: cfg.apiId, name: null }];
       try {
         const groups = [];
-        let used = year;
+        const cal = c.calendar || cfg.calendar;
+        let used = cfg.calendar && !c.calendar ? seasonFor({ calendar: true }) : year;
+        const first = used;
         for (const part of parts) {
           let body = await get(part.apiId, used);
           // A calendar-year league early in the year may have no fixtures out yet: keep showing last year's.
-          if (c.calendar && !(body.response || []).length && used === year && !groups.length) {
-            used = year - 1;
+          if (cal && !(body.response || []).length && used === first && !groups.length) {
+            used = first - 1;
             body = await get(part.apiId, used);
           }
           const list = (body.response || []).map((x) => ({ round: x.league?.round, f: slim(x, prevById.get(x.fixture.id)) }));
@@ -112,7 +116,7 @@ async function main() {
         }
         const out = {
           country: c.country, countryName: c.name, league: cfg.id, name: cfg.name, tier: cfg.tier, ...(cfg.cup ? { cup: true } : {}),
-          season: seasonLabel(used, c), updated: now.toISOString(), groups
+          season: seasonLabel(used, cfg.calendar ? { calendar: true } : c), updated: now.toISOString(), groups
         };
         const text = JSON.stringify(out);
         const same = prev && JSON.stringify({ ...prev, updated: null }) === JSON.stringify({ ...out, updated: null });

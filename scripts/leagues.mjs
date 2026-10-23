@@ -246,6 +246,196 @@ export const COUNTRIES = [
         promotionNote: "The top clubs in each group go up",
         notes: ["API-Football doesn't mark this league's promotion and relegation places yet, so they aren't coloured."] }
     ]
+  },
+  // ---------- More pyramids (added October 2026, from the Scan leagues run of 23 October). ----------
+  {
+    country: "switzerland", code: "SUI", name: "Switzerland", adjective: "Swiss", apiCountry: "Switzerland",
+    belowNote: "The top 2. Liga Interregional clubs come up",
+    leagues: [
+      // The API's labels on this table are for the split ("Play-offs", "Relegation Play-offs"), not real places.
+      { apiId: 207, id: "super-league", tier: 1, name: "Super League", short: "SSL", clubs: 12, split: 6,
+        zones: [Z(11, 11, "down", "Relegation play-off"), Z(12, 12, "down", "Relegation")],
+        relegationNote: "12th drops to the Challenge League; 11th plays the Challenge League's 2nd",
+        notes: ["After 33 rounds the league splits into a top six and a bottom six for the last five rounds.",
+                "FC Vaduz is from Liechtenstein but plays in the Swiss league."] },
+      { apiId: 208, id: "challenge-league", tier: 2, name: "Challenge League", short: "CHL", clubs: 10, zones: "api",
+        promotionNote: "1st goes up; 2nd plays the Super League's 11th",
+        relegationNote: "10th drops to the Promotion League", notes: [] },
+      { apiId: 510, id: "promotion-league", tier: 3, name: "Promotion League", short: "PL", clubs: 18, zones: "api",
+        promotionNote: "1st goes up", relegationNote: "17th–18th drop to the 1. Liga",
+        notes: ["Reserve (II) teams can't be promoted to the Challenge League."] },
+      { id: "1-liga", tier: 4, name: "1. Liga", short: "1L", clubs: 16, zones: "api",
+        groups: [{ apiId: 599, name: "Group 1" }, { apiId: 600, name: "Group 2" }, { apiId: 601, name: "Group 3" }],
+        promotionNote: "The top clubs in each group play off for promotion",
+        notes: ["API-Football doesn't mark this league's promotion and relegation places, so they aren't coloured."] }
+    ]
+  },
+  {
+    country: "austria", code: "AUT", name: "Austria", adjective: "Austrian", apiCountry: "Austria",
+    belowNote: "Landesliga champions come up",
+    leagues: [
+      // The API's labels here are for the split groups, not real places, so only relegation is marked.
+      { apiId: 218, id: "austrian-bundesliga", tier: 1, name: "Bundesliga", short: "ABL", clubs: 12, split: 6,
+        zones: [Z(12, 12, "down", "Relegation")],
+        relegationNote: "12th drops to the 2. Liga",
+        notes: ["After 22 rounds the top six and bottom six split into a championship group and a qualifying group, and every club's points are halved."] },
+      { apiId: 219, id: "2-liga", tier: 2, name: "2. Liga", short: "2L", clubs: 16, zones: "api",
+        promotionNote: "1st goes up", relegationNote: "14th–16th drop to the Regionalliga",
+        notes: ["Reserve sides (II, Liefering) can't be promoted to the Bundesliga."],
+        history: [{ until: 2017, name: "Erste Liga", short: "EL" }] },
+      // Four regional groups from 2026–27; the North and South groups are new, so past tables start there.
+      { id: "regionalliga", tier: 3, name: "Regionalliga", short: "RL", zones: "api", historyFrom: 2026,
+        groups: [{ apiId: 221, name: "East" }, { apiId: 1239, name: "North" }, { apiId: 1238, name: "South" }, { apiId: 223, name: "West" }],
+        promotionNote: "The top clubs in each group go up",
+        notes: ["API-Football doesn't mark this league's promotion and relegation places, so they aren't coloured."] }
+    ]
+  },
+  {
+    country: "greece", code: "GRE", name: "Greece", adjective: "Greek", apiCountry: "Greece",
+    belowNote: "Gamma Ethniki group winners come up",
+    leagues: [
+      { apiId: 197, id: "greek-super-league", tier: 1, name: "Super League", short: "SL1", clubs: 14,
+        zones: [Z(1, 4, "top", "Championship play-off"), Z(5, 8, "mid", "Europe play-off"), Z(13, 14, "down", "Relegation")],
+        relegationNote: "13th–14th drop to Super League 2",
+        notes: ["After 26 rounds the top four play for the title, 5th–8th play for a European place, and 9th–14th play to stay up."] },
+      { apiId: 494, id: "super-league-2", tier: 2, name: "Super League 2", short: "SL2", clubs: 16, zones: "api",
+        promotionNote: "The top clubs go up",
+        notes: ["Reserve (B) teams can't be promoted to the Super League.",
+                "API-Football doesn't mark this league's promotion and relegation places, so they aren't coloured."] }
+    ]
+  },
+  // calendar: true for countries whose season runs within one year (see scripts/season.mjs).
+  {
+    country: "brazil", calendar: true, code: "BRA", name: "Brazil", adjective: "Brazilian", apiCountry: "Brazil",
+    belowNote: "Clubs qualify for Série D through their state championships",
+    names: { "Athletic Club": "Athletic Club", "Atletico Paranaense": "Athletico Paranaense", "Atletico-MG": "Atlético Mineiro",
+      "Sao Paulo": "São Paulo", "Vasco DA Gama": "Vasco da Gama", "Gremio": "Grêmio", "Vitoria": "Vitória",
+      "Chapecoense-sc": "Chapecoense", "Criciuma": "Criciúma", "Atletico Goianiense": "Atlético Goianiense", "Goias": "Goiás",
+      "Cuiaba": "Cuiabá", "Ceara": "Ceará", "Avai": "Avaí", "America Mineiro": "América Mineiro", "Nautico Recife": "Náutico",
+      "Fortaleza EC": "Fortaleza", "Botafogo SP": "Botafogo-SP", "Operario-PR": "Operário-PR", "RB Bragantino": "Red Bull Bragantino" },
+    leagues: [
+      { apiId: 71, id: "serie-a", tier: 1, name: "Série A", short: "A", clubs: 20, zones: "api",
+        relegationNote: "17th–20th drop to Série B", notes: [] },
+      { apiId: 72, id: "serie-b", tier: 2, name: "Série B", short: "B", clubs: 20, zones: "api",
+        promotionNote: "1st and 2nd go up, plus the play-off winners (3rd–6th)", relegationNote: "17th–20th drop to Série C", notes: [] },
+      // One API league with the first-stage table and the two second-stage groups.
+      { apiId: 75, id: "serie-c", tier: 3, name: "Série C", short: "C", splitGroups: true,
+        zones: [Z(19, 20, "down", "Relegation")],
+        promotionNote: "The top eight go into two groups of four; each group's top two go up",
+        relegationNote: "19th–20th in the first stage drop to Série D", notes: [] },
+      { apiId: 76, id: "serie-d", tier: 4, name: "Série D", short: "D", splitGroups: true, zones: "api",
+        promotionNote: "The top four in each group go into knockout rounds, which decide who goes up", notes: [] }
+    ]
+  },
+  {
+    country: "argentina", calendar: true, code: "ARG", name: "Argentina", adjective: "Argentine", apiCountry: "Argentina",
+    belowNote: "Promoted clubs from Primera D come up",
+    names: { "Estudiantes L.P.": "Estudiantes", "Velez Sarsfield": "Vélez Sarsfield", "Talleres Cordoba": "Talleres", "Lanus": "Lanús",
+      "Union Santa Fe": "Unión", "Instituto Cordoba": "Instituto", "Gimnasia M.": "Gimnasia (Mendoza)",
+      "Central Cordoba de Santiago": "Central Córdoba", "Newells Old Boys": "Newell's Old Boys",
+      "Independ. Rivadavia": "Independiente Rivadavia", "Argentinos JRS": "Argentinos Juniors", "Belgrano Cordoba": "Belgrano",
+      "Gimnasia L.P.": "Gimnasia La Plata", "Huracan": "Huracán", "Sarmiento Junin": "Sarmiento", "Atletico Tucuman": "Atlético Tucumán",
+      "Estudiantes de Rio Cuarto": "Estudiantes (Río Cuarto)", "Colon Santa Fe": "Colón", "Deportivo Moron": "Deportivo Morón",
+      "Atletico DE Rafaela": "Atlético de Rafaela", "Atletico Mitre": "Atlético Mitre", "Club Atlético Güemes": "Güemes",
+      "Racing Cordoba": "Racing (Córdoba)", "San Martin S.J.": "San Martín (San Juan)", "San Martin Tucuman": "San Martín (Tucumán)",
+      "Brown DE Adrogue": "Brown de Adrogué", "Central Cordoba": "Central Córdoba (Rosario)" },
+    leagues: [
+      // Each year has an Apertura and a Clausura, each with two groups and a knockout stage. latestStage shows the current one.
+      { apiId: 128, id: "liga-profesional", tier: 1, name: "Liga Profesional", short: "LPF", splitGroups: true, latestStage: true,
+        zones: [Z(1, 8, "mid", "Knockout stage")],
+        notes: ["The year has two tournaments, the Apertura and the Clausura. The top eight in each group go into a knockout stage for the title.",
+                "Relegation is decided by a table of the whole year and by average points over recent seasons, so it isn't shown here."] },
+      { apiId: 129, id: "primera-nacional", tier: 2, name: "Primera Nacional", short: "PN", clubs: 18, splitGroups: true,
+        zones: [Z(1, 1, "top", "Final"), Z(2, 8, "mid", "Play-offs"), Z(17, 18, "down", "Relegation")],
+        promotionNote: "The group winners meet in a final for one place; 2nd–8th play off for the other",
+        relegationNote: "17th–18th in each group drop to the third tier", notes: [] },
+      { apiId: 131, id: "primera-b-metropolitana", tier: 3, name: "Primera B Metropolitana", short: "PBM", clubs: 22, zones: "api",
+        promotionNote: "1st goes up; 2nd–9th play off for a second place", relegationNote: "21st–22nd drop to Primera C",
+        notes: ["Clubs from outside Buenos Aires play at this level in the Torneo Federal A, which isn't shown."] },
+      { apiId: 132, id: "primera-c", tier: 4, name: "Primera C", short: "PC", clubs: 14, splitGroups: true,
+        zones: [Z(1, 1, "top", "Final"), Z(2, 7, "mid", "Play-offs"), Z(14, 14, "down", "Relegation play-off")],
+        promotionNote: "The group winners meet in a final; 2nd–7th play off", notes: [] }
+    ]
+  },
+  {
+    country: "china", calendar: true, code: "CHN", name: "China", adjective: "Chinese", apiCountry: "China",
+    belowNote: "China League Two's top clubs come up",
+    names: { "SHANGHAI SIPG": "Shanghai Port", "Shandong Luneng": "Shandong Taishan", "Hangzhou Greentown": "Zhejiang FC",
+      "Henan Jianye": "Henan FC", "Tianjin Teda": "Tianjin Jinmen Tiger", "Chengdu Better City": "Chengdu Rongcheng" },
+    leagues: [
+      { apiId: 169, id: "chinese-super-league", tier: 1, name: "Super League", short: "CSL", clubs: 16, zones: "api",
+        relegationNote: "15th–16th drop to League One", notes: [] },
+      { apiId: 170, id: "china-league-one", tier: 2, name: "League One", short: "CL1", clubs: 16, zones: "api",
+        promotionNote: "1st and 2nd go up", relegationNote: "15th–16th drop to League Two; 14th plays a relegation play-off",
+        notes: [] }
+    ]
+  },
+  {
+    country: "australia", code: "AUS", name: "Australia", adjective: "Australian", apiCountry: "Australia",
+    belowNote: "Below the NPL, each state has its own divisions",
+    names: { "Sydney": "Sydney FC", "Auckland": "Auckland FC", "Macarthur": "Macarthur FC", "Lions": "Lions FC",
+      "Olympic": "Brisbane Olympic", "Perth": "Perth SC" },
+    leagues: [
+      { apiId: 188, id: "a-league", tier: 1, name: "A-League Men", short: "AL", clubs: 12,
+        zones: [Z(1, 2, "top", "Finals (semi-finals)"), Z(3, 6, "mid", "Finals (elimination)")],
+        notes: ["There's no promotion or relegation. The top six go into the finals series; 1st and 2nd go straight to the semi-finals.",
+                "Auckland FC and Wellington Phoenix are from New Zealand."],
+        history: [{ until: 2020, name: "A-League", short: "AL" }] },
+      // The state leagues play within a calendar year (March to September), unlike the A-League.
+      { id: "npl", tier: 2, name: "National Premier Leagues", short: "NPL", calendar: true, zones: "api",
+        groups: [{ apiId: 192, name: "NSW" }, { apiId: 195, name: "Victoria" }, { apiId: 482, name: "Queensland" },
+                 { apiId: 196, name: "Western Australia" }, { apiId: 194, name: "South Australia" }, { apiId: 481, name: "Northern NSW" },
+                 { apiId: 189, name: "Capital Territory" }, { apiId: 648, name: "Tasmania" }],
+        notes: ["Each state runs its own NPL. None of them is linked to the A-League by promotion.",
+                "API-Football doesn't mark these leagues' promotion, relegation or finals places, so they aren't coloured."] }
+    ]
+  },
+  {
+    country: "indonesia", code: "IDN", name: "Indonesia", adjective: "Indonesian", apiCountry: "Indonesia",
+    belowNote: "Championship (second tier) clubs come up; API-Football doesn't have its tables yet",
+    names: { "Persepam Madura Utd": "Madura United", "Pusamania Borneo": "Borneo FC" },
+    leagues: [
+      { apiId: 274, id: "indonesian-super-league", tier: 1, name: "Super League", short: "ISL", clubs: 18,
+        zones: [Z(16, 18, "down", "Relegation")],
+        relegationNote: "16th–18th drop to the Championship", notes: [],
+        history: [{ until: 2024, name: "Liga 1", short: "L1" }] }
+    ]
+  },
+  {
+    country: "usa", calendar: true, code: "USA", name: "USA", adjective: "American", apiCountry: "USA",
+    belowNote: "There's no promotion or relegation between US leagues; these are the professional divisions from the top",
+    names: { "Los Angeles Galaxy": "LA Galaxy", "San Diego": "San Diego FC", "Austin": "Austin FC", "Charlotte": "Charlotte FC",
+      "Atlanta United FC": "Atlanta United", "Minnesota United FC": "Minnesota United", "DC United": "D.C. United",
+      "CF Montreal": "CF Montréal", "Brooklyn": "Brooklyn FC", "Lexington": "Lexington SC", "San Antonio": "San Antonio FC",
+      "Rhode Island": "Rhode Island FC", "Colorado Springs": "Colorado Springs Switchbacks" },
+    leagues: [
+      { apiId: 253, id: "mls", tier: 1, name: "Major League Soccer", short: "MLS", clubs: 15, splitGroups: true,
+        zones: [Z(1, 7, "top", "Play-offs"), Z(8, 9, "mid", "Wild card")],
+        notes: ["The top seven in each conference go into the play-offs for the MLS Cup; 8th and 9th play a wild-card game.",
+                "Canadian clubs (Toronto, Vancouver, Montréal) play in MLS too."] },
+      // The API names both conference tables "USL Championship", so they're named here (Eastern first).
+      { apiId: 255, id: "usl-championship", tier: 2, name: "USL Championship", short: "USLC", splitGroups: true, zones: "api",
+        groupNames: ["Eastern Conference", "Western Conference"],
+        notes: ["The top eight in each conference go into the play-offs."] },
+      { apiId: 489, id: "usl-league-one", tier: 3, name: "USL League One", short: "USL1", zones: "api",
+        notes: ["The top eight go into the play-offs."] }
+    ]
+  },
+  {
+    country: "mexico", code: "MEX", name: "Mexico", adjective: "Mexican", apiCountry: "Mexico",
+    belowNote: "Promotion between Liga Premier and the Liga de Expansión is suspended",
+    names: { "Club America": "América", "Guadalajara Chivas": "Guadalajara", "U.N.A.M. - Pumas": "Pumas UNAM",
+      "Club Queretaro": "Querétaro", "Atletico San Luis": "Atlético San Luis", "Leon": "León", "FC Juarez": "FC Juárez",
+      "CF Pachuca": "Pachuca", "Club Tijuana": "Tijuana", "Atlante FC": "Atlante" },
+    leagues: [
+      // Apertura (July–December) and Clausura (January–May), each with its own table. latestStage shows the current one.
+      { apiId: 262, id: "liga-mx", tier: 1, name: "Liga MX", short: "LMX", clubs: 18, zones: "api", latestStage: true,
+        notes: ["The season has two tournaments, the Apertura and the Clausura, each with its own table and play-offs (the Liguilla).",
+                "There's no relegation from Liga MX at the moment."] },
+      { apiId: 263, id: "liga-de-expansion", tier: 2, name: "Liga de Expansión MX", short: "LEX", clubs: 16, zones: "api", latestStage: true,
+        notes: ["Promotion to Liga MX is suspended for now."] },
+      { apiId: 722, id: "liga-premier", tier: 3, name: "Liga Premier Serie A", short: "LP", zones: "api", notes: [] }
+    ]
   }
 ];
 
@@ -267,7 +457,24 @@ export const EUROPE = {
 
 // API-Football shortens or anglicises some names. Map them to the names shown on the site.
 // After the first live run, check the pages and add any that look odd.
+// A club's display name: the country's own fixes (`names` on the country) first, then NAMES, then as the API has it.
+// Country fixes win because NAMES is shared: Brazil's "Athletic Club" isn't Athletic Bilbao.
+export function clubName(raw, country) {
+  return (country && country.names && country.names[raw]) || NAMES[raw] || raw;
+}
+
 export const NAMES = {
+  // Switzerland
+  "FC ST. Gallen": "FC St. Gallen", "FC Zurich": "FC Zürich", "FC Basel 1893": "FC Basel", "Lausanne": "Lausanne-Sport",
+  "Grasshoppers": "Grasshopper Club", "FC WIL 1900": "FC Wil", "Neuchatel Xamax FC": "Neuchâtel Xamax", "Rapperswil": "Rapperswil-Jona",
+  "Lausanne Sport II": "Lausanne-Sport II",
+  // Austria
+  "Rapid Vienna": "Rapid Wien", "Austria Vienna": "Austria Wien", "Austria Vienna (Am)": "Austria Wien II", "Lask Linz": "LASK",
+  "WSG Wattens": "WSG Tirol", "Ried": "SV Ried", "SCR Altach": "Rheindorf Altach", "FC BW Linz": "Blau-Weiß Linz",
+  "SKN ST. Polten": "SKN St. Pölten", "Hartberg (Am)": "Hartberg II",
+  // Greece
+  "Olympiakos Piraeus": "Olympiacos", "Olympiakos Piraeus II": "Olympiacos B", "AEK Athens FC": "AEK Athens",
+  "Aris Thessalonikis": "Aris", "Volos NFC": "Volos", "OFI": "OFI Crete",
   // England
   "Brighton": "Brighton & Hove Albion", "Bournemouth": "AFC Bournemouth", "Tottenham": "Tottenham Hotspur",
   "Newcastle": "Newcastle United", "Leeds": "Leeds United", "Ipswich": "Ipswich Town", "Coventry": "Coventry City",

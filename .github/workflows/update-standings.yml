@@ -2,8 +2,8 @@ name: Update standings
 
 on:
   schedule:
-    - cron: "5 11-23 * * *"
-    - cron: "5 6 * * *"
+    # Every hour, all day: the Americas, Asia and Australia play outside European hours.
+    - cron: "5 * * * *"
   workflow_dispatch: {}
 
 permissions:

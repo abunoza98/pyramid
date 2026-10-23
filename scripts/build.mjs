@@ -15,7 +15,7 @@ import { readFileSync } from "node:fs";
 import { COUNTRIES, EUROPE, SITE, CONTACT, ADS, ADSENSE_CLIENT, LIVE_URL } from "./leagues.mjs";
 import { zoneAt, applyPlayoffRules, labelCupPlaces } from "./zones.mjs";
 import { regroupEurope } from "./rounds.mjs";
-import { seasonLabel, seasonSlug } from "./season.mjs";
+import { seasonFor, seasonLabel, seasonSlug } from "./season.mjs";
 import { summarise, learnLabels } from "./cupruns.mjs";
 export { applyPlayoffRules, labelCupPlaces };
 import { contactPage, privacyPage } from "./pages.mjs";
@@ -861,9 +861,14 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   await write("data/clubs.json", JSON.stringify(clubs));
 
   // For the live-scores worker: which API-Football league IDs belong to which table on the site.
+  // `s` is a league's own season where it differs from everyone else's: calendar-year leagues (Brazil, the USA,
+  // Australia's NPLs…), whose games today always belong to this year's season.
   const live = { season: Number(String(countries[0].season).slice(0, 4)), leagues: {} };
   for (const c of [...COUNTRIES, EUROPE]) for (const lg of [...c.leagues, ...(c.cups || []).filter((x) => !x.until)]) {
-    for (const g of lg.groups || [{ apiId: lg.apiId }]) live.leagues[g.apiId] = { c: c.country, l: lg.id, ...(g.name ? { g: g.name } : {}) };
+    const own = c.calendar || lg.calendar ? seasonFor({ calendar: true }) : null;
+    for (const g of lg.groups || [{ apiId: lg.apiId }]) {
+      live.leagues[g.apiId] = { c: c.country, l: lg.id, ...(g.name ? { g: g.name } : {}), ...(own && own !== live.season ? { s: own } : {}) };
+    }
   }
   await write("data/live-leagues.json", JSON.stringify(live));
 

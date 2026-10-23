@@ -14,6 +14,13 @@ export function classify(desc) {
     const po = /play|round/.test(d) || (/\(relegation\)$/.test(d) && !/^relegation/.test(d));
     return { kind: "down", label: po ? "Relegation play-off" : "Relegation" };
   }
+  // Outside Europe: South American, Asian and North American club competitions. Before the UEFA checks,
+  // because "AFC Champions League" would otherwise read as the UEFA one.
+  if (/libertadores/.test(d)) return { kind: "top", label: /qualif/.test(d) ? "Copa Libertadores qualifiers" : "Copa Libertadores" };
+  if (/sudamericana/.test(d)) return { kind: "mid", label: "Copa Sudamericana" };
+  if (/afc champions league elite|afc champions league(?! 2| two)/.test(d)) return { kind: "top", label: "AFC Champions League Elite" };
+  if (/afc champions league (2|two)/.test(d)) return { kind: "mid", label: "AFC Champions League Two" };
+  if (/concacaf/.test(d)) return { kind: "top", label: "CONCACAF Champions Cup" };
   if (/conference league/.test(d)) return { kind: "mid", label: playoff ? "Conference League play-offs" : "Conference League" };
   if (/europa league/.test(d)) return { kind: "mid", label: playoff ? "Europa League play-offs" : "Europa League" };
   if (/champions league/.test(d)) return { kind: "top", label: /qualif/.test(d) ? "Champions League qualifiers" : "Champions League" };

@@ -143,7 +143,8 @@ export async function tick(env, opts = {}) {
     };
     for (const id of s.pending.slice(0, SCHEDULE_BATCH)) {
       const m = s.leagues[id];
-      const list = await tryApi(`/fixtures?league=${id}&season=${s.season}&date=${s.day}&timezone=UTC`);
+      // A calendar-year league (Brazil, the USA…) carries its own season as `s` in live-leagues.json.
+      const list = await tryApi(`/fixtures?league=${id}&season=${(m && m.s) || s.season}&date=${s.day}&timezone=UTC`);
       if (!list) break;
       for (const x of list) {
         const i = s.fixtures.findIndex((f) => f.id === x.fixture.id);
