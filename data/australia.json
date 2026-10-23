@@ -6,6 +6,7 @@
  "mode": "live",
  "updated": "2026-10-23T00:00:00.000Z",
  "belowNote": "Below the NPL, each state has its own divisions",
+ "systemNote": "There's no promotion or relegation between the A-League and the state leagues. Within each state, clubs move between its NPL and its second division.",
  "leagues": [
   {
    "id": "a-league",
@@ -53,6 +54,19 @@
     },
     {
      "pos": 2,
+     "team": "Brisbane Roar",
+     "p": 1,
+     "w": 1,
+     "d": 0,
+     "l": 0,
+     "gf": 2,
+     "ga": 1,
+     "pts": 3,
+     "tid": 947,
+     "form": "W"
+    },
+    {
+     "pos": 3,
      "team": "Wellington Phoenix",
      "p": 1,
      "w": 1,
@@ -65,7 +79,7 @@
      "form": "W"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Macarthur FC",
      "p": 1,
      "w": 1,
@@ -78,7 +92,7 @@
      "form": "W"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Central Coast Mariners",
      "p": 1,
      "w": 0,
@@ -91,7 +105,7 @@
      "form": "D"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Newcastle Jets",
      "p": 1,
      "w": 0,
@@ -104,7 +118,7 @@
      "form": "D"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Sydney FC",
      "p": 1,
      "w": 0,
@@ -117,7 +131,7 @@
      "form": "D"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Western Sydney Wanderers",
      "p": 1,
      "w": 0,
@@ -130,7 +144,7 @@
      "form": "D"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Adelaide United",
      "p": 0,
      "w": 0,
@@ -142,32 +156,7 @@
      "tid": 948
     },
     {
-     "pos": 9,
-     "team": "Brisbane Roar",
-     "p": 0,
-     "w": 0,
-     "d": 0,
-     "l": 0,
-     "gf": 0,
-     "ga": 0,
-     "pts": 0,
-     "tid": 947
-    },
-    {
      "pos": 10,
-     "team": "Perth Glory",
-     "p": 1,
-     "w": 0,
-     "d": 0,
-     "l": 1,
-     "gf": 1,
-     "ga": 2,
-     "pts": 0,
-     "tid": 940,
-     "form": "L"
-    },
-    {
-     "pos": 11,
      "team": "Melbourne Victory",
      "p": 1,
      "w": 0,
@@ -178,6 +167,19 @@
      "pts": 0,
      "tid": 944,
      "form": "L"
+    },
+    {
+     "pos": 11,
+     "team": "Perth Glory",
+     "p": 2,
+     "w": 0,
+     "d": 0,
+     "l": 2,
+     "gf": 2,
+     "ga": 4,
+     "pts": 0,
+     "tid": 940,
+     "form": "LL"
     },
     {
      "pos": 12,
