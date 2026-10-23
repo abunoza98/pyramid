@@ -89,6 +89,13 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
 <meta property="og:image:alt" content="Football Pyramids: football league tables, from the top flight down.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="${FAVICON}">
+<link rel="manifest" href="${base}manifest.webmanifest">
+<link rel="apple-touch-icon" href="${base}assets/icons/apple-touch-icon.png">
+<meta name="theme-color" content="#F2F4F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E141C" media="(prefers-color-scheme: dark)">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Pyramids">
 <link rel="preload" href="${base}assets/fonts/big-shoulders-display-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${base}assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${base}assets/style.css?v=${VER["style.css"]}">

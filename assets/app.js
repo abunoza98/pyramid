@@ -510,6 +510,17 @@
   });
   function clubRender() { if (window.FP) FP.retime($("main-content"), fxState.tz, COUNTRY); }
 
+  /* ---------- Installable app ----------
+     Registers sw.js so phones can add the site to the home screen and open it offline. Only on the live site
+     (https, or localhost when testing), not in the offline preview build. To switch it off for everyone, replace
+     this register() call with: navigator.serviceWorker.getRegistrations().then(function (rs) { rs.forEach(function (r) { r.unregister(); }); }); */
+  if ("serviceWorker" in navigator && !body.getAttribute("data-index") &&
+      (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("/sw.js").catch(function () {});
+    });
+  }
+
   /* ---------- Start ---------- */
   var arrivedForClub = location.hash === "#club";
   if (arrivedForClub && history.replaceState) history.replaceState(null, "", location.pathname + location.search);
