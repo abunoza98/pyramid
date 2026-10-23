@@ -62,6 +62,21 @@ export function toRounds(list) {
 // Domestic cups: replays are played as separate "rounds" ("3rd Round Replays"); put them back with their round.
 // Then rename rounds: the cup's own map first ("1/128-finals" -> "First round" for the FA Cup), otherwise
 // "1/N-finals" becomes "Round of 2N".
+// A cup's fixture list straight from the API, ready for cupRounds: some "cups" are a stage of a league's fixtures
+// (the MLS Cup playoffs come in league 253 after the regular season). cup.only keeps the rounds matching it, cup.strip
+// is taken off the front of each round name, and rounds matching cup.series are best-of-three series, marked on each
+// game (bo3) so ties are decided on games won rather than goals.
+export function cupStage(list, cup = {}) {
+  const only = cup.only ? new RegExp(cup.only, "i") : null, strip = cup.strip ? new RegExp(cup.strip, "i") : null;
+  const series = cup.series ? new RegExp(cup.series, "i") : null;
+  const out = only ? list.filter((x) => only.test(String(x.round || ""))) : list;
+  for (const x of out) {
+    if (strip) x.round = String(x.round || "").replace(strip, "").trim();
+    if (series && series.test(String(x.round || "")) && x.f) x.f.bo3 = 1;
+  }
+  return out;
+}
+
 export function cupRounds(list, names = {}) {
   for (const x of list) {
     let r = String(x.round || "").trim();

@@ -620,7 +620,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     for (const c of countries) for (const cup of (COUNTRIES.find((x) => x.country === c.country) || {}).cups || []) {
       const past = (cupHistory[c.country] || {})[cup.id] || [];
       const fx = fixtures[`${c.country}/${cup.id}`];
-      const now = fx && fx.groups[0].rounds.length ? { ...summarise(fx.groups[0].rounds, learnLabels(past)), season: fx.season, now: true } : null;
+      const now = fx && fx.groups[0].rounds.length ? { ...summarise(fx.groups[0].rounds, { ...learnLabels(past), ...(cup.dist || {}) }), season: fx.season, now: true } : null;
       const list = [...past, ...(now ? [now] : [])];
       if (list.length) cupSeasons[`${c.country}/${cup.id}`] = { name: cup.name, href: fx ? `${base}${c.country}/${cup.id}/${suffix}` : null, list };
     }
@@ -884,6 +884,8 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   for (const c of [...COUNTRIES, EUROPE]) for (const lg of [...c.leagues, ...(c.cups || []).filter((x) => !x.until)]) {
     const own = c.calendar || lg.calendar ? seasonFor({ calendar: true }) : null;
     for (const g of lg.groups || [{ apiId: lg.apiId }]) {
+      // A cup that's a stage of a league (the MLS playoffs, league 253) shares its ID: the league keeps it.
+      if (lg.only && live.leagues[g.apiId]) continue;
       live.leagues[g.apiId] = { c: c.country, l: lg.id, ...(g.name ? { g: g.name } : {}), ...(own && own !== live.season ? { s: own } : {}) };
     }
   }

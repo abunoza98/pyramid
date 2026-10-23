@@ -42,7 +42,8 @@ export function summarise(rounds, labelDist = {}) {
         const mine = lastLeg.h.id === tm.id ? lastLeg.pen[0] : lastLeg.pen[1], theirs = lastLeg.h.id === tm.id ? lastLeg.pen[1] : lastLeg.pen[0];
         score += `, ${mine}–${theirs} on pens`;
       } else if (t.how === "aet") score += " aet";
-      if (t.legs.length > 1) score += ` over ${t.legs.length} games`;   // two legs, or a replay
+      if (t.series) score = `${tm.agg}–${them.agg} in games`;          // a best-of-three series
+      else if (t.legs.length > 1) score += ` over ${t.legs.length} games`;   // two legs, or a replay
     }
     // A club's furthest round wins; within a round keep the deciding result.
     const prev = clubs[tm.id];

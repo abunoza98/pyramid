@@ -951,6 +951,24 @@
       var teams = [{ id: first.h.id, n: first.h.n, t: first.h.t, tier: first.h.tier, agg: 0 }, { id: first.a.id, n: first.a.n, t: first.a.t, tier: first.a.tier, agg: 0 }];
       var played = false, done = legs.every(function (f) { return isDone(f) || f.st === "AWD" || f.st === "WO"; });
       var on = legs.some(isLive);
+      // Best-of-three series (MLS playoffs, Round One): each game has a winner (on penalties if level), and the
+      // first to two wins goes through. The "aggregate" is games won, not goals.
+      if (legs.some(function (f) { return f.bo3; })) {
+        var gameWinner = function (f) {
+          if (!(isDone(f) || f.st === "AWD" || f.st === "WO") || f.hg == null) return null;
+          var hw = f.hg > f.ag ? true : f.hg < f.ag ? false : f.pen ? f.pen[0] > f.pen[1] : f.w ? f.w === "h" : null;
+          return hw == null ? null : (hw ? f.h.id : f.a.id);
+        };
+        legs.forEach(function (f) {
+          var w = gameWinner(f);
+          if (w == null) return;
+          played = true;
+          teams[w === teams[0].id ? 0 : 1].agg++;
+        });
+        var sw = teams[0].agg >= 2 ? 0 : teams[1].agg >= 2 ? 1 : null;
+        var upsetS = sw != null && teams[sw].tier && teams[1 - sw].tier && teams[sw].tier > teams[1 - sw].tier;
+        return { teams: teams, legs: legs, played: played, done: sw != null, on: on, winner: sw, how: "", upset: upsetS, replay: false, series: true };
+      }
       legs.forEach(function (f) {
         if (f.hg == null || !(isDone(f) || isLive(f) || f.st === "AWD")) return;
         played = true;
@@ -979,7 +997,7 @@
     var ORD = ["1st", "2nd", "3rd", "4th"];
     var cols = multi ? t.legs.length + 1 : 1;
     var head = multi ? '<span class="tie-head" aria-hidden="true"><span></span>' +
-      t.legs.map(function (f, k) { return "<span>" + (ORD[k] || k + 1 + "th") + "</span>"; }).join("") + "<span>Agg</span></span>" : "";
+      t.legs.map(function (f, k) { return "<span>" + (ORD[k] || k + 1 + "th") + "</span>"; }).join("") + "<span>" + (t.series ? "Won" : "Agg") + "</span></span>" : "";
     var row = function (i) {
       var tm = t.teams[i];
       var cells = multi ? t.legs.map(function (f) {
@@ -991,7 +1009,8 @@
     };
     var notes = [];
     t.legs.forEach(function (f, k) {
-      var name = multi ? (ORD[k] || k + 1 + "th") + (t.legs.length === 2 && !t.replay ? " leg" : " game") : "";
+      var name = multi ? (ORD[k] || k + 1 + "th") + (t.legs.length === 2 && !t.replay && !t.series ? " leg" : " game") : "";
+      if (t.series && f.pen && (isDone(f) || f.st === "AWD")) notes.push(name + ": " + (f.pen[0] > f.pen[1] ? f.h.n : f.a.n) + " won " + Math.max(f.pen[0], f.pen[1]) + "–" + Math.min(f.pen[0], f.pen[1]) + " on penalties");
       if (isLive(f)) notes.push((name ? name + " " : "") + "live · " + clock(f, now));
       else if (GONE[f.st]) notes.push((name ? name + ": " : "") + GONE[f.st]);
       else if (!shown(f)) notes.push((name ? name + " " : "") + (f.st === "TBD" ? fmt(f.ts, tz, { weekday: "short", day: "numeric", month: "short" }) + ", time TBC"
