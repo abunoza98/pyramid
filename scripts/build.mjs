@@ -303,6 +303,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   const cupPast = await loadCupFixtureHistory(root);
   const cupPastUrls = [];
   const cupUrls = [];
+  const racesUrls = [];
   // Every club that gets a page: those in the current tables (by club ID), plus clubs only found in past
   // seasons (by name), so any table, current or past, can link to its clubs.
   const index = new Map();          // club ID -> { c, lg, g, r, slug, path }
@@ -416,9 +417,18 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       description: `Every ${c.adjective} league table from ${first} down to ${last} on one page, with promotion and relegation places marked.`,
       canonical: `${SITE}/${c.country}/`, base: "../", suffix, page: "country", country: c.country,
       stamps: { [c.country]: c.updated }, countries, seasons: seasonList(c, history[c.country], "", suffix, null),
-      attrs: { fixtures: fxLinks(false), cups: cupCards(c, "") },
-      main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null), fixtures: fxLinks(false), cups: cupCards(c, "") })
+      attrs: { fixtures: fxLinks(false), cups: cupCards(c, ""), races: `races/${suffix}` },
+      main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null), fixtures: fxLinks(false), cups: cupCards(c, ""), racesHref: `races/${suffix}` })
     }));
+    // Promotion and relegation races: each league's zones and the clubs just outside them, from the current tables.
+    await write(`${c.country}/races/index.html`, shell({
+      title: `${c.adjective} football promotion and relegation races ${c.season} | Football Pyramids`,
+      description: `Who's in the promotion, play-off and relegation places in every ${c.adjective} league covered here, who's just outside, and the points gap at each line.`,
+      canonical: `${SITE}/${c.country}/races/`, base: "../../", suffix, page: "races", country: c.country, stamps: { [c.country]: c.updated }, countries,
+      jsonld: crumbs([["Football Pyramids", SITE + "/"], [c.name, `${SITE}/${c.country}/`], ["Promotion and relegation races", `${SITE}/${c.country}/races/`]]),
+      main: FP.racesMain(c, { root: "../../", suffix, tableHref: `../${suffix}` })
+    }));
+    racesUrls.push(`/${c.country}/races/`);
     // Cup pages
     // Cup pages: this season at /<country>/<cup>/, each past season at /<country>/<cup>/<season>/, with a Seasons
     // picker. A cup with no current season yet (or one that has ended) shows its latest finished season there.
@@ -850,6 +860,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
 ${urls.map(([u, d]) => dated(u, d, "hourly")).join("\n")}
 ${clubUrls.map((u) => dated(u, clubDate(u), "daily")).join("\n")}
 ${cupUrls.map((u) => dated(u, fxDate(u.slice(1, -1)), "daily")).join("\n")}
+${racesUrls.map((u) => dated(u, countryDate[u.split("/")[1]], "daily")).join("\n")}
 ${fxPages.map((k) => dated(`/${k}/fixtures/`, fxDate(k), "daily")).join("\n")}
 ${past.concat(euroPast, cupPastUrls).map((u) => `  <url><loc>${SITE}${u}</loc><changefreq>yearly</changefreq></url>`).join("\n")}
 </urlset>

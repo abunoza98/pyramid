@@ -391,7 +391,8 @@
           ", from " + esc(c.leagues[0].name) + " down to " + esc(last.name) + ". Promotion, play-off and relegation places are marked from each league's records.</p>"
         : '<p class="lede">Every league in the top ' + n + " tiers of " + esc(c.adjective) + " football, from " + esc(c.leagues[0].name) +
           " down to " + esc(last.name) + ". Promotion, play-off and relegation places are marked on every table.</p>") +
-      stampHTML(c.mode, c.updated, c.liveCount) + pyramidHTML(c, "", opts.cups) + "</section>";
+      stampHTML(c.mode, c.updated, c.liveCount) + pyramidHTML(c, "", opts.cups) +
+      (opts.racesHref ? '<a class="tf-tab tf-go races-link" href="' + esc(opts.racesHref) + '">Promotion and relegation races <span aria-hidden="true">→</span></a>' : "") + "</section>";
     c.leagues.forEach(function (lg, i) {
       if (!past) { lg._club = "club/"; lg._suffix = opts.suffix || ""; }
       else if (opts.clubPaths) { lg._paths = opts.clubPaths; lg._root = opts.root || ""; lg._suffix = opts.suffix || ""; }
@@ -399,6 +400,68 @@
       if (i === 1) html += INLINE_AD;
     });
     return html;
+  }
+
+  /* ---------- Promotion and relegation races ----------
+     For each league below the top flight: its promotion and play-off places as configured, plus the two clubs just
+     outside, with the points gap at each cut line. For every league with relegation places: the same at the bottom.
+     Nothing here decides who is "in the race"; the zones come from scripts/leagues.mjs (or the API's labels). */
+  var RACE_OUT = 2;   // clubs shown beyond the last line
+  var PROMO = /promot|play-?off/i, EURO = /champions|europa|conference|uefa/i;
+  function raceRows(lg, rows, side, href) {
+    var zones = (lg.zones || []).filter(function (z) {
+      return side === "up" ? z.kind !== "down" && PROMO.test(z.label) && !EURO.test(z.label) : z.kind === "down";
+    }).sort(function (a, b) { return a.from - b.from; });
+    if (!zones.length || !rows.length) return "";
+    var first = side === "up" ? 1 : Math.max(1, zones[0].from - RACE_OUT);
+    var last = side === "up" ? Math.min(rows.length, zones[zones.length - 1].to + RACE_OUT) : rows.length;
+    // Cut lines sit below each promotion zone, or above each relegation zone.
+    var lines = {};
+    zones.forEach(function (z) { var at = side === "up" ? z.to : z.from - 1; if (at >= 1 && at < rows.length) lines[at] = z; });
+    var out = "";
+    rows.forEach(function (r, i) {
+      if (r.pos < first || r.pos > last) return;
+      var z = zoneOf(lg, r.pos), h = href(r);
+      out += '<li class="rc-row' + (z ? " z-" + z.kind : "") + '"><span class="rc-pos">' + r.pos + (z ? '<span class="sr-only"> (' + esc(z.label) + ")</span>" : "") + "</span>" +
+        '<span class="rc-club">' + (h ? '<a class="club-link" href="' + esc(h) + '">' + esc(r.team) + "</a>" : esc(r.team)) + (r.ded ? ' <span class="ded" title="' + r.ded + ' points deducted">−' + r.ded + "</span>" : "") + "</span>" +
+        '<span class="rc-p" title="Played">' + r.p + '</span><span class="rc-pts">' + r.pts + "</span></li>";
+      var cut = lines[r.pos], below = rows[i + 1];
+      if (cut && below) {
+        var g = r.pts - below.pts;
+        out += '<li class="rc-cut rc-' + side + '"><span>' + esc(cut.label.replace(/-offs$/i, "-off")) + " line</span><b>" +
+          (g === 0 ? "Level on points either side" : g + "-point gap") + "</b>" +
+          (r.p !== below.p ? '<i>' + ord(r.pos) + " has played " + r.p + ", " + ord(below.pos) + " " + below.p + "</i>" : "") + "</li>";
+      }
+    });
+    return out;
+  }
+  // c: a country's current data. opts: { root, suffix, tableHref } (links to club pages and back to the tables).
+  function racesMain(c, opts) {
+    opts = opts || {};
+    var href = function (r) { return r.tid ? (opts.root || "") + c.country + "/club/" + slug(r.team) + "/" + (opts.suffix || "") : null; };
+    var block = function (side) {
+      var html = "";
+      c.leagues.forEach(function (lg) {
+        if (side === "up" && lg.tier === 1) return;     // the top flight's places are European, not promotion
+        groupsOf(lg).forEach(function (g) {
+          var body = raceRows(lg, g.rows, side, href);
+          if (!body) return;
+          html += '<section class="rc"><div class="rc-h"><p>Tier ' + lg.tier + "</p><h3>" + esc(lg.name) + (g.name ? " · " + esc(g.name) : "") + "</h3>" +
+            '<span>' + (lg.final ? "final table" : "as of " + ukTime(g.updated || lg.updated)) + "</span></div>" +
+            '<ol class="rc-list"><li class="rc-row rc-head" aria-hidden="true"><span>Pos</span><span>Club</span><span>P</span><span>Pts</span></li>' + body + "</ol>" + notesHTML(lg) + "</section>";
+        });
+      });
+      return html || '<p class="ko-empty">No ' + (side === "up" ? "promotion" : "relegation") + " places are set for these leagues yet.</p>";
+    };
+    return '<section class="intro" aria-labelledby="intro-h"><p class="eyebrow crumbs"><a href="' + esc(opts.tableHref || "../") + '">' + esc(c.name) + "</a> · " + esc(c.season) + "</p>" +
+      '<h1 id="intro-h">' + esc(c.adjective) + " promotion and relegation races</h1>" +
+      '<p class="lede">Every promotion, play-off and relegation place in the ' + esc(c.adjective) + " leagues covered here, with the clubs just outside them and the points between each side of the line.</p>" +
+      stampHTML(c.mode, c.updated, 0) + "</section>" +
+      '<section class="comp" data-tabs="races"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Races">' +
+      '<button type="button" role="tab" class="tf-tab on" data-tab="up" aria-selected="true">Promotion</button>' +
+      '<button type="button" role="tab" class="tf-tab" data-tab="down" aria-selected="false">Relegation</button></div>' +
+      '<div class="tf-panel on" data-panel="up" role="tabpanel"><div class="rc-grid">' + block("up") + "</div></div>" +
+      '<div class="tf-panel" data-panel="down" role="tabpanel"><div class="rc-grid">' + block("down") + "</div></div></section>";
   }
 
   /* ---------- Flags (simple SVGs, so they look the same on every device) ---------- */
@@ -1358,6 +1421,6 @@
 
   return {
     slug: slug, esc: esc, ukTime: ukTime, clubCount: clubCount, countryClubs: countryClubs, groupsOf: groupsOf,
-    countryMain: countryMain, homeMain: homeMain, summary: summary, flag: flag, fixturesMain: fixturesMain, currentRound: currentRound, compMain: compMain, europeMain: europeMain, cupMain: cupMain, cupStatus: cupStatus, cupSpan: cupSpan, inLeague: inLeague, clubMain: clubMain, retime: retime, compStatus: compStatus, tiesOf: tiesOf, applyLive: applyLive, clock: clock, isLive: isLive
+    countryMain: countryMain, racesMain: racesMain, homeMain: homeMain, summary: summary, flag: flag, fixturesMain: fixturesMain, currentRound: currentRound, compMain: compMain, europeMain: europeMain, cupMain: cupMain, cupStatus: cupStatus, cupSpan: cupSpan, inLeague: inLeague, clubMain: clubMain, retime: retime, compStatus: compStatus, tiesOf: tiesOf, applyLive: applyLive, clock: clock, isLive: isLive
   };
 });
