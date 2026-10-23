@@ -646,6 +646,58 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     };
     // Promotion and relegation, from the tier the club played in the following season. Only marked when that season
     // is on the site too, so a gap in the record (a club below the tiers covered) is never guessed at.
+    // Which tiers each season's saved tables cover, per country (this season included): { country: { tier: Set(years) } }.
+    const coverage = {};
+    for (const c of countries) {
+      const cov = coverage[c.country] = {};
+      const add = (t, y) => (cov[t] ||= new Set()).add(y);
+      for (const l of c.leagues) add(l.tier, Number(String(c.season).slice(0, 4)));
+      for (const h of history[c.country] || []) for (const l of h.leagues) add(l.tier, h.year);
+    }
+    const label = (y) => `${y}–${String((y + 1) % 100).padStart(2, "0")}`;
+    // A line or two of context for the top of a club page, from its journey and nothing else: promoted or relegated
+    // last season, first season back in a division since when, how many seasons in a row. Every statement is checked
+    // against what the saved seasons actually cover, so a gap in our records is never read as a fact about the club
+    // ("since our records begin" rather than "first ever").
+    const contextOf = (c, journey) => {
+      const now = journey[0];
+      if (!now || !now.now) return [];
+      const cov = coverage[c.country] || {}, has = (t, y) => !!(cov[t] && cov[t].has(y));
+      const the = (n) => FP.inLeague(n).slice(3);          // "the Championship", "Serie C", "La Liga"
+      const Y = now.year, T = now.tier, by = new Map(journey.map((x) => [x.year, x]));
+      const prev = by.get(Y - 1);
+      // Facts about the tier use the tier's league name, not this season's regional group ("Serie C", not
+      // "Serie C (Girone A)"): clubs move between groups from year to year.
+      const tierLg = (c.leagues.find((l) => l.tier === T) || {}).name || now.league;
+      const out = [];
+      // The club has just arrived in this tier: when was it last here, as far back as this tier is on record?
+      const back = () => {
+        for (let y = Y - 2; has(T, y); y--) {
+          const x = by.get(y);
+          if (x && x.tier === T) { const away = Y - y - 1; return `Back in ${the(tierLg)} after ${away === 1 ? "one season" : away + " seasons"} away`; }
+        }
+        let first = Y - 1; while (has(T, first - 1)) first--;
+        return has(T, Y - 1) ? `First season in ${the(tierLg)} since our records begin in ${label(first)}` : "";
+      };
+      if (prev && prev.tier !== T) {
+        out.push({ dir: prev.tier > T ? "up" : "down", text: `${prev.tier > T ? "Promoted" : "Relegated"} from ${the(prev.league)} last season` });
+        const b = back(); if (b) out.push({ text: b });
+      } else if (prev) {
+        let k = 1;
+        while (by.get(Y - k) && by.get(Y - k).tier === T) k++;
+        // k seasons in a row. If the season before the run isn't on record for this tier, we only know "since then".
+        out.push({ text: has(T, Y - k) ? `${ordinal(k)} season in a row in ${the(tierLg)}` : `In ${the(tierLg)} every season since our records begin in ${label(Y - k + 1)}` });
+      } else {
+        // Not on record last season, though this tier and every tier above it were: the club came up from below the
+        // divisions covered here (or is new to the league system).
+        let all = true; for (let t = 1; t <= T; t++) if (!has(t, Y - 1)) all = false;
+        if (all) {
+          out.push({ dir: "up", text: `New to ${the(tierLg)}: not in the divisions covered here last season` });
+          const b = back(); if (b && b.indexOf("records begin") < 0) out.push({ text: b });
+        }
+      }
+      return out;
+    };
     const moves = (journey) => {
       const byYear = new Map(journey.map((x) => [x.year, x]));
       for (const x of journey) {
@@ -687,7 +739,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         pos: r.pos, pts: r.pts, p: r.p,
         league: { ...tableOf(c, lg), short: lg.short, group: FP.groupsOf(lg).length > 1 ? g.name : null, rows: g.rows,
           tableHref: `${base}${c.country}/${suffix}#${lg.id}`, _club: `${base}${c.country}/club/`, _suffix: suffix },
-        fx, journey, ladder: laddersOf(c), euro, cupRuns: cupRunsOf(c, r.team, tid)
+        fx, journey, ladder: laddersOf(c), euro, cupRuns: cupRunsOf(c, r.team, tid), context: contextOf(c, journey)
       };
       await write(`${k.path}index.html`, shell({
         title: `${r.team} fixtures, results and table ${c.season} | Football Pyramids`,
