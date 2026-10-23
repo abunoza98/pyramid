@@ -396,6 +396,27 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     written.push(rel);
   };
 
+  // Home page "Up and down" module: for each country, the clubs that moved between its top two divisions since last
+  // season, from last season's saved final tables and this season's (matched by club ID, else by name). Only the
+  // top-flight boundary, to keep it short; a country without last season's top two tiers on record is left out.
+  const movers = [];
+  for (const c of countries) {
+    const Y = Number(String(c.season).slice(0, 4));
+    const last = (history[c.country] || []).find((h) => h.year === Y - 1);
+    if (!last) continue;
+    const rowsOf = (leagues, tier) => leagues.filter((l) => l.tier === tier).flatMap((l) => FP.groupsOf(l).flatMap((g) => g.rows.map((r) => ({ r, l }))));
+    const [was1, was2, now1, now2] = [rowsOf(last.leagues, 1), rowsOf(last.leagues, 2), rowsOf(c.leagues, 1), rowsOf(c.leagues, 2)];
+    if (!was1.length || !was2.length || !now1.length || !now2.length) continue;
+    const same = (a, b) => (a.tid && b.tid ? a.tid === b.tid : FP.slug(a.team) === FP.slug(b.team));
+    const link = (r) => pathByName[c.country]["n:" + FP.slug(r.team)] || null;
+    const up = now1.map(({ r }) => ({ r, was: was2.find((x) => same(x.r, r)) })).filter((x) => x.was)
+      .sort((a, b) => a.was.r.pos - b.was.r.pos).map(({ r, was }) => ({ n: r.team, path: link(r), pos: was.r.pos }));
+    const down = now2.map(({ r }) => ({ r, was: was1.find((x) => same(x.r, r)) })).filter((x) => x.was)
+      .sort((a, b) => a.was.r.pos - b.was.r.pos).map(({ r, was }) => ({ n: r.team, path: link(r), pos: was.r.pos }));
+    if (!up.length && !down.length) continue;
+    movers.push({ country: c.country, name: c.name, featured: !!c.featured, top: now1[0].l.name, second: now2[0].l.name, last: last.season, up, down });
+  }
+
   // Home
   await write("index.html", shell({
     title: "Football Pyramids: league tables from the top flight down",
@@ -403,10 +424,10 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     canonical: SITE + "/", base: "", suffix, page: "home", stamps, countries,
     jsonld: { "@context": "https://schema.org", "@type": "WebSite", name: "Football Pyramids", url: SITE + "/" },
     attrs: { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/${suffix}#fixtures` } : {}) },
-      ...(europe ? { europe: "1", clubpaths: pathsFor(europe.leagues[0]) } : {}), cupsmap: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])) },
+      ...(europe ? { europe: "1", clubpaths: pathsFor(europe.leagues[0]) } : {}), cupsmap: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])), movers },
     main: FP.homeMain(countries.filter((c) => c.featured), "", suffix, countries.filter((c) => !c.featured).map(FP.summary),
       { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/${suffix}#fixtures` } : {}) }, europe,
-        cups: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])), clubPaths: europe ? pathsFor(europe.leagues[0]) : null })
+        cups: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])), clubPaths: europe ? pathsFor(europe.leagues[0]) : null, movers })
   }));
 
   // Country pages
