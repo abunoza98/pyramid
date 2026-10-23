@@ -24,7 +24,14 @@ const SCHEDULE_BATCH = 3;                       // fixture lists fetched per min
 
 export default {
   async scheduled(event, env, ctx) {
-    ctx.waitUntil(tick(env).catch((e) => console.log("tick failed:", e.message)));
+    // If a run fails before anything is saved, keep the reason (shown in /live.json), writing only when it changes.
+    ctx.waitUntil(tick(env).then(async () => {
+      if (await env.LIVE.get("error")) await env.LIVE.delete("error");
+    }).catch(async (e) => {
+      console.log("tick failed:", e.message);
+      const msg = JSON.stringify({ at: new Date().toISOString().slice(0, 13), message: String(e.message || e) });
+      try { if ((await env.LIVE.get("error"))?.slice(0, 200) !== msg.slice(0, 200)) await env.LIVE.put("error", msg); } catch {}
+    }));
   },
 
   async fetch(req, env, ctx) {
@@ -36,7 +43,9 @@ export default {
       const key = new Request(url.origin + "/live.json");
       const hit = await cache.match(key);
       if (hit) return hit;
-      const body = (await env.LIVE.get("state")) || '{"fixtures":[]}';
+      const err = await env.LIVE.get("error");
+      let body = (await env.LIVE.get("state")) || '{"fixtures":[]}';
+      if (err) body = body.replace(/^\{/, '{"runError":' + err + ",");
       const res = new Response(body, {
         headers: { ...cors, "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=20" }
       });
@@ -75,7 +84,8 @@ export async function tick(env, opts = {}) {
     return b.response || [];
   };
   const site = async (p) => {
-    const r = await fetchFn(SITE + p + "?t=" + Math.floor(now / 60000));
+    const r = await fetchFn(SITE + p + "?t=" + Math.floor(now / 60000), { headers: { "user-agent": "footballpyramids-live-worker" } });
+    if (!r.ok) console.log(`site ${p}: HTTP ${r.status}`);
     return r.ok ? r.json() : null;
   };
 
@@ -97,10 +107,18 @@ export async function tick(env, opts = {}) {
     }
   };
 
+  // Fetch the latest state of particular games by ID (finished, stopped or stuck).
+  const settle = async (list) => {
+    for (const x of (await tryApi(`/fixtures?ids=${list.map((f) => f.id).join("-")}`)) || []) {
+      const i = s.fixtures.findIndex((f) => f.id === x.fixture.id);
+      if (i > -1) s.fixtures[i] = { ...fromApi(x, s.leagues[x.league.id] || s.fixtures[i], s.fixtures[i], s.fixtures[i].day), chk: s.fixtures[i].chk };
+    }
+  };
+
   // 1. Today's fixtures, from the leagues the site lists. A few leagues a minute, so we never send a burst.
   if (!s.pending?.length && (s.day !== today || now - s.scheduleAt > SCHEDULE_EVERY_MS)) {
     const cfg = await site("/data/live-leagues.json");
-    if (!cfg) throw new Error("couldn't read live-leagues.json from the site");
+    if (!cfg) throw new Error("couldn't read live-leagues.json from the site (blocked or not deployed?)");
     s.leagues = cfg.leagues;
     s.season = cfg.season;
     s.pending = Object.keys(cfg.leagues);
@@ -171,17 +189,21 @@ export async function tick(env, opts = {}) {
     // Also any game still "not started" well after kick-off (missed while the worker was down, or delayed).
     const gone = !live ? [] : s.fixtures.filter((f) => !seen.has(f.id) &&
       (LIVE.includes(f.st) || (f.st === "NS" && now > f.ko * 1000 + 110 * 60000 && now <= f.ko * 1000 + 4 * 3600000))).slice(0, 20);
-    if (gone.length) {
-      for (const x of (await tryApi(`/fixtures?ids=${gone.map((f) => f.id).join("-")}`)) || []) {
-        const i = s.fixtures.findIndex((f) => f.id === x.fixture.id);
-        if (i > -1) s.fixtures[i] = fromApi(x, s.leagues[x.league.id] || s.fixtures[i], s.fixtures[i], s.fixtures[i].day);
-      }
-    }
+    if (gone.length) await settle(gone);
+  }
+
+  // 3. Safety net: a game still marked live (or not started) two hours or more after kick-off, outside the
+  // window above or after a failed live request, gets its final state fetched. At most once every 10 minutes per game.
+  const stuck = s.fixtures.filter((f) => (LIVE.includes(f.st) || (f.st === "NS" && now <= f.ko * 1000 + 12 * 3600000)) && now > f.ko * 1000 + 120 * 60000 &&
+    now - (f.chk || 0) > 10 * 60000).slice(0, 20);
+  if (stuck.length && !failed) {
+    stuck.forEach((f) => { f.chk = now; });
+    await settle(stuck);
   }
 
   if (failed) console.log("API problem:", failed);
 
-  // 3. Save only if something changed.
+  // 4. Save only if something changed.
   if (JSON.stringify({ ...s, updated: 0, writes: null }) === before) return { wrote: false, state: s };
   if (s.writes.day !== today) s.writes = { day: today, n: 0 };
   if (s.writes.n >= WRITE_CAP) { console.log("daily write cap reached"); return { wrote: false, state: s }; }

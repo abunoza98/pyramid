@@ -4,6 +4,7 @@
 //
 //   node scripts/audit-history.mjs                               report only (no API requests)
 //   API_FOOTBALL_KEY=xxxx node scripts/audit-history.mjs --repair  also rebuild the broken tables
+//   ... --repair --rebuild spain:2017:segunda,croatia:2018   also rebuild these seasons from results
 //
 // What it checks, per table:
 //   - Unfinished: a club has played fewer games than a full season (2 x (clubs - 1)). API-Football sometimes
@@ -67,8 +68,15 @@ export function checkTable(rows, expected) {
   return issues;
 }
 
-// Standings from a season's league results: 3 points a win, then goal difference, goals scored.
-export function tableFromFixtures(list, keep) {
+// Countries that separate clubs level on points by their games against each other first.
+const H2H = new Set(["spain", "italy", "portugal", "croatia", "turkey"]);
+let REBUILD = new Set();
+
+// Standings from a season's league results: 3 points a win, then (h2h) head-to-head points and goal
+// difference between the clubs level, then goal difference and goals scored.
+// opts.allRounds: count every league game (the Scottish split's last five rounds aren't "Regular Season").
+// opts.split: names of the top six after the split, who finish 1-6 whatever their points.
+export function tableFromFixtures(list, keep, opts = {}) {
   const t = new Map();
   const side = (team) => {
     const raw = String(team.name).trim();
@@ -76,11 +84,13 @@ export function tableFromFixtures(list, keep) {
     if (!t.has(team.id)) t.set(team.id, { team: name, tid: team.id, p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, res: [] });
     return t.get(team.id);
   };
-  const games = list.filter((f) => /regular season/i.test(f.league?.round || "Regular Season") && ["FT", "AET", "PEN", "AWD", "WO"].includes(f.fixture?.status?.short)
-    && f.goals?.home != null).sort((a, b) => a.fixture.timestamp - b.fixture.timestamp);
+  const games = list.filter((f) => (opts.allRounds ? !/play-?off/i.test(f.league?.round || "") : /regular season/i.test(f.league?.round || "Regular Season"))
+    && ["FT", "AET", "PEN", "AWD", "WO"].includes(f.fixture?.status?.short) && f.goals?.home != null).sort((a, b) => a.fixture.timestamp - b.fixture.timestamp);
+  const played = [];
   for (const f of games) {
     const h = side(f.teams.home), a = side(f.teams.away);
     const hg = f.goals.home, ag = f.goals.away;
+    played.push({ h: f.teams.home.id, a: f.teams.away.id, hg, ag });
     for (const [me, gf, ga] of [[h, hg, ag], [a, ag, hg]]) {
       me.p++; me.gf += gf; me.ga += ga;
       const r = gf > ga ? "W" : gf < ga ? "L" : "D";
@@ -94,15 +104,46 @@ export function tableFromFixtures(list, keep) {
     if (ded) row.ded = ded;
     return row;
   });
-  rows.sort((a, b) => b.pts - a.pts || (b.gf - b.ga) - (a.gf - a.ga) || b.gf - a.gf || a.team.localeCompare(b.team));
-  rows.forEach((r, i) => { r.pos = i + 1; });
-  // Clubs level on points and goals: leagues that use head-to-head may order these differently.
-  const level = rows.filter((r, i) => rows.some((o, j) => j !== i && o.pts === r.pts));
-  return { rows, ties: level.length > 0 };
+  const overall = (a, b) => (b.gf - b.ga) - (a.gf - a.ga) || b.gf - a.gf || a.team.localeCompare(b.team);
+  // Mini-table between clubs level on points.
+  const mini = (group) => {
+    const ids = new Set(group.map((r) => r.tid)), m = new Map(group.map((r) => [r.tid, { pts: 0, gd: 0, gf: 0 }]));
+    for (const g of played) if (ids.has(g.h) && ids.has(g.a)) {
+      const H = m.get(g.h), A = m.get(g.a);
+      H.gf += g.hg; A.gf += g.ag; H.gd += g.hg - g.ag; A.gd += g.ag - g.hg;
+      if (g.hg > g.ag) H.pts += 3; else if (g.hg < g.ag) A.pts += 3; else { H.pts++; A.pts++; }
+    }
+    return m;
+  };
+  const order = (list) => {
+    list.sort((a, b) => b.pts - a.pts || overall(a, b));
+    if (!opts.h2h) return list;
+    const out = [];
+    for (let i = 0; i < list.length;) {
+      let j = i; while (j < list.length && list[j].pts === list[i].pts) j++;
+      const group = list.slice(i, j);
+      if (group.length > 1) {
+        const m = mini(group);
+        group.sort((a, b) => m.get(b.tid).pts - m.get(a.tid).pts || m.get(b.tid).gd - m.get(a.tid).gd || overall(a, b));
+      }
+      out.push(...group); i = j;
+    }
+    return out;
+  };
+  let sorted;
+  if (opts.split) {
+    const top = rows.filter((r) => opts.split.has(r.team)), rest = rows.filter((r) => !opts.split.has(r.team));
+    sorted = [...order(top), ...order(rest)];
+  } else sorted = order(rows);
+  sorted.forEach((r, i) => { r.pos = i + 1; });
+  const level = sorted.filter((r, i) => sorted.some((o, j) => j !== i && o.pts === r.pts));
+  return { rows: sorted, ties: level.length > 0 && !opts.h2h };
 }
 
 export async function main() {
   const repair = process.argv.includes("--repair");
+  const ri = process.argv.indexOf("--rebuild");
+  REBUILD = new Set(ri > -1 ? String(process.argv[ri + 1] || "").split(",").filter(Boolean) : []);
   const key = process.env.API_FOOTBALL_KEY;
   if (repair && !key) throw new Error("--repair needs API_FOOTBALL_KEY (the GitHub job sets it).");
   let requests = 0;
@@ -147,6 +188,7 @@ export async function main() {
         for (const [gi, g] of groupsOf(lg).entries()) {
           const base = { country: c.name, year, league: lg.name, group: g.name };
           if (isPhase(g)) continue;
+          if (cfg.split && lg.groups && lg.groups.length > 1) continue;   // combined below
           const expected = longest.get(`${lg.id}:${g.rows.length}`);
           const shortened = SHORTENED[`${c.country}:${year}`];
           // Write a fixed table back into the league itself (single-table leagues have no groups array).
@@ -170,14 +212,56 @@ export async function main() {
             // 2. Rebuild from the season's results, keeping deductions already shown.
             const fx = await get(`/fixtures?league=${id}&season=${year}`);
             const keep = new Map(g.rows.filter((r) => r.ded).map((r) => [r.team, r.ded]));
-            const built = tableFromFixtures(fx?.response || [], keep);
+            const built = tableFromFixtures(fx?.response || [], keep, { h2h: H2H.has(c.country) });
             const ok = built.rows.length === g.rows.length && !checkTable(built.rows, expected).some((x) => x.kind === "unfinished");
             if (!ok) { add({ ...base, ...issue, action: `couldn't rebuild (results found for ${built.rows.length} clubs, not all complete): check by hand` }); continue; }
             const top = built.rows.slice(0, 3).map((r) => `${r.pos}. ${r.team} ${r.pts}`).join(", ");
             put(built.rows); changed = true;
             if (keep.size) lg.notes = [...new Set([...(lg.notes || []).filter((n) => !/deducted/.test(n)), ...[...keep].map(([t, d]) => `${t}: ${d} point${d === 1 ? "" : "s"} deducted.`)])];
-            add({ ...base, ...issue, action: `rebuilt from results (${top})${built.ties ? "; clubs level on points are ordered by goal difference, check if this league uses head-to-head" : ""}` });
+            add({ ...base, ...issue, action: `rebuilt from results (${top})${H2H.has(c.country) ? "; ties split by head-to-head" : ""}` });
           }
+        }
+
+        // --rebuild spain:2017:segunda,italy:2017 (country:year or country:year:league): rebuild every full table that season from results, even if it looks
+        // complete (e.g. to redo ties with head-to-head).
+        if (repair && (REBUILD.has(`${c.country}:${year}`) || REBUILD.has(`${c.country}:${year}:${lg.id}`)) && !(lg.groups && lg.groups.length > 1 && cfg.split)) {
+          for (const [gi, g] of groupsOf(lg).entries()) {
+            if (isPhase(g)) continue;
+            const id = lg.groups && apiIds.length === groupsOf(lg).length ? apiIds[gi] : apiIds[0];
+            if (!id) continue;
+            const fx = await get(`/fixtures?league=${id}&season=${year}`);
+            const keep = new Map(g.rows.filter((r) => r.ded).map((r) => [r.team, r.ded]));
+            const built = tableFromFixtures(fx?.response || [], keep, { h2h: H2H.has(c.country) });
+            const base = { country: c.name, year, league: lg.name, group: g.name, kind: "rebuilt" };
+            if (built.rows.length !== g.rows.length || built.rows.some((r) => r.p !== g.rows[0].p && r.p < Math.max(...g.rows.map((x) => x.p)))) {
+              add({ ...base, text: "Asked to rebuild.", action: `results incomplete (${built.rows.length} clubs): kept the saved table` }); continue;
+            }
+            const moved = built.rows.filter((r) => (g.rows.find((x) => x.team === r.team) || {}).pos !== r.pos).map((r) => `${r.team} ${(g.rows.find((x) => x.team === r.team) || {}).pos || "?"}→${r.pos}`);
+            if (lg.groups && lg.groups.length) lg.groups[gi].rows = built.rows; else lg.rows = built.rows;
+            changed = true;
+            add({ ...base, text: "Rebuilt from results with head-to-head tie-breaks.", action: moved.length ? `positions changed: ${moved.join(", ")}` : "no positions changed" });
+          }
+        }
+
+        // Scottish Premiership: the API saves the 33-game table and the two split groups separately. Combine
+        // them into the real 38-game final table: the top six after 33 games finish 1-6, the rest 7-12.
+        if (repair && cfg.split && lg.groups && lg.groups.length > 1 && !CURTAILED.has(year)) {
+          const full = lg.groups.find((g) => g.rows.length === (cfg.clubs || 12));
+          const base = { country: c.name, year, league: lg.name, kind: "split" };
+          if (!full) { add({ ...base, text: "Split season with no 33-game table.", action: "check by hand" }); continue; }
+          const top = new Set(full.rows.filter((r) => r.pos <= cfg.split).map((r) => r.team));
+          const fx = await get(`/fixtures?league=${cfg.apiId}&season=${year}`);
+          const keep = new Map(full.rows.filter((r) => r.ded).map((r) => [r.team, r.ded]));
+          const built = tableFromFixtures(fx?.response || [], keep, { allRounds: true, split: top });
+          const games = new Set(built.rows.map((r) => r.p));
+          if (built.rows.length !== full.rows.length || games.size !== 1 || [...games][0] <= full.rows[0].p) {
+            add({ ...base, text: "Split season.", action: `couldn't combine (results for ${built.rows.length} clubs, games played ${[...games].join("/")}): left as is` }); continue;
+          }
+          lg.rows = built.rows; delete lg.groups;
+          if (Array.isArray(cfg.zones)) lg.zones = cfg.zones;
+          lg.notes = [...new Set([...(lg.notes || []), "After 33 games the league splits in two; the top six finish 1st–6th whatever their points."])];
+          changed = true;
+          add({ ...base, text: "Split season saved as separate tables.", action: `combined into the final ${[...games][0]}-game table (1. ${built.rows[0].team} ${built.rows[0].pts}, 12. ${built.rows[11]?.team})` });
         }
       }
       if (changed) await writeFile(path.join(HIST, c.country, `${year}.json`), JSON.stringify(h, null, 1) + "\n");
@@ -210,9 +294,10 @@ export async function main() {
   }
 
   // Report
-  const order = ["unfinished", "continuity", "withdrawn", "order", "sums", "points", "duplicate", "empty"];
+  const order = ["split", "rebuilt", "unfinished", "continuity", "withdrawn", "order", "sums", "points", "duplicate", "empty"];
   const titles = { unfinished: "Tables that stop before the end of the season", continuity: "Promotion and relegation that don't fit the final positions",
-    order: "Positions out of order", withdrawn: "Clubs that withdrew or were expelled (usually correct)", sums: "Numbers that don't add up", points: "Points that don't match wins and draws", duplicate: "Clubs listed twice", empty: "Empty tables" };
+    order: "Positions out of order", withdrawn: "Clubs that withdrew or were expelled (usually correct)",
+    split: "Scottish Premiership split seasons", rebuilt: "Seasons rebuilt on request", sums: "Numbers that don't add up", points: "Points that don't match wins and draws", duplicate: "Clubs listed twice", empty: "Empty tables" };
   let md = `# Past seasons audit\n\nChecked ${new Date().toISOString().slice(0, 10)}. ${findings.length ? `${findings.length} findings.` : "Nothing found."}` +
     `${repair ? ` Repair mode: ${requests} API requests used.` : " Report only; run with --repair to fix unfinished tables."}\n`;
   for (const k of order) {
