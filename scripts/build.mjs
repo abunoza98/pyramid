@@ -178,7 +178,7 @@ export async function loadCountries(root = ROOT) {
     // A country only appears once its first tables have been fetched.
     let d;
     try { d = JSON.parse(await readFile(path.join(root, "data", cfg.country + ".json"), "utf8")); } catch { continue; }
-    out.push(Object.assign(d, { featured: !!cfg.featured, code: cfg.code }));
+    out.push(Object.assign(d, { featured: !!cfg.featured, code: cfg.code, region: cfg.region }));
   }
   return out;
 }

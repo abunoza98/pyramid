@@ -21,9 +21,10 @@ const RESERVES = "Reserve teams can't be promoted to the same division as their 
 // cups: each country's knockout cups (API-Football league IDs), shown as brackets on /<country>/<cup>/.
 // rounds: the API's round names -> the names fans use (its own naming isn't consistent between cups).
 // featured: shown in the header and with a table on the home page. Others sit under "More".
+// region: europe, south-america, north-america or asia (Australia plays in Asia's confederation). Groups the home page's pyramid picker.
 export const COUNTRIES = [
   {
-    country: "england", featured: true, code: "ENG", name: "England", adjective: "English", apiCountry: "England",
+    country: "england", region: "europe", featured: true, code: "ENG", name: "England", adjective: "English", apiCountry: "England",
     belowNote: "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
     cups: [{ apiId: 45, id: "fa-cup", name: "FA Cup", short: "FAC",
       rounds: { "1st Round Qualifying": "First qualifying round", "2nd Round Qualifying": "Second qualifying round",
@@ -57,7 +58,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "spain", featured: true, code: "ESP", name: "Spain", adjective: "Spanish", apiCountry: "Spain",
+    country: "spain", region: "europe", featured: true, code: "ESP", name: "Spain", adjective: "Spanish", apiCountry: "Spain",
     belowNote: "Promoted clubs from Segunda Federación come up",
     cups: [{ apiId: 143, id: "copa-del-rey", name: "Copa del Rey", short: "CDR", rounds: { "1/128-finals": "Preliminary round", "Round of 128": "First round", "Round of 64": "Second round" } }],
     leagues: [
@@ -78,7 +79,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "germany", featured: true, code: "GER", name: "Germany", adjective: "German", apiCountry: "Germany",
+    country: "germany", region: "europe", featured: true, code: "GER", name: "Germany", adjective: "German", apiCountry: "Germany",
     belowNote: "Regionalliga champions come up, some through a play-off",
     cups: [{ apiId: 81, id: "dfb-pokal", name: "DFB-Pokal", short: "DFB", rounds: { "Round of 64": "First round", "Round of 32": "Second round" } }],
     leagues: [
@@ -97,7 +98,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "france", featured: true, code: "FRA", name: "France", adjective: "French", apiCountry: "France",
+    country: "france", region: "europe", featured: true, code: "FRA", name: "France", adjective: "French", apiCountry: "France",
     belowNote: "Promoted clubs from National 1 come up",
     // The Coupe de la Ligue ended in 2020: past seasons only (`until` is its last season's start year).
     cups: [{ apiId: 66, id: "coupe-de-france", name: "Coupe de France", short: "CDF" },
@@ -121,7 +122,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "italy", featured: true, code: "ITA", name: "Italy", adjective: "Italian", apiCountry: "Italy",
+    country: "italy", region: "europe", featured: true, code: "ITA", name: "Italy", adjective: "Italian", apiCountry: "Italy",
     belowNote: "Serie D group winners come up",
     cups: [{ apiId: 137, id: "coppa-italia", name: "Coppa Italia", short: "CI" }],
     leagues: [
@@ -143,7 +144,7 @@ export const COUNTRIES = [
   },
   // ---------- More pyramids (added October 2026). zones: "api" takes the places from API-Football's own labels. ----------
   {
-    country: "belgium", code: "BEL", name: "Belgium", adjective: "Belgian", apiCountry: "Belgium",
+    country: "belgium", region: "europe", code: "BEL", name: "Belgium", adjective: "Belgian", apiCountry: "Belgium",
     belowNote: "The top amateur clubs come up",
     cups: [{ apiId: 147, id: "belgian-cup", name: "Belgian Cup", short: "BC" }],
     leagues: [
@@ -158,7 +159,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "croatia", code: "CRO", name: "Croatia", adjective: "Croatian", apiCountry: "Croatia",
+    country: "croatia", region: "europe", code: "CRO", name: "Croatia", adjective: "Croatian", apiCountry: "Croatia",
     belowNote: "Treća NL champions come up",
     cups: [{ apiId: 212, id: "croatian-cup", name: "Croatian Cup", short: "HNK" }],
     leagues: [
@@ -175,7 +176,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "netherlands", code: "NED", name: "Netherlands", adjective: "Dutch", apiCountry: "Netherlands",
+    country: "netherlands", region: "europe", code: "NED", name: "Netherlands", adjective: "Dutch", apiCountry: "Netherlands",
     belowNote: "The top Derde Divisie clubs come up",
     cups: [{ apiId: 90, id: "knvb-beker", name: "KNVB Beker", short: "KNVB" }],
     leagues: [
@@ -190,7 +191,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "portugal", code: "POR", name: "Portugal", adjective: "Portuguese", apiCountry: "Portugal",
+    country: "portugal", region: "europe", code: "POR", name: "Portugal", adjective: "Portuguese", apiCountry: "Portugal",
     belowNote: "Liga 3's top clubs come up, one through a play-off",
     cups: [{ apiId: 96, id: "taca-de-portugal", name: "Taça de Portugal", short: "TP", rounds: { "1/128-finals": "First round", "Round of 128": "Second round", "Round of 64": "Third round" } }],
     leagues: [
@@ -203,7 +204,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "scotland", code: "SCO", name: "Scotland", adjective: "Scottish", apiCountry: "Scotland",
+    country: "scotland", region: "europe", code: "SCO", name: "Scotland", adjective: "Scottish", apiCountry: "Scotland",
     belowNote: "The Highland/Lowland League play-off winner can come up",
     cups: [{ apiId: 181, id: "scottish-cup", name: "Scottish Cup", short: "SC",
       rounds: { "1st Round": "First round", "Round of 128": "Second round", "Round of 64": "Third round", "Round of 32": "Fourth round", "Round of 16": "Fifth round" } }, { apiId: 185, id: "scottish-league-cup", name: "Scottish League Cup", short: "SLC", rounds: { "Group Stage": "Group stage" } }],
@@ -227,7 +228,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "turkey", code: "TUR", name: "Turkey", adjective: "Turkish", apiCountry: "Turkey",
+    country: "turkey", region: "europe", code: "TUR", name: "Turkey", adjective: "Turkish", apiCountry: "Turkey",
     belowNote: "Regional amateur league champions come up",
     cups: [{ apiId: 206, id: "turkish-cup", name: "Turkish Cup", short: "TC" }],
     leagues: [
@@ -249,7 +250,7 @@ export const COUNTRIES = [
   },
   // ---------- More pyramids (added October 2026, from the Scan leagues run of 23 October). ----------
   {
-    country: "switzerland", code: "SUI", name: "Switzerland", adjective: "Swiss", apiCountry: "Switzerland",
+    country: "switzerland", region: "europe", code: "SUI", name: "Switzerland", adjective: "Swiss", apiCountry: "Switzerland",
     belowNote: "The top 2. Liga Interregional clubs come up",
     leagues: [
       // The API's labels on this table are for the split ("Play-offs", "Relegation Play-offs"), not real places.
@@ -271,7 +272,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "austria", code: "AUT", name: "Austria", adjective: "Austrian", apiCountry: "Austria",
+    country: "austria", region: "europe", code: "AUT", name: "Austria", adjective: "Austrian", apiCountry: "Austria",
     belowNote: "Landesliga champions come up",
     leagues: [
       // The API's labels here are for the split groups, not real places, so only relegation is marked.
@@ -291,7 +292,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "greece", code: "GRE", name: "Greece", adjective: "Greek", apiCountry: "Greece",
+    country: "greece", region: "europe", code: "GRE", name: "Greece", adjective: "Greek", apiCountry: "Greece",
     belowNote: "Gamma Ethniki group winners come up",
     leagues: [
       { apiId: 197, id: "greek-super-league", tier: 1, name: "Super League", short: "SL1", clubs: 14,
@@ -306,7 +307,7 @@ export const COUNTRIES = [
   },
   // calendar: true for countries whose season runs within one year (see scripts/season.mjs).
   {
-    country: "brazil", calendar: true, code: "BRA", name: "Brazil", adjective: "Brazilian", apiCountry: "Brazil",
+    country: "brazil", region: "south-america", calendar: true, code: "BRA", name: "Brazil", adjective: "Brazilian", apiCountry: "Brazil",
     belowNote: "Clubs qualify for Série D through their state championships",
     names: { "Athletic Club": "Athletic Club", "Atletico Paranaense": "Athletico Paranaense", "Atletico-MG": "Atlético Mineiro",
       "Sao Paulo": "São Paulo", "Vasco DA Gama": "Vasco da Gama", "Gremio": "Grêmio", "Vitoria": "Vitória",
@@ -328,7 +329,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "argentina", calendar: true, code: "ARG", name: "Argentina", adjective: "Argentine", apiCountry: "Argentina",
+    country: "argentina", region: "south-america", calendar: true, code: "ARG", name: "Argentina", adjective: "Argentine", apiCountry: "Argentina",
     belowNote: "Promoted clubs from Primera D come up",
     names: { "Estudiantes L.P.": "Estudiantes", "Velez Sarsfield": "Vélez Sarsfield", "Talleres Cordoba": "Talleres", "Lanus": "Lanús",
       "Union Santa Fe": "Unión", "Instituto Cordoba": "Instituto", "Gimnasia M.": "Gimnasia (Mendoza)",
@@ -358,7 +359,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "china", calendar: true, code: "CHN", name: "China", adjective: "Chinese", apiCountry: "China",
+    country: "china", region: "asia", calendar: true, code: "CHN", name: "China", adjective: "Chinese", apiCountry: "China",
     belowNote: "China League Two's top clubs come up",
     names: { "SHANGHAI SIPG": "Shanghai Port", "Shandong Luneng": "Shandong Taishan", "Hangzhou Greentown": "Zhejiang FC",
       "Henan Jianye": "Henan FC", "Tianjin Teda": "Tianjin Jinmen Tiger", "Chengdu Better City": "Chengdu Rongcheng" },
@@ -371,7 +372,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "australia", code: "AUS", name: "Australia", adjective: "Australian", apiCountry: "Australia",
+    country: "australia", region: "asia", code: "AUS", name: "Australia", adjective: "Australian", apiCountry: "Australia",
     belowNote: "Below the NPL, each state has its own divisions",
     names: { "Sydney": "Sydney FC", "Auckland": "Auckland FC", "Macarthur": "Macarthur FC", "Lions": "Lions FC",
       "Olympic": "Brisbane Olympic", "Perth": "Perth SC" },
@@ -391,7 +392,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "indonesia", code: "IDN", name: "Indonesia", adjective: "Indonesian", apiCountry: "Indonesia",
+    country: "indonesia", region: "asia", code: "IDN", name: "Indonesia", adjective: "Indonesian", apiCountry: "Indonesia",
     belowNote: "Championship (second tier) clubs come up; API-Football doesn't have its tables yet",
     names: { "Persepam Madura Utd": "Madura United", "Pusamania Borneo": "Borneo FC" },
     leagues: [
@@ -402,7 +403,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "usa", calendar: true, code: "USA", name: "USA", adjective: "American", apiCountry: "USA",
+    country: "usa", region: "north-america", calendar: true, code: "USA", name: "USA", adjective: "American", apiCountry: "USA",
     belowNote: "There's no promotion or relegation between US leagues; these are the professional divisions from the top",
     names: { "Los Angeles Galaxy": "LA Galaxy", "San Diego": "San Diego FC", "Austin": "Austin FC", "Charlotte": "Charlotte FC",
       "Atlanta United FC": "Atlanta United", "Minnesota United FC": "Minnesota United", "DC United": "D.C. United",
@@ -422,7 +423,7 @@ export const COUNTRIES = [
     ]
   },
   {
-    country: "mexico", code: "MEX", name: "Mexico", adjective: "Mexican", apiCountry: "Mexico",
+    country: "mexico", region: "north-america", code: "MEX", name: "Mexico", adjective: "Mexican", apiCountry: "Mexico",
     belowNote: "Promotion between Liga Premier and the Liga de Expansión is suspended",
     names: { "Club America": "América", "Guadalajara Chivas": "Guadalajara", "U.N.A.M. - Pumas": "Pumas UNAM",
       "Club Queretaro": "Querétaro", "Atletico San Luis": "Atlético San Luis", "Leon": "León", "FC Juarez": "FC Juárez",

@@ -48,7 +48,12 @@
     return null;
   }
   function groupsOf(lg) { return lg.groups && lg.groups.length ? lg.groups : [{ name: "", rows: lg.rows || [] }]; }
-  function clubCount(lg) { return groupsOf(lg).reduce(function (n, g) { return n + g.rows.length; }, 0); }
+  // Each club once, even when a later stage's groups repeat it (Brazil's Série C second stage).
+  function clubCount(lg) {
+    var seen = {}, n = 0;
+    groupsOf(lg).forEach(function (g) { g.rows.forEach(function (r) { var k = r.tid || r.team; if (!seen[k]) { seen[k] = 1; n++; } }); });
+    return n;
+  }
   function countryClubs(c) { return c.leagues.reduce(function (n, lg) { return n + clubCount(lg); }, 0); }
 
   // Play-off results, worked out by scripts/build.mjs from the next season's tables.
@@ -479,7 +484,18 @@
     portugal: '<rect width="30" height="20" fill="#FF0000"/><rect width="12" height="20" fill="#006600"/><circle cx="12" cy="10" r="3.6" fill="none" stroke="#FFE000" stroke-width="1.4"/>',
     scotland: '<rect width="30" height="20" fill="#0065BD"/><path d="M0 0L30 20M30 0L0 20" stroke="#fff" stroke-width="3.6"/>',
     turkey: '<rect width="30" height="20" fill="#E30A17"/><circle cx="11" cy="10" r="5" fill="#fff"/><circle cx="12.25" cy="10" r="4" fill="#E30A17"/>' +
-      '<path d="M15.6 10l3.7-1.2-2.3 3.15V8.05l2.3 3.15z" fill="#fff"/>'
+      '<path d="M15.6 10l3.7-1.2-2.3 3.15V8.05l2.3 3.15z" fill="#fff"/>',
+    switzerland: '<rect width="30" height="20" fill="#DA291C"/><path d="M13.25 4.5h3.5v3.75h3.75v3.5h-3.75v3.75h-3.5v-3.75H9.5v-3.5h3.75z" fill="#fff"/>',
+    austria: '<rect width="30" height="20" fill="#C8102E"/><rect y="6.67" width="30" height="6.67" fill="#fff"/>',
+    greece: '<rect width="30" height="20" fill="#0D5EAF"/><rect y="2.22" width="30" height="2.22" fill="#fff"/><rect y="6.66" width="30" height="2.22" fill="#fff"/><rect y="11.10" width="30" height="2.22" fill="#fff"/><rect y="15.54" width="30" height="2.22" fill="#fff"/><rect width="11.11" height="11.11" fill="#0D5EAF"/><path d="M4.44 0h2.22v11.11H4.44zM0 4.44h11.11v2.22H0z" fill="#fff"/>',
+    brazil: '<rect width="30" height="20" fill="#009C3B"/><path d="M15 2.2L27.4 10 15 17.8 2.6 10z" fill="#FFDF00"/><circle cx="15" cy="10" r="4.6" fill="#002776"/><path d="M10.6 9.1q4.4-1.2 8.9 1.9" stroke="#fff" stroke-width="0.9" fill="none"/>',
+    argentina: '<rect width="30" height="20" fill="#74ACDF"/><rect y="6.67" width="30" height="6.67" fill="#fff"/><circle cx="15" cy="10" r="1.9" fill="#F6B40E" stroke="#85340A" stroke-width="0.3"/>',
+    china: '<rect width="30" height="20" fill="#EE1C25"/><path d="M5.00 2.00L5.67 4.07L7.85 4.07L6.09 5.35L6.76 7.43L5.00 6.15L3.24 7.43L3.91 5.35L2.15 4.07L4.33 4.07z" fill="#FFFF00"/><path d="M10.39 1.08L10.33 1.80L11.00 2.09L10.29 2.25L10.22 2.97L9.85 2.35L9.14 2.52L9.62 1.97L9.25 1.34L9.91 1.63zM12.71 3.29L12.38 3.94L12.89 4.45L12.17 4.34L11.84 4.99L11.73 4.27L11.01 4.16L11.66 3.83L11.55 3.11L12.06 3.62zM12.94 6.66L12.37 7.11L12.62 7.79L12.01 7.38L11.44 7.83L11.64 7.13L11.04 6.72L11.76 6.70L11.97 6.00L12.21 6.68zM10.36 8.07L10.32 8.79L11.00 9.05L10.30 9.24L10.26 9.97L9.86 9.36L9.16 9.54L9.62 8.98L9.22 8.37L9.90 8.63z" fill="#FFFF00"/>',
+    japan: '<rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#BC002D"/>',
+    indonesia: '<rect width="30" height="20" fill="#fff"/><rect width="30" height="10" fill="#CE1126"/>',
+    mexico: '<rect width="30" height="20" fill="#CE1126"/><rect width="20" height="20" fill="#fff"/><rect width="10" height="20" fill="#006847"/><circle cx="15" cy="10" r="2.6" fill="#8C6239"/><circle cx="15" cy="10" r="1.3" fill="#006847"/>',
+    usa: '<rect width="30" height="20" fill="#B22234"/><rect y="1.54" width="30" height="1.54" fill="#fff"/><rect y="4.62" width="30" height="1.54" fill="#fff"/><rect y="7.69" width="30" height="1.54" fill="#fff"/><rect y="10.77" width="30" height="1.54" fill="#fff"/><rect y="13.85" width="30" height="1.54" fill="#fff"/><rect y="16.92" width="30" height="1.54" fill="#fff"/><rect width="12" height="10.77" fill="#3C3B6E"/><circle cx="1.10" cy="1.30" r="0.45" fill="#fff"/><circle cx="3.10" cy="1.30" r="0.45" fill="#fff"/><circle cx="5.10" cy="1.30" r="0.45" fill="#fff"/><circle cx="7.10" cy="1.30" r="0.45" fill="#fff"/><circle cx="9.10" cy="1.30" r="0.45" fill="#fff"/><circle cx="11.10" cy="1.30" r="0.45" fill="#fff"/><circle cx="2.10" cy="3.35" r="0.45" fill="#fff"/><circle cx="4.10" cy="3.35" r="0.45" fill="#fff"/><circle cx="6.10" cy="3.35" r="0.45" fill="#fff"/><circle cx="8.10" cy="3.35" r="0.45" fill="#fff"/><circle cx="10.10" cy="3.35" r="0.45" fill="#fff"/><circle cx="1.10" cy="5.40" r="0.45" fill="#fff"/><circle cx="3.10" cy="5.40" r="0.45" fill="#fff"/><circle cx="5.10" cy="5.40" r="0.45" fill="#fff"/><circle cx="7.10" cy="5.40" r="0.45" fill="#fff"/><circle cx="9.10" cy="5.40" r="0.45" fill="#fff"/><circle cx="11.10" cy="5.40" r="0.45" fill="#fff"/><circle cx="2.10" cy="7.45" r="0.45" fill="#fff"/><circle cx="4.10" cy="7.45" r="0.45" fill="#fff"/><circle cx="6.10" cy="7.45" r="0.45" fill="#fff"/><circle cx="8.10" cy="7.45" r="0.45" fill="#fff"/><circle cx="10.10" cy="7.45" r="0.45" fill="#fff"/><circle cx="1.10" cy="9.50" r="0.45" fill="#fff"/><circle cx="3.10" cy="9.50" r="0.45" fill="#fff"/><circle cx="5.10" cy="9.50" r="0.45" fill="#fff"/><circle cx="7.10" cy="9.50" r="0.45" fill="#fff"/><circle cx="9.10" cy="9.50" r="0.45" fill="#fff"/><circle cx="11.10" cy="9.50" r="0.45" fill="#fff"/>',
+    australia: '<rect width="30" height="20" fill="#012169"/><rect width="15" height="10" fill="#012169"/><path d="M0 0L15 10M15 0L0 10" stroke="#fff" stroke-width="2"/><path d="M0 0L15 10M15 0L0 10" stroke="#C8102E" stroke-width="0.7"/><path d="M7.5 0v10M0 5h15" stroke="#fff" stroke-width="3.2"/><path d="M7.5 0v10M0 5h15" stroke="#C8102E" stroke-width="1.8"/><path d="M7.50 12.60L7.97 14.03L9.38 13.50L8.55 14.76L9.84 15.53L8.34 15.67L8.54 17.16L7.50 16.08L6.46 17.16L6.66 15.67L5.16 15.53L6.45 14.76L5.62 13.50L7.03 14.03z" fill="#fff"/><path d="M22.50 15.10L22.73 15.81L23.44 15.55L23.03 16.18L23.67 16.57L22.92 16.64L23.02 17.38L22.50 16.84L21.98 17.38L22.08 16.64L21.33 16.57L21.97 16.18L21.56 15.55L22.27 15.81zM18.20 8.00L18.43 8.71L19.14 8.45L18.73 9.08L19.37 9.47L18.62 9.54L18.72 10.28L18.20 9.74L17.68 10.28L17.78 9.54L17.03 9.47L17.67 9.08L17.26 8.45L17.97 8.71zM22.50 2.20L22.73 2.91L23.44 2.65L23.03 3.28L23.67 3.67L22.92 3.74L23.02 4.48L22.50 3.94L21.98 4.48L22.08 3.74L21.33 3.67L21.97 3.28L21.56 2.65L22.27 2.91zM26.30 6.90L26.53 7.61L27.24 7.35L26.83 7.98L27.47 8.37L26.72 8.44L26.82 9.18L26.30 8.64L25.78 9.18L25.88 8.44L25.13 8.37L25.77 7.98L25.36 7.35L26.07 7.61z" fill="#fff"/><path d="M24.20 10.60L24.33 11.01L24.77 11.01L24.42 11.27L24.55 11.69L24.20 11.43L23.85 11.69L23.98 11.27L23.63 11.01L24.07 11.01z" fill="#fff"/>'
   };
   function flag(country) {
     var f = FLAGS[country];
@@ -489,7 +505,7 @@
   // A country's summary for the home page: enough to draw its pyramid and card without the tables.
   function summary(c) {
     return {
-      country: c.country, name: c.name, adjective: c.adjective, code: c.code, featured: !!c.featured,
+      country: c.country, name: c.name, adjective: c.adjective, code: c.code, featured: !!c.featured, region: c.region || null,
       tiers: c.leagues.length, clubs: countryClubs(c), sizes: c.leagues.map(clubCount),
       leagues: c.leagues.map(function (lg) {
         return { id: lg.id, tier: lg.tier, name: lg.name, short: lg.short, clubs: clubCount(lg), groupCount: lg.groups ? lg.groups.length : 0,
@@ -545,10 +561,37 @@
       }).join("") + "</ul></section>";
   }
 
-  // The pyramid explorer: a flag for each country, and that country's pyramid.
+  // The order of the pyramid picker: the featured countries as listed, then the European competitions, then the
+  // rest of Europe, South America, North America and Asia, each A–Z. Each later group gets a small label.
+  var XP_GROUPS = [
+    { label: "", has: function (s) { return s.featured; } },
+    { label: "", has: function (s) { return s.country === "europe"; } },
+    { label: "More of Europe", has: function (s) { return s.region === "europe"; } },
+    { label: "South America", has: function (s) { return s.region === "south-america"; } },
+    { label: "North America", has: function (s) { return s.region === "north-america"; } },
+    { label: "Asia & Oceania", has: function (s) { return s.region === "asia"; } }
+  ];
+  function explorerOrder(all) {
+    var left = all.slice(), out = [];
+    XP_GROUPS.forEach(function (g, gi) {
+      var mine = left.filter(g.has);
+      left = left.filter(function (s) { return mine.indexOf(s) < 0; });
+      if (gi > 1) mine.sort(function (a, b) { return a.name.localeCompare(b.name); });
+      mine.forEach(function (s, i) { out.push({ s: s, label: i === 0 ? g.label : "" }); });
+    });
+    left.sort(function (a, b) { return a.name.localeCompare(b.name); });   // a country with no region yet goes last
+    left.forEach(function (s) { out.push({ s: s, label: "" }); });
+    return out;
+  }
+
+  // The pyramid explorer: a sideways-scrolling row with a flag for each country, and that country's pyramid.
   function explorerHTML(all, base, suffix, cupsBy) {
-    var tabs = all.map(function (s, i) {
-      return '<button type="button" role="tab" class="xp-tab' + (i === 0 ? " on" : "") + '" data-tab="' + s.country + '" aria-selected="' + (i === 0) + '">' +
+    var order = explorerOrder(all);
+    all = order.map(function (x) { return x.s; });
+    var tabs = order.map(function (x, i) {
+      var s = x.s;
+      return (x.label ? '<span class="xp-group" aria-hidden="true">' + esc(x.label) + "</span>" : "") +
+        '<button type="button" role="tab" class="xp-tab' + (i === 0 ? " on" : "") + '" data-tab="' + s.country + '" aria-selected="' + (i === 0) + '">' +
         flag(s.country) + "<span>" + esc(s.name) + "</span></button>";
     }).join("");
     var panels = all.map(function (s, i) {
@@ -560,7 +603,10 @@
         '<a class="more" href="' + href + '">' + (eu ? "Open the European tables and brackets" : "Open every " + esc(s.adjective) + " table") + ' <span aria-hidden="true">→</span></a></div>';
     }).join("");
     return '<section class="explorer" data-tabs="pyramid" aria-labelledby="xp-h"><h2 class="section-h" id="xp-h">Pick a pyramid</h2>' +
-      '<div class="xp"><div class="xp-tabs" role="tablist" aria-label="Countries">' + tabs + "</div>" +
+      '<div class="xp"><div class="xp-wheel">' +
+      '<button type="button" class="xp-arrow prev" data-xp-scroll="-1" aria-label="Scroll the countries left" disabled><span aria-hidden="true">‹</span></button>' +
+      '<div class="xp-tabs" role="tablist" aria-label="Countries">' + tabs + "</div>" +
+      '<button type="button" class="xp-arrow next" data-xp-scroll="1" aria-label="Scroll the countries right"><span aria-hidden="true">›</span></button></div>' +
       '<div class="xp-panels">' + panels + "</div></div></section>";
   }
 

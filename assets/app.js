@@ -246,7 +246,13 @@
     document.querySelectorAll("#main-content details").forEach(function (d) { var k = key(d); if (k) open[k] = d.open; });
     // The home page's club search is moved across rather than redrawn, so typing (and focus) survives a live update.
     var heroFind = $("hero-find-box");
+    // The country picker keeps its sideways scroll position through the redraw.
+    var wheel = document.querySelector("#main-content .xp-tabs"), wheelX = wheel ? wheel.scrollLeft : 0;
     $("main-content").innerHTML = html;
+    if (wheel && document.querySelector("#main-content .xp-tabs")) {
+      document.querySelector("#main-content .xp-tabs").scrollLeft = wheelX;
+      requestAnimationFrame(wheels);
+    }
     if (heroFind && $("hero-find-box")) $("hero-find-box").replaceWith(heroFind);
     document.querySelectorAll("#main-content details").forEach(function (d) {
       var k = key(d);
@@ -317,6 +323,38 @@
       history.replaceState(null, "", location.pathname + location.search + (b.getAttribute("data-tab") === "fx" ? "#fixtures" : ""));
     }
   });
+  /* ---------- The home page's country picker: a sideways-scrolling row with arrows for mouse users ---------- */
+  function wheelArrows(row) {
+    var wheel = row.parentNode, max = row.scrollWidth - row.clientWidth;
+    var prev = wheel.querySelector(".xp-arrow.prev"), next = wheel.querySelector(".xp-arrow.next");
+    if (prev) prev.disabled = row.scrollLeft <= 2;
+    if (next) next.disabled = row.scrollLeft >= max - 2;
+  }
+  function wheels() { document.querySelectorAll(".xp-tabs").forEach(wheelArrows); }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("[data-xp-scroll]");
+    if (!a) return;
+    var row = a.parentNode.querySelector(".xp-tabs");
+    row.scrollBy({ left: Number(a.getAttribute("data-xp-scroll")) * row.clientWidth * 0.8, behavior: "smooth" });
+  });
+  // Scroll events don't bubble, so listen in the capture phase.
+  document.addEventListener("scroll", function (e) {
+    if (e.target && e.target.classList && e.target.classList.contains("xp-tabs")) wheelArrows(e.target);
+  }, true);
+  window.addEventListener("resize", wheels);
+  // On first load, bring the chosen country into view.
+  function showChosen() {
+    document.querySelectorAll(".xp-tabs").forEach(function (row) {
+      var on = row.querySelector(".xp-tab.on");
+      if (!on) return;
+      var l = on.offsetLeft - row.offsetLeft, r = l + on.offsetWidth;
+      if (l < row.scrollLeft || r > row.scrollLeft + row.clientWidth) row.scrollLeft = l - 24;
+      wheelArrows(row);
+    });
+  }
+  showChosen();
+
+
   // Arriving at /<competition>/#fixtures (old fixtures pages redirect here) opens that tab.
   var FX_TABS = ["stage", "cup"];
   if (location.hash === "#fixtures") { FX_TABS.forEach(function (k) { tabState[k] = "fx"; }); applyTabs(); }

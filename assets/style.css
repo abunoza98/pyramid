@@ -613,7 +613,31 @@ body.no-ads main { justify-self: center !important; }
 
 /* Pyramid explorer */
 .xp { display: grid; gap: 14px; }
-.xp-tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
+/* The country picker: one row that scrolls sideways, on every screen size. */
+.xp-wheel { position: relative; display: flex; align-items: center; gap: 4px; min-width: 0; }
+.xp-tabs {
+  display: flex; align-items: center; gap: 6px; flex: 1; min-width: 0; overflow-x: auto; padding: 2px 2px 6px;
+  -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; scroll-padding-inline: 24px; overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  /* Fade the ends so it's clear there's more to scroll to. */
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+}
+.xp-tabs .xp-tab { scroll-snap-align: start; }
+.xp-group {
+  flex: none; align-self: stretch; display: flex; align-items: center; margin-left: 10px; padding: 0 2px 0 12px;
+  border-left: 1px solid var(--rule); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); white-space: nowrap;
+}
+.xp-arrow {
+  display: none; flex: none; width: 34px; height: 34px; border-radius: 50%; cursor: pointer;
+  font-size: 22px; line-height: 1; color: var(--ink); background: var(--sheet); border: 1px solid var(--rule);
+}
+.xp-arrow:hover:not(:disabled) { border-color: var(--accent); }
+.xp-arrow:disabled { opacity: 0.35; cursor: default; }
+.xp-arrow:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* Arrows only where there's a mouse: touch screens swipe. */
+@media (hover: hover) and (pointer: fine) { .js .xp-arrow { display: inline-flex; align-items: center; justify-content: center; } }
 .xp-tab {
   display: inline-flex; align-items: center; gap: 9px; flex: none; padding: 8px 12px; cursor: pointer;
   font-family: var(--display); font-weight: 700; font-size: 17px; letter-spacing: 0.04em; text-transform: uppercase;
@@ -630,10 +654,6 @@ body.no-ads main { justify-self: center !important; }
 .xp-head h2 .flag { width: 30px; height: 20px; }
 .xp-head p { margin: 0; font-size: 14px; color: var(--muted); }
 .xp-panel .pyr { margin: 0; }
-@media (min-width: 820px) {
-  .xp { grid-template-columns: 190px minmax(0, 1fr); gap: 22px; align-items: start; }
-  .xp-tabs { flex-direction: column; overflow: visible; padding: 0; }
-}
 
 /* Top-flight tabs */
 .tf-tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
