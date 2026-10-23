@@ -58,7 +58,7 @@ Each country's knockout cups are listed under `cups` in `leagues.mjs` (API-Footb
 
 ## Live scores
 
-`worker/live.js` is a separate Cloudflare Worker at live.footballpyramids.com. Every minute it checks today's fixtures for every league on the site (it reads `data/live-leagues.json`, which `build.mjs` writes) and, only while a game is on, asks API-Football for live scores. It saves them in a KV namespace and serves them at `/live.json`. The country and home pages read that every 30 seconds during games, lay the scores over the official tables and re-sort them ("as it stands"). Each fixture remembers how many games each club had played before kick-off, so a result is never counted twice once the official table catches up. Set `LIVE_URL` to `""` in `leagues.mjs` to switch it off.
+`worker/live.js` is a separate Cloudflare Worker (footballpyramids-live, on its workers.dev address). Every minute it checks today's fixtures for every league on the site (it reads `data/live-leagues.json`, which `build.mjs` writes) and, only while a game is on, asks API-Football for live scores. It saves them in a KV namespace and serves them at `/live.json`. The country and home pages read that every 30 seconds during games, lay the scores over the official tables and re-sort them ("as it stands"). Each fixture remembers how many games each club had played before kick-off, so a result is never counted twice once the official table catches up. Set `LIVE_URL` to `""` in `leagues.mjs` to switch it off.
 
 ## Testing without a key
 

@@ -1,12 +1,17 @@
 name: Audit past seasons
 
 on:
+  # Run by hand: Actions > Audit past seasons > Run workflow.
   workflow_dispatch:
     inputs:
       repair:
         description: "Fix unfinished tables (uses API requests). Untick for a report only."
         type: boolean
         default: true
+      rebuild:
+        description: "Also rebuild these seasons from results (country:year or country:year:league, comma-separated). Leave empty normally."
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -29,7 +34,7 @@ jobs:
       - name: Check every past season
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
-        run: node scripts/audit-history.mjs ${{ inputs.repair && '--repair' || '' }}
+        run: node scripts/audit-history.mjs ${{ inputs.repair && '--repair' || '' }} ${{ inputs.rebuild && format('--rebuild {0}', inputs.rebuild) || '' }}
 
       - name: Show the report
         run: cat data/history/AUDIT.md >> "$GITHUB_STEP_SUMMARY"

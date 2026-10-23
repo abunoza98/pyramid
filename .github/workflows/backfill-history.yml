@@ -31,6 +31,11 @@ jobs:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: node scripts/backfill-history.mjs
 
+      - name: Check new seasons and fix any unfinished tables
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: node scripts/audit-history.mjs --repair
+
       - name: Fetch past European seasons (only ones not already saved)
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
