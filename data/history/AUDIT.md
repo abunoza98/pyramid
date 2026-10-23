@@ -1,17 +1,10 @@
 # Past seasons audit
 
-Checked 2026-10-23. 77 findings. Repair mode: 34 API requests used.
+Checked 2026-10-23. 75 findings. Repair mode: 27 API requests used.
 
-## Scottish Premiership split seasons (14)
+## Scottish Premiership split seasons (7)
 
 - **Scotland 2010–11, Premiership**: Split season. _couldn't combine (results for 12 clubs, games played 33/36/35/34): left as is._
-- **Scotland 2011–12, Premiership**: Split season saved as separate tables. _combined into the final 38-game table (1. Celtic 93, 12. Dunfermline)._
-- **Scotland 2012–13, Premiership**: Split season saved as separate tables. _combined into the final 38-game table (1. Celtic 79, 12. Dundee)._
-- **Scotland 2013–14, Premiership**: Split season saved as separate tables. _combined into the final 38-game table (1. Celtic 99, 12. Hibernian)._
-- **Scotland 2014–15, Premiership**: Split season saved as separate tables. _combined into the final 38-game table (1. Celtic 92, 12. St Mirren)._
-- **Scotland 2015–16, Premiership**: Split season saved as separate tables. _combined into the final 38-game table (1. Celtic 86, 12. Dundee United)._
-- **Scotland 2016–17, Premiership**: Split season saved as separate tables. _combined into the final 38-game table (1. Celtic 106, 12. Inverness Caledonian Thistle)._
-- **Scotland 2018–19, Premiership**: Split season saved as separate tables. _combined into the final 38-game table (1. Celtic 87, 12. Dundee)._
 - **Scotland 2020–21, Premiership**: Split season. _couldn't combine (results for 15 clubs, games played 38/40/4/2): left as is._
 - **Scotland 2021–22, Premiership**: Split season. _couldn't combine (results for 15 clubs, games played 38/40/6/2): left as is._
 - **Scotland 2022–23, Premiership**: Split season. _couldn't combine (results for 15 clubs, games played 38/40/6/2): left as is._
@@ -76,11 +69,16 @@ Checked 2026-10-23. 77 findings. Repair mode: 34 API requests used.
 - **Turkey 2022–23, 3. Lig (Group 3)**: Osmaniyespor played 33, Arguvan Belediyespor played 33 of 34: a club that withdrew, was expelled or had a game cancelled.
 - **Turkey 2025–26, 2. Lig (Kirmizi Grup)**: Yeni Mersin Idmanyurdu played 33, Yeni Malatyaspor played 33 of 34: a club that withdrew, was expelled or had a game cancelled.
 
-## Positions out of order (4)
+## Positions out of order (9)
 
 - **England 2019–20, League One**: Oxford United (60 pts) is below Wycombe Wanderers (59 pts).
 - **England 2019–20, League Two**: Exeter City (65 pts) is below Cheltenham Town (64 pts).
 - **Italy 2019–20, Serie C (Girone C)**: Picerno (32 pts) is below Rieti (15 pts).
+- **Scotland 2011–12, Premiership**: Heart of Midlothian (52 pts) is below St Johnstone (50 pts).
+- **Scotland 2012–13, Premiership**: Hibernian (51 pts) is below Dundee United (47 pts).
+- **Scotland 2014–15, Premiership**: Hamilton Academical (53 pts) is below Dundee (45 pts).
+- **Scotland 2015–16, Premiership**: Heart of Midlothian (65 pts) is below Ross County (48 pts).
+- **Scotland 2016–17, Premiership**: Heart of Midlothian (46 pts) is below Partick Thistle (42 pts).
 - **Turkey 2025–26, 3. Lig (Group 2)**: Karaköprü Belediyespor (47 pts) is below Ağrı 1970 (45 pts).
 
 ## Numbers that don't add up (7)
