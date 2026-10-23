@@ -1235,8 +1235,11 @@
       // against each other. nat is how many divisions the overall ranking covers.
       var nat = depth;
       var NUM = ["", "one", "two", "three", "four", "five", "six", "seven", "eight"];
-      var across = nat > 1 ? "across the top " + (NUM[nat] || nat) + " " + (d.adjective ? d.adjective + " " : "") + "divisions" : "";
-      var ranked = function (x) { return nat > 1 && x.rank && x.tier <= nat; };
+      // Past seasons may cover fewer divisions (England's saved seasons before 2022–23 stop at League Two), so the
+      // count and the wording come from each season's own data: "of 92 across the top four", "of 116 across the top five".
+      var tiersIn = function (x) { var k = 0; for (var i = 0; i < nat; i++) if (x.sizes && x.sizes[i]) k++; return k; };
+      var acrossOf = function (x) { var k = tiersIn(x); return "across the top " + (NUM[k] || k) + " " + (d.adjective ? d.adjective + " " : "") + "divisions"; };
+      var ranked = function (x) { return nat > 1 && x.rank && x.tier <= nat && tiersIn(x) > 1; };
       var natTotal = function (x) { var o = 0; for (var i = 0; i < nat; i++) o += (x.sizes && x.sizes[i]) || 0; return o; };
       depth = Math.max(depth, Math.max.apply(null, j.map(function (x) { return x.tier; })), 1);
       var sz = function (x, t) { return (x.sizes && x.sizes[t]) || 0; };
@@ -1274,7 +1277,7 @@
         var href = x.now ? tableNow : x.href, at = X(k) / 1000, m = mark(x);
         var tip = '<span class="ltip' + (at < 0.2 ? " l" : at > 0.8 ? " r" : "") + (yOf(x) / ymax < 0.25 ? " below" : "") + '"><b>' + esc(x.season) + "</b>" +
           esc(x.league) + ": " + ord(x.pos) + (x.of ? " of " + x.of : "") + (m ? ' · <em class="lt-' + m + '">' + MARK[m] + "</em>" : "") +
-          (ranked(x) ? "<i>" + ord(x.rank) + " of " + natTotal(x) + " " + across + "</i>" : x.tier > nat ? "<i>Tier " + x.tier + "</i>" : "") + (href ? "<u>View table →</u>" : "") + "</span>";
+          (ranked(x) ? "<i>" + ord(x.rank) + " of " + natTotal(x) + " " + acrossOf(x) + "</i>" : x.tier > nat ? "<i>Tier " + x.tier + "</i>" : "") + (href ? "<u>View table →</u>" : "") + "</span>";
         var attrs = ' class="ld' + (x.now ? " now" : "") + (m ? " m-" + m : "") + '" style="left:' + pct(X(k), 1000) + ";top:" + pct(yOf(x), ymax) + '" aria-label="' +
           esc(x.season + ": " + x.league + ", " + ord(x.pos)) + '"';
         return href ? "<a" + attrs + ' href="' + esc(href) + '">' + tip + "</a>" : "<span" + attrs + ' tabindex="0">' + tip + "</span>";
@@ -1290,7 +1293,7 @@
       }).join("");
       var h = Math.max(200, Math.min(380, Math.round(ymax * 2.6)));
       var where = ord(latest.pos) + " " + inLeague(latest.league) +
-        (ranked(latest) ? ", " + ord(latest.rank) + " of " + natTotal(latest) + " " + across : latest.tier > nat ? ", tier " + latest.tier : "");
+        (ranked(latest) ? ", " + ord(latest.rank) + " of " + natTotal(latest) + " " + acrossOf(latest) : latest.tier > nat ? ", tier " + latest.tier : "");
       var cap = (latest.now ? "This season so far: " : "In " + latest.season + ": ") + where + ".";
       // Say why a regional season has no overall position, but only for clubs that have one.
       var splitNote = nat > 1 && j.some(function (x) { return x.tier > nat; }) && ladder[nat]
