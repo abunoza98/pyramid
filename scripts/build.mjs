@@ -12,7 +12,7 @@ import { createRequire } from "node:module";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
-import { COUNTRIES, EUROPE, SITE, CONTACT, ADS, ADSENSE_CLIENT, LIVE_URL } from "./leagues.mjs";
+import { COUNTRIES, EUROPE, SITE, CONTACT, ADS, ADSENSE_CLIENT, LIVE_URL, venueZone } from "./leagues.mjs";
 import { zoneAt, applyPlayoffRules, labelCupPlaces } from "./zones.mjs";
 import { regroupEurope } from "./rounds.mjs";
 import { seasonFor, seasonLabel, seasonSlug } from "./season.mjs";
@@ -233,6 +233,7 @@ export async function loadFixtures(root = ROOT) {
   for (const cfg of [...COUNTRIES, EUROPE]) for (const lg of [...cfg.leagues, ...(cfg.cups || [])]) {
     try {
       const fx = JSON.parse(await readFile(path.join(root, "data", "fixtures", cfg.country, `${lg.id}.json`), "utf8"));
+      if (cfg.tz) for (const g of fx.groups || []) for (const r of g.rounds || []) for (const f of r.fixtures || []) if (!f.z) { const z = venueZone(cfg, f, g.name); if (z) f.z = z; }
       out[`${cfg.country}/${lg.id}`] = cfg === EUROPE ? regroupEurope(fx) : fx;
     } catch {}
   }

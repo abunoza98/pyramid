@@ -373,6 +373,16 @@ export const COUNTRIES = [
   },
   {
     country: "australia", region: "asia", code: "AUS", name: "Australia", adjective: "Australian", apiCountry: "Australia",
+    // Australia spans several time zones, so local kick-off times go by the home club (A-League) or the state
+    // (NPL and state leagues). Anything not listed is on Sydney time.
+    tz: { home: "Australia/Sydney",
+      byClub: { "Brisbane Roar": "Australia/Brisbane", "Perth Glory": "Australia/Perth", "Adelaide United": "Australia/Adelaide",
+        "Melbourne Victory": "Australia/Melbourne", "Melbourne City": "Australia/Melbourne", "Auckland FC": "Pacific/Auckland", "Wellington Phoenix": "Pacific/Auckland" },
+      byGroup: { "NSW": "Australia/Sydney", "Victoria": "Australia/Melbourne", "Queensland": "Australia/Brisbane", "Western Australia": "Australia/Perth",
+        "South Australia": "Australia/Adelaide", "Northern NSW": "Australia/Sydney", "Capital Territory": "Australia/Sydney", "Tasmania": "Australia/Hobart",
+        "NSW NPL 2": "Australia/Sydney", "Victoria NPL 2": "Australia/Melbourne", "Queensland Premier League": "Australia/Brisbane", "WA State League 1": "Australia/Perth",
+        "SA State League 1": "Australia/Adelaide", "Northern NSW League One": "Australia/Sydney", "Tasmania Northern Championship": "Australia/Hobart",
+        "Tasmania Southern Championship": "Australia/Hobart" } },
     belowNote: "Below the NPL, each state has its own divisions",
     names: { "Sydney": "Sydney FC", "Auckland": "Auckland FC", "Macarthur": "Macarthur FC", "Lions": "Lions FC",
       "Olympic": "Brisbane Olympic", "Perth": "Perth SC" },
@@ -607,3 +617,11 @@ export const PLAYOFF_RULES = {
     { from: 2023, promo: [3, 4, 5] }
   ]
 };
+
+// The time zone a game is played in, for "local kick-off time", where a country spans several (Australia): by the
+// home club, then by the league's group (a state). Null where the country's single zone applies.
+export function venueZone(country, f, group) {
+  const tz = country && country.tz;
+  if (!tz || !f) return null;
+  return (tz.byClub && f.h && tz.byClub[f.h.n]) || (group && tz.byGroup && tz.byGroup[group]) || tz.home || null;
+}
