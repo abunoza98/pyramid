@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-// Football Pyramids: past seasons of each domestic cup (FA Cup, DFB-Pokal…), boiled down to how far every club
-// got, for the "Cup runs" chart on club pages. Saved to data/history/<country>/cups/<cup>/<year>.json.
-// One request a season; seasons already saved are skipped (the "Backfill history" GitHub job runs it).
+// Football Pyramids: past seasons of each domestic cup (FA Cup, DFB-Pokal…). For each season it saves every tie
+// (data/history/<country>/cups/<cup>/<year>-fixtures.json, for the past-season bracket pages) and how far every club
+// got (<year>.json, for the "Cup runs" chart on club pages). One request a season; seasons already saved are
+// skipped (the "Backfill history" GitHub job runs it).
 //
 //   API_FOOTBALL_KEY=xxxx node scripts/backfill-cups.mjs             (--force to fetch saved seasons again)
 //   node scripts/backfill-cups.mjs --fixture test/cups-history.json --out /tmp/fp     offline test
@@ -20,6 +21,20 @@ const now = new Date();
 const CURRENT = Number(process.env.SEASON || (now.getUTCMonth() >= 6 ? now.getUTCFullYear() : now.getUTCFullYear() - 1));
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const exists = (f) => access(f).then(() => true, () => false);
+
+const slugOf = (n) => String(n || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+async function leaguesIn(root, country, year) {
+  const out = new Map();
+  try {
+    const h = JSON.parse(await readFile(path.join(root, "data", "history", country, `${year}.json`), "utf8"));
+    for (const lg of h.leagues || []) for (const r of lg.groups ? lg.groups.flatMap((g) => g.rows) : lg.rows || []) {
+      const t = { s: lg.short || lg.name, tier: lg.tier };
+      if (r.tid) out.set(r.tid, t);
+      out.set("n:" + slugOf(r.team), t);
+    }
+  } catch {}
+  return out;
+}
 
 async function main() {
   const args = process.argv.slice(2);
@@ -47,19 +62,28 @@ async function main() {
   let saved = 0;
   for (const c of COUNTRIES) for (const cup of c.cups || []) {
     const body = await get(`/leagues?id=${cup.apiId}`);
-    const years = (body?.response?.[0]?.seasons || []).map((s) => s.year).filter((y) => y < CURRENT).sort((a, b) => a - b);
+    const years = (body?.response?.[0]?.seasons || []).map((s) => s.year).filter((y) => y < CURRENT && (!cup.until || y <= cup.until)).sort((a, b) => a - b);
     const dir = path.join(outRoot, "data", "history", c.country, "cups", cup.id);
     const done = [];
     for (const year of years) {
-      const file = path.join(dir, `${year}.json`);
-      if (!force && await exists(file)) { try { done.push(JSON.parse(await readFile(file, "utf8"))); } catch {} continue; }
+      const file = path.join(dir, `${year}.json`), fxFile = path.join(dir, `${year}-fixtures.json`);
+      if (!force && await exists(file) && await exists(fxFile)) { try { done.push(JSON.parse(await readFile(file, "utf8"))); } catch {} continue; }
       const fx = await get(`/fixtures?league=${cup.apiId}&season=${year}&timezone=UTC`);
       const list = (fx.response || []).map((x) => ({ round: x.league?.round, f: slim(x) }));
       if (!list.length) continue;
       cupRounds(list, cup.rounds);
-      const s = summarise(toRounds(list), learnLabels(done));
+      // Each club's league that season ("PL", "L2"…), from the saved tables, for the tags and giant-killings.
+      const tags = await leaguesIn(outRoot, c.country, year);
+      for (const { f } of list) for (const side of [f.h, f.a]) {
+        const t = tags.get(side.id) || tags.get("n:" + slugOf(side.n));
+        if (t) { side.t = t.s; side.tier = t.tier; }
+      }
+      const rounds = toRounds(list);
+      const s = summarise(rounds, learnLabels(done));
       const out = { country: c.country, cup: cup.id, name: cup.name, season: seasonLabel(year), year, ...s };
       await mkdir(dir, { recursive: true });
+      await writeFile(fxFile, JSON.stringify({ country: c.country, countryName: c.name, league: cup.id, name: cup.name, cup: true,
+        season: seasonLabel(year), year, groups: [{ name: null, rounds }] }) + "\n");
       await writeFile(file, JSON.stringify(out) + "\n");
       done.push(out);
       saved++;
