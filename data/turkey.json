@@ -1600,6 +1600,19 @@
       },
       {
        "pos": 2,
+       "team": "Kırşehir Belediyespor",
+       "p": 8,
+       "w": 6,
+       "d": 1,
+       "l": 1,
+       "gf": 24,
+       "ga": 6,
+       "pts": 19,
+       "tid": 6341,
+       "form": "WWDWW"
+      },
+      {
+       "pos": 3,
        "team": "Karaköprü Belediyespor",
        "p": 7,
        "w": 6,
@@ -1612,7 +1625,7 @@
        "form": "WWWLW"
       },
       {
-       "pos": 3,
+       "pos": 4,
        "team": "Mazıdağı Fosfatspor",
        "p": 7,
        "w": 5,
@@ -1625,7 +1638,7 @@
        "form": "DWWDW"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Talasgücü Belediyespor",
        "p": 7,
        "w": 5,
@@ -1636,19 +1649,6 @@
        "pts": 17,
        "tid": 21995,
        "form": "DWWWD"
-      },
-      {
-       "pos": 5,
-       "team": "Kırşehir Belediyespor",
-       "p": 7,
-       "w": 5,
-       "d": 1,
-       "l": 1,
-       "gf": 23,
-       "ga": 6,
-       "pts": 16,
-       "tid": 6341,
-       "form": "LWWDW"
       },
       {
        "pos": 6,
@@ -1691,19 +1691,6 @@
       },
       {
        "pos": 9,
-       "team": "Adana Adaletgucu",
-       "p": 7,
-       "w": 3,
-       "d": 0,
-       "l": 4,
-       "gf": 12,
-       "ga": 14,
-       "pts": 9,
-       "tid": 27999,
-       "form": "LWLLW"
-      },
-      {
-       "pos": 10,
        "team": "Yeni Mersin Idmanyurdu",
        "p": 7,
        "w": 3,
@@ -1714,6 +1701,19 @@
        "pts": 9,
        "tid": 6546,
        "form": "WWLLW"
+      },
+      {
+       "pos": 10,
+       "team": "Adana Adaletgucu",
+       "p": 8,
+       "w": 3,
+       "d": 0,
+       "l": 5,
+       "gf": 12,
+       "ga": 15,
+       "pts": 9,
+       "tid": 27999,
+       "form": "WLLWL"
       },
       {
        "pos": 11,
