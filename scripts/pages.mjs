@@ -58,8 +58,6 @@ ${emailLine(contact.email)}
 </ul>
 <p>We try to reply within a few days.</p>
 
-<h2>Independence</h2>
-<p>Football Pyramids is not affiliated with any league, federation or club. Club and competition names are used only to identify them.</p>
 </article>`;
 }
 

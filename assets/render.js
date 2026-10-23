@@ -510,7 +510,12 @@
     var all = countries.map(summary).concat(others);
     var names = {};   // club ID -> name as shown on the site, for the strip
     countries.forEach(function (c) { c.leagues.forEach(function (lg) { groupsOf(lg).forEach(function (g) { g.rows.forEach(function (r) { if (r.tid) names[r.tid] = r.team; }); }); }); });
-    var newest = countries.map(function (c) { return c.leagues[0].updated; }).sort().pop();
+    // The newest date across every table on the page (all tiers, plus the Champions League), so the hero never shows
+    // an older date than a table below it.
+    var stampsAll = [];
+    countries.forEach(function (c) { c.leagues.forEach(function (lg) { if (lg.updated) stampsAll.push(String(lg.updated)); }); });
+    if (opts.europe && opts.europe.updated) stampsAll.push(String(opts.europe.updated));
+    var newest = stampsAll.sort().pop();
     var live = countries.every(function (c) { return c.mode === "live"; });
     var nLeagues = all.reduce(function (n, s) { return n + s.tiers; }, 0);
     var nClubs = all.reduce(function (n, s) { return n + s.clubs; }, 0);
@@ -1225,6 +1230,14 @@
       var ladder = d.ladder || [];
       var depth = 0;
       while (depth < ladder.length && !ladder[depth].split) depth++;
+      // Overall positions only make sense down to the last single national division: below that a tier splits
+      // into parallel regional groups (England's National League North and South), which can't be ranked
+      // against each other. nat is how many divisions the overall ranking covers.
+      var nat = depth;
+      var NUM = ["", "one", "two", "three", "four", "five", "six", "seven", "eight"];
+      var across = nat > 1 ? "across the top " + (NUM[nat] || nat) + " " + (d.adjective ? d.adjective + " " : "") + "divisions" : "";
+      var ranked = function (x) { return nat > 1 && x.rank && x.tier <= nat; };
+      var natTotal = function (x) { var o = 0; for (var i = 0; i < nat; i++) o += (x.sizes && x.sizes[i]) || 0; return o; };
       depth = Math.max(depth, Math.max.apply(null, j.map(function (x) { return x.tier; })), 1);
       var sz = function (x, t) { return (x.sizes && x.sizes[t]) || 0; };
       var off = function (x, t) { var o = 0; for (var i = 0; i < t; i++) o += sz(x, i); return o; };
@@ -1261,7 +1274,7 @@
         var href = x.now ? tableNow : x.href, at = X(k) / 1000, m = mark(x);
         var tip = '<span class="ltip' + (at < 0.2 ? " l" : at > 0.8 ? " r" : "") + (yOf(x) / ymax < 0.25 ? " below" : "") + '"><b>' + esc(x.season) + "</b>" +
           esc(x.league) + ": " + ord(x.pos) + (x.of ? " of " + x.of : "") + (m ? ' · <em class="lt-' + m + '">' + MARK[m] + "</em>" : "") +
-          "<i>" + ord(x.rank) + " in the pyramid</i>" + (href ? "<u>View table →</u>" : "") + "</span>";
+          (ranked(x) ? "<i>" + ord(x.rank) + " of " + natTotal(x) + " " + across + "</i>" : x.tier > nat ? "<i>Tier " + x.tier + "</i>" : "") + (href ? "<u>View table →</u>" : "") + "</span>";
         var attrs = ' class="ld' + (x.now ? " now" : "") + (m ? " m-" + m : "") + '" style="left:' + pct(X(k), 1000) + ";top:" + pct(yOf(x), ymax) + '" aria-label="' +
           esc(x.season + ": " + x.league + ", " + ord(x.pos)) + '"';
         return href ? "<a" + attrs + ' href="' + esc(href) + '">' + tip + "</a>" : "<span" + attrs + ' tabindex="0">' + tip + "</span>";
@@ -1276,9 +1289,13 @@
         return '<span class="' + cls + '" style="left:' + pct(X(k), 1000) + '">' + esc(lab) + "</span>";
       }).join("");
       var h = Math.max(200, Math.min(380, Math.round(ymax * 2.6)));
-      var total = off(latest, depth);
-      var cap = latest.now ? "This season so far: " + ord(latest.pos) + " " + inLeague(latest.league) + ", " + ord(latest.rank) + " of " + total + " in the pyramid."
-        : "In " + latest.season + ": " + ord(latest.pos) + " " + inLeague(latest.league) + ", " + ord(latest.rank) + " of " + total + " in the pyramid.";
+      var where = ord(latest.pos) + " " + inLeague(latest.league) +
+        (ranked(latest) ? ", " + ord(latest.rank) + " of " + natTotal(latest) + " " + across : latest.tier > nat ? ", tier " + latest.tier : "");
+      var cap = (latest.now ? "This season so far: " : "In " + latest.season + ": ") + where + ".";
+      // Say why a regional season has no overall position, but only for clubs that have one.
+      var splitNote = nat > 1 && j.some(function (x) { return x.tier > nat; }) && ladder[nat]
+        ? '<p class="lchart-note">Overall positions count the top ' + (NUM[nat] || nat) + " divisions. " + esc(ladder[nat].name) +
+          " (tier " + (nat + 1) + ") is split into regional groups, so seasons there aren't ranked against the rest.</p>" : "";
       var ups = d.journey.filter(function (x) { return x.move === "up"; }).length, downs = d.journey.filter(function (x) { return x.move === "down"; }).length;
       var oldest = d.journey[d.journey.length - 1];
       var tally = n > 1 && (ups || downs)
@@ -1286,7 +1303,7 @@
           (downs ? downs + " relegation" + (downs === 1 ? "" : "s") : "") + "."
         : "";
       journey = '<section class="cl-sec" id="journey"><div class="cl-sec-h"><h2>' + esc(d.name) + (/s$/.test(d.name) ? "’" : "’s") + " journey through the " + (d.adjective ? esc(d.adjective) + " " : "") + "pyramid</h2></div>" +
-        '<p class="lchart-cap">' + esc(cap + tally) + "</p>" +
+        '<p class="lchart-cap">' + esc(cap + tally) + "</p>" + splitNote +
         '<div class="lchart"><div class="lside">' + side + '</div><div class="lplot" style="height:' + h + 'px">' +
         '<svg viewBox="0 0 1000 ' + ymax + '" preserveAspectRatio="none" aria-hidden="true">' + rects + lpath + "</svg>" + dots + "</div>" +
         '<div class="lx">' + xl + "</div></div>" +
@@ -1301,7 +1318,7 @@
             "<span class=\"jl\">" + ((x.href || (x.now && tableNow)) ? '<a href="' + esc(x.href || tableNow) + '">' + esc(x.league) + "</a>" : esc(x.league)) +
             (x.move ? ' <i class="jm ' + x.move + '" title="' + esc((x.move === "up" ? "Up to " : "Down to ") + x.to + " the next season") + '">' +
               (x.move === "up" ? "▲ Promoted" : "▼ Relegated") + "</i>" : "") + "</span><b>" + (x.pos ? ord(x.pos) + (x.of ? " of " + x.of : "") : "") +
-            (x.rank ? '<em>' + ord(x.rank) + " overall</em>" : "") + "</b></li>";
+            (ranked(x) ? '<em>' + ord(x.rank) + " of " + natTotal(x) + "</em>" : "") + "</b></li>";
         }).join("") + "</ul></details></section>";
     }
 
@@ -1322,14 +1339,14 @@
         (lg ? " · " + (lg.tableHref ? '<a href="' + esc(lg.tableHref) + '">' + esc(lg.name) + "</a>" : esc(lg.name)) : "") + " · " + esc(d.season) + "</p>" +
       '<h1 id="intro-h" class="cup-h">' + flag(d.country) + "<span>" + esc(d.name) + "</span></h1>" +
       '<p class="lede">' + (d.pos ? "<strong>" + ord(d.pos) + " " + esc(inLeague(lg.name)) + "</strong>, " + d.pts + " points from " + d.p + " games." : esc(d.note || "")) +
-      (formStr ? ' Last five: <span class="form">' + formChips + "</span>" : "") + "</p>" +
+      (formStr ? ' Last 5 matches: <span class="form">' + formChips + "</span>" : "") + "</p>" +
       '<p class="fx-links">' + tzLine(mode, d.country) + "</p></section>" +
-      nextHTML +
+      // The journey comes straight after the next match: it's what this site has that a scores site doesn't.
+      nextHTML + journey +
       '<div class="cl-cols"><section class="cl-sec"><div class="cl-sec-h"><h2>Fixtures</h2></div>' +
         (list(live, "live", 9) + list(upcoming, "fixture", 6) || '<p class="ko-empty">No fixtures scheduled yet.</p>') + "</section>" +
       '<section class="cl-sec"><div class="cl-sec-h"><h2>Results</h2></div>' + (list(played, "result", 6) || '<p class="ko-empty">No results yet this season.</p>') + "</section></div>" +
-      compSection +
-      journey + cupSection;
+      compSection + cupSection;
   }
 
   return {

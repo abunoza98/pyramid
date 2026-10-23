@@ -184,7 +184,13 @@
     });
   }
   finder($("club-find"));
-  if ($("hero-find")) finder($("hero-find"));
+  if ($("hero-find")) {
+    finder($("hero-find"));
+    // One search at a time on the home page: the header box hides while the big one is in view.
+    if (window.IntersectionObserver) {
+      new IntersectionObserver(function (es) { body.classList.toggle("hero-find-on", es[0].isIntersecting); }).observe($("hero-find-box"));
+    }
+  }
   $("club-clear").addEventListener("click", function () {
     $("club-find").value = "";
     setClub(null);

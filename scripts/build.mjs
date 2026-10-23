@@ -146,7 +146,7 @@ ${suffix ? "" : ldScript(jsonld)}${ADSENSE_CLIENT && !suffix ? `<script async sr
     <div id="main-content">${main}</div>
     <footer>
       ${footNotes(page, snapshot)}
-      <p>Football Pyramids is an independent site and is not affiliated with any league, federation or club.</p>
+      <p>Football Pyramids is an independent site and is not affiliated with any league, federation or club. Club and competition names are used only to identify them.</p>
       <p class="foot-links">
         <a href="${base}contact/${suffix}">About and contact</a>
         <a href="${base}privacy/${suffix}">Privacy policy</a>
@@ -619,6 +619,14 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       }
       return out;
     };
+    // The division a club actually played in when a tier is split: "National League North" rather than
+    // "National League North & South", "Serie C (Girone A)" rather than "Serie C".
+    const divisionName = (lg, g) => {
+      if (FP.groupsOf(lg).length < 2 || !g || !g.name) return lg.name;
+      const both = lg.name.match(/^(.*?)\b(\w+) & (\w+)$/);
+      if (both && (g.name === both[2] || g.name === both[3])) return both[1] + g.name;
+      return `${lg.name} (${g.name})`;
+    };
     const pastSeasons = (c, name, tid) => {
       const out = [];
       const sl = FP.slug(name);
@@ -628,7 +636,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         found: for (const plg of h.leagues) for (const pg of FP.groupsOf(plg)) {
           const pr = pg.rows.find(same);
           if (pr) {
-            out.push({ season: h.season, year: h.year, tier: plg.tier, league: plg.name, pos: pr.pos, of: pg.rows.length, rank: rankIn(sizes, plg.tier, pr.pos), sizes,
+            out.push({ season: h.season, year: h.year, tier: plg.tier, league: divisionName(plg, pg), pos: pr.pos, of: pg.rows.length, rank: rankIn(sizes, plg.tier, pr.pos), sizes,
               href: `${base}${c.country}/${slug(h.year)}/${suffix}${plg.id ? "#" + plg.id : ""}` });
             break found;
           }
@@ -672,7 +680,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       }
       // Pyramid journey: this season, then each saved past season (matched by name).
       const sizesNow = sizesOf(c.leagues);
-      const journey = moves([{ season: c.season, year: Number(String(c.season).slice(0, 4)), tier: lg.tier, league: lg.name, pos: r.pos, of: g.rows.length,
+      const journey = moves([{ season: c.season, year: Number(String(c.season).slice(0, 4)), tier: lg.tier, league: divisionName(lg, g), pos: r.pos, of: g.rows.length,
         rank: rankIn(sizesNow, lg.tier, r.pos), sizes: sizesNow, now: true }, ...pastSeasons(c, r.team, tid)]);
       const data = {
         tid, name: r.team, country: c.country, countryName: c.name, adjective: c.adjective, season: c.season, comps, root: base, suffix,
