@@ -245,8 +245,45 @@
       if (k && k in open) d.open = open[k];
     });
     applyClub(false);
+    applyViews();
     window.scrollTo(0, y);
   }
+  /* ---------- Table / Form switch: re-sort a division by points from the last five games ---------- */
+  var views = {};   // division id -> "form", kept when the page redraws
+  function sortRows(sec, byForm) {
+    sec.classList.toggle("by-form", byForm);
+    sec.querySelectorAll(".tview button").forEach(function (b) {
+      var on = (b.getAttribute("data-view") === "form") === byForm;
+      b.classList.toggle("on", on); b.setAttribute("aria-pressed", on);
+    });
+    sec.querySelectorAll("tbody").forEach(function (tb) {
+      var rows = Array.prototype.slice.call(tb.rows);
+      rows.sort(function (a, b) {
+        var pa = +a.getAttribute("data-pos"), pb = +b.getAttribute("data-pos");
+        return byForm ? (+b.getAttribute("data-fp") - +a.getAttribute("data-fp")) || pa - pb : pa - pb;
+      });
+      rows.forEach(function (r) { tb.appendChild(r); });
+    });
+  }
+  function applyViews() {
+    document.querySelectorAll("section.tier").forEach(function (sec) { if (views[sec.id] === "form") sortRows(sec, true); });
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest(".tview button");
+    if (!b) return;
+    var sec = b.closest("section.tier"), byForm = b.getAttribute("data-view") === "form";
+    views[sec.id] = byForm ? "form" : "table";
+    sortRows(sec, byForm);
+  });
+
+  // Column headings stick below the header bar, whose height changes with screen width.
+  function setBarHeight() {
+    var bar = document.querySelector(".bar");
+    if (bar) document.documentElement.style.setProperty("--bar-h", bar.offsetHeight + "px");
+  }
+  setBarHeight();
+  window.addEventListener("resize", setBarHeight);
+
   /* ---------- Tabs on the home page (pyramid explorer, top-flight tables) ---------- */
   document.documentElement.classList.add("js");
   var tabState = {};   // tab group -> chosen tab, kept when the page redraws
