@@ -273,6 +273,9 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   const history = await loadHistory(root);
   const fixtures = await loadFixtures(root);
   const cupHistory = await loadCupHistory(root);
+  // All-time titles per cup up to a season (data/cup-titles.json); later wins come from our own cup data.
+  let cupTitles = {};
+  try { cupTitles = JSON.parse(await readFile(path.join(root, "data", "cup-titles.json"), "utf8")); } catch {}
   const cupPast = await loadCupFixtureHistory(root);
   const cupPastUrls = [];
   const cupUrls = [];
@@ -552,7 +555,15 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
           const [, ri, res, opp, score] = hit;
           runs.push({ i, d: res === "W" ? -1 : s.dist[ri] == null ? 9 : s.dist[ri], round: s.rounds[ri], res, opp, score, now: !!s.now });
         });
-        if (runs.length) out.push({ id: cup.id, name: cs.name, href: cs.href, seasons: cs.list.map((s) => s.season), runs });
+        // All-time titles: the honours list up to its season, plus wins in our data after it.
+        const ct = cupTitles[`${c.country}/${cup.id}`];
+        let titles = null;
+        if (ct) {
+          const e = ct.titles.find((x) => (tid && x.tid ? x.tid === tid : FP.slug(x.n) === sl));
+          const later = runs.filter((r) => r.res === "W" && Number(String(cs.list[r.i].year || cs.list[r.i].season).slice(0, 4)) > ct.through).length;
+          titles = (e ? e.v : 0) + later;
+        }
+        if (runs.length || titles) out.push({ id: cup.id, name: cs.name, href: cs.href, seasons: cs.list.map((s) => s.season), runs, titles });
       }
       return out;
     };

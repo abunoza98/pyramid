@@ -1,0 +1,1588 @@
+{
+ "_note": "All-time titles per club up to and including the season starting in 'through' (2025 = 2025-26). Wins after that are added from the site's own cup data. Names are as the site shows them; tid is API-Football's club ID where known.",
+ "england/fa-cup": {
+  "through": 2025,
+  "source": "https://en.wikipedia.org/wiki/List_of_FA_Cup_finals",
+  "titles": [
+   {
+    "n": "Arsenal",
+    "v": 14,
+    "tid": 42
+   },
+   {
+    "n": "Manchester United",
+    "v": 13,
+    "tid": 33
+   },
+   {
+    "n": "Chelsea",
+    "v": 8,
+    "tid": 49
+   },
+   {
+    "n": "Liverpool",
+    "v": 8,
+    "tid": 40
+   },
+   {
+    "n": "Manchester City",
+    "v": 8,
+    "tid": 50
+   },
+   {
+    "n": "Tottenham Hotspur",
+    "v": 8,
+    "tid": 47
+   },
+   {
+    "n": "Aston Villa",
+    "v": 7,
+    "tid": 66
+   },
+   {
+    "n": "Blackburn Rovers",
+    "v": 6,
+    "tid": 67
+   },
+   {
+    "n": "Newcastle United",
+    "v": 6,
+    "tid": 34
+   },
+   {
+    "n": "Everton",
+    "v": 5,
+    "tid": 45
+   },
+   {
+    "n": "Wanderers",
+    "v": 5
+   },
+   {
+    "n": "West Bromwich Albion",
+    "v": 5,
+    "tid": 60
+   },
+   {
+    "n": "Bolton Wanderers",
+    "v": 4,
+    "tid": 68
+   },
+   {
+    "n": "Sheffield United",
+    "v": 4,
+    "tid": 62
+   },
+   {
+    "n": "Wolverhampton Wanderers",
+    "v": 4,
+    "tid": 39
+   },
+   {
+    "n": "Sheffield Wednesday",
+    "v": 3,
+    "tid": 74
+   },
+   {
+    "n": "West Ham United",
+    "v": 3,
+    "tid": 48
+   },
+   {
+    "n": "Bury",
+    "v": 2,
+    "tid": 1344
+   },
+   {
+    "n": "Nottingham Forest",
+    "v": 2,
+    "tid": 65
+   },
+   {
+    "n": "Old Etonians",
+    "v": 2
+   },
+   {
+    "n": "Portsmouth",
+    "v": 2,
+    "tid": 1355
+   },
+   {
+    "n": "Preston North End",
+    "v": 2,
+    "tid": 59
+   },
+   {
+    "n": "Sunderland",
+    "v": 2,
+    "tid": 746
+   },
+   {
+    "n": "Barnsley",
+    "v": 1,
+    "tid": 747
+   },
+   {
+    "n": "Blackburn Olympic",
+    "v": 1
+   },
+   {
+    "n": "Blackpool",
+    "v": 1,
+    "tid": 1356
+   },
+   {
+    "n": "Bradford City",
+    "v": 1,
+    "tid": 1343
+   },
+   {
+    "n": "Burnley",
+    "v": 1,
+    "tid": 44
+   },
+   {
+    "n": "Cardiff City",
+    "v": 1,
+    "tid": 43
+   },
+   {
+    "n": "Charlton Athletic",
+    "v": 1,
+    "tid": 1335
+   },
+   {
+    "n": "Clapham Rovers",
+    "v": 1
+   },
+   {
+    "n": "Coventry City",
+    "v": 1,
+    "tid": 1346
+   },
+   {
+    "n": "Crystal Palace",
+    "v": 1,
+    "tid": 52
+   },
+   {
+    "n": "Derby County",
+    "v": 1,
+    "tid": 69
+   },
+   {
+    "n": "Huddersfield Town",
+    "v": 1,
+    "tid": 37
+   },
+   {
+    "n": "Ipswich Town",
+    "v": 1,
+    "tid": 57
+   },
+   {
+    "n": "Leeds United",
+    "v": 1,
+    "tid": 63
+   },
+   {
+    "n": "Leicester City",
+    "v": 1,
+    "tid": 46
+   },
+   {
+    "n": "Notts County",
+    "v": 1,
+    "tid": 1376
+   },
+   {
+    "n": "Old Carthusians",
+    "v": 1
+   },
+   {
+    "n": "Oxford University",
+    "v": 1
+   },
+   {
+    "n": "Royal Engineers",
+    "v": 1
+   },
+   {
+    "n": "Southampton",
+    "v": 1,
+    "tid": 41
+   },
+   {
+    "n": "Wigan Athletic",
+    "v": 1,
+    "tid": 61
+   },
+   {
+    "n": "Wimbledon",
+    "v": 1
+   }
+  ]
+ },
+ "england/efl-cup": {
+  "through": 2025,
+  "source": "https://en.wikipedia.org/wiki/List_of_EFL_Cup_finals",
+  "titles": [
+   {
+    "n": "Liverpool",
+    "v": 10,
+    "tid": 40
+   },
+   {
+    "n": "Manchester City",
+    "v": 9,
+    "tid": 50
+   },
+   {
+    "n": "Manchester United",
+    "v": 6,
+    "tid": 33
+   },
+   {
+    "n": "Aston Villa",
+    "v": 5,
+    "tid": 66
+   },
+   {
+    "n": "Chelsea",
+    "v": 5,
+    "tid": 49
+   },
+   {
+    "n": "Nottingham Forest",
+    "v": 4,
+    "tid": 65
+   },
+   {
+    "n": "Tottenham Hotspur",
+    "v": 4,
+    "tid": 47
+   },
+   {
+    "n": "Leicester City",
+    "v": 3,
+    "tid": 46
+   },
+   {
+    "n": "Arsenal",
+    "v": 2,
+    "tid": 42
+   },
+   {
+    "n": "Birmingham City",
+    "v": 2,
+    "tid": 54
+   },
+   {
+    "n": "Norwich City",
+    "v": 2,
+    "tid": 71
+   },
+   {
+    "n": "Wolverhampton Wanderers",
+    "v": 2,
+    "tid": 39
+   },
+   {
+    "n": "Blackburn Rovers",
+    "v": 1,
+    "tid": 67
+   },
+   {
+    "n": "Leeds United",
+    "v": 1,
+    "tid": 63
+   },
+   {
+    "n": "Luton Town",
+    "v": 1,
+    "tid": 1359
+   },
+   {
+    "n": "Middlesbrough",
+    "v": 1,
+    "tid": 70
+   },
+   {
+    "n": "Newcastle United",
+    "v": 1,
+    "tid": 34
+   },
+   {
+    "n": "Oxford United",
+    "v": 1,
+    "tid": 1338
+   },
+   {
+    "n": "Queens Park Rangers",
+    "v": 1,
+    "tid": 72
+   },
+   {
+    "n": "Sheffield Wednesday",
+    "v": 1,
+    "tid": 74
+   },
+   {
+    "n": "Stoke City",
+    "v": 1,
+    "tid": 75
+   },
+   {
+    "n": "Swansea City",
+    "v": 1,
+    "tid": 76
+   },
+   {
+    "n": "Swindon Town",
+    "v": 1,
+    "tid": 1353
+   },
+   {
+    "n": "West Bromwich Albion",
+    "v": 1,
+    "tid": 60
+   }
+  ]
+ },
+ "spain/copa-del-rey": {
+  "through": 2025,
+  "source": "https://en.wikipedia.org/wiki/List_of_Copa_del_Rey_finals",
+  "titles": [
+   {
+    "n": "Barcelona",
+    "v": 32,
+    "tid": 529
+   },
+   {
+    "n": "Athletic Bilbao",
+    "v": 24,
+    "tid": 531
+   },
+   {
+    "n": "Real Madrid",
+    "v": 20,
+    "tid": 541
+   },
+   {
+    "n": "Atlético Madrid",
+    "v": 10,
+    "tid": 530
+   },
+   {
+    "n": "Valencia",
+    "v": 8,
+    "tid": 532
+   },
+   {
+    "n": "Zaragoza",
+    "v": 6,
+    "tid": 732
+   },
+   {
+    "n": "Sevilla",
+    "v": 5,
+    "tid": 536
+   },
+   {
+    "n": "Espanyol",
+    "v": 4,
+    "tid": 540
+   },
+   {
+    "n": "Real Sociedad",
+    "v": 4,
+    "tid": 548
+   },
+   {
+    "n": "Real Betis",
+    "v": 3,
+    "tid": 543
+   },
+   {
+    "n": "Real Unión",
+    "v": 3,
+    "tid": 9586
+   },
+   {
+    "n": "Deportivo La Coruña",
+    "v": 2,
+    "tid": 544
+   },
+   {
+    "n": "Arenas",
+    "v": 1,
+    "tid": 9578
+   },
+   {
+    "n": "Mallorca",
+    "v": 1,
+    "tid": 798
+   },
+   {
+    "n": "Racing Club de Irún",
+    "v": 1
+   }
+  ]
+ },
+ "germany/dfb-pokal": {
+  "through": 2025,
+  "source": "https://en.wikipedia.org/wiki/List_of_DFB-Pokal_finals",
+  "titles": [
+   {
+    "n": "Bayern Munich",
+    "v": 21,
+    "tid": 157
+   },
+   {
+    "n": "Werder Bremen",
+    "v": 6,
+    "tid": 162
+   },
+   {
+    "n": "Borussia Dortmund",
+    "v": 5,
+    "tid": 165
+   },
+   {
+    "n": "Eintracht Frankfurt",
+    "v": 5,
+    "tid": 169
+   },
+   {
+    "n": "Schalke 04",
+    "v": 5,
+    "tid": 174
+   },
+   {
+    "n": "1. FC Köln",
+    "v": 4,
+    "tid": 192
+   },
+   {
+    "n": "1. FC Nürnberg",
+    "v": 4,
+    "tid": 171
+   },
+   {
+    "n": "VfB Stuttgart",
+    "v": 4,
+    "tid": 172
+   },
+   {
+    "n": "Borussia Mönchengladbach",
+    "v": 3,
+    "tid": 163
+   },
+   {
+    "n": "Hamburger SV",
+    "v": 3,
+    "tid": 175
+   },
+   {
+    "n": "1. FC Kaiserslautern",
+    "v": 2,
+    "tid": 745
+   },
+   {
+    "n": "Bayer Leverkusen",
+    "v": 2,
+    "tid": 168
+   },
+   {
+    "n": "Dresdner SC",
+    "v": 2
+   },
+   {
+    "n": "Fortuna Düsseldorf",
+    "v": 2,
+    "tid": 158
+   },
+   {
+    "n": "Karlsruher SC",
+    "v": 2,
+    "tid": 785
+   },
+   {
+    "n": "RB Leipzig",
+    "v": 2,
+    "tid": 173
+   },
+   {
+    "n": "TSV 1860 Munich",
+    "v": 2,
+    "tid": 786
+   },
+   {
+    "n": "First Vienna",
+    "v": 1
+   },
+   {
+    "n": "Hannover 96",
+    "v": 1,
+    "tid": 166
+   },
+   {
+    "n": "KFC Uerdingen 05",
+    "v": 1,
+    "tid": 1322
+   },
+   {
+    "n": "Kickers Offenbach",
+    "v": 1,
+    "tid": 1628
+   },
+   {
+    "n": "Rapid Wien",
+    "v": 1
+   },
+   {
+    "n": "Rot-Weiss Essen",
+    "v": 1,
+    "tid": 1621
+   },
+   {
+    "n": "Schwarz-Weiß Essen",
+    "v": 1
+   },
+   {
+    "n": "VfB Leipzig",
+    "v": 1
+   },
+   {
+    "n": "VfL Wolfsburg",
+    "v": 1,
+    "tid": 161
+   }
+  ]
+ },
+ "france/coupe-de-france": {
+  "through": 2025,
+  "source": "https://en.wikipedia.org/wiki/Coupe_de_France",
+  "titles": [
+   {
+    "n": "Paris Saint-Germain",
+    "v": 16,
+    "tid": 85
+   },
+   {
+    "n": "Marseille",
+    "v": 10,
+    "tid": 81
+   },
+   {
+    "n": "Lille",
+    "v": 6,
+    "tid": 79
+   },
+   {
+    "n": "Saint-Étienne",
+    "v": 6,
+    "tid": 1063
+   },
+   {
+    "n": "Lyon",
+    "v": 5,
+    "tid": 80
+   },
+   {
+    "n": "Monaco",
+    "v": 5,
+    "tid": 91
+   },
+   {
+    "n": "RC Paris",
+    "v": 5
+   },
+   {
+    "n": "Red Star",
+    "v": 5,
+    "tid": 104
+   },
+   {
+    "n": "Auxerre",
+    "v": 4,
+    "tid": 108
+   },
+   {
+    "n": "Bordeaux",
+    "v": 4,
+    "tid": 78
+   },
+   {
+    "n": "Nantes",
+    "v": 4,
+    "tid": 83
+   },
+   {
+    "n": "Nice",
+    "v": 3,
+    "tid": 84
+   },
+   {
+    "n": "Rennes",
+    "v": 3,
+    "tid": 94
+   },
+   {
+    "n": "Strasbourg",
+    "v": 3,
+    "tid": 95
+   },
+   {
+    "n": "CASG Paris",
+    "v": 2
+   },
+   {
+    "n": "Guingamp",
+    "v": 2,
+    "tid": 90
+   },
+   {
+    "n": "Metz",
+    "v": 2,
+    "tid": 112
+   },
+   {
+    "n": "Montpellier",
+    "v": 2,
+    "tid": 82
+   },
+   {
+    "n": "Reims",
+    "v": 2,
+    "tid": 93
+   },
+   {
+    "n": "Sedan",
+    "v": 2,
+    "tid": 1310
+   },
+   {
+    "n": "Sochaux",
+    "v": 2,
+    "tid": 115
+   },
+   {
+    "n": "Sète",
+    "v": 2,
+    "tid": 3121
+   },
+   {
+    "n": "Bastia",
+    "v": 1,
+    "tid": 1305
+   },
+   {
+    "n": "CA Paris",
+    "v": 1
+   },
+   {
+    "n": "Cannes",
+    "v": 1,
+    "tid": 9932
+   },
+   {
+    "n": "Club Français",
+    "v": 1
+   },
+   {
+    "n": "Le Havre",
+    "v": 1,
+    "tid": 111
+   },
+   {
+    "n": "Lens",
+    "v": 1,
+    "tid": 116
+   },
+   {
+    "n": "Lorient",
+    "v": 1,
+    "tid": 97
+   },
+   {
+    "n": "Nancy",
+    "v": 1,
+    "tid": 102
+   },
+   {
+    "n": "Olympique de Paris",
+    "v": 1
+   },
+   {
+    "n": "Roubaix",
+    "v": 1,
+    "tid": 25348
+   },
+   {
+    "n": "Toulouse",
+    "v": 1,
+    "tid": 96
+   }
+  ]
+ },
+ "france/coupe-de-la-ligue": {
+  "through": 2025,
+  "source": "https://en.wikipedia.org/wiki/Coupe_de_la_Ligue",
+  "titles": [
+   {
+    "n": "Paris Saint-Germain",
+    "v": 9,
+    "tid": 85
+   },
+   {
+    "n": "Bordeaux",
+    "v": 3,
+    "tid": 78
+   },
+   {
+    "n": "Marseille",
+    "v": 3,
+    "tid": 81
+   },
+   {
+    "n": "Strasbourg",
+    "v": 3,
+    "tid": 95
+   },
+   {
+    "n": "Gueugnon",
+    "v": 1,
+    "tid": 3056
+   },
+   {
+    "n": "Lens",
+    "v": 1,
+    "tid": 116
+   },
+   {
+    "n": "Lyon",
+    "v": 1,
+    "tid": 80
+   },
+   {
+    "n": "Metz",
+    "v": 1,
+    "tid": 112
+   },
+   {
+    "n": "Monaco",
+    "v": 1,
+    "tid": 91
+   },
+   {
+    "n": "Nancy",
+    "v": 1,
+    "tid": 102
+   },
+   {
+    "n": "Saint-Étienne",
+    "v": 1,
+    "tid": 1063
+   },
+   {
+    "n": "Sochaux",
+    "v": 1,
+    "tid": 115
+   }
+  ]
+ },
+ "italy/coppa-italia": {
+  "through": 2025,
+  "source": "https://en.wikipedia.org/wiki/List_of_Coppa_Italia_finals",
+  "titles": [
+   {
+    "n": "Juventus",
+    "v": 15,
+    "tid": 496
+   },
+   {
+    "n": "Inter Milan",
+    "v": 10,
+    "tid": 505
+   },
+   {
+    "n": "Roma",
+    "v": 9,
+    "tid": 497
+   },
+   {
+    "n": "Lazio",
+    "v": 7,
+    "tid": 487
+   },
+   {
+    "n": "Fiorentina",
+    "v": 6,
+    "tid": 502
+   },
+   {
+    "n": "Napoli",
+    "v": 6,
+    "tid": 492
+   },
+   {
+    "n": "AC Milan",
+    "v": 5,
+    "tid": 489
+   },
+   {
+    "n": "Torino",
+    "v": 5,
+    "tid": 503
+   },
+   {
+    "n": "Sampdoria",
+    "v": 4,
+    "tid": 498
+   },
+   {
+    "n": "Bologna",
+    "v": 3,
+    "tid": 500
+   },
+   {
+    "n": "Parma",
+    "v": 3,
+    "tid": 523
+   },
+   {
+    "n": "Atalanta",
+    "v": 1,
+    "tid": 499
+   },
+   {
+    "n": "Genoa",
+    "v": 1,
+    "tid": 495
+   },
+   {
+    "n": "Vado",
+    "v": 1,
+    "tid": 9442
+   },
+   {
+    "n": "Venezia",
+    "v": 1,
+    "tid": 517
+   },
+   {
+    "n": "Vicenza",
+    "v": 1,
+    "tid": 1584
+   }
+  ]
+ },
+ "netherlands/knvb-beker": {
+  "through": 2025,
+  "source": "https://en.wikipedia.org/wiki/KNVB_Cup",
+  "titles": [
+   {
+    "n": "Ajax",
+    "v": 20,
+    "tid": 194
+   },
+   {
+    "n": "Feyenoord",
+    "v": 14,
+    "tid": 209
+   },
+   {
+    "n": "PSV Eindhoven",
+    "v": 11,
+    "tid": 197
+   },
+   {
+    "n": "AZ Alkmaar",
+    "v": 5,
+    "tid": 201
+   },
+   {
+    "n": "Quick (H)",
+    "v": 4
+   },
+   {
+    "n": "HFC",
+    "v": 3
+   },
+   {
+    "n": "Sparta Rotterdam",
+    "v": 3,
+    "tid": 426
+   },
+   {
+    "n": "Twente",
+    "v": 3,
+    "tid": 415
+   },
+   {
+    "n": "Utrecht",
+    "v": 3,
+    "tid": 207
+   },
+   {
+    "n": "ADO Den Haag",
+    "v": 2,
+    "tid": 198
+   },
+   {
+    "n": "DFC",
+    "v": 2
+   },
+   {
+    "n": "Fortuna'54",
+    "v": 2
+   },
+   {
+    "n": "HBS Craeyenhout",
+    "v": 2
+   },
+   {
+    "n": "Haarlem",
+    "v": 2
+   },
+   {
+    "n": "RCH",
+    "v": 2
+   },
+   {
+    "n": "Roda JC",
+    "v": 2,
+    "tid": 414
+   },
+   {
+    "n": "VOC Rotterdam",
+    "v": 2
+   },
+   {
+    "n": "Wageningen",
+    "v": 2
+   },
+   {
+    "n": "Willem II",
+    "v": 2,
+    "tid": 195
+   },
+   {
+    "n": "CVV",
+    "v": 1
+   },
+   {
+    "n": "Concordia",
+    "v": 1
+   },
+   {
+    "n": "FC Eindhoven",
+    "v": 1,
+    "tid": 422
+   },
+   {
+    "n": "Go Ahead Eagles",
+    "v": 1,
+    "tid": 410
+   },
+   {
+    "n": "Groningen",
+    "v": 1,
+    "tid": 202
+   },
+   {
+    "n": "HVV Den Haag",
+    "v": 1
+   },
+   {
+    "n": "Heerenveen",
+    "v": 1,
+    "tid": 210
+   },
+   {
+    "n": "LONGA",
+    "v": 1
+   },
+   {
+    "n": "NAC Breda",
+    "v": 1,
+    "tid": 203
+   },
+   {
+    "n": "PEC Zwolle",
+    "v": 1,
+    "tid": 193
+   },
+   {
+    "n": "Quick 1888",
+    "v": 1
+   },
+   {
+    "n": "RAP Amsterdam",
+    "v": 1
+   },
+   {
+    "n": "Roermond",
+    "v": 1
+   },
+   {
+    "n": "Schoten",
+    "v": 1
+   },
+   {
+    "n": "VSV Velsen",
+    "v": 1
+   },
+   {
+    "n": "VUC Den Haag",
+    "v": 1
+   },
+   {
+    "n": "VVV Venlo",
+    "v": 1,
+    "tid": 204
+   },
+   {
+    "n": "Velocitas Breda",
+    "v": 1
+   },
+   {
+    "n": "Velocitas Groningen",
+    "v": 1
+   },
+   {
+    "n": "Vitesse",
+    "v": 1,
+    "tid": 200
+   },
+   {
+    "n": "ZFC",
+    "v": 1
+   }
+  ]
+ },
+ "portugal/taca-de-portugal": {
+  "through": 2025,
+  "source": "https://en.wikipedia.org/wiki/Ta%C3%A7a_de_Portugal",
+  "titles": [
+   {
+    "n": "Benfica",
+    "v": 26,
+    "tid": 211
+   },
+   {
+    "n": "FC Porto",
+    "v": 20,
+    "tid": 212
+   },
+   {
+    "n": "Sporting CP",
+    "v": 18,
+    "tid": 228
+   },
+   {
+    "n": "Boavista",
+    "v": 5,
+    "tid": 222
+   },
+   {
+    "n": "Belenenses",
+    "v": 3,
+    "tid": 221
+   },
+   {
+    "n": "Braga",
+    "v": 3,
+    "tid": 217
+   },
+   {
+    "n": "Vitoria Setubal",
+    "v": 3,
+    "tid": 219
+   },
+   {
+    "n": "Académica",
+    "v": 2,
+    "tid": 239
+   },
+   {
+    "n": "Aves",
+    "v": 1,
+    "tid": 220
+   },
+   {
+    "n": "Beira-Mar",
+    "v": 1,
+    "tid": 4661
+   },
+   {
+    "n": "Estrela da Amadora",
+    "v": 1,
+    "tid": 15130
+   },
+   {
+    "n": "Leixões",
+    "v": 1,
+    "tid": 244
+   },
+   {
+    "n": "Torreense",
+    "v": 1,
+    "tid": 4799
+   },
+   {
+    "n": "Vitória de Guimarães",
+    "v": 1,
+    "tid": 224
+   }
+  ]
+ },
+ "scotland/scottish-cup": {
+  "through": 2025,
+  "source": "https://en.wikipedia.org/wiki/Scottish_Cup",
+  "titles": [
+   {
+    "n": "Celtic",
+    "v": 43,
+    "tid": 247
+   },
+   {
+    "n": "Rangers",
+    "v": 34,
+    "tid": 257
+   },
+   {
+    "n": "Queen's Park",
+    "v": 10,
+    "tid": 6778
+   },
+   {
+    "n": "Aberdeen",
+    "v": 8,
+    "tid": 252
+   },
+   {
+    "n": "Heart of Midlothian",
+    "v": 8,
+    "tid": 254
+   },
+   {
+    "n": "Clyde",
+    "v": 3,
+    "tid": 6762
+   },
+   {
+    "n": "Hibernian",
+    "v": 3,
+    "tid": 249
+   },
+   {
+    "n": "Kilmarnock",
+    "v": 3,
+    "tid": 250
+   },
+   {
+    "n": "St Mirren",
+    "v": 3,
+    "tid": 251
+   },
+   {
+    "n": "Vale of Leven",
+    "v": 3
+   },
+   {
+    "n": "Dundee United",
+    "v": 2,
+    "tid": 1386
+   },
+   {
+    "n": "Dunfermline",
+    "v": 2,
+    "tid": 1388
+   },
+   {
+    "n": "Falkirk",
+    "v": 2,
+    "tid": 1389
+   },
+   {
+    "n": "Motherwell",
+    "v": 2,
+    "tid": 256
+   },
+   {
+    "n": "Renton",
+    "v": 2
+   },
+   {
+    "n": "St Johnstone",
+    "v": 2,
+    "tid": 258
+   },
+   {
+    "n": "Third Lanark",
+    "v": 2
+   },
+   {
+    "n": "Airdrieonians",
+    "v": 1,
+    "tid": 4668
+   },
+   {
+    "n": "Dumbarton",
+    "v": 1,
+    "tid": 1382
+   },
+   {
+    "n": "Dundee",
+    "v": 1,
+    "tid": 253
+   },
+   {
+    "n": "East Fife",
+    "v": 1,
+    "tid": 6764
+   },
+   {
+    "n": "Greenock Morton",
+    "v": 1,
+    "tid": 1383
+   },
+   {
+    "n": "Inverness Caledonian Thistle",
+    "v": 1,
+    "tid": 903
+   },
+   {
+    "n": "Partick Thistle",
+    "v": 1,
+    "tid": 901
+   },
+   {
+    "n": "St Bernard's",
+    "v": 1
+   }
+  ]
+ },
+ "scotland/scottish-league-cup": {
+  "through": 2025,
+  "source": "https://en.wikipedia.org/wiki/Scottish_League_Cup",
+  "titles": [
+   {
+    "n": "Rangers",
+    "v": 28,
+    "tid": 257
+   },
+   {
+    "n": "Celtic",
+    "v": 22,
+    "tid": 247
+   },
+   {
+    "n": "Aberdeen",
+    "v": 6,
+    "tid": 252
+   },
+   {
+    "n": "Heart of Midlothian",
+    "v": 4,
+    "tid": 254
+   },
+   {
+    "n": "Dundee",
+    "v": 3,
+    "tid": 253
+   },
+   {
+    "n": "East Fife",
+    "v": 3,
+    "tid": 6764
+   },
+   {
+    "n": "Hibernian",
+    "v": 3,
+    "tid": 249
+   },
+   {
+    "n": "Dundee United",
+    "v": 2,
+    "tid": 1386
+   },
+   {
+    "n": "St Mirren",
+    "v": 2,
+    "tid": 251
+   },
+   {
+    "n": "Kilmarnock",
+    "v": 1,
+    "tid": 250
+   },
+   {
+    "n": "Livingston",
+    "v": 1,
+    "tid": 255
+   },
+   {
+    "n": "Motherwell",
+    "v": 1,
+    "tid": 256
+   },
+   {
+    "n": "Partick Thistle",
+    "v": 1,
+    "tid": 901
+   },
+   {
+    "n": "Raith Rovers",
+    "v": 1,
+    "tid": 1385
+   },
+   {
+    "n": "Ross County",
+    "v": 1,
+    "tid": 902
+   },
+   {
+    "n": "St Johnstone",
+    "v": 1,
+    "tid": 258
+   }
+  ]
+ },
+ "belgium/belgian-cup": {
+  "through": 2025,
+  "source": "https://en.wikipedia.org/wiki/Belgian_Cup",
+  "titles": [
+   {
+    "n": "Club Brugge",
+    "v": 12,
+    "tid": 569
+   },
+   {
+    "n": "Anderlecht",
+    "v": 9,
+    "tid": 554
+   },
+   {
+    "n": "Standard Liège",
+    "v": 8,
+    "tid": 733
+   },
+   {
+    "n": "Genk",
+    "v": 5,
+    "tid": 742
+   },
+   {
+    "n": "Antwerp",
+    "v": 4,
+    "tid": 740
+   },
+   {
+    "n": "Gent",
+    "v": 4,
+    "tid": 631
+   },
+   {
+    "n": "Union Saint-Gilloise",
+    "v": 4,
+    "tid": 1393
+   },
+   {
+    "n": "Beerschot VAC",
+    "v": 2
+   },
+   {
+    "n": "Cercle Brugge",
+    "v": 2,
+    "tid": 741
+   },
+   {
+    "n": "KV Mechelen",
+    "v": 2,
+    "tid": 266
+   },
+   {
+    "n": "Lierse",
+    "v": 2,
+    "tid": 6219
+   },
+   {
+    "n": "Lokeren",
+    "v": 2,
+    "tid": 737
+   },
+   {
+    "n": "SK Beveren",
+    "v": 2,
+    "tid": 738
+   },
+   {
+    "n": "Waterschei",
+    "v": 2
+   },
+   {
+    "n": "Zulte Waregem",
+    "v": 2,
+    "tid": 600
+   },
+   {
+    "n": "Daring Bruxelles",
+    "v": 1
+   },
+   {
+    "n": "Germinal Beerschot",
+    "v": 1
+   },
+   {
+    "n": "Germinal Ekeren",
+    "v": 1
+   },
+   {
+    "n": "KSV Waregem",
+    "v": 1
+   },
+   {
+    "n": "La Louvière",
+    "v": 1,
+    "tid": 5902
+   },
+   {
+    "n": "Liégeois",
+    "v": 1
+   },
+   {
+    "n": "Racing Bruxelles",
+    "v": 1
+   },
+   {
+    "n": "Racing Tournai",
+    "v": 1
+   },
+   {
+    "n": "Westerlo",
+    "v": 1,
+    "tid": 261
+   }
+  ]
+ },
+ "croatia/croatian-cup": {
+  "through": 2025,
+  "source": "https://en.wikipedia.org/wiki/Croatian_Football_Cup",
+  "titles": [
+   {
+    "n": "Dinamo Zagreb",
+    "v": 18,
+    "tid": 620
+   },
+   {
+    "n": "Hajduk Split",
+    "v": 8,
+    "tid": 608
+   },
+   {
+    "n": "Rijeka",
+    "v": 7,
+    "tid": 561
+   },
+   {
+    "n": "Inter Zaprešić",
+    "v": 1,
+    "tid": 1020
+   },
+   {
+    "n": "Osijek",
+    "v": 1,
+    "tid": 616
+   }
+  ]
+ },
+ "turkey/turkish-cup": {
+  "through": 2025,
+  "source": "https://en.wikipedia.org/wiki/Turkish_Cup",
+  "titles": [
+   {
+    "n": "Galatasaray",
+    "v": 19,
+    "tid": 645
+   },
+   {
+    "n": "Beşiktaş",
+    "v": 11,
+    "tid": 549
+   },
+   {
+    "n": "Trabzonspor",
+    "v": 10,
+    "tid": 998
+   },
+   {
+    "n": "Fenerbahçe",
+    "v": 7,
+    "tid": 611
+   },
+   {
+    "n": "Altay",
+    "v": 2,
+    "tid": 3566
+   },
+   {
+    "n": "Ankaragücü",
+    "v": 2,
+    "tid": 1010
+   },
+   {
+    "n": "Gençlerbirliği",
+    "v": 2,
+    "tid": 997
+   },
+   {
+    "n": "Göztepe",
+    "v": 2,
+    "tid": 994
+   },
+   {
+    "n": "Kocaelispor",
+    "v": 2,
+    "tid": 7411
+   },
+   {
+    "n": "Akhisarspor",
+    "v": 1,
+    "tid": 995
+   },
+   {
+    "n": "Bursaspor",
+    "v": 1,
+    "tid": 1003
+   },
+   {
+    "n": "Eskişehirspor",
+    "v": 1,
+    "tid": 3572
+   },
+   {
+    "n": "Kayserispor",
+    "v": 1,
+    "tid": 1001
+   },
+   {
+    "n": "Konyaspor",
+    "v": 1,
+    "tid": 607
+   },
+   {
+    "n": "Sakaryaspor",
+    "v": 1,
+    "tid": 3602
+   },
+   {
+    "n": "Sivasspor",
+    "v": 1,
+    "tid": 1002
+   }
+  ]
+ }
+}
