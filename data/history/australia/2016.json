@@ -1,0 +1,289 @@
+{
+ "country": "australia",
+ "name": "Australia",
+ "adjective": "Australian",
+ "season": "2016–17",
+ "year": 2016,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "a-league",
+   "tier": 1,
+   "name": "A-League",
+   "short": "AL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 6,
+     "kind": "mid",
+     "label": "Play-offs"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Sydney FC",
+     "p": 27,
+     "w": 20,
+     "d": 6,
+     "l": 1,
+     "gf": 55,
+     "ga": 12,
+     "pts": 66,
+     "tid": 943,
+     "form": "WWWDW"
+    },
+    {
+     "pos": 2,
+     "team": "Melbourne Victory",
+     "p": 27,
+     "w": 15,
+     "d": 4,
+     "l": 8,
+     "gf": 49,
+     "ga": 31,
+     "pts": 49,
+     "tid": 944,
+     "form": "WLLDW"
+    },
+    {
+     "pos": 3,
+     "team": "Brisbane Roar FC",
+     "p": 27,
+     "w": 11,
+     "d": 9,
+     "l": 7,
+     "gf": 43,
+     "ga": 37,
+     "pts": 42,
+     "tid": 947,
+     "form": "LWWLW"
+    },
+    {
+     "pos": 4,
+     "team": "Melbourne City",
+     "p": 27,
+     "w": 11,
+     "d": 6,
+     "l": 10,
+     "gf": 49,
+     "ga": 44,
+     "pts": 39,
+     "tid": 945,
+     "form": "WLLWL"
+    },
+    {
+     "pos": 5,
+     "team": "Perth Glory FC",
+     "p": 27,
+     "w": 10,
+     "d": 9,
+     "l": 8,
+     "gf": 53,
+     "ga": 53,
+     "pts": 39,
+     "tid": 940,
+     "form": "LLDWW"
+    },
+    {
+     "pos": 6,
+     "team": "Western Sydney",
+     "p": 27,
+     "w": 8,
+     "d": 12,
+     "l": 7,
+     "gf": 35,
+     "ga": 35,
+     "pts": 36,
+     "tid": 939,
+     "form": "WWWDD"
+    },
+    {
+     "pos": 7,
+     "team": "Wellington Phoenix",
+     "p": 27,
+     "w": 8,
+     "d": 6,
+     "l": 13,
+     "gf": 41,
+     "ga": 46,
+     "pts": 30,
+     "tid": 942,
+     "form": "LWWDL"
+    },
+    {
+     "pos": 8,
+     "team": "Central Coast Mariners FC",
+     "p": 27,
+     "w": 6,
+     "d": 5,
+     "l": 16,
+     "gf": 31,
+     "ga": 52,
+     "pts": 23,
+     "tid": 941,
+     "form": "LLLWL"
+    },
+    {
+     "pos": 9,
+     "team": "Adelaide United",
+     "p": 27,
+     "w": 5,
+     "d": 8,
+     "l": 14,
+     "gf": 25,
+     "ga": 46,
+     "pts": 23,
+     "tid": 948,
+     "form": "WWDLD"
+    },
+    {
+     "pos": 10,
+     "team": "Newcastle Jets FC",
+     "p": 27,
+     "w": 5,
+     "d": 7,
+     "l": 15,
+     "gf": 28,
+     "ga": 53,
+     "pts": 22,
+     "tid": 946,
+     "form": "LLLLL"
+    }
+   ]
+  },
+  {
+   "id": "npl",
+   "tier": 2,
+   "name": "National Premier Leagues",
+   "short": "NPL",
+   "final": true,
+   "zones": [],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Canberra Olympic",
+     "p": 18,
+     "w": 15,
+     "d": 0,
+     "l": 3,
+     "gf": 50,
+     "ga": 16,
+     "pts": 45,
+     "tid": 1450
+    },
+    {
+     "pos": 2,
+     "team": "Cooma Tigers FC",
+     "p": 18,
+     "w": 13,
+     "d": 3,
+     "l": 2,
+     "gf": 61,
+     "ga": 28,
+     "pts": 42,
+     "tid": 1452
+    },
+    {
+     "pos": 3,
+     "team": "Belconnen United",
+     "p": 18,
+     "w": 11,
+     "d": 2,
+     "l": 5,
+     "gf": 49,
+     "ga": 24,
+     "pts": 35,
+     "tid": 1449
+    },
+    {
+     "pos": 4,
+     "team": "Canberra FC",
+     "p": 18,
+     "w": 10,
+     "d": 2,
+     "l": 6,
+     "gf": 44,
+     "ga": 31,
+     "pts": 32,
+     "tid": 1448
+    },
+    {
+     "pos": 5,
+     "team": "Centre Of Excellence",
+     "p": 18,
+     "w": 7,
+     "d": 1,
+     "l": 10,
+     "gf": 51,
+     "ga": 48,
+     "pts": 22,
+     "tid": 1455
+    },
+    {
+     "pos": 6,
+     "team": "Gungahlin United",
+     "p": 18,
+     "w": 6,
+     "d": 4,
+     "l": 8,
+     "gf": 20,
+     "ga": 29,
+     "pts": 22,
+     "tid": 1456
+    },
+    {
+     "pos": 7,
+     "team": "Tuggeranong United",
+     "p": 18,
+     "w": 6,
+     "d": 3,
+     "l": 9,
+     "gf": 26,
+     "ga": 35,
+     "pts": 21,
+     "tid": 1447
+    },
+    {
+     "pos": 8,
+     "team": "Canberra United",
+     "p": 18,
+     "w": 6,
+     "d": 0,
+     "l": 12,
+     "gf": 44,
+     "ga": 68,
+     "pts": 18,
+     "tid": 1451
+    },
+    {
+     "pos": 9,
+     "team": "Monaro Panthers",
+     "p": 18,
+     "w": 4,
+     "d": 2,
+     "l": 12,
+     "gf": 22,
+     "ga": 49,
+     "pts": 14,
+     "tid": 1453
+    },
+    {
+     "pos": 10,
+     "team": "Woden Vellet",
+     "p": 18,
+     "w": 3,
+     "d": 1,
+     "l": 14,
+     "gf": 16,
+     "ga": 55,
+     "pts": 10,
+     "tid": 1454
+    }
+   ]
+  }
+ ]
+}

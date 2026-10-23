@@ -1,0 +1,330 @@
+{
+ "country": "austria",
+ "name": "Austria",
+ "adjective": "Austrian",
+ "season": "2012–13",
+ "year": 2012,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "austrian-bundesliga",
+   "tier": 1,
+   "name": "Bundesliga",
+   "short": "ABL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 3,
+     "to": 4,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 10,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Austria Wien",
+     "p": 36,
+     "w": 25,
+     "d": 7,
+     "l": 4,
+     "gf": 84,
+     "ga": 31,
+     "pts": 82,
+     "tid": 601,
+     "form": "WWWWL"
+    },
+    {
+     "pos": 2,
+     "team": "Red Bull Salzburg",
+     "p": 36,
+     "w": 22,
+     "d": 11,
+     "l": 3,
+     "gf": 91,
+     "ga": 39,
+     "pts": 77,
+     "tid": 571,
+     "form": "WWWDW"
+    },
+    {
+     "pos": 3,
+     "team": "Rapid Wien",
+     "p": 36,
+     "w": 16,
+     "d": 9,
+     "l": 11,
+     "gf": 57,
+     "ga": 39,
+     "pts": 57,
+     "tid": 781,
+     "form": "WDLWW"
+    },
+    {
+     "pos": 4,
+     "team": "Sturm Graz",
+     "p": 36,
+     "w": 13,
+     "d": 9,
+     "l": 14,
+     "gf": 49,
+     "ga": 56,
+     "pts": 48,
+     "tid": 637,
+     "form": "LLWLL"
+    },
+    {
+     "pos": 5,
+     "team": "Wolfsberger AC",
+     "p": 36,
+     "w": 12,
+     "d": 11,
+     "l": 13,
+     "gf": 53,
+     "ga": 56,
+     "pts": 47,
+     "tid": 1025,
+     "form": "LDDLL"
+    },
+    {
+     "pos": 6,
+     "team": "SV Ried",
+     "p": 36,
+     "w": 13,
+     "d": 7,
+     "l": 16,
+     "gf": 60,
+     "ga": 59,
+     "pts": 46,
+     "tid": 1028,
+     "form": "LDLDL"
+    },
+    {
+     "pos": 7,
+     "team": "SC Wiener Neustadt",
+     "p": 36,
+     "w": 9,
+     "d": 9,
+     "l": 18,
+     "gf": 32,
+     "ga": 60,
+     "pts": 36,
+     "tid": 1396,
+     "form": "DLLWW"
+    },
+    {
+     "pos": 8,
+     "team": "Wacker Innsbruck",
+     "p": 36,
+     "w": 11,
+     "d": 3,
+     "l": 22,
+     "gf": 41,
+     "ga": 75,
+     "pts": 36,
+     "tid": 1073,
+     "form": "DLLWW"
+    },
+    {
+     "pos": 9,
+     "team": "Admira Wacker",
+     "p": 36,
+     "w": 9,
+     "d": 8,
+     "l": 19,
+     "gf": 47,
+     "ga": 68,
+     "pts": 35,
+     "tid": 1023,
+     "form": "LWDLW"
+    },
+    {
+     "pos": 10,
+     "team": "SV Mattersburg",
+     "p": 36,
+     "w": 9,
+     "d": 8,
+     "l": 19,
+     "gf": 36,
+     "ga": 67,
+     "pts": 35,
+     "tid": 1024,
+     "form": "WDWLL"
+    }
+   ]
+  },
+  {
+   "id": "2-liga",
+   "tier": 2,
+   "name": "Erste Liga",
+   "short": "EL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 9,
+     "to": 9,
+     "kind": "down",
+     "label": "Relegation play-off"
+    },
+    {
+     "from": 10,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Grödig",
+     "p": 36,
+     "w": 23,
+     "d": 6,
+     "l": 7,
+     "gf": 71,
+     "ga": 30,
+     "pts": 75,
+     "tid": 4974,
+     "form": "WWDDW"
+    },
+    {
+     "pos": 2,
+     "team": "Rheindorf Altach",
+     "p": 36,
+     "w": 19,
+     "d": 8,
+     "l": 9,
+     "gf": 57,
+     "ga": 39,
+     "pts": 65,
+     "tid": 618,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 3,
+     "team": "Austria Lustenau",
+     "p": 36,
+     "w": 18,
+     "d": 7,
+     "l": 11,
+     "gf": 60,
+     "ga": 39,
+     "pts": 61,
+     "tid": 1399,
+     "form": "LLWWW"
+    },
+    {
+     "pos": 4,
+     "team": "SKN St. Pölten",
+     "p": 36,
+     "w": 14,
+     "d": 12,
+     "l": 10,
+     "gf": 65,
+     "ga": 60,
+     "pts": 54,
+     "tid": 1027,
+     "form": "LWDLW"
+    },
+    {
+     "pos": 5,
+     "team": "SV Kapfenberg",
+     "p": 36,
+     "w": 14,
+     "d": 11,
+     "l": 11,
+     "gf": 56,
+     "ga": 50,
+     "pts": 53,
+     "tid": 1401,
+     "form": "WLWDL"
+    },
+    {
+     "pos": 6,
+     "team": "SV Horn",
+     "p": 36,
+     "w": 13,
+     "d": 7,
+     "l": 16,
+     "gf": 50,
+     "ga": 55,
+     "pts": 46,
+     "tid": 1397,
+     "form": "WLWLW"
+    },
+    {
+     "pos": 7,
+     "team": "First Vienna",
+     "p": 36,
+     "w": 13,
+     "d": 7,
+     "l": 16,
+     "gf": 48,
+     "ga": 64,
+     "pts": 46,
+     "tid": 4990,
+     "form": "WWLWL"
+    },
+    {
+     "pos": 8,
+     "team": "Lustenau",
+     "p": 36,
+     "w": 10,
+     "d": 8,
+     "l": 18,
+     "gf": 44,
+     "ga": 66,
+     "pts": 38,
+     "tid": 8361,
+     "form": "LLLLL"
+    },
+    {
+     "pos": 9,
+     "team": "TSV Hartberg",
+     "p": 36,
+     "w": 8,
+     "d": 9,
+     "l": 19,
+     "gf": 35,
+     "ga": 54,
+     "pts": 33,
+     "tid": 1072,
+     "form": "LLLLL"
+    },
+    {
+     "pos": 10,
+     "team": "Blau-Weiß Linz",
+     "p": 36,
+     "w": 5,
+     "d": 11,
+     "l": 20,
+     "gf": 38,
+     "ga": 67,
+     "pts": 26,
+     "tid": 1394,
+     "form": "LWLWL"
+    }
+   ]
+  }
+ ]
+}

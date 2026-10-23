@@ -1,0 +1,251 @@
+{
+ "country": "greece",
+ "name": "Greece",
+ "adjective": "Greek",
+ "season": "2017–18",
+ "year": 2017,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "greek-super-league",
+   "tier": 1,
+   "name": "Super League",
+   "short": "SL1",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 3,
+     "to": 4,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 15,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [
+    "Panathinaikos: 2 points deducted."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "PAOK",
+     "p": 30,
+     "w": 21,
+     "d": 5,
+     "l": 4,
+     "gf": 59,
+     "ga": 16,
+     "pts": 68,
+     "tid": 619,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
+     "team": "AEK Athens",
+     "p": 30,
+     "w": 20,
+     "d": 8,
+     "l": 2,
+     "gf": 47,
+     "ga": 12,
+     "pts": 68,
+     "tid": 575,
+     "form": "WWWDW"
+    },
+    {
+     "pos": 3,
+     "team": "Olympiacos",
+     "p": 30,
+     "w": 18,
+     "d": 6,
+     "l": 6,
+     "gf": 63,
+     "ga": 28,
+     "pts": 60,
+     "tid": 553,
+     "form": "DWLWL"
+    },
+    {
+     "pos": 4,
+     "team": "Atromitos",
+     "p": 30,
+     "w": 15,
+     "d": 11,
+     "l": 4,
+     "gf": 43,
+     "ga": 21,
+     "pts": 56,
+     "tid": 12260,
+     "form": "LLWWW"
+    },
+    {
+     "pos": 5,
+     "team": "Asteras Tripolis",
+     "p": 30,
+     "w": 12,
+     "d": 9,
+     "l": 9,
+     "gf": 39,
+     "ga": 24,
+     "pts": 45,
+     "tid": 955,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 6,
+     "team": "Xanthi FC",
+     "p": 30,
+     "w": 12,
+     "d": 9,
+     "l": 9,
+     "gf": 31,
+     "ga": 30,
+     "pts": 45,
+     "tid": 959,
+     "form": "DWLWW"
+    },
+    {
+     "pos": 7,
+     "team": "Panionios",
+     "p": 30,
+     "w": 10,
+     "d": 10,
+     "l": 10,
+     "gf": 32,
+     "ga": 31,
+     "pts": 40,
+     "tid": 622,
+     "form": "DLLWW"
+    },
+    {
+     "pos": 8,
+     "team": "Panathinaikos",
+     "p": 30,
+     "w": 10,
+     "d": 10,
+     "l": 10,
+     "gf": 30,
+     "ga": 30,
+     "pts": 38,
+     "tid": 617,
+     "form": "LWWLL",
+     "ded": 2
+    },
+    {
+     "pos": 9,
+     "team": "Panetolikos",
+     "p": 30,
+     "w": 9,
+     "d": 8,
+     "l": 13,
+     "gf": 31,
+     "ga": 40,
+     "pts": 35,
+     "tid": 949,
+     "form": "WLWLL"
+    },
+    {
+     "pos": 10,
+     "team": "PAS Giannina",
+     "p": 30,
+     "w": 7,
+     "d": 13,
+     "l": 10,
+     "gf": 31,
+     "ga": 34,
+     "pts": 34,
+     "tid": 950,
+     "form": "LLDLW"
+    },
+    {
+     "pos": 11,
+     "team": "Levadiakos",
+     "p": 30,
+     "w": 8,
+     "d": 10,
+     "l": 12,
+     "gf": 23,
+     "ga": 34,
+     "pts": 34,
+     "tid": 957,
+     "form": "DWLLL"
+    },
+    {
+     "pos": 12,
+     "team": "Larisa",
+     "p": 30,
+     "w": 7,
+     "d": 10,
+     "l": 13,
+     "gf": 22,
+     "ga": 41,
+     "pts": 31,
+     "tid": 953,
+     "form": "LWDLD"
+    },
+    {
+     "pos": 13,
+     "team": "Lamia",
+     "p": 30,
+     "w": 6,
+     "d": 12,
+     "l": 12,
+     "gf": 20,
+     "ga": 34,
+     "pts": 30,
+     "tid": 956,
+     "form": "DDLWD"
+    },
+    {
+     "pos": 14,
+     "team": "Apollon Smirnis",
+     "p": 30,
+     "w": 6,
+     "d": 11,
+     "l": 13,
+     "gf": 23,
+     "ga": 36,
+     "pts": 29,
+     "tid": 951,
+     "form": "WDWLL"
+    },
+    {
+     "pos": 15,
+     "team": "AOK Kerkyra",
+     "p": 30,
+     "w": 4,
+     "d": 10,
+     "l": 16,
+     "gf": 19,
+     "ga": 51,
+     "pts": 22,
+     "tid": 2111,
+     "form": "DLLDL"
+    },
+    {
+     "pos": 16,
+     "team": "Platanias",
+     "p": 30,
+     "w": 2,
+     "d": 4,
+     "l": 24,
+     "gf": 14,
+     "ga": 65,
+     "pts": 10,
+     "tid": 958,
+     "form": "LLLLL"
+    }
+   ]
+  }
+ ]
+}

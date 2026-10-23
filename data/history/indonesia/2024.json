@@ -1,0 +1,271 @@
+{
+ "country": "indonesia",
+ "name": "Indonesia",
+ "adjective": "Indonesian",
+ "season": "2024–25",
+ "year": 2024,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "indonesian-super-league",
+   "tier": 1,
+   "name": "Liga 1",
+   "short": "L1",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Champions League"
+    },
+    {
+     "from": 16,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [
+    "PSS Sleman: 3 points deducted."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Persib Bandung",
+     "p": 34,
+     "w": 19,
+     "d": 12,
+     "l": 3,
+     "gf": 60,
+     "ga": 33,
+     "pts": 69,
+     "tid": 2445,
+     "form": "WLDDW"
+    },
+    {
+     "pos": 2,
+     "team": "Dewa United",
+     "p": 34,
+     "w": 17,
+     "d": 10,
+     "l": 7,
+     "gf": 65,
+     "ga": 33,
+     "pts": 61,
+     "tid": 17902,
+     "form": "LDWDW"
+    },
+    {
+     "pos": 3,
+     "team": "Malut United",
+     "p": 34,
+     "w": 15,
+     "d": 12,
+     "l": 7,
+     "gf": 48,
+     "ga": 33,
+     "pts": 57,
+     "tid": 22409,
+     "form": "WWLWD"
+    },
+    {
+     "pos": 4,
+     "team": "Borneo FC",
+     "p": 34,
+     "w": 16,
+     "d": 8,
+     "l": 10,
+     "gf": 50,
+     "ga": 38,
+     "pts": 56,
+     "tid": 2442,
+     "form": "WWWDW"
+    },
+    {
+     "pos": 5,
+     "team": "Persebaya Surabaya",
+     "p": 34,
+     "w": 15,
+     "d": 11,
+     "l": 8,
+     "gf": 41,
+     "ga": 38,
+     "pts": 56,
+     "tid": 2446,
+     "form": "DDDDL"
+    },
+    {
+     "pos": 6,
+     "team": "PSM Makassar",
+     "p": 34,
+     "w": 13,
+     "d": 14,
+     "l": 7,
+     "gf": 47,
+     "ga": 34,
+     "pts": 53,
+     "tid": 2441,
+     "form": "LLWWW"
+    },
+    {
+     "pos": 7,
+     "team": "Persija",
+     "p": 34,
+     "w": 14,
+     "d": 9,
+     "l": 11,
+     "gf": 47,
+     "ga": 38,
+     "pts": 51,
+     "tid": 10134,
+     "form": "LLWLD"
+    },
+    {
+     "pos": 8,
+     "team": "Bali United",
+     "p": 34,
+     "w": 14,
+     "d": 8,
+     "l": 12,
+     "gf": 50,
+     "ga": 41,
+     "pts": 50,
+     "tid": 2448,
+     "form": "WWLLW"
+    },
+    {
+     "pos": 9,
+     "team": "PSBS Biak Numfor",
+     "p": 34,
+     "w": 13,
+     "d": 9,
+     "l": 12,
+     "gf": 44,
+     "ga": 47,
+     "pts": 48,
+     "tid": 4232,
+     "form": "WWLDL"
+    },
+    {
+     "pos": 10,
+     "team": "Arema FC",
+     "p": 34,
+     "w": 13,
+     "d": 8,
+     "l": 13,
+     "gf": 53,
+     "ga": 51,
+     "pts": 47,
+     "tid": 2438,
+     "form": "DWLDL"
+    },
+    {
+     "pos": 11,
+     "team": "Persita",
+     "p": 34,
+     "w": 12,
+     "d": 7,
+     "l": 15,
+     "gf": 32,
+     "ga": 43,
+     "pts": 43,
+     "tid": 4244,
+     "form": "LLLDL"
+    },
+    {
+     "pos": 12,
+     "team": "Persik Kediri",
+     "p": 34,
+     "w": 10,
+     "d": 11,
+     "l": 13,
+     "gf": 40,
+     "ga": 42,
+     "pts": 41,
+     "tid": 4241,
+     "form": "LDWDL"
+    },
+    {
+     "pos": 13,
+     "team": "Semen Padang",
+     "p": 34,
+     "w": 9,
+     "d": 9,
+     "l": 16,
+     "gf": 38,
+     "ga": 60,
+     "pts": 36,
+     "tid": 2456,
+     "form": "WWDDW"
+    },
+    {
+     "pos": 14,
+     "team": "Persis Solo",
+     "p": 34,
+     "w": 9,
+     "d": 9,
+     "l": 16,
+     "gf": 34,
+     "ga": 46,
+     "pts": 36,
+     "tid": 4243,
+     "form": "WLWDL"
+    },
+    {
+     "pos": 15,
+     "team": "Madura United",
+     "p": 34,
+     "w": 10,
+     "d": 6,
+     "l": 18,
+     "gf": 36,
+     "ga": 58,
+     "pts": 36,
+     "tid": 2444,
+     "form": "WLLWL"
+    },
+    {
+     "pos": 16,
+     "team": "PSS Sleman",
+     "p": 34,
+     "w": 11,
+     "d": 4,
+     "l": 19,
+     "gf": 43,
+     "ga": 50,
+     "pts": 34,
+     "ded": 3,
+     "tid": 3882,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 17,
+     "team": "Barito Putera",
+     "p": 34,
+     "w": 8,
+     "d": 10,
+     "l": 16,
+     "gf": 42,
+     "ga": 57,
+     "pts": 34,
+     "tid": 2453,
+     "form": "LDDLW"
+    },
+    {
+     "pos": 18,
+     "team": "PSIS Semarang",
+     "p": 34,
+     "w": 6,
+     "d": 7,
+     "l": 21,
+     "gf": 29,
+     "ga": 57,
+     "pts": 25,
+     "tid": 2451,
+     "form": "LLLLL"
+    }
+   ]
+  }
+ ]
+}

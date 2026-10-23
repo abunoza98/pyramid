@@ -1,8 +1,8 @@
 # Past seasons audit
 
-Checked 2026-10-23. 75 findings. Repair mode: 27 API requests used.
+Checked 2026-10-23. 658 findings. Repair mode: 285 API requests used.
 
-## Scottish Premiership split seasons (7)
+## Scottish Premiership split seasons (17)
 
 - **Scotland 2010–11, Premiership**: Split season. _couldn't combine (results for 12 clubs, games played 33/36/35/34): left as is._
 - **Scotland 2020–21, Premiership**: Split season. _couldn't combine (results for 15 clubs, games played 38/40/4/2): left as is._
@@ -11,8 +11,18 @@ Checked 2026-10-23. 75 findings. Repair mode: 27 API requests used.
 - **Scotland 2023–24, Premiership**: Split season. _couldn't combine (results for 15 clubs, games played 38/40/4/2): left as is._
 - **Scotland 2024–25, Premiership**: Split season. _couldn't combine (results for 15 clubs, games played 38/40/4/2): left as is._
 - **Scotland 2025–26, Premiership**: Split season. _couldn't combine (results for 15 clubs, games played 38/40/4/2): left as is._
+- **Switzerland 2023–24, Super League**: Split season. _couldn't combine (results for 13 clubs, games played 38/40/2): left as is._
+- **Switzerland 2024–25, Super League**: Split season. _couldn't combine (results for 13 clubs, games played 38/40/2): left as is._
+- **Switzerland 2025–26, Super League**: Split season. _couldn't combine (results for 13 clubs, games played 38/40/2): left as is._
+- **Austria 2018–19, Bundesliga**: Split season saved as separate tables. _combined into the final 32-game table (1. Red Bull Salzburg 80, 12. Wacker Innsbruck)._
+- **Austria 2020–21, Bundesliga**: Split season. _couldn't combine (results for 13 clubs, games played 32/34/2): left as is._
+- **Austria 2021–22, Bundesliga**: Split season saved as separate tables. _combined into the final 32-game table (1. Red Bull Salzburg 80, 12. Rheindorf Altach)._
+- **Austria 2022–23, Bundesliga**: Split season saved as separate tables. _combined into the final 32-game table (1. Red Bull Salzburg 77, 12. SV Ried)._
+- **Austria 2023–24, Bundesliga**: Split season saved as separate tables. _combined into the final 32-game table (1. Red Bull Salzburg 67, 12. Austria Lustenau)._
+- **Austria 2024–25, Bundesliga**: Split season saved as separate tables. _combined into the final 32-game table (1. Sturm Graz 63, 12. Rheindorf Altach)._
+- **Austria 2025–26, Bundesliga**: Split season. _couldn't combine (results for 12 clubs, games played 32/34/35/33): left as is._
 
-## Tables that stop before the end of the season (37)
+## Tables that stop before the end of the season (178)
 
 - **England 2019–20, League One**: Clubs have played 34–36 games; a full season is 44. _season stopped early (Covid): left as is._
 - **England 2019–20, League Two**: Clubs have played 36–37 games; a full season is 46. _season stopped early (Covid): left as is._
@@ -51,15 +61,160 @@ Checked 2026-10-23. 75 findings. Repair mode: 27 API requests used.
 - **Turkey 2019–20, 3. Lig (Group 3)**: Clubs have played 28 games; a full season is 34. _season stopped early (Covid): left as is._
 - **Turkey 2021–22, 2. Lig (Beyaz)**: Clubs have played 0–34 games; a full season is 36. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
 - **Turkey 2023–24, 3. Lig (Group 2)**: Clubs have played 27–28 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Switzerland 2017–18, Super League**: Clubs have played 21 games; a full season is 36. _rebuilt from results (1. BSC Young Boys 84, 2. FC Basel 69, 3. FC Luzern 54)._
+- **Switzerland 2017–18, Challenge League**: Clubs have played 19–20 games; a full season is 36. _rebuilt from results (1. Neuchâtel Xamax 85, 2. FC Schaffhausen 64, 3. Servette FC 62)._
+- **Switzerland 2019–20, Promotion League**: Clubs have played 17 games; a full season is 30. _season stopped early (Covid): left as is._
+- **Switzerland 2019–20, 1. Liga (Group 1)**: Clubs have played 14 games; a full season is 26. _season stopped early (Covid): left as is._
+- **Switzerland 2019–20, 1. Liga (Group 2)**: Clubs have played 14 games; a full season is 26. _season stopped early (Covid): left as is._
+- **Switzerland 2019–20, 1. Liga (Group 3)**: Clubs have played 14 games; a full season is 26. _season stopped early (Covid): left as is._
+- **Switzerland 2020–21, Promotion League (Regular Season)**: Clubs have played 15 games; a full season is 30. _couldn't rebuild (results found for 16 clubs, not all complete): check by hand._
+- **Switzerland 2020–21, 1. Liga (Group 1)**: Clubs have played 13 games; a full season is 26. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Switzerland 2020–21, 1. Liga (Group 2)**: Clubs have played 13 games; a full season is 26. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Switzerland 2020–21, 1. Liga (Group 3)**: Clubs have played 13 games; a full season is 26. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Switzerland 2022–23, Promotion League**: Clubs have played 0–32 games; a full season is 34. _couldn't rebuild (results found for 18 clubs, not all complete): check by hand._
+- **Austria 2017–18, Bundesliga**: Clubs have played 22 games; a full season is 36. _rebuilt from results (1. Red Bull Salzburg 83, 2. Sturm Graz 70, 3. Rapid Wien 62)._
+- **Austria 2017–18, Erste Liga**: Clubs have played 20 games; a full season is 36. _rebuilt from results (1. Wacker Innsbruck 71, 2. TSV Hartberg 68, 3. SC Wiener Neustadt 62)._
+- **Greece 2017–18, Super League**: Clubs have played 21 games; a full season is 30. _rebuilt from results (1. PAOK 68, 2. AEK Athens 68, 3. Olympiacos 60)._
+- **Brazil 2018–19, Série B**: Clubs have played 0 games; a full season is 38. _rebuilt from results (1. Fortaleza 71, 2. CSA 62, 3. Avaí 61)._
+- **Brazil 2022–23, Série C (Regular Season)**: Clubs have played 19 games; a full season is 38. _couldn't rebuild (results found for 20 clubs, not all complete): check by hand._
+- **Brazil 2023–24, Série C (Regular Season)**: Clubs have played 19 games; a full season is 38. _couldn't rebuild (results found for 20 clubs, not all complete): check by hand._
+- **Brazil 2024–25, Série C**: Clubs have played 19 games; a full season is 38. _couldn't rebuild (results found for 20 clubs, not all complete): check by hand._
+- **Brazil 2025–26, Série C (Brasileiro Serie C)**: Clubs have played 19 games; a full season is 38. _couldn't rebuild (results found for 20 clubs, not all complete): check by hand._
+- **Argentina 2015–16, Liga Profesional**: Clubs have played 30 games; a full season is 58. _couldn't rebuild (results found for 30 clubs, not all complete): check by hand._
+- **Argentina 2016–17, Liga Profesional**: Clubs have played 30 games; a full season is 58. _couldn't rebuild (results found for 30 clubs, not all complete): check by hand._
+- **Argentina 2017–18, Liga Profesional**: Clubs have played 14–15 games; a full season is 54. _couldn't rebuild (results found for 28 clubs, not all complete): check by hand._
+- **Argentina 2017–18, Primera Nacional**: Clubs have played 24 games; a full season is 48. _couldn't rebuild (results found for 25 clubs, not all complete): check by hand._
+- **Argentina 2018–19, Liga Profesional**: Clubs have played 25 games; a full season is 50. _couldn't rebuild (results found for 26 clubs, not all complete): check by hand._
+- **Argentina 2018–19, Primera Nacional**: Clubs have played 24 games; a full season is 48. _couldn't rebuild (results found for 25 clubs, not all complete): check by hand._
+- **Argentina 2019–20, Liga Profesional**: Clubs have played 23 games; a full season is 46. _season stopped early (Covid): left as is._
+- **Argentina 2019–20, Primera Nacional (Regular Season)**: Clubs have played 20–21 games; a full season is 30. _season stopped early (Covid): left as is._
+- **Argentina 2019–20, Primera Nacional (Regular Season)**: Clubs have played 20–21 games; a full season is 30. _season stopped early (Covid): left as is._
+- **Argentina 2019–20, Primera B Metropolitana (Clausura)**: Clubs have played 7–8 games; a full season is 34. _season stopped early (Covid): left as is._
+- **Argentina 2019–20, Primera B Metropolitana (Apertura)**: Clubs have played 17 games; a full season is 34. _season stopped early (Covid): left as is._
+- **Argentina 2019–20, Primera C (Clausura)**: Clubs have played 8–9 games; a full season is 36. _season stopped early (Covid): left as is._
+- **Argentina 2019–20, Primera C (Apertura)**: Clubs have played 18 games; a full season is 36. _season stopped early (Covid): left as is._
+- **Argentina 2020–21, Liga Profesional (Group A)**: Clubs have played 5 games; a full season is 10. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2020–21, Liga Profesional (Group B)**: Clubs have played 5 games; a full season is 10. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2020–21, Liga Profesional (Group A)**: Clubs have played 5 games; a full season is 10. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2020–21, Liga Profesional (Group B)**: Clubs have played 5 games; a full season is 10. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2020–21, Primera B Metropolitana (Clausura)**: Clubs have played 8 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2020–21, Primera B Metropolitana (Apertura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2020–21, Primera C (Clausura)**: Clubs have played 8–9 games; a full season is 36. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2020–21, Primera C (Apertura)**: Clubs have played 18 games; a full season is 36. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2021–22, Primera B Metropolitana (Clausura)**: Clubs have played 16 games; a full season is 32. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2021–22, Primera B Metropolitana (Apertura)**: Clubs have played 16 games; a full season is 32. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2021–22, Primera C (Clausura)**: Clubs have played 18 games; a full season is 36. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2021–22, Primera C (Apertura)**: Clubs have played 18 games; a full season is 36. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2022–23, Primera Nacional**: Clubs have played 36 games; a full season is 72. _couldn't rebuild (results found for 37 clubs, not all complete): check by hand._
+- **Argentina 2022–23, Primera B Metropolitana (Clausura)**: Clubs have played 16 games; a full season is 32. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2022–23, Primera B Metropolitana (Apertura)**: Clubs have played 16 games; a full season is 32. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2022–23, Primera C (Clausura)**: Clubs have played 18 games; a full season is 36. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2022–23, Primera C (Apertura)**: Clubs have played 18 games; a full season is 36. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2023–24, Liga Profesional**: Clubs have played 27 games; a full season is 54. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2023–24, Primera Nacional (Group A)**: Clubs have played 36 games; a full season is 38. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2023–24, Primera B Metropolitana (Clausura)**: Clubs have played 16 games; a full season is 32. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2023–24, Primera B Metropolitana (Apertura)**: Clubs have played 16 games; a full season is 32. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2024–25, Liga Profesional**: Clubs have played 27 games; a full season is 54. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2024–25, Primera B Metropolitana (Clausura)**: Clubs have played 21 games; a full season is 42. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2024–25, Primera B Metropolitana (Apertura)**: Clubs have played 21 games; a full season is 42. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2024–25, Primera C (Clausura)**: Clubs have played 24 games; a full season is 48. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2024–25, Primera C (Apertura)**: Clubs have played 24 games; a full season is 48. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2025–26, Liga Profesional (Group A)**: Clubs have played 16 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2025–26, Liga Profesional (Group B)**: Clubs have played 16 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2025–26, Primera B Metropolitana (Clausura)**: Clubs have played 20 games; a full season is 40. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Argentina 2025–26, Primera B Metropolitana (Apertura)**: Clubs have played 20 games; a full season is 40. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Australia 2017–18, A-League**: Clubs have played 19–20 games; a full season is 27. _rebuilt from results (1. Sydney FC 64, 2. Newcastle Jets FC 50, 3. Melbourne City 43)._
+- **Australia 2019–20, National Premier Leagues (Victoria)**: Clubs have played 25 games; a full season is 26. _season stopped early (Covid): left as is._
+- **Australia 2019–20, National Premier Leagues (South Australia)**: Clubs have played 21 games; a full season is 22. _season stopped early (Covid): left as is._
+- **Australia 2020–21, A-League**: Clubs have played 26 games; a full season is 27. _couldn't rebuild (results found for 12 clubs, not all complete): check by hand._
+- **Australia 2020–21, National Premier Leagues (Regular Season)**: Clubs have played 0–11 games; a full season is 24. _couldn't rebuild (results found for 14 clubs, not all complete): check by hand._
+- **Australia 2020–21, National Premier Leagues (Victoria NPL)**: Clubs have played 5 games; a full season is 26. _couldn't rebuild (results found for 14 clubs, not all complete): check by hand._
+- **Australia 2020–21, National Premier Leagues (Regular Season)**: Clubs have played 0–24 games; a full season is 26. _couldn't rebuild (results found for 14 clubs, not all complete): check by hand._
+- **Australia 2020–21, National Premier Leagues (Regular Season)**: Clubs have played 11 games; a full season is 22. _couldn't rebuild (results found for 14 clubs, not all complete): check by hand._
+- **Australia 2020–21, National Premier Leagues (Regular Season)**: Clubs have played 13 games; a full season is 18. _couldn't rebuild (results found for 14 clubs, not all complete): check by hand._
+- **Australia 2020–21, National Premier Leagues (Regular Season)**: Clubs have played 7 games; a full season is 21. _couldn't rebuild (results found for 14 clubs, not all complete): check by hand._
+- **Australia 2020–21, National Premier Leagues (Tasmania NPL)**: Clubs have played 14 games; a full season is 21. _couldn't rebuild (results found for 14 clubs, not all complete): check by hand._
+- **Australia 2021–22, A-League Men**: Clubs have played 26 games; a full season is 27. _couldn't rebuild (results found for 12 clubs, not all complete): check by hand._
+- **Australia 2021–22, National Premier Leagues (NSW)**: Clubs have played 17 games; a full season is 22. _couldn't rebuild (results found for 12 clubs, not all complete): check by hand._
+- **Australia 2021–22, National Premier Leagues (Victoria)**: Clubs have played 18 games; a full season is 26. _couldn't rebuild (results found for 14 clubs, not all complete): check by hand._
+- **Australia 2021–22, National Premier Leagues (Northern NSW)**: Clubs have played 16 games; a full season is 18. _couldn't rebuild (results found for 10 clubs, not all complete): check by hand._
+- **Australia 2021–22, National Premier Leagues (Capital Territory)**: Clubs have played 16–17 games; a full season is 21. _couldn't rebuild (results found for 8 clubs, not all complete): check by hand._
+- **Australia 2022–23, A-League Men**: Clubs have played 26 games; a full season is 27. _couldn't rebuild (results found for 12 clubs, not all complete): check by hand._
+- **Australia 2025–26, A-League Men**: Clubs have played 26 games; a full season is 27. _couldn't rebuild (results found for 12 clubs, not all complete): check by hand._
+- **Indonesia 2020–21, Liga 1**: Clubs have played 2–3 games; a full season is 34. _couldn't rebuild (results found for 18 clubs, not all complete): check by hand._
+- **USA 2016–17, Major League Soccer**: Clubs have played 34 games; a full season is 38. _couldn't rebuild (results found for 20 clubs, not all complete): check by hand._
+- **USA 2017–18, Major League Soccer**: Clubs have played 34 games; a full season is 42. _couldn't rebuild (results found for 22 clubs, not all complete): check by hand._
+- **USA 2018–19, Major League Soccer**: Clubs have played 34 games; a full season is 44. _couldn't rebuild (results found for 23 clubs, not all complete): check by hand._
+- **USA 2020–21, Major League Soccer (Group Stage)**: Clubs have played 3 games; a full season is 6. _couldn't rebuild (results found for 26 clubs, not all complete): check by hand._
+- **USA 2020–21, Major League Soccer (Group Stage)**: Clubs have played 3 games; a full season is 6. _couldn't rebuild (results found for 26 clubs, not all complete): check by hand._
+- **USA 2020–21, Major League Soccer (Group Stage)**: Clubs have played 3 games; a full season is 6. _couldn't rebuild (results found for 26 clubs, not all complete): check by hand._
+- **USA 2020–21, Major League Soccer (Group Stage)**: Clubs have played 3 games; a full season is 6. _couldn't rebuild (results found for 26 clubs, not all complete): check by hand._
+- **USA 2020–21, Major League Soccer (Group Stage)**: Clubs have played 3 games; a full season is 6. _couldn't rebuild (results found for 26 clubs, not all complete): check by hand._
+- **USA 2020–21, Major League Soccer (Group Stage)**: Clubs have played 3 games; a full season is 6. _couldn't rebuild (results found for 26 clubs, not all complete): check by hand._
+- **USA 2020–21, Major League Soccer (Regular Season)**: Clubs have played 23 games; a full season is 26. _couldn't rebuild (results found for 26 clubs, not all complete): check by hand._
+- **USA 2020–21, Major League Soccer (Regular Season)**: Clubs have played 18–23 games; a full season is 22. _couldn't rebuild (results found for 26 clubs, not all complete): check by hand._
+- **USA 2020–21, USL League One**: Clubs have played 0–16 games; a full season is 32. _couldn't rebuild (results found for 11 clubs, not all complete): check by hand._
+- **USA 2021–22, USL League One**: Clubs have played 28 games; a full season is 32. _couldn't rebuild (results found for 12 clubs, not all complete): check by hand._
+- **USA 2024–25, USL League One**: Clubs have played 22 games; a full season is 32. _couldn't rebuild (results found for 12 clubs, not all complete): check by hand._
+- **Mexico 2016–17, Liga MX (Clausura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2016–17, Liga MX (Apertura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2016–17, Liga de Expansión MX (Group 1)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2016–17, Liga de Expansión MX (Group 2)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2017–18, Liga MX (Clausura)**: Clubs have played 7 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2017–18, Liga MX (Apertura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2017–18, Liga de Expansión MX (Group 1)**: Clubs have played 15 games; a full season is 30. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2017–18, Liga de Expansión MX (Group 2)**: Clubs have played 15 games; a full season is 30. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2018–19, Liga MX (Clausura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2018–19, Liga MX (Apertura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2018–19, Liga de Expansión MX (Clausura)**: Clubs have played 14 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2018–19, Liga de Expansión MX (Apertura)**: Clubs have played 14 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2019–20, Liga MX (Clausura)**: Clubs have played 10 games; a full season is 34. _season stopped early (Covid): left as is._
+- **Mexico 2019–20, Liga MX (Apertura)**: Clubs have played 18 games; a full season is 36. _season stopped early (Covid): left as is._
+- **Mexico 2019–20, Liga de Expansión MX (Clausura)**: Clubs have played 8 games; a full season is 22. _season stopped early (Covid): left as is._
+- **Mexico 2019–20, Liga de Expansión MX (Apertura)**: Clubs have played 13 games; a full season is 26. _season stopped early (Covid): left as is._
+- **Mexico 2020–21, Liga MX (Clausura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2020–21, Liga MX (Apertura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2020–21, Liga de Expansión MX (Clausura)**: Clubs have played 15 games; a full season is 30. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2020–21, Liga de Expansión MX (Apertura)**: Clubs have played 15 games; a full season is 30. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2021–22, Liga MX (Clausura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2021–22, Liga MX (Apertura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2021–22, Liga de Expansión MX (Clausura)**: Clubs have played 16 games; a full season is 32. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Clubs have played 16 games; a full season is 32. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Clubs have played 13 games; a full season is 24. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Clubs have played 12 games; a full season is 24. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2022–23, Liga MX (Clausura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2022–23, Liga MX (Apertura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2022–23, Liga de Expansión MX (Clausura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2022–23, Liga de Expansión MX (Apertura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Clubs have played 10 games; a full season is 22. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Clubs have played 10 games; a full season is 22. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Clubs have played 10 games; a full season is 22. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2023–24, Liga MX (Clausura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2023–24, Liga MX (Apertura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2023–24, Liga de Expansión MX (Clausura)**: Clubs have played 14 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2023–24, Liga de Expansión MX (Apertura)**: Clubs have played 14 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Clubs have played 0–32 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2024–25, Liga MX (Clausura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2024–25, Liga MX (Apertura)**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2024–25, Liga de Expansión MX (Clausura)**: Clubs have played 14 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2024–25, Liga de Expansión MX (Apertura)**: Clubs have played 14 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2025–26, Liga MX**: Clubs have played 17 games; a full season is 34. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2025–26, Liga de Expansión MX (Apertura)**: Clubs have played 14 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2025–26, Liga de Expansión MX (Clausura)**: Clubs have played 14 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
+- **Mexico 2025–26, Liga Premier Serie A**: Clubs have played 24–26 games; a full season is 80. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
 
-## Promotion and relegation that don't fit the final positions (4)
+## Promotion and relegation that don't fit the final positions (8)
 
 - **Germany 2012–13, 2. Bundesliga**: MSV Duisburg finished 11 of 18 but played a tier lower in 2013–14.
 - **France 2022–23, Ligue 2**: Sochaux finished 9 of 20 but played a tier lower in 2023–24.
 - **Netherlands 2017–18, Eerste Divisie**: Emmen finished 7 of 20 but played a tier higher in 2018–19.
 - **Netherlands 2018–19, Eerste Divisie**: RKC Waalwijk finished 8 of 20 but played a tier higher in 2019–20.
+- **Austria 2018–19, 2. Liga**: SC Wiener Neustadt finished 6 of 16 but played a tier lower in 2019–20.
+- **Austria 2018–19, 2. Liga**: Wacker Innsbruck (Am) finished 9 of 16 but played a tier lower in 2019–20.
+- **Argentina 2018–19, Primera C**: Villa San Carlos finished 7 of 20 but played a tier higher in 2019–20.
+- **USA 2024–25, USL League One**: Lexington SC finished 9 of 12 but played a tier higher in 2025–26.
 
-## Clubs that withdrew or were expelled (usually correct) (7)
+## Clubs that withdrew or were expelled (usually correct) (16)
 
 - **France 2022–23, Ligue 2**: Bordeaux played 37, Rodez played 37 of 38: a club that withdrew, was expelled or had a game cancelled.
 - **France 2025–26, Ligue 1**: Toulouse played 33, Nantes played 33 of 34: a club that withdrew, was expelled or had a game cancelled.
@@ -68,8 +223,17 @@ Checked 2026-10-23. 75 findings. Repair mode: 27 API requests used.
 - **Turkey 2022–23, 2. Lig (Kirmizi)**: Adıyaman 1954 played 37, Diyarbekirspor played 37 of 38: a club that withdrew, was expelled or had a game cancelled.
 - **Turkey 2022–23, 3. Lig (Group 3)**: Osmaniyespor played 33, Arguvan Belediyespor played 33 of 34: a club that withdrew, was expelled or had a game cancelled.
 - **Turkey 2025–26, 2. Lig (Kirmizi Grup)**: Yeni Mersin Idmanyurdu played 33, Yeni Malatyaspor played 33 of 34: a club that withdrew, was expelled or had a game cancelled.
+- **Switzerland 2021–22, 1. Liga (Group 2)**: Langenthal played 25, Buochs played 25 of 26: a club that withdrew, was expelled or had a game cancelled.
+- **Switzerland 2022–23, 1. Liga (Group 3)**: Lugano II played 29, Freienbach played 29 of 30: a club that withdrew, was expelled or had a game cancelled.
+- **Greece 2024–25, Super League 2 (Group B)**: Panachaiki FC played 7, Panargiakos played 7 of 8: a club that withdrew, was expelled or had a game cancelled.
+- **USA 2020–21, USL Championship (Regular Season)**: New Mexico United played 15 of 16: a club that withdrew, was expelled or had a game cancelled.
+- **USA 2020–21, USL Championship (Regular Season)**: Tulsa Roughnecks played 15, Rio Grande Valley played 14 of 16: a club that withdrew, was expelled or had a game cancelled.
+- **USA 2020–21, USL Championship (Regular Season)**: Loudoun United played 13 of 16: a club that withdrew, was expelled or had a game cancelled.
+- **USA 2020–21, USL Championship (Regular Season)**: North Carolina played 15, Memphis 901 played 15 of 16: a club that withdrew, was expelled or had a game cancelled.
+- **USA 2020–21, USL Championship (Regular Season)**: Charleston Battery played 15 of 16: a club that withdrew, was expelled or had a game cancelled.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Chihuahua FC played 0 of 32: a club that withdrew, was expelled or had a game cancelled.
 
-## Positions out of order (9)
+## Positions out of order (24)
 
 - **England 2019–20, League One**: Oxford United (60 pts) is below Wycombe Wanderers (59 pts).
 - **England 2019–20, League Two**: Exeter City (65 pts) is below Cheltenham Town (64 pts).
@@ -80,8 +244,23 @@ Checked 2026-10-23. 75 findings. Repair mode: 27 API requests used.
 - **Scotland 2015–16, Premiership**: Heart of Midlothian (65 pts) is below Ross County (48 pts).
 - **Scotland 2016–17, Premiership**: Heart of Midlothian (46 pts) is below Partick Thistle (42 pts).
 - **Turkey 2025–26, 3. Lig (Group 2)**: Karaköprü Belediyespor (47 pts) is below Ağrı 1970 (45 pts).
+- **Austria 2015–16, Erste Liga**: Austria Salzburg (26 pts) is below Floridsdorfer AC (17 pts).
+- **Greece 2019–20, Super League 2**: Positions aren't 1 to 10.
+- **Greece 2023–24, Super League 2 (Group A)**: Positions aren't 1 to 6.
+- **Greece 2023–24, Super League 2 (Group B)**: Positions aren't 1 to 6.
+- **Australia 2014–15, A-League**: Perth Glory (50 pts) is below Brisbane Roar (34 pts).
+- **USA 2016–17, Major League Soccer**: Positions aren't 1 to 20.
+- **USA 2016–17, Major League Soccer**: FC Dallas (60 pts) is below New York Red Bulls (57 pts).
+- **USA 2017–18, Major League Soccer**: Positions aren't 1 to 22.
+- **USA 2017–18, Major League Soccer**: New York City FC (57 pts) is below Portland Timbers (53 pts).
+- **USA 2020–21, Major League Soccer (Regular Season)**: FC Dallas (34 pts) is below Colorado Rapids (28 pts).
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Positions aren't 1 to 11.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Positions aren't 1 to 13.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Positions aren't 1 to 16.
+- **Mexico 2025–26, Liga Premier Serie A**: Positions aren't 1 to 41.
+- **Mexico 2025–26, Liga Premier Serie A**: Racing de Veracruz (71 pts) is below Real Apodaca (66 pts).
 
-## Numbers that don't add up (7)
+## Numbers that don't add up (141)
 
 - **Italy 2018–19, Serie C (Girone A)**: Goals for (819) and against (762) don't match across the table.
 - **Italy 2018–19, Serie C (Girone C)**: Goals for (779) and against (704) don't match across the table.
@@ -90,10 +269,417 @@ Checked 2026-10-23. 75 findings. Repair mode: 27 API requests used.
 - **Turkey 2025–26, 3. Lig (Group 2)**: Karaköprü Belediyespor: W 13 + D 8 + L 10 is not P 30.
 - **Turkey 2025–26, 3. Lig (Group 2)**: Niğde Belediyesispor: W 11 + D 9 + L 11 is not P 30.
 - **Turkey 2025–26, 3. Lig (Group 2)**: Kırıkkale Büyük Anadolu: W 11 + D 7 + L 13 is not P 30.
+- **Greece 2019–20, Super League 2**: Goals for (257) and against (302) don't match across the table.
+- **Brazil 2016–17, Série A**: Goals for (912) and against (918) don't match across the table.
+- **Argentina 2024–25, Primera Nacional (Group B)**: Goals for (606) and against (600) don't match across the table.
+- **Argentina 2024–25, Primera Nacional (Group A)**: Goals for (681) and against (687) don't match across the table.
+- **Argentina 2025–26, Liga Profesional (Group A)**: Goals for (241) and against (234) don't match across the table.
+- **Argentina 2025–26, Liga Profesional (Group B)**: Goals for (221) and against (228) don't match across the table.
+- **Argentina 2025–26, Primera B Metropolitana (Apertura)**: Excursionistas: W 9 + D 6 + L 6 is not P 20.
+- **USA 2020–21, Major League Soccer (Regular Season)**: Goals for (420) and against (419) don't match across the table.
+- **USA 2020–21, Major League Soccer (Regular Season)**: Goals for (415) and against (416) don't match across the table.
+- **USA 2020–21, USL Championship (Regular Season)**: Goals for (115) and against (120) don't match across the table.
+- **USA 2020–21, USL Championship (Regular Season)**: Goals for (134) and against (119) don't match across the table.
+- **USA 2020–21, USL Championship (Regular Season)**: Goals for (80) and against (84) don't match across the table.
+- **USA 2020–21, USL Championship (Regular Season)**: Goals for (110) and against (114) don't match across the table.
+- **USA 2020–21, USL Championship (Regular Season)**: Goals for (92) and against (82) don't match across the table.
+- **USA 2020–21, USL Championship (Regular Season)**: Goals for (130) and against (144) don't match across the table.
+- **USA 2020–21, USL Championship (Regular Season)**: Goals for (94) and against (93) don't match across the table.
+- **USA 2020–21, USL Championship (Regular Season)**: Goals for (94) and against (93) don't match across the table.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Reboceros La Piedad: W 13 + D 1 + L 3 is not P 22.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Colima: W 13 + D 0 + L 3 is not P 22.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Gavilanes FC Matamoros: W 14 + D 0 + L 4 is not P 22.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Mineros de Fresnillo: W 9 + D 2 + L 2 is not P 22.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Atlético San Luis II: W 9 + D 0 + L 3 is not P 22.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: UA Zacatecas: W 8 + D 1 + L 5 is not P 22.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Tecos: W 6 + D 1 + L 5 is not P 22.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Mazorqueros: W 7 + D 0 + L 3 is not P 22.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Atlético Saltillo: W 4 + D 1 + L 4 is not P 22.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Leones Negros: W 5 + D 0 + L 1 is not P 22.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Cimarrones de Sonora II: W 2 + D 0 + L 5 is not P 22.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Goals for (291) and against (320) don't match across the table.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Cruz Azul Hidalgo: W 16 + D 0 + L 3 is not P 24.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Inter Playa del Carmen: W 16 + D 0 + L 3 is not P 24.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Irapuato: W 15 + D 1 + L 4 is not P 24.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Cafetaleros Chiapas II: W 13 + D 3 + L 5 is not P 24.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: CAFESSA Jalisco: W 13 + D 1 + L 4 is not P 24.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Aguacateros CDU: W 12 + D 0 + L 2 is not P 24.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Pioneros de Cancún: W 12 + D 1 + L 3 is not P 24.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Deportivo Dongu: W 8 + D 1 + L 4 is not P 24.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Zitacuaro: W 8 + D 1 + L 3 is not P 24.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Cuautla: W 5 + D 0 + L 2 is not P 24.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Azores de Hidalgo: W 4 + D 0 + L 3 is not P 24.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Ciervos: W 2 + D 1 + L 3 is not P 24.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Cañoneros Marina: W 2 + D 0 + L 3 is not P 24.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Mazorqueros: W 11 + D 0 + L 1 is not P 13.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Atlético Saltillo: W 9 + D 1 + L 2 is not P 13.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Coras: W 6 + D 1 + L 1 is not P 13.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Gavilanes FC Matamoros: W 7 + D 0 + L 1 is not P 13.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Tecos: W 6 + D 0 + L 3 is not P 13.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Tritons Vallarta: W 5 + D 1 + L 1 is not P 13.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Colima: W 5 + D 0 + L 2 is not P 13.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Leones Negros: W 3 + D 1 + L 2 is not P 13.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Cimarrones de Sonora II: W 4 + D 0 + L 1 is not P 13.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Correcaminos UAT II: W 3 + D 0 + L 3 is not P 13.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: UA Zacatecas: W 3 + D 0 + L 2 is not P 13.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Catedráticos Elite: W 3 + D 0 + L 1 is not P 13.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Mineros de Fresnillo: W 1 + D 0 + L 1 is not P 13.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Goals for (242) and against (256) don't match across the table.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Cafetaleros Chiapas II: W 10 + D 0 + L 1 is not P 12.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Inter Playa del Carmen: W 8 + D 0 + L 3 is not P 12.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Reboceros La Piedad: W 7 + D 0 + L 3 is not P 12.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Yalmakan: W 8 + D 0 + L 0 is not P 12.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Deportivo Zap: W 7 + D 0 + L 0 is not P 12.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Inter de Querétaro: W 4 + D 0 + L 4 is not P 12.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Sporting Canamy: W 4 + D 0 + L 2 is not P 12.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Montañeses: W 3 + D 0 + L 3 is not P 12.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Lobos ULMX: W 3 + D 0 + L 2 is not P 12.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Deportivo Dongu: W 3 + D 1 + L 2 is not P 12.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Cañoneros Marina: W 3 + D 1 + L 0 is not P 12.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Escorpiones: W 3 + D 0 + L 1 is not P 12.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Leviatán: W 2 + D 0 + L 1 is not P 12.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Chihuahua FC: W 7 + D 0 + L 2 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Tecos: W 7 + D 0 + L 2 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Tritons Vallarta: W 7 + D 0 + L 1 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Los Cabos United: W 5 + D 0 + L 2 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Cimarrones de Sonora II: W 5 + D 0 + L 2 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: UA Zacatecas: W 5 + D 0 + L 1 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Coras: W 4 + D 0 + L 1 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Mineros de Fresnillo: W 3 + D 0 + L 1 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Mexicali FC: W 2 + D 0 + L 2 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Deportivo Zap: W 1 + D 0 + L 3 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Leones Negros: W 0 + D 0 + L 1 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Gavilanes FC Matamoros: W 6 + D 0 + L 1 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Atlético Saltillo: W 4 + D 1 + L 1 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Colima: W 4 + D 0 + L 2 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Lobos ULMX: W 2 + D 1 + L 4 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Reboceros La Piedad: W 4 + D 0 + L 2 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Correcaminos UAT II: W 3 + D 1 + L 1 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: CD Tulancingo: W 3 + D 1 + L 2 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Aguacateros CDU: W 3 + D 0 + L 4 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Inter de Querétaro: W 1 + D 0 + L 2 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Catedráticos Elite: W 2 + D 0 + L 0 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Pachuca Premier: W 7 + D 0 + L 0 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Inter Playa del Carmen: W 6 + D 1 + L 2 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Cafetaleros Chiapas II: W 7 + D 0 + L 1 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Deportivo Dongu: W 6 + D 1 + L 0 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Montañeses: W 6 + D 0 + L 1 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Deportiva Venados: W 5 + D 0 + L 0 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Escorpiones: W 4 + D 0 + L 2 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Sporting Canamy: W 3 + D 0 + L 1 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Yalmakan: W 3 + D 0 + L 1 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Leviatán: W 2 + D 0 + L 0 is not P 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Real de Arteaga: W 0 + D 0 + L 0 is not P 10.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Los Cabos United: W 19 + D 1 + L 6 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Gavilanes FC Matamoros: W 16 + D 0 + L 7 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Correcaminos UAT II: W 16 + D 1 + L 2 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Tecos: W 15 + D 0 + L 6 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Leones Negros: W 15 + D 0 + L 2 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Cimarrones de Sonora II: W 13 + D 0 + L 7 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: UA Zacatecas: W 10 + D 4 + L 8 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Tritons Vallarta: W 11 + D 0 + L 11 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Atlético Saltillo: W 11 + D 0 + L 11 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Real Apodaca: W 11 + D 1 + L 6 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Mineros de Fresnillo: W 10 + D 0 + L 10 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Calor de San Pedro: W 9 + D 2 + L 6 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Mexicali FC: W 8 + D 0 + L 5 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Colima: W 7 + D 0 + L 3 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Coras: W 6 + D 0 + L 3 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Goals for (580) and against (613) don't match across the table.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Racing Porto Palmeiras: W 23 + D 0 + L 5 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: CDS Tampico Madero: W 18 + D 1 + L 6 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Deportiva Venados: W 18 + D 0 + L 5 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Irapuato: W 13 + D 1 + L 11 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Aguacateros de Peribán: W 16 + D 0 + L 6 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Petroleros de Salamanca: W 16 + D 0 + L 5 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Inter Playa del Carmen: W 13 + D 1 + L 10 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Montañeses: W 15 + D 1 + L 5 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Escorpiones: W 14 + D 0 + L 9 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Reboceros La Piedad: W 13 + D 0 + L 4 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Cafetaleros Chiapas II: W 13 + D 1 + L 4 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Pioneros de Cancún: W 9 + D 1 + L 7 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Lobos ULMX: W 9 + D 0 + L 5 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Deportivo Zap: W 5 + D 1 + L 13 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Sporting Canamy: W 6 + D 3 + L 3 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: San Juan de Aragón: W 6 + D 1 + L 2 is not P 32.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Inter de Querétaro: W 2 + D 1 + L 2 is not P 32.
 
-## Points that don't match wins and draws (4)
+## Points that don't match wins and draws (273)
 
 - **Belgium 2018–19, First Division B (Group 3)**: OH Leuven: 28 pts, but 4 wins and 1 draws make 13.
 - **Belgium 2018–19, First Division B (Group 3)**: Roeselare: 25 pts, but 2 wins and 2 draws make 8.
 - **Belgium 2018–19, First Division B (Group 3)**: Lommel United: 23 pts, but 2 wins and 1 draws make 7.
 - **Belgium 2018–19, First Division B (Group 3)**: Tubize: 17 pts, but 1 wins and 2 draws make 5.
+- **Switzerland 2025–26, 1. Liga (Group 3)**: St. Gallen II: 35 pts, but 9 wins and 5 draws make 32.
+- **Greece 2023–24, Super League 2 (Group A)**: Levadiakos: 47 pts, but 6 wins and 1 draws make 19.
+- **Greece 2023–24, Super League 2 (Group A)**: Larisa: 35 pts, but 2 wins and 4 draws make 10.
+- **Greece 2023–24, Super League 2 (Group A)**: Makedonikos Neapolis: 25 pts, but 2 wins and 3 draws make 9.
+- **Greece 2023–24, Super League 2 (Group A)**: Niki Volos: 25 pts, but 2 wins and 3 draws make 9.
+- **Greece 2023–24, Super League 2 (Group A)**: AEK Athens II: 22 pts, but 1 wins and 3 draws make 6.
+- **Greece 2023–24, Super League 2 (Group B)**: Kallithea: 41 pts, but 5 wins and 2 draws make 17.
+- **Greece 2023–24, Super League 2 (Group B)**: Kissamikos: 35 pts, but 4 wins and 1 draws make 13.
+- **Greece 2023–24, Super League 2 (Group B)**: Ionikos: 29 pts, but 2 wins and 5 draws make 11.
+- **Greece 2023–24, Super League 2 (Group B)**: Ilioupoli: 29 pts, but 3 wins and 2 draws make 11.
+- **Greece 2023–24, Super League 2 (Group B)**: Kalamata: 20 pts, but 0 wins and 2 draws make 2.
+- **Greece 2023–24, Super League 2 (Group A)**: PAOK II: 34 pts, but 6 wins and 1 draws make 19.
+- **Greece 2023–24, Super League 2 (Group A)**: Iraklis 1908: 30 pts, but 3 wins and 6 draws make 15.
+- **Greece 2023–24, Super League 2 (Group A)**: Kampaniakos Chalastra: 29 pts, but 5 wins and 2 draws make 17.
+- **Greece 2023–24, Super League 2 (Group A)**: Kozani: 26 pts, but 3 wins and 5 draws make 14.
+- **Greece 2023–24, Super League 2 (Group A)**: Anagennisi Karditsas: 25 pts, but 2 wins and 4 draws make 10.
+- **Greece 2023–24, Super League 2 (Group A)**: Aiolikos: 15 pts, but 1 wins and 2 draws make 5.
+- **Greece 2023–24, Super League 2 (Group B)**: Egaleo: 30 pts, but 4 wins and 5 draws make 17.
+- **Greece 2023–24, Super League 2 (Group B)**: Panachaiki FC: 30 pts, but 6 wins and 1 draws make 19.
+- **Greece 2023–24, Super League 2 (Group B)**: Diagoras: 29 pts, but 3 wins and 6 draws make 15.
+- **Greece 2023–24, Super League 2 (Group B)**: Olympiacos B: 23 pts, but 3 wins and 2 draws make 11.
+- **Greece 2023–24, Super League 2 (Group B)**: Giouchtas: 21 pts, but 3 wins and 1 draws make 10.
+- **Greece 2023–24, Super League 2 (Group B)**: Panathinaikos II: 20 pts, but 2 wins and 3 draws make 9.
+- **Greece 2024–25, Super League 2 (Group A)**: PAOK II: 23 pts, but 3 wins and 4 draws make 13.
+- **Greece 2024–25, Super League 2 (Group A)**: Kavala: 22 pts, but 4 wins and 4 draws make 16.
+- **Greece 2024–25, Super League 2 (Group A)**: Niki Volos: 22 pts, but 2 wins and 5 draws make 11.
+- **Greece 2024–25, Super League 2 (Group A)**: Diagoras: 19 pts, but 3 wins and 2 draws make 11.
+- **Greece 2024–25, Super League 2 (Group A)**: Ethnikos Neou Keramidiou: 5 pts, but 0 wins and 1 draws make 1.
+- **Greece 2024–25, Super League 2 (Group A)**: Larisa: 42 pts, but 5 wins and 3 draws make 18.
+- **Greece 2024–25, Super League 2 (Group A)**: Iraklis 1908: 36 pts, but 5 wins and 3 draws make 18.
+- **Greece 2024–25, Super League 2 (Group A)**: PAS Giannina: 25 pts, but 2 wins and 3 draws make 9.
+- **Greece 2024–25, Super League 2 (Group A)**: Kampaniakos Chalastra: 18 pts, but 1 wins and 2 draws make 5.
+- **Greece 2024–25, Super League 2 (Group A)**: Makedonikos Neapolis: 18 pts, but 1 wins and 1 draws make 4.
+- **Greece 2024–25, Super League 2 (Group B)**: Kifisia: 43 pts, but 6 wins and 2 draws make 20.
+- **Greece 2024–25, Super League 2 (Group B)**: Kalamata: 41 pts, but 6 wins and 1 draws make 19.
+- **Greece 2024–25, Super League 2 (Group B)**: Panionios: 30 pts, but 4 wins and 1 draws make 13.
+- **Greece 2024–25, Super League 2 (Group B)**: Egaleo: 15 pts, but 1 wins and 0 draws make 3.
+- **Greece 2024–25, Super League 2 (Group B)**: Ilioupoli: 13 pts, but 1 wins and 0 draws make 3.
+- **Greece 2024–25, Super League 2 (Group B)**: Kissamikos: 23 pts, but 4 wins and 2 draws make 14.
+- **Greece 2024–25, Super League 2 (Group B)**: Panachaiki FC: 21 pts, but 4 wins and 2 draws make 14.
+- **Greece 2024–25, Super League 2 (Group B)**: Asteras Tripolis II: 18 pts, but 3 wins and 1 draws make 10.
+- **Greece 2024–25, Super League 2 (Group B)**: Panargiakos: 16 pts, but 2 wins and 2 draws make 8.
+- **Greece 2024–25, Super League 2 (Group B)**: AEK Athens II: 16 pts, but 1 wins and 3 draws make 6.
+- **Mexico 2019–20, Liga de Expansión MX (Clausura)**: Mineros de Zacatecas: 22 pts, but 6 wins and 2 draws make 20.
+- **Mexico 2019–20, Liga de Expansión MX (Clausura)**: Correcaminos Uat: 18 pts, but 5 wins and 1 draws make 16.
+- **Mexico 2019–20, Liga de Expansión MX (Clausura)**: Celaya: 15 pts, but 4 wins and 1 draws make 13.
+- **Mexico 2019–20, Liga de Expansión MX (Clausura)**: Zacatepec 1948: 14 pts, but 4 wins and 1 draws make 13.
+- **Mexico 2019–20, Liga de Expansión MX (Clausura)**: Leones Negros UDG: 14 pts, but 4 wins and 1 draws make 13.
+- **Mexico 2019–20, Liga de Expansión MX (Clausura)**: Tampico Madero: 13 pts, but 3 wins and 3 draws make 12.
+- **Mexico 2019–20, Liga de Expansión MX (Clausura)**: Atlante: 12 pts, but 3 wins and 2 draws make 11.
+- **Mexico 2019–20, Liga de Expansión MX (Clausura)**: Cimarrones: 9 pts, but 2 wins and 2 draws make 8.
+- **Mexico 2019–20, Liga de Expansión MX (Apertura)**: Alebrijes de Oaxaca: 27 pts, but 7 wins and 4 draws make 25.
+- **Mexico 2019–20, Liga de Expansión MX (Apertura)**: Atlante: 26 pts, but 6 wins and 6 draws make 24.
+- **Mexico 2019–20, Liga de Expansión MX (Apertura)**: Tampico Madero: 23 pts, but 5 wins and 5 draws make 20.
+- **Mexico 2019–20, Liga de Expansión MX (Apertura)**: Leones Negros UDG: 22 pts, but 7 wins and 0 draws make 21.
+- **Mexico 2019–20, Liga de Expansión MX (Apertura)**: Zacatepec 1948: 21 pts, but 5 wins and 4 draws make 19.
+- **Mexico 2019–20, Liga de Expansión MX (Apertura)**: Celaya: 19 pts, but 5 wins and 2 draws make 17.
+- **Mexico 2019–20, Liga de Expansión MX (Apertura)**: Mineros de Zacatecas: 19 pts, but 4 wins and 6 draws make 18.
+- **Mexico 2019–20, Liga de Expansión MX (Apertura)**: Tapachula: 18 pts, but 4 wins and 5 draws make 17.
+- **Mexico 2019–20, Liga de Expansión MX (Apertura)**: Dorados: 17 pts, but 3 wins and 7 draws make 16.
+- **Mexico 2019–20, Liga de Expansión MX (Apertura)**: Cimarrones: 17 pts, but 4 wins and 4 draws make 16.
+- **Mexico 2019–20, Liga de Expansión MX (Apertura)**: Loros Universidad: 16 pts, but 3 wins and 5 draws make 14.
+- **Mexico 2019–20, Liga de Expansión MX (Apertura)**: Potros Uaem: 14 pts, but 3 wins and 4 draws make 13.
+- **Mexico 2019–20, Liga de Expansión MX (Apertura)**: Venados FC: 14 pts, but 3 wins and 3 draws make 12.
+- **Mexico 2020–21, Liga de Expansión MX (Clausura)**: Monarcas: 33 pts, but 9 wins and 2 draws make 29.
+- **Mexico 2020–21, Liga de Expansión MX (Clausura)**: Celaya: 28 pts, but 6 wins and 7 draws make 25.
+- **Mexico 2020–21, Liga de Expansión MX (Clausura)**: Cimarrones: 27 pts, but 6 wins and 8 draws make 26.
+- **Mexico 2020–21, Liga de Expansión MX (Clausura)**: Mineros de Zacatecas: 27 pts, but 7 wins and 3 draws make 24.
+- **Mexico 2020–21, Liga de Expansión MX (Clausura)**: Tapatío: 24 pts, but 6 wins and 4 draws make 22.
+- **Mexico 2020–21, Liga de Expansión MX (Clausura)**: Tepatitlán: 24 pts, but 6 wins and 4 draws make 22.
+- **Mexico 2020–21, Liga de Expansión MX (Clausura)**: Atlante: 23 pts, but 6 wins and 4 draws make 22.
+- **Mexico 2020–21, Liga de Expansión MX (Clausura)**: Dorados: 20 pts, but 3 wins and 9 draws make 18.
+- **Mexico 2020–21, Liga de Expansión MX (Clausura)**: Tlaxcala: 20 pts, but 5 wins and 4 draws make 19.
+- **Mexico 2020–21, Liga de Expansión MX (Clausura)**: Venados FC: 18 pts, but 3 wins and 8 draws make 17.
+- **Mexico 2020–21, Liga de Expansión MX (Clausura)**: Pumas Tabasco: 18 pts, but 4 wins and 3 draws make 15.
+- **Mexico 2020–21, Liga de Expansión MX (Clausura)**: Correcaminos Uat: 14 pts, but 3 wins and 4 draws make 13.
+- **Mexico 2020–21, Liga de Expansión MX (Clausura)**: Leones Negros UDG: 12 pts, but 2 wins and 5 draws make 11.
+- **Mexico 2020–21, Liga de Expansión MX (Apertura)**: Celaya: 35 pts, but 9 wins and 5 draws make 32.
+- **Mexico 2020–21, Liga de Expansión MX (Apertura)**: Atlante: 32 pts, but 9 wins and 1 draws make 28.
+- **Mexico 2020–21, Liga de Expansión MX (Apertura)**: Cimarrones: 30 pts, but 9 wins and 1 draws make 28.
+- **Mexico 2020–21, Liga de Expansión MX (Apertura)**: Monarcas: 29 pts, but 7 wins and 5 draws make 26.
+- **Mexico 2020–21, Liga de Expansión MX (Apertura)**: Cancún: 27 pts, but 7 wins and 3 draws make 24.
+- **Mexico 2020–21, Liga de Expansión MX (Apertura)**: Tampico Madero: 26 pts, but 6 wins and 5 draws make 23.
+- **Mexico 2020–21, Liga de Expansión MX (Apertura)**: Mineros de Zacatecas: 25 pts, but 6 wins and 5 draws make 23.
+- **Mexico 2020–21, Liga de Expansión MX (Apertura)**: Tepatitlán: 24 pts, but 6 wins and 5 draws make 23.
+- **Mexico 2020–21, Liga de Expansión MX (Apertura)**: Tapatío: 22 pts, but 5 wins and 6 draws make 21.
+- **Mexico 2020–21, Liga de Expansión MX (Apertura)**: Tlaxcala: 20 pts, but 5 wins and 3 draws make 18.
+- **Mexico 2020–21, Liga de Expansión MX (Apertura)**: Venados FC: 17 pts, but 4 wins and 4 draws make 16.
+- **Mexico 2020–21, Liga de Expansión MX (Apertura)**: Pumas Tabasco: 17 pts, but 3 wins and 5 draws make 14.
+- **Mexico 2020–21, Liga de Expansión MX (Apertura)**: Dorados: 16 pts, but 3 wins and 5 draws make 14.
+- **Mexico 2020–21, Liga de Expansión MX (Apertura)**: Leones Negros UDG: 15 pts, but 3 wins and 4 draws make 13.
+- **Mexico 2020–21, Liga de Expansión MX (Apertura)**: Alebrijes de Oaxaca: 15 pts, but 4 wins and 1 draws make 13.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Reboceros La Piedad: 47 pts, but 13 wins and 1 draws make 40.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Colima: 46 pts, but 13 wins and 0 draws make 39.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Gavilanes FC Matamoros: 46 pts, but 14 wins and 0 draws make 42.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Mineros de Fresnillo: 35 pts, but 9 wins and 2 draws make 29.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Atlético San Luis II: 32 pts, but 9 wins and 0 draws make 27.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: UA Zacatecas: 32 pts, but 8 wins and 1 draws make 25.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Tecos: 25 pts, but 6 wins and 1 draws make 19.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Mazorqueros: 24 pts, but 7 wins and 0 draws make 21.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Atlético Saltillo: 22 pts, but 4 wins and 1 draws make 13.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Leones Negros: 19 pts, but 5 wins and 0 draws make 15.
+- **Mexico 2020–21, Liga Premier Serie A (Group 1)**: Cimarrones de Sonora II: 11 pts, but 2 wins and 0 draws make 6.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Cruz Azul Hidalgo: 59 pts, but 16 wins and 0 draws make 48.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Inter Playa del Carmen: 57 pts, but 16 wins and 0 draws make 48.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Irapuato: 57 pts, but 15 wins and 1 draws make 46.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Cafetaleros Chiapas II: 50 pts, but 13 wins and 3 draws make 42.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: CAFESSA Jalisco: 50 pts, but 13 wins and 1 draws make 40.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Aguacateros CDU: 44 pts, but 12 wins and 0 draws make 36.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Pioneros de Cancún: 42 pts, but 12 wins and 1 draws make 37.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Deportivo Dongu: 32 pts, but 8 wins and 1 draws make 25.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Zitacuaro: 31 pts, but 8 wins and 1 draws make 25.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Cuautla: 19 pts, but 5 wins and 0 draws make 15.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Azores de Hidalgo: 17 pts, but 4 wins and 0 draws make 12.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Ciervos: 11 pts, but 2 wins and 1 draws make 7.
+- **Mexico 2020–21, Liga Premier Serie A (Group 2)**: Cañoneros Marina: 10 pts, but 2 wins and 0 draws make 6.
+- **Mexico 2021–22, Liga de Expansión MX (Clausura)**: Alebrijes de Oaxaca: 34 pts, but 9 wins and 4 draws make 31.
+- **Mexico 2021–22, Liga de Expansión MX (Clausura)**: Leones Negros UDG: 33 pts, but 8 wins and 5 draws make 29.
+- **Mexico 2021–22, Liga de Expansión MX (Clausura)**: Celaya: 30 pts, but 7 wins and 6 draws make 27.
+- **Mexico 2021–22, Liga de Expansión MX (Clausura)**: Monarcas: 27 pts, but 7 wins and 4 draws make 25.
+- **Mexico 2021–22, Liga de Expansión MX (Clausura)**: Mineros de Zacatecas: 27 pts, but 7 wins and 3 draws make 24.
+- **Mexico 2021–22, Liga de Expansión MX (Clausura)**: Cancún: 26 pts, but 7 wins and 2 draws make 23.
+- **Mexico 2021–22, Liga de Expansión MX (Clausura)**: Atlante: 25 pts, but 6 wins and 5 draws make 23.
+- **Mexico 2021–22, Liga de Expansión MX (Clausura)**: Cimarrones: 24 pts, but 6 wins and 5 draws make 23.
+- **Mexico 2021–22, Liga de Expansión MX (Clausura)**: Tapatío: 24 pts, but 6 wins and 4 draws make 22.
+- **Mexico 2021–22, Liga de Expansión MX (Clausura)**: Venados FC: 23 pts, but 5 wins and 7 draws make 22.
+- **Mexico 2021–22, Liga de Expansión MX (Clausura)**: Tepatitlán: 23 pts, but 6 wins and 4 draws make 22.
+- **Mexico 2021–22, Liga de Expansión MX (Clausura)**: Tlaxcala: 23 pts, but 6 wins and 4 draws make 22.
+- **Mexico 2021–22, Liga de Expansión MX (Clausura)**: Dorados: 22 pts, but 6 wins and 1 draws make 19.
+- **Mexico 2021–22, Liga de Expansión MX (Clausura)**: Correcaminos Uat: 19 pts, but 4 wins and 6 draws make 18.
+- **Mexico 2021–22, Liga de Expansión MX (Clausura)**: Raya2: 18 pts, but 4 wins and 5 draws make 17.
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Dorados: 41 pts, but 11 wins and 4 draws make 37.
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Atlante: 33 pts, but 9 wins and 4 draws make 31.
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Monarcas: 32 pts, but 8 wins and 4 draws make 28.
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Celaya: 28 pts, but 7 wins and 4 draws make 25.
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Pumas Tabasco: 28 pts, but 5 wins and 8 draws make 23.
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Leones Negros UDG: 27 pts, but 7 wins and 4 draws make 25.
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Tampico Madero: 24 pts, but 4 wins and 10 draws make 22.
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Cimarrones: 24 pts, but 6 wins and 3 draws make 21.
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Venados FC: 23 pts, but 6 wins and 3 draws make 21.
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Mineros de Zacatecas: 21 pts, but 6 wins and 1 draws make 19.
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Correcaminos Uat: 20 pts, but 5 wins and 4 draws make 19.
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Tepatitlán: 19 pts, but 4 wins and 6 draws make 18.
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Tlaxcala: 19 pts, but 4 wins and 6 draws make 18.
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Raya2: 18 pts, but 4 wins and 5 draws make 17.
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Tapatío: 16 pts, but 3 wins and 5 draws make 14.
+- **Mexico 2021–22, Liga de Expansión MX (Apertura)**: Cancún: 15 pts, but 3 wins and 4 draws make 13.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Mazorqueros: 38 pts, but 11 wins and 0 draws make 33.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Atlético Saltillo: 31 pts, but 9 wins and 1 draws make 28.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Coras: 24 pts, but 6 wins and 1 draws make 19.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Gavilanes FC Matamoros: 24 pts, but 7 wins and 0 draws make 21.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Tecos: 22 pts, but 6 wins and 0 draws make 18.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Tritons Vallarta: 18 pts, but 5 wins and 1 draws make 16.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Colima: 17 pts, but 5 wins and 0 draws make 15.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Leones Negros: 15 pts, but 3 wins and 1 draws make 10.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Cimarrones de Sonora II: 14 pts, but 4 wins and 0 draws make 12.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Correcaminos UAT II: 12 pts, but 3 wins and 0 draws make 9.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: UA Zacatecas: 12 pts, but 3 wins and 0 draws make 9.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Catedráticos Elite: 11 pts, but 3 wins and 0 draws make 9.
+- **Mexico 2021–22, Liga Premier Serie A (Group 1)**: Mineros de Fresnillo: 4 pts, but 1 wins and 0 draws make 3.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Cafetaleros Chiapas II: 35 pts, but 10 wins and 0 draws make 30.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Inter Playa del Carmen: 30 pts, but 8 wins and 0 draws make 24.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Reboceros La Piedad: 29 pts, but 7 wins and 0 draws make 21.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Yalmakan: 26 pts, but 8 wins and 0 draws make 24.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Deportivo Zap: 22 pts, but 7 wins and 0 draws make 21.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Inter de Querétaro: 17 pts, but 4 wins and 0 draws make 12.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Sporting Canamy: 14 pts, but 4 wins and 0 draws make 12.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Montañeses: 13 pts, but 3 wins and 0 draws make 9.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Lobos ULMX: 13 pts, but 3 wins and 0 draws make 9.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Deportivo Dongu: 13 pts, but 3 wins and 1 draws make 10.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Cañoneros Marina: 12 pts, but 3 wins and 1 draws make 10.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Escorpiones: 11 pts, but 3 wins and 0 draws make 9.
+- **Mexico 2021–22, Liga Premier Serie A (Group 2)**: Leviatán: 7 pts, but 2 wins and 0 draws make 6.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Chihuahua FC: 25 pts, but 7 wins and 0 draws make 21.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Tecos: 25 pts, but 7 wins and 0 draws make 21.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Tritons Vallarta: 24 pts, but 7 wins and 0 draws make 21.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Los Cabos United: 18 pts, but 5 wins and 0 draws make 15.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Cimarrones de Sonora II: 18 pts, but 5 wins and 0 draws make 15.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: UA Zacatecas: 17 pts, but 5 wins and 0 draws make 15.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Coras: 13 pts, but 4 wins and 0 draws make 12.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Mineros de Fresnillo: 10 pts, but 3 wins and 0 draws make 9.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Mexicali FC: 8 pts, but 2 wins and 0 draws make 6.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Deportivo Zap: 6 pts, but 1 wins and 0 draws make 3.
+- **Mexico 2022–23, Liga Premier Serie A (Group 1)**: Leones Negros: 1 pts, but 0 wins and 0 draws make 0.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: CDS Tampico Madero: 29 pts, but 9 wins and 0 draws make 27.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Gavilanes FC Matamoros: 19 pts, but 6 wins and 0 draws make 18.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Atlético Saltillo: 16 pts, but 4 wins and 1 draws make 13.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Colima: 14 pts, but 4 wins and 0 draws make 12.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Lobos ULMX: 14 pts, but 2 wins and 1 draws make 7.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Reboceros La Piedad: 14 pts, but 4 wins and 0 draws make 12.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Correcaminos UAT II: 13 pts, but 3 wins and 1 draws make 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: CD Tulancingo: 13 pts, but 3 wins and 1 draws make 10.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Aguacateros CDU: 13 pts, but 3 wins and 0 draws make 9.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Inter de Querétaro: 7 pts, but 1 wins and 0 draws make 3.
+- **Mexico 2022–23, Liga Premier Serie A (Group 2)**: Catedráticos Elite: 7 pts, but 2 wins and 0 draws make 6.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Pachuca Premier: 23 pts, but 7 wins and 0 draws make 21.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Inter Playa del Carmen: 23 pts, but 6 wins and 1 draws make 19.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Cafetaleros Chiapas II: 22 pts, but 7 wins and 0 draws make 21.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Deportivo Dongu: 21 pts, but 6 wins and 1 draws make 19.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Montañeses: 20 pts, but 6 wins and 0 draws make 18.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Deportiva Venados: 18 pts, but 5 wins and 0 draws make 15.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Escorpiones: 15 pts, but 4 wins and 0 draws make 12.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Sporting Canamy: 12 pts, but 3 wins and 0 draws make 9.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Yalmakan: 10 pts, but 3 wins and 0 draws make 9.
+- **Mexico 2022–23, Liga Premier Serie A (Group 3)**: Leviatán: 7 pts, but 2 wins and 0 draws make 6.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Los Cabos United: 71 pts, but 19 wins and 1 draws make 58.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Gavilanes FC Matamoros: 57 pts, but 16 wins and 0 draws make 48.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Correcaminos UAT II: 57 pts, but 16 wins and 1 draws make 49.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Tecos: 53 pts, but 15 wins and 0 draws make 45.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Leones Negros: 52 pts, but 15 wins and 0 draws make 45.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Cimarrones de Sonora II: 48 pts, but 13 wins and 0 draws make 39.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: UA Zacatecas: 47 pts, but 10 wins and 4 draws make 34.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Tritons Vallarta: 46 pts, but 11 wins and 0 draws make 33.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Atlético Saltillo: 46 pts, but 11 wins and 0 draws make 33.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Real Apodaca: 45 pts, but 11 wins and 1 draws make 34.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Mineros de Fresnillo: 40 pts, but 10 wins and 0 draws make 30.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Calor de San Pedro: 37 pts, but 9 wins and 2 draws make 29.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Mexicali FC: 29 pts, but 8 wins and 0 draws make 24.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Colima: 25 pts, but 7 wins and 0 draws make 21.
+- **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Coras: 21 pts, but 6 wins and 0 draws make 18.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Racing Porto Palmeiras: 77 pts, but 23 wins and 0 draws make 69.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: CDS Tampico Madero: 67 pts, but 18 wins and 1 draws make 55.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Deportiva Venados: 62 pts, but 18 wins and 0 draws make 54.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Irapuato: 57 pts, but 13 wins and 1 draws make 40.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Aguacateros de Peribán: 57 pts, but 16 wins and 0 draws make 48.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Petroleros de Salamanca: 56 pts, but 16 wins and 0 draws make 48.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Inter Playa del Carmen: 56 pts, but 13 wins and 1 draws make 40.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Montañeses: 56 pts, but 15 wins and 1 draws make 46.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Escorpiones: 54 pts, but 14 wins and 0 draws make 42.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Reboceros La Piedad: 47 pts, but 13 wins and 0 draws make 39.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Cafetaleros Chiapas II: 47 pts, but 13 wins and 1 draws make 40.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Pioneros de Cancún: 37 pts, but 9 wins and 1 draws make 28.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Lobos ULMX: 34 pts, but 9 wins and 0 draws make 27.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Deportivo Zap: 32 pts, but 5 wins and 1 draws make 16.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Sporting Canamy: 29 pts, but 6 wins and 3 draws make 21.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: San Juan de Aragón: 25 pts, but 6 wins and 1 draws make 19.
+- **Mexico 2023–24, Liga Premier Serie A (Group 2)**: Inter de Querétaro: 10 pts, but 2 wins and 1 draws make 7.
+- **Mexico 2025–26, Liga Premier Serie A**: Durango: 74 pts, but 21 wins and 2 draws make 65.
+- **Mexico 2025–26, Liga Premier Serie A**: Real Apodaca: 66 pts, but 21 wins and 2 draws make 65.
+- **Mexico 2025–26, Liga Premier Serie A**: Racing de Veracruz: 71 pts, but 21 wins and 3 draws make 66.
+- **Mexico 2025–26, Liga Premier Serie A**: Tigres de Alica: 56 pts, but 17 wins and 3 draws make 54.
+- **Mexico 2025–26, Liga Premier Serie A**: FC Santiago: 51 pts, but 14 wins and 7 draws make 49.
+- **Mexico 2025–26, Liga Premier Serie A**: Deportiva Venados: 52 pts, but 15 wins and 4 draws make 49.
+- **Mexico 2025–26, Liga Premier Serie A**: Cimarrones: 54 pts, but 15 wins and 7 draws make 52.
+- **Mexico 2025–26, Liga Premier Serie A**: Zacatepec 1948: 45 pts, but 12 wins and 8 draws make 44.
+- **Mexico 2025–26, Liga Premier Serie A**: Tapachula: 44 pts, but 13 wins and 0 draws make 39.
+- **Mexico 2025–26, Liga Premier Serie A**: Leones Negros: 53 pts, but 16 wins and 2 draws make 50.
+- **Mexico 2025–26, Liga Premier Serie A**: Deportivo Zap: 44 pts, but 11 wins and 6 draws make 39.
+- **Mexico 2025–26, Liga Premier Serie A**: Celaya: 43 pts, but 12 wins and 4 draws make 40.
+- **Mexico 2025–26, Liga Premier Serie A**: Tecos: 49 pts, but 14 wins and 4 draws make 46.
+- **Mexico 2025–26, Liga Premier Serie A**: Calor de San Pedro: 44 pts, but 12 wins and 7 draws make 43.
+- **Mexico 2025–26, Liga Premier Serie A**: Gavilanes FC Matamoros: 44 pts, but 12 wins and 5 draws make 41.
+- **Mexico 2025–26, Liga Premier Serie A**: Mineros de Fresnillo: 39 pts, but 11 wins and 4 draws make 37.
+- **Mexico 2025–26, Liga Premier Serie A**: Lobos ULMX: 40 pts, but 11 wins and 6 draws make 39.
+- **Mexico 2025–26, Liga Premier Serie A**: Pioneros de Cancún: 35 pts, but 10 wins and 3 draws make 33.
+- **Mexico 2025–26, Liga Premier Serie A**: Los Cabos United: 37 pts, but 11 wins and 3 draws make 36.
+- **Mexico 2025–26, Liga Premier Serie A**: Correcaminos UAT II: 36 pts, but 9 wins and 7 draws make 34.
+- **Mexico 2025–26, Liga Premier Serie A**: Jaguares de Chiapas: 34 pts, but 9 wins and 4 draws make 31.
+- **Mexico 2025–26, Liga Premier Serie A**: Guerreros: 32 pts, but 8 wins and 5 draws make 29.
+- **Mexico 2025–26, Liga Premier Serie A**: Héroes de Zaci: 34 pts, but 10 wins and 2 draws make 32.
+- **Mexico 2025–26, Liga Premier Serie A**: UA Zacatecas: 29 pts, but 8 wins and 4 draws make 28.
+- **Mexico 2025–26, Liga Premier Serie A**: Ensenada: 28 pts, but 8 wins and 2 draws make 26.
+- **Mexico 2025–26, Liga Premier Serie A**: Reboceros La Piedad: 23 pts, but 7 wins and 1 draws make 22.
+- **Mexico 2025–26, Liga Premier Serie A**: Sporting Canamy: 26 pts, but 5 wins and 8 draws make 23.
+- **Mexico 2025–26, Liga Premier Serie A**: Neza: 19 pts, but 5 wins and 2 draws make 17.
+- **Mexico 2025–26, Liga Premier Serie A**: Acatlan: 21 pts, but 6 wins and 1 draws make 19.
+- **Mexico 2025–26, Liga Premier Serie A**: Ciervos: 18 pts, but 4 wins and 4 draws make 16.
+- **Mexico 2025–26, Liga Premier Serie A**: Mexicali FC: 17 pts, but 4 wins and 3 draws make 15.
+- **Mexico 2025–26, Liga Premier Serie A**: Colima: 17 pts, but 4 wins and 3 draws make 15.
+
+## Clubs listed twice (1)
+
+- **Argentina 2025–26, Primera C**: Central Córdoba is also in the Liga Profesional this season.

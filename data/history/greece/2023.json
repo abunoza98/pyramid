@@ -1,0 +1,731 @@
+{
+ "country": "greece",
+ "name": "Greece",
+ "adjective": "Greek",
+ "season": "2023–24",
+ "year": 2023,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "greek-super-league",
+   "tier": 1,
+   "name": "Super League",
+   "short": "SL1",
+   "final": true,
+   "zones": [
+    {
+     "from": 7,
+     "to": 8,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "groups": [
+    {
+     "name": "Relegation Round",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Panserraikos",
+       "p": 33,
+       "w": 9,
+       "d": 11,
+       "l": 13,
+       "gf": 37,
+       "ga": 53,
+       "pts": 38,
+       "tid": 2099,
+       "form": "DDWLW"
+      },
+      {
+       "pos": 2,
+       "team": "Asteras Tripolis",
+       "p": 33,
+       "w": 11,
+       "d": 5,
+       "l": 17,
+       "gf": 40,
+       "ga": 55,
+       "pts": 38,
+       "tid": 955,
+       "form": "LWLDW"
+      },
+      {
+       "pos": 3,
+       "team": "Panetolikos",
+       "p": 33,
+       "w": 9,
+       "d": 9,
+       "l": 15,
+       "gf": 36,
+       "ga": 49,
+       "pts": 36,
+       "tid": 949,
+       "form": "LWWWW"
+      },
+      {
+       "pos": 4,
+       "team": "OFI Crete",
+       "p": 33,
+       "w": 7,
+       "d": 14,
+       "l": 12,
+       "gf": 36,
+       "ga": 50,
+       "pts": 35,
+       "tid": 1124,
+       "form": "WDWDL"
+      },
+      {
+       "pos": 5,
+       "team": "Atromitos",
+       "p": 33,
+       "w": 7,
+       "d": 13,
+       "l": 13,
+       "gf": 36,
+       "ga": 53,
+       "pts": 34,
+       "tid": 12260,
+       "form": "DDLLL"
+      },
+      {
+       "pos": 6,
+       "team": "Volos",
+       "p": 33,
+       "w": 8,
+       "d": 9,
+       "l": 16,
+       "gf": 36,
+       "ga": 58,
+       "pts": 33,
+       "tid": 2110,
+       "form": "WDLWD"
+      },
+      {
+       "pos": 7,
+       "team": "Kifisia",
+       "p": 33,
+       "w": 6,
+       "d": 10,
+       "l": 17,
+       "gf": 38,
+       "ga": 68,
+       "pts": 28,
+       "tid": 5050,
+       "form": "WLWLL"
+      },
+      {
+       "pos": 8,
+       "team": "PAS Giannina",
+       "p": 33,
+       "w": 4,
+       "d": 11,
+       "l": 18,
+       "gf": 33,
+       "ga": 62,
+       "pts": 23,
+       "tid": 950,
+       "form": "LLLWD"
+      }
+     ]
+    },
+    {
+     "name": "Championship Round",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "PAOK",
+       "p": 36,
+       "w": 25,
+       "d": 5,
+       "l": 6,
+       "gf": 87,
+       "ga": 34,
+       "pts": 80,
+       "tid": 619,
+       "form": "DWWWW"
+      },
+      {
+       "pos": 2,
+       "team": "AEK Athens",
+       "p": 36,
+       "w": 23,
+       "d": 9,
+       "l": 4,
+       "gf": 80,
+       "ga": 35,
+       "pts": 78,
+       "tid": 575,
+       "form": "WWLLW"
+      },
+      {
+       "pos": 3,
+       "team": "Olympiacos",
+       "p": 36,
+       "w": 23,
+       "d": 5,
+       "l": 8,
+       "gf": 78,
+       "ga": 36,
+       "pts": 74,
+       "tid": 553,
+       "form": "DWLWD"
+      },
+      {
+       "pos": 4,
+       "team": "Panathinaikos",
+       "p": 36,
+       "w": 22,
+       "d": 6,
+       "l": 8,
+       "gf": 82,
+       "ga": 37,
+       "pts": 72,
+       "tid": 617,
+       "form": "WLLLD"
+      },
+      {
+       "pos": 5,
+       "team": "Aris",
+       "p": 36,
+       "w": 16,
+       "d": 7,
+       "l": 13,
+       "gf": 51,
+       "ga": 44,
+       "pts": 55,
+       "tid": 1123,
+       "form": "LDWWL"
+      },
+      {
+       "pos": 6,
+       "team": "Lamia",
+       "p": 36,
+       "w": 9,
+       "d": 8,
+       "l": 19,
+       "gf": 43,
+       "ga": 79,
+       "pts": 35,
+       "tid": 956,
+       "form": "LDLLL"
+      }
+     ]
+    },
+    {
+     "name": "Regular Season",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "PAOK",
+       "p": 26,
+       "w": 19,
+       "d": 3,
+       "l": 4,
+       "gf": 66,
+       "ga": 21,
+       "pts": 60,
+       "tid": 619,
+       "form": "DLWWW"
+      },
+      {
+       "pos": 2,
+       "team": "AEK Athens",
+       "p": 26,
+       "w": 17,
+       "d": 8,
+       "l": 1,
+       "gf": 60,
+       "ga": 25,
+       "pts": 59,
+       "tid": 575,
+       "form": "DWWWD"
+      },
+      {
+       "pos": 3,
+       "team": "Olympiacos",
+       "p": 26,
+       "w": 18,
+       "d": 3,
+       "l": 5,
+       "gf": 58,
+       "ga": 24,
+       "pts": 57,
+       "tid": 553,
+       "form": "WWWWW"
+      },
+      {
+       "pos": 4,
+       "team": "Panathinaikos",
+       "p": 26,
+       "w": 17,
+       "d": 5,
+       "l": 4,
+       "gf": 62,
+       "ga": 21,
+       "pts": 56,
+       "tid": 617,
+       "form": "WDDWD"
+      },
+      {
+       "pos": 5,
+       "team": "Aris",
+       "p": 26,
+       "w": 12,
+       "d": 6,
+       "l": 8,
+       "gf": 39,
+       "ga": 29,
+       "pts": 42,
+       "tid": 1123,
+       "form": "DWWLD"
+      },
+      {
+       "pos": 6,
+       "team": "Lamia",
+       "p": 26,
+       "w": 9,
+       "d": 7,
+       "l": 10,
+       "gf": 35,
+       "ga": 44,
+       "pts": 34,
+       "tid": 956,
+       "form": "WDLLL"
+      },
+      {
+       "pos": 7,
+       "team": "Asteras Tripolis",
+       "p": 26,
+       "w": 9,
+       "d": 4,
+       "l": 13,
+       "gf": 36,
+       "ga": 46,
+       "pts": 31,
+       "tid": 955,
+       "form": "LDLDL"
+      },
+      {
+       "pos": 8,
+       "team": "Atromitos",
+       "p": 26,
+       "w": 6,
+       "d": 10,
+       "l": 10,
+       "gf": 29,
+       "ga": 44,
+       "pts": 28,
+       "tid": 12260,
+       "form": "LLDWD"
+      },
+      {
+       "pos": 9,
+       "team": "Panserraikos",
+       "p": 26,
+       "w": 6,
+       "d": 9,
+       "l": 11,
+       "gf": 28,
+       "ga": 45,
+       "pts": 27,
+       "tid": 2099,
+       "form": "LLDLW"
+      },
+      {
+       "pos": 10,
+       "team": "OFI Crete",
+       "p": 26,
+       "w": 5,
+       "d": 10,
+       "l": 11,
+       "gf": 26,
+       "ga": 44,
+       "pts": 25,
+       "tid": 1124,
+       "form": "LWDLD"
+      },
+      {
+       "pos": 11,
+       "team": "Kifisia",
+       "p": 26,
+       "w": 4,
+       "d": 9,
+       "l": 13,
+       "gf": 31,
+       "ga": 56,
+       "pts": 21,
+       "tid": 5050,
+       "form": "WLDDD"
+      },
+      {
+       "pos": 12,
+       "team": "Panetolikos",
+       "p": 26,
+       "w": 4,
+       "d": 8,
+       "l": 14,
+       "gf": 26,
+       "ga": 46,
+       "pts": 20,
+       "tid": 949,
+       "form": "WDLLD"
+      },
+      {
+       "pos": 13,
+       "team": "Volos",
+       "p": 26,
+       "w": 4,
+       "d": 7,
+       "l": 15,
+       "gf": 24,
+       "ga": 52,
+       "pts": 19,
+       "tid": 2110,
+       "form": "LLLWL"
+      },
+      {
+       "pos": 14,
+       "team": "PAS Giannina",
+       "p": 26,
+       "w": 3,
+       "d": 9,
+       "l": 14,
+       "gf": 25,
+       "ga": 48,
+       "pts": 18,
+       "tid": 950,
+       "form": "DWDLD"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "super-league-2",
+   "tier": 2,
+   "name": "Super League 2",
+   "short": "SL2",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Promotion"
+    }
+   ],
+   "notes": [],
+   "groups": [
+    {
+     "name": "Group A",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Levadiakos",
+       "p": 8,
+       "w": 6,
+       "d": 1,
+       "l": 1,
+       "gf": 17,
+       "ga": 5,
+       "pts": 47,
+       "tid": 957,
+       "form": "WWWLW"
+      },
+      {
+       "pos": 2,
+       "team": "Larisa",
+       "p": 8,
+       "w": 2,
+       "d": 4,
+       "l": 2,
+       "gf": 16,
+       "ga": 14,
+       "pts": 35,
+       "tid": 953,
+       "form": "LLWWD"
+      },
+      {
+       "pos": 3,
+       "team": "Makedonikos Neapolis",
+       "p": 8,
+       "w": 2,
+       "d": 3,
+       "l": 3,
+       "gf": 13,
+       "ga": 15,
+       "pts": 25,
+       "tid": 12372,
+       "form": "DLLDW"
+      },
+      {
+       "pos": 4,
+       "team": "Niki Volos",
+       "p": 8,
+       "w": 2,
+       "d": 3,
+       "l": 3,
+       "gf": 8,
+       "ga": 11,
+       "pts": 25,
+       "tid": 5056,
+       "form": "DWLDL"
+      },
+      {
+       "pos": 5,
+       "team": "AEK Athens II",
+       "p": 8,
+       "w": 1,
+       "d": 3,
+       "l": 4,
+       "gf": 9,
+       "ga": 18,
+       "pts": 22,
+       "tid": 18016,
+       "form": "LLWDL"
+      }
+     ]
+    },
+    {
+     "name": "Group B",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Kallithea",
+       "p": 8,
+       "w": 5,
+       "d": 2,
+       "l": 1,
+       "gf": 18,
+       "ga": 5,
+       "pts": 41,
+       "tid": 2095,
+       "form": "WWWDW"
+      },
+      {
+       "pos": 2,
+       "team": "Kissamikos",
+       "p": 8,
+       "w": 4,
+       "d": 1,
+       "l": 3,
+       "gf": 19,
+       "ga": 14,
+       "pts": 35,
+       "tid": 2096,
+       "form": "LLWDW"
+      },
+      {
+       "pos": 3,
+       "team": "Ionikos",
+       "p": 8,
+       "w": 2,
+       "d": 5,
+       "l": 1,
+       "gf": 9,
+       "ga": 6,
+       "pts": 29,
+       "tid": 7513,
+       "form": "DWLDD"
+      },
+      {
+       "pos": 4,
+       "team": "Ilioupoli",
+       "p": 8,
+       "w": 3,
+       "d": 2,
+       "l": 3,
+       "gf": 11,
+       "ga": 19,
+       "pts": 29,
+       "tid": 15235,
+       "form": "DLWLD"
+      },
+      {
+       "pos": 5,
+       "team": "Kalamata",
+       "p": 8,
+       "w": 0,
+       "d": 2,
+       "l": 6,
+       "gf": 2,
+       "ga": 15,
+       "pts": 20,
+       "tid": 5046,
+       "form": "LLLDL"
+      }
+     ]
+    },
+    {
+     "name": "Group A",
+     "rows": [
+      {
+       "pos": 6,
+       "team": "PAOK II",
+       "p": 10,
+       "w": 6,
+       "d": 1,
+       "l": 3,
+       "gf": 21,
+       "ga": 17,
+       "pts": 34,
+       "tid": 18018,
+       "form": "WWLDW"
+      },
+      {
+       "pos": 7,
+       "team": "Iraklis 1908",
+       "p": 10,
+       "w": 3,
+       "d": 6,
+       "l": 1,
+       "gf": 10,
+       "ga": 8,
+       "pts": 30,
+       "tid": 17991,
+       "form": "WDDDL"
+      },
+      {
+       "pos": 8,
+       "team": "Kampaniakos Chalastra",
+       "p": 10,
+       "w": 5,
+       "d": 2,
+       "l": 3,
+       "gf": 12,
+       "ga": 9,
+       "pts": 29,
+       "tid": 20683,
+       "form": "LDWWW"
+      },
+      {
+       "pos": 9,
+       "team": "Kozani",
+       "p": 10,
+       "w": 3,
+       "d": 5,
+       "l": 2,
+       "gf": 15,
+       "ga": 12,
+       "pts": 26,
+       "tid": 15259,
+       "form": "DDWLW"
+      },
+      {
+       "pos": 10,
+       "team": "Anagennisi Karditsas",
+       "p": 10,
+       "w": 2,
+       "d": 4,
+       "l": 4,
+       "gf": 6,
+       "ga": 10,
+       "pts": 25,
+       "tid": 2094,
+       "form": "DDDWL"
+      },
+      {
+       "pos": 11,
+       "team": "Aiolikos",
+       "p": 10,
+       "w": 1,
+       "d": 2,
+       "l": 7,
+       "gf": 7,
+       "ga": 15,
+       "pts": 15,
+       "tid": 5027,
+       "form": "LLLLL"
+      }
+     ]
+    },
+    {
+     "name": "Group B",
+     "rows": [
+      {
+       "pos": 6,
+       "team": "Egaleo",
+       "p": 10,
+       "w": 4,
+       "d": 5,
+       "l": 1,
+       "gf": 10,
+       "ga": 5,
+       "pts": 30,
+       "tid": 7511,
+       "form": "DWDDW"
+      },
+      {
+       "pos": 7,
+       "team": "Panachaiki FC",
+       "p": 10,
+       "w": 6,
+       "d": 1,
+       "l": 3,
+       "gf": 11,
+       "ga": 10,
+       "pts": 30,
+       "tid": 2106,
+       "form": "WWWWL"
+      },
+      {
+       "pos": 8,
+       "team": "Diagoras",
+       "p": 10,
+       "w": 3,
+       "d": 6,
+       "l": 1,
+       "gf": 8,
+       "ga": 6,
+       "pts": 29,
+       "tid": 7510,
+       "form": "DDLDD"
+      },
+      {
+       "pos": 9,
+       "team": "Olympiacos B",
+       "p": 10,
+       "w": 3,
+       "d": 2,
+       "l": 5,
+       "gf": 17,
+       "ga": 13,
+       "pts": 23,
+       "tid": 18017,
+       "form": "DLDWW"
+      },
+      {
+       "pos": 10,
+       "team": "Giouchtas",
+       "p": 10,
+       "w": 3,
+       "d": 1,
+       "l": 6,
+       "gf": 8,
+       "ga": 15,
+       "pts": 21,
+       "tid": 12418,
+       "form": "LLWLD"
+      },
+      {
+       "pos": 11,
+       "team": "Panathinaikos II",
+       "p": 10,
+       "w": 2,
+       "d": 3,
+       "l": 5,
+       "gf": 6,
+       "ga": 11,
+       "pts": 20,
+       "tid": 18019,
+       "form": "DDLLL"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

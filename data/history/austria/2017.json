@@ -1,0 +1,330 @@
+{
+ "country": "austria",
+ "name": "Austria",
+ "adjective": "Austrian",
+ "season": "2017–18",
+ "year": 2017,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "austrian-bundesliga",
+   "tier": 1,
+   "name": "Bundesliga",
+   "short": "ABL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 3,
+     "to": 4,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 10,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation play-off"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Red Bull Salzburg",
+     "p": 36,
+     "w": 25,
+     "d": 8,
+     "l": 3,
+     "gf": 81,
+     "ga": 29,
+     "pts": 83,
+     "tid": 571,
+     "form": "WWWWL"
+    },
+    {
+     "pos": 2,
+     "team": "Sturm Graz",
+     "p": 36,
+     "w": 22,
+     "d": 4,
+     "l": 10,
+     "gf": 68,
+     "ga": 45,
+     "pts": 70,
+     "tid": 637,
+     "form": "WLWWD"
+    },
+    {
+     "pos": 3,
+     "team": "Rapid Wien",
+     "p": 36,
+     "w": 17,
+     "d": 11,
+     "l": 8,
+     "gf": 68,
+     "ga": 43,
+     "pts": 62,
+     "tid": 781,
+     "form": "LWLWD"
+    },
+    {
+     "pos": 4,
+     "team": "LASK",
+     "p": 36,
+     "w": 17,
+     "d": 6,
+     "l": 13,
+     "gf": 49,
+     "ga": 41,
+     "pts": 57,
+     "tid": 1026,
+     "form": "WLLLL"
+    },
+    {
+     "pos": 5,
+     "team": "Admira Wacker",
+     "p": 36,
+     "w": 15,
+     "d": 6,
+     "l": 15,
+     "gf": 59,
+     "ga": 66,
+     "pts": 51,
+     "tid": 1023,
+     "form": "WDDLL"
+    },
+    {
+     "pos": 6,
+     "team": "SV Mattersburg",
+     "p": 36,
+     "w": 12,
+     "d": 10,
+     "l": 14,
+     "gf": 50,
+     "ga": 56,
+     "pts": 46,
+     "tid": 1024,
+     "form": "WLDLW"
+    },
+    {
+     "pos": 7,
+     "team": "Austria Wien",
+     "p": 36,
+     "w": 12,
+     "d": 7,
+     "l": 17,
+     "gf": 51,
+     "ga": 55,
+     "pts": 43,
+     "tid": 601,
+     "form": "LDLLW"
+    },
+    {
+     "pos": 8,
+     "team": "Rheindorf Altach",
+     "p": 36,
+     "w": 10,
+     "d": 8,
+     "l": 18,
+     "gf": 35,
+     "ga": 51,
+     "pts": 38,
+     "tid": 618,
+     "form": "LWLLD"
+    },
+    {
+     "pos": 9,
+     "team": "Wolfsberger AC",
+     "p": 36,
+     "w": 8,
+     "d": 9,
+     "l": 19,
+     "gf": 31,
+     "ga": 57,
+     "pts": 33,
+     "tid": 1025,
+     "form": "LWWWD"
+    },
+    {
+     "pos": 10,
+     "team": "SKN St. Pölten",
+     "p": 36,
+     "w": 5,
+     "d": 5,
+     "l": 26,
+     "gf": 28,
+     "ga": 77,
+     "pts": 20,
+     "tid": 1027,
+     "form": "LLWWW"
+    }
+   ]
+  },
+  {
+   "id": "2-liga",
+   "tier": 2,
+   "name": "Erste Liga",
+   "short": "EL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 3,
+     "to": 3,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 10,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation play-off"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Wacker Innsbruck",
+     "p": 36,
+     "w": 21,
+     "d": 8,
+     "l": 7,
+     "gf": 60,
+     "ga": 31,
+     "pts": 71,
+     "tid": 1073,
+     "form": "WWDLL"
+    },
+    {
+     "pos": 2,
+     "team": "TSV Hartberg",
+     "p": 36,
+     "w": 20,
+     "d": 8,
+     "l": 8,
+     "gf": 63,
+     "ga": 34,
+     "pts": 68,
+     "tid": 1072,
+     "form": "LDWWW"
+    },
+    {
+     "pos": 3,
+     "team": "SC Wiener Neustadt",
+     "p": 36,
+     "w": 17,
+     "d": 11,
+     "l": 8,
+     "gf": 53,
+     "ga": 37,
+     "pts": 62,
+     "tid": 1396,
+     "form": "WWDWD"
+    },
+    {
+     "pos": 4,
+     "team": "SV Ried",
+     "p": 36,
+     "w": 17,
+     "d": 10,
+     "l": 9,
+     "gf": 68,
+     "ga": 41,
+     "pts": 61,
+     "tid": 1028,
+     "form": "WLLDW"
+    },
+    {
+     "pos": 5,
+     "team": "FC Liefering",
+     "p": 36,
+     "w": 14,
+     "d": 13,
+     "l": 9,
+     "gf": 58,
+     "ga": 44,
+     "pts": 55,
+     "tid": 1400,
+     "form": "WLDDD"
+    },
+    {
+     "pos": 6,
+     "team": "Austria Lustenau",
+     "p": 36,
+     "w": 12,
+     "d": 9,
+     "l": 15,
+     "gf": 48,
+     "ga": 52,
+     "pts": 45,
+     "tid": 1399,
+     "form": "WDWDL"
+    },
+    {
+     "pos": 7,
+     "team": "WSG Tirol",
+     "p": 36,
+     "w": 10,
+     "d": 10,
+     "l": 16,
+     "gf": 45,
+     "ga": 56,
+     "pts": 40,
+     "tid": 1398,
+     "form": "LDDDD"
+    },
+    {
+     "pos": 8,
+     "team": "SV Kapfenberg",
+     "p": 36,
+     "w": 9,
+     "d": 8,
+     "l": 19,
+     "gf": 40,
+     "ga": 68,
+     "pts": 35,
+     "tid": 1401,
+     "form": "LLDLL"
+    },
+    {
+     "pos": 9,
+     "team": "Floridsdorfer AC",
+     "p": 36,
+     "w": 8,
+     "d": 6,
+     "l": 22,
+     "gf": 37,
+     "ga": 75,
+     "pts": 30,
+     "tid": 1395,
+     "form": "LWDWW"
+    },
+    {
+     "pos": 10,
+     "team": "Blau-Weiß Linz",
+     "p": 36,
+     "w": 5,
+     "d": 11,
+     "l": 20,
+     "gf": 35,
+     "ga": 69,
+     "pts": 26,
+     "tid": 1394,
+     "form": "LDLLD"
+    }
+   ]
+  }
+ ]
+}

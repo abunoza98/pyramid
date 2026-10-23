@@ -1,0 +1,1355 @@
+{
+ "country": "usa",
+ "name": "USA",
+ "adjective": "American",
+ "season": "2020",
+ "year": 2020,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "mls",
+   "tier": 1,
+   "name": "Major League Soccer",
+   "short": "MLS",
+   "final": true,
+   "zones": [],
+   "notes": [],
+   "groups": [
+    {
+     "name": "Group Stage",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Orlando City SC",
+       "p": 3,
+       "w": 2,
+       "d": 1,
+       "l": 0,
+       "gf": 6,
+       "ga": 3,
+       "pts": 7,
+       "tid": 1598,
+       "form": "WWD"
+      },
+      {
+       "pos": 2,
+       "team": "Philadelphia Union",
+       "p": 3,
+       "w": 2,
+       "d": 1,
+       "l": 0,
+       "gf": 4,
+       "ga": 2,
+       "pts": 7,
+       "tid": 1599,
+       "form": "WWD"
+      },
+      {
+       "pos": 3,
+       "team": "New York City FC",
+       "p": 3,
+       "w": 1,
+       "d": 0,
+       "l": 2,
+       "gf": 2,
+       "ga": 4,
+       "pts": 3,
+       "tid": 1604,
+       "form": "LLW"
+      },
+      {
+       "pos": 4,
+       "team": "Inter Miami",
+       "p": 3,
+       "w": 0,
+       "d": 0,
+       "l": 3,
+       "gf": 2,
+       "ga": 5,
+       "pts": 0,
+       "tid": 9568,
+       "form": "LLL"
+      }
+     ]
+    },
+    {
+     "name": "Group Stage",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "San Jose Earthquakes",
+       "p": 3,
+       "w": 2,
+       "d": 1,
+       "l": 0,
+       "gf": 6,
+       "ga": 3,
+       "pts": 7,
+       "tid": 1596,
+       "form": "DWW"
+      },
+      {
+       "pos": 2,
+       "team": "Seattle Sounders",
+       "p": 3,
+       "w": 1,
+       "d": 1,
+       "l": 1,
+       "gf": 4,
+       "ga": 2,
+       "pts": 4,
+       "tid": 1595,
+       "form": "DLW"
+      },
+      {
+       "pos": 3,
+       "team": "Vancouver Whitecaps",
+       "p": 3,
+       "w": 1,
+       "d": 0,
+       "l": 2,
+       "gf": 5,
+       "ga": 7,
+       "pts": 3,
+       "tid": 1603,
+       "form": "LLW"
+      },
+      {
+       "pos": 4,
+       "team": "Chicago Fire",
+       "p": 3,
+       "w": 1,
+       "d": 0,
+       "l": 2,
+       "gf": 2,
+       "ga": 5,
+       "pts": 3,
+       "tid": 1607,
+       "form": "WLL"
+      }
+     ]
+    },
+    {
+     "name": "Group Stage",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Toronto FC",
+       "p": 3,
+       "w": 1,
+       "d": 2,
+       "l": 0,
+       "gf": 6,
+       "ga": 5,
+       "pts": 5,
+       "tid": 1601,
+       "form": "DWD"
+      },
+      {
+       "pos": 2,
+       "team": "New England Revolution",
+       "p": 3,
+       "w": 1,
+       "d": 2,
+       "l": 0,
+       "gf": 2,
+       "ga": 1,
+       "pts": 5,
+       "tid": 1609,
+       "form": "WDD"
+      },
+      {
+       "pos": 3,
+       "team": "Montreal Impact",
+       "p": 3,
+       "w": 1,
+       "d": 0,
+       "l": 2,
+       "gf": 4,
+       "ga": 5,
+       "pts": 3,
+       "tid": 1614,
+       "form": "LLW"
+      },
+      {
+       "pos": 4,
+       "team": "D.C. United",
+       "p": 3,
+       "w": 0,
+       "d": 2,
+       "l": 1,
+       "gf": 3,
+       "ga": 4,
+       "pts": 2,
+       "tid": 1615,
+       "form": "DDL"
+      }
+     ]
+    },
+    {
+     "name": "Group Stage",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Sporting Kansas City",
+       "p": 3,
+       "w": 2,
+       "d": 0,
+       "l": 1,
+       "gf": 6,
+       "ga": 4,
+       "pts": 6,
+       "tid": 1611,
+       "form": "LWW"
+      },
+      {
+       "pos": 2,
+       "team": "Minnesota United",
+       "p": 3,
+       "w": 1,
+       "d": 2,
+       "l": 0,
+       "gf": 4,
+       "ga": 3,
+       "pts": 5,
+       "tid": 1612,
+       "form": "WDD"
+      },
+      {
+       "pos": 3,
+       "team": "Real Salt Lake",
+       "p": 3,
+       "w": 1,
+       "d": 1,
+       "l": 1,
+       "gf": 2,
+       "ga": 2,
+       "pts": 4,
+       "tid": 1606,
+       "form": "WDL"
+      },
+      {
+       "pos": 4,
+       "team": "Colorado Rapids",
+       "p": 3,
+       "w": 0,
+       "d": 1,
+       "l": 2,
+       "gf": 4,
+       "ga": 7,
+       "pts": 1,
+       "tid": 1610,
+       "form": "LLD"
+      }
+     ]
+    },
+    {
+     "name": "Group Stage",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Columbus Crew",
+       "p": 3,
+       "w": 3,
+       "d": 0,
+       "l": 0,
+       "gf": 7,
+       "ga": 0,
+       "pts": 9,
+       "tid": 1613,
+       "form": "WWW"
+      },
+      {
+       "pos": 2,
+       "team": "FC Cincinnati",
+       "p": 3,
+       "w": 2,
+       "d": 0,
+       "l": 1,
+       "gf": 3,
+       "ga": 4,
+       "pts": 6,
+       "tid": 2242,
+       "form": "LWW"
+      },
+      {
+       "pos": 3,
+       "team": "New York Red Bulls",
+       "p": 3,
+       "w": 1,
+       "d": 0,
+       "l": 2,
+       "gf": 1,
+       "ga": 4,
+       "pts": 3,
+       "tid": 1602,
+       "form": "WLL"
+      },
+      {
+       "pos": 4,
+       "team": "Atlanta United",
+       "p": 3,
+       "w": 0,
+       "d": 0,
+       "l": 3,
+       "gf": 0,
+       "ga": 3,
+       "pts": 0,
+       "tid": 1608,
+       "form": "LLL"
+      }
+     ]
+    },
+    {
+     "name": "Group Stage",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Portland Timbers",
+       "p": 3,
+       "w": 2,
+       "d": 1,
+       "l": 0,
+       "gf": 6,
+       "ga": 4,
+       "pts": 7,
+       "tid": 1617,
+       "form": "WWD"
+      },
+      {
+       "pos": 2,
+       "team": "Los Angeles FC",
+       "p": 3,
+       "w": 1,
+       "d": 2,
+       "l": 0,
+       "gf": 11,
+       "ga": 7,
+       "pts": 5,
+       "tid": 1616,
+       "form": "DWD"
+      },
+      {
+       "pos": 3,
+       "team": "Houston Dynamo",
+       "p": 3,
+       "w": 0,
+       "d": 2,
+       "l": 1,
+       "gf": 5,
+       "ga": 6,
+       "pts": 2,
+       "tid": 1600,
+       "form": "DLD"
+      },
+      {
+       "pos": 4,
+       "team": "LA Galaxy",
+       "p": 3,
+       "w": 0,
+       "d": 1,
+       "l": 2,
+       "gf": 4,
+       "ga": 9,
+       "pts": 1,
+       "tid": 1605,
+       "form": "LLD"
+      }
+     ]
+    },
+    {
+     "name": "Regular Season",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Philadelphia Union",
+       "p": 23,
+       "w": 14,
+       "d": 5,
+       "l": 4,
+       "gf": 44,
+       "ga": 20,
+       "pts": 47,
+       "tid": 1599,
+       "form": "WWWLW"
+      },
+      {
+       "pos": 2,
+       "team": "Toronto FC",
+       "p": 23,
+       "w": 13,
+       "d": 5,
+       "l": 5,
+       "gf": 33,
+       "ga": 26,
+       "pts": 44,
+       "tid": 1601,
+       "form": "WLLWL"
+      },
+      {
+       "pos": 3,
+       "team": "Columbus Crew",
+       "p": 23,
+       "w": 12,
+       "d": 5,
+       "l": 6,
+       "gf": 36,
+       "ga": 21,
+       "pts": 41,
+       "tid": 1613,
+       "form": "DLWLW"
+      },
+      {
+       "pos": 4,
+       "team": "Orlando City SC",
+       "p": 23,
+       "w": 11,
+       "d": 8,
+       "l": 4,
+       "gf": 40,
+       "ga": 25,
+       "pts": 41,
+       "tid": 1598,
+       "form": "LWWWL"
+      },
+      {
+       "pos": 5,
+       "team": "New York City FC",
+       "p": 23,
+       "w": 12,
+       "d": 3,
+       "l": 8,
+       "gf": 37,
+       "ga": 25,
+       "pts": 39,
+       "tid": 1604,
+       "form": "LWWWW"
+      },
+      {
+       "pos": 6,
+       "team": "New York Red Bulls",
+       "p": 23,
+       "w": 9,
+       "d": 5,
+       "l": 9,
+       "gf": 29,
+       "ga": 31,
+       "pts": 32,
+       "tid": 1602,
+       "form": "DDWLW"
+      },
+      {
+       "pos": 7,
+       "team": "Nashville SC",
+       "p": 23,
+       "w": 8,
+       "d": 8,
+       "l": 7,
+       "gf": 24,
+       "ga": 22,
+       "pts": 32,
+       "tid": 9569,
+       "form": "DWDLW"
+      },
+      {
+       "pos": 8,
+       "team": "New England Revolution",
+       "p": 23,
+       "w": 8,
+       "d": 8,
+       "l": 7,
+       "gf": 26,
+       "ga": 25,
+       "pts": 32,
+       "tid": 1609,
+       "form": "LDLWL"
+      },
+      {
+       "pos": 9,
+       "team": "Montreal Impact",
+       "p": 23,
+       "w": 8,
+       "d": 2,
+       "l": 13,
+       "gf": 33,
+       "ga": 43,
+       "pts": 26,
+       "tid": 1614,
+       "form": "WLLLW"
+      },
+      {
+       "pos": 10,
+       "team": "Inter Miami",
+       "p": 23,
+       "w": 7,
+       "d": 3,
+       "l": 13,
+       "gf": 25,
+       "ga": 35,
+       "pts": 24,
+       "tid": 9568,
+       "form": "LWLLW"
+      },
+      {
+       "pos": 11,
+       "team": "Chicago Fire",
+       "p": 23,
+       "w": 5,
+       "d": 8,
+       "l": 10,
+       "gf": 33,
+       "ga": 39,
+       "pts": 23,
+       "tid": 1607,
+       "form": "DLDDL"
+      },
+      {
+       "pos": 12,
+       "team": "Atlanta United",
+       "p": 23,
+       "w": 6,
+       "d": 4,
+       "l": 13,
+       "gf": 23,
+       "ga": 30,
+       "pts": 22,
+       "tid": 1608,
+       "form": "LLLWL"
+      },
+      {
+       "pos": 13,
+       "team": "D.C. United",
+       "p": 23,
+       "w": 5,
+       "d": 6,
+       "l": 12,
+       "gf": 25,
+       "ga": 41,
+       "pts": 21,
+       "tid": 1615,
+       "form": "WWWLL"
+      },
+      {
+       "pos": 14,
+       "team": "FC Cincinnati",
+       "p": 23,
+       "w": 4,
+       "d": 4,
+       "l": 15,
+       "gf": 12,
+       "ga": 36,
+       "pts": 16,
+       "tid": 2242,
+       "form": "LLLLL"
+      }
+     ]
+    },
+    {
+     "name": "Regular Season",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Sporting Kansas City",
+       "p": 21,
+       "w": 12,
+       "d": 3,
+       "l": 6,
+       "gf": 38,
+       "ga": 25,
+       "pts": 39,
+       "tid": 1611,
+       "form": "LDWWW"
+      },
+      {
+       "pos": 2,
+       "team": "Seattle Sounders",
+       "p": 22,
+       "w": 11,
+       "d": 6,
+       "l": 5,
+       "gf": 44,
+       "ga": 23,
+       "pts": 39,
+       "tid": 1595,
+       "form": "DWLDW"
+      },
+      {
+       "pos": 3,
+       "team": "Portland Timbers",
+       "p": 23,
+       "w": 11,
+       "d": 6,
+       "l": 6,
+       "gf": 46,
+       "ga": 35,
+       "pts": 39,
+       "tid": 1617,
+       "form": "DWWLD"
+      },
+      {
+       "pos": 4,
+       "team": "Minnesota United",
+       "p": 21,
+       "w": 9,
+       "d": 7,
+       "l": 5,
+       "gf": 36,
+       "ga": 26,
+       "pts": 34,
+       "tid": 1612,
+       "form": "DWWDW"
+      },
+      {
+       "pos": 5,
+       "team": "Colorado Rapids",
+       "p": 18,
+       "w": 8,
+       "d": 4,
+       "l": 6,
+       "gf": 32,
+       "ga": 28,
+       "pts": 28,
+       "tid": 1610,
+       "form": "LLWWW"
+      },
+      {
+       "pos": 6,
+       "team": "FC Dallas",
+       "p": 22,
+       "w": 9,
+       "d": 7,
+       "l": 6,
+       "gf": 28,
+       "ga": 24,
+       "pts": 34,
+       "tid": 1597,
+       "form": "DWWWL"
+      },
+      {
+       "pos": 7,
+       "team": "Los Angeles FC",
+       "p": 22,
+       "w": 9,
+       "d": 5,
+       "l": 8,
+       "gf": 47,
+       "ga": 39,
+       "pts": 32,
+       "tid": 1616,
+       "form": "DWWLD"
+      },
+      {
+       "pos": 8,
+       "team": "San Jose Earthquakes",
+       "p": 23,
+       "w": 8,
+       "d": 6,
+       "l": 9,
+       "gf": 35,
+       "ga": 51,
+       "pts": 30,
+       "tid": 1596,
+       "form": "DLWWL"
+      },
+      {
+       "pos": 9,
+       "team": "Vancouver Whitecaps",
+       "p": 23,
+       "w": 9,
+       "d": 0,
+       "l": 14,
+       "gf": 27,
+       "ga": 44,
+       "pts": 27,
+       "tid": 1603,
+       "form": "LWLLW"
+      },
+      {
+       "pos": 10,
+       "team": "LA Galaxy",
+       "p": 22,
+       "w": 6,
+       "d": 4,
+       "l": 12,
+       "gf": 27,
+       "ga": 46,
+       "pts": 22,
+       "tid": 1605,
+       "form": "LLWDL"
+      },
+      {
+       "pos": 11,
+       "team": "Real Salt Lake",
+       "p": 22,
+       "w": 5,
+       "d": 7,
+       "l": 10,
+       "gf": 25,
+       "ga": 35,
+       "pts": 22,
+       "tid": 1606,
+       "form": "WDLLL"
+      },
+      {
+       "pos": 12,
+       "team": "Houston Dynamo",
+       "p": 23,
+       "w": 4,
+       "d": 9,
+       "l": 10,
+       "gf": 30,
+       "ga": 40,
+       "pts": 21,
+       "tid": 1600,
+       "form": "DDLLL"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "usl-championship",
+   "tier": 2,
+   "name": "USL Championship",
+   "short": "USLC",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "mid",
+     "label": "Play-offs"
+    }
+   ],
+   "notes": [],
+   "groups": [
+    {
+     "name": "Regular Season",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Reno 1868",
+       "p": 16,
+       "w": 11,
+       "d": 3,
+       "l": 2,
+       "gf": 43,
+       "ga": 21,
+       "pts": 36,
+       "tid": 4013
+      },
+      {
+       "pos": 2,
+       "team": "Sacramento Republic",
+       "p": 16,
+       "w": 8,
+       "d": 6,
+       "l": 2,
+       "gf": 27,
+       "ga": 17,
+       "pts": 30,
+       "tid": 4015
+      },
+      {
+       "pos": 3,
+       "team": "Tacoma Defiance",
+       "p": 16,
+       "w": 4,
+       "d": 2,
+       "l": 10,
+       "gf": 25,
+       "ga": 32,
+       "pts": 14,
+       "tid": 4020
+      },
+      {
+       "pos": 4,
+       "team": "Portland Timbers II",
+       "p": 16,
+       "w": 3,
+       "d": 0,
+       "l": 13,
+       "gf": 20,
+       "ga": 50,
+       "pts": 9,
+       "tid": 4011
+      }
+     ]
+    },
+    {
+     "name": "Regular Season",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Phoenix Rising",
+       "p": 16,
+       "w": 11,
+       "d": 2,
+       "l": 3,
+       "gf": 46,
+       "ga": 17,
+       "pts": 35,
+       "tid": 4009
+      },
+      {
+       "pos": 2,
+       "team": "LA Galaxy II",
+       "p": 16,
+       "w": 8,
+       "d": 2,
+       "l": 6,
+       "gf": 29,
+       "ga": 32,
+       "pts": 26,
+       "tid": 3997
+      },
+      {
+       "pos": 3,
+       "team": "Orange County SC",
+       "p": 16,
+       "w": 7,
+       "d": 3,
+       "l": 6,
+       "gf": 18,
+       "ga": 18,
+       "pts": 24,
+       "tid": 4007
+      },
+      {
+       "pos": 4,
+       "team": "San Diego Loyal",
+       "p": 16,
+       "w": 6,
+       "d": 5,
+       "l": 5,
+       "gf": 17,
+       "ga": 18,
+       "pts": 23,
+       "tid": 9991
+      },
+      {
+       "pos": 5,
+       "team": "Las Vegas Lights",
+       "p": 16,
+       "w": 2,
+       "d": 5,
+       "l": 9,
+       "gf": 24,
+       "ga": 34,
+       "pts": 11,
+       "tid": 3998
+      }
+     ]
+    },
+    {
+     "name": "Regular Season",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "El Paso Locomotive",
+       "p": 16,
+       "w": 9,
+       "d": 5,
+       "l": 2,
+       "gf": 24,
+       "ga": 14,
+       "pts": 32,
+       "tid": 3993
+      },
+      {
+       "pos": 2,
+       "team": "New Mexico United",
+       "p": 15,
+       "w": 8,
+       "d": 3,
+       "l": 4,
+       "gf": 23,
+       "ga": 17,
+       "pts": 27,
+       "tid": 4003
+      },
+      {
+       "pos": 3,
+       "team": "Colorado Springs Switchbacks",
+       "p": 16,
+       "w": 2,
+       "d": 7,
+       "l": 7,
+       "gf": 19,
+       "ga": 28,
+       "pts": 13,
+       "tid": 3992
+      },
+      {
+       "pos": 4,
+       "team": "Real Monarchs",
+       "p": 16,
+       "w": 3,
+       "d": 2,
+       "l": 11,
+       "gf": 14,
+       "ga": 25,
+       "pts": 11,
+       "tid": 4012
+      }
+     ]
+    },
+    {
+     "name": "Regular Season",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "San Antonio FC",
+       "p": 16,
+       "w": 10,
+       "d": 3,
+       "l": 3,
+       "gf": 30,
+       "ga": 14,
+       "pts": 33,
+       "tid": 4017
+      },
+      {
+       "pos": 2,
+       "team": "Tulsa Roughnecks",
+       "p": 15,
+       "w": 6,
+       "d": 7,
+       "l": 2,
+       "gf": 21,
+       "ga": 16,
+       "pts": 25,
+       "tid": 4022
+      },
+      {
+       "pos": 3,
+       "team": "Austin Bold",
+       "p": 16,
+       "w": 5,
+       "d": 7,
+       "l": 4,
+       "gf": 30,
+       "ga": 27,
+       "pts": 22,
+       "tid": 3987
+      },
+      {
+       "pos": 4,
+       "team": "OKC Energy",
+       "p": 16,
+       "w": 1,
+       "d": 7,
+       "l": 8,
+       "gf": 12,
+       "ga": 29,
+       "pts": 10,
+       "tid": 4006
+      },
+      {
+       "pos": 5,
+       "team": "Rio Grande Valley",
+       "p": 14,
+       "w": 2,
+       "d": 3,
+       "l": 9,
+       "gf": 17,
+       "ga": 28,
+       "pts": 9,
+       "tid": 4014
+      }
+     ]
+    },
+    {
+     "name": "Regular Season",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Louisville City",
+       "p": 16,
+       "w": 11,
+       "d": 2,
+       "l": 3,
+       "gf": 28,
+       "ga": 12,
+       "pts": 35,
+       "tid": 4000
+      },
+      {
+       "pos": 2,
+       "team": "Saint Louis",
+       "p": 16,
+       "w": 7,
+       "d": 4,
+       "l": 5,
+       "gf": 22,
+       "ga": 21,
+       "pts": 25,
+       "tid": 4016
+      },
+      {
+       "pos": 3,
+       "team": "Indy Eleven",
+       "p": 16,
+       "w": 7,
+       "d": 2,
+       "l": 7,
+       "gf": 21,
+       "ga": 19,
+       "pts": 23,
+       "tid": 3996
+      },
+      {
+       "pos": 4,
+       "team": "Swope Park Rangers",
+       "p": 16,
+       "w": 5,
+       "d": 1,
+       "l": 10,
+       "gf": 21,
+       "ga": 30,
+       "pts": 16,
+       "tid": 4019
+      }
+     ]
+    },
+    {
+     "name": "Regular Season",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Hartford Athletic",
+       "p": 16,
+       "w": 11,
+       "d": 2,
+       "l": 3,
+       "gf": 31,
+       "ga": 24,
+       "pts": 35,
+       "tid": 3995
+      },
+      {
+       "pos": 2,
+       "team": "Pittsburgh Riverhounds",
+       "p": 16,
+       "w": 11,
+       "d": 1,
+       "l": 4,
+       "gf": 39,
+       "ga": 10,
+       "pts": 34,
+       "tid": 4010
+      },
+      {
+       "pos": 3,
+       "team": "New York RB II",
+       "p": 16,
+       "w": 5,
+       "d": 0,
+       "l": 11,
+       "gf": 30,
+       "ga": 37,
+       "pts": 15,
+       "tid": 4004
+      },
+      {
+       "pos": 4,
+       "team": "Bethlehem Steel",
+       "p": 16,
+       "w": 2,
+       "d": 3,
+       "l": 11,
+       "gf": 20,
+       "ga": 45,
+       "pts": 9,
+       "tid": 3988
+      },
+      {
+       "pos": 5,
+       "team": "Loudoun United",
+       "p": 13,
+       "w": 1,
+       "d": 3,
+       "l": 9,
+       "gf": 10,
+       "ga": 28,
+       "pts": 6,
+       "tid": 3999
+      }
+     ]
+    },
+    {
+     "name": "Regular Season",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Charlotte Independence",
+       "p": 16,
+       "w": 8,
+       "d": 4,
+       "l": 4,
+       "gf": 24,
+       "ga": 22,
+       "pts": 28,
+       "tid": 3991
+      },
+      {
+       "pos": 2,
+       "team": "Birmingham Legion",
+       "p": 16,
+       "w": 7,
+       "d": 4,
+       "l": 5,
+       "gf": 29,
+       "ga": 19,
+       "pts": 25,
+       "tid": 3989
+      },
+      {
+       "pos": 3,
+       "team": "North Carolina",
+       "p": 15,
+       "w": 6,
+       "d": 1,
+       "l": 8,
+       "gf": 17,
+       "ga": 21,
+       "pts": 19,
+       "tid": 4005
+      },
+      {
+       "pos": 4,
+       "team": "Memphis 901",
+       "p": 15,
+       "w": 4,
+       "d": 4,
+       "l": 7,
+       "gf": 24,
+       "ga": 31,
+       "pts": 16,
+       "tid": 4001
+      }
+     ]
+    },
+    {
+     "name": "Regular Season",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Tampa Bay Rowdies",
+       "p": 16,
+       "w": 10,
+       "d": 3,
+       "l": 3,
+       "gf": 25,
+       "ga": 11,
+       "pts": 33,
+       "tid": 4021
+      },
+      {
+       "pos": 2,
+       "team": "Charleston Battery",
+       "p": 15,
+       "w": 9,
+       "d": 3,
+       "l": 3,
+       "gf": 26,
+       "ga": 15,
+       "pts": 30,
+       "tid": 3990
+      },
+      {
+       "pos": 3,
+       "team": "Miami FC",
+       "p": 16,
+       "w": 4,
+       "d": 4,
+       "l": 8,
+       "gf": 20,
+       "ga": 34,
+       "pts": 16,
+       "tid": 9030
+      },
+      {
+       "pos": 4,
+       "team": "Atlanta United II",
+       "p": 16,
+       "w": 3,
+       "d": 3,
+       "l": 10,
+       "gf": 23,
+       "ga": 33,
+       "pts": 12,
+       "tid": 3986
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "usl-league-one",
+   "tier": 3,
+   "name": "USL League One",
+   "short": "USL1",
+   "final": true,
+   "zones": [],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Greenville Triumph",
+     "p": 16,
+     "w": 11,
+     "d": 2,
+     "l": 3,
+     "gf": 24,
+     "ga": 11,
+     "pts": 35,
+     "tid": 9026,
+     "form": "WWDLW"
+    },
+    {
+     "pos": 2,
+     "team": "Union Omaha",
+     "p": 16,
+     "w": 8,
+     "d": 5,
+     "l": 3,
+     "gf": 20,
+     "ga": 15,
+     "pts": 29,
+     "tid": 10283,
+     "form": "WWDWW"
+    },
+    {
+     "pos": 3,
+     "team": "North Texas",
+     "p": 16,
+     "w": 7,
+     "d": 6,
+     "l": 3,
+     "gf": 27,
+     "ga": 19,
+     "pts": 27,
+     "tid": 10282,
+     "form": "WWDWW"
+    },
+    {
+     "pos": 4,
+     "team": "Richmond Kickers",
+     "p": 16,
+     "w": 8,
+     "d": 2,
+     "l": 6,
+     "gf": 22,
+     "ga": 22,
+     "pts": 26,
+     "tid": 4024,
+     "form": "WLLWL"
+    },
+    {
+     "pos": 5,
+     "team": "Chattanooga Red Wolves",
+     "p": 15,
+     "w": 6,
+     "d": 4,
+     "l": 5,
+     "gf": 21,
+     "ga": 17,
+     "pts": 22,
+     "tid": 9016,
+     "form": "LLLDW"
+    },
+    {
+     "pos": 6,
+     "team": "Tucson",
+     "p": 16,
+     "w": 6,
+     "d": 4,
+     "l": 6,
+     "gf": 21,
+     "ga": 19,
+     "pts": 22,
+     "tid": 4109,
+     "form": "LDWDW"
+    },
+    {
+     "pos": 7,
+     "team": "Forward Madison",
+     "p": 16,
+     "w": 5,
+     "d": 6,
+     "l": 5,
+     "gf": 20,
+     "ga": 14,
+     "pts": 21,
+     "tid": 9025,
+     "form": "DDDLW"
+    },
+    {
+     "pos": 8,
+     "team": "Tormenta",
+     "p": 16,
+     "w": 5,
+     "d": 4,
+     "l": 7,
+     "gf": 19,
+     "ga": 22,
+     "pts": 19,
+     "tid": 4108,
+     "form": "LLWWL"
+    },
+    {
+     "pos": 9,
+     "team": "New England II",
+     "p": 16,
+     "w": 5,
+     "d": 3,
+     "l": 8,
+     "gf": 19,
+     "ga": 26,
+     "pts": 18,
+     "tid": 10281,
+     "form": "WWDLL"
+    },
+    {
+     "pos": 10,
+     "team": "Fort Lauderdale CF",
+     "p": 16,
+     "w": 4,
+     "d": 3,
+     "l": 9,
+     "gf": 19,
+     "ga": 28,
+     "pts": 15,
+     "tid": 10280,
+     "form": "LLLDL"
+    },
+    {
+     "pos": 11,
+     "team": "Orlando City II",
+     "p": 15,
+     "w": 1,
+     "d": 3,
+     "l": 11,
+     "gf": 10,
+     "ga": 29,
+     "pts": 6,
+     "tid": 4026,
+     "form": "LLLLL"
+    },
+    {
+     "pos": 12,
+     "team": "Toronto II",
+     "p": 0,
+     "w": 0,
+     "d": 0,
+     "l": 0,
+     "gf": 0,
+     "ga": 0,
+     "pts": 0,
+     "tid": 4025
+    }
+   ]
+  }
+ ]
+}

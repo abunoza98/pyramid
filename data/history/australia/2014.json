@@ -1,0 +1,158 @@
+{
+ "country": "australia",
+ "name": "Australia",
+ "adjective": "Australian",
+ "season": "2014–15",
+ "year": 2014,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "a-league",
+   "tier": 1,
+   "name": "A-League",
+   "short": "AL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 6,
+     "kind": "mid",
+     "label": "Play-offs"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Melbourne Victory",
+     "p": 27,
+     "w": 15,
+     "d": 8,
+     "l": 4,
+     "gf": 56,
+     "ga": 31,
+     "pts": 53,
+     "tid": 944,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 2,
+     "team": "Sydney FC",
+     "p": 27,
+     "w": 14,
+     "d": 8,
+     "l": 5,
+     "gf": 52,
+     "ga": 35,
+     "pts": 50,
+     "tid": 943,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 3,
+     "team": "Adelaide United",
+     "p": 27,
+     "w": 14,
+     "d": 4,
+     "l": 9,
+     "gf": 47,
+     "ga": 32,
+     "pts": 46,
+     "tid": 948,
+     "form": "WWLLW"
+    },
+    {
+     "pos": 4,
+     "team": "Wellington Phoenix",
+     "p": 27,
+     "w": 14,
+     "d": 4,
+     "l": 9,
+     "gf": 45,
+     "ga": 35,
+     "pts": 46,
+     "tid": 942,
+     "form": "LLDWL"
+    },
+    {
+     "pos": 5,
+     "team": "Melbourne City",
+     "p": 27,
+     "w": 9,
+     "d": 8,
+     "l": 10,
+     "gf": 36,
+     "ga": 41,
+     "pts": 35,
+     "tid": 945,
+     "form": "WDDLL"
+    },
+    {
+     "pos": 6,
+     "team": "Brisbane Roar",
+     "p": 27,
+     "w": 10,
+     "d": 4,
+     "l": 13,
+     "gf": 42,
+     "ga": 43,
+     "pts": 34,
+     "tid": 947,
+     "form": "WWLLW"
+    },
+    {
+     "pos": 7,
+     "team": "Perth Glory",
+     "p": 27,
+     "w": 14,
+     "d": 8,
+     "l": 5,
+     "gf": 45,
+     "ga": 35,
+     "pts": 50,
+     "tid": 940,
+     "form": "WWLWW"
+    },
+    {
+     "pos": 8,
+     "team": "Central Coast Mariners",
+     "p": 27,
+     "w": 5,
+     "d": 8,
+     "l": 14,
+     "gf": 26,
+     "ga": 50,
+     "pts": 23,
+     "tid": 941,
+     "form": "LLWLL"
+    },
+    {
+     "pos": 9,
+     "team": "Western Sydney Wanderers",
+     "p": 27,
+     "w": 4,
+     "d": 6,
+     "l": 17,
+     "gf": 29,
+     "ga": 44,
+     "pts": 18,
+     "tid": 939,
+     "form": "LDLWL"
+    },
+    {
+     "pos": 10,
+     "team": "Newcastle Jets",
+     "p": 27,
+     "w": 3,
+     "d": 8,
+     "l": 16,
+     "gf": 23,
+     "ga": 55,
+     "pts": 17,
+     "tid": 946,
+     "form": "LLWLL"
+    }
+   ]
+  }
+ ]
+}

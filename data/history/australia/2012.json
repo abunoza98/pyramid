@@ -1,0 +1,158 @@
+{
+ "country": "australia",
+ "name": "Australia",
+ "adjective": "Australian",
+ "season": "2012–13",
+ "year": 2012,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "a-league",
+   "tier": 1,
+   "name": "A-League",
+   "short": "AL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 6,
+     "kind": "mid",
+     "label": "Play-offs"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Western Sydney Wanderers",
+     "p": 27,
+     "w": 18,
+     "d": 3,
+     "l": 6,
+     "gf": 41,
+     "ga": 21,
+     "pts": 57,
+     "tid": 939,
+     "form": "WWWDW"
+    },
+    {
+     "pos": 2,
+     "team": "Central Coast Mariners",
+     "p": 27,
+     "w": 16,
+     "d": 6,
+     "l": 5,
+     "gf": 48,
+     "ga": 22,
+     "pts": 54,
+     "tid": 941,
+     "form": "LLWWW"
+    },
+    {
+     "pos": 3,
+     "team": "Melbourne Victory",
+     "p": 27,
+     "w": 13,
+     "d": 5,
+     "l": 9,
+     "gf": 48,
+     "ga": 45,
+     "pts": 44,
+     "tid": 944,
+     "form": "WDDLW"
+    },
+    {
+     "pos": 4,
+     "team": "Adelaide United",
+     "p": 27,
+     "w": 12,
+     "d": 5,
+     "l": 10,
+     "gf": 38,
+     "ga": 37,
+     "pts": 41,
+     "tid": 948,
+     "form": "LWDLD"
+    },
+    {
+     "pos": 5,
+     "team": "Brisbane Roar",
+     "p": 27,
+     "w": 10,
+     "d": 5,
+     "l": 12,
+     "gf": 33,
+     "ga": 29,
+     "pts": 35,
+     "tid": 947,
+     "form": "WDLWW"
+    },
+    {
+     "pos": 6,
+     "team": "Perth Glory",
+     "p": 27,
+     "w": 9,
+     "d": 5,
+     "l": 13,
+     "gf": 29,
+     "ga": 31,
+     "pts": 32,
+     "tid": 940,
+     "form": "WWLWD"
+    },
+    {
+     "pos": 7,
+     "team": "Sydney FC",
+     "p": 27,
+     "w": 9,
+     "d": 5,
+     "l": 13,
+     "gf": 41,
+     "ga": 51,
+     "pts": 32,
+     "tid": 943,
+     "form": "LWDDL"
+    },
+    {
+     "pos": 8,
+     "team": "Newcastle Jets",
+     "p": 27,
+     "w": 8,
+     "d": 7,
+     "l": 12,
+     "gf": 30,
+     "ga": 45,
+     "pts": 31,
+     "tid": 946,
+     "form": "WLLDL"
+    },
+    {
+     "pos": 9,
+     "team": "Melbourne City",
+     "p": 27,
+     "w": 8,
+     "d": 3,
+     "l": 16,
+     "gf": 31,
+     "ga": 40,
+     "pts": 27,
+     "tid": 945,
+     "form": "LLLLL"
+    },
+    {
+     "pos": 10,
+     "team": "Wellington Phoenix",
+     "p": 27,
+     "w": 7,
+     "d": 6,
+     "l": 14,
+     "gf": 31,
+     "ga": 49,
+     "pts": 27,
+     "tid": 942,
+     "form": "LWLWL"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,715 @@
+{
+ "country": "greece",
+ "name": "Greece",
+ "adjective": "Greek",
+ "season": "2025–26",
+ "year": 2025,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "greek-super-league",
+   "tier": 1,
+   "name": "Super League",
+   "short": "SL1",
+   "final": true,
+   "zones": [
+    {
+     "from": 9,
+     "to": 14,
+     "kind": "down",
+     "label": "Relegation play-off"
+    }
+   ],
+   "notes": [
+    "Aris: 15 points deducted.",
+    "Levadiakos: 21 points deducted.",
+    "OFI Crete: 16 points deducted.",
+    "Volos: 15 points deducted."
+   ],
+   "groups": [
+    {
+     "name": "Super League",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "AEK Athens",
+       "p": 26,
+       "w": 18,
+       "d": 6,
+       "l": 2,
+       "gf": 49,
+       "ga": 17,
+       "pts": 60,
+       "tid": 575,
+       "form": "WDWDD"
+      },
+      {
+       "pos": 2,
+       "team": "Olympiacos",
+       "p": 26,
+       "w": 17,
+       "d": 7,
+       "l": 2,
+       "gf": 45,
+       "ga": 11,
+       "pts": 58,
+       "tid": 553,
+       "form": "WLDWD"
+      },
+      {
+       "pos": 3,
+       "team": "PAOK",
+       "p": 26,
+       "w": 17,
+       "d": 6,
+       "l": 3,
+       "gf": 52,
+       "ga": 17,
+       "pts": 57,
+       "tid": 619,
+       "form": "LWDDD"
+      },
+      {
+       "pos": 4,
+       "team": "Panathinaikos",
+       "p": 26,
+       "w": 14,
+       "d": 7,
+       "l": 5,
+       "gf": 44,
+       "ga": 26,
+       "pts": 49,
+       "tid": 617,
+       "form": "LDLLD"
+      },
+      {
+       "pos": 5,
+       "team": "Levadiakos",
+       "p": 26,
+       "w": 12,
+       "d": 6,
+       "l": 8,
+       "gf": 51,
+       "ga": 37,
+       "pts": 42,
+       "tid": 957,
+       "form": "LWWWL"
+      },
+      {
+       "pos": 6,
+       "team": "OFI Crete",
+       "p": 26,
+       "w": 10,
+       "d": 2,
+       "l": 14,
+       "gf": 34,
+       "ga": 45,
+       "pts": 32,
+       "tid": 1124,
+       "form": "WLLLW"
+      },
+      {
+       "pos": 7,
+       "team": "Volos",
+       "p": 26,
+       "w": 9,
+       "d": 4,
+       "l": 13,
+       "gf": 26,
+       "ga": 38,
+       "pts": 31,
+       "tid": 2110,
+       "form": "LLLLL"
+      },
+      {
+       "pos": 8,
+       "team": "Aris",
+       "p": 26,
+       "w": 6,
+       "d": 12,
+       "l": 8,
+       "gf": 20,
+       "ga": 27,
+       "pts": 30,
+       "tid": 1123,
+       "form": "WWWWW"
+      },
+      {
+       "pos": 9,
+       "team": "Atromitos",
+       "p": 26,
+       "w": 7,
+       "d": 8,
+       "l": 11,
+       "gf": 26,
+       "ga": 30,
+       "pts": 29,
+       "tid": 12260,
+       "form": "LLWLW"
+      },
+      {
+       "pos": 10,
+       "team": "Kifisia",
+       "p": 26,
+       "w": 6,
+       "d": 9,
+       "l": 11,
+       "gf": 32,
+       "ga": 42,
+       "pts": 27,
+       "tid": 5050,
+       "form": "WWLDW"
+      },
+      {
+       "pos": 11,
+       "team": "Panetolikos",
+       "p": 26,
+       "w": 7,
+       "d": 5,
+       "l": 14,
+       "gf": 24,
+       "ga": 38,
+       "pts": 26,
+       "tid": 949,
+       "form": "LWDDL"
+      },
+      {
+       "pos": 12,
+       "team": "Larisa",
+       "p": 26,
+       "w": 4,
+       "d": 11,
+       "l": 11,
+       "gf": 22,
+       "ga": 39,
+       "pts": 23,
+       "tid": 953,
+       "form": "DDDWL"
+      },
+      {
+       "pos": 13,
+       "team": "Panserraikos",
+       "p": 26,
+       "w": 4,
+       "d": 5,
+       "l": 17,
+       "gf": 16,
+       "ga": 55,
+       "pts": 17,
+       "tid": 2099,
+       "form": "DLLDL"
+      },
+      {
+       "pos": 14,
+       "team": "Asteras Tripolis",
+       "p": 26,
+       "w": 3,
+       "d": 8,
+       "l": 15,
+       "gf": 22,
+       "ga": 41,
+       "pts": 17,
+       "tid": 955,
+       "form": "WDWDW"
+      }
+     ]
+    },
+    {
+     "name": "Championship Round",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "AEK Athens",
+       "p": 32,
+       "w": 21,
+       "d": 9,
+       "l": 2,
+       "gf": 57,
+       "ga": 20,
+       "pts": 72,
+       "tid": 575,
+       "form": "WDWDD"
+      },
+      {
+       "pos": 2,
+       "team": "Olympiacos",
+       "p": 32,
+       "w": 19,
+       "d": 9,
+       "l": 4,
+       "gf": 51,
+       "ga": 17,
+       "pts": 66,
+       "tid": 553,
+       "form": "WLDWD"
+      },
+      {
+       "pos": 3,
+       "team": "PAOK",
+       "p": 32,
+       "w": 18,
+       "d": 10,
+       "l": 4,
+       "gf": 59,
+       "ga": 25,
+       "pts": 64,
+       "tid": 619,
+       "form": "LWDDD"
+      },
+      {
+       "pos": 4,
+       "team": "Panathinaikos",
+       "p": 32,
+       "w": 14,
+       "d": 10,
+       "l": 8,
+       "gf": 47,
+       "ga": 33,
+       "pts": 52,
+       "tid": 617,
+       "form": "LDLLD"
+      }
+     ]
+    },
+    {
+     "name": "Relegation Round",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Atromitos",
+       "p": 36,
+       "w": 12,
+       "d": 10,
+       "l": 14,
+       "gf": 49,
+       "ga": 42,
+       "pts": 46,
+       "tid": 12260,
+       "form": "LLWLW"
+      },
+      {
+       "pos": 2,
+       "team": "Kifisia",
+       "p": 36,
+       "w": 9,
+       "d": 14,
+       "l": 13,
+       "gf": 40,
+       "ga": 51,
+       "pts": 41,
+       "tid": 5050,
+       "form": "WWLDW"
+      },
+      {
+       "pos": 3,
+       "team": "Asteras Tripolis",
+       "p": 36,
+       "w": 8,
+       "d": 12,
+       "l": 16,
+       "gf": 36,
+       "ga": 49,
+       "pts": 36,
+       "tid": 955,
+       "form": "WDWDW"
+      },
+      {
+       "pos": 4,
+       "team": "Panetolikos",
+       "p": 36,
+       "w": 9,
+       "d": 9,
+       "l": 18,
+       "gf": 35,
+       "ga": 51,
+       "pts": 36,
+       "tid": 949,
+       "form": "LWDDL"
+      },
+      {
+       "pos": 5,
+       "team": "Larisa",
+       "p": 36,
+       "w": 5,
+       "d": 15,
+       "l": 16,
+       "gf": 34,
+       "ga": 56,
+       "pts": 30,
+       "tid": 953,
+       "form": "DDDWL"
+      },
+      {
+       "pos": 6,
+       "team": "Panserraikos",
+       "p": 36,
+       "w": 7,
+       "d": 8,
+       "l": 21,
+       "gf": 25,
+       "ga": 73,
+       "pts": 29,
+       "tid": 2099,
+       "form": "DLLDL"
+      }
+     ]
+    },
+    {
+     "name": "Qualifying Round",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Aris",
+       "p": 32,
+       "w": 11,
+       "d": 13,
+       "l": 8,
+       "gf": 34,
+       "ga": 32,
+       "pts": 31,
+       "ded": 15,
+       "tid": 1123,
+       "form": "WWWWW"
+      },
+      {
+       "pos": 2,
+       "team": "Levadiakos",
+       "p": 32,
+       "w": 15,
+       "d": 7,
+       "l": 10,
+       "gf": 63,
+       "ga": 47,
+       "pts": 31,
+       "ded": 21,
+       "tid": 957,
+       "form": "LWWWL"
+      },
+      {
+       "pos": 3,
+       "team": "OFI Crete",
+       "p": 32,
+       "w": 12,
+       "d": 3,
+       "l": 17,
+       "gf": 43,
+       "ga": 55,
+       "pts": 23,
+       "ded": 16,
+       "tid": 1124,
+       "form": "WLLLW"
+      },
+      {
+       "pos": 4,
+       "team": "Volos",
+       "p": 32,
+       "w": 9,
+       "d": 5,
+       "l": 18,
+       "gf": 33,
+       "ga": 55,
+       "pts": 17,
+       "ded": 15,
+       "tid": 2110,
+       "form": "LLLLL"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "super-league-2",
+   "tier": 2,
+   "name": "Super League 2",
+   "short": "SL2",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 4,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 5,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "groups": [
+    {
+     "name": "North",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Iraklis 1908",
+       "p": 18,
+       "w": 13,
+       "d": 5,
+       "l": 0,
+       "gf": 34,
+       "ga": 13,
+       "pts": 44,
+       "tid": 17991,
+       "form": "WWDWW"
+      },
+      {
+       "pos": 2,
+       "team": "Niki Volos",
+       "p": 18,
+       "w": 11,
+       "d": 6,
+       "l": 1,
+       "gf": 41,
+       "ga": 10,
+       "pts": 39,
+       "tid": 5056,
+       "form": "WDDWW"
+      },
+      {
+       "pos": 3,
+       "team": "Anagennisi Karditsas",
+       "p": 18,
+       "w": 12,
+       "d": 3,
+       "l": 3,
+       "gf": 25,
+       "ga": 10,
+       "pts": 39,
+       "tid": 2094,
+       "form": "WWWLL"
+      },
+      {
+       "pos": 4,
+       "team": "Asteras Tripolis II",
+       "p": 18,
+       "w": 9,
+       "d": 5,
+       "l": 4,
+       "gf": 25,
+       "ga": 17,
+       "pts": 32,
+       "tid": 25017,
+       "form": "LLDWD"
+      },
+      {
+       "pos": 5,
+       "team": "PAOK II",
+       "p": 18,
+       "w": 7,
+       "d": 3,
+       "l": 8,
+       "gf": 25,
+       "ga": 23,
+       "pts": 24,
+       "tid": 18018,
+       "form": "LLWWW"
+      },
+      {
+       "pos": 6,
+       "team": "Kavala",
+       "p": 18,
+       "w": 6,
+       "d": 5,
+       "l": 7,
+       "gf": 16,
+       "ga": 22,
+       "pts": 23,
+       "tid": 5049,
+       "form": "WDLWD"
+      },
+      {
+       "pos": 7,
+       "team": "Nestos Chrisoupolis",
+       "p": 18,
+       "w": 5,
+       "d": 3,
+       "l": 10,
+       "gf": 13,
+       "ga": 21,
+       "pts": 18,
+       "tid": 12367,
+       "form": "WDLLW"
+      },
+      {
+       "pos": 8,
+       "team": "Kampaniakos Chalastra",
+       "p": 18,
+       "w": 4,
+       "d": 3,
+       "l": 11,
+       "gf": 12,
+       "ga": 32,
+       "pts": 15,
+       "tid": 20683,
+       "form": "LWWLL"
+      },
+      {
+       "pos": 9,
+       "team": "PAS Giannina",
+       "p": 18,
+       "w": 2,
+       "d": 4,
+       "l": 12,
+       "gf": 10,
+       "ga": 24,
+       "pts": 10,
+       "tid": 950,
+       "form": "LLDLL"
+      },
+      {
+       "pos": 10,
+       "team": "Makedonikos Neapolis",
+       "p": 18,
+       "w": 1,
+       "d": 3,
+       "l": 14,
+       "gf": 8,
+       "ga": 37,
+       "pts": 6,
+       "tid": 12372,
+       "form": "LDLLL"
+      }
+     ]
+    },
+    {
+     "name": "South",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Kalamata",
+       "p": 18,
+       "w": 16,
+       "d": 2,
+       "l": 0,
+       "gf": 44,
+       "ga": 10,
+       "pts": 50,
+       "tid": 5046,
+       "form": "WWWWW"
+      },
+      {
+       "pos": 2,
+       "team": "Panionios",
+       "p": 18,
+       "w": 13,
+       "d": 4,
+       "l": 1,
+       "gf": 28,
+       "ga": 8,
+       "pts": 43,
+       "tid": 622,
+       "form": "WWLDW"
+      },
+      {
+       "pos": 3,
+       "team": "Marko",
+       "p": 18,
+       "w": 9,
+       "d": 4,
+       "l": 5,
+       "gf": 21,
+       "ga": 13,
+       "pts": 31,
+       "tid": 12403,
+       "form": "WWLLW"
+      },
+      {
+       "pos": 4,
+       "team": "Olympiacos B",
+       "p": 18,
+       "w": 8,
+       "d": 3,
+       "l": 7,
+       "gf": 23,
+       "ga": 26,
+       "pts": 27,
+       "tid": 18017,
+       "form": "WWWLW"
+      },
+      {
+       "pos": 5,
+       "team": "Kallithea",
+       "p": 18,
+       "w": 7,
+       "d": 5,
+       "l": 6,
+       "gf": 21,
+       "ga": 17,
+       "pts": 26,
+       "tid": 2095,
+       "form": "DLDWD"
+      },
+      {
+       "pos": 6,
+       "team": "Ellas Syros",
+       "p": 18,
+       "w": 6,
+       "d": 6,
+       "l": 6,
+       "gf": 25,
+       "ga": 18,
+       "pts": 24,
+       "tid": 22244,
+       "form": "LDWDL"
+      },
+      {
+       "pos": 7,
+       "team": "Egaleo",
+       "p": 18,
+       "w": 4,
+       "d": 5,
+       "l": 9,
+       "gf": 14,
+       "ga": 22,
+       "pts": 17,
+       "tid": 7511,
+       "form": "LLLWL"
+      },
+      {
+       "pos": 8,
+       "team": "Ilioupoli",
+       "p": 18,
+       "w": 4,
+       "d": 3,
+       "l": 11,
+       "gf": 14,
+       "ga": 29,
+       "pts": 15,
+       "tid": 15235,
+       "form": "LDWWD"
+      },
+      {
+       "pos": 9,
+       "team": "Kissamikos",
+       "p": 18,
+       "w": 3,
+       "d": 3,
+       "l": 12,
+       "gf": 11,
+       "ga": 28,
+       "pts": 12,
+       "tid": 2096,
+       "form": "WLLLL"
+      },
+      {
+       "pos": 10,
+       "team": "Panargiakos",
+       "p": 18,
+       "w": 0,
+       "d": 5,
+       "l": 13,
+       "gf": 8,
+       "ga": 38,
+       "pts": 5,
+       "tid": 6315,
+       "form": "LLDLL"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

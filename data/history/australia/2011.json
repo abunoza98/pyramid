@@ -1,0 +1,158 @@
+{
+ "country": "australia",
+ "name": "Australia",
+ "adjective": "Australian",
+ "season": "2011–12",
+ "year": 2011,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "a-league",
+   "tier": 1,
+   "name": "A-League",
+   "short": "AL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 6,
+     "kind": "mid",
+     "label": "Play-offs"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Central Coast Mariners",
+     "p": 27,
+     "w": 15,
+     "d": 6,
+     "l": 6,
+     "gf": 40,
+     "ga": 24,
+     "pts": 51,
+     "tid": 941,
+     "form": "LDLWW"
+    },
+    {
+     "pos": 2,
+     "team": "Brisbane Roar",
+     "p": 27,
+     "w": 14,
+     "d": 7,
+     "l": 6,
+     "gf": 50,
+     "ga": 28,
+     "pts": 49,
+     "tid": 947,
+     "form": "WDDWW"
+    },
+    {
+     "pos": 3,
+     "team": "Perth Glory",
+     "p": 27,
+     "w": 13,
+     "d": 4,
+     "l": 10,
+     "gf": 40,
+     "ga": 35,
+     "pts": 43,
+     "tid": 940,
+     "form": "LWWLW"
+    },
+    {
+     "pos": 4,
+     "team": "Wellington Phoenix",
+     "p": 27,
+     "w": 12,
+     "d": 4,
+     "l": 11,
+     "gf": 34,
+     "ga": 32,
+     "pts": 40,
+     "tid": 942,
+     "form": "WWDLL"
+    },
+    {
+     "pos": 5,
+     "team": "Sydney FC",
+     "p": 27,
+     "w": 10,
+     "d": 8,
+     "l": 9,
+     "gf": 37,
+     "ga": 42,
+     "pts": 38,
+     "tid": 943,
+     "form": "LDWDW"
+    },
+    {
+     "pos": 6,
+     "team": "Melbourne City",
+     "p": 27,
+     "w": 9,
+     "d": 10,
+     "l": 8,
+     "gf": 35,
+     "ga": 34,
+     "pts": 37,
+     "tid": 945,
+     "form": "WDDDD"
+    },
+    {
+     "pos": 7,
+     "team": "Newcastle Jets",
+     "p": 27,
+     "w": 10,
+     "d": 5,
+     "l": 12,
+     "gf": 38,
+     "ga": 41,
+     "pts": 35,
+     "tid": 946,
+     "form": "WWDLL"
+    },
+    {
+     "pos": 8,
+     "team": "Melbourne Victory",
+     "p": 27,
+     "w": 6,
+     "d": 11,
+     "l": 10,
+     "gf": 35,
+     "ga": 43,
+     "pts": 29,
+     "tid": 944,
+     "form": "DLLWL"
+    },
+    {
+     "pos": 9,
+     "team": "Adelaide United",
+     "p": 27,
+     "w": 5,
+     "d": 10,
+     "l": 12,
+     "gf": 26,
+     "ga": 44,
+     "pts": 25,
+     "tid": 948,
+     "form": "LLDLD"
+    },
+    {
+     "pos": 10,
+     "team": "Gold Coast United",
+     "p": 27,
+     "w": 4,
+     "d": 9,
+     "l": 14,
+     "gf": 30,
+     "ga": 42,
+     "pts": 21,
+     "tid": 10216,
+     "form": "DLDWL"
+    }
+   ]
+  }
+ ]
+}

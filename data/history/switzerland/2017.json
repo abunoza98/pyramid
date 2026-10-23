@@ -1,0 +1,327 @@
+{
+ "country": "switzerland",
+ "name": "Switzerland",
+ "adjective": "Swiss",
+ "season": "2017–18",
+ "year": 2017,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "super-league",
+   "tier": 1,
+   "name": "Super League",
+   "short": "SSL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 3,
+     "to": 4,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 10,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "BSC Young Boys",
+     "p": 36,
+     "w": 26,
+     "d": 6,
+     "l": 4,
+     "gf": 84,
+     "ga": 41,
+     "pts": 84,
+     "tid": 565,
+     "form": "WWLWW"
+    },
+    {
+     "pos": 2,
+     "team": "FC Basel",
+     "p": 36,
+     "w": 20,
+     "d": 9,
+     "l": 7,
+     "gf": 72,
+     "ga": 36,
+     "pts": 69,
+     "tid": 551,
+     "form": "WWWLD"
+    },
+    {
+     "pos": 3,
+     "team": "FC Luzern",
+     "p": 36,
+     "w": 15,
+     "d": 9,
+     "l": 12,
+     "gf": 51,
+     "ga": 51,
+     "pts": 54,
+     "tid": 644,
+     "form": "LWWDD"
+    },
+    {
+     "pos": 4,
+     "team": "FC Zürich",
+     "p": 36,
+     "w": 12,
+     "d": 13,
+     "l": 11,
+     "gf": 50,
+     "ga": 44,
+     "pts": 49,
+     "tid": 783,
+     "form": "DDWWD"
+    },
+    {
+     "pos": 5,
+     "team": "FC St. Gallen",
+     "p": 36,
+     "w": 14,
+     "d": 3,
+     "l": 19,
+     "gf": 52,
+     "ga": 72,
+     "pts": 45,
+     "tid": 1011,
+     "form": "LLLLL"
+    },
+    {
+     "pos": 6,
+     "team": "FC Sion",
+     "p": 36,
+     "w": 11,
+     "d": 9,
+     "l": 16,
+     "gf": 53,
+     "ga": 56,
+     "pts": 42,
+     "tid": 630,
+     "form": "DLWWW"
+    },
+    {
+     "pos": 7,
+     "team": "Thun",
+     "p": 36,
+     "w": 12,
+     "d": 6,
+     "l": 18,
+     "gf": 52,
+     "ga": 68,
+     "pts": 42,
+     "tid": 1012,
+     "form": "LWLWL"
+    },
+    {
+     "pos": 8,
+     "team": "Lugano",
+     "p": 36,
+     "w": 12,
+     "d": 6,
+     "l": 18,
+     "gf": 38,
+     "ga": 55,
+     "pts": 42,
+     "tid": 606,
+     "form": "WLWLD"
+    },
+    {
+     "pos": 9,
+     "team": "Grasshopper Club",
+     "p": 36,
+     "w": 10,
+     "d": 9,
+     "l": 17,
+     "gf": 43,
+     "ga": 52,
+     "pts": 39,
+     "tid": 1013,
+     "form": "WLLDL"
+    },
+    {
+     "pos": 10,
+     "team": "Lausanne-Sport",
+     "p": 36,
+     "w": 9,
+     "d": 8,
+     "l": 19,
+     "gf": 46,
+     "ga": 66,
+     "pts": 35,
+     "tid": 1014,
+     "form": "LDLLW"
+    }
+   ]
+  },
+  {
+   "id": "challenge-league",
+   "tier": 2,
+   "name": "Challenge League",
+   "short": "CHL",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Promotion"
+    },
+    {
+     "from": 10,
+     "to": 10,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [
+    "FC Chiasso: 3 points deducted."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Neuchâtel Xamax",
+     "p": 36,
+     "w": 26,
+     "d": 7,
+     "l": 3,
+     "gf": 82,
+     "ga": 39,
+     "pts": 85,
+     "tid": 1015,
+     "form": "DLWWW"
+    },
+    {
+     "pos": 2,
+     "team": "FC Schaffhausen",
+     "p": 36,
+     "w": 21,
+     "d": 1,
+     "l": 14,
+     "gf": 70,
+     "ga": 51,
+     "pts": 64,
+     "tid": 2182,
+     "form": "LWDWW"
+    },
+    {
+     "pos": 3,
+     "team": "Servette FC",
+     "p": 36,
+     "w": 17,
+     "d": 11,
+     "l": 8,
+     "gf": 56,
+     "ga": 38,
+     "pts": 62,
+     "tid": 2184,
+     "form": "LWWWL"
+    },
+    {
+     "pos": 4,
+     "team": "FC Vaduz",
+     "p": 36,
+     "w": 16,
+     "d": 11,
+     "l": 9,
+     "gf": 66,
+     "ga": 50,
+     "pts": 59,
+     "tid": 660,
+     "form": "WDDWL"
+    },
+    {
+     "pos": 5,
+     "team": "Rapperswil-Jona",
+     "p": 36,
+     "w": 16,
+     "d": 8,
+     "l": 12,
+     "gf": 53,
+     "ga": 45,
+     "pts": 56,
+     "tid": 2185,
+     "form": "LLWLW"
+    },
+    {
+     "pos": 6,
+     "team": "FC Aarau",
+     "p": 36,
+     "w": 12,
+     "d": 8,
+     "l": 16,
+     "gf": 53,
+     "ga": 62,
+     "pts": 44,
+     "tid": 2177,
+     "form": "WWDLW"
+    },
+    {
+     "pos": 7,
+     "team": "FC Wil",
+     "p": 36,
+     "w": 9,
+     "d": 12,
+     "l": 15,
+     "gf": 40,
+     "ga": 50,
+     "pts": 39,
+     "tid": 2179,
+     "form": "WDDLL"
+    },
+    {
+     "pos": 8,
+     "team": "FC Chiasso",
+     "p": 36,
+     "w": 11,
+     "d": 6,
+     "l": 19,
+     "gf": 42,
+     "ga": 60,
+     "pts": 36,
+     "tid": 2181,
+     "form": "WLLLW",
+     "ded": 3
+    },
+    {
+     "pos": 9,
+     "team": "FC Winterthur",
+     "p": 36,
+     "w": 7,
+     "d": 11,
+     "l": 18,
+     "gf": 45,
+     "ga": 60,
+     "pts": 32,
+     "tid": 2180,
+     "form": "DWLWL"
+    },
+    {
+     "pos": 10,
+     "team": "FC Wohlen",
+     "p": 36,
+     "w": 3,
+     "d": 9,
+     "l": 24,
+     "gf": 41,
+     "ga": 93,
+     "pts": 18,
+     "tid": 2183,
+     "form": "LLLLL"
+    }
+   ]
+  }
+ ]
+}

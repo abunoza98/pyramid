@@ -1,0 +1,261 @@
+{
+ "country": "greece",
+ "name": "Greece",
+ "adjective": "Greek",
+ "season": "2018–19",
+ "year": 2018,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "greek-super-league",
+   "tier": 1,
+   "name": "Super League",
+   "short": "SL1",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 2,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 3,
+     "to": 5,
+     "kind": "mid",
+     "label": "Europa League"
+    },
+    {
+     "from": 13,
+     "to": 13,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 14,
+     "to": 16,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "notes": [
+    "PAOK: 2 points deducted.",
+    "AEK Athens: 3 points deducted.",
+    "Panathinaikos: 11 points deducted."
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "PAOK",
+     "p": 30,
+     "w": 26,
+     "d": 4,
+     "l": 0,
+     "gf": 66,
+     "ga": 14,
+     "pts": 80,
+     "ded": 2,
+     "tid": 619,
+     "form": "WWDWW"
+    },
+    {
+     "pos": 2,
+     "team": "Olympiacos",
+     "p": 30,
+     "w": 24,
+     "d": 3,
+     "l": 3,
+     "gf": 71,
+     "ga": 17,
+     "pts": 75,
+     "tid": 553,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 3,
+     "team": "AEK Athens",
+     "p": 30,
+     "w": 18,
+     "d": 6,
+     "l": 6,
+     "gf": 50,
+     "ga": 19,
+     "pts": 57,
+     "ded": 3,
+     "tid": 575,
+     "form": "WWDLW"
+    },
+    {
+     "pos": 4,
+     "team": "Atromitos Athinon",
+     "p": 30,
+     "w": 15,
+     "d": 7,
+     "l": 8,
+     "gf": 41,
+     "ga": 28,
+     "pts": 52,
+     "tid": 952,
+     "form": "LWWWL"
+    },
+    {
+     "pos": 5,
+     "team": "Aris",
+     "p": 30,
+     "w": 15,
+     "d": 4,
+     "l": 11,
+     "gf": 46,
+     "ga": 33,
+     "pts": 49,
+     "tid": 1123,
+     "form": "WLLWW"
+    },
+    {
+     "pos": 6,
+     "team": "Panionios",
+     "p": 30,
+     "w": 11,
+     "d": 5,
+     "l": 14,
+     "gf": 27,
+     "ga": 45,
+     "pts": 38,
+     "tid": 622,
+     "form": "LWWWL"
+    },
+    {
+     "pos": 7,
+     "team": "Lamia",
+     "p": 30,
+     "w": 9,
+     "d": 10,
+     "l": 11,
+     "gf": 28,
+     "ga": 37,
+     "pts": 37,
+     "tid": 956,
+     "form": "WLDLW"
+    },
+    {
+     "pos": 8,
+     "team": "Panathinaikos",
+     "p": 30,
+     "w": 13,
+     "d": 8,
+     "l": 9,
+     "gf": 38,
+     "ga": 30,
+     "pts": 36,
+     "ded": 11,
+     "tid": 617,
+     "form": "WWLLW"
+    },
+    {
+     "pos": 9,
+     "team": "Panetolikos",
+     "p": 30,
+     "w": 10,
+     "d": 6,
+     "l": 14,
+     "gf": 34,
+     "ga": 48,
+     "pts": 36,
+     "tid": 949,
+     "form": "LLWLL"
+    },
+    {
+     "pos": 10,
+     "team": "Larisa",
+     "p": 30,
+     "w": 8,
+     "d": 10,
+     "l": 12,
+     "gf": 26,
+     "ga": 34,
+     "pts": 34,
+     "tid": 953,
+     "form": "WLDWL"
+    },
+    {
+     "pos": 11,
+     "team": "Asteras Tripolis",
+     "p": 30,
+     "w": 8,
+     "d": 9,
+     "l": 13,
+     "gf": 25,
+     "ga": 30,
+     "pts": 33,
+     "tid": 955,
+     "form": "LDDDW"
+    },
+    {
+     "pos": 12,
+     "team": "Xanthi FC",
+     "p": 30,
+     "w": 7,
+     "d": 11,
+     "l": 12,
+     "gf": 22,
+     "ga": 34,
+     "pts": 32,
+     "tid": 959,
+     "form": "LLLWL"
+    },
+    {
+     "pos": 13,
+     "team": "OFI Crete",
+     "p": 30,
+     "w": 7,
+     "d": 11,
+     "l": 12,
+     "gf": 30,
+     "ga": 42,
+     "pts": 32,
+     "tid": 1124,
+     "form": "LWWDW"
+    },
+    {
+     "pos": 14,
+     "team": "PAS Giannina",
+     "p": 30,
+     "w": 7,
+     "d": 6,
+     "l": 17,
+     "gf": 19,
+     "ga": 38,
+     "pts": 27,
+     "tid": 950,
+     "form": "WLDLL"
+    },
+    {
+     "pos": 15,
+     "team": "Levadiakos",
+     "p": 30,
+     "w": 5,
+     "d": 6,
+     "l": 19,
+     "gf": 15,
+     "ga": 45,
+     "pts": 21,
+     "tid": 957,
+     "form": "LDLLL"
+    },
+    {
+     "pos": 16,
+     "team": "Apollon Smirnis",
+     "p": 30,
+     "w": 2,
+     "d": 4,
+     "l": 24,
+     "gf": 11,
+     "ga": 55,
+     "pts": 10,
+     "tid": 951,
+     "form": "LLLLL"
+    }
+   ]
+  }
+ ]
+}

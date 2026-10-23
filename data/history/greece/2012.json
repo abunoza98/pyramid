@@ -1,0 +1,309 @@
+{
+ "country": "greece",
+ "name": "Greece",
+ "adjective": "Greek",
+ "season": "2012–13",
+ "year": 2012,
+ "mode": "final",
+ "leagues": [
+  {
+   "id": "greek-super-league",
+   "tier": 1,
+   "name": "Super League",
+   "short": "SL1",
+   "final": true,
+   "zones": [
+    {
+     "from": 1,
+     "to": 1,
+     "kind": "top",
+     "label": "Champions League qualifiers"
+    },
+    {
+     "from": 2,
+     "to": 4,
+     "kind": "mid",
+     "label": "Europa League"
+    }
+   ],
+   "notes": [
+    "Panathinaikos: 2 points deducted.",
+    "AEK Athens: 3 points deducted."
+   ],
+   "groups": [
+    {
+     "name": "CL/EL Play-offs",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "PAOK",
+       "p": 6,
+       "w": 3,
+       "d": 0,
+       "l": 3,
+       "gf": 7,
+       "ga": 7,
+       "pts": 13,
+       "tid": 619,
+       "form": "LWWLW"
+      },
+      {
+       "pos": 2,
+       "team": "Atromitos",
+       "p": 6,
+       "w": 3,
+       "d": 2,
+       "l": 1,
+       "gf": 8,
+       "ga": 5,
+       "pts": 11,
+       "tid": 12260,
+       "form": "LDWWD"
+      },
+      {
+       "pos": 3,
+       "team": "Asteras Tripolis",
+       "p": 6,
+       "w": 2,
+       "d": 1,
+       "l": 3,
+       "gf": 6,
+       "ga": 7,
+       "pts": 9,
+       "tid": 955,
+       "form": "WLLWD"
+      },
+      {
+       "pos": 4,
+       "team": "PAS Giannina",
+       "p": 6,
+       "w": 2,
+       "d": 1,
+       "l": 3,
+       "gf": 6,
+       "ga": 8,
+       "pts": 7,
+       "tid": 950,
+       "form": "WDLLL"
+      }
+     ]
+    },
+    {
+     "name": "Regular Season",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Olympiacos",
+       "p": 30,
+       "w": 24,
+       "d": 5,
+       "l": 1,
+       "gf": 64,
+       "ga": 16,
+       "pts": 77,
+       "tid": 553,
+       "form": "WDWDW"
+      },
+      {
+       "pos": 2,
+       "team": "PAOK",
+       "p": 30,
+       "w": 18,
+       "d": 8,
+       "l": 4,
+       "gf": 46,
+       "ga": 19,
+       "pts": 62,
+       "tid": 619,
+       "form": "WDWWW"
+      },
+      {
+       "pos": 3,
+       "team": "Asteras Tripolis",
+       "p": 30,
+       "w": 17,
+       "d": 5,
+       "l": 8,
+       "gf": 41,
+       "ga": 25,
+       "pts": 56,
+       "tid": 955,
+       "form": "WLLLW"
+      },
+      {
+       "pos": 4,
+       "team": "Atromitos",
+       "p": 30,
+       "w": 11,
+       "d": 13,
+       "l": 6,
+       "gf": 26,
+       "ga": 22,
+       "pts": 46,
+       "tid": 12260,
+       "form": "LDLDW"
+      },
+      {
+       "pos": 5,
+       "team": "PAS Giannina",
+       "p": 30,
+       "w": 12,
+       "d": 8,
+       "l": 10,
+       "gf": 28,
+       "ga": 24,
+       "pts": 44,
+       "tid": 950,
+       "form": "WLWWL"
+      },
+      {
+       "pos": 6,
+       "team": "Panathinaikos",
+       "p": 30,
+       "w": 10,
+       "d": 12,
+       "l": 8,
+       "gf": 32,
+       "ga": 30,
+       "pts": 40,
+       "ded": 2,
+       "tid": 617,
+       "form": "LLDDW"
+      },
+      {
+       "pos": 7,
+       "team": "Xanthi FC",
+       "p": 30,
+       "w": 10,
+       "d": 10,
+       "l": 10,
+       "gf": 28,
+       "ga": 26,
+       "pts": 40,
+       "tid": 959,
+       "form": "WDWDD"
+      },
+      {
+       "pos": 8,
+       "team": "Panthrakikos",
+       "p": 30,
+       "w": 10,
+       "d": 6,
+       "l": 14,
+       "gf": 30,
+       "ga": 33,
+       "pts": 36,
+       "tid": 2090,
+       "form": "LDWWW"
+      },
+      {
+       "pos": 9,
+       "team": "Panionios",
+       "p": 30,
+       "w": 11,
+       "d": 3,
+       "l": 16,
+       "gf": 35,
+       "ga": 42,
+       "pts": 36,
+       "tid": 622,
+       "form": "LWDDL"
+      },
+      {
+       "pos": 10,
+       "team": "Platanias",
+       "p": 30,
+       "w": 10,
+       "d": 6,
+       "l": 14,
+       "gf": 29,
+       "ga": 42,
+       "pts": 36,
+       "tid": 958,
+       "form": "WWLLW"
+      },
+      {
+       "pos": 11,
+       "team": "Levadiakos",
+       "p": 30,
+       "w": 9,
+       "d": 7,
+       "l": 14,
+       "gf": 21,
+       "ga": 35,
+       "pts": 34,
+       "tid": 957,
+       "form": "DDWLL"
+      },
+      {
+       "pos": 12,
+       "team": "Veria",
+       "p": 30,
+       "w": 8,
+       "d": 9,
+       "l": 13,
+       "gf": 30,
+       "ga": 35,
+       "pts": 33,
+       "tid": 961,
+       "form": "LWLWL"
+      },
+      {
+       "pos": 13,
+       "team": "Aris",
+       "p": 30,
+       "w": 7,
+       "d": 12,
+       "l": 11,
+       "gf": 32,
+       "ga": 40,
+       "pts": 33,
+       "tid": 1123,
+       "form": "LDWWD"
+      },
+      {
+       "pos": 14,
+       "team": "OFI Crete",
+       "p": 30,
+       "w": 8,
+       "d": 8,
+       "l": 14,
+       "gf": 33,
+       "ga": 46,
+       "pts": 32,
+       "tid": 1124,
+       "form": "DWLDL"
+      },
+      {
+       "pos": 15,
+       "team": "AEK Athens",
+       "p": 30,
+       "w": 8,
+       "d": 6,
+       "l": 16,
+       "gf": 21,
+       "ga": 36,
+       "pts": 27,
+       "ded": 3,
+       "tid": 575,
+       "form": "WDLLL"
+      },
+      {
+       "pos": 16,
+       "team": "AOK Kerkyra",
+       "p": 30,
+       "w": 4,
+       "d": 8,
+       "l": 18,
+       "gf": 16,
+       "ga": 41,
+       "pts": 20,
+       "tid": 2111,
+       "form": "LLLLL"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
