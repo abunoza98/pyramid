@@ -250,7 +250,9 @@
     var wheel = document.querySelector("#main-content .xp-tabs"), wheelX = wheel ? wheel.scrollLeft : 0;
     $("main-content").innerHTML = html;
     if (wheel && document.querySelector("#main-content .xp-tabs")) {
-      document.querySelector("#main-content .xp-tabs").scrollLeft = wheelX;
+      var row2 = document.querySelector("#main-content .xp-tabs");
+      loopWheel(row2);
+      row2.scrollLeft = wheelX;
       requestAnimationFrame(wheels);
     }
     if (heroFind && $("hero-find-box")) $("hero-find-box").replaceWith(heroFind);
@@ -327,10 +329,43 @@
   function wheelArrows(row) {
     var wheel = row.parentNode, max = row.scrollWidth - row.clientWidth;
     var prev = wheel.querySelector(".xp-arrow.prev"), next = wheel.querySelector(".xp-arrow.next");
-    if (prev) prev.disabled = row.scrollLeft <= 2;
-    if (next) next.disabled = row.scrollLeft >= max - 2;
+    var loop = !!row.getAttribute("data-loop");   // a looping row never runs out in either direction
+    if (prev) prev.disabled = !loop && row.scrollLeft <= 2;
+    if (next) next.disabled = !loop && row.scrollLeft >= max - 2;
   }
-  function wheels() { document.querySelectorAll(".xp-tabs").forEach(wheelArrows); }
+  /* Endless scrolling: when the row is wider than the screen, a copy of the countries goes either side of the real
+     ones, and whenever the view drifts into a copy it's moved back by exactly one set, which looks the same. The
+     copies are hidden from screen readers and the keyboard; clicking one picks that country as usual. */
+  function loopWheel(row) {
+    if (row.getAttribute("data-loop") || row.scrollWidth <= row.clientWidth + 2) return;
+    var items = Array.prototype.slice.call(row.children);
+    var copy = function () {
+      var f = document.createDocumentFragment();
+      items.forEach(function (el) {
+        var c = el.cloneNode(true);
+        c.setAttribute("data-clone", "1"); c.setAttribute("aria-hidden", "true");
+        if (c.tagName === "BUTTON") { c.setAttribute("tabindex", "-1"); c.removeAttribute("role"); c.removeAttribute("aria-selected"); }
+        f.appendChild(c);
+      });
+      return f;
+    };
+    row.insertBefore(copy(), row.firstChild);
+    row.appendChild(copy());
+    row.setAttribute("data-loop", "1");
+    row.scrollLeft += setWidth(row);
+  }
+  function setWidth(row) {
+    var firstCopy = row.firstElementChild, firstReal = row.querySelector(":scope > :not([data-clone])");
+    return firstReal && firstCopy ? firstReal.offsetLeft - firstCopy.offsetLeft : 0;
+  }
+  function recentre(row) {
+    var w = setWidth(row);
+    if (!w) return;
+    if (row.scrollLeft < w * 0.5) row.scrollLeft += w;
+    else if (row.scrollLeft > w * 1.5) row.scrollLeft -= w;
+  }
+  var loopTimers = [];
+  function wheels() { document.querySelectorAll(".xp-tabs").forEach(function (row) { loopWheel(row); wheelArrows(row); }); }
   document.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest("[data-xp-scroll]");
     if (!a) return;
@@ -339,13 +374,23 @@
   });
   // Scroll events don't bubble, so listen in the capture phase.
   document.addEventListener("scroll", function (e) {
-    if (e.target && e.target.classList && e.target.classList.contains("xp-tabs")) wheelArrows(e.target);
+    var row = e.target;
+    if (!(row && row.classList && row.classList.contains("xp-tabs"))) return;
+    wheelArrows(row);
+    if (!row.getAttribute("data-loop")) return;
+    // Move back into the real set once scrolling settles (moving it mid-swipe or mid-animation would jolt), or straight
+    // away at the very ends, where the browser would otherwise stop.
+    var max = row.scrollWidth - row.clientWidth;
+    if (row.scrollLeft <= 1 || row.scrollLeft >= max - 1) recentre(row);
+    clearTimeout(loopTimers[0]);
+    loopTimers[0] = setTimeout(function () { recentre(row); }, 140);
   }, true);
   window.addEventListener("resize", wheels);
   // On first load, bring the chosen country into view.
   function showChosen() {
     document.querySelectorAll(".xp-tabs").forEach(function (row) {
-      var on = row.querySelector(".xp-tab.on");
+      loopWheel(row);
+      var on = row.querySelector(".xp-tab.on:not([data-clone])");
       if (!on) return;
       var l = on.offsetLeft - row.offsetLeft, r = l + on.offsetWidth;
       if (l < row.scrollLeft || r > row.scrollLeft + row.clientWidth) row.scrollLeft = l - 24;
