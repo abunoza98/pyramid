@@ -595,8 +595,10 @@
   }
   var GONE = { PST: "Postponed", CANC: "Cancelled", ABD: "Abandoned", AWD: "Awarded", WO: "Walkover", SUSP: "Suspended", INT: "Interrupted" };
 
-  function gameHTML(f, tz, now, myClub) {
+  // tags: show each club's league next to its name, and mark upsets (cup fixtures).
+  function gameHTML(f, tz, now, myClub, tags) {
     var on = isLive(f), done = isDone(f) || f.st === "AWD" || f.st === "WO";
+    var tag = function (t) { return tags && t.t ? ' <i class="tag tier-' + (t.tier || 0) + '" title="Plays in ' + esc(t.t) + '">' + esc(t.t) + "</i>" : ""; };
     var hasScore = f.hg != null && f.ag != null;
     var time = GONE[f.st] && !on ? "" : f.st === "TBD" ? "TBC" : on || isDone(f) ? clock({ st: f.st, p1: f.p1, p2: f.p2 }, now) : fmt(f.ts, tz, { hour: "2-digit", minute: "2-digit", hour12: false });
     var score = hasScore && (on || done || f.st === "ABD") ? f.hg + "–" + f.ag : "v";
@@ -608,12 +610,18 @@
     if (f.pen) notes.push("Penalties " + f.pen[0] + "–" + f.pen[1]);
     if (f.v) notes.push(esc(f.v));
     var win = done && hasScore ? (f.hg > f.ag ? "h" : f.hg < f.ag ? "a" : "") : "";
+    if (tags && done) {
+      // Who went through: the score, then penalties, then the API's winner flag.
+      var thru = win || (f.pen ? (f.pen[0] > f.pen[1] ? "h" : "a") : f.w || "");
+      var w = thru === "h" ? f.h : thru === "a" ? f.a : null, l = thru === "h" ? f.a : thru === "a" ? f.h : null;
+      if (w && w.tier && l.tier && w.tier > l.tier) notes.unshift('<b class="upset">Upset</b>');
+    }
     var mine = myClub && (f.h.n === myClub || f.a.n === myClub);
     return '<li class="g' + (on ? " on" : "") + (GONE[f.st] && !on ? " off" : "") + (mine ? " is-mine" : "") + '">' +
       '<span class="g-time">' + esc(time) + "</span>" +
-      '<span class="g-h' + (win === "h" ? " w" : "") + '">' + esc(f.h.n) + "</span>" +
+      '<span class="g-h' + (win === "h" ? " w" : "") + '">' + esc(f.h.n) + tag(f.h) + "</span>" +
       '<span class="g-s">' + score + "</span>" +
-      '<span class="g-a' + (win === "a" ? " w" : "") + '">' + esc(f.a.n) + "</span>" +
+      '<span class="g-a' + (win === "a" ? " w" : "") + '">' + esc(f.a.n) + tag(f.a) + "</span>" +
       (notes.length ? '<span class="g-note">' + notes.join(" · ") + "</span>" : "") + "</li>";
   }
 
@@ -627,25 +635,12 @@
     return ma === mb ? fmt(a, tz, { day: "numeric" }) + "–" + db : da + " – " + db;
   }
 
-  function fixturesMain(fx, opts) {
-    opts = opts || {};
-    var mode = opts.tz === "local" ? "local" : "venue", now = opts.now || Date.now();
-    var tz = zoneOfMode(mode, fx.country);
-    var gi = Math.min(opts.group || 0, fx.groups.length - 1);
-    var g = fx.groups[gi];
-    var ri = opts.round == null ? currentRound(g.rounds, now) : Math.max(0, Math.min(opts.round, g.rounds.length - 1));
-    var r = g.rounds[ri];
-    // Today's live scores, laid over the fixture list.
-    var live = {};
-    (opts.live && opts.live.fixtures || []).forEach(function (f) { live[f.id] = f; });
-    var games = r.fixtures.map(function (f) {
-      var l = live[f.id];
-      if (!l) return f;
-      var c = JSON.parse(JSON.stringify(f));
-      c.st = l.st; c.p1 = l.p1 || c.p1; c.p2 = l.p2 || c.p2;
-      if (l.h.g != null) { c.hg = l.h.g; c.ag = l.a.g; }
-      return c;
-    });
+  // One round's games: listed by day, or as ties with aggregate scores for qualifying rounds and two-legged cup rounds.
+  function roundBodyHTML(fx, games, tz, now, myClub) {
+    if (!games.length) return '<p class="ko-empty">No games in this round yet.</p>';
+    var tags = !!fx.cup;
+    var ties = games[0].stage === "q" || (fx.cup && tiesOf({ fixtures: games }).some(function (t) { return t.legs.length > 1; }));
+    if (ties) return '<div class="q-ties fx-ties">' + tiesOf({ fixtures: games }).map(function (t) { return tieHTML(t, tz, now); }).join("") + "</div>";
     // Group by day in the chosen time zone; postponed and cancelled games go last.
     var days = [], byDay = {}, off = [];
     games.forEach(function (f) {
@@ -654,11 +649,50 @@
       if (!byDay[d]) { byDay[d] = []; days.push(d); }
       byDay[d].push(f);
     });
-    var list = days.map(function (d) {
+    return days.map(function (d) {
       return '<h3 class="fx-date">' + esc(d) + '</h3><ul class="fx-list">' +
-        byDay[d].map(function (f) { return gameHTML(f, tz, now, opts.myClub); }).join("") + "</ul>";
+        byDay[d].map(function (f) { return gameHTML(f, tz, now, myClub, tags); }).join("") + "</ul>";
     }).join("") + (off.length ? '<h3 class="fx-date">Postponed and cancelled</h3><ul class="fx-list">' +
-        off.map(function (f) { return gameHTML(f, tz, now, opts.myClub); }).join("") + "</ul>" : "");
+        off.map(function (f) { return gameHTML(f, tz, now, myClub, tags); }).join("") + "</ul>" : "");
+  }
+
+  // The "Fixtures and results" tab on competition and cup pages: every round is on the page and the round
+  // picker just shows one (so it works on past-season pages too, with no data to fetch).
+  function fxTabHTML(fx, opts) {
+    opts = opts || {};
+    var now = opts.now || Date.now(), tz = opts.tzZone;
+    var rounds = fx && fx.groups && fx.groups[0] ? fx.groups[0].rounds.filter(function (r) { return r.fixtures.length; }) : [];
+    if (!rounds.length) return '<p class="ko-empty">No fixtures yet. They appear as soon as the first draw is made.</p>';
+    var lm = liveMap(opts.live);
+    var ri = opts.round != null && opts.round >= 0 && opts.round < rounds.length ? opts.round : currentRound(rounds, now);
+    var options = rounds.map(function (x, i) {
+      var range = roundRange(x, tz);
+      return '<option value="' + i + '"' + (i === ri ? " selected" : "") + ">" + esc(x.label) + (range ? " · " + esc(range) : "") + "</option>";
+    }).join("");
+    return '<nav class="rnav" aria-label="Rounds">' +
+      '<button type="button" class="rnav-step" data-rstep="-1"' + (ri === 0 ? " disabled" : "") + ' aria-label="Previous round">‹</button>' +
+      '<label class="sr-only" for="fx-round-pick">Round</label><select id="fx-round-pick" class="round-pick" data-rpick>' + options + "</select>" +
+      '<button type="button" class="rnav-step" data-rstep="1"' + (ri === rounds.length - 1 ? " disabled" : "") + ' aria-label="Next round">›</button></nav>' +
+      rounds.map(function (r, i) {
+        var games = r.fixtures.map(function (f) { return mergeLive(f, lm); });
+        var liveN = games.filter(isLive).length;
+        return '<div class="fx-round" data-round="' + i + '"' + (i === ri ? "" : " hidden") + ">" +
+          (liveN ? '<p class="stamp live now"><span class="dot"></span><span>' + liveN + " game" + (liveN === 1 ? "" : "s") + " live</span></p>" : "") +
+          roundBodyHTML(fx, games, tz, now, opts.myClub) + "</div>";
+      }).join("");
+  }
+
+  function fixturesMain(fx, opts) {
+    opts = opts || {};
+    var mode = opts.tz === "local" ? "local" : "venue", now = opts.now || Date.now();
+    var tz = zoneOfMode(mode, fx.country);
+    var gi = Math.min(opts.group || 0, fx.groups.length - 1);
+    var g = fx.groups[gi];
+    var ri = opts.round == null ? currentRound(g.rounds, now) : Math.max(0, Math.min(opts.round, g.rounds.length - 1));
+    var r = g.rounds[ri];
+    var lm = liveMap(opts.live);
+    var games = r.fixtures.map(function (f) { return mergeLive(f, lm); });
+    var list = roundBodyHTML(fx, games, tz, now, opts.myClub);
     var liveN = games.filter(isLive).length;
 
     var groups = fx.groups.length > 1 ? '<div class="tf-tabs fx-groups" role="tablist" aria-label="Groups">' + fx.groups.map(function (x, i) {
@@ -825,6 +859,10 @@
     var ko = fx ? stageRounds(fx, "ko", opts.live) : [];
     var q = fx ? stageRounds(fx, "q", opts.live) : [];
     var lpDone = lpRounds.length && lpRounds.every(function (r) { return r.fixtures.every(function (f) { return isDone(f) || GONE[f.st]; }); });
+    // Qualifying gets its own tab only while it's the stage being played (before the league phase kicks off);
+    // after that its ties sit under Fixtures and results.
+    var lpStarted = lpRounds.some(function (r) { return r.fixtures.some(function (f) { return isDone(f) || isLive(f); }); });
+    var inQual = q.length && !lpStarted && !comp.final;
     var first = ko.length && lpDone ? "ko" : "lp";
     var tab = function (k, label) {
       return '<button type="button" role="tab" class="tf-tab' + (k === first ? " on" : "") + '" data-tab="' + k + '" aria-selected="' + (k === first) + '">' + label + "</button>";
@@ -834,26 +872,24 @@
       '<p class="eyebrow">UEFA · ' + esc(fx ? fx.season : "") + "</p>" +
       '<h1 id="intro-h"><span class="comp-dot c-' + esc(comp.id) + '" aria-hidden="true"></span>' + esc(comp.name) + "</h1>" +
       (opts.seasons ? seasonsHTML({ name: comp.name, season: fx ? fx.season : "" }, opts.seasons) : "") +
-      '<p class="lede"><strong>' + esc(compStatus(comp, fx)) + "</strong> · " + (comp.final ? (comp.groups ? "The group-stage tables" : "The league-phase table") + ", the full knockout bracket and every qualifying tie."
-        : "The league-phase table, the knockout bracket as each draw is made, and every qualifying tie.") + "</p>" +
+      '<p class="lede"><strong>' + esc(compStatus(comp, fx)) + "</strong> · " + (comp.final ? (comp.groups ? "The group-stage tables" : "The league-phase table") + ", the full knockout bracket and every fixture and result, qualifying included."
+        : "The league-phase table, the knockout bracket as each draw is made, and every fixture and result.") + "</p>" +
       '<p class="fx-links">' + tzLine(mode, "europe") + "</p></section>" +
-      // Fixtures sit first in the row, as a button that opens the competition's fixtures page (it's a link, so it
-      // stays outside the tab list).
-      '<section class="comp" data-tabs="stage"><div class="comp-bar">' +
-      (opts.fixturesHref ? '<a class="tf-tab tf-go" href="' + esc(opts.fixturesHref) + '">Fixtures and results <span aria-hidden="true">→</span></a>' : "") +
-      '<div class="tf-tabs comp-tabs" role="tablist" aria-label="Stages">' +
-      tab("lp", comp.groups ? "Group stage" : "League phase") + tab("ko", "Knockouts") + tab("q", "Qualifying") + "</div></div>" +
+      '<section class="comp" data-tabs="stage"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Stages">' +
+      tab("lp", comp.groups ? "Group stage" : "League phase") + tab("ko", "Knockouts") + (inQual ? tab("q", "Qualifying") : "") +
+      (fx ? tab("fx", "Fixtures and results") : "") + "</div>" +
       panel("lp", (comp.rows && !comp.rows.length && !comp.groups ? '<p class="ko-empty">No table for this season.</p>'
         : tierHTML(markQualified(opts.clubPaths ? Object.assign(comp, { _paths: opts.clubPaths, _root: opts.root || "", _suffix: opts.suffix || "" }) : comp), { eyebrow: comp.groups ? "Group stage" : "League phase" }))) +
       panel("ko", !ko.length && !comp.final && projectedHTML(comp) ? projectedHTML(comp) : bracketHTML(ko, tz, now)) +
-      panel("q", qualifyingHTML(q, tz, now)) + "</section>";
+      (inQual ? panel("q", qualifyingHTML(q, tz, now)) : "") +
+      (fx ? panel("fx", fxTabHTML(fx, { tzZone: tz, now: now, live: opts.live, round: opts.fxRound, myClub: opts.myClub })) : "") + "</section>";
   }
 
   // The /europe/ page: a card per competition.
   function europeMain(e, opts) {
     opts = opts || {};
     var base = opts.base || "", suffix = opts.suffix || "";
-    // Each competition opens in place to its full table; knockouts, qualifying and fixtures stay on its own page.
+    // Each competition opens in place to its full table; knockouts and fixtures stay on its own page.
     var cards = e.leagues.map(function (c) {
       var top = (c.rows || []).slice(0, 3);
       var href = base + c.id + "/" + suffix;
@@ -917,7 +953,7 @@
       return { key: r.key, label: r.label, mid: r.mid, fixtures: r.fixtures.map(function (f) { return mergeLive(f, lm); }) };
     }) : [];
     // The bracket starts at the earliest round of 64 or fewer (32 ties) after which every round halves cleanly
-    // (no byes), so each tie feeds the next; earlier rounds are in "Every round".
+    // (no byes), so each tie feeds the next; earlier rounds are under Fixtures and results.
     var startAt = -1, counts = rounds.map(function (r) { return tiesOf(r).length; });
     for (var i = 0; i < rounds.length && startAt < 0; i++) {
       if ([32, 16, 8, 4, 2, 1].indexOf(counts[i]) < 0) continue;   // a full round of 64, 32, 16...
@@ -926,17 +962,7 @@
       if (clean) startAt = i;
     }
     var bracketRounds = startAt > -1 ? rounds.slice(startAt) : [];
-    var first = bracketRounds.length ? "bracket" : "rounds";
-    var current = rounds.length - 1;
-    for (var j = 0; j < rounds.length; j++) {
-      if (rounds[j].fixtures.some(function (f) { return !isDone(f) && !GONE[f.st]; })) { current = j; break; }
-    }
-    var list = rounds.map(function (r, k) { return { r: r, k: k }; }).reverse().map(function (x) {
-      var ties = tiesOf(x.r), range = roundRange(x.r, tz);
-      return '<details class="q-round" id="round-' + x.k + '"' + (x.k === current ? " open" : "") + "><summary>" + esc(x.r.label) + " <span>" + ties.length + " tie" + (ties.length === 1 ? "" : "s") +
-        (range ? " · " + esc(range) : "") + "</span></summary>" +
-        '<div class="q-ties">' + ties.map(function (t) { return tieHTML(t, tz, now); }).join("") + "</div></details>";
-    }).join("");
+    var first = bracketRounds.length ? "bracket" : "fx";
     var tab = function (k, label) {
       return '<button type="button" role="tab" class="tf-tab' + (k === first ? " on" : "") + '" data-tab="' + k + '" aria-selected="' + (k === first) + '">' + label + "</button>";
     };
@@ -946,14 +972,13 @@
       '<h1 id="intro-h" class="cup-h">' + flag(country) + "<span>" + esc(cup.name) + "</span></h1>" +
       (opts.seasons ? seasonsHTML({ name: cup.name, season: fx ? fx.season : "" }, opts.seasons) : "") +
       (opts.note ? '<p class="cup-note">' + esc(opts.note) + "</p>" : "") +
-      '<p class="lede"><strong>' + esc(cupStatus(fx)) + "</strong> · Every round and every tie, with each club’s league next to its name, so the giant-killings stand out.</p>" +
-      '<p class="fx-links">' + (opts.fixturesHref ? '<a href="' + esc(opts.fixturesHref) + '">Fixtures and results by round →</a>' : "") +
-      tzLine(mode, country) + "</p></section>" +
+      '<p class="lede"><strong>' + esc(cupStatus(fx)) + "</strong> · Every tie and result, round by round, with each club’s league next to its name, so the giant-killings stand out.</p>" +
+      '<p class="fx-links">' + tzLine(mode, country) + "</p></section>" +
       '<section class="comp" data-tabs="cup"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Views">' +
-      tab("bracket", "Bracket") + tab("rounds", "Every round") + "</div>" +
+      tab("bracket", "Bracket") + tab("fx", "Fixtures and results") + "</div>" +
       panel("bracket", bracketRounds.length ? bracketHTML(bracketRounds, tz, now)
-        : '<p class="ko-empty">The bracket starts once the cup is down to 64 clubs or fewer and that draw is made. Until then, see every round so far.</p>') +
-      panel("rounds", list || '<p class="ko-empty">No ties yet. They appear as soon as the first draw is made.</p>') + "</section>";
+        : '<p class="ko-empty">The bracket starts once the cup is down to 64 clubs or fewer and that draw is made. Until then, see Fixtures and results.</p>') +
+      panel("fx", fxTabHTML(fx, { tzZone: tz, now: now, live: opts.live, round: opts.fxRound, myClub: opts.myClub })) + "</section>";
   }
 
   // Country pages: the country's cups, under the tables.

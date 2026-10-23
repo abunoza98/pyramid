@@ -52,6 +52,23 @@ const crumbs = (items) => ({ "@context": "https://schema.org", "@type": "Breadcr
 const ldScript = (data) => data ? (Array.isArray(data) ? data : [data]).map((d) =>
   `<script type="application/ld+json">${JSON.stringify(d).replace(/</g, "\\u003c")}</script>\n`).join("") : "";
 
+// An old address that now lives in a tab: send visitors (and search engines, via the canonical link) to the tab.
+function redirectPage(to, canonical, name) {
+  return `<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>${esc(name)} fixtures and results | Football Pyramids</title>
+<link rel="canonical" href="${canonical}">
+<meta name="robots" content="noindex, follow">
+<meta http-equiv="refresh" content="0; url=${to}">
+<script>location.replace(${JSON.stringify(to)});</script>
+</head>
+<body><p><a href="${to}">${esc(name)} fixtures and results</a></p></body>
+</html>
+`;
+}
+
 function shell({ title, description, canonical, base, suffix, page, country, stamps, main, countries, seasons, attrs = {}, jsonld = null }) {
   const snapshot = countries.some((c) => c.mode !== "live");
   const home = base || "./";
@@ -341,7 +358,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   // Links from tables to fixtures pages, relative to the home page or a country page.
   const fxLinks = (fromHome) => Object.fromEntries(Object.keys(fixtures).map((k) => {
     const [c, l] = k.split("/");
-    return [k, (fromHome ? `${c}/` : "") + `${l}/fixtures/${suffix}`];
+    return [k, (fromHome ? `${c}/` : "") + (fixtures[k].cup ? `${l}/${suffix}#fixtures` : `${l}/fixtures/${suffix}`)];
   }));
   const suffix = preview ? "index.html" : "";
   const stamps = Object.fromEntries(countries.map((c) => [c.country, c.updated]));
@@ -359,10 +376,10 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     description: `League tables for ${countries.length} countries (${countries.map((c) => c.name).join(", ")}), each country's divisions on one page with promotion and relegation places marked. Fixtures, past seasons and live scores.`,
     canonical: SITE + "/", base: "", suffix, page: "home", stamps, countries,
     jsonld: { "@context": "https://schema.org", "@type": "WebSite", name: "Football Pyramids", url: SITE + "/" },
-    attrs: { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/fixtures/${suffix}` } : {}) },
+    attrs: { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/${suffix}#fixtures` } : {}) },
       ...(europe ? { europe: "1", clubpaths: pathsFor(europe.leagues[0]) } : {}), cupsmap: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])) },
     main: FP.homeMain(countries.filter((c) => c.featured), "", suffix, countries.filter((c) => !c.featured).map(FP.summary),
-      { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/fixtures/${suffix}` } : {}) }, europe,
+      { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/${suffix}#fixtures` } : {}) }, europe,
         cups: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])), clubPaths: europe ? pathsFor(europe.leagues[0]) : null })
   }));
 
@@ -396,8 +413,8 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         description: `The ${cup.name} ${top.season} round by round: every tie and result, the bracket, and each club's league so the giant-killings stand out.`,
         canonical: `${SITE}/${c.country}/${cup.id}/`, base: "../../", suffix, page: fx ? "cup" : "cup-history", country: c.country, stamps: {}, countries,
         seasons: older.length ? picker("", null) : null,
-        attrs: fx ? { league: cup.id, fx: `fixtures/${suffix}` } : {},
-        main: FP.cupMain(cup, top, { tz: "venue", fixturesHref: fx ? `fixtures/${suffix}` : "", seasons: older.length ? picker("", null) : null, note })
+        attrs: fx ? { league: cup.id } : {},
+        main: FP.cupMain(cup, top, { tz: "venue", seasons: older.length ? picker("", null) : null, note })
       }));
       cupUrls.push(`/${c.country}/${cup.id}/`);
       for (const p of older) {
@@ -416,6 +433,10 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     for (const lg of [...c.leagues, ...cupsOf]) {
       const fx = fixtures[`${c.country}/${lg.id}`];
       if (!fx) continue;
+      if (fx.cup) {
+        await write(`${c.country}/${lg.id}/fixtures/index.html`, redirectPage(`../${suffix}#fixtures`, `${SITE}/${c.country}/${lg.id}/`, fx.name));
+        continue;
+      }
       const back = fx.cup ? `../${suffix}` : `../../${suffix}#${lg.id}`;
       await write(`${c.country}/${lg.id}/fixtures/index.html`, shell({
         title: `${fx.name} fixtures and results ${fx.season} | Football Pyramids`,
@@ -466,31 +487,20 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
           title: `${comp.name} ${h.season}: ${h.comp.groups ? "group stage" : "league phase"}, knockout bracket and results | Football Pyramids`,
           description: `The ${comp.name} ${h.season}: ${h.comp.groups ? "every group-stage table" : "the league-phase table"}, the full knockout bracket and every qualifying tie.`,
           canonical: `${SITE}/europe/${comp.id}/${sl}/`, base: "../../../", suffix, page: "comp-history", country: "europe", stamps: {}, countries, seasons,
-          main: FP.compMain(h.comp, h.fx, { tz: "venue", seasons, fixturesHref: h.fx ? `fixtures/${suffix}` : "", clubPaths: pathsFor(h.comp), root: "../../../", suffix })
+          main: FP.compMain(h.comp, h.fx, { tz: "venue", seasons, clubPaths: pathsFor(h.comp), root: "../../../", suffix })
         }));
-        if (h.fx) await write(`europe/${comp.id}/${sl}/fixtures/index.html`, shell({
-          title: `${comp.name} fixtures and results ${h.season} | Football Pyramids`,
-          description: `Every ${comp.name} fixture and result from ${h.season}, from qualifying to the final.`,
-          canonical: `${SITE}/europe/${comp.id}/${sl}/fixtures/`, base: "../../../../", suffix, page: "fixtures", country: "europe", stamps: {}, countries,
-          attrs: { league: comp.id, table: `../${suffix}`, fxfile: `data/history/europe/${comp.id}/${h.year}-fixtures.json` },
-          main: FP.fixturesMain(h.fx, { tz: "venue", tableHref: `../${suffix}`, tableText: `${comp.name} ${h.season}` })
-        }));
+        if (h.fx) await write(`europe/${comp.id}/${sl}/fixtures/index.html`,
+          redirectPage(`../${suffix}#fixtures`, `${SITE}/europe/${comp.id}/${sl}/`, `${comp.name} ${h.season}`));
         euroPast.push(`/europe/${comp.id}/${sl}/`);
       }
       await write(`europe/${comp.id}/index.html`, shell({
         title: `${comp.name} ${europe.season}: table, knockout bracket and results | Football Pyramids`,
         description: `The ${comp.name} league-phase table, the knockout bracket as each draw is made, every qualifying tie and live scores.`,
         canonical: `${SITE}/europe/${comp.id}/`, base: "../../", suffix, page: "comp", country: "europe", stamps: { europe: europe.updated }, countries,
-        seasons: seasonsNow, attrs: { league: comp.id, fx: fx ? `fixtures/${suffix}` : "", clubpaths: pathsFor(comp) },
-        main: FP.compMain(comp, fx, { tz: "venue", fixturesHref: fx ? `fixtures/${suffix}` : "", seasons: seasonsNow, clubPaths: pathsFor(comp), root: "../../", suffix })
+        seasons: seasonsNow, attrs: { league: comp.id, clubpaths: pathsFor(comp) },
+        main: FP.compMain(comp, fx, { tz: "venue", seasons: seasonsNow, clubPaths: pathsFor(comp), root: "../../", suffix })
       }));
-      if (fx) await write(`europe/${comp.id}/fixtures/index.html`, shell({
-        title: `${comp.name} fixtures and results ${fx.season} | Football Pyramids`,
-        description: `Every ${comp.name} fixture and result for ${fx.season}, from qualifying to the final, with kick-off times in your time zone and live scores.`,
-        canonical: `${SITE}/europe/${comp.id}/fixtures/`, base: "../../../", suffix, page: "fixtures", country: "europe", stamps: {}, countries,
-        attrs: { league: comp.id, table: `../${suffix}` },
-        main: FP.fixturesMain(fx, { tz: "venue", tableHref: `../${suffix}`, tableText: `${comp.name} table and bracket` })
-      }));
+      if (fx) await write(`europe/${comp.id}/fixtures/index.html`, redirectPage(`../${suffix}#fixtures`, `${SITE}/europe/${comp.id}/`, comp.name));
     }
   }
 
@@ -742,6 +752,8 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       ["/contact/", null], ["/privacy/", null]];
     const past = countries.flatMap((c) => history[c.country].map((h) => `/${c.country}/${slug(h.year)}/`));
     const fxKeys = Object.keys(fixtures).filter((k) => (europe && k.startsWith("europe/")) || countries.some((c) => c.country === k.split("/")[0]));
+    // Only league fixtures have their own page; cups and European competitions show fixtures in a tab.
+    const fxPages = fxKeys.filter((k) => !k.startsWith("europe/") && !fixtures[k].cup);
     // A club page changes with its country's tables and its fixtures; the country date is the honest lower bound.
     const clubDate = (u) => newestOf(countryDate[u.split("/")[1]], ...fxKeys.filter((k) => k.startsWith(u.split("/")[1] + "/")).map(fxDate));
     await write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
@@ -749,7 +761,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
 ${urls.map(([u, d]) => dated(u, d, "hourly")).join("\n")}
 ${clubUrls.map((u) => dated(u, clubDate(u), "daily")).join("\n")}
 ${cupUrls.map((u) => dated(u, fxDate(u.slice(1, -1)), "daily")).join("\n")}
-${fxKeys.map((k) => dated(`/${k}/fixtures/`, fxDate(k), "daily")).join("\n")}
+${fxPages.map((k) => dated(`/${k}/fixtures/`, fxDate(k), "daily")).join("\n")}
 ${past.concat(euroPast, cupPastUrls).map((u) => `  <url><loc>${SITE}${u}</loc><changefreq>yearly</changefreq></url>`).join("\n")}
 </urlset>
 `);
