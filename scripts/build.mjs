@@ -599,7 +599,11 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
           finals = { lost, years: e && e.lostYears ? e.lostYears.concat(lostLater) : (!e || !e.lost ? lostLater : null),
             last: lostLater.length ? lostLater[lostLater.length - 1] : (e && (e.lastLost || (e.lostYears || []).slice(-1)[0])) || null };
         }
-        if (runs.length || titles) out.push({ id: cup.id, name: cs.name, href: cs.href, seasons: cs.list.map((s) => s.season), runs, titles, finals });
+        // This season, while the cup is still going: a club not in it yet may simply not have entered yet (the
+        // big clubs join in later rounds), so it doesn't count as missing the draw.
+        const lastSeason = cs.list[cs.list.length - 1];
+        const open = !!(lastSeason && lastSeason.now && !lastSeason.winner);
+        if (runs.length || titles) out.push({ id: cup.id, name: cs.name, href: cs.href, seasons: cs.list.map((s) => s.season), runs, titles, finals, open });
       }
       return out;
     };
