@@ -39,8 +39,9 @@ footballpyramids.com: Europe's top five leagues on the home page, and a full pyr
 
 1. Actions → Scan leagues → Run workflow, with the country names (e.g. `Portugal Netherlands`, or `England:43,50,51` for chosen league IDs). The log, also saved as a download, lists each league's ID, club count, groups, the API's promotion and relegation labels and the club names.
 2. Add the country to `COUNTRIES` in `scripts/leagues.mjs`. Use `zones: "api"` to take the places from the API's labels (best where European places change each year), or set them by hand like Scotland. `groups` is for a tier split into separate API leagues; `splitGroups: true` for one API league that returns several group tables; `single: true` for a league that also returns extra tables (the Eerste Divisie's period tables).
-3. Fix odd club names in `NAMES`. Countries without `featured: true` sit under the header's "More" menu and as cards on the home page.
-4. Run Update standings, then Backfill history for past seasons. The live-scores worker picks the new leagues up by itself.
+3. For a country that plays within one calendar year (Brazil, Argentina, China, the USA), add `calendar: true`. Its season is then written "2026" (pages at `/<country>/2026/`) instead of "2026–27", and until the new year's season starts it keeps showing last year's final table. `scripts/season.mjs` has the rules.
+4. Fix odd club names in `NAMES`. Countries without `featured: true` sit under the header's "More" menu and as cards on the home page.
+5. Run Update standings, then Backfill history for past seasons. The live-scores worker picks the new leagues up by itself.
 
 ## Fixtures
 

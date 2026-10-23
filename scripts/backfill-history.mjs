@@ -12,11 +12,11 @@ import { readFile, writeFile, mkdir, access } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { COUNTRIES } from "./leagues.mjs";
-import { api, toRows, groupName, seasonLabel } from "./update-standings.mjs";
+import { api, toRows, groupName } from "./update-standings.mjs";
+import { seasonFor, seasonLabel } from "./season.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const now = new Date();
-const CURRENT = Number(process.env.SEASON || (now.getUTCMonth() >= 6 ? now.getUTCFullYear() : now.getUTCFullYear() - 1));
 const PAUSE_MS = 1500;  // API-Football refuses requests sent back to back
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -61,7 +61,7 @@ async function main() {
       for (const id of idsOf(cfg)) {
         const body = await get(`/leagues?id=${id}`);
         const seasons = body?.response?.[0]?.seasons || [];
-        years.set(id, new Set(seasons.filter((s) => s.coverage?.standings && s.year < CURRENT).map((s) => s.year)));
+        years.set(id, new Set(seasons.filter((s) => s.coverage?.standings && s.year < seasonFor(c)).map((s) => s.year)));
       }
     }
     const topYears = [...(years.get(c.leagues[0].apiId) || [])].sort((a, b) => b - a);
@@ -99,10 +99,10 @@ async function main() {
       if (!leagues.length) continue;
       await mkdir(path.dirname(file), { recursive: true });
       await writeFile(file, JSON.stringify({
-        country: c.country, name: c.name, adjective: c.adjective, season: seasonLabel(year), year, mode: "final", leagues
+        country: c.country, name: c.name, adjective: c.adjective, season: seasonLabel(year, c), year, mode: "final", leagues
       }, null, 1) + "\n");
       saved++;
-      console.log(`  ${seasonLabel(year)}: saved ${leagues.length} tiers.`);
+      console.log(`  ${seasonLabel(year, c)}: saved ${leagues.length} tiers.`);
     }
   }
   console.log(`Done. ${saved} season files saved${fixture ? "" : `, ${requests} requests used`}.`);

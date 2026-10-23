@@ -15,6 +15,7 @@ import { readFileSync } from "node:fs";
 import { COUNTRIES, EUROPE, SITE, CONTACT, ADS, ADSENSE_CLIENT, LIVE_URL } from "./leagues.mjs";
 import { zoneAt, applyPlayoffRules, labelCupPlaces } from "./zones.mjs";
 import { regroupEurope } from "./rounds.mjs";
+import { seasonLabel, seasonSlug } from "./season.mjs";
 import { summarise, learnLabels } from "./cupruns.mjs";
 export { applyPlayoffRules, labelCupPlaces };
 import { contactPage, privacyPage } from "./pages.mjs";
@@ -255,14 +256,15 @@ export async function loadEuropeHistory(root = ROOT) {
   return out;
 }
 const ordinal = (n) => { const v = n % 100, s = ["th", "st", "nd", "rd"]; return n + (s[(v - 20) % 10] || s[v] || s[0]); };
-const slug = (year) => `${year}-${String((year + 1) % 100).padStart(2, "0")}`;
+// Season folder: "2015-16", or "2015" for calendar-year countries. cc is the country code (none for Europe).
+const slug = (year, cc) => seasonSlug(year, COUNTRIES.find((x) => x.country === cc));
 
 // The "Other seasons" list. rel is the path from the page to the country folder ("" or "../").
 function seasonList(current, past, rel, suffix, onYear) {
   if (!past.length) return null;
   return [
     { label: `${current.season} (live)`, href: (rel || "./") + suffix, current: onYear == null },
-    ...past.map((h) => ({ label: h.season, href: `${rel}${slug(h.year)}/${suffix}`, current: onYear === h.year }))
+    ...past.map((h) => ({ label: h.season, href: `${rel}${slug(h.year, current.country)}/${suffix}`, current: onYear === h.year }))
   ];
 }
 
@@ -295,6 +297,12 @@ function tierNames(c) {
 export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}) {
   const countries = await loadCountries(root);
   const history = await loadHistory(root);
+  // A calendar-year country early in the year still shows last year's table as its current season;
+  // its saved copy of that season mustn't appear twice.
+  for (const c of countries) {
+    const live = Number(String(c.season).slice(0, 4));
+    if (history[c.country]) history[c.country] = history[c.country].filter((h) => h.year < live);
+  }
   const fixtures = await loadFixtures(root);
   const cupHistory = await loadCupHistory(root);
   // All-time titles per cup up to a season (data/cup-titles.json); later wins come from our own cup data.
@@ -362,7 +370,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     const fx = fixtures[`${c.country}/${cup.id}`];
     const past = (cupPast[`${c.country}/${cup.id}`] || []).filter((p) => !fx || p.season !== fx.season);
     const own = (fx ? past : past.slice(1)).some((p) => p.year === year);
-    const href = own ? `${rel}${cup.id}/${slug(year)}/${suffix}` : !fx && past[0] && past[0].year === year ? `${rel}${cup.id}/${suffix}` : null;
+    const href = own ? `${rel}${cup.id}/${slug(year, c.country)}/${suffix}` : !fx && past[0] && past[0].year === year ? `${rel}${cup.id}/${suffix}` : null;
     const w = sum.winner, fin = w && sum.clubs && sum.clubs[w.id];
     const status = w ? `Won by ${w.n}` + (fin && fin[3] ? ` (beat ${fin[3]}${fin[4] ? " " + fin[4] : ""} in the final)` : "") : "";
     return { id: cup.id, name: cup.name, status, span: "", href };
@@ -461,7 +469,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       const older = fx ? past : past.slice(1);      // the seasons with their own page
       const picker = (rel, onYear) => [
         { label: fx ? `${fx.season} (live)` : top.season, href: (rel || "./") + suffix, current: onYear == null },
-        ...older.map((p) => ({ label: p.season, href: `${rel}${slug(p.year)}/${suffix}`, current: onYear === p.year }))
+        ...older.map((p) => ({ label: p.season, href: `${rel}${slug(p.year, c.country)}/${suffix}`, current: onYear === p.year }))
       ];
       const note = !fx ? (cup.until ? `The ${cup.name} ended after the ${top.season} season.` : `This season's ${cup.name} isn't covered yet; it appears here once the draw reaches the national rounds.`) : "";
       await write(`${c.country}/${cup.id}/index.html`, shell({
@@ -474,14 +482,14 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       }));
       cupUrls.push(`/${c.country}/${cup.id}/`);
       for (const p of older) {
-        await write(`${c.country}/${cup.id}/${slug(p.year)}/index.html`, shell({
+        await write(`${c.country}/${cup.id}/${slug(p.year, c.country)}/index.html`, shell({
           title: `${cup.name} ${p.season}: bracket and results | Football Pyramids`,
           description: `The ${cup.name} ${p.season}: every round, every tie and the bracket, with each club's league that season.`,
-          canonical: `${SITE}/${c.country}/${cup.id}/${slug(p.year)}/`, base: "../../../", suffix, page: "cup-history", country: c.country, stamps: {}, countries,
+          canonical: `${SITE}/${c.country}/${cup.id}/${slug(p.year, c.country)}/`, base: "../../../", suffix, page: "cup-history", country: c.country, stamps: {}, countries,
           seasons: picker("../", p.year),
           main: FP.cupMain(cup, p, { tz: "venue", seasons: picker("../", p.year), fxPaths: pathsForFx(p, c.country), root: "../../../", suffix })
         }));
-        cupPastUrls.push(`/${c.country}/${cup.id}/${slug(p.year)}/`);
+        cupPastUrls.push(`/${c.country}/${cup.id}/${slug(p.year, c.country)}/`);
       }
     }
     // Fixtures pages, one per league and cup
@@ -509,11 +517,11 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       labelCupPlaces(markOutcomes(applyPlayoffRules(h), next));
       const n = tierNames(h);
       const seasons = seasonList(c, history[c.country], "../", suffix, h.year);
-      await write(`${c.country}/${slug(h.year)}/index.html`, shell({
+      await write(`${c.country}/${slug(h.year, c.country)}/index.html`, shell({
         title: `${c.adjective} football pyramid ${h.season}: ${n.first} to ${n.last} final tables | Football Pyramids`,
         description: `Final ${h.season} tables for ${c.adjective} football, from ${n.first} down to ${n.last}, with promotion and relegation marked.`,
-        canonical: `${SITE}/${c.country}/${slug(h.year)}/`, base: "../../", suffix, page: "history", country: c.country,
-        jsonld: crumbs([["Football Pyramids", SITE + "/"], [c.name, `${SITE}/${c.country}/`], [h.season, `${SITE}/${c.country}/${slug(h.year)}/`]]),
+        canonical: `${SITE}/${c.country}/${slug(h.year, c.country)}/`, base: "../../", suffix, page: "history", country: c.country,
+        jsonld: crumbs([["Football Pyramids", SITE + "/"], [c.name, `${SITE}/${c.country}/`], [h.season, `${SITE}/${c.country}/${slug(h.year, c.country)}/`]]),
         stamps: {}, countries, main: FP.countryMain(h, { seasons, clubPaths: pathByName[c.country], root: "../../", suffix, cups: pastCupCards(c, h.year, "../") })
       }));
     }
@@ -668,7 +676,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
           const pr = pg.rows.find(same);
           if (pr) {
             out.push({ season: h.season, year: h.year, tier: plg.tier, league: divisionName(plg, pg), pos: pr.pos, of: pg.rows.length, rank: rankIn(sizes, plg.tier, pr.pos), sizes,
-              href: `${base}${c.country}/${slug(h.year)}/${suffix}${plg.id ? "#" + plg.id : ""}` });
+              href: `${base}${c.country}/${slug(h.year, c.country)}/${suffix}${plg.id ? "#" + plg.id : ""}` });
             break found;
           }
         }
@@ -685,7 +693,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       for (const l of c.leagues) add(l.tier, Number(String(c.season).slice(0, 4)));
       for (const h of history[c.country] || []) for (const l of h.leagues) add(l.tier, h.year);
     }
-    const label = (y) => `${y}–${String((y + 1) % 100).padStart(2, "0")}`;
+    const label = (y, cc) => seasonLabel(y, COUNTRIES.find((x) => x.country === cc));
     // A line or two of context for the top of a club page, from its journey and nothing else: promoted or relegated
     // last season, first season back in a division since when, how many seasons in a row. Every statement is checked
     // against what the saved seasons actually cover, so a gap in our records is never read as a fact about the club
@@ -708,7 +716,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
           if (x && x.tier === T) { const away = Y - y - 1; return `Back in ${the(tierLg)} after ${away === 1 ? "one season" : away + " seasons"} away`; }
         }
         let first = Y - 1; while (has(T, first - 1)) first--;
-        return has(T, Y - 1) ? `First season in ${the(tierLg)} since our records begin in ${label(first)}` : "";
+        return has(T, Y - 1) ? `First season in ${the(tierLg)} since our records begin in ${label(first, c.country)}` : "";
       };
       if (prev && prev.tier !== T) {
         out.push({ dir: prev.tier > T ? "up" : "down", text: `${prev.tier > T ? "Promoted" : "Relegated"} from ${the(prev.league)} last season` });
@@ -717,7 +725,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         let k = 1;
         while (by.get(Y - k) && by.get(Y - k).tier === T) k++;
         // k seasons in a row. If the season before the run isn't on record for this tier, we only know "since then".
-        out.push({ text: has(T, Y - k) ? `${ordinal(k)} season in a row in ${the(tierLg)}` : `In ${the(tierLg)} every season since our records begin in ${label(Y - k + 1)}` });
+        out.push({ text: has(T, Y - k) ? `${ordinal(k)} season in a row in ${the(tierLg)}` : `In ${the(tierLg)} every season since our records begin in ${label(Y - k + 1, c.country)}` });
       } else {
         // Not on record last season, though this tier and every tier above it were: the club came up from below the
         // divisions covered here (or is new to the league system).
@@ -870,7 +878,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     const urls = [["/", newestOf(...countries.map((c) => c.updated))], ...countries.map((c) => [`/${c.country}/`, c.updated]),
       ...(europe ? [["/europe/", europe.updated], ...europe.leagues.map((c) => [`/europe/${c.id}/`, newestOf(europe.updated, fxDate(`europe/${c.id}`))])] : []),
       ["/contact/", null], ["/privacy/", null]];
-    const past = countries.flatMap((c) => history[c.country].map((h) => `/${c.country}/${slug(h.year)}/`));
+    const past = countries.flatMap((c) => history[c.country].map((h) => `/${c.country}/${slug(h.year, c.country)}/`));
     const fxKeys = Object.keys(fixtures).filter((k) => (europe && k.startsWith("europe/")) || countries.some((c) => c.country === k.split("/")[0]));
     // Only league fixtures have their own page; cups and European competitions show fixtures in a tab.
     const fxPages = fxKeys.filter((k) => !k.startsWith("europe/") && !fixtures[k].cup);

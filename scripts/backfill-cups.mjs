@@ -11,14 +11,14 @@ import { readFile, writeFile, mkdir, access } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { COUNTRIES } from "./leagues.mjs";
-import { api, seasonLabel } from "./update-standings.mjs";
+import { api } from "./update-standings.mjs";
+import { seasonFor, seasonLabel } from "./season.mjs";
 import { slim } from "./update-fixtures.mjs";
 import { toRounds, cupRounds } from "./rounds.mjs";
 import { summarise, learnLabels } from "./cupruns.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const now = new Date();
-const CURRENT = Number(process.env.SEASON || (now.getUTCMonth() >= 6 ? now.getUTCFullYear() : now.getUTCFullYear() - 1));
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const exists = (f) => access(f).then(() => true, () => false);
 
@@ -62,7 +62,7 @@ async function main() {
   let saved = 0;
   for (const c of COUNTRIES) for (const cup of c.cups || []) {
     const body = await get(`/leagues?id=${cup.apiId}`);
-    const years = (body?.response?.[0]?.seasons || []).map((s) => s.year).filter((y) => y < CURRENT && (!cup.until || y <= cup.until)).sort((a, b) => a - b);
+    const years = (body?.response?.[0]?.seasons || []).map((s) => s.year).filter((y) => y < seasonFor(c) && (!cup.until || y <= cup.until)).sort((a, b) => a - b);
     const dir = path.join(outRoot, "data", "history", c.country, "cups", cup.id);
     const done = [];
     for (const year of years) {
@@ -80,14 +80,14 @@ async function main() {
       }
       const rounds = toRounds(list);
       const s = summarise(rounds, learnLabels(done));
-      const out = { country: c.country, cup: cup.id, name: cup.name, season: seasonLabel(year), year, ...s };
+      const out = { country: c.country, cup: cup.id, name: cup.name, season: seasonLabel(year, c), year, ...s };
       await mkdir(dir, { recursive: true });
       await writeFile(fxFile, JSON.stringify({ country: c.country, countryName: c.name, league: cup.id, name: cup.name, cup: true,
-        season: seasonLabel(year), year, groups: [{ name: null, rounds }] }) + "\n");
+        season: seasonLabel(year, c), year, groups: [{ name: null, rounds }] }) + "\n");
       await writeFile(file, JSON.stringify(out) + "\n");
       done.push(out);
       saved++;
-      console.log(`${c.name} ${cup.name} ${seasonLabel(year)}: ${Object.keys(s.clubs).length} clubs${s.winner ? `, won by ${s.winner.n}` : ""}.`);
+      console.log(`${c.name} ${cup.name} ${seasonLabel(year, c)}: ${Object.keys(s.clubs).length} clubs${s.winner ? `, won by ${s.winner.n}` : ""}.`);
     }
   }
   console.log(`Done. ${saved} cup season${saved === 1 ? "" : "s"} saved${fixture ? "" : `, ${requests} requests used`}.`);

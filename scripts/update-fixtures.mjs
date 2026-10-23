@@ -12,14 +12,14 @@ import { readFile, writeFile, mkdir, rename } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { COUNTRIES, EUROPE, NAMES } from "./leagues.mjs";
-import { api, seasonLabel } from "./update-standings.mjs";
+import { api } from "./update-standings.mjs";
+import { seasonFor, seasonLabel } from "./season.mjs";
 import { build } from "./build.mjs";
 import { roundLabel, europeRounds, toRounds, cupRounds } from "./rounds.mjs";
 export { roundLabel, europeRounds, toRounds };
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const now = new Date();
-const SEASON = Number(process.env.SEASON || (now.getUTCMonth() >= 6 ? now.getUTCFullYear() : now.getUTCFullYear() - 1));
 const MOVED_DAYS = 21;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -58,7 +58,7 @@ async function main() {
   const fixture = fi > -1 ? JSON.parse(await readFile(path.resolve(args[fi + 1]), "utf8")) : null;
   if (!fixture && !key) throw new Error("Set API_FOOTBALL_KEY (the GitHub job does this for you).");
 
-  const get = async (id) => {
+  const get = async (id, SEASON) => {
     if (fixture) return fixture[id] || { response: [] };
     for (let i = 1; ; i++) {
       await sleep(1500);   // API-Football refuses requests sent back to back
@@ -72,6 +72,7 @@ async function main() {
 
   let saved = 0, failed = 0;
   for (const c of [...COUNTRIES, EUROPE]) {
+    const year = seasonFor(c);
     // Each club's league, for the tags in cup ties ("PL", "L2", "NL"…), from the country's tables.
     const tags = new Map();
     try {
@@ -89,8 +90,14 @@ async function main() {
       const parts = cfg.groups ? cfg.groups.map((g) => ({ apiId: g.apiId, name: g.name })) : [{ apiId: cfg.apiId, name: null }];
       try {
         const groups = [];
+        let used = year;
         for (const part of parts) {
-          const body = await get(part.apiId);
+          let body = await get(part.apiId, used);
+          // A calendar-year league early in the year may have no fixtures out yet: keep showing last year's.
+          if (c.calendar && !(body.response || []).length && used === year && !groups.length) {
+            used = year - 1;
+            body = await get(part.apiId, used);
+          }
           const list = (body.response || []).map((x) => ({ round: x.league?.round, f: slim(x, prevById.get(x.fixture.id)) }));
           if (c === EUROPE) europeRounds(list);
           if (cfg.cup) {
@@ -105,7 +112,7 @@ async function main() {
         }
         const out = {
           country: c.country, countryName: c.name, league: cfg.id, name: cfg.name, tier: cfg.tier, ...(cfg.cup ? { cup: true } : {}),
-          season: seasonLabel(SEASON), updated: now.toISOString(), groups
+          season: seasonLabel(used, c), updated: now.toISOString(), groups
         };
         const text = JSON.stringify(out);
         const same = prev && JSON.stringify({ ...prev, updated: null }) === JSON.stringify({ ...out, updated: null });

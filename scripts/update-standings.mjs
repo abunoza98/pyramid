@@ -14,15 +14,15 @@ import path from "node:path";
 import { COUNTRIES, EUROPE, NAMES } from "./leagues.mjs";
 import { build } from "./build.mjs";
 import { zonesFrom, applyPlayoffRules, labelCupPlaces } from "./zones.mjs";
+import { seasonFor, seasonLabel } from "./season.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const API = "https://v3.football.api-sports.io";
 
-// Season is the year it starts: 2026 = 2026–27.
-const SEASON = Number(process.env.SEASON || seasonFor(new Date()));
-
-function seasonFor(d) { return d.getUTCMonth() >= 6 ? d.getUTCFullYear() : d.getUTCFullYear() - 1; }
-export function seasonLabel(y) { return `${y}–${String((y + 1) % 100).padStart(2, "0")}`; }
+// Season is the year it starts: 2026 = 2026–27 (or just 2026 for calendar-year countries; see season.mjs).
+// Set per country as the updater works through them.
+let SEASON = seasonFor(null);
+export { seasonLabel };
 
 export async function api(pathAndQuery, key) {
   const res = await fetch(API + pathAndQuery, { headers: { "x-apisports-key": key } });
@@ -135,9 +135,10 @@ async function check(key) {
   console.log(`Plan: ${status.subscription?.plan ?? "?"} · used today: ${req.current ?? "?"} of ${req.limit_day ?? "?"}\n`);
   let missing = [];
   for (const c of COUNTRIES) {
+    SEASON = seasonFor(c);
     const body = await api(`/leagues?country=${encodeURIComponent(c.apiCountry)}&season=${SEASON}&type=league`, key);
     const wanted = new Map(c.leagues.flatMap((l) => l.groups ? l.groups.map((g) => [g.apiId, `${l.name} ${g.name}`]) : [[l.apiId, l.name]]));
-    console.log(`${c.name}, season ${seasonLabel(SEASON)}:`);
+    console.log(`${c.name}, season ${seasonLabel(SEASON, c)}:`);
     for (const item of body.response || []) {
       const season = (item.seasons || []).find((s) => s.year === SEASON) || item.seasons?.[0];
       const st = season?.coverage?.standings ? "standings yes" : "standings NO";
@@ -174,6 +175,8 @@ async function main() {
     let prev = null;
     try { prev = JSON.parse(await readFile(file, "utf8")); } catch {}
     const leagues = [];
+    const year = seasonFor(c);
+    let shown = year;   // the season the top tier's table comes from
     for (const cfg of c.leagues) {
       if (!fixture) console.log(`Fetching ${c.name}: ${cfg.name}…`);
       const get = async (id) => {
@@ -181,10 +184,24 @@ async function main() {
         await new Promise((r) => setTimeout(r, 1500));   // API-Football refuses requests sent back to back
         return api(`/standings?league=${id}&season=${SEASON}`, key);
       };
-      try {
+      const fetchAll = async () => {
         const body = [];
         if (cfg.groups) for (const g of cfg.groups) body.push(await get(g.apiId));
-        leagues.push(toLeague(cfg, cfg.groups ? body : await get(cfg.apiId)));
+        return toLeague(cfg, cfg.groups ? body : await get(cfg.apiId));
+      };
+      try {
+        SEASON = year;
+        let lg;
+        try { lg = await fetchAll(); }
+        catch (err) {
+          // A calendar-year league early in the year may not have started yet: show last year's final table until it does.
+          if (!c.calendar || !/no table/.test(err.message)) throw err;
+          SEASON = year - 1;
+          console.log(`  ${cfg.name}: ${year} hasn't started yet, showing ${year - 1}.`);
+          lg = await fetchAll();
+        }
+        if (!leagues.length) shown = SEASON;
+        leagues.push(lg);
       } catch (err) {
         // One league failing shouldn't stop the rest: keep its last good table, or leave it out for now.
         const old = prev?.leagues?.find((l) => l.id === cfg.id);
@@ -195,7 +212,7 @@ async function main() {
     }
     if (!leagues.length) { console.log(`${c.name}: nothing to show yet, skipped.`); continue; }
     const next = {
-      country: c.country, name: c.name, adjective: c.adjective, season: seasonLabel(SEASON), mode: "live",
+      country: c.country, name: c.name, adjective: c.adjective, season: seasonLabel(shown, c), mode: "live",
       updated: leagues.map((l) => l.updated).sort().at(-1), belowNote: c.belowNote,
       ...(c.later ? { later: c.later } : {}), leagues
     };
