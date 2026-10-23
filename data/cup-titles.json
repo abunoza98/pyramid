@@ -1,5 +1,5 @@
 {
- "_note": "All-time titles per club up to and including the season starting in 'through' (2025 = 2025-26). Wins after that are added from the site's own cup data. Names are as the site shows them; tid is API-Football's club ID where known.",
+ "_note": "All-time titles (v) and lost finals (lost, with lostYears, or lastLost where only the latest is known) per club up to and including the season starting in 'through' (2025 = 2025-26). Wins after that are added from the site's own cup data. Names are as the site shows them; tid is API-Football's club ID where known.",
  "england/fa-cup": {
   "through": 2025,
   "source": "https://en.wikipedia.org/wiki/List_of_FA_Cup_finals",
@@ -7,86 +7,268 @@
    {
     "n": "Arsenal",
     "v": 14,
-    "tid": 42
+    "tid": 42,
+    "lost": 7,
+    "lostYears": [
+     1927,
+     1932,
+     1952,
+     1972,
+     1978,
+     1980,
+     2001
+    ]
    },
    {
     "n": "Manchester United",
     "v": 13,
-    "tid": 33
+    "tid": 33,
+    "lost": 9,
+    "lostYears": [
+     1957,
+     1958,
+     1976,
+     1979,
+     1995,
+     2005,
+     2007,
+     2018,
+     2023
+    ]
    },
    {
     "n": "Chelsea",
     "v": 8,
-    "tid": 49
+    "tid": 49,
+    "lost": 9,
+    "lostYears": [
+     1915,
+     1967,
+     1994,
+     2002,
+     2017,
+     2020,
+     2021,
+     2022,
+     2026
+    ]
    },
    {
     "n": "Liverpool",
     "v": 8,
-    "tid": 40
+    "tid": 40,
+    "lost": 7,
+    "lostYears": [
+     1914,
+     1950,
+     1971,
+     1977,
+     1988,
+     1996,
+     2012
+    ]
    },
    {
     "n": "Manchester City",
     "v": 8,
-    "tid": 50
+    "tid": 50,
+    "lost": 7,
+    "lostYears": [
+     1926,
+     1933,
+     1955,
+     1981,
+     2013,
+     2024,
+     2025
+    ]
    },
    {
     "n": "Tottenham Hotspur",
     "v": 8,
-    "tid": 47
+    "tid": 47,
+    "lost": 1,
+    "lostYears": [
+     1987
+    ]
    },
    {
     "n": "Aston Villa",
     "v": 7,
-    "tid": 66
-   },
-   {
-    "n": "Blackburn Rovers",
-    "v": 6,
-    "tid": 67
+    "tid": 66,
+    "lost": 4,
+    "lostYears": [
+     1892,
+     1924,
+     2000,
+     2015
+    ]
    },
    {
     "n": "Newcastle United",
     "v": 6,
-    "tid": 34
+    "tid": 34,
+    "lost": 7,
+    "lostYears": [
+     1905,
+     1906,
+     1908,
+     1911,
+     1974,
+     1998,
+     1999
+    ]
+   },
+   {
+    "n": "Blackburn Rovers",
+    "v": 6,
+    "tid": 67,
+    "lost": 2,
+    "lostYears": [
+     1882,
+     1960
+    ]
    },
    {
     "n": "Everton",
     "v": 5,
-    "tid": 45
+    "tid": 45,
+    "lost": 8,
+    "lostYears": [
+     1893,
+     1897,
+     1907,
+     1968,
+     1985,
+     1986,
+     1989,
+     2009
+    ]
+   },
+   {
+    "n": "West Bromwich Albion",
+    "v": 5,
+    "tid": 60,
+    "lost": 5,
+    "lostYears": [
+     1886,
+     1887,
+     1895,
+     1912,
+     1935
+    ]
    },
    {
     "n": "Wanderers",
     "v": 5
    },
    {
-    "n": "West Bromwich Albion",
-    "v": 5,
-    "tid": 60
+    "n": "Wolverhampton Wanderers",
+    "v": 4,
+    "tid": 39,
+    "lost": 4,
+    "lostYears": [
+     1889,
+     1896,
+     1921,
+     1939
+    ]
    },
    {
     "n": "Bolton Wanderers",
     "v": 4,
-    "tid": 68
+    "tid": 68,
+    "lost": 3,
+    "lostYears": [
+     1894,
+     1904,
+     1953
+    ]
    },
    {
     "n": "Sheffield United",
     "v": 4,
-    "tid": 62
-   },
-   {
-    "n": "Wolverhampton Wanderers",
-    "v": 4,
-    "tid": 39
+    "tid": 62,
+    "lost": 2,
+    "lostYears": [
+     1901,
+     1936
+    ]
    },
    {
     "n": "Sheffield Wednesday",
     "v": 3,
-    "tid": 74
+    "tid": 74,
+    "lost": 3,
+    "lostYears": [
+     1890,
+     1966,
+     1993
+    ]
    },
    {
     "n": "West Ham United",
     "v": 3,
-    "tid": 48
+    "tid": 48,
+    "lost": 2,
+    "lostYears": [
+     1923,
+     2006
+    ]
+   },
+   {
+    "n": "Preston North End",
+    "v": 2,
+    "tid": 59,
+    "lost": 5,
+    "lostYears": [
+     1888,
+     1922,
+     1937,
+     1954,
+     1964
+    ]
+   },
+   {
+    "n": "Old Etonians",
+    "v": 2,
+    "lost": 4,
+    "lostYears": [
+     1875,
+     1876,
+     1881,
+     1883
+    ]
+   },
+   {
+    "n": "Portsmouth",
+    "v": 2,
+    "tid": 1355,
+    "lost": 3,
+    "lostYears": [
+     1929,
+     1934,
+     2010
+    ]
+   },
+   {
+    "n": "Sunderland",
+    "v": 2,
+    "tid": 746,
+    "lost": 2,
+    "lostYears": [
+     1913,
+     1992
+    ]
+   },
+   {
+    "n": "Nottingham Forest",
+    "v": 2,
+    "tid": 65,
+    "lost": 1,
+    "lostYears": [
+     1991
+    ]
    },
    {
     "n": "Bury",
@@ -94,42 +276,160 @@
     "tid": 1344
    },
    {
-    "n": "Nottingham Forest",
-    "v": 2,
-    "tid": 65
-   },
-   {
-    "n": "Old Etonians",
-    "v": 2
-   },
-   {
-    "n": "Portsmouth",
-    "v": 2,
-    "tid": 1355
-   },
-   {
-    "n": "Preston North End",
-    "v": 2,
-    "tid": 59
-   },
-   {
-    "n": "Sunderland",
-    "v": 2,
-    "tid": 746
-   },
-   {
-    "n": "Barnsley",
+    "n": "Huddersfield Town",
     "v": 1,
-    "tid": 747
+    "tid": 37,
+    "lost": 4,
+    "lostYears": [
+     1920,
+     1928,
+     1930,
+     1938
+    ]
    },
    {
-    "n": "Blackburn Olympic",
-    "v": 1
+    "n": "Leicester City",
+    "v": 1,
+    "tid": 46,
+    "lost": 4,
+    "lostYears": [
+     1949,
+     1961,
+     1963,
+     1969
+    ]
+   },
+   {
+    "n": "Derby County",
+    "v": 1,
+    "tid": 69,
+    "lost": 3,
+    "lostYears": [
+     1898,
+     1899,
+     1903
+    ]
+   },
+   {
+    "n": "Leeds United",
+    "v": 1,
+    "tid": 63,
+    "lost": 3,
+    "lostYears": [
+     1965,
+     1970,
+     1973
+    ]
+   },
+   {
+    "n": "Oxford University",
+    "v": 1,
+    "lost": 3,
+    "lostYears": [
+     1873,
+     1877,
+     1880
+    ]
+   },
+   {
+    "n": "Royal Engineers",
+    "v": 1,
+    "lost": 3,
+    "lostYears": [
+     1872,
+     1874,
+     1878
+    ]
+   },
+   {
+    "n": "Southampton",
+    "v": 1,
+    "tid": 41,
+    "lost": 3,
+    "lostYears": [
+     1900,
+     1902,
+     2003
+    ]
    },
    {
     "n": "Blackpool",
     "v": 1,
-    "tid": 1356
+    "tid": 1356,
+    "lost": 2,
+    "lostYears": [
+     1948,
+     1951
+    ]
+   },
+   {
+    "n": "Burnley",
+    "v": 1,
+    "tid": 44,
+    "lost": 2,
+    "lostYears": [
+     1947,
+     1962
+    ]
+   },
+   {
+    "n": "Cardiff City",
+    "v": 1,
+    "tid": 43,
+    "lost": 2,
+    "lostYears": [
+     1925,
+     2008
+    ]
+   },
+   {
+    "n": "Crystal Palace",
+    "v": 1,
+    "tid": 52,
+    "lost": 2,
+    "lostYears": [
+     1990,
+     2016
+    ]
+   },
+   {
+    "n": "Barnsley",
+    "v": 1,
+    "tid": 747,
+    "lost": 1,
+    "lostYears": [
+     1910
+    ]
+   },
+   {
+    "n": "Charlton Athletic",
+    "v": 1,
+    "tid": 1335,
+    "lost": 1,
+    "lostYears": [
+     1946
+    ]
+   },
+   {
+    "n": "Clapham Rovers",
+    "v": 1,
+    "lost": 1,
+    "lostYears": [
+     1879
+    ]
+   },
+   {
+    "n": "Notts County",
+    "v": 1,
+    "tid": 1376,
+    "lost": 1,
+    "lostYears": [
+     1891
+    ]
+   },
+   {
+    "n": "Blackburn Olympic",
+    "v": 1
    },
    {
     "n": "Bradford City",
@@ -137,43 +437,9 @@
     "tid": 1343
    },
    {
-    "n": "Burnley",
-    "v": 1,
-    "tid": 44
-   },
-   {
-    "n": "Cardiff City",
-    "v": 1,
-    "tid": 43
-   },
-   {
-    "n": "Charlton Athletic",
-    "v": 1,
-    "tid": 1335
-   },
-   {
-    "n": "Clapham Rovers",
-    "v": 1
-   },
-   {
     "n": "Coventry City",
     "v": 1,
     "tid": 1346
-   },
-   {
-    "n": "Crystal Palace",
-    "v": 1,
-    "tid": 52
-   },
-   {
-    "n": "Derby County",
-    "v": 1,
-    "tid": 69
-   },
-   {
-    "n": "Huddersfield Town",
-    "v": 1,
-    "tid": 37
    },
    {
     "n": "Ipswich Town",
@@ -181,36 +447,8 @@
     "tid": 57
    },
    {
-    "n": "Leeds United",
-    "v": 1,
-    "tid": 63
-   },
-   {
-    "n": "Leicester City",
-    "v": 1,
-    "tid": 46
-   },
-   {
-    "n": "Notts County",
-    "v": 1,
-    "tid": 1376
-   },
-   {
     "n": "Old Carthusians",
     "v": 1
-   },
-   {
-    "n": "Oxford University",
-    "v": 1
-   },
-   {
-    "n": "Royal Engineers",
-    "v": 1
-   },
-   {
-    "n": "Southampton",
-    "v": 1,
-    "tid": 41
    },
    {
     "n": "Wigan Athletic",
@@ -220,6 +458,116 @@
    {
     "n": "Wimbledon",
     "v": 1
+   },
+   {
+    "n": "Birmingham City",
+    "v": 0,
+    "tid": 54,
+    "lost": 2,
+    "lostYears": [
+     1931,
+     1956
+    ]
+   },
+   {
+    "n": "Queen's Park",
+    "v": 0,
+    "lost": 2,
+    "lostYears": [
+     1884,
+     1885
+    ]
+   },
+   {
+    "n": "Watford",
+    "v": 0,
+    "tid": 38,
+    "lost": 2,
+    "lostYears": [
+     1984,
+     2019
+    ]
+   },
+   {
+    "n": "Brighton & Hove Albion",
+    "v": 0,
+    "tid": 51,
+    "lost": 1,
+    "lostYears": [
+     1983
+    ]
+   },
+   {
+    "n": "Bristol City",
+    "v": 0,
+    "tid": 56,
+    "lost": 1,
+    "lostYears": [
+     1909
+    ]
+   },
+   {
+    "n": "Fulham",
+    "v": 0,
+    "tid": 36,
+    "lost": 1,
+    "lostYears": [
+     1975
+    ]
+   },
+   {
+    "n": "Hull City",
+    "v": 0,
+    "tid": 64,
+    "lost": 1,
+    "lostYears": [
+     2014
+    ]
+   },
+   {
+    "n": "Luton Town",
+    "v": 0,
+    "tid": 1359,
+    "lost": 1,
+    "lostYears": [
+     1959
+    ]
+   },
+   {
+    "n": "Middlesbrough",
+    "v": 0,
+    "tid": 70,
+    "lost": 1,
+    "lostYears": [
+     1997
+    ]
+   },
+   {
+    "n": "Millwall",
+    "v": 0,
+    "tid": 58,
+    "lost": 1,
+    "lostYears": [
+     2004
+    ]
+   },
+   {
+    "n": "Queens Park Rangers",
+    "v": 0,
+    "tid": 72,
+    "lost": 1,
+    "lostYears": [
+     1982
+    ]
+   },
+   {
+    "n": "Stoke City",
+    "v": 0,
+    "tid": 75,
+    "lost": 1,
+    "lostYears": [
+     2011
+    ]
    }
   ]
  },
@@ -230,57 +578,128 @@
    {
     "n": "Liverpool",
     "v": 10,
-    "tid": 40
+    "tid": 40,
+    "lost": 5,
+    "lostYears": [
+     1978,
+     1987,
+     2005,
+     2016,
+     2025
+    ]
    },
    {
     "n": "Manchester City",
     "v": 9,
-    "tid": 50
+    "tid": 50,
+    "lost": 1,
+    "lostYears": [
+     1974
+    ]
    },
    {
     "n": "Manchester United",
     "v": 6,
-    "tid": 33
-   },
-   {
-    "n": "Aston Villa",
-    "v": 5,
-    "tid": 66
+    "tid": 33,
+    "lost": 4,
+    "lostYears": [
+     1983,
+     1991,
+     1994,
+     2003
+    ]
    },
    {
     "n": "Chelsea",
     "v": 5,
-    "tid": 49
+    "tid": 49,
+    "lost": 5,
+    "lostYears": [
+     1972,
+     2008,
+     2019,
+     2022,
+     2024
+    ]
    },
    {
-    "n": "Nottingham Forest",
-    "v": 4,
-    "tid": 65
+    "n": "Aston Villa",
+    "v": 5,
+    "tid": 66,
+    "lost": 4,
+    "lostYears": [
+     1963,
+     1971,
+     2010,
+     2020
+    ]
    },
    {
     "n": "Tottenham Hotspur",
     "v": 4,
-    "tid": 47
+    "tid": 47,
+    "lost": 5,
+    "lostYears": [
+     1982,
+     2002,
+     2009,
+     2015,
+     2021
+    ]
+   },
+   {
+    "n": "Nottingham Forest",
+    "v": 4,
+    "tid": 65,
+    "lost": 2,
+    "lostYears": [
+     1980,
+     1992
+    ]
    },
    {
     "n": "Leicester City",
     "v": 3,
-    "tid": 46
+    "tid": 46,
+    "lost": 2,
+    "lostYears": [
+     1965,
+     1999
+    ]
    },
    {
     "n": "Arsenal",
     "v": 2,
-    "tid": 42
-   },
-   {
-    "n": "Birmingham City",
-    "v": 2,
-    "tid": 54
+    "tid": 42,
+    "lost": 7,
+    "lostYears": [
+     1968,
+     1969,
+     1988,
+     2007,
+     2011,
+     2018,
+     2026
+    ]
    },
    {
     "n": "Norwich City",
     "v": 2,
-    "tid": 71
+    "tid": 71,
+    "lost": 2,
+    "lostYears": [
+     1973,
+     1975
+    ]
+   },
+   {
+    "n": "Birmingham City",
+    "v": 2,
+    "tid": 54,
+    "lost": 1,
+    "lostYears": [
+     2001
+    ]
    },
    {
     "n": "Wolverhampton Wanderers",
@@ -288,49 +707,89 @@
     "tid": 39
    },
    {
+    "n": "Middlesbrough",
+    "v": 1,
+    "tid": 70,
+    "lost": 2,
+    "lostYears": [
+     1997,
+     1998
+    ]
+   },
+   {
+    "n": "Newcastle United",
+    "v": 1,
+    "tid": 34,
+    "lost": 2,
+    "lostYears": [
+     1976,
+     2023
+    ]
+   },
+   {
+    "n": "West Bromwich Albion",
+    "v": 1,
+    "tid": 60,
+    "lost": 2,
+    "lostYears": [
+     1967,
+     1970
+    ]
+   },
+   {
+    "n": "Leeds United",
+    "v": 1,
+    "tid": 63,
+    "lost": 1,
+    "lostYears": [
+     1996
+    ]
+   },
+   {
+    "n": "Luton Town",
+    "v": 1,
+    "tid": 1359,
+    "lost": 1,
+    "lostYears": [
+     1989
+    ]
+   },
+   {
+    "n": "Queens Park Rangers",
+    "v": 1,
+    "tid": 72,
+    "lost": 1,
+    "lostYears": [
+     1986
+    ]
+   },
+   {
+    "n": "Sheffield Wednesday",
+    "v": 1,
+    "tid": 74,
+    "lost": 1,
+    "lostYears": [
+     1993
+    ]
+   },
+   {
+    "n": "Stoke City",
+    "v": 1,
+    "tid": 75,
+    "lost": 1,
+    "lostYears": [
+     1964
+    ]
+   },
+   {
     "n": "Blackburn Rovers",
     "v": 1,
     "tid": 67
    },
    {
-    "n": "Leeds United",
-    "v": 1,
-    "tid": 63
-   },
-   {
-    "n": "Luton Town",
-    "v": 1,
-    "tid": 1359
-   },
-   {
-    "n": "Middlesbrough",
-    "v": 1,
-    "tid": 70
-   },
-   {
-    "n": "Newcastle United",
-    "v": 1,
-    "tid": 34
-   },
-   {
     "n": "Oxford United",
     "v": 1,
     "tid": 1338
-   },
-   {
-    "n": "Queens Park Rangers",
-    "v": 1,
-    "tid": 72
-   },
-   {
-    "n": "Sheffield Wednesday",
-    "v": 1,
-    "tid": 74
-   },
-   {
-    "n": "Stoke City",
-    "v": 1,
-    "tid": 75
    },
    {
     "n": "Swansea City",
@@ -343,9 +802,117 @@
     "tid": 1353
    },
    {
-    "n": "West Bromwich Albion",
-    "v": 1,
-    "tid": 60
+    "n": "Bolton Wanderers",
+    "v": 0,
+    "tid": 68,
+    "lost": 2,
+    "lostYears": [
+     1995,
+     2004
+    ]
+   },
+   {
+    "n": "Everton",
+    "v": 0,
+    "tid": 45,
+    "lost": 2,
+    "lostYears": [
+     1977,
+     1984
+    ]
+   },
+   {
+    "n": "Southampton",
+    "v": 0,
+    "tid": 41,
+    "lost": 2,
+    "lostYears": [
+     1979,
+     2017
+    ]
+   },
+   {
+    "n": "Sunderland",
+    "v": 0,
+    "tid": 746,
+    "lost": 2,
+    "lostYears": [
+     1985,
+     2014
+    ]
+   },
+   {
+    "n": "West Ham United",
+    "v": 0,
+    "tid": 48,
+    "lost": 2,
+    "lostYears": [
+     1966,
+     1981
+    ]
+   },
+   {
+    "n": "Bradford City",
+    "v": 0,
+    "tid": 1343,
+    "lost": 1,
+    "lostYears": [
+     2013
+    ]
+   },
+   {
+    "n": "Cardiff City",
+    "v": 0,
+    "tid": 43,
+    "lost": 1,
+    "lostYears": [
+     2012
+    ]
+   },
+   {
+    "n": "Oldham Athletic",
+    "v": 0,
+    "tid": 1349,
+    "lost": 1,
+    "lostYears": [
+     1990
+    ]
+   },
+   {
+    "n": "Rochdale",
+    "v": 0,
+    "tid": 1339,
+    "lost": 1,
+    "lostYears": [
+     1962
+    ]
+   },
+   {
+    "n": "Rotherham United",
+    "v": 0,
+    "tid": 73,
+    "lost": 1,
+    "lostYears": [
+     1961
+    ]
+   },
+   {
+    "n": "Tranmere Rovers",
+    "v": 0,
+    "tid": 1381,
+    "lost": 1,
+    "lostYears": [
+     2000
+    ]
+   },
+   {
+    "n": "Wigan Athletic",
+    "v": 0,
+    "tid": 61,
+    "lost": 1,
+    "lostYears": [
+     2006
+    ]
    }
   ]
  },
@@ -356,57 +923,179 @@
    {
     "n": "Barcelona",
     "v": 32,
-    "tid": 529
+    "tid": 529,
+    "lost": 11,
+    "lostYears": [
+     1919,
+     1932,
+     1936,
+     1954,
+     1974,
+     1984,
+     1986,
+     1996,
+     2011,
+     2014,
+     2019
+    ]
    },
    {
     "n": "Athletic Bilbao",
     "v": 24,
-    "tid": 531
+    "tid": 531,
+    "lost": 16,
+    "lostYears": [
+     1905,
+     1906,
+     1913,
+     1920,
+     1942,
+     1949,
+     1953,
+     1966,
+     1967,
+     1977,
+     1985,
+     2009,
+     2012,
+     2015,
+     2020,
+     2021
+    ]
    },
    {
     "n": "Real Madrid",
     "v": 20,
-    "tid": 541
+    "tid": 541,
+    "lost": 21,
+    "lostYears": [
+     1903,
+     1916,
+     1918,
+     1924,
+     1929,
+     1930,
+     1933,
+     1940,
+     1943,
+     1958,
+     1960,
+     1961,
+     1968,
+     1979,
+     1983,
+     1990,
+     1992,
+     2002,
+     2004,
+     2013,
+     2025
+    ]
    },
    {
     "n": "Atlético Madrid",
     "v": 10,
-    "tid": 530
+    "tid": 530,
+    "lost": 10,
+    "lostYears": [
+     1921,
+     1926,
+     1956,
+     1964,
+     1975,
+     1987,
+     1999,
+     2000,
+     2010,
+     2026
+    ]
    },
    {
     "n": "Valencia",
     "v": 8,
-    "tid": 532
+    "tid": 532,
+    "lost": 10,
+    "lostYears": [
+     1934,
+     1944,
+     1945,
+     1946,
+     1952,
+     1970,
+     1971,
+     1972,
+     1995,
+     2022
+    ]
    },
    {
     "n": "Zaragoza",
     "v": 6,
-    "tid": 732
+    "tid": 732,
+    "lost": 5,
+    "lostYears": [
+     1963,
+     1965,
+     1976,
+     1993,
+     2006
+    ]
    },
    {
     "n": "Sevilla",
     "v": 5,
-    "tid": 536
+    "tid": 536,
+    "lost": 4,
+    "lostYears": [
+     1955,
+     1962,
+     2016,
+     2018
+    ]
    },
    {
     "n": "Espanyol",
     "v": 4,
-    "tid": 540
+    "tid": 540,
+    "lost": 5,
+    "lostYears": [
+     1911,
+     1915,
+     1941,
+     1947,
+     1957
+    ]
    },
    {
     "n": "Real Sociedad",
     "v": 4,
-    "tid": 548
+    "tid": 548,
+    "lost": 4,
+    "lostYears": [
+     1913,
+     1928,
+     1951,
+     1988
+    ]
    },
    {
     "n": "Real Betis",
     "v": 3,
-    "tid": 543
+    "tid": 543,
+    "lost": 2,
+    "lostYears": [
+     1931,
+     1997
+    ]
    },
    {
     "n": "Real Unión",
     "v": 3,
-    "tid": 9586
+    "tid": 9586,
+    "lost": 1,
+    "lostYears": [
+     1922
+    ]
    },
    {
     "n": "Deportivo La Coruña",
@@ -416,16 +1105,160 @@
    {
     "n": "Arenas",
     "v": 1,
-    "tid": 9578
+    "tid": 9578,
+    "lost": 3,
+    "lostYears": [
+     1917,
+     1925,
+     1927
+    ]
    },
    {
     "n": "Mallorca",
     "v": 1,
-    "tid": 798
+    "tid": 798,
+    "lost": 3,
+    "lostYears": [
+     1991,
+     1998,
+     2024
+    ]
    },
    {
     "n": "Racing Club de Irún",
     "v": 1
+   },
+   {
+    "n": "Celta Vigo",
+    "v": 0,
+    "tid": 538,
+    "lost": 3,
+    "lostYears": [
+     1948,
+     1994,
+     2001
+    ]
+   },
+   {
+    "n": "Getafe",
+    "v": 0,
+    "tid": 546,
+    "lost": 2,
+    "lostYears": [
+     2007,
+     2008
+    ]
+   },
+   {
+    "n": "Osasuna",
+    "v": 0,
+    "tid": 727,
+    "lost": 2,
+    "lostYears": [
+     2005,
+     2023
+    ]
+   },
+   {
+    "n": "Sporting Gijón",
+    "v": 0,
+    "tid": 731,
+    "lost": 2,
+    "lostYears": [
+     1981,
+     1982
+    ]
+   },
+   {
+    "n": "Valladolid",
+    "v": 0,
+    "tid": 720,
+    "lost": 2,
+    "lostYears": [
+     1950,
+     1989
+    ]
+   },
+   {
+    "n": "Alavés",
+    "v": 0,
+    "tid": 542,
+    "lost": 1,
+    "lostYears": [
+     2017
+    ]
+   },
+   {
+    "n": "Castellón",
+    "v": 0,
+    "tid": 5254,
+    "lost": 1,
+    "lostYears": [
+     1973
+    ]
+   },
+   {
+    "n": "Elche",
+    "v": 0,
+    "tid": 797,
+    "lost": 1,
+    "lostYears": [
+     1969
+    ]
+   },
+   {
+    "n": "Granada",
+    "v": 0,
+    "tid": 715,
+    "lost": 1,
+    "lostYears": [
+     1959
+    ]
+   },
+   {
+    "n": "Las Palmas",
+    "v": 0,
+    "tid": 534,
+    "lost": 1,
+    "lostYears": [
+     1978
+    ]
+   },
+   {
+    "n": "Racing Ferrol",
+    "v": 0,
+    "tid": 9409,
+    "lost": 1,
+    "lostYears": [
+     1939
+    ]
+   },
+   {
+    "n": "Real Madrid Castilla",
+    "v": 0,
+    "tid": 9575,
+    "lost": 1,
+    "lostYears": [
+     1980
+    ]
+   },
+   {
+    "n": "Recreativo Huelva",
+    "v": 0,
+    "tid": 9410,
+    "lost": 1,
+    "lostYears": [
+     2003
+    ]
+   },
+   {
+    "n": "Sabadell",
+    "v": 0,
+    "tid": 9593,
+    "lost": 1,
+    "lostYears": [
+     1935
+    ]
    }
   ]
  },
@@ -436,86 +1269,208 @@
    {
     "n": "Bayern Munich",
     "v": 21,
-    "tid": 157
+    "tid": 157,
+    "lost": 4,
+    "lostYears": [
+     1985,
+     1999,
+     2012,
+     2018
+    ]
    },
    {
     "n": "Werder Bremen",
     "v": 6,
-    "tid": 162
-   },
-   {
-    "n": "Borussia Dortmund",
-    "v": 5,
-    "tid": 165
-   },
-   {
-    "n": "Eintracht Frankfurt",
-    "v": 5,
-    "tid": 169
+    "tid": 162,
+    "lost": 4,
+    "lostYears": [
+     1989,
+     1990,
+     2000,
+     2010
+    ]
    },
    {
     "n": "Schalke 04",
     "v": 5,
-    "tid": 174
+    "tid": 174,
+    "lost": 7,
+    "lostYears": [
+     1935,
+     1936,
+     1941,
+     1942,
+     1955,
+     1969,
+     2005
+    ]
+   },
+   {
+    "n": "Borussia Dortmund",
+    "v": 5,
+    "tid": 165,
+    "lost": 5,
+    "lostYears": [
+     1963,
+     2008,
+     2014,
+     2015,
+     2016
+    ]
+   },
+   {
+    "n": "Eintracht Frankfurt",
+    "v": 5,
+    "tid": 169,
+    "lost": 4,
+    "lostYears": [
+     1964,
+     2006,
+     2017,
+     2023
+    ]
    },
    {
     "n": "1. FC Köln",
     "v": 4,
-    "tid": 192
-   },
-   {
-    "n": "1. FC Nürnberg",
-    "v": 4,
-    "tid": 171
+    "tid": 192,
+    "lost": 6,
+    "lostYears": [
+     1954,
+     1970,
+     1971,
+     1973,
+     1980,
+     1991
+    ]
    },
    {
     "n": "VfB Stuttgart",
     "v": 4,
-    "tid": 172
+    "tid": 172,
+    "lost": 4,
+    "lostYears": [
+     1986,
+     2007,
+     2013,
+     2026
+    ]
    },
    {
-    "n": "Borussia Mönchengladbach",
-    "v": 3,
-    "tid": 163
+    "n": "1. FC Nürnberg",
+    "v": 4,
+    "tid": 171,
+    "lost": 2,
+    "lostYears": [
+     1940,
+     1982
+    ]
    },
    {
     "n": "Hamburger SV",
     "v": 3,
-    "tid": 175
+    "tid": 175,
+    "lost": 3,
+    "lostYears": [
+     1956,
+     1967,
+     1974
+    ]
+   },
+   {
+    "n": "Borussia Mönchengladbach",
+    "v": 3,
+    "tid": 163,
+    "lost": 2,
+    "lostYears": [
+     1984,
+     1992
+    ]
    },
    {
     "n": "1. FC Kaiserslautern",
     "v": 2,
-    "tid": 745
+    "tid": 745,
+    "lost": 6,
+    "lostYears": [
+     1961,
+     1972,
+     1976,
+     1981,
+     2003,
+     2024
+    ]
+   },
+   {
+    "n": "Fortuna Düsseldorf",
+    "v": 2,
+    "tid": 158,
+    "lost": 5,
+    "lostYears": [
+     1937,
+     1957,
+     1958,
+     1962,
+     1978
+    ]
    },
    {
     "n": "Bayer Leverkusen",
     "v": 2,
-    "tid": 168
+    "tid": 168,
+    "lost": 3,
+    "lostYears": [
+     2002,
+     2009,
+     2020
+    ]
+   },
+   {
+    "n": "Karlsruher SC",
+    "v": 2,
+    "tid": 785,
+    "lost": 2,
+    "lostYears": [
+     1960,
+     1996
+    ]
+   },
+   {
+    "n": "RB Leipzig",
+    "v": 2,
+    "tid": 173,
+    "lost": 2,
+    "lostYears": [
+     2019,
+     2021
+    ]
    },
    {
     "n": "Dresdner SC",
     "v": 2
    },
    {
-    "n": "Fortuna Düsseldorf",
-    "v": 2,
-    "tid": 158
-   },
-   {
-    "n": "Karlsruher SC",
-    "v": 2,
-    "tid": 785
-   },
-   {
-    "n": "RB Leipzig",
-    "v": 2,
-    "tid": 173
-   },
-   {
     "n": "TSV 1860 Munich",
     "v": 2,
     "tid": 786
+   },
+   {
+    "n": "Rot-Weiss Essen",
+    "v": 1,
+    "tid": 1621,
+    "lost": 1,
+    "lostYears": [
+     1994
+    ]
+   },
+   {
+    "n": "VfL Wolfsburg",
+    "v": 1,
+    "tid": 161,
+    "lost": 1,
+    "lostYears": [
+     1995
+    ]
    },
    {
     "n": "First Vienna",
@@ -541,11 +1496,6 @@
     "v": 1
    },
    {
-    "n": "Rot-Weiss Essen",
-    "v": 1,
-    "tid": 1621
-   },
-   {
     "n": "Schwarz-Weiß Essen",
     "v": 1
    },
@@ -554,9 +1504,127 @@
     "v": 1
    },
    {
-    "n": "VfL Wolfsburg",
-    "v": 1,
-    "tid": 161
+    "n": "MSV Duisburg",
+    "v": 0,
+    "tid": 187,
+    "lost": 4,
+    "lostYears": [
+     1966,
+     1975,
+     1998,
+     2011
+    ]
+   },
+   {
+    "n": "Alemannia Aachen",
+    "v": 0,
+    "tid": 4259,
+    "lost": 3,
+    "lostYears": [
+     1953,
+     1965,
+     2004
+    ]
+   },
+   {
+    "n": "Hertha BSC",
+    "v": 0,
+    "tid": 159,
+    "lost": 2,
+    "lostYears": [
+     1977,
+     1979
+    ]
+   },
+   {
+    "n": "VfL Bochum",
+    "v": 0,
+    "tid": 176,
+    "lost": 2,
+    "lostYears": [
+     1968,
+     1988
+    ]
+   },
+   {
+    "n": "Arminia Bielefeld",
+    "v": 0,
+    "tid": 188,
+    "lost": 1,
+    "lostYears": [
+     2025
+    ]
+   },
+   {
+    "n": "Borussia Neunkirchen",
+    "v": 0,
+    "lost": 1,
+    "lostYears": [
+     1959
+    ]
+   },
+   {
+    "n": "Energie Cottbus",
+    "v": 0,
+    "tid": 1320,
+    "lost": 1,
+    "lostYears": [
+     1997
+    ]
+   },
+   {
+    "n": "Fortuna Köln",
+    "v": 0,
+    "tid": 1326,
+    "lost": 1,
+    "lostYears": [
+     1983
+    ]
+   },
+   {
+    "n": "FSV Frankfurt",
+    "v": 0,
+    "tid": 1332,
+    "lost": 1,
+    "lostYears": [
+     1938
+    ]
+   },
+   {
+    "n": "SC Freiburg",
+    "v": 0,
+    "tid": 160,
+    "lost": 1,
+    "lostYears": [
+     2022
+    ]
+   },
+   {
+    "n": "Stuttgarter Kickers",
+    "v": 0,
+    "tid": 12868,
+    "lost": 1,
+    "lostYears": [
+     1987
+    ]
+   },
+   {
+    "n": "Union Berlin",
+    "v": 0,
+    "tid": 182,
+    "lost": 1,
+    "lostYears": [
+     2001
+    ]
+   },
+   {
+    "n": "Waldhof Mannheim",
+    "v": 0,
+    "tid": 4268,
+    "lost": 1,
+    "lostYears": [
+     1939
+    ]
    }
   ]
  },
@@ -567,115 +1635,277 @@
    {
     "n": "Paris Saint-Germain",
     "v": 16,
-    "tid": 85
+    "tid": 85,
+    "lost": 5,
+    "lostYears": [
+     1985,
+     2003,
+     2008,
+     2011,
+     2019
+    ]
    },
    {
     "n": "Marseille",
     "v": 10,
-    "tid": 81
-   },
-   {
-    "n": "Lille",
-    "v": 6,
-    "tid": 79
+    "tid": 81,
+    "lost": 9,
+    "lostYears": [
+     1934,
+     1940,
+     1954,
+     1986,
+     1987,
+     1991,
+     2006,
+     2007,
+     2016
+    ]
    },
    {
     "n": "Saint-Étienne",
     "v": 6,
-    "tid": 1063
+    "tid": 1063,
+    "lost": 4,
+    "lostYears": [
+     1960,
+     1981,
+     1982,
+     2020
+    ]
    },
    {
-    "n": "Lyon",
-    "v": 5,
-    "tid": 80
+    "n": "Lille",
+    "v": 6,
+    "tid": 79,
+    "lost": 3,
+    "lostYears": [
+     1939,
+     1945,
+     1949
+    ]
    },
    {
     "n": "Monaco",
     "v": 5,
-    "tid": 91
+    "tid": 91,
+    "lost": 5,
+    "lostYears": [
+     1974,
+     1984,
+     1989,
+     2010,
+     2021
+    ]
+   },
+   {
+    "n": "Lyon",
+    "v": 5,
+    "tid": 80,
+    "lost": 4,
+    "lostYears": [
+     1963,
+     1971,
+     1976,
+     2024
+    ]
    },
    {
     "n": "RC Paris",
-    "v": 5
+    "v": 5,
+    "lost": 3,
+    "lostYears": [
+     1930,
+     1950,
+     1990
+    ]
    },
    {
     "n": "Red Star",
     "v": 5,
-    "tid": 104
-   },
-   {
-    "n": "Auxerre",
-    "v": 4,
-    "tid": 108
+    "tid": 104,
+    "lost": 1,
+    "lostYears": [
+     1946
+    ]
    },
    {
     "n": "Bordeaux",
     "v": 4,
-    "tid": 78
+    "tid": 78,
+    "lost": 6,
+    "lostYears": [
+     1943,
+     1952,
+     1955,
+     1964,
+     1968,
+     1969
+    ]
    },
    {
     "n": "Nantes",
     "v": 4,
-    "tid": 83
+    "tid": 83,
+    "lost": 6,
+    "lostYears": [
+     1966,
+     1970,
+     1973,
+     1983,
+     1993,
+     2023
+    ]
    },
    {
-    "n": "Nice",
-    "v": 3,
-    "tid": 84
+    "n": "Auxerre",
+    "v": 4,
+    "tid": 108,
+    "lost": 2,
+    "lostYears": [
+     1979,
+     2015
+    ]
    },
    {
     "n": "Rennes",
     "v": 3,
-    "tid": 94
+    "tid": 94,
+    "lost": 4,
+    "lostYears": [
+     1922,
+     1935,
+     2009,
+     2014
+    ]
+   },
+   {
+    "n": "Nice",
+    "v": 3,
+    "tid": 84,
+    "lost": 3,
+    "lostYears": [
+     1978,
+     2022,
+     2026
+    ]
    },
    {
     "n": "Strasbourg",
     "v": 3,
-    "tid": 95
+    "tid": 95,
+    "lost": 3,
+    "lostYears": [
+     1937,
+     1947,
+     1995
+    ]
+   },
+   {
+    "n": "Sète",
+    "v": 2,
+    "tid": 3121,
+    "lost": 4,
+    "lostYears": [
+     1923,
+     1924,
+     1929,
+     1942
+    ]
+   },
+   {
+    "n": "Sedan",
+    "v": 2,
+    "tid": 1310,
+    "lost": 3,
+    "lostYears": [
+     1965,
+     1999,
+     2005
+    ]
+   },
+   {
+    "n": "Sochaux",
+    "v": 2,
+    "tid": 115,
+    "lost": 3,
+    "lostYears": [
+     1959,
+     1967,
+     1988
+    ]
+   },
+   {
+    "n": "Montpellier",
+    "v": 2,
+    "tid": 82,
+    "lost": 2,
+    "lostYears": [
+     1931,
+     1994
+    ]
+   },
+   {
+    "n": "Reims",
+    "v": 2,
+    "tid": 93,
+    "lost": 2,
+    "lostYears": [
+     1977,
+     2025
+    ]
+   },
+   {
+    "n": "Guingamp",
+    "v": 2,
+    "tid": 90,
+    "lost": 1,
+    "lostYears": [
+     1997
+    ]
+   },
+   {
+    "n": "Metz",
+    "v": 2,
+    "tid": 112,
+    "lost": 1,
+    "lostYears": [
+     1938
+    ]
    },
    {
     "n": "CASG Paris",
     "v": 2
    },
    {
-    "n": "Guingamp",
-    "v": 2,
-    "tid": 90
-   },
-   {
-    "n": "Metz",
-    "v": 2,
-    "tid": 112
-   },
-   {
-    "n": "Montpellier",
-    "v": 2,
-    "tid": 82
-   },
-   {
-    "n": "Reims",
-    "v": 2,
-    "tid": 93
-   },
-   {
-    "n": "Sedan",
-    "v": 2,
-    "tid": 1310
-   },
-   {
-    "n": "Sochaux",
-    "v": 2,
-    "tid": 115
-   },
-   {
-    "n": "Sète",
-    "v": 2,
-    "tid": 3121
+    "n": "Lens",
+    "v": 1,
+    "tid": 116,
+    "lost": 3,
+    "lostYears": [
+     1948,
+     1975,
+     1998
+    ]
    },
    {
     "n": "Bastia",
     "v": 1,
-    "tid": 1305
+    "tid": 1305,
+    "lost": 2,
+    "lostYears": [
+     1972,
+     2002
+    ]
+   },
+   {
+    "n": "Le Havre",
+    "v": 1,
+    "tid": 111,
+    "lost": 1,
+    "lostYears": [
+     1920
+    ]
    },
    {
     "n": "CA Paris",
@@ -689,16 +1919,6 @@
    {
     "n": "Club Français",
     "v": 1
-   },
-   {
-    "n": "Le Havre",
-    "v": 1,
-    "tid": 111
-   },
-   {
-    "n": "Lens",
-    "v": 1,
-    "tid": 116
    },
    {
     "n": "Lorient",
@@ -723,6 +1943,99 @@
     "n": "Toulouse",
     "v": 1,
     "tid": 96
+   },
+   {
+    "n": "Nimes",
+    "v": 0,
+    "tid": 92,
+    "lost": 3,
+    "lostYears": [
+     1958,
+     1961,
+     1996
+    ]
+   },
+   {
+    "n": "Angers",
+    "v": 0,
+    "tid": 77,
+    "lost": 2,
+    "lostYears": [
+     1957,
+     2017
+    ]
+   },
+   {
+    "n": "Quevilly-Rouen",
+    "v": 0,
+    "tid": 431,
+    "lost": 2,
+    "lostYears": [
+     1927,
+     2012
+    ]
+   },
+   {
+    "n": "Amiens",
+    "v": 0,
+    "tid": 87,
+    "lost": 1,
+    "lostYears": [
+     2001
+    ]
+   },
+   {
+    "n": "Calais RUFC",
+    "v": 0,
+    "lost": 1,
+    "lostYears": [
+     2000
+    ]
+   },
+   {
+    "n": "Chateauroux",
+    "v": 0,
+    "tid": 107,
+    "lost": 1,
+    "lostYears": [
+     2004
+    ]
+   },
+   {
+    "n": "Evian TG",
+    "v": 0,
+    "tid": 3006,
+    "lost": 1,
+    "lostYears": [
+     2013
+    ]
+   },
+   {
+    "n": "Les Herbiers",
+    "v": 0,
+    "tid": 1308,
+    "lost": 1,
+    "lostYears": [
+     2018
+    ]
+   },
+   {
+    "n": "Orléans",
+    "v": 0,
+    "tid": 103,
+    "lost": 1,
+    "lostYears": [
+     1980
+    ]
+   },
+   {
+    "n": "Valenciennes",
+    "v": 0,
+    "tid": 105,
+    "lost": 1,
+    "lostYears": [
+     1951
+    ]
    }
   ]
  },
@@ -733,12 +2046,22 @@
    {
     "n": "Paris Saint-Germain",
     "v": 9,
-    "tid": 85
+    "tid": 85,
+    "lost": 1,
+    "lostYears": [
+     2000
+    ]
    },
    {
     "n": "Bordeaux",
     "v": 3,
-    "tid": 78
+    "tid": 78,
+    "lost": 3,
+    "lostYears": [
+     1997,
+     1998,
+     2010
+    ]
    },
    {
     "n": "Marseille",
@@ -751,29 +2074,60 @@
     "tid": 95
    },
    {
-    "n": "Gueugnon",
-    "v": 1,
-    "tid": 3056
-   },
-   {
-    "n": "Lens",
-    "v": 1,
-    "tid": 116
-   },
-   {
     "n": "Lyon",
     "v": 1,
-    "tid": 80
-   },
-   {
-    "n": "Metz",
-    "v": 1,
-    "tid": 112
+    "tid": 80,
+    "lost": 5,
+    "lostYears": [
+     1996,
+     2007,
+     2012,
+     2014,
+     2020
+    ]
    },
    {
     "n": "Monaco",
     "v": 1,
-    "tid": 91
+    "tid": 91,
+    "lost": 3,
+    "lostYears": [
+     2001,
+     2017,
+     2018
+    ]
+   },
+   {
+    "n": "Lens",
+    "v": 1,
+    "tid": 116,
+    "lost": 1,
+    "lostYears": [
+     2008
+    ]
+   },
+   {
+    "n": "Metz",
+    "v": 1,
+    "tid": 112,
+    "lost": 1,
+    "lostYears": [
+     1999
+    ]
+   },
+   {
+    "n": "Sochaux",
+    "v": 1,
+    "tid": 115,
+    "lost": 1,
+    "lostYears": [
+     2003
+    ]
+   },
+   {
+    "n": "Gueugnon",
+    "v": 1,
+    "tid": 3056
    },
    {
     "n": "Nancy",
@@ -786,9 +2140,22 @@
     "tid": 1063
    },
    {
-    "n": "Sochaux",
-    "v": 1,
-    "tid": 115
+    "n": "Montpellier",
+    "v": 0,
+    "tid": 82,
+    "lost": 1,
+    "lostYears": [
+     2011
+    ]
+   },
+   {
+    "n": "Nantes",
+    "v": 0,
+    "tid": 83,
+    "lost": 1,
+    "lostYears": [
+     2004
+    ]
    }
   ]
  },
@@ -799,47 +2166,139 @@
    {
     "n": "Juventus",
     "v": 15,
-    "tid": 496
+    "tid": 496,
+    "lost": 7,
+    "lostYears": [
+     1973,
+     1992,
+     2002,
+     2004,
+     2012,
+     2020,
+     2022
+    ]
    },
    {
     "n": "Inter Milan",
     "v": 10,
-    "tid": 505
+    "tid": 505,
+    "lost": 6,
+    "lostYears": [
+     1959,
+     1965,
+     1977,
+     2000,
+     2007,
+     2008
+    ]
    },
    {
     "n": "Roma",
     "v": 9,
-    "tid": 497
+    "tid": 497,
+    "lost": 8,
+    "lostYears": [
+     1937,
+     1941,
+     1993,
+     2003,
+     2005,
+     2006,
+     2010,
+     2013
+    ]
    },
    {
     "n": "Lazio",
     "v": 7,
-    "tid": 487
+    "tid": 487,
+    "lost": 4,
+    "lostYears": [
+     1961,
+     2015,
+     2017,
+     2026
+    ]
    },
    {
     "n": "Fiorentina",
     "v": 6,
-    "tid": 502
+    "tid": 502,
+    "lost": 5,
+    "lostYears": [
+     1958,
+     1960,
+     1999,
+     2014,
+     2023
+    ]
    },
    {
     "n": "Napoli",
     "v": 6,
-    "tid": 492
+    "tid": 492,
+    "lost": 4,
+    "lostYears": [
+     1972,
+     1978,
+     1989,
+     1997
+    ]
    },
    {
     "n": "AC Milan",
     "v": 5,
-    "tid": 489
+    "tid": 489,
+    "lost": 10,
+    "lostYears": [
+     1942,
+     1968,
+     1971,
+     1975,
+     1985,
+     1990,
+     1998,
+     2016,
+     2018,
+     2025
+    ]
    },
    {
     "n": "Torino",
     "v": 5,
-    "tid": 503
+    "tid": 503,
+    "lost": 8,
+    "lostYears": [
+     1938,
+     1963,
+     1964,
+     1970,
+     1980,
+     1981,
+     1982,
+     1988
+    ]
    },
    {
     "n": "Sampdoria",
     "v": 4,
-    "tid": 498
+    "tid": 498,
+    "lost": 3,
+    "lostYears": [
+     1986,
+     1991,
+     2009
+    ]
+   },
+   {
+    "n": "Parma",
+    "v": 3,
+    "tid": 523,
+    "lost": 2,
+    "lostYears": [
+     1995,
+     2001
+    ]
    },
    {
     "n": "Bologna",
@@ -847,19 +2306,35 @@
     "tid": 500
    },
    {
-    "n": "Parma",
-    "v": 3,
-    "tid": 523
-   },
-   {
     "n": "Atalanta",
     "v": 1,
-    "tid": 499
+    "tid": 499,
+    "lost": 5,
+    "lostYears": [
+     1987,
+     1996,
+     2019,
+     2021,
+     2024
+    ]
    },
    {
     "n": "Genoa",
     "v": 1,
-    "tid": 495
+    "tid": 495,
+    "lost": 1,
+    "lostYears": [
+     1940
+    ]
+   },
+   {
+    "n": "Venezia",
+    "v": 1,
+    "tid": 517,
+    "lost": 1,
+    "lostYears": [
+     1943
+    ]
    },
    {
     "n": "Vado",
@@ -867,14 +2342,103 @@
     "tid": 9442
    },
    {
-    "n": "Venezia",
-    "v": 1,
-    "tid": 517
-   },
-   {
     "n": "Vicenza",
     "v": 1,
     "tid": 1584
+   },
+   {
+    "n": "Hellas Verona",
+    "v": 0,
+    "tid": 504,
+    "lost": 3,
+    "lostYears": [
+     1976,
+     1983,
+     1984
+    ]
+   },
+   {
+    "n": "Palermo",
+    "v": 0,
+    "tid": 522,
+    "lost": 3,
+    "lostYears": [
+     1974,
+     1979,
+     2011
+    ]
+   },
+   {
+    "n": "Alessandria",
+    "v": 0,
+    "tid": 878,
+    "lost": 1,
+    "lostYears": [
+     1936
+    ]
+   },
+   {
+    "n": "Ancona",
+    "v": 0,
+    "tid": 897,
+    "lost": 1,
+    "lostYears": [
+     1994
+    ]
+   },
+   {
+    "n": "Cagliari",
+    "v": 0,
+    "tid": 490,
+    "lost": 1,
+    "lostYears": [
+     1969
+    ]
+   },
+   {
+    "n": "Catanzaro",
+    "v": 0,
+    "tid": 1687,
+    "lost": 1,
+    "lostYears": [
+     1966
+    ]
+   },
+   {
+    "n": "Novara",
+    "v": 0,
+    "tid": 513,
+    "lost": 1,
+    "lostYears": [
+     1939
+    ]
+   },
+   {
+    "n": "Padova",
+    "v": 0,
+    "tid": 870,
+    "lost": 1,
+    "lostYears": [
+     1967
+    ]
+   },
+   {
+    "n": "Spal",
+    "v": 0,
+    "tid": 493,
+    "lost": 1,
+    "lostYears": [
+     1962
+    ]
+   },
+   {
+    "n": "Udinese",
+    "v": 0,
+    "tid": 494,
+    "lost": 1,
+    "lostYears": [
+     1922
+    ]
    }
   ]
  },
@@ -885,50 +2449,133 @@
    {
     "n": "Ajax",
     "v": 20,
-    "tid": 194
+    "tid": 194,
+    "lost": 8,
+    "lostYears": [
+     1968,
+     1978,
+     1980,
+     1981,
+     2011,
+     2014,
+     2022,
+     2023
+    ]
    },
    {
     "n": "Feyenoord",
     "v": 14,
-    "tid": 209
+    "tid": 209,
+    "lost": 4,
+    "lostYears": [
+     1934,
+     1957,
+     2003,
+     2010
+    ]
    },
    {
     "n": "PSV Eindhoven",
     "v": 11,
-    "tid": 197
+    "tid": 197,
+    "lost": 8,
+    "lostYears": [
+     1932,
+     1939,
+     1969,
+     1970,
+     1998,
+     2001,
+     2006,
+     2013
+    ]
    },
    {
     "n": "AZ Alkmaar",
     "v": 5,
-    "tid": 201
+    "tid": 201,
+    "lost": 4,
+    "lostYears": [
+     2007,
+     2017,
+     2018,
+     2025
+    ]
    },
    {
     "n": "Quick (H)",
     "v": 4
    },
    {
-    "n": "HFC",
-    "v": 3
-   },
-   {
-    "n": "Sparta Rotterdam",
-    "v": 3,
-    "tid": 426
-   },
-   {
     "n": "Twente",
     "v": 3,
-    "tid": 415
+    "tid": 415,
+    "lost": 4,
+    "lostYears": [
+     1975,
+     1979,
+     2004,
+     2009
+    ]
    },
    {
     "n": "Utrecht",
     "v": 3,
-    "tid": 207
+    "tid": 207,
+    "lost": 3,
+    "lostYears": [
+     1982,
+     2002,
+     2016
+    ]
+   },
+   {
+    "n": "Sparta Rotterdam",
+    "v": 3,
+    "tid": 426,
+    "lost": 2,
+    "lostYears": [
+     1971,
+     1996
+    ]
+   },
+   {
+    "n": "HFC",
+    "v": 3
    },
    {
     "n": "ADO Den Haag",
     "v": 2,
-    "tid": 198
+    "tid": 198,
+    "lost": 4,
+    "lostYears": [
+     1959,
+     1963,
+     1964,
+     1966
+    ]
+   },
+   {
+    "n": "Roda JC",
+    "v": 2,
+    "tid": 414,
+    "lost": 4,
+    "lostYears": [
+     1976,
+     1988,
+     1992,
+     2008
+    ]
+   },
+   {
+    "n": "Willem II",
+    "v": 2,
+    "tid": 195,
+    "lost": 2,
+    "lostYears": [
+     2005,
+     2019
+    ]
    },
    {
     "n": "DFC",
@@ -939,21 +2586,16 @@
     "v": 2
    },
    {
-    "n": "HBS Craeyenhout",
+    "n": "Haarlem",
     "v": 2
    },
    {
-    "n": "Haarlem",
+    "n": "HBS Craeyenhout",
     "v": 2
    },
    {
     "n": "RCH",
     "v": 2
-   },
-   {
-    "n": "Roda JC",
-    "v": 2,
-    "tid": 414
    },
    {
     "n": "VOC Rotterdam",
@@ -964,16 +2606,73 @@
     "v": 2
    },
    {
-    "n": "Willem II",
-    "v": 2,
-    "tid": 195
+    "n": "Vitesse",
+    "v": 1,
+    "tid": 200,
+    "lost": 4,
+    "lostYears": [
+     1912,
+     1927,
+     1990,
+     2021
+    ]
    },
    {
-    "n": "CVV",
-    "v": 1
+    "n": "NAC Breda",
+    "v": 1,
+    "tid": 203,
+    "lost": 3,
+    "lostYears": [
+     1961,
+     1967,
+     1974
+    ]
+   },
+   {
+    "n": "PEC Zwolle",
+    "v": 1,
+    "tid": 193,
+    "lost": 3,
+    "lostYears": [
+     1928,
+     1977,
+     2015
+    ]
+   },
+   {
+    "n": "Heerenveen",
+    "v": 1,
+    "tid": 210,
+    "lost": 2,
+    "lostYears": [
+     1993,
+     1997
+    ]
+   },
+   {
+    "n": "Go Ahead Eagles",
+    "v": 1,
+    "tid": 410,
+    "lost": 1,
+    "lostYears": [
+     1965
+    ]
+   },
+   {
+    "n": "Groningen",
+    "v": 1,
+    "tid": 202,
+    "lost": 1,
+    "lostYears": [
+     1989
+    ]
    },
    {
     "n": "Concordia",
+    "v": 1
+   },
+   {
+    "n": "CVV",
     "v": 1
    },
    {
@@ -982,37 +2681,12 @@
     "tid": 422
    },
    {
-    "n": "Go Ahead Eagles",
-    "v": 1,
-    "tid": 410
-   },
-   {
-    "n": "Groningen",
-    "v": 1,
-    "tid": 202
-   },
-   {
     "n": "HVV Den Haag",
     "v": 1
    },
    {
-    "n": "Heerenveen",
-    "v": 1,
-    "tid": 210
-   },
-   {
     "n": "LONGA",
     "v": 1
-   },
-   {
-    "n": "NAC Breda",
-    "v": 1,
-    "tid": 203
-   },
-   {
-    "n": "PEC Zwolle",
-    "v": 1,
-    "tid": 193
    },
    {
     "n": "Quick 1888",
@@ -1031,6 +2705,14 @@
     "v": 1
    },
    {
+    "n": "Velocitas Breda",
+    "v": 1
+   },
+   {
+    "n": "Velocitas Groningen",
+    "v": 1
+   },
+   {
     "n": "VSV Velsen",
     "v": 1
    },
@@ -1044,21 +2726,87 @@
     "tid": 204
    },
    {
-    "n": "Velocitas Breda",
-    "v": 1
-   },
-   {
-    "n": "Velocitas Groningen",
-    "v": 1
-   },
-   {
-    "n": "Vitesse",
-    "v": 1,
-    "tid": 200
-   },
-   {
     "n": "ZFC",
     "v": 1
+   },
+   {
+    "n": "NEC Nijmegen",
+    "v": 0,
+    "tid": 413,
+    "lost": 6,
+    "lostYears": [
+     1973,
+     1983,
+     1994,
+     2000,
+     2024,
+     2026
+    ]
+   },
+   {
+    "n": "FC Volendam",
+    "v": 0,
+    "tid": 416,
+    "lost": 2,
+    "lostYears": [
+     1958,
+     1995
+    ]
+   },
+   {
+    "n": "Fortuna Sittard",
+    "v": 0,
+    "tid": 205,
+    "lost": 2,
+    "lostYears": [
+     1984,
+     1999
+    ]
+   },
+   {
+    "n": "Helmond Sport",
+    "v": 0,
+    "tid": 424,
+    "lost": 2,
+    "lostYears": [
+     1935,
+     1985
+    ]
+   },
+   {
+    "n": "Excelsior",
+    "v": 0,
+    "tid": 196,
+    "lost": 1,
+    "lostYears": [
+     1930
+    ]
+   },
+   {
+    "n": "FC Den Bosch",
+    "v": 0,
+    "tid": 421,
+    "lost": 1,
+    "lostYears": [
+     1991
+    ]
+   },
+   {
+    "n": "Heracles",
+    "v": 0,
+    "tid": 206,
+    "lost": 1,
+    "lostYears": [
+     2012
+    ]
+   },
+   {
+    "n": "RBC Roosendaal",
+    "v": 0,
+    "lost": 1,
+    "lostYears": [
+     1986
+    ]
    }
   ]
  },
@@ -1069,42 +2817,169 @@
    {
     "n": "Benfica",
     "v": 26,
-    "tid": 211
+    "tid": 211,
+    "lost": 13,
+    "lostYears": [
+     1939,
+     1958,
+     1965,
+     1971,
+     1974,
+     1975,
+     1989,
+     1997,
+     2005,
+     2013,
+     2020,
+     2021,
+     2025
+    ]
    },
    {
     "n": "FC Porto",
     "v": 20,
-    "tid": 212
+    "tid": 212,
+    "lost": 14,
+    "lostYears": [
+     1953,
+     1959,
+     1961,
+     1964,
+     1978,
+     1980,
+     1981,
+     1983,
+     1985,
+     1992,
+     2004,
+     2008,
+     2016,
+     2019
+    ]
    },
    {
     "n": "Sporting CP",
     "v": 18,
-    "tid": 228
+    "tid": 228,
+    "lost": 14,
+    "lostYears": [
+     1952,
+     1955,
+     1960,
+     1970,
+     1972,
+     1979,
+     1987,
+     1994,
+     1996,
+     2000,
+     2012,
+     2018,
+     2024,
+     2026
+    ]
    },
    {
     "n": "Boavista",
     "v": 5,
-    "tid": 222
-   },
-   {
-    "n": "Belenenses",
-    "v": 3,
-    "tid": 221
-   },
-   {
-    "n": "Braga",
-    "v": 3,
-    "tid": 217
+    "tid": 222,
+    "lost": 1,
+    "lostYears": [
+     1993
+    ]
    },
    {
     "n": "Vitoria Setubal",
     "v": 3,
-    "tid": 219
+    "tid": 219,
+    "lost": 7,
+    "lostYears": [
+     1943,
+     1954,
+     1962,
+     1966,
+     1968,
+     1973,
+     2006
+    ]
+   },
+   {
+    "n": "Belenenses",
+    "v": 3,
+    "tid": 221,
+    "lost": 5,
+    "lostYears": [
+     1940,
+     1941,
+     1948,
+     1986,
+     2007
+    ]
+   },
+   {
+    "n": "Braga",
+    "v": 3,
+    "tid": 217,
+    "lost": 5,
+    "lostYears": [
+     1977,
+     1982,
+     1998,
+     2015,
+     2023
+    ]
    },
    {
     "n": "Académica",
     "v": 2,
-    "tid": 239
+    "tid": 239,
+    "lost": 3,
+    "lostYears": [
+     1951,
+     1967,
+     1969
+    ]
+   },
+   {
+    "n": "Vitória de Guimarães",
+    "v": 1,
+    "tid": 224,
+    "lost": 6,
+    "lostYears": [
+     1942,
+     1963,
+     1976,
+     1988,
+     2011,
+     2017
+    ]
+   },
+   {
+    "n": "Beira-Mar",
+    "v": 1,
+    "tid": 4661,
+    "lost": 1,
+    "lostYears": [
+     1991
+    ]
+   },
+   {
+    "n": "Leixões",
+    "v": 1,
+    "tid": 244,
+    "lost": 1,
+    "lostYears": [
+     2002
+    ]
+   },
+   {
+    "n": "Torreense",
+    "v": 1,
+    "tid": 4799,
+    "lost": 1,
+    "lostYears": [
+     1956
+    ]
    },
    {
     "n": "Aves",
@@ -1112,29 +2987,119 @@
     "tid": 220
    },
    {
-    "n": "Beira-Mar",
-    "v": 1,
-    "tid": 4661
-   },
-   {
     "n": "Estrela da Amadora",
     "v": 1,
     "tid": 15130
    },
    {
-    "n": "Leixões",
-    "v": 1,
-    "tid": 244
+    "n": "Atlético CP",
+    "v": 0,
+    "tid": 4872,
+    "lost": 2,
+    "lostYears": [
+     1946,
+     1949
+    ]
    },
    {
-    "n": "Torreense",
-    "v": 1,
-    "tid": 4799
+    "n": "Marítimo",
+    "v": 0,
+    "tid": 214,
+    "lost": 2,
+    "lostYears": [
+     1995,
+     2001
+    ]
    },
    {
-    "n": "Vitória de Guimarães",
-    "v": 1,
-    "tid": 224
+    "n": "Rio Ave",
+    "v": 0,
+    "tid": 226,
+    "lost": 2,
+    "lostYears": [
+     1984,
+     2014
+    ]
+   },
+   {
+    "n": "Campomaiorense",
+    "v": 0,
+    "lost": 1,
+    "lostYears": [
+     1999
+    ]
+   },
+   {
+    "n": "Chaves",
+    "v": 0,
+    "tid": 223,
+    "lost": 1,
+    "lostYears": [
+     2010
+    ]
+   },
+   {
+    "n": "Estoril",
+    "v": 0,
+    "tid": 230,
+    "lost": 1,
+    "lostYears": [
+     1944
+    ]
+   },
+   {
+    "n": "Farense",
+    "v": 0,
+    "tid": 231,
+    "lost": 1,
+    "lostYears": [
+     1990
+    ]
+   },
+   {
+    "n": "Olhanense",
+    "v": 0,
+    "tid": 807,
+    "lost": 1,
+    "lostYears": [
+     1945
+    ]
+   },
+   {
+    "n": "Pacos Ferreira",
+    "v": 0,
+    "tid": 234,
+    "lost": 1,
+    "lostYears": [
+     2009
+    ]
+   },
+   {
+    "n": "SC Covilha",
+    "v": 0,
+    "tid": 236,
+    "lost": 1,
+    "lostYears": [
+     1957
+    ]
+   },
+   {
+    "n": "Tondela",
+    "v": 0,
+    "tid": 218,
+    "lost": 1,
+    "lostYears": [
+     2022
+    ]
+   },
+   {
+    "n": "União de Leiria",
+    "v": 0,
+    "tid": 4662,
+    "lost": 1,
+    "lostYears": [
+     2003
+    ]
    }
   ]
  },
@@ -1145,75 +3110,111 @@
    {
     "n": "Celtic",
     "v": 43,
-    "tid": 247
+    "tid": 247,
+    "lost": 19,
+    "lastLost": 2025
    },
    {
     "n": "Rangers",
     "v": 34,
-    "tid": 257
+    "tid": 257,
+    "lost": 19,
+    "lastLost": 2024
    },
    {
     "n": "Queen's Park",
     "v": 10,
-    "tid": 6778
+    "tid": 6778,
+    "lost": 2,
+    "lastLost": 1900
    },
    {
     "n": "Aberdeen",
     "v": 8,
-    "tid": 252
+    "tid": 252,
+    "lost": 9,
+    "lastLost": 2017
    },
    {
     "n": "Heart of Midlothian",
     "v": 8,
-    "tid": 254
-   },
-   {
-    "n": "Clyde",
-    "v": 3,
-    "tid": 6762
+    "tid": 254,
+    "lost": 9,
+    "lastLost": 2022
    },
    {
     "n": "Hibernian",
     "v": 3,
-    "tid": 249
+    "tid": 249,
+    "lost": 12,
+    "lastLost": 2021
    },
    {
     "n": "Kilmarnock",
     "v": 3,
-    "tid": 250
+    "tid": 250,
+    "lost": 5,
+    "lastLost": 1960
+   },
+   {
+    "n": "Vale of Leven",
+    "v": 3,
+    "lost": 4,
+    "lastLost": 1890
+   },
+   {
+    "n": "Clyde",
+    "v": 3,
+    "tid": 6762,
+    "lost": 3,
+    "lastLost": 1949
    },
    {
     "n": "St Mirren",
     "v": 3,
-    "tid": 251
-   },
-   {
-    "n": "Vale of Leven",
-    "v": 3
+    "tid": 251,
+    "lost": 3,
+    "lastLost": 1962
    },
    {
     "n": "Dundee United",
     "v": 2,
-    "tid": 1386
-   },
-   {
-    "n": "Dunfermline",
-    "v": 2,
-    "tid": 1388
-   },
-   {
-    "n": "Falkirk",
-    "v": 2,
-    "tid": 1389
+    "tid": 1386,
+    "lost": 8,
+    "lastLost": 2014
    },
    {
     "n": "Motherwell",
     "v": 2,
-    "tid": 256
+    "tid": 256,
+    "lost": 6,
+    "lastLost": 2018
+   },
+   {
+    "n": "Dunfermline",
+    "v": 2,
+    "tid": 1388,
+    "lost": 4,
+    "lastLost": 2026
+   },
+   {
+    "n": "Third Lanark",
+    "v": 2,
+    "lost": 4,
+    "lastLost": 1936
+   },
+   {
+    "n": "Falkirk",
+    "v": 2,
+    "tid": 1389,
+    "lost": 3,
+    "lastLost": 2015
    },
    {
     "n": "Renton",
-    "v": 2
+    "v": 2,
+    "lost": 3,
+    "lastLost": 1895
    },
    {
     "n": "St Johnstone",
@@ -1221,47 +3222,98 @@
     "tid": 258
    },
    {
-    "n": "Third Lanark",
-    "v": 2
-   },
-   {
-    "n": "Airdrieonians",
-    "v": 1,
-    "tid": 4668
-   },
-   {
     "n": "Dumbarton",
     "v": 1,
-    "tid": 1382
+    "tid": 1382,
+    "lost": 5,
+    "lastLost": 1897
    },
    {
     "n": "Dundee",
     "v": 1,
-    "tid": 253
+    "tid": 253,
+    "lost": 4,
+    "lastLost": 2003
+   },
+   {
+    "n": "Airdrieonians",
+    "v": 1,
+    "tid": 4668,
+    "lost": 3,
+    "lastLost": 1995
    },
    {
     "n": "East Fife",
     "v": 1,
-    "tid": 6764
+    "tid": 6764,
+    "lost": 2,
+    "lastLost": 1950
    },
    {
     "n": "Greenock Morton",
     "v": 1,
-    "tid": 1383
+    "tid": 1383,
+    "lost": 1,
+    "lastLost": 1948
    },
    {
     "n": "Inverness Caledonian Thistle",
     "v": 1,
-    "tid": 903
+    "tid": 903,
+    "lost": 1,
+    "lastLost": 2023
    },
    {
     "n": "Partick Thistle",
     "v": 1,
-    "tid": 901
+    "tid": 901,
+    "lost": 1,
+    "lastLost": 1930
    },
    {
     "n": "St Bernard's",
     "v": 1
+   },
+   {
+    "n": "Hamilton Academical",
+    "v": 0,
+    "tid": 248,
+    "lost": 2,
+    "lastLost": 1935
+   },
+   {
+    "n": "Albion Rovers",
+    "v": 0,
+    "tid": 6756,
+    "lost": 1,
+    "lastLost": 1920
+   },
+   {
+    "n": "Gretna",
+    "v": 0,
+    "lost": 1,
+    "lastLost": 2006
+   },
+   {
+    "n": "Queen of the South",
+    "v": 0,
+    "tid": 1384,
+    "lost": 1,
+    "lastLost": 2008
+   },
+   {
+    "n": "Raith Rovers",
+    "v": 0,
+    "tid": 1385,
+    "lost": 1,
+    "lastLost": 1913
+   },
+   {
+    "n": "Ross County",
+    "v": 0,
+    "tid": 902,
+    "lost": 1,
+    "lastLost": 2010
    }
   ]
  },
@@ -1272,27 +3324,100 @@
    {
     "n": "Rangers",
     "v": 28,
-    "tid": 257
+    "tid": 257,
+    "lost": 10,
+    "lostYears": [
+     1952,
+     1958,
+     1966,
+     1967,
+     1983,
+     1990,
+     2009,
+     2020,
+     2023,
+     2025
+    ]
    },
    {
     "n": "Celtic",
     "v": 22,
-    "tid": 247
+    "tid": 247,
+    "lost": 16,
+    "lostYears": [
+     1965,
+     1971,
+     1972,
+     1973,
+     1974,
+     1976,
+     1977,
+     1978,
+     1984,
+     1987,
+     1991,
+     1995,
+     2003,
+     2011,
+     2012,
+     2026
+    ]
    },
    {
     "n": "Aberdeen",
     "v": 6,
-    "tid": 252
+    "tid": 252,
+    "lost": 10,
+    "lostYears": [
+     1947,
+     1979,
+     1980,
+     1988,
+     1989,
+     1993,
+     2000,
+     2017,
+     2019,
+     2024
+    ]
    },
    {
     "n": "Heart of Midlothian",
     "v": 4,
-    "tid": 254
+    "tid": 254,
+    "lost": 3,
+    "lostYears": [
+     1962,
+     1997,
+     2013
+    ]
+   },
+   {
+    "n": "Hibernian",
+    "v": 3,
+    "tid": 249,
+    "lost": 8,
+    "lostYears": [
+     1951,
+     1969,
+     1975,
+     1986,
+     1994,
+     2004,
+     2016,
+     2022
+    ]
    },
    {
     "n": "Dundee",
     "v": 3,
-    "tid": 253
+    "tid": 253,
+    "lost": 3,
+    "lostYears": [
+     1968,
+     1981,
+     1996
+    ]
    },
    {
     "n": "East Fife",
@@ -1300,44 +3425,90 @@
     "tid": 6764
    },
    {
-    "n": "Hibernian",
-    "v": 3,
-    "tid": 249
-   },
-   {
     "n": "Dundee United",
     "v": 2,
-    "tid": 1386
+    "tid": 1386,
+    "lost": 5,
+    "lostYears": [
+     1982,
+     1985,
+     1998,
+     2008,
+     2015
+    ]
    },
    {
     "n": "St Mirren",
     "v": 2,
-    "tid": 251
+    "tid": 251,
+    "lost": 2,
+    "lostYears": [
+     1956,
+     2010
+    ]
    },
    {
     "n": "Kilmarnock",
     "v": 1,
-    "tid": 250
-   },
-   {
-    "n": "Livingston",
-    "v": 1,
-    "tid": 255
+    "tid": 250,
+    "lost": 5,
+    "lostYears": [
+     1953,
+     1961,
+     1963,
+     2001,
+     2007
+    ]
    },
    {
     "n": "Motherwell",
     "v": 1,
-    "tid": 256
+    "tid": 256,
+    "lost": 3,
+    "lostYears": [
+     1955,
+     2005,
+     2018
+    ]
    },
    {
     "n": "Partick Thistle",
     "v": 1,
-    "tid": 901
+    "tid": 901,
+    "lost": 3,
+    "lostYears": [
+     1954,
+     1957,
+     1959
+    ]
+   },
+   {
+    "n": "St Johnstone",
+    "v": 1,
+    "tid": 258,
+    "lost": 2,
+    "lostYears": [
+     1970,
+     1999
+    ]
+   },
+   {
+    "n": "Livingston",
+    "v": 1,
+    "tid": 255,
+    "lost": 1,
+    "lostYears": [
+     2021
+    ]
    },
    {
     "n": "Raith Rovers",
     "v": 1,
-    "tid": 1385
+    "tid": 1385,
+    "lost": 1,
+    "lostYears": [
+     1949
+    ]
    },
    {
     "n": "Ross County",
@@ -1345,9 +3516,59 @@
     "tid": 902
    },
    {
-    "n": "St Johnstone",
-    "v": 1,
-    "tid": 258
+    "n": "Dunfermline",
+    "v": 0,
+    "tid": 1388,
+    "lost": 3,
+    "lostYears": [
+     1950,
+     1992,
+     2006
+    ]
+   },
+   {
+    "n": "Ayr United",
+    "v": 0,
+    "tid": 1387,
+    "lost": 1,
+    "lostYears": [
+     2002
+    ]
+   },
+   {
+    "n": "Falkirk",
+    "v": 0,
+    "tid": 1389,
+    "lost": 1,
+    "lostYears": [
+     1948
+    ]
+   },
+   {
+    "n": "Greenock Morton",
+    "v": 0,
+    "tid": 1383,
+    "lost": 1,
+    "lostYears": [
+     1964
+    ]
+   },
+   {
+    "n": "Inverness Caledonian Thistle",
+    "v": 0,
+    "tid": 903,
+    "lost": 1,
+    "lostYears": [
+     2014
+    ]
+   },
+   {
+    "n": "Third Lanark",
+    "v": 0,
+    "lost": 1,
+    "lostYears": [
+     1960
+    ]
    }
   ]
  },
@@ -1358,32 +3579,44 @@
    {
     "n": "Club Brugge",
     "v": 12,
-    "tid": 569
+    "tid": 569,
+    "lost": 8,
+    "lastLost": 2020
    },
    {
     "n": "Anderlecht",
     "v": 9,
-    "tid": 554
+    "tid": 554,
+    "lost": 7,
+    "lastLost": 2026
    },
    {
     "n": "Standard Liège",
     "v": 8,
-    "tid": 733
+    "tid": 733,
+    "lost": 10,
+    "lastLost": 2021
    },
    {
     "n": "Genk",
     "v": 5,
-    "tid": 742
+    "tid": 742,
+    "lost": 1,
+    "lastLost": 2018
    },
    {
     "n": "Antwerp",
     "v": 4,
-    "tid": 740
+    "tid": 740,
+    "lost": 2,
+    "lastLost": 2024
    },
    {
     "n": "Gent",
     "v": 4,
-    "tid": 631
+    "tid": 631,
+    "lost": 2,
+    "lastLost": 2019
    },
    {
     "n": "Union Saint-Gilloise",
@@ -1391,42 +3624,61 @@
     "tid": 1393
    },
    {
-    "n": "Beerschot VAC",
-    "v": 2
-   },
-   {
     "n": "Cercle Brugge",
     "v": 2,
-    "tid": 741
+    "tid": 741,
+    "lost": 5,
+    "lastLost": 2013
    },
    {
     "n": "KV Mechelen",
     "v": 2,
-    "tid": 266
-   },
-   {
-    "n": "Lierse",
-    "v": 2,
-    "tid": 6219
-   },
-   {
-    "n": "Lokeren",
-    "v": 2,
-    "tid": 737
+    "tid": 266,
+    "lost": 5,
+    "lastLost": 2023
    },
    {
     "n": "SK Beveren",
     "v": 2,
-    "tid": 738
+    "tid": 738,
+    "lost": 3,
+    "lastLost": 2004
+   },
+   {
+    "n": "Lierse",
+    "v": 2,
+    "tid": 6219,
+    "lost": 1,
+    "lastLost": 1976
+   },
+   {
+    "n": "Lokeren",
+    "v": 2,
+    "tid": 737,
+    "lost": 1,
+    "lastLost": 1981
+   },
+   {
+    "n": "Zulte Waregem",
+    "v": 2,
+    "tid": 600,
+    "lost": 1,
+    "lastLost": 2014
+   },
+   {
+    "n": "Beerschot VAC",
+    "v": 2
    },
    {
     "n": "Waterschei",
     "v": 2
    },
    {
-    "n": "Zulte Waregem",
-    "v": 2,
-    "tid": 600
+    "n": "Westerlo",
+    "v": 1,
+    "tid": 261,
+    "lost": 1,
+    "lastLost": 2011
    },
    {
     "n": "Daring Bruxelles",
@@ -1462,9 +3714,45 @@
     "v": 1
    },
    {
-    "n": "Westerlo",
-    "v": 1,
-    "tid": 261
+    "n": "Charleroi",
+    "v": 0,
+    "tid": 736,
+    "lost": 2,
+    "lastLost": 1993
+   },
+   {
+    "n": "Royal Excel Mouscron",
+    "v": 0,
+    "tid": 743,
+    "lost": 2,
+    "lastLost": 2006
+   },
+   {
+    "n": "Sint-Truiden",
+    "v": 0,
+    "tid": 735,
+    "lost": 2,
+    "lastLost": 2003
+   },
+   {
+    "n": "Kortrijk",
+    "v": 0,
+    "tid": 734,
+    "lost": 1,
+    "lastLost": 2012
+   },
+   {
+    "n": "Lommel",
+    "v": 0,
+    "lost": 1,
+    "lastLost": 2001
+   },
+   {
+    "n": "Oostende",
+    "v": 0,
+    "tid": 624,
+    "lost": 1,
+    "lastLost": 2017
    }
   ]
  },
@@ -1475,17 +3763,30 @@
    {
     "n": "Dinamo Zagreb",
     "v": 18,
-    "tid": 620
+    "tid": 620,
+    "lost": 7,
+    "lastLost": 2019
    },
    {
     "n": "Hajduk Split",
     "v": 8,
-    "tid": 608
+    "tid": 608,
+    "lost": 5,
+    "lastLost": 2018
    },
    {
     "n": "Rijeka",
     "v": 7,
-    "tid": 561
+    "tid": 561,
+    "lost": 4,
+    "lastLost": 2026
+   },
+   {
+    "n": "Osijek",
+    "v": 1,
+    "tid": 616,
+    "lost": 1,
+    "lastLost": 2012
    },
    {
     "n": "Inter Zaprešić",
@@ -1493,9 +3794,60 @@
     "tid": 1020
    },
    {
-    "n": "Osijek",
-    "v": 1,
-    "tid": 616
+    "n": "Varaždin",
+    "v": 0,
+    "tid": 1483,
+    "lost": 6,
+    "lastLost": 2011
+   },
+   {
+    "n": "Slaven Belupo",
+    "v": 0,
+    "tid": 1018,
+    "lost": 3,
+    "lastLost": 2025
+   },
+   {
+    "n": "Istra 1961",
+    "v": 0,
+    "tid": 1016,
+    "lost": 2,
+    "lastLost": 2021
+   },
+   {
+    "n": "Lokomotiva",
+    "v": 0,
+    "tid": 1017,
+    "lost": 2,
+    "lastLost": 2020
+   },
+   {
+    "n": "Sibenik",
+    "v": 0,
+    "tid": 1475,
+    "lost": 2,
+    "lastLost": 2023
+   },
+   {
+    "n": "Cibalia",
+    "v": 0,
+    "tid": 1021,
+    "lost": 1,
+    "lastLost": 1999
+   },
+   {
+    "n": "NK Zagreb",
+    "v": 0,
+    "tid": 1474,
+    "lost": 1,
+    "lastLost": 1997
+   },
+   {
+    "n": "RNK Split",
+    "v": 0,
+    "tid": 1022,
+    "lost": 1,
+    "lastLost": 2015
    }
   ]
  },
@@ -1506,42 +3858,108 @@
    {
     "n": "Galatasaray",
     "v": 19,
-    "tid": 645
+    "tid": 645,
+    "lost": 5,
+    "lostYears": [
+     1969,
+     1980,
+     1994,
+     1995,
+     1998
+    ]
    },
    {
     "n": "Beşiktaş",
     "v": 11,
-    "tid": 549
+    "tid": 549,
+    "lost": 6,
+    "lostYears": [
+     1966,
+     1977,
+     1984,
+     1993,
+     1999,
+     2002
+    ]
    },
    {
     "n": "Trabzonspor",
     "v": 10,
-    "tid": 998
+    "tid": 998,
+    "lost": 8,
+    "lostYears": [
+     1975,
+     1976,
+     1985,
+     1990,
+     1997,
+     2013,
+     2024,
+     2025
+    ]
    },
    {
     "n": "Fenerbahçe",
     "v": 7,
-    "tid": 611
+    "tid": 611,
+    "lost": 11,
+    "lostYears": [
+     1963,
+     1965,
+     1989,
+     1996,
+     2001,
+     2005,
+     2006,
+     2009,
+     2010,
+     2016,
+     2018
+    ]
    },
    {
     "n": "Altay",
     "v": 2,
-    "tid": 3566
+    "tid": 3566,
+    "lost": 5,
+    "lostYears": [
+     1964,
+     1968,
+     1972,
+     1979,
+     1986
+    ]
    },
    {
     "n": "Ankaragücü",
     "v": 2,
-    "tid": 1010
+    "tid": 1010,
+    "lost": 3,
+    "lostYears": [
+     1973,
+     1982,
+     1991
+    ]
    },
    {
     "n": "Gençlerbirliği",
     "v": 2,
-    "tid": 997
+    "tid": 997,
+    "lost": 3,
+    "lostYears": [
+     2003,
+     2004,
+     2008
+    ]
    },
    {
     "n": "Göztepe",
     "v": 2,
-    "tid": 994
+    "tid": 994,
+    "lost": 1,
+    "lostYears": [
+     1967
+    ]
    },
    {
     "n": "Kocaelispor",
@@ -1549,29 +3967,55 @@
     "tid": 7411
    },
    {
-    "n": "Akhisarspor",
-    "v": 1,
-    "tid": 995
-   },
-   {
     "n": "Bursaspor",
     "v": 1,
-    "tid": 1003
+    "tid": 1003,
+    "lost": 5,
+    "lostYears": [
+     1971,
+     1974,
+     1992,
+     2012,
+     2015
+    ]
    },
    {
     "n": "Eskişehirspor",
     "v": 1,
-    "tid": 3572
+    "tid": 3572,
+    "lost": 3,
+    "lostYears": [
+     1970,
+     1987,
+     2014
+    ]
+   },
+   {
+    "n": "Akhisarspor",
+    "v": 1,
+    "tid": 995,
+    "lost": 1,
+    "lostYears": [
+     2019
+    ]
    },
    {
     "n": "Kayserispor",
     "v": 1,
-    "tid": 1001
+    "tid": 1001,
+    "lost": 1,
+    "lostYears": [
+     2022
+    ]
    },
    {
     "n": "Konyaspor",
     "v": 1,
-    "tid": 607
+    "tid": 607,
+    "lost": 1,
+    "lostYears": [
+     2026
+    ]
    },
    {
     "n": "Sakaryaspor",
@@ -1582,6 +4026,80 @@
     "n": "Sivasspor",
     "v": 1,
     "tid": 1002
+   },
+   {
+    "n": "Istanbul Basaksehir",
+    "v": 0,
+    "tid": 564,
+    "lost": 3,
+    "lostYears": [
+     2011,
+     2017,
+     2023
+    ]
+   },
+   {
+    "n": "Antalyaspor",
+    "v": 0,
+    "tid": 1005,
+    "lost": 2,
+    "lostYears": [
+     2000,
+     2021
+    ]
+   },
+   {
+    "n": "Adana Demirspor",
+    "v": 0,
+    "tid": 3563,
+    "lost": 1,
+    "lostYears": [
+     1978
+    ]
+   },
+   {
+    "n": "Alanyaspor",
+    "v": 0,
+    "tid": 996,
+    "lost": 1,
+    "lostYears": [
+     2020
+    ]
+   },
+   {
+    "n": "Boluspor",
+    "v": 0,
+    "tid": 3569,
+    "lost": 1,
+    "lostYears": [
+     1981
+    ]
+   },
+   {
+    "n": "Kayseri Erciyesspor",
+    "v": 0,
+    "tid": 11099,
+    "lost": 1,
+    "lostYears": [
+     2007
+    ]
+   },
+   {
+    "n": "Mersin İdman Yurdu",
+    "v": 0,
+    "lost": 1,
+    "lostYears": [
+     1983
+    ]
+   },
+   {
+    "n": "Samsunspor",
+    "v": 0,
+    "tid": 3603,
+    "lost": 1,
+    "lostYears": [
+     1988
+    ]
    }
   ]
  }

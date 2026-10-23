@@ -1128,9 +1128,21 @@
         return '<span class="' + ((n - 1 - i) % wide ? "hw" : (n - 1 - i) % narrow ? "hn" : "") + (i === 0 && n > 1 ? " first" : i === n - 1 && n > 1 ? " last" : "") + '" style="left:' + (Math.round(X(i) / 10 * 100) / 100) + '%">' + esc(lab) + "</span>";
       }).join("");
       // All-time titles (when known) first, then what the seasons shown here add up to.
-      var allTime = cr.titles ? cr.titles + (cr.titles === 1 ? " title" : " titles") + " in all. " : cr.titles === 0 ? "Never won it. " : "";
-      var shown = wins.length ? (wins.length === 1 ? "Won it in " + cr.seasons[wins[0].i] : "Won it " + wins.length + " times here: " + wins.map(function (w) { return cr.seasons[w.i]; }).join(", ")) + "."
-        : best ? "Best run here: " + LEVELS[levelOf(best.d)].toLowerCase().replace("earlier rounds", "the early rounds") + " (" + cr.seasons[best.i] + ")." : "";
+      // All-time record first (titles and lost finals, from the honours list plus later seasons), then the
+      // seasons shown on the chart.
+      var fin = cr.finals || { lost: 0 }, lostTxt = "", allTime = "";
+      var times = function (k) { return k === 1 ? "once" : k === 2 ? "twice" : k + " times"; };
+      var yearsTxt = function (ys) { return ys.length === 1 ? String(ys[0]) : ys.slice(0, -1).join(", ") + " and " + ys[ys.length - 1]; };
+      if (fin.lost) lostTxt = fin.years && fin.years.length === fin.lost && fin.lost <= 3 ? "runner-up in " + yearsTxt(fin.years)
+        : "runner-up " + times(fin.lost) + (fin.last ? ", most recently in " + fin.last : "");
+      var lostFinals = !fin.lost ? "" : fin.years && fin.years.length === fin.lost && fin.lost <= 3 ? ", plus lost finals in " + yearsTxt(fin.years)
+        : ", plus " + fin.lost + (fin.lost === 1 ? " lost final" : " lost finals") + (fin.last ? " (most recently " + fin.last + ")" : "");
+      if (fin.lost === 1 && fin.years && fin.years.length === 1) lostFinals = ", plus a lost final in " + fin.years[0];
+      if (cr.titles) allTime = cr.titles + (cr.titles === 1 ? " title" : " titles") + " in all" + lostFinals + ". ";
+      else if (cr.titles === 0) allTime = fin.lost ? "Never won it; " + lostTxt + ". " : "Never won it or reached the final. ";
+      var since = cr.seasons.length ? " since " + cr.seasons[0] : "";
+      var shown = wins.length ? (wins.length === 1 ? "Won it in " + cr.seasons[wins[0].i] : "Won it " + wins.length + " times" + since + ": " + wins.map(function (w) { return cr.seasons[w.i]; }).join(", ")) + "."
+        : best ? "Best run" + since + ": " + LEVELS[levelOf(best.d)].toLowerCase().replace("earlier rounds", "the early rounds") + " (" + cr.seasons[best.i] + ")." : "";
       var cap = allTime + shown;
       var head = cupList.length > 1 ? '<div class="cr-h"><p>' + esc(cap) + "</p>" + (cr.href ? '<a href="' + esc(cr.href) + '">' + esc(cr.name) + " this season →</a>" : "") + "</div>"
         : '<div class="cr-h"><h3>' + (cr.href ? '<a href="' + esc(cr.href) + '">' + esc(cr.name) + "</a>" : esc(cr.name)) + "</h3><p>" + esc(cap) + "</p></div>";
