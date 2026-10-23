@@ -669,7 +669,8 @@
       var range = roundRange(x, tz);
       return '<option value="' + i + '"' + (i === ri ? " selected" : "") + ">" + esc(x.label) + (range ? " · " + esc(range) : "") + "</option>";
     }).join("");
-    return '<nav class="rnav" aria-label="Rounds">' +
+    return (opts.tzLine ? '<p class="fx-links fx-tz">' + opts.tzLine + "</p>" : "") +
+      '<nav class="rnav" aria-label="Rounds">' +
       '<button type="button" class="rnav-step" data-rstep="-1"' + (ri === 0 ? " disabled" : "") + ' aria-label="Previous round">‹</button>' +
       '<label class="sr-only" for="fx-round-pick">Round</label><select id="fx-round-pick" class="round-pick" data-rpick>' + options + "</select>" +
       '<button type="button" class="rnav-step" data-rstep="1"' + (ri === rounds.length - 1 ? " disabled" : "") + ' aria-label="Next round">›</button></nav>' +
@@ -873,16 +874,15 @@
       '<h1 id="intro-h"><span class="comp-dot c-' + esc(comp.id) + '" aria-hidden="true"></span>' + esc(comp.name) + "</h1>" +
       (opts.seasons ? seasonsHTML({ name: comp.name, season: fx ? fx.season : "" }, opts.seasons) : "") +
       '<p class="lede"><strong>' + esc(compStatus(comp, fx)) + "</strong> · " + (comp.final ? (comp.groups ? "The group-stage tables" : "The league-phase table") + ", the full knockout bracket and every fixture and result, qualifying included."
-        : "The league-phase table, the knockout bracket as each draw is made, and every fixture and result.") + "</p>" +
-      '<p class="fx-links">' + tzLine(mode, "europe") + "</p></section>" +
+        : "The league-phase table, the knockout bracket as each draw is made, and every fixture and result.") + "</p></section>" +
       '<section class="comp" data-tabs="stage"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Stages">' +
-      tab("lp", comp.groups ? "Group stage" : "League phase") + tab("ko", "Knockouts") + (inQual ? tab("q", "Qualifying") : "") +
-      (fx ? tab("fx", "Fixtures and results") : "") + "</div>" +
+      tab("lp", comp.groups ? "Group stage" : "League phase") + (fx ? tab("fx", "Fixtures and results") : "") +
+      tab("ko", "Knockouts") + (inQual ? tab("q", "Qualifying") : "") + "</div>" +
       panel("lp", (comp.rows && !comp.rows.length && !comp.groups ? '<p class="ko-empty">No table for this season.</p>'
         : tierHTML(markQualified(opts.clubPaths ? Object.assign(comp, { _paths: opts.clubPaths, _root: opts.root || "", _suffix: opts.suffix || "" }) : comp), { eyebrow: comp.groups ? "Group stage" : "League phase" }))) +
+      (fx ? panel("fx", fxTabHTML(fx, { tzZone: tz, tzLine: tzLine(mode, "europe"), now: now, live: opts.live, round: opts.fxRound, myClub: opts.myClub })) : "") +
       panel("ko", !ko.length && !comp.final && projectedHTML(comp) ? projectedHTML(comp) : bracketHTML(ko, tz, now)) +
-      (inQual ? panel("q", qualifyingHTML(q, tz, now)) : "") +
-      (fx ? panel("fx", fxTabHTML(fx, { tzZone: tz, now: now, live: opts.live, round: opts.fxRound, myClub: opts.myClub })) : "") + "</section>";
+      (inQual ? panel("q", qualifyingHTML(q, tz, now)) : "") + "</section>";
   }
 
   // The /europe/ page: a card per competition.
@@ -972,13 +972,12 @@
       '<h1 id="intro-h" class="cup-h">' + flag(country) + "<span>" + esc(cup.name) + "</span></h1>" +
       (opts.seasons ? seasonsHTML({ name: cup.name, season: fx ? fx.season : "" }, opts.seasons) : "") +
       (opts.note ? '<p class="cup-note">' + esc(opts.note) + "</p>" : "") +
-      '<p class="lede"><strong>' + esc(cupStatus(fx)) + "</strong> · Every tie and result, round by round, with each club’s league next to its name, so the giant-killings stand out.</p>" +
-      '<p class="fx-links">' + tzLine(mode, country) + "</p></section>" +
+      '<p class="lede"><strong>' + esc(cupStatus(fx)) + "</strong> · Every tie and result, round by round, with each club’s league next to its name, so the giant-killings stand out.</p></section>" +
       '<section class="comp" data-tabs="cup"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Views">' +
-      tab("bracket", "Bracket") + tab("fx", "Fixtures and results") + "</div>" +
+      tab("fx", "Fixtures and results") + tab("bracket", "Bracket") + "</div>" +
+      panel("fx", fxTabHTML(fx, { tzZone: tz, tzLine: tzLine(mode, country), now: now, live: opts.live, round: opts.fxRound, myClub: opts.myClub })) +
       panel("bracket", bracketRounds.length ? bracketHTML(bracketRounds, tz, now)
-        : '<p class="ko-empty">The bracket starts once the cup is down to 64 clubs or fewer and that draw is made. Until then, see Fixtures and results.</p>') +
-      panel("fx", fxTabHTML(fx, { tzZone: tz, now: now, live: opts.live, round: opts.fxRound, myClub: opts.myClub })) + "</section>";
+        : '<p class="ko-empty">The bracket starts once the cup is down to 64 clubs or fewer and that draw is made. Until then, see Fixtures and results.</p>') + "</section>";
   }
 
   // Country pages: the country's cups, under the tables.

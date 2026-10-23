@@ -656,6 +656,8 @@ body.no-ads main { justify-self: center !important; }
 .fx-links { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 14px; margin: 14px 0 0; font-size: 14px; color: var(--muted); }
 .fx-links a { font-weight: 600; color: var(--accent); text-decoration: none; }
 .fx-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.fx-tz { margin-top: 18px; }
+.fx-tz + .rnav { margin-top: 12px; }
 .tz-toggle {
   padding: 4px 10px; border: 1px solid var(--rule-strong); border-radius: 999px; background: var(--sheet);
   font: inherit; font-size: 13px; color: var(--ink); cursor: pointer;
