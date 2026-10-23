@@ -1148,7 +1148,9 @@
       var segs = "";
       for (var k = 1; k < cr.runs.length; k++) {
         var a = cr.runs[k - 1], b = cr.runs[k];
-        if (b.i - a.i !== 1) continue;   // only join consecutive seasons
+        // Join each run to the next, stepping over a single season the club wasn't in the cup (it went out before
+        // the rounds we have, or didn't enter). A longer absence ends the line at the last run before it.
+        if (b.i - a.i > 2) continue;
         segs += '<line x1="' + X(a.i) + '" y1="' + Y(levelOf(a.d)) + '" x2="' + X(b.i) + '" y2="' + Y(levelOf(b.d)) + '" vector-effect="non-scaling-stroke"/>';
       }
       var dots = cr.runs.map(function (r) {
@@ -1181,7 +1183,10 @@
       var since = cr.seasons.length ? " since " + cr.seasons[0] : "";
       var shown = wins.length ? (wins.length === 1 ? "Won it in " + cr.seasons[wins[0].i] : "Won it " + wins.length + " times" + since + ": " + wins.map(function (w) { return cr.seasons[w.i]; }).join(", ")) + "."
         : best ? "Best run" + since + ": " + LEVELS[levelOf(best.d)].toLowerCase().replace("earlier rounds", "the early rounds") + " (" + cr.seasons[best.i] + ")." : "";
-      var cap = allTime + shown;
+      // A club missing from the latest seasons wasn't in the draw (it didn't qualify), not missing data: say so.
+      var lastRun = cr.runs[cr.runs.length - 1];
+      var absent = lastRun && lastRun.i < n - 1 ? " Not in the draw after " + cr.seasons[lastRun.i] + "." : "";
+      var cap = allTime + shown + absent;
       var head = cupList.length > 1 ? '<div class="cr-h"><p>' + esc(cap) + "</p>" + (cr.href ? '<a href="' + esc(cr.href) + '">' + esc(cr.name) + " this season →</a>" : "") + "</div>"
         : '<div class="cr-h"><h3>' + (cr.href ? '<a href="' + esc(cr.href) + '">' + esc(cr.name) + "</a>" : esc(cr.name)) + "</h3><p>" + esc(cap) + "</p></div>";
       return '<div class="cr' + (cupList.length > 1 ? " tf-panel" + (ci === 0 ? " on" : "") : "") + '"' + (cupList.length > 1 ? ' data-panel="' + esc(cr.id) + '" role="tabpanel"' : "") + ">" + head +
