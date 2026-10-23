@@ -1,0 +1,276 @@
+{
+ "country": "indonesia",
+ "name": "Indonesia",
+ "adjective": "Indonesian",
+ "season": "2026–27",
+ "mode": "live",
+ "updated": "2026-10-23T00:00:00.000Z",
+ "belowNote": "Championship (second tier) clubs come up; API-Football doesn't have its tables yet",
+ "leagues": [
+  {
+   "id": "indonesian-super-league",
+   "tier": 1,
+   "name": "Super League",
+   "short": "ISL",
+   "zones": [
+    {
+     "from": 16,
+     "to": 18,
+     "kind": "down",
+     "label": "Relegation"
+    }
+   ],
+   "relegationNote": "16th–18th drop to the Championship",
+   "notes": [
+    "Java United: 2 points deducted.",
+    "Isenmulang Kalteng: 2 points deducted."
+   ],
+   "history": [
+    {
+     "until": 2024,
+     "name": "Liga 1",
+     "short": "L1"
+    }
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Persija",
+     "p": 6,
+     "w": 5,
+     "d": 0,
+     "l": 1,
+     "gf": 15,
+     "ga": 5,
+     "pts": 15,
+     "tid": 10134,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 2,
+     "team": "Dewa United",
+     "p": 6,
+     "w": 4,
+     "d": 2,
+     "l": 0,
+     "gf": 12,
+     "ga": 6,
+     "pts": 14,
+     "tid": 17902,
+     "form": "DWWDW"
+    },
+    {
+     "pos": 3,
+     "team": "Madura United",
+     "p": 6,
+     "w": 4,
+     "d": 1,
+     "l": 1,
+     "gf": 11,
+     "ga": 7,
+     "pts": 13,
+     "tid": 2444,
+     "form": "WWLDW"
+    },
+    {
+     "pos": 4,
+     "team": "Bali United",
+     "p": 6,
+     "w": 4,
+     "d": 0,
+     "l": 2,
+     "gf": 19,
+     "ga": 7,
+     "pts": 12,
+     "tid": 2448,
+     "form": "WLWLW"
+    },
+    {
+     "pos": 5,
+     "team": "Persita",
+     "p": 5,
+     "w": 3,
+     "d": 2,
+     "l": 0,
+     "gf": 11,
+     "ga": 8,
+     "pts": 11,
+     "tid": 4244,
+     "form": "DWDWW"
+    },
+    {
+     "pos": 6,
+     "team": "Bhayangkara FC",
+     "p": 6,
+     "w": 2,
+     "d": 4,
+     "l": 0,
+     "gf": 11,
+     "ga": 8,
+     "pts": 10,
+     "tid": 2443,
+     "form": "DWDDW"
+    },
+    {
+     "pos": 7,
+     "team": "Persik Kediri",
+     "p": 6,
+     "w": 3,
+     "d": 1,
+     "l": 2,
+     "gf": 7,
+     "ga": 4,
+     "pts": 10,
+     "tid": 4241,
+     "form": "WDWLW"
+    },
+    {
+     "pos": 8,
+     "team": "Persib Bandung",
+     "p": 6,
+     "w": 3,
+     "d": 1,
+     "l": 2,
+     "gf": 9,
+     "ga": 7,
+     "pts": 10,
+     "tid": 2445,
+     "form": "LWDWL"
+    },
+    {
+     "pos": 9,
+     "team": "Persebaya Surabaya",
+     "p": 6,
+     "w": 2,
+     "d": 3,
+     "l": 1,
+     "gf": 6,
+     "ga": 5,
+     "pts": 9,
+     "tid": 2446,
+     "form": "WDWDL"
+    },
+    {
+     "pos": 10,
+     "team": "PSM Makassar",
+     "p": 6,
+     "w": 2,
+     "d": 2,
+     "l": 2,
+     "gf": 9,
+     "ga": 12,
+     "pts": 8,
+     "tid": 2441,
+     "form": "DDLWW"
+    },
+    {
+     "pos": 11,
+     "team": "Java United",
+     "p": 6,
+     "w": 2,
+     "d": 2,
+     "l": 2,
+     "gf": 9,
+     "ga": 9,
+     "pts": 6,
+     "ded": 2,
+     "tid": 22409,
+     "form": "LLWWD"
+    },
+    {
+     "pos": 12,
+     "team": "Arema FC",
+     "p": 6,
+     "w": 1,
+     "d": 3,
+     "l": 2,
+     "gf": 12,
+     "ga": 14,
+     "pts": 6,
+     "tid": 2438,
+     "form": "DDDLL"
+    },
+    {
+     "pos": 13,
+     "team": "Borneo FC",
+     "p": 5,
+     "w": 2,
+     "d": 0,
+     "l": 3,
+     "gf": 4,
+     "ga": 6,
+     "pts": 6,
+     "tid": 2442,
+     "form": "LWLWL"
+    },
+    {
+     "pos": 14,
+     "team": "Garudayaksa",
+     "p": 6,
+     "w": 1,
+     "d": 2,
+     "l": 3,
+     "gf": 6,
+     "ga": 12,
+     "pts": 5,
+     "tid": 26645,
+     "form": "LDLWL"
+    },
+    {
+     "pos": 15,
+     "team": "PSS Sleman",
+     "p": 6,
+     "w": 1,
+     "d": 1,
+     "l": 4,
+     "gf": 9,
+     "ga": 11,
+     "pts": 4,
+     "tid": 3882,
+     "form": "LLWDL"
+    },
+    {
+     "pos": 16,
+     "team": "Isenmulang Kalteng",
+     "p": 6,
+     "w": 1,
+     "d": 1,
+     "l": 4,
+     "gf": 3,
+     "ga": 12,
+     "pts": 2,
+     "ded": 2,
+     "tid": 24993,
+     "form": "LLLWD"
+    },
+    {
+     "pos": 17,
+     "team": "PSIM Yogyakarta",
+     "p": 6,
+     "w": 0,
+     "d": 1,
+     "l": 5,
+     "gf": 3,
+     "ga": 11,
+     "pts": 1,
+     "tid": 4235,
+     "form": "LLLLL"
+    },
+    {
+     "pos": 18,
+     "team": "Persijap",
+     "p": 6,
+     "w": 0,
+     "d": 0,
+     "l": 6,
+     "gf": 2,
+     "ga": 14,
+     "pts": 0,
+     "tid": 11132,
+     "form": "LLLLL"
+    }
+   ],
+   "updated": "2026-10-23T00:00:00.000Z"
+  }
+ ]
+}
