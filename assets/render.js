@@ -1094,6 +1094,46 @@
 
     // Pyramid journey: each season's finishing position on one ladder for the whole pyramid
     // (in England 1-20 is the Premier League, 21-44 the Championship and so on), oldest on the left.
+    // Cup runs: one small chart per cup, a dot for each season at the furthest round reached (Winners at the top,
+    // then the final, semi-finals and so on), with a gold ring on the seasons the club won it.
+    var LEVELS = ["Winners", "Final", "Semi-finals", "Quarter-finals", "Last 16", "Last 32", "Last 64", "Earlier rounds"];
+    var SHORT = ["Won", "Final", "Semis", "Quarters", "Last 16", "Last 32", "Last 64", "Earlier"];
+    var levelOf = function (dd) { return dd < 0 ? 0 : Math.min(dd + 1, LEVELS.length - 1); };
+    var cupRuns = (d.cupRuns || []).map(function (cr) {
+      var n = cr.seasons.length, cell = 1000 / n, X = function (i) { return (i + 0.5) * cell; };
+      var H = LEVELS.length, Y = function (lv) { return (lv + 0.5) / H * 100; };
+      var wins = cr.runs.filter(function (r) { return r.res === "W"; });
+      var best = cr.runs.slice().sort(function (a, b) { return a.d - b.d || b.i - a.i; })[0];
+      var segs = "";
+      for (var k = 1; k < cr.runs.length; k++) {
+        var a = cr.runs[k - 1], b = cr.runs[k];
+        if (b.i - a.i !== 1) continue;   // only join consecutive seasons
+        segs += '<line x1="' + X(a.i) + '" y1="' + Y(levelOf(a.d)) + '" x2="' + X(b.i) + '" y2="' + Y(levelOf(b.d)) + '" vector-effect="non-scaling-stroke"/>';
+      }
+      var dots = cr.runs.map(function (r) {
+        var at = X(r.i) / 1000, out = r.res === "L" ? "Out in the " + r.round.charAt(0).toLowerCase() + r.round.slice(1) : r.res === "W" ? "Won the " + cr.name : r.now ? "Still in: " + r.round : r.round;
+        var tie = r.opp ? (r.res === "W" ? "Beat " : r.res === "L" ? "Lost to " : "v ") + esc(r.opp) + (r.score ? " " + esc(r.score) : "") : "";
+        var tip = '<span class="ltip' + (at < 0.2 ? " l" : at > 0.8 ? " r" : "") + (levelOf(r.d) < 2 ? " below" : "") + '"><b>' + esc(cr.seasons[r.i]) + "</b>" + esc(out) +
+          (tie ? "<i>" + tie + "</i>" : "") + "</span>";
+        return '<span class="ld cr-dot' + (r.res === "W" ? " won" : "") + (r.now ? " now" : "") + '" tabindex="0" style="left:' + (Math.round(at * 10000) / 100) + "%;top:" + Y(levelOf(r.d)) + '%" aria-label="' +
+          esc(cr.seasons[r.i] + ": " + out) + '">' + tip + "</span>";
+      }).join("");
+      var every = n > 10 ? 2 : 1;
+      var xl = cr.seasons.map(function (sname, i) {
+        var lab = String(sname).replace(/^\d\d(\d\d)[–-](?:\d\d)?(\d\d)$/, "$1–$2");
+        return '<span class="' + ((n - 1 - i) % every ? "hw" : "") + (i === 0 && n > 1 ? " first" : i === n - 1 && n > 1 ? " last" : "") + '" style="left:' + (Math.round(X(i) / 10 * 100) / 100) + '%">' + esc(lab) + "</span>";
+      }).join("");
+      var cap = wins.length ? "Won it " + (wins.length === 1 ? "in " + cr.seasons[wins[0].i] : wins.length + " times: " + wins.map(function (w) { return cr.seasons[w.i]; }).join(", ")) + "."
+        : best ? "Best run: " + LEVELS[levelOf(best.d)].toLowerCase().replace("earlier rounds", "the early rounds") + " (" + cr.seasons[best.i] + ")." : "";
+      return '<div class="cr"><div class="cr-h"><h3>' + (cr.href ? '<a href="' + esc(cr.href) + '">' + esc(cr.name) + "</a>" : esc(cr.name)) + "</h3><p>" + esc(cap) + "</p></div>" +
+        '<div class="lchart cr-chart"><div class="lside">' + LEVELS.map(function (l, lv) { return '<span class="ls cr-l" style="top:' + (lv / H * 100) + "%;height:" + (100 / H) + '%" title="' + esc(l) + '"><b>' + esc(SHORT[lv]) + "</b></span>"; }).join("") +
+        '</div><div class="lplot" style="height:' + (H * 24) + 'px">' +
+        '<svg viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true">' +
+        LEVELS.map(function (l, lv) { return lv % 2 ? '<rect class="lb alt" x="0" width="1000" y="' + (lv / H * 100) + '" height="' + (100 / H) + '"/>' : ""; }).join("") +
+        '<g class="cr-line">' + segs + "</g></svg>" + dots + '</div><div class="lx">' + xl + "</div></div></div>";
+    }).join("");
+    var cupSection = cupRuns ? '<section class="cl-sec"><div class="cl-sec-h"><h2>Cup runs</h2></div>' + cupRuns + "</section>" : "";
+
     var journey = "";
     if ((d.journey || []).length) {
       var j = d.journey.slice().reverse(), n = j.length;
@@ -1194,7 +1234,7 @@
         (list(live, "live", 9) + list(upcoming, "fixture", 6) || '<p class="ko-empty">No fixtures scheduled yet.</p>') + "</section>" +
       '<section class="cl-sec"><div class="cl-sec-h"><h2>Results</h2></div>' + (list(played, "result", 6) || '<p class="ko-empty">No results yet this season.</p>') + "</section></div>" +
       compSection +
-      journey;
+      journey + cupSection;
   }
 
   return {
