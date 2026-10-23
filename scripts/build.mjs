@@ -672,12 +672,27 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       const same = (x) => (tid && x.tid ? x.tid === tid : FP.slug(x.team) === sl);
       for (const h of history[c.country] || []) {
         const sizes = sizesOf(h.leagues);
-        found: for (const plg of h.leagues) for (const pg of FP.groupsOf(plg)) {
+        found: for (const plg of h.leagues) {
+          // A season split into a championship and a relegation round: the club's final place across both, not its
+          // place within one (Volos were 1st of the 2020-21 relegation round: 7th in the Super League).
+          const ph = FP.phases(plg);
+          if (ph) {
+            const pr = ph.base.rows.find(same);
+            if (pr) {
+              const pos = ph.pos(pr);
+              out.push({ season: h.season, year: h.year, tier: plg.tier, league: plg.name, pos, of: ph.size, rank: rankIn(sizes, plg.tier, pos), sizes,
+                href: `${base}${c.country}/${slug(h.year, c.country)}/${suffix}${plg.id ? "#" + plg.id : ""}` });
+              break found;
+            }
+            continue;
+          }
+          for (const pg of FP.groupsOf(plg)) {
           const pr = pg.rows.find(same);
           if (pr) {
             out.push({ season: h.season, year: h.year, tier: plg.tier, league: divisionName(plg, pg), pos: pr.pos, of: pg.rows.length, rank: rankIn(sizes, plg.tier, pr.pos), sizes,
               href: `${base}${c.country}/${slug(h.year, c.country)}/${suffix}${plg.id ? "#" + plg.id : ""}` });
             break found;
+          }
           }
         }
       }
@@ -771,8 +786,10 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       }
       // Pyramid journey: this season, then each saved past season (matched by name).
       const sizesNow = sizesOf(c.leagues);
-      const journey = moves([{ season: c.season, year: Number(String(c.season).slice(0, 4)), tier: lg.tier, league: divisionName(lg, g), pos: r.pos, of: g.rows.length,
-        rank: rankIn(sizesNow, lg.tier, r.pos), sizes: sizesNow, now: true }, ...pastSeasons(c, r.team, tid)]);
+      // This season too: once a league splits into rounds, its place across them.
+      const phNow = FP.phases(lg), posNow = (phNow && phNow.pos(r)) || r.pos;
+      const journey = moves([{ season: c.season, year: Number(String(c.season).slice(0, 4)), tier: lg.tier, league: phNow ? lg.name : divisionName(lg, g), pos: posNow,
+        of: phNow ? phNow.size : g.rows.length, rank: rankIn(sizesNow, lg.tier, posNow), sizes: sizesNow, now: true }, ...pastSeasons(c, r.team, tid)]);
       const data = {
         tid, name: r.team, country: c.country, countryName: c.name, adjective: c.adjective, season: c.season, comps, root: base, suffix,
         pos: r.pos, pts: r.pts, p: r.p,

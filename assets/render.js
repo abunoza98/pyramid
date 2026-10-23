@@ -48,6 +48,43 @@
     return null;
   }
   function groupsOf(lg) { return lg.groups && lg.groups.length ? lg.groups : [{ name: "", rows: lg.rows || [] }]; }
+  /* Split seasons. Some leagues play a regular season, then split into a championship round and a relegation round
+     (Greece, Scotland, Austria, Belgium…). The API sends each phase as its own table, so the relegation round's
+     "1st" is really 7th or 13th. phases(lg) spots that shape (one full table, the others strictly smaller and made
+     only of its clubs, none overlapping) and works out each club's final place: the phase tables in order of their
+     best regular-season position, clubs in no phase table keeping their regular-season place. Returns null for
+     anything else (conferences, regions, Apertura/Clausura), which keep their tables as they are. */
+  var PHASE_NAME = /champion|relegation|promotion|play-?off|qualifying round|upper|lower|europ|conference|middle|title|2nd phase/i;
+  function phases(lg) {
+    var gs = groupsOf(lg);
+    if (gs.length < 2) return null;
+    var key = function (r) { return r.tid ? "t" + r.tid : "n" + slug(r.team); };
+    var base = gs.slice().sort(function (a, b) { return b.rows.length - a.rows.length; })[0];
+    if (gs.filter(function (g) { return g.rows.length === base.rows.length; }).length > 1) return null;
+    var basePos = {};
+    base.rows.forEach(function (r) { basePos[key(r)] = r.pos; });
+    var seen = {}, others = gs.filter(function (g) { return g !== base; });
+    // Only tables named as a later stage count: the API also sends first-phase groups, Apertura/Clausura halves and
+    // conferences that look the same shape but aren't a split of one season.
+    if (!others.every(function (g) { return PHASE_NAME.test(g.name || ""); })) return null;
+    for (var i = 0; i < others.length; i++) for (var k = 0; k < others[i].rows.length; k++) {
+      var kk = key(others[i].rows[k]);
+      if (basePos[kk] == null || seen[kk]) return null;
+      seen[kk] = 1;
+    }
+    var blocks = others.map(function (g) {
+      return { g: g, at: Math.min.apply(null, g.rows.map(function (r) { return basePos[key(r)]; })), rows: g.rows.slice().sort(function (a, b) { return a.pos - b.pos; }) };
+    });
+    base.rows.forEach(function (r) { if (!seen[key(r)]) blocks.push({ g: null, at: r.pos, rows: [r] }); });
+    blocks.sort(function (a, b) { return a.at - b.at; });
+    var final = {}, offset = [], n = 0;
+    blocks.forEach(function (b) {
+      if (b.g) offset.push({ g: b.g, off: n });
+      b.rows.forEach(function (r) { final[key(r)] = ++n; });
+    });
+    return { base: base, size: base.rows.length, pos: function (r) { return final[key(r)]; },
+      offsetOf: function (g) { for (var j = 0; j < offset.length; j++) if (offset[j].g === g) return offset[j].off; return null; } };
+  }
   // Each club once, even when a later stage's groups repeat it (Brazil's Série C second stage).
   function clubCount(lg) {
     var seen = {}, n = 0;
@@ -281,6 +318,17 @@
       : "";
   }
 
+  // For one table of a split season: the league with its zones moved to that table's places (the relegation round's
+  // 1st is the league's 7th, say), or with no zones at all for the regular-season table, which decides nothing.
+  function phaseLg(lg, g) {
+    var ph = phases(lg);
+    if (!ph) return lg;
+    var off = g === ph.base ? null : ph.offsetOf(g);
+    var copy = {}; for (var k in lg) copy[k] = lg[k];
+    copy.zones = off == null ? [] : (lg.zones || []).map(function (z) { return { from: z.from - off, to: z.to - off, kind: z.kind, label: z.label }; })
+      .filter(function (z) { return z.to >= 1 && z.from <= g.rows.length; });
+    return copy;
+  }
   // opts: { eyebrow, more: {href, text} }
   function tierHTML(lg, opts) {
     opts = opts || {};
@@ -291,7 +339,7 @@
           var stamp = g.updated && g.updated !== lg.updated ? "as of " + ukTime(g.updated) : "";
           return '<div class="group"><div class="group-head"><h3>' + esc(g.name) + "</h3>" +
             (stamp ? "<span>" + stamp + "</span>" : "") + "</div>" +
-            tableHTML(lg, g.rows, lg.name + ", " + g.name) + "</div>";
+            tableHTML(phaseLg(lg, g), g.rows, lg.name + ", " + g.name) + "</div>";
         }).join("")
       : tableHTML(lg, lg.rows, lg.name + " table");
     if (grouped) {
@@ -1490,7 +1538,7 @@
   }
 
   return {
-    slug: slug, esc: esc, ukTime: ukTime, clubCount: clubCount, countryClubs: countryClubs, groupsOf: groupsOf,
+    slug: slug, esc: esc, ukTime: ukTime, phases: phases, clubCount: clubCount, countryClubs: countryClubs, groupsOf: groupsOf,
     countryMain: countryMain, racesMain: racesMain, homeMain: homeMain, summary: summary, flag: flag, fixturesMain: fixturesMain, currentRound: currentRound, compMain: compMain, europeMain: europeMain, cupMain: cupMain, cupStatus: cupStatus, cupSpan: cupSpan, inLeague: inLeague, clubMain: clubMain, retime: retime, compStatus: compStatus, tiesOf: tiesOf, applyLive: applyLive, clock: clock, isLive: isLive
   };
 });
