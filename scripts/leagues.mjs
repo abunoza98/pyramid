@@ -373,6 +373,13 @@ export const COUNTRIES = [
   },
   {
     country: "australia", region: "asia", code: "AUS", name: "Australia", adjective: "Australian", apiCountry: "Australia",
+    // The A-League finals series, like the MLS playoffs, comes in the league's own fixtures (188) after the regular
+    // season: only those rounds are kept. The API's round names for it vary by season, so the common ones are mapped.
+    cups: [{ apiId: 188, id: "a-league-finals", name: "A-League Finals", short: "ALF",
+      only: "^(?!Regular Season)", strip: "^(finals?( series)?|play-?offs?|playoffs?)\\s*-\\s*",
+      rounds: { "Quarter-finals": "Elimination finals", "Elimination Finals": "Elimination finals", "Elimination Final": "Elimination finals",
+        "1/8-finals": "Elimination finals", "Semi-finals": "Semi-finals", "Final": "Grand Final", "Grand Final": "Grand Final" },
+      dist: { "Elimination finals": 2, "Semi-finals": 1, "Grand Final": 0 } }],
     // Australia spans several time zones, so local kick-off times go by the home club (A-League) or the state
     // (NPL and state leagues). Anything not listed is on Sydney time.
     tz: { home: "Australia/Sydney",
