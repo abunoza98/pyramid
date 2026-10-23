@@ -1,8 +1,8 @@
 # Past seasons audit
 
-Checked 2026-10-23. 658 findings. Repair mode: 285 API requests used.
+Checked 2026-10-23. 651 findings. Repair mode: 266 API requests used.
 
-## Scottish Premiership split seasons (17)
+## Scottish Premiership split seasons (12)
 
 - **Scotland 2010–11, Premiership**: Split season. _couldn't combine (results for 12 clubs, games played 33/36/35/34): left as is._
 - **Scotland 2020–21, Premiership**: Split season. _couldn't combine (results for 15 clubs, games played 38/40/4/2): left as is._
@@ -14,15 +14,10 @@ Checked 2026-10-23. 658 findings. Repair mode: 285 API requests used.
 - **Switzerland 2023–24, Super League**: Split season. _couldn't combine (results for 13 clubs, games played 38/40/2): left as is._
 - **Switzerland 2024–25, Super League**: Split season. _couldn't combine (results for 13 clubs, games played 38/40/2): left as is._
 - **Switzerland 2025–26, Super League**: Split season. _couldn't combine (results for 13 clubs, games played 38/40/2): left as is._
-- **Austria 2018–19, Bundesliga**: Split season saved as separate tables. _combined into the final 32-game table (1. Red Bull Salzburg 80, 12. Wacker Innsbruck)._
 - **Austria 2020–21, Bundesliga**: Split season. _couldn't combine (results for 13 clubs, games played 32/34/2): left as is._
-- **Austria 2021–22, Bundesliga**: Split season saved as separate tables. _combined into the final 32-game table (1. Red Bull Salzburg 80, 12. Rheindorf Altach)._
-- **Austria 2022–23, Bundesliga**: Split season saved as separate tables. _combined into the final 32-game table (1. Red Bull Salzburg 77, 12. SV Ried)._
-- **Austria 2023–24, Bundesliga**: Split season saved as separate tables. _combined into the final 32-game table (1. Red Bull Salzburg 67, 12. Austria Lustenau)._
-- **Austria 2024–25, Bundesliga**: Split season saved as separate tables. _combined into the final 32-game table (1. Sturm Graz 63, 12. Rheindorf Altach)._
 - **Austria 2025–26, Bundesliga**: Split season. _couldn't combine (results for 12 clubs, games played 32/34/35/33): left as is._
 
-## Tables that stop before the end of the season (178)
+## Tables that stop before the end of the season (171)
 
 - **England 2019–20, League One**: Clubs have played 34–36 games; a full season is 44. _season stopped early (Covid): left as is._
 - **England 2019–20, League Two**: Clubs have played 36–37 games; a full season is 46. _season stopped early (Covid): left as is._
@@ -61,8 +56,6 @@ Checked 2026-10-23. 658 findings. Repair mode: 285 API requests used.
 - **Turkey 2019–20, 3. Lig (Group 3)**: Clubs have played 28 games; a full season is 34. _season stopped early (Covid): left as is._
 - **Turkey 2021–22, 2. Lig (Beyaz)**: Clubs have played 0–34 games; a full season is 36. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
 - **Turkey 2023–24, 3. Lig (Group 2)**: Clubs have played 27–28 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
-- **Switzerland 2017–18, Super League**: Clubs have played 21 games; a full season is 36. _rebuilt from results (1. BSC Young Boys 84, 2. FC Basel 69, 3. FC Luzern 54)._
-- **Switzerland 2017–18, Challenge League**: Clubs have played 19–20 games; a full season is 36. _rebuilt from results (1. Neuchâtel Xamax 85, 2. FC Schaffhausen 64, 3. Servette FC 62)._
 - **Switzerland 2019–20, Promotion League**: Clubs have played 17 games; a full season is 30. _season stopped early (Covid): left as is._
 - **Switzerland 2019–20, 1. Liga (Group 1)**: Clubs have played 14 games; a full season is 26. _season stopped early (Covid): left as is._
 - **Switzerland 2019–20, 1. Liga (Group 2)**: Clubs have played 14 games; a full season is 26. _season stopped early (Covid): left as is._
@@ -72,10 +65,6 @@ Checked 2026-10-23. 658 findings. Repair mode: 285 API requests used.
 - **Switzerland 2020–21, 1. Liga (Group 2)**: Clubs have played 13 games; a full season is 26. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
 - **Switzerland 2020–21, 1. Liga (Group 3)**: Clubs have played 13 games; a full season is 26. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
 - **Switzerland 2022–23, Promotion League**: Clubs have played 0–32 games; a full season is 34. _couldn't rebuild (results found for 18 clubs, not all complete): check by hand._
-- **Austria 2017–18, Bundesliga**: Clubs have played 22 games; a full season is 36. _rebuilt from results (1. Red Bull Salzburg 83, 2. Sturm Graz 70, 3. Rapid Wien 62)._
-- **Austria 2017–18, Erste Liga**: Clubs have played 20 games; a full season is 36. _rebuilt from results (1. Wacker Innsbruck 71, 2. TSV Hartberg 68, 3. SC Wiener Neustadt 62)._
-- **Greece 2017–18, Super League**: Clubs have played 21 games; a full season is 30. _rebuilt from results (1. PAOK 68, 2. AEK Athens 68, 3. Olympiacos 60)._
-- **Brazil 2018–19, Série B**: Clubs have played 0 games; a full season is 38. _rebuilt from results (1. Fortaleza 71, 2. CSA 62, 3. Avaí 61)._
 - **Brazil 2022–23, Série C (Regular Season)**: Clubs have played 19 games; a full season is 38. _couldn't rebuild (results found for 20 clubs, not all complete): check by hand._
 - **Brazil 2023–24, Série C (Regular Season)**: Clubs have played 19 games; a full season is 38. _couldn't rebuild (results found for 20 clubs, not all complete): check by hand._
 - **Brazil 2024–25, Série C**: Clubs have played 19 games; a full season is 38. _couldn't rebuild (results found for 20 clubs, not all complete): check by hand._
@@ -123,7 +112,6 @@ Checked 2026-10-23. 658 findings. Repair mode: 285 API requests used.
 - **Argentina 2025–26, Liga Profesional (Group B)**: Clubs have played 16 games; a full season is 28. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
 - **Argentina 2025–26, Primera B Metropolitana (Clausura)**: Clubs have played 20 games; a full season is 40. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
 - **Argentina 2025–26, Primera B Metropolitana (Apertura)**: Clubs have played 20 games; a full season is 40. _couldn't rebuild (results found for 0 clubs, not all complete): check by hand._
-- **Australia 2017–18, A-League**: Clubs have played 19–20 games; a full season is 27. _rebuilt from results (1. Sydney FC 64, 2. Newcastle Jets FC 50, 3. Melbourne City 43)._
 - **Australia 2019–20, National Premier Leagues (Victoria)**: Clubs have played 25 games; a full season is 26. _season stopped early (Covid): left as is._
 - **Australia 2019–20, National Premier Leagues (South Australia)**: Clubs have played 21 games; a full season is 22. _season stopped early (Covid): left as is._
 - **Australia 2020–21, A-League**: Clubs have played 26 games; a full season is 27. _couldn't rebuild (results found for 12 clubs, not all complete): check by hand._
@@ -233,7 +221,7 @@ Checked 2026-10-23. 658 findings. Repair mode: 285 API requests used.
 - **USA 2020–21, USL Championship (Regular Season)**: Charleston Battery played 15 of 16: a club that withdrew, was expelled or had a game cancelled.
 - **Mexico 2023–24, Liga Premier Serie A (Group 1)**: Chihuahua FC played 0 of 32: a club that withdrew, was expelled or had a game cancelled.
 
-## Positions out of order (24)
+## Positions out of order (29)
 
 - **England 2019–20, League One**: Oxford United (60 pts) is below Wycombe Wanderers (59 pts).
 - **England 2019–20, League Two**: Exeter City (65 pts) is below Cheltenham Town (64 pts).
@@ -245,6 +233,11 @@ Checked 2026-10-23. 658 findings. Repair mode: 285 API requests used.
 - **Scotland 2016–17, Premiership**: Heart of Midlothian (46 pts) is below Partick Thistle (42 pts).
 - **Turkey 2025–26, 3. Lig (Group 2)**: Karaköprü Belediyespor (47 pts) is below Ağrı 1970 (45 pts).
 - **Austria 2015–16, Erste Liga**: Austria Salzburg (26 pts) is below Floridsdorfer AC (17 pts).
+- **Austria 2018–19, Bundesliga**: Rapid Wien (46 pts) is below SKN St. Pölten (36 pts).
+- **Austria 2021–22, Bundesliga**: WSG Tirol (40 pts) is below Austria Klagenfurt (36 pts).
+- **Austria 2022–23, Bundesliga**: Austria Lustenau (43 pts) is below Austria Klagenfurt (38 pts).
+- **Austria 2023–24, Bundesliga**: Wolfsberger AC (46 pts) is below Austria Klagenfurt (39 pts).
+- **Austria 2024–25, Bundesliga**: LASK (54 pts) is below Blau-Weiß Linz (38 pts).
 - **Greece 2019–20, Super League 2**: Positions aren't 1 to 10.
 - **Greece 2023–24, Super League 2 (Group A)**: Positions aren't 1 to 6.
 - **Greece 2023–24, Super League 2 (Group B)**: Positions aren't 1 to 6.
