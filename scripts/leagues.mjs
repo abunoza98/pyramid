@@ -387,8 +387,19 @@ export const COUNTRIES = [
         groups: [{ apiId: 192, name: "NSW" }, { apiId: 195, name: "Victoria" }, { apiId: 482, name: "Queensland" },
                  { apiId: 196, name: "Western Australia" }, { apiId: 194, name: "South Australia" }, { apiId: 481, name: "Northern NSW" },
                  { apiId: 189, name: "Capital Territory" }, { apiId: 648, name: "Tasmania" }],
+        relegationNote: "Each state's NPL relegates to that state's second division",
         notes: ["Each state runs its own NPL. None of them is linked to the A-League by promotion.",
-                "API-Football doesn't mark these leagues' promotion, relegation or finals places, so they aren't coloured."] }
+                "API-Football doesn't mark these leagues' promotion, relegation or finals places, so they aren't coloured."] },
+      // Each state's second division, below its NPL. Promotion and relegation run within a state, with rules that
+      // vary from state to state. API-Football has no Capital Territory second division, and Tasmania's is split
+      // into northern and southern championships.
+      { id: "state-2", tier: 3, name: "State second divisions", short: "S2", calendar: true, zones: "api",
+        groups: [{ apiId: 835, name: "NSW NPL 2" }, { apiId: 836, name: "Victoria NPL 2" }, { apiId: 833, name: "Queensland Premier League" },
+                 { apiId: 1094, name: "WA State League 1" }, { apiId: 834, name: "SA State League 1" }, { apiId: 1090, name: "Northern NSW League One" },
+                 { apiId: 1091, name: "Tasmania Northern Championship" }, { apiId: 1093, name: "Tasmania Southern Championship" }],
+        promotionNote: "promotion to the NPL happens within each state",
+        notes: ["Each state runs its own second division, below its NPL, with its own promotion and relegation rules.",
+                "API-Football doesn't mark these leagues' places, so they aren't coloured. It has no Capital Territory second division."] }
     ]
   },
   {
