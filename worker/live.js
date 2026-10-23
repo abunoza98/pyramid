@@ -214,10 +214,14 @@ export async function tick(env, opts = {}) {
   return { wrote: true, state: s };
 }
 
+// Knockout games played inside a league's own fixture list (the MLS Cup playoffs in league 253, play-off finals):
+// they aren't league games, so the pages must not add them to the table.
+const KNOCKOUT = /play-?offs?|wild ?card|final|quarter|semi|1\/\d+-finals?|knockout|round one/i;
 function fromApi(x, m, old, day) {
   const side = (t, g, o) => ({ id: t.id, n: (o && o.n) || t.name, g: g ?? null, b: o ? o.b : undefined });
+  const round = String(x.league?.round || "");
   return {
-    id: x.fixture.id, c: m.c, l: m.l, g: m.g || null, day,
+    id: x.fixture.id, c: m.c, l: m.l, g: m.g || null, day, ...(KNOCKOUT.test(round) ? { ko1: 1 } : {}),
     ko: x.fixture.timestamp, st: x.fixture.status?.short || "NS",
     p1: x.fixture.periods?.first || null, p2: x.fixture.periods?.second || null,
     h: side(x.teams.home, x.goals?.home, old && old.h),

@@ -184,6 +184,7 @@
         mine.forEach(function (f) {
           var on = isLive(f), done = isDone(f);
           if ((!on && !done) || f.h.g == null || f.a.g == null) return;
+          if (f.ko1) return;   // a knockout game in the league's fixture list (MLS playoffs): shown, never added to the table
           [["h", "a"], ["a", "h"]].forEach(function (pr) {
             var me = f[pr[0]], them = f[pr[1]], r = byTid[me.id];
             if (!r) return;
