@@ -765,7 +765,7 @@ body.no-ads main { justify-self: center !important; }
 
 /* Bracket: a column per round, scrolls sideways on small screens */
 .bracket { display: flex; gap: 10px; margin-top: 20px; overflow-x: auto; padding-bottom: 10px; -webkit-overflow-scrolling: touch; }
-.br-col { flex: 1 0 150px; min-width: 0; display: flex; flex-direction: column; }
+.br-col { flex: 1 0 180px; min-width: 0; display: flex; flex-direction: column; }
 .br-h { margin: 0 0 10px; font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
 .br-ties { flex: 1; display: flex; flex-direction: column; justify-content: space-around; gap: 10px; }
 .tie {
@@ -773,12 +773,22 @@ body.no-ads main { justify-self: center !important; }
   background: var(--sheet); border: 1px solid var(--rule); font-size: 13.5px;
 }
 .tie.on { border-color: var(--down); }
-.tie-team { display: flex; justify-content: space-between; gap: 8px; }
-.tie-team span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.tie-team b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; }
+/* One row per club: name, then a column per game (two legs or a replay) and the aggregate, like a scoreboard. */
+.tie-team, .tie-head {
+  display: grid; grid-template-columns: minmax(0, 1fr) repeat(var(--n, 1), 1.9em); gap: 0 1px; align-items: baseline;
+}
+.tie-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tie-team b, .tie-g { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: center; }
+.tie-team b { font-weight: 500; }
+.tie-g { font-size: 0.92em; color: var(--muted); }
+.tie-g.live { color: var(--down); font-weight: 600; }
+.tie-multi .tie-team b { font-weight: 600; border-left: 1px solid var(--rule); }
+.tie-head span { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-align: center; line-height: 1.2; }
+.tie-multi .tie-head span:last-child { border-left: 1px solid var(--rule); }
 .tie-team.tie-won { font-weight: 700; }
 .tie-team.tie-won b { font-weight: 700; }
 .tie-team.tie-lost { color: var(--muted); }
+.tie-team.tie-won .tie-g { color: inherit; font-weight: 500; }
 .tie-note { margin-top: 2px; font-size: 11px; line-height: 1.35; color: var(--muted); }
 .q-ties .tie { font-size: 14px; }
 .q-round { margin-top: 12px; border: 1px solid var(--rule); border-radius: 10px; background: var(--sheet); }

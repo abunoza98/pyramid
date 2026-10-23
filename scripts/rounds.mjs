@@ -66,7 +66,7 @@ export function cupRounds(list, names = {}) {
   for (const x of list) {
     let r = String(x.round || "").trim();
     const m = /^(.*?)\s*-?\s*replays?$/i.exec(r);
-    if (m && m[1]) r = m[1];
+    if (m && m[1]) { r = m[1]; if (x.f) x.f.rep = 1; }   // marked, so a tie can say "2nd game" rather than "2nd leg"
     const k = /^1\/(\d+)-finals?$/i.exec(r);
     x.round = names[r] || (k ? `Round of ${2 * Number(k[1])}` : r);
   }

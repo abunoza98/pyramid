@@ -772,30 +772,44 @@
       }
       // A lower-league club knocking out a higher one (both tiers known).
       var upset = winner != null && teams[winner].tier && teams[1 - winner].tier && teams[winner].tier > teams[1 - winner].tier;
-      return { teams: teams, legs: legs, played: played, done: done, on: on, winner: winner, how: how, upset: upset };
+      return { teams: teams, legs: legs, played: played, done: done, on: on, winner: winner, how: how, upset: upset, replay: legs.some(function (f) { return f.rep; }) };
     });
   }
 
+  // A tie, laid out like a scoreboard: one row per club. Two-legged ties (and cup replays) get a column per game
+  // and a bold aggregate; extra time, penalties and upcoming kick-offs go in a line underneath.
   function tieHTML(t, tz, now) {
-    var legNotes = t.legs.map(function (f, i) {
-      var name = t.legs.length > 1 ? (i === 0 ? "1st leg" : "2nd leg") : "";
-      if (GONE[f.st] && !isLive(f)) return (name ? name + ": " : "") + GONE[f.st];
-      if (f.hg != null && (isDone(f) || isLive(f))) {
-        var a = f.h.id === t.teams[0].id ? f.hg : f.ag, b = f.h.id === t.teams[0].id ? f.ag : f.hg;
-        return (name ? name + " " : "") + a + "–" + b + (isLive(f) ? " (" + clock(f, now) + ")" : f.st === "AET" ? " aet" : "");
-      }
-      return (name ? name + " " : "") + (f.st === "TBD" ? fmt(f.ts, tz, { weekday: "short", day: "numeric", month: "short" }) + ", time TBC"
-        : fmt(f.ts, tz, { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", hour12: false }));
-    });
-    if (t.how === "pens") { var lp = t.legs[t.legs.length - 1]; legNotes.push("won " + Math.max(lp.pen[0], lp.pen[1]) + "–" + Math.min(lp.pen[0], lp.pen[1]) + " on pens"); }
+    var multi = t.legs.length > 1;
+    var shown = function (f) { return f.hg != null && (isDone(f) || isLive(f) || f.st === "AWD"); };
+    var goals = function (f, i) { return f.h.id === t.teams[i].id ? f.hg : f.ag; };
+    var ORD = ["1st", "2nd", "3rd", "4th"];
+    var cols = multi ? t.legs.length + 1 : 1;
+    var head = multi ? '<span class="tie-head" aria-hidden="true"><span></span>' +
+      t.legs.map(function (f, k) { return "<span>" + (ORD[k] || k + 1 + "th") + "</span>"; }).join("") + "<span>Agg</span></span>" : "";
     var row = function (i) {
       var tm = t.teams[i];
-      return '<span class="tie-team' + (t.winner === i ? " tie-won" : t.winner === 1 - i ? " tie-lost" : "") + '"><span>' + esc(tm.n) +
+      var cells = multi ? t.legs.map(function (f) {
+        return '<span class="tie-g' + (isLive(f) ? " live" : "") + '">' + (shown(f) ? goals(f, i) : "") + "</span>";
+      }).join("") : "";
+      return '<span class="tie-team' + (t.winner === i ? " tie-won" : t.winner === 1 - i ? " tie-lost" : "") + '"><span class="tie-name">' + esc(tm.n) +
         (tm.t ? ' <i class="tag tier-' + (tm.tier || 0) + '" title="Plays in ' + esc(tm.t) + '">' + esc(tm.t) + "</i>" : "") + "</span>" +
-        (t.played ? "<b>" + tm.agg + "</b>" : "") + "</span>";
+        cells + "<b>" + (t.played ? tm.agg : "") + "</b></span>";
     };
-    return '<div class="tie' + (t.on ? " on" : "") + '" data-teams="' + esc(t.teams[0].n + "|" + t.teams[1].n) + '">' + row(0) + row(1) +
-      '<span class="tie-note">' + (t.upset ? '<b class="upset">Upset</b> · ' : "") + legNotes.map(esc).join(" · ") + "</span></div>";
+    var notes = [];
+    t.legs.forEach(function (f, k) {
+      var name = multi ? (ORD[k] || k + 1 + "th") + (t.legs.length === 2 && !t.replay ? " leg" : " game") : "";
+      if (isLive(f)) notes.push((name ? name + " " : "") + "live · " + clock(f, now));
+      else if (GONE[f.st]) notes.push((name ? name + ": " : "") + GONE[f.st]);
+      else if (!shown(f)) notes.push((name ? name + " " : "") + (f.st === "TBD" ? fmt(f.ts, tz, { weekday: "short", day: "numeric", month: "short" }) + ", time TBC"
+        : fmt(f.ts, tz, { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", hour12: false })));
+    });
+    if (t.how === "pens") {
+      var lp = t.legs[t.legs.length - 1];
+      notes.push(t.teams[t.winner].n + " win " + Math.max(lp.pen[0], lp.pen[1]) + "–" + Math.min(lp.pen[0], lp.pen[1]) + " on penalties");
+    } else if (t.how === "aet") notes.push("After extra time");
+    return '<div class="tie' + (t.on ? " on" : "") + (multi ? " tie-multi" : "") + '" style="--n:' + cols + '" data-teams="' + esc(t.teams[0].n + "|" + t.teams[1].n) + '">' +
+      head + row(0) + row(1) +
+      (t.upset || notes.length ? '<span class="tie-note">' + (t.upset ? '<b class="upset">Upset</b>' + (notes.length ? " · " : "") : "") + notes.map(esc).join(" · ") + "</span>" : "") + "</div>";
   }
 
   // The knockout bracket: one column per round. Each round's ties are put in the order of the round after it,
