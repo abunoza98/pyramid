@@ -1127,8 +1127,11 @@
         var lab = String(sname).replace(/^\d\d(\d\d)[–-](?:\d\d)?(\d\d)$/, "$1–$2");
         return '<span class="' + ((n - 1 - i) % wide ? "hw" : (n - 1 - i) % narrow ? "hn" : "") + (i === 0 && n > 1 ? " first" : i === n - 1 && n > 1 ? " last" : "") + '" style="left:' + (Math.round(X(i) / 10 * 100) / 100) + '%">' + esc(lab) + "</span>";
       }).join("");
-      var cap = wins.length ? "Won it " + (wins.length === 1 ? "in " + cr.seasons[wins[0].i] : wins.length + " times: " + wins.map(function (w) { return cr.seasons[w.i]; }).join(", ")) + "."
-        : best ? "Best run: " + LEVELS[levelOf(best.d)].toLowerCase().replace("earlier rounds", "the early rounds") + " (" + cr.seasons[best.i] + ")." : "";
+      // All-time titles (when known) first, then what the seasons shown here add up to.
+      var allTime = cr.titles ? cr.titles + (cr.titles === 1 ? " title" : " titles") + " in all. " : cr.titles === 0 ? "Never won it. " : "";
+      var shown = wins.length ? (wins.length === 1 ? "Won it in " + cr.seasons[wins[0].i] : "Won it " + wins.length + " times here: " + wins.map(function (w) { return cr.seasons[w.i]; }).join(", ")) + "."
+        : best ? "Best run here: " + LEVELS[levelOf(best.d)].toLowerCase().replace("earlier rounds", "the early rounds") + " (" + cr.seasons[best.i] + ")." : "";
+      var cap = allTime + shown;
       var head = cupList.length > 1 ? '<div class="cr-h"><p>' + esc(cap) + "</p>" + (cr.href ? '<a href="' + esc(cr.href) + '">' + esc(cr.name) + " this season →</a>" : "") + "</div>"
         : '<div class="cr-h"><h3>' + (cr.href ? '<a href="' + esc(cr.href) + '">' + esc(cr.name) + "</a>" : esc(cr.name)) + "</h3><p>" + esc(cap) + "</p></div>";
       return '<div class="cr' + (cupList.length > 1 ? " tf-panel" + (ci === 0 ? " on" : "") : "") + '"' + (cupList.length > 1 ? ' data-panel="' + esc(cr.id) + '" role="tabpanel"' : "") + ">" + head +
@@ -1140,9 +1143,9 @@
     }).join("");
     // More than one cup: a tab for each, one chart showing at a time.
     var cupTabs = cupList.length > 1 ? '<div class="tf-tabs cl-tabs" role="tablist" aria-label="Cups">' + cupList.map(function (cr, ci) {
-      var won = cr.runs.filter(function (r) { return r.res === "W"; }).length;
+      var won = cr.titles != null ? cr.titles : cr.runs.filter(function (r) { return r.res === "W"; }).length;
       return '<button type="button" role="tab" class="tf-tab' + (ci === 0 ? " on" : "") + '" data-tab="' + esc(cr.id) + '" aria-selected="' + (ci === 0) + '">' + esc(cr.name) +
-        (won ? '<span class="cr-won" title="Won ' + won + (won === 1 ? " time" : " times") + '">' + won + "×</span>" : "") + "</button>";
+        (won ? '<span class="cr-won" title="' + won + (won === 1 ? " title" : " titles") + ' in all">' + won + "×</span>" : "") + "</button>";
     }).join("") + "</div>" : "";
     var cupSection = cupRuns ? '<section class="cl-sec"' + (cupList.length > 1 ? ' data-tabs="cup-runs"' : "") + '><div class="cl-sec-h"><h2>Cup runs</h2></div>' + cupTabs + cupRuns + "</section>" : "";
 
