@@ -753,8 +753,16 @@
   var VENUE_TZ = {
     england: "Europe/London", scotland: "Europe/London", spain: "Europe/Madrid", germany: "Europe/Berlin",
     france: "Europe/Paris", italy: "Europe/Rome", belgium: "Europe/Brussels", netherlands: "Europe/Amsterdam",
-    portugal: "Europe/Lisbon", croatia: "Europe/Zagreb", turkey: "Europe/Istanbul", europe: "Europe/Paris"
+    portugal: "Europe/Lisbon", croatia: "Europe/Zagreb", turkey: "Europe/Istanbul", europe: "Europe/Paris",
+    switzerland: "Europe/Zurich", austria: "Europe/Vienna", greece: "Europe/Athens", argentina: "America/Argentina/Buenos_Aires",
+    china: "Asia/Shanghai", australia: "Australia/Sydney", brazil: "America/Sao_Paulo", usa: "America/New_York",
+    mexico: "America/Mexico_City", indonesia: "Asia/Jakarta"
   };
+  // Countries spanning several time zones whose games don't carry their own (z): their "local" times are really one
+  // city's, so they're labelled with that city rather than as local kick-off times. (Australia's games carry z.)
+  var MULTI_TZ = { usa: 1, brazil: 1, mexico: 1, indonesia: 1 };
+  // A game's own time zone (set where a country spans several) when showing local kick-off times.
+  function vz(f, tz) { return tz && tz !== "local" && f && f.z ? f.z : tz; }
   function zoneOfMode(mode, country) { return mode === "venue" ? VENUE_TZ[country] || "Europe/London" : "local"; }
   function myZone() { try { return Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) { return ""; } }
   // tz: "local", or an IANA zone such as "Europe/Madrid"
@@ -766,16 +774,18 @@
   }
   function zoneCity(z) { return (String(z).split("/").pop() || "local").replace(/_/g, " "); }
   function tzName(mode, country) {
-    if (mode === "venue") return country === "europe" ? "Central European Time, as UEFA lists them" : "local kick-off time (" + zoneCity(VENUE_TZ[country] || "Europe/London") + ")";
+    if (mode === "venue") return country === "europe" ? "Central European Time, as UEFA lists them"
+      : MULTI_TZ[country] ? zoneCity(VENUE_TZ[country]) + " time" : "local kick-off time (" + (country === "australia" ? "each venue's own" : zoneCity(VENUE_TZ[country] || "Europe/London")) + ")";
     var z = myZone();
     return z ? "your time (" + zoneCity(z) + ")" : "your time";
   }
   // The "Times in …" line, with a switch unless the visitor is already in the venue's time zone.
   function tzLine(mode, country) {
-    var same = myZone() === VENUE_TZ[country];
+    // Already in the venue's zone: no switch needed. Not so where each game has its own zone (Australia).
+    var same = myZone() === VENUE_TZ[country] && country !== "australia";
     return "<span>Times in " + esc(same ? "local time (" + zoneCity(myZone()) + ")" : tzName(mode, country)) + "</span>" +
       (same ? "" : '<button type="button" class="tz-toggle" data-tz="' + (mode === "venue" ? "local" : "venue") + '">' +
-        (mode === "venue" ? "Use my time zone" : "Show local kick-off times") + "</button>");
+        (mode === "venue" ? "Use my time zone" : MULTI_TZ[country] ? "Show " + zoneCity(VENUE_TZ[country]) + " times" : "Show local kick-off times") + "</button>");
   }
   function currentRound(rounds, now) {
     var t = (now || Date.now()) / 1000 - 2 * 86400;
@@ -795,7 +805,7 @@
     var on = isLive(f), done = isDone(f) || f.st === "AWD" || f.st === "WO";
     var tag = function (t) { return tags && t.t ? ' <i class="tag tier-' + (t.tier || 0) + '" title="Plays in ' + esc(t.t) + '">' + esc(t.t) + "</i>" : ""; };
     var hasScore = f.hg != null && f.ag != null;
-    var time = GONE[f.st] && !on ? "" : f.st === "TBD" ? "TBC" : on || isDone(f) ? clock({ st: f.st, p1: f.p1, p2: f.p2 }, now) : fmt(f.ts, tz, { hour: "2-digit", minute: "2-digit", hour12: false });
+    var time = GONE[f.st] && !on ? "" : f.st === "TBD" ? "TBC" : on || isDone(f) ? clock({ st: f.st, p1: f.p1, p2: f.p2 }, now) : fmt(f.ts, vz(f, tz), { hour: "2-digit", minute: "2-digit", hour12: false });
     var score = hasScore && (on || done || f.st === "ABD") ? f.hg + "–" + f.ag : "v";
     var notes = [];
     if (GONE[f.st] && !on) notes.push('<b class="g-flag">' + GONE[f.st] + "</b>");
@@ -840,7 +850,7 @@
     var days = [], byDay = {}, off = [];
     games.forEach(function (f) {
       if (GONE[f.st] && !isLive(f) && f.st !== "ABD" && f.st !== "AWD") { off.push(f); return; }
-      var d = fmt(f.ts, tz, { weekday: "long", day: "numeric", month: "long" });
+      var d = fmt(f.ts, vz(f, tz), { weekday: "long", day: "numeric", month: "long" });
       if (!byDay[d]) { byDay[d] = []; days.push(d); }
       byDay[d].push(f);
     });
@@ -1014,8 +1024,8 @@
       if (t.series && f.pen && (isDone(f) || f.st === "AWD")) notes.push(name + ": " + (f.pen[0] > f.pen[1] ? f.h.n : f.a.n) + " won " + Math.max(f.pen[0], f.pen[1]) + "–" + Math.min(f.pen[0], f.pen[1]) + " on penalties");
       if (isLive(f)) notes.push((name ? name + " " : "") + "live · " + clock(f, now));
       else if (GONE[f.st]) notes.push((name ? name + ": " : "") + GONE[f.st]);
-      else if (!shown(f)) notes.push((name ? name + " " : "") + (f.st === "TBD" ? fmt(f.ts, tz, { weekday: "short", day: "numeric", month: "short" }) + ", time TBC"
-        : fmt(f.ts, tz, { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", hour12: false })));
+      else if (!shown(f)) notes.push((name ? name + " " : "") + (f.st === "TBD" ? fmt(f.ts, vz(f, tz), { weekday: "short", day: "numeric", month: "short" }) + ", time TBC"
+        : fmt(f.ts, vz(f, tz), { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", hour12: false })));
     });
     if (t.how === "pens") {
       var lp = t.legs[t.legs.length - 1];
@@ -1228,10 +1238,14 @@
     t: { hour: "2-digit", minute: "2-digit", hour12: false },
     long: { weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit", hour12: false }
   };
-  function tt(ts, tz, f) { return '<time data-ts="' + ts + '" data-f="' + f + '">' + esc(fmt(ts, tz, TFMT[f])) + "</time>"; }
+  // z: the game's own time zone, where its country spans several (kept on the element so retime can use it).
+  function tt(ts, tz, f, z) { return '<time data-ts="' + ts + '" data-f="' + f + '"' + (z ? ' data-z="' + esc(z) + '"' : "") + ">" + esc(fmt(ts, z && tz !== "local" ? z : tz, TFMT[f])) + "</time>"; }
   function retime(root, mode, country) {
     var tz = zoneOfMode(mode, country);
-    root.querySelectorAll("time[data-ts]").forEach(function (el) { el.textContent = fmt(Number(el.getAttribute("data-ts")), tz, TFMT[el.getAttribute("data-f")]); });
+    root.querySelectorAll("time[data-ts]").forEach(function (el) {
+      var z = el.getAttribute("data-z");
+      el.textContent = fmt(Number(el.getAttribute("data-ts")), z && tz !== "local" ? z : tz, TFMT[el.getAttribute("data-f")]);
+    });
     var line = root.querySelector(".fx-links");
     if (line) line.innerHTML = tzLine(mode, country);
   }
@@ -1266,7 +1280,7 @@
     };
     var compTag = function (f) { return '<span class="ctag ctag-' + f.comp.kind + '" title="' + esc(f.comp.name) + '">' + esc(f.comp.short) + "</span>"; };
     var when = function (f, o) {
-      return f.st === "TBD" ? fmt(f.ts, tz, { weekday: "short", day: "numeric", month: "short" }) + ", TBC" : fmt(f.ts, tz, o || { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", hour12: false });
+      return f.st === "TBD" ? fmt(f.ts, vz(f, tz), { weekday: "short", day: "numeric", month: "short" }) + ", TBC" : fmt(f.ts, vz(f, tz), o || { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", hour12: false });
     };
     var line = function (f, kind) {
       var right;
@@ -1276,9 +1290,9 @@
       } else if (kind === "live") {
         var lg2 = mine(f);
         right = '<span class="lv on">' + esc(clock(f, now)) + " " + lg2[0] + "–" + lg2[1] + "</span>";
-      } else right = '<span class="cl-time">' + (f.st === "TBD" ? "TBC" : tt(f.ts, tz, "t")) + "</span>";
+      } else right = '<span class="cl-time">' + (f.st === "TBD" ? "TBC" : tt(f.ts, tz, "t", f.z)) + "</span>";
       // data-fid / data-home let assets/app.js lay live scores over the row without rebuilding the page.
-      return '<li class="cl-row" data-fid="' + f.id + '" data-home="' + (f.home ? 1 : 0) + '"><span class="cl-date">' + tt(f.ts, tz, "d") + "</span>" + compTag(f) +
+      return '<li class="cl-row" data-fid="' + f.id + '" data-home="' + (f.home ? 1 : 0) + '"><span class="cl-date">' + tt(f.ts, tz, "d", f.z) + "</span>" + compTag(f) +
         '<span class="cl-ha">' + (f.home ? "H" : "A") + '</span><span class="cl-opp">' + opp(f) + "</span>" + right + "</li>";
     };
     var list = function (arr, kind, first) {
@@ -1295,7 +1309,7 @@
       (nx.round ? " · " + esc(nx.round) : "") + "</p>" +
       '<p class="nm-teams"><span>' + (nx.home ? esc(d.name) : opp(nx)) + "</span><b>" +
         (isLive(nx) ? nx.hg + "–" + nx.ag : "v") + "</b><span>" + (nx.home ? opp(nx) : esc(d.name)) + "</span></p>" +
-      '<p class="nm-when">' + (isLive(nx) ? esc(clock(nx, now)) : nx.st === "TBD" ? tt(nx.ts, tz, "d") + ", time TBC" : tt(nx.ts, tz, "long")) +
+      '<p class="nm-when">' + (isLive(nx) ? esc(clock(nx, now)) : nx.st === "TBD" ? tt(nx.ts, tz, "d", nx.z) + ", time TBC" : tt(nx.ts, tz, "long", nx.z)) +
       (nx.v ? " · " + esc(nx.v) : "") + "</p></section>" : "";
 
     // Competitions: one tab per competition the club is in this season (league first, then Europe, then cups).
@@ -1534,7 +1548,7 @@
       var r = res(f), g = mine(f);
       var score = g[0] + "–" + g[1] + (f.st === "AET" ? " after extra time" : "");
       if (f.pen) { var p = f.home ? f.pen : [f.pen[1], f.pen[0]]; score += ", " + p[0] + "–" + p[1] + " on penalties"; }
-      var tip = '<span class="ltip' + (k < 2 ? " l" : k > 3 ? " r" : "") + '"><b>' + tt(f.ts, tz, "d") + " · " + esc(f.comp.name) + (f.round ? " · " + esc(f.round) : "") + "</b>" +
+      var tip = '<span class="ltip' + (k < 2 ? " l" : k > 3 ? " r" : "") + '"><b>' + tt(f.ts, tz, "d", f.z) + " · " + esc(f.comp.name) + (f.round ? " · " + esc(f.round) : "") + "</b>" +
         (f.home ? "Home v " : "Away at ") + esc(f.opp.n) + "<i>" + ({ W: "Won", D: "Drew", L: "Lost" })[r] + " " + score + "</i></span>";
       return '<b class="fchip ' + r + '" tabindex="0">' + r + tip + "</b>";
     }).join("");

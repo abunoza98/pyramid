@@ -11,7 +11,7 @@
 import { readFile, writeFile, mkdir, rename } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-import { COUNTRIES, EUROPE, clubName } from "./leagues.mjs";
+import { COUNTRIES, EUROPE, clubName, venueZone } from "./leagues.mjs";
 import { api } from "./update-standings.mjs";
 import { seasonFor, seasonLabel } from "./season.mjs";
 import { build } from "./build.mjs";
@@ -115,6 +115,8 @@ async function main() {
             }
           }
           if (!list.length) throw new Error(`no fixtures for league ${part.apiId}`);
+          // Where a country spans time zones, each game carries its own (z) for local kick-off times.
+          for (const { f } of list) { const z = venueZone(c, f, part.name); if (z) f.z = z; }
           groups.push({ name: part.name, rounds: toRounds(list) });
         }
         if (!groups.length) continue;
