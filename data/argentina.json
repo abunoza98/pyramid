@@ -260,6 +260,19 @@
       },
       {
        "pos": 3,
+       "team": "Gimnasia La Plata",
+       "p": 14,
+       "w": 7,
+       "d": 4,
+       "l": 3,
+       "gf": 21,
+       "ga": 18,
+       "pts": 25,
+       "tid": 434,
+       "form": "DDDWW"
+      },
+      {
+       "pos": 4,
        "team": "Belgrano",
        "p": 13,
        "w": 6,
@@ -272,30 +285,17 @@
        "form": "DWWWL"
       },
       {
-       "pos": 4,
-       "team": "Gimnasia La Plata",
-       "p": 13,
-       "w": 6,
-       "d": 4,
-       "l": 3,
-       "gf": 19,
-       "ga": 18,
-       "pts": 22,
-       "tid": 434,
-       "form": "DDDDW"
-      },
-      {
        "pos": 5,
        "team": "Sarmiento",
-       "p": 13,
+       "p": 14,
        "w": 6,
        "d": 3,
-       "l": 4,
+       "l": 5,
        "gf": 22,
-       "ga": 19,
+       "ga": 21,
        "pts": 21,
        "tid": 474,
-       "form": "DLWDD"
+       "form": "LWDDL"
       },
       {
        "pos": 6,

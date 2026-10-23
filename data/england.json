@@ -141,6 +141,19 @@
     },
     {
      "pos": 9,
+     "team": "Ipswich Town",
+     "p": 8,
+     "w": 3,
+     "d": 1,
+     "l": 4,
+     "gf": 12,
+     "ga": 16,
+     "pts": 10,
+     "tid": 57,
+     "form": "WLWLD"
+    },
+    {
+     "pos": 10,
      "team": "Hull City",
      "p": 7,
      "w": 2,
@@ -151,19 +164,6 @@
      "pts": 9,
      "tid": 64,
      "form": "DDLDL"
-    },
-    {
-     "pos": 10,
-     "team": "Ipswich Town",
-     "p": 7,
-     "w": 3,
-     "d": 0,
-     "l": 4,
-     "gf": 11,
-     "ga": 15,
-     "pts": 9,
-     "tid": 57,
-     "form": "LWLWL"
     },
     {
      "pos": 11,
@@ -245,6 +245,19 @@
     },
     {
      "pos": 17,
+     "team": "Nottingham Forest",
+     "p": 8,
+     "w": 1,
+     "d": 3,
+     "l": 4,
+     "gf": 6,
+     "ga": 10,
+     "pts": 6,
+     "tid": 65,
+     "form": "WLLLD"
+    },
+    {
+     "pos": 18,
      "team": "Coventry City",
      "p": 7,
      "w": 2,
@@ -257,7 +270,7 @@
      "form": "LLWWL"
     },
     {
-     "pos": 18,
+     "pos": 19,
      "team": "Fulham",
      "p": 7,
      "w": 1,
@@ -268,19 +281,6 @@
      "pts": 5,
      "tid": 36,
      "form": "LDDLW"
-    },
-    {
-     "pos": 19,
-     "team": "Nottingham Forest",
-     "p": 7,
-     "w": 1,
-     "d": 2,
-     "l": 4,
-     "gf": 5,
-     "ga": 9,
-     "pts": 5,
-     "tid": 65,
-     "form": "DWLLL"
     },
     {
      "pos": 20,
