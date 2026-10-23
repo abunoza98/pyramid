@@ -205,19 +205,6 @@
     },
     {
      "pos": 13,
-     "team": "VfB Stuttgart",
-     "p": 6,
-     "w": 2,
-     "d": 0,
-     "l": 4,
-     "gf": 8,
-     "ga": 10,
-     "pts": 6,
-     "tid": 172,
-     "form": "WLLWL"
-    },
-    {
-     "pos": 14,
      "team": "TSG Hoffenheim",
      "p": 6,
      "w": 2,
@@ -228,6 +215,19 @@
      "pts": 6,
      "tid": 167,
      "form": "LWLLW"
+    },
+    {
+     "pos": 14,
+     "team": "VfB Stuttgart",
+     "p": 7,
+     "w": 2,
+     "d": 0,
+     "l": 5,
+     "gf": 10,
+     "ga": 13,
+     "pts": 6,
+     "tid": 172,
+     "form": "LLWLL"
     },
     {
      "pos": 15,
@@ -271,15 +271,15 @@
     {
      "pos": 18,
      "team": "Borussia Mönchengladbach",
-     "p": 6,
-     "w": 0,
+     "p": 7,
+     "w": 1,
      "d": 0,
      "l": 6,
-     "gf": 8,
-     "ga": 20,
-     "pts": 0,
+     "gf": 11,
+     "ga": 22,
+     "pts": 3,
      "tid": 163,
-     "form": "LLLLL"
+     "form": "LLLLW"
     }
    ],
    "updated": "2026-10-23T00:00:00.000Z"

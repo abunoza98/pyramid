@@ -236,6 +236,19 @@
     },
     {
      "pos": 2,
+     "team": "FC Winterthur",
+     "p": 11,
+     "w": 6,
+     "d": 3,
+     "l": 2,
+     "gf": 23,
+     "ga": 11,
+     "pts": 21,
+     "tid": 2180,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 3,
      "team": "Yverdon Sport",
      "p": 10,
      "w": 5,
@@ -246,19 +259,6 @@
      "pts": 19,
      "tid": 6653,
      "form": "WWLDW"
-    },
-    {
-     "pos": 3,
-     "team": "FC Winterthur",
-     "p": 10,
-     "w": 5,
-     "d": 3,
-     "l": 2,
-     "gf": 19,
-     "ga": 11,
-     "pts": 18,
-     "tid": 2180,
-     "form": "DWWWL"
     },
     {
      "pos": 4,
@@ -341,15 +341,15 @@
     {
      "pos": 10,
      "team": "Stade Nyonnais",
-     "p": 10,
+     "p": 11,
      "w": 1,
      "d": 2,
-     "l": 7,
+     "l": 8,
      "gf": 8,
-     "ga": 24,
+     "ga": 28,
      "pts": 5,
      "tid": 6646,
-     "form": "DLLLW"
+     "form": "LLLWL"
     }
    ],
    "updated": "2026-10-23T00:00:00.000Z"

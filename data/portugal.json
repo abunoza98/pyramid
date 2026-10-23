@@ -185,16 +185,16 @@
     },
     {
      "pos": 11,
-     "team": "Marítimo",
-     "p": 8,
+     "team": "Vitória de Guimarães",
+     "p": 9,
      "w": 2,
      "d": 2,
-     "l": 4,
-     "gf": 9,
-     "ga": 14,
+     "l": 5,
+     "gf": 10,
+     "ga": 10,
      "pts": 8,
-     "tid": 214,
-     "form": "LLLDL"
+     "tid": 224,
+     "form": "DLDLW"
     },
     {
      "pos": 12,
@@ -211,6 +211,19 @@
     },
     {
      "pos": 13,
+     "team": "Marítimo",
+     "p": 9,
+     "w": 2,
+     "d": 2,
+     "l": 5,
+     "gf": 9,
+     "ga": 19,
+     "pts": 8,
+     "tid": 214,
+     "form": "LLDLL"
+    },
+    {
+     "pos": 14,
      "team": "Famalicão",
      "p": 8,
      "w": 1,
@@ -223,7 +236,7 @@
      "form": "DDDWL"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Rio Ave",
      "p": 8,
      "w": 2,
@@ -234,19 +247,6 @@
      "pts": 7,
      "tid": 226,
      "form": "LLDLW"
-    },
-    {
-     "pos": 15,
-     "team": "Vitória de Guimarães",
-     "p": 8,
-     "w": 1,
-     "d": 2,
-     "l": 5,
-     "gf": 5,
-     "ga": 10,
-     "pts": 5,
-     "tid": 224,
-     "form": "LDLDL"
     },
     {
      "pos": 16,
