@@ -1277,7 +1277,8 @@
         var lg2 = mine(f);
         right = '<span class="lv on">' + esc(clock(f, now)) + " " + lg2[0] + "–" + lg2[1] + "</span>";
       } else right = '<span class="cl-time">' + (f.st === "TBD" ? "TBC" : tt(f.ts, tz, "t")) + "</span>";
-      return '<li class="cl-row"><span class="cl-date">' + tt(f.ts, tz, "d") + "</span>" + compTag(f) +
+      // data-fid / data-home let assets/app.js lay live scores over the row without rebuilding the page.
+      return '<li class="cl-row" data-fid="' + f.id + '" data-home="' + (f.home ? 1 : 0) + '"><span class="cl-date">' + tt(f.ts, tz, "d") + "</span>" + compTag(f) +
         '<span class="cl-ha">' + (f.home ? "H" : "A") + '</span><span class="cl-opp">' + opp(f) + "</span>" + right + "</li>";
     };
     var list = function (arr, kind, first) {
@@ -1290,7 +1291,7 @@
 
     // Next (or live) match
     var nx = live[0] || upcoming[0];
-    var nextHTML = nx ? '<section class="next-match' + (isLive(nx) ? " on" : "") + '"><p class="nm-h">' + (isLive(nx) ? "Live now" : "Next match") + " · " + esc(nx.comp.name) +
+    var nextHTML = nx ? '<section class="next-match' + (isLive(nx) ? " on" : "") + '" data-fid="' + nx.id + '" data-comp="' + esc(nx.comp.name) + '"><p class="nm-h">' + (isLive(nx) ? "Live now" : "Next match") + " · " + esc(nx.comp.name) +
       (nx.round ? " · " + esc(nx.round) : "") + "</p>" +
       '<p class="nm-teams"><span>' + (nx.home ? esc(d.name) : opp(nx)) + "</span><b>" +
         (isLive(nx) ? nx.hg + "–" + nx.ag : "v") + "</b><span>" + (nx.home ? opp(nx) : esc(d.name)) + "</span></p>" +

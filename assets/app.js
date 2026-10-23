@@ -635,6 +635,39 @@
     document.addEventListener(type, function (e) { fitTip(e.target.closest ? e.target.closest(".ld, .fchip") : null); });
   });
   function clubRender() { if (window.FP) FP.retime($("main-content"), fxState.tz, COUNTRY); }
+  /* Live scores on club pages. The page is built from the fixture files (checked every two hours), so a game in
+     progress shows whatever score it had then. Here the live worker's scores are laid over the next-match card and
+     the fixture rows, matched by fixture ID, every 30 seconds while one of this club's games is on. */
+  var CLUB_DONE = ["FT", "AET", "PEN"], clubTimer = null;
+  function clubLive() {
+    clearTimeout(clubTimer);
+    if (!LIVE_URL || !window.fetch || !window.FP || document.hidden) return;
+    refreshLive().then(function () {
+      var byId = {}, on = false, soon = false, nowS = Date.now() / 1000;
+      ((live && live.fixtures) || []).forEach(function (f) { byId[f.id] = f; });
+      document.querySelectorAll("#main-content [data-fid]").forEach(function (el) {
+        var f = byId[el.getAttribute("data-fid")];
+        if (!f) return;
+        var isOn = FP.isLive(f), done = CLUB_DONE.indexOf(f.st) > -1;
+        if (isOn) on = true;
+        else if (f.st === "NS" && f.ko - nowS < 15 * 60 && f.ko - nowS > -3 * 3600) soon = true;
+        if (f.h.g == null || f.a.g == null || (!isOn && !done)) return;
+        var clk = FP.clock(f, Date.now());
+        if (el.classList.contains("next-match")) {
+          el.classList.toggle("on", isOn);
+          var b = el.querySelector(".nm-teams b"), w = el.querySelector(".nm-when"), h = el.querySelector(".nm-h");
+          if (b) b.textContent = f.h.g + "–" + f.a.g;
+          if (w) w.textContent = clk;
+          if (h) h.textContent = (isOn ? "Live now" : "Full time") + " · " + el.getAttribute("data-comp");
+        } else {
+          var home = el.getAttribute("data-home") === "1", me = home ? f.h.g : f.a.g, them = home ? f.a.g : f.h.g;
+          var right = el.lastElementChild;
+          if (right) right.outerHTML = '<span class="lv' + (isOn ? " on" : "") + '">' + FP.esc(clk) + " " + me + "–" + them + "</span>";
+        }
+      });
+      clubTimer = setTimeout(clubLive, on || soon ? 30 * 1000 : 5 * 60 * 1000);
+    });
+  }
 
   /* ---------- Installable app ----------
      Registers sw.js so phones can add the site to the home screen and open it offline. Only on the live site
@@ -653,6 +686,8 @@
   applyClub(arrivedForClub);
   if (PAGE === "club") {
     clubRender();
+    clubLive();
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) clubLive(); });
   } else if (PAGE === "fixtures" && window.fetch && window.FP) {
     fxStart();
     document.addEventListener("visibilitychange", function () { if (!document.hidden && fxData) fxLive(); });
