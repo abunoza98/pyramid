@@ -1010,3 +1010,4 @@ tbody tr.is-this .c-club { font-weight: 700; }
 .lkey i.m-champ { background: #E8B931; box-shadow: 0 0 0 2px rgba(232, 185, 49, 0.35); }
 .lkey i.m-up { background: var(--up); }
 .lkey i.m-down { background: var(--down); }
+.cup-note { margin: 8px 0 0; padding: 10px 12px; border-radius: 8px; background: var(--hover); border: 1px solid var(--rule); font-size: 14px; color: var(--muted); max-width: 70ch; }

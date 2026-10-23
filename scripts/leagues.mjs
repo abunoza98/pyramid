@@ -99,7 +99,9 @@ export const COUNTRIES = [
   {
     country: "france", featured: true, code: "FRA", name: "France", adjective: "French", apiCountry: "France",
     belowNote: "Promoted clubs from National 1 come up",
-    cups: [{ apiId: 66, id: "coupe-de-france", name: "Coupe de France", short: "CDF" }],
+    // The Coupe de la Ligue ended in 2020: past seasons only (`until` is its last season's start year).
+    cups: [{ apiId: 66, id: "coupe-de-france", name: "Coupe de France", short: "CDF" },
+      { apiId: 65, id: "coupe-de-la-ligue", name: "Coupe de la Ligue", short: "CDL", until: 2019 }],
     leagues: [
       { apiId: 61, id: "ligue-1", tier: 1, name: "Ligue 1", short: "L1", clubs: 18,
         zones: [Z(1, 3, "top", "Champions League"), Z(4, 4, "top", "Champions League qualifiers"), Z(5, 5, "mid", "Europa League"),

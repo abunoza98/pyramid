@@ -190,6 +190,19 @@ export async function loadCupHistory(root = ROOT) {
   }
   return out;
 }
+// Past cup seasons' ties, saved by scripts/backfill-cups.mjs: { "country/cup": [fixture files, newest first] }
+export async function loadCupFixtureHistory(root = ROOT) {
+  const out = {};
+  for (const c of COUNTRIES) for (const cup of c.cups || []) {
+    const dir = path.join(root, "data", "history", c.country, "cups", cup.id);
+    let files = [];
+    try { files = (await readdir(dir)).filter((f) => /^\d{4}-fixtures\.json$/.test(f)); } catch { continue; }
+    const list = [];
+    for (const f of files) list.push(JSON.parse(await readFile(path.join(dir, f), "utf8")));
+    if (list.length) out[`${c.country}/${cup.id}`] = list.sort((a, b) => b.year - a.year);
+  }
+  return out;
+}
 export async function loadFixtures(root = ROOT) {
   const out = {};
   for (const cfg of [...COUNTRIES, EUROPE]) for (const lg of [...cfg.leagues, ...(cfg.cups || [])]) {
@@ -260,6 +273,8 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   const history = await loadHistory(root);
   const fixtures = await loadFixtures(root);
   const cupHistory = await loadCupHistory(root);
+  const cupPast = await loadCupFixtureHistory(root);
+  const cupPastUrls = [];
   const cupUrls = [];
   // Every club that gets a page: those in the current tables (by club ID), plus clubs only found in past
   // seasons (by name), so any table, current or past, can link to its clubs.
@@ -301,10 +316,12 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   };
   // Cards for a country's cups (status from the fixtures), with links relative to the country page.
   const cupCards = (c, rel) => ((COUNTRIES.find((x) => x.country === c.country) || {}).cups || [])
-    .filter((cup) => fixtures[`${c.country}/${cup.id}`])
+    .filter((cup) => fixtures[`${c.country}/${cup.id}`] || cupPast[`${c.country}/${cup.id}`])
     .map((cup) => {
       const fx = fixtures[`${c.country}/${cup.id}`];
-      return { id: cup.id, name: cup.name, status: FP.cupStatus(fx), span: FP.cupSpan(fx), href: `${rel}${cup.id}/${suffix}` };
+      if (fx) return { id: cup.id, name: cup.name, status: FP.cupStatus(fx), span: FP.cupSpan(fx), href: `${rel}${cup.id}/${suffix}` };
+      const last = cupPast[`${c.country}/${cup.id}`][0];
+      return { id: cup.id, name: cup.name, status: (cup.until ? `Ended in ${cup.until + 1} · ` : `${last.season}: `) + FP.cupStatus(last), span: "", href: `${rel}${cup.id}/${suffix}` };
     });
   let europe = null;
   try { europe = JSON.parse(await readFile(path.join(root, "data", "europe.json"), "utf8")); } catch {}
@@ -351,17 +368,38 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null), fixtures: fxLinks(false), cups: cupCards(c, "") })
     }));
     // Cup pages
+    // Cup pages: this season at /<country>/<cup>/, each past season at /<country>/<cup>/<season>/, with a Seasons
+    // picker. A cup with no current season yet (or one that has ended) shows its latest finished season there.
     for (const cup of (COUNTRIES.find((x) => x.country === c.country) || {}).cups || []) {
       const fx = fixtures[`${c.country}/${cup.id}`];
-      if (!fx) continue;
+      const past = (cupPast[`${c.country}/${cup.id}`] || []).filter((p) => !fx || p.season !== fx.season);
+      if (!fx && !past.length) continue;
+      const top = fx || past[0];                    // what /<country>/<cup>/ shows
+      const older = fx ? past : past.slice(1);      // the seasons with their own page
+      const picker = (rel, onYear) => [
+        { label: fx ? `${fx.season} (live)` : top.season, href: (rel || "./") + suffix, current: onYear == null },
+        ...older.map((p) => ({ label: p.season, href: `${rel}${slug(p.year)}/${suffix}`, current: onYear === p.year }))
+      ];
+      const note = !fx ? (cup.until ? `The ${cup.name} ended after the ${top.season} season.` : `This season's ${cup.name} isn't covered yet; it appears here once the draw reaches the national rounds.`) : "";
       await write(`${c.country}/${cup.id}/index.html`, shell({
-        title: `${cup.name} ${fx.season}: bracket, draw and results | Football Pyramids`,
-        description: `The ${cup.name} ${fx.season} round by round: every tie and result, the bracket from the last 16, and each club's league so the giant-killings stand out.`,
-        canonical: `${SITE}/${c.country}/${cup.id}/`, base: "../../", suffix, page: "cup", country: c.country, stamps: {}, countries,
-        attrs: { league: cup.id, fx: `fixtures/${suffix}` },
-        main: FP.cupMain(cup, fx, { tz: "venue", fixturesHref: `fixtures/${suffix}` })
+        title: `${cup.name} ${top.season}: bracket, draw and results | Football Pyramids`,
+        description: `The ${cup.name} ${top.season} round by round: every tie and result, the bracket, and each club's league so the giant-killings stand out.`,
+        canonical: `${SITE}/${c.country}/${cup.id}/`, base: "../../", suffix, page: fx ? "cup" : "cup-history", country: c.country, stamps: {}, countries,
+        seasons: older.length ? picker("", null) : null,
+        attrs: fx ? { league: cup.id, fx: `fixtures/${suffix}` } : {},
+        main: FP.cupMain(cup, top, { tz: "venue", fixturesHref: fx ? `fixtures/${suffix}` : "", seasons: older.length ? picker("", null) : null, note })
       }));
       cupUrls.push(`/${c.country}/${cup.id}/`);
+      for (const p of older) {
+        await write(`${c.country}/${cup.id}/${slug(p.year)}/index.html`, shell({
+          title: `${cup.name} ${p.season}: bracket and results | Football Pyramids`,
+          description: `The ${cup.name} ${p.season}: every round, every tie and the bracket, with each club's league that season.`,
+          canonical: `${SITE}/${c.country}/${cup.id}/${slug(p.year)}/`, base: "../../../", suffix, page: "cup-history", country: c.country, stamps: {}, countries,
+          seasons: picker("../", p.year),
+          main: FP.cupMain(cup, p, { tz: "venue", seasons: picker("../", p.year) })
+        }));
+        cupPastUrls.push(`/${c.country}/${cup.id}/${slug(p.year)}/`);
+      }
     }
     // Fixtures pages, one per league and cup
     const cupsOf = (COUNTRIES.find((x) => x.country === c.country) || {}).cups || [];
@@ -662,7 +700,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
 
   // For the live-scores worker: which API-Football league IDs belong to which table on the site.
   const live = { season: Number(String(countries[0].season).slice(0, 4)), leagues: {} };
-  for (const c of [...COUNTRIES, EUROPE]) for (const lg of [...c.leagues, ...(c.cups || [])]) {
+  for (const c of [...COUNTRIES, EUROPE]) for (const lg of [...c.leagues, ...(c.cups || []).filter((x) => !x.until)]) {
     for (const g of lg.groups || [{ apiId: lg.apiId }]) live.leagues[g.apiId] = { c: c.country, l: lg.id, ...(g.name ? { g: g.name } : {}) };
   }
   await write("data/live-leagues.json", JSON.stringify(live));
@@ -688,7 +726,7 @@ ${urls.map(([u, d]) => dated(u, d, "hourly")).join("\n")}
 ${clubUrls.map((u) => dated(u, clubDate(u), "daily")).join("\n")}
 ${cupUrls.map((u) => dated(u, fxDate(u.slice(1, -1)), "daily")).join("\n")}
 ${fxKeys.map((k) => dated(`/${k}/fixtures/`, fxDate(k), "daily")).join("\n")}
-${past.concat(euroPast).map((u) => `  <url><loc>${SITE}${u}</loc><changefreq>yearly</changefreq></url>`).join("\n")}
+${past.concat(euroPast, cupPastUrls).map((u) => `  <url><loc>${SITE}${u}</loc><changefreq>yearly</changefreq></url>`).join("\n")}
 </urlset>
 `);
     await write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);

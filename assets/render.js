@@ -944,6 +944,8 @@
     return '<section class="intro fx-intro" aria-labelledby="intro-h">' +
       '<p class="eyebrow">' + esc((fx && fx.countryName) || "") + " · Cup · " + esc(fx ? fx.season : "") + "</p>" +
       '<h1 id="intro-h" class="cup-h">' + flag(country) + "<span>" + esc(cup.name) + "</span></h1>" +
+      (opts.seasons ? seasonsHTML({ name: cup.name, season: fx ? fx.season : "" }, opts.seasons) : "") +
+      (opts.note ? '<p class="cup-note">' + esc(opts.note) + "</p>" : "") +
       '<p class="lede"><strong>' + esc(cupStatus(fx)) + "</strong> · Every round and every tie, with each club’s league next to its name, so the giant-killings stand out.</p>" +
       '<p class="fx-links">' + (opts.fixturesHref ? '<a href="' + esc(opts.fixturesHref) + '">Fixtures and results by round →</a>' : "") +
       tzLine(mode, country) + "</p></section>" +

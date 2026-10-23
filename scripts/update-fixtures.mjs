@@ -80,7 +80,7 @@ async function main() {
         if (r.tid) tags.set(r.tid, { s: lg.short || lg.name, tier: lg.tier });
       }
     } catch {}
-    for (const cfg of [...c.leagues, ...(c.cups || []).map((x) => ({ ...x, cup: true }))]) {
+    for (const cfg of [...c.leagues, ...(c.cups || []).filter((x) => !x.until).map((x) => ({ ...x, cup: true }))]) {
       const file = path.join(outRoot, "data", "fixtures", c.country, `${cfg.id}.json`);
       let prev = null;
       try { prev = JSON.parse(await readFile(file, "utf8")); } catch {}
