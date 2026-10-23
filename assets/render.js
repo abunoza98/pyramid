@@ -1343,6 +1343,10 @@
       '<h1 id="intro-h" class="cup-h">' + flag(d.country) + "<span>" + esc(d.name) + "</span></h1>" +
       '<p class="lede">' + (d.pos ? "<strong>" + ord(d.pos) + " " + esc(inLeague(lg.name)) + "</strong>, " + d.pts + " points from " + d.p + " games." : esc(d.note || "")) +
       (formStr ? ' Last 5 matches: <span class="form">' + formChips + "</span>" : "") + "</p>" +
+      // Where the club has come from: promoted or relegated, back after how long, how many seasons in a row.
+      ((d.context || []).length ? '<p class="cl-context">' + d.context.map(function (c) {
+        return '<span class="' + (c.dir ? "cx-" + c.dir : "") + '">' + (c.dir === "up" ? '<b aria-hidden="true">▲</b> ' : c.dir === "down" ? '<b aria-hidden="true">▼</b> ' : "") + esc(c.text) + "</span>";
+      }).join('<i aria-hidden="true"> · </i>') + "</p>" : "") +
       '<p class="fx-links">' + tzLine(mode, d.country) + "</p></section>" +
       // The journey comes straight after the next match: it's what this site has that a scores site doesn't.
       nextHTML + journey +

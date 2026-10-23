@@ -1031,3 +1031,8 @@ tbody tr.is-this .c-club { font-weight: 700; }
 body[data-page="home"] .bar .finder { transition: opacity 0.2s; }
 body[data-page="home"].hero-find-on .bar .finder { opacity: 0; visibility: hidden; }
 @media (prefers-reduced-motion: reduce) { body[data-page="home"] .bar .finder { transition: none; } }
+/* Club page: one line of pyramid context under the position */
+.cl-context { margin: -4px 0 14px; font-size: 14px; color: var(--ink); }
+.cl-context i { font-style: normal; color: var(--muted); }
+.cl-context .cx-up b { color: var(--up); }
+.cl-context .cx-down b { color: var(--down); }
