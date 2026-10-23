@@ -884,6 +884,7 @@ tbody tr.is-this .c-club { font-weight: 700; }
 .cl-comps li > span:last-child { margin-left: auto; color: var(--muted); }
 /* Pyramid journey: every season on one ladder for the whole pyramid */
 .lchart-cap { margin: 0 0 10px; font-size: 14px; color: var(--muted); }
+.lchart-note { margin: -4px 0 10px; font-size: 12px; color: var(--muted); }
 .lchart { display: grid; grid-template-columns: 54px minmax(0, 1fr); margin: 0 0 14px; }
 .lside { position: relative; border-right: 1px solid var(--rule-strong); }
 .ls { position: absolute; left: 0; right: 6px; display: flex; flex-direction: column; justify-content: center; align-items: flex-end;
@@ -1026,3 +1027,7 @@ tbody tr.is-this .c-club { font-weight: 700; }
 /* A past season's cup with no page of its own yet */
 .cup-chip.no-link { cursor: default; }
 .cup-chip.no-link:hover { border-color: var(--accent-line); background: var(--accent-soft); }
+/* Home page: the header search steps back while the big search under the headline is on screen */
+body[data-page="home"] .bar .finder { transition: opacity 0.2s; }
+body[data-page="home"].hero-find-on .bar .finder { opacity: 0; visibility: hidden; }
+@media (prefers-reduced-motion: reduce) { body[data-page="home"] .bar .finder { transition: none; } }
