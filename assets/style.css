@@ -109,7 +109,7 @@ a { color: inherit; }
 .nav .long { display: none; }
 
 .finder { position: relative; margin-left: auto; order: 3; }
-.finder > svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 15px; height: 15px; color: var(--muted); pointer-events: none; }
+.finder svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 15px; height: 15px; color: var(--muted); pointer-events: none; }
 .finder input {
   width: 220px; height: 36px; padding: 0 32px 0 32px;
   font: inherit; font-size: 14px; color: var(--ink);
@@ -124,39 +124,6 @@ a { color: inherit; }
 }
 .finder button:hover { background: var(--hover); color: var(--ink); }
 
-/* Results list for the club finder (header box and the home page's big box) */
-.finder-list {
-  position: absolute; z-index: 40; top: calc(100% + 6px); right: 0; width: max(100%, 320px); max-width: calc(100vw - 32px);
-  max-height: min(60vh, 420px); overflow-y: auto; margin: 0; padding: 6px; list-style: none;
-  background: var(--sheet); border: 1px solid var(--rule-strong); border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(14, 20, 28, 0.16); text-align: left;
-}
-.finder-list[hidden] { display: none; }
-.finder-list [role=option] {
-  display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 10px; align-items: center;
-  padding: 8px 10px; border-radius: 7px; cursor: pointer; min-height: 44px;
-}
-.finder-list [role=option] .flag { grid-row: span 2; width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px var(--rule); }
-.finder-list .fl-name { font-weight: 600; font-size: 15px; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.finder-list .fl-meta { font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.finder-list [role=option]:hover { background: var(--hover); }
-.finder-list [role=option].on { background: var(--accent-soft); }
-.finder-list .finder-none { padding: 10px; font-size: 14px; color: var(--muted); }
-
-/* Home page: the big club search under the headline */
-.hero-find { margin: 22px 0 6px; max-width: 560px; }
-.hero-find label { display: block; font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
-.hero-find-in { position: relative; }
-.hero-find-in > svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--muted); pointer-events: none; }
-.hero-find-in input {
-  width: 100%; height: 52px; padding: 0 16px 0 44px; font: inherit; font-size: 17px; color: var(--ink);
-  background: var(--sheet); border: 1.5px solid var(--rule-strong); border-radius: 10px;
-}
-.hero-find-in input::placeholder { color: var(--muted); }
-.hero-find-in input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
-.hero-find-in .finder-list { left: 0; right: 0; width: auto; max-width: none; }
-.hero-find-hint { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
-
 @media (min-width: 1040px) {
   .nav .long { display: inline; }
   .nav .short { display: none; }
@@ -165,7 +132,7 @@ a { color: inherit; }
   .brand-text span { font-size: 22px; letter-spacing: 0.05em; }
   .brand-text small { font-size: 9px; letter-spacing: 0.24em; }
   .finder { flex: 1 1 130px; min-width: 0; }
-  .finder input { width: 100%; font-size: 16px; }
+  .finder input { width: 100%; }
   .nav { order: 4; flex: 1 1 100%; justify-content: space-between; }
   .nav a { flex: 1; text-align: center; }
 }
@@ -524,18 +491,6 @@ body.no-ads main { justify-self: center !important; }
 .nav-more:has(.nav-panel a[aria-current]) summary { color: var(--ink); }
 .nav-euro.is-here summary, .nav-euro.is-here:has(.nav-panel a[aria-current]) summary { color: var(--paper); background: var(--ink); }
 .nav-euro .nav-panel { right: auto; left: 0; min-width: 230px; }
-/* Phones: seven nav items have to fit in 288px at 320px wide. Tighter spacing, and on a "More" country's page its
-   own link drops out of the row; the "More" button is marked as the current section instead. */
-@media (max-width: 479px) {
-  .nav { gap: 0; }
-  .nav a, .nav-more summary { padding: 8px 4px; font-size: 16px; letter-spacing: 0.02em; }
-  .nav-more summary::after { font-size: 9px; }
-  .nav a.nav-here { display: none; }
-  .nav-more:not(.nav-euro):has(.nav-panel a[aria-current]) summary { color: var(--paper); background: var(--ink); }
-}
-@media (max-width: 359px) {
-  .nav a, .nav-more summary { padding-inline: 3px; font-size: 15px; letter-spacing: 0; }
-}
 .nav-euro .nav-panel .comp-dot { margin-right: 10px; }
 .nav-panel {
   position: absolute; z-index: 30; top: calc(100% + 6px); right: 0; min-width: 200px;
@@ -754,10 +709,7 @@ body.no-ads main { justify-self: center !important; }
 }
 .ecards.compact .ecard-name { font-size: 19px; }
 .euro-home .section-h { margin-top: 36px; }
-.comp-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 28px; }
-.comp-bar .comp-tabs { margin-top: 0; overflow: visible; padding-bottom: 0; flex-wrap: wrap; }
-.tf-tab.tf-go { color: var(--accent); border-color: var(--accent-line); text-decoration: none; }
-.tf-tab.tf-go:hover { background: var(--accent-soft); }
+.comp-tabs { margin-top: 28px; }
 .comp .tf-panel .tier { margin-top: 18px; }
 .ko-empty { margin: 22px 0 0; padding: 18px; border: 1px dashed var(--rule-strong); border-radius: 10px; color: var(--muted); font-size: 15px; }
 
@@ -889,9 +841,9 @@ tbody tr.is-this .c-club { font-weight: 700; }
 .ld::before { content: ""; position: absolute; inset: -12px; border-radius: 50%; }   /* bigger target for fingers */
 .ld.now { background: var(--accent); box-shadow: 0 0 0 3px var(--accent-flash); }
 .ld:hover, .ld:focus-visible, .ld.open { outline: none; z-index: 3; box-shadow: 0 0 0 4px var(--accent-flash); }
-.ltip { position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%);
+.ltip { translate: var(--dx, 0px) 0; max-width: calc(100vw - 16px); position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%);
   display: none; min-width: 168px; padding: 8px 10px; border-radius: 6px; background: var(--ink); color: var(--paper);
-  font: 400 12px/1.4 var(--body); text-align: left; width: max-content; max-width: calc(100vw - 24px); white-space: normal; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18); }
+  font: 400 12px/1.4 var(--body); text-align: left; white-space: nowrap; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18); }
 .ltip b { display: block; font-family: var(--mono); font-weight: 500; font-size: 11px; opacity: 0.75; }
 .ltip i { display: block; font-style: normal; opacity: 0.75; }
 .ltip u { display: block; margin-top: 4px; text-decoration: none; font-weight: 600; }
@@ -916,10 +868,6 @@ tbody tr.is-this .c-club { font-weight: 700; }
 .jlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 14px; }
 .jlist li { display: grid; grid-template-columns: 70px 34px minmax(0, 1fr) auto; align-items: center; gap: 8px; padding: 6px 2px; border-bottom: 1px solid var(--rule); }
 .jlist li > span { font-family: var(--mono); font-size: 12px; color: var(--muted); }
-.jlist .jl { min-width: 0; }
-.jlist .jm { display: inline-block; font-style: normal; font-size: 11px; font-weight: 600; white-space: nowrap; margin-left: 4px; }
-.jlist .jm.up { color: var(--up); }
-.jlist .jm.down { color: var(--down); }
 .jlist a { color: var(--ink); text-decoration: none; }
 .jlist a:hover { color: var(--accent); text-decoration: underline; }
 .jlist b { font-weight: 600; font-variant-numeric: tabular-nums; }
