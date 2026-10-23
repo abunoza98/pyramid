@@ -183,7 +183,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-22T00:00:00.000Z"
+   "updated": "2026-10-23T00:00:00.000Z"
   },
   {
    "id": "2-liga",
@@ -219,6 +219,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "First Vienna",
+     "p": 10,
+     "w": 8,
+     "d": 1,
+     "l": 1,
+     "gf": 21,
+     "ga": 9,
+     "pts": 25,
+     "tid": 4990,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
      "team": "Blau-Weiß Linz",
      "p": 9,
      "w": 7,
@@ -231,33 +244,33 @@
      "form": "LWWDW"
     },
     {
-     "pos": 2,
-     "team": "First Vienna",
-     "p": 9,
-     "w": 7,
-     "d": 1,
-     "l": 1,
-     "gf": 19,
-     "ga": 9,
-     "pts": 22,
-     "tid": 4990,
-     "form": "WWWWW"
-    },
-    {
      "pos": 3,
      "team": "Austria Wien II",
-     "p": 9,
-     "w": 5,
+     "p": 10,
+     "w": 6,
      "d": 1,
      "l": 3,
-     "gf": 16,
+     "gf": 17,
      "ga": 13,
-     "pts": 16,
+     "pts": 19,
      "tid": 2860,
-     "form": "WLWWD"
+     "form": "LWWDW"
     },
     {
      "pos": 4,
+     "team": "SKU Amstetten",
+     "p": 10,
+     "w": 4,
+     "d": 5,
+     "l": 1,
+     "gf": 18,
+     "ga": 14,
+     "pts": 17,
+     "tid": 1404,
+     "form": "WWDDW"
+    },
+    {
+     "pos": 5,
      "team": "Austria Salzburg",
      "p": 9,
      "w": 5,
@@ -270,7 +283,7 @@
      "form": "LDLWW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Admira Wacker",
      "p": 9,
      "w": 5,
@@ -281,19 +294,6 @@
      "pts": 15,
      "tid": 1023,
      "form": "WWLWW"
-    },
-    {
-     "pos": 6,
-     "team": "SKU Amstetten",
-     "p": 9,
-     "w": 3,
-     "d": 5,
-     "l": 1,
-     "gf": 15,
-     "ga": 12,
-     "pts": 14,
-     "tid": 1404,
-     "form": "LWWDD"
     },
     {
      "pos": 7,
@@ -311,15 +311,15 @@
     {
      "pos": 8,
      "team": "Floridsdorfer AC",
-     "p": 9,
+     "p": 10,
      "w": 4,
      "d": 1,
-     "l": 4,
+     "l": 5,
      "gf": 14,
-     "ga": 14,
+     "ga": 16,
      "pts": 13,
      "tid": 1395,
-     "form": "WLWLL"
+     "form": "LWLLL"
     },
     {
      "pos": 9,
@@ -336,6 +336,32 @@
     },
     {
      "pos": 10,
+     "team": "Voitsberg",
+     "p": 10,
+     "w": 3,
+     "d": 3,
+     "l": 4,
+     "gf": 19,
+     "ga": 19,
+     "pts": 12,
+     "tid": 8332,
+     "form": "DWLLW"
+    },
+    {
+     "pos": 11,
+     "team": "SKN St. Pölten",
+     "p": 10,
+     "w": 3,
+     "d": 2,
+     "l": 5,
+     "gf": 8,
+     "ga": 10,
+     "pts": 11,
+     "tid": 1027,
+     "form": "WWLDD"
+    },
+    {
+     "pos": 12,
      "team": "Schwarz-Weiß Bregenz",
      "p": 9,
      "w": 3,
@@ -348,85 +374,59 @@
      "form": "LWLLD"
     },
     {
-     "pos": 11,
-     "team": "SKN St. Pölten",
-     "p": 9,
-     "w": 3,
-     "d": 1,
-     "l": 5,
-     "gf": 7,
-     "ga": 9,
-     "pts": 10,
-     "tid": 1027,
-     "form": "WWWLD"
-    },
-    {
-     "pos": 12,
-     "team": "Voitsberg",
-     "p": 9,
-     "w": 2,
-     "d": 3,
-     "l": 4,
-     "gf": 13,
-     "ga": 17,
-     "pts": 9,
-     "tid": 8332,
-     "form": "LDWLL"
-    },
-    {
      "pos": 13,
      "team": "Sturm Graz II",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 2,
-     "l": 5,
+     "l": 6,
      "gf": 16,
-     "ga": 23,
+     "ga": 24,
      "pts": 8,
      "tid": 8251,
-     "form": "WDDLL"
+     "form": "DDLLL"
     },
     {
      "pos": 14,
      "team": "WSPG Wels",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 2,
-     "l": 5,
-     "gf": 11,
-     "ga": 19,
+     "l": 6,
+     "gf": 13,
+     "ga": 25,
      "pts": 8,
      "tid": 22213,
-     "form": "LLLWD"
+     "form": "LLWDL"
     },
     {
      "pos": 15,
-     "team": "Rapid Wien II",
-     "p": 9,
+     "team": "SV Kapfenberg",
+     "p": 10,
      "w": 2,
      "d": 1,
-     "l": 6,
-     "gf": 8,
+     "l": 7,
+     "gf": 12,
      "ga": 19,
      "pts": 7,
-     "tid": 8247,
-     "form": "LLLLD"
+     "tid": 1401,
+     "form": "LLLWD"
     },
     {
      "pos": 16,
-     "team": "SV Kapfenberg",
-     "p": 9,
+     "team": "Rapid Wien II",
+     "p": 10,
      "w": 2,
-     "d": 0,
+     "d": 1,
      "l": 7,
-     "gf": 11,
-     "ga": 18,
-     "pts": 6,
-     "tid": 1401,
-     "form": "WLLLW"
+     "gf": 10,
+     "ga": 22,
+     "pts": 7,
+     "tid": 8247,
+     "form": "LLLDL"
     }
    ],
-   "updated": "2026-10-22T00:00:00.000Z"
+   "updated": "2026-10-23T00:00:00.000Z"
   },
   {
    "id": "regionalliga",
@@ -447,15 +447,15 @@
       {
        "pos": 1,
        "team": "Mannsdorf-Großenzersdorf",
-       "p": 12,
-       "w": 8,
+       "p": 13,
+       "w": 9,
        "d": 1,
        "l": 3,
-       "gf": 30,
+       "gf": 33,
        "ga": 12,
-       "pts": 25,
+       "pts": 28,
        "tid": 4952,
-       "form": "WLDWL"
+       "form": "LDWLW"
       },
       {
        "pos": 2,
@@ -498,19 +498,6 @@
       },
       {
        "pos": 5,
-       "team": "Wiener Viktoria",
-       "p": 12,
-       "w": 6,
-       "d": 2,
-       "l": 4,
-       "gf": 16,
-       "ga": 10,
-       "pts": 20,
-       "tid": 4966,
-       "form": "WWDLW"
-      },
-      {
-       "pos": 6,
        "team": "Krems / Rehberg",
        "p": 12,
        "w": 6,
@@ -521,6 +508,19 @@
        "pts": 20,
        "tid": 25119,
        "form": "LWWWW"
+      },
+      {
+       "pos": 6,
+       "team": "Wiener Viktoria",
+       "p": 13,
+       "w": 6,
+       "d": 2,
+       "l": 5,
+       "gf": 16,
+       "ga": 13,
+       "pts": 20,
+       "tid": 4966,
+       "form": "WDLWL"
       },
       {
        "pos": 7,
@@ -538,18 +538,31 @@
       {
        "pos": 8,
        "team": "Scheiblingkirchen",
-       "p": 12,
+       "p": 13,
        "w": 5,
        "d": 4,
-       "l": 3,
+       "l": 4,
        "gf": 20,
-       "ga": 21,
+       "ga": 26,
        "pts": 19,
        "tid": 4982,
-       "form": "DWWDL"
+       "form": "WWDLL"
       },
       {
        "pos": 9,
+       "team": "Parndorf",
+       "p": 13,
+       "w": 5,
+       "d": 3,
+       "l": 5,
+       "gf": 21,
+       "ga": 16,
+       "pts": 18,
+       "tid": 4955,
+       "form": "WLDLW"
+      },
+      {
+       "pos": 10,
        "team": "Leobendorf",
        "p": 12,
        "w": 5,
@@ -562,7 +575,7 @@
        "form": "WLLWW"
       },
       {
-       "pos": 10,
+       "pos": 11,
        "team": "Mattersburg SV 2020",
        "p": 12,
        "w": 5,
@@ -573,19 +586,6 @@
        "pts": 16,
        "tid": 27886,
        "form": "DLWLW"
-      },
-      {
-       "pos": 11,
-       "team": "Parndorf",
-       "p": 12,
-       "w": 4,
-       "d": 3,
-       "l": 5,
-       "gf": 16,
-       "ga": 16,
-       "pts": 15,
-       "tid": 4955,
-       "form": "LWLDL"
       },
       {
        "pos": 12,
@@ -661,13 +661,13 @@
       {
        "pos": 1,
        "team": "Wallern / Marienkirchen",
-       "p": 12,
-       "w": 8,
+       "p": 13,
+       "w": 9,
        "d": 1,
        "l": 3,
-       "gf": 32,
-       "ga": 12,
-       "pts": 25,
+       "gf": 35,
+       "ga": 14,
+       "pts": 28,
        "tid": 21534,
        "form": "WWWWL"
       },
@@ -739,12 +739,12 @@
       {
        "pos": 7,
        "team": "SK Vorwarts Steyr",
-       "p": 12,
+       "p": 13,
        "w": 5,
        "d": 3,
-       "l": 4,
-       "gf": 16,
-       "ga": 14,
+       "l": 5,
+       "gf": 18,
+       "ga": 17,
        "pts": 18,
        "tid": 1406,
        "form": "WWLDW"
@@ -875,15 +875,15 @@
       {
        "pos": 2,
        "team": "Deutschlandsberger SC",
-       "p": 11,
+       "p": 12,
        "w": 6,
        "d": 4,
-       "l": 1,
-       "gf": 21,
-       "ga": 13,
+       "l": 2,
+       "gf": 24,
+       "ga": 18,
        "pts": 22,
        "tid": 4972,
-       "form": "WWDDW"
+       "form": "WDDWL"
       },
       {
        "pos": 3,
@@ -977,32 +977,45 @@
       },
       {
        "pos": 10,
-       "team": "Allerheiligen",
-       "p": 11,
+       "team": "Tillmitsch",
+       "p": 12,
        "w": 3,
-       "d": 3,
-       "l": 5,
-       "gf": 22,
+       "d": 5,
+       "l": 4,
+       "gf": 20,
        "ga": 21,
-       "pts": 12,
-       "tid": 4934,
-       "form": "LLWLL"
+       "pts": 14,
+       "tid": 21533,
+       "form": "LDDLW"
       },
       {
        "pos": 11,
-       "team": "Tillmitsch",
-       "p": 11,
-       "w": 2,
-       "d": 5,
-       "l": 4,
-       "gf": 17,
-       "ga": 20,
-       "pts": 11,
-       "tid": 21533,
-       "form": "DLDDL"
+       "team": "Allerheiligen",
+       "p": 12,
+       "w": 3,
+       "d": 3,
+       "l": 6,
+       "gf": 23,
+       "ga": 24,
+       "pts": 12,
+       "tid": 4934,
+       "form": "LWLLL"
       },
       {
        "pos": 12,
+       "team": "Gleisdorf 09",
+       "p": 12,
+       "w": 3,
+       "d": 2,
+       "l": 7,
+       "gf": 17,
+       "ga": 26,
+       "pts": 11,
+       "tid": 4940,
+       "form": "LDWLW"
+      },
+      {
+       "pos": 13,
        "team": "Bleiburg",
        "p": 12,
        "w": 2,
@@ -1015,7 +1028,7 @@
        "form": "LLWDL"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Hartberg II",
        "p": 11,
        "w": 2,
@@ -1028,7 +1041,7 @@
        "form": "DWDDW"
       },
       {
-       "pos": 14,
+       "pos": 15,
        "team": "Wolfsberg",
        "p": 12,
        "w": 2,
@@ -1039,19 +1052,6 @@
        "pts": 10,
        "tid": 4967,
        "form": "DWLLW"
-      },
-      {
-       "pos": 15,
-       "team": "Gleisdorf 09",
-       "p": 11,
-       "w": 2,
-       "d": 2,
-       "l": 7,
-       "gf": 12,
-       "ga": 23,
-       "pts": 8,
-       "tid": 4940,
-       "form": "LLDWL"
       },
       {
        "pos": 16,

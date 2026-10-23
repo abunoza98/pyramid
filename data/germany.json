@@ -4,7 +4,7 @@
  "adjective": "German",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-20T00:00:00.000Z",
+ "updated": "2026-10-23T00:00:00.000Z",
  "belowNote": "Regionalliga champions come up, some through a play-off",
  "leagues": [
   {
@@ -282,7 +282,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-20T00:00:00.000Z"
+   "updated": "2026-10-23T00:00:00.000Z"
   },
   {
    "id": "2-bundesliga",
@@ -348,15 +348,15 @@
     {
      "pos": 3,
      "team": "VfL Wolfsburg",
-     "p": 8,
+     "p": 9,
      "w": 4,
-     "d": 3,
+     "d": 4,
      "l": 1,
-     "gf": 22,
-     "ga": 13,
-     "pts": 15,
+     "gf": 23,
+     "ga": 14,
+     "pts": 16,
      "tid": 161,
-     "form": "DLWDW"
+     "form": "LWDWD"
     },
     {
      "pos": 4,
@@ -400,15 +400,15 @@
     {
      "pos": 7,
      "team": "FC St. Pauli",
-     "p": 8,
+     "p": 9,
      "w": 2,
-     "d": 5,
+     "d": 6,
      "l": 1,
      "gf": 11,
      "ga": 9,
-     "pts": 11,
+     "pts": 12,
      "tid": 186,
-     "form": "DWDWD"
+     "form": "WDWDD"
     },
     {
      "pos": 8,
@@ -490,6 +490,19 @@
     },
     {
      "pos": 14,
+     "team": "VfL Bochum",
+     "p": 9,
+     "w": 2,
+     "d": 2,
+     "l": 5,
+     "gf": 6,
+     "ga": 10,
+     "pts": 8,
+     "tid": 176,
+     "form": "DLLLD"
+    },
+    {
+     "pos": 15,
      "team": "Hannover 96",
      "p": 8,
      "w": 2,
@@ -502,7 +515,20 @@
      "form": "DLWLD"
     },
     {
-     "pos": 15,
+     "pos": 16,
+     "team": "Darmstadt 98",
+     "p": 9,
+     "w": 2,
+     "d": 2,
+     "l": 5,
+     "gf": 8,
+     "ga": 18,
+     "pts": 8,
+     "tid": 181,
+     "form": "WLWLD"
+    },
+    {
+     "pos": 17,
      "team": "Eintracht Braunschweig",
      "p": 8,
      "w": 2,
@@ -513,32 +539,6 @@
      "pts": 7,
      "tid": 744,
      "form": "LDLWL"
-    },
-    {
-     "pos": 16,
-     "team": "VfL Bochum",
-     "p": 8,
-     "w": 2,
-     "d": 1,
-     "l": 5,
-     "gf": 5,
-     "ga": 9,
-     "pts": 7,
-     "tid": 176,
-     "form": "WDLLL"
-    },
-    {
-     "pos": 17,
-     "team": "Darmstadt 98",
-     "p": 8,
-     "w": 2,
-     "d": 1,
-     "l": 5,
-     "gf": 8,
-     "ga": 18,
-     "pts": 7,
-     "tid": 181,
-     "form": "LWLWL"
     },
     {
      "pos": 18,
@@ -554,7 +554,7 @@
      "form": "DLDLD"
     }
    ],
-   "updated": "2026-10-20T00:00:00.000Z"
+   "updated": "2026-10-23T00:00:00.000Z"
   },
   {
    "id": "3-liga",
@@ -848,7 +848,7 @@
      "form": "LLLDD"
     }
    ],
-   "updated": "2026-10-20T00:00:00.000Z"
+   "updated": "2026-10-23T00:00:00.000Z"
   }
  ]
 }
