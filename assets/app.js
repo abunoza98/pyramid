@@ -304,6 +304,40 @@
     var box = b.closest("[data-tabs]");
     tabState[box.getAttribute("data-tabs")] = b.getAttribute("data-tab");
     applyTabs();
+    // Competition and cup pages: the address ends in #fixtures while that tab is open, so it can be shared.
+    if (FX_TABS.indexOf(box.getAttribute("data-tabs")) > -1 && history.replaceState) {
+      history.replaceState(null, "", location.pathname + location.search + (b.getAttribute("data-tab") === "fx" ? "#fixtures" : ""));
+    }
+  });
+  // Arriving at /<competition>/#fixtures (old fixtures pages redirect here) opens that tab.
+  var FX_TABS = ["stage", "cup"];
+  if (location.hash === "#fixtures") { FX_TABS.forEach(function (k) { tabState[k] = "fx"; }); applyTabs(); }
+
+  /* ---------- Fixtures and results tab (competition and cup pages) ----------
+     Every round is on the page; the picker shows one. The choice survives live redraws. */
+  function showRound(nav, i) {
+    var panel = nav.parentNode, rounds = panel.querySelectorAll(".fx-round");
+    i = Math.max(0, Math.min(i, rounds.length - 1));
+    rounds.forEach(function (r) { r.hidden = Number(r.getAttribute("data-round")) !== i; });
+    var pick = nav.querySelector("[data-rpick]");
+    if (pick) pick.value = String(i);
+    nav.querySelector('[data-rstep="-1"]').disabled = i === 0;
+    nav.querySelector('[data-rstep="1"]').disabled = i === rounds.length - 1;
+    fxState.round = i;
+  }
+  function shownRound(nav) {
+    var on = nav.parentNode.querySelector(".fx-round:not([hidden])");
+    return on ? Number(on.getAttribute("data-round")) : 0;
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-rstep]");
+    if (!b) return;
+    var nav = b.closest(".rnav");
+    showRound(nav, shownRound(nav) + Number(b.getAttribute("data-rstep")));
+  });
+  document.addEventListener("change", function (e) {
+    if (!e.target.hasAttribute || !e.target.hasAttribute("data-rpick")) return;
+    showRound(e.target.closest(".rnav"), Number(e.target.value));
   });
 
   function relevant() {
@@ -317,14 +351,14 @@
     if (PAGE === "country") html = FP.countryMain(withLive[0], { seasons: seasons, fixtures: FIXLINKS, cups: CUPS });
     else if (PAGE === "cup") {
       if (!compFx) return;
-      html = FP.cupMain({ name: compFx.name, country: COUNTRY }, compFx, { tz: fxState.tz, live: live, fixturesHref: body.getAttribute("data-fx") || "", seasons: seasons });
+      html = FP.cupMain({ name: compFx.name, country: COUNTRY }, compFx, { tz: fxState.tz, live: live, seasons: seasons, fxRound: fxState.round, myClub: myClub });
     }
     else if (PAGE === "europe") html = FP.europeMain(withLive[0], { statuses: STATUSES, base: "", suffix: SUFFIX, clubPaths: CLUBPATHS, root: BASE });
     else if (PAGE === "comp") {
       var id = body.getAttribute("data-league");
       var comp = withLive[0].leagues.filter(function (l) { return l.id === id; })[0];
       if (!comp) return;
-      html = FP.compMain(comp, compFx, { tz: fxState.tz, live: live, fixturesHref: body.getAttribute("data-fx") || "", seasons: seasons,
+      html = FP.compMain(comp, compFx, { tz: fxState.tz, live: live, seasons: seasons, fxRound: fxState.round, myClub: myClub,
         clubPaths: CLUBPATHS, root: BASE, suffix: SUFFIX });
     }
     else {
