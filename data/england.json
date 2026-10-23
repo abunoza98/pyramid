@@ -4,7 +4,7 @@
  "adjective": "English",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-21T00:00:00.000Z",
+ "updated": "2026-10-23T00:00:00.000Z",
  "belowNote": "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
  "leagues": [
   {
@@ -296,7 +296,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-10-21T00:00:00.000Z"
+   "updated": "2026-10-23T00:00:00.000Z"
   },
   {
    "id": "championship",
@@ -332,6 +332,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Middlesbrough",
+     "p": 12,
+     "w": 7,
+     "d": 4,
+     "l": 1,
+     "gf": 27,
+     "ga": 17,
+     "pts": 25,
+     "tid": 70,
+     "form": "DWWDW"
+    },
+    {
+     "pos": 2,
      "team": "Swansea City",
      "p": 11,
      "w": 7,
@@ -344,7 +357,7 @@
      "form": "WWWWL"
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "West Ham United",
      "p": 11,
      "w": 6,
@@ -355,19 +368,6 @@
      "pts": 22,
      "tid": 48,
      "form": "WDDWW"
-    },
-    {
-     "pos": 3,
-     "team": "Middlesbrough",
-     "p": 11,
-     "w": 6,
-     "d": 4,
-     "l": 1,
-     "gf": 22,
-     "ga": 16,
-     "pts": 22,
-     "tid": 70,
-     "form": "DDWWD"
     },
     {
      "pos": 4,
@@ -515,19 +515,6 @@
     },
     {
      "pos": 15,
-     "team": "Bolton Wanderers",
-     "p": 11,
-     "w": 4,
-     "d": 2,
-     "l": 5,
-     "gf": 15,
-     "ga": 18,
-     "pts": 14,
-     "tid": 68,
-     "form": "WWLWD"
-    },
-    {
-     "pos": 16,
      "team": "Bristol City",
      "p": 11,
      "w": 4,
@@ -540,7 +527,7 @@
      "form": "LWDLL"
     },
     {
-     "pos": 17,
+     "pos": 16,
      "team": "Charlton Athletic",
      "p": 11,
      "w": 3,
@@ -551,6 +538,19 @@
      "pts": 14,
      "tid": 1335,
      "form": "DLDDL"
+    },
+    {
+     "pos": 17,
+     "team": "Bolton Wanderers",
+     "p": 12,
+     "w": 4,
+     "d": 2,
+     "l": 6,
+     "gf": 16,
+     "ga": 23,
+     "pts": 14,
+     "tid": 68,
+     "form": "WLWDL"
     },
     {
      "pos": 18,
@@ -644,7 +644,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-21T00:00:00.000Z"
+   "updated": "2026-10-23T00:00:00.000Z"
   },
   {
    "id": "league-one",
@@ -988,7 +988,7 @@
      "form": "DLLWL"
     }
    ],
-   "updated": "2026-10-21T00:00:00.000Z"
+   "updated": "2026-10-22T00:00:00.000Z"
   },
   {
    "id": "league-two",
@@ -1332,7 +1332,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-10-20T00:00:00.000Z"
+   "updated": "2026-10-22T00:00:00.000Z"
   },
   {
    "id": "national-league",
@@ -1685,7 +1685,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-14T00:00:00.000Z"
+   "updated": "2026-10-23T00:00:00.000Z"
   },
   {
    "id": "national-league-north-south",
@@ -2045,7 +2045,7 @@
     },
     {
      "name": "South",
-     "updated": "2026-10-21T00:00:00.000Z",
+     "updated": "2026-10-22T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2362,7 +2362,7 @@
      ]
     }
    ],
-   "updated": "2026-10-21T00:00:00.000Z"
+   "updated": "2026-10-22T00:00:00.000Z"
   }
  ]
 }

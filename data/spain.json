@@ -4,7 +4,7 @@
  "adjective": "Spanish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-21T00:00:00.000Z",
+ "updated": "2026-10-23T00:00:00.000Z",
  "belowNote": "Promoted clubs from Segunda Federación come up",
  "leagues": [
   {
@@ -302,7 +302,7 @@
      "form": "DLLDL"
     }
    ],
-   "updated": "2026-10-21T00:00:00.000Z"
+   "updated": "2026-10-23T00:00:00.000Z"
   },
   {
    "id": "segunda",
@@ -376,6 +376,19 @@
     },
     {
      "pos": 4,
+     "team": "Granada",
+     "p": 11,
+     "w": 6,
+     "d": 2,
+     "l": 3,
+     "gf": 18,
+     "ga": 14,
+     "pts": 20,
+     "tid": 715,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 5,
      "team": "Sporting Gijón",
      "p": 10,
      "w": 6,
@@ -388,7 +401,7 @@
      "form": "WLWWW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Girona",
      "p": 10,
      "w": 5,
@@ -401,7 +414,7 @@
      "form": "WWDDW"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Mallorca",
      "p": 10,
      "w": 5,
@@ -412,19 +425,6 @@
      "pts": 18,
      "tid": 798,
      "form": "WLDWD"
-    },
-    {
-     "pos": 7,
-     "team": "Granada",
-     "p": 10,
-     "w": 5,
-     "d": 2,
-     "l": 3,
-     "gf": 16,
-     "ga": 13,
-     "pts": 17,
-     "tid": 715,
-     "form": "LLWWW"
     },
     {
      "pos": 8,
@@ -494,15 +494,15 @@
     {
      "pos": 13,
      "team": "Valladolid",
-     "p": 10,
+     "p": 11,
      "w": 3,
      "d": 3,
-     "l": 4,
-     "gf": 15,
-     "ga": 14,
+     "l": 5,
+     "gf": 16,
+     "ga": 16,
      "pts": 12,
      "tid": 720,
-     "form": "DWDWL"
+     "form": "WDWLL"
     },
     {
      "pos": 14,
@@ -622,13 +622,14 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-20T00:00:00.000Z"
+   "updated": "2026-10-23T00:00:00.000Z"
   },
   {
    "id": "primera-federacion",
    "tier": 3,
    "name": "Primera Federación",
    "short": "PF",
+   "historyFrom": 2021,
    "zones": [
     {
      "from": 1,
@@ -655,20 +656,20 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-10-20T00:00:00.000Z",
+     "updated": "2026-10-23T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
        "team": "Lugo",
-       "p": 8,
+       "p": 9,
        "w": 7,
        "d": 1,
-       "l": 0,
-       "gf": 15,
-       "ga": 4,
+       "l": 1,
+       "gf": 16,
+       "ga": 8,
        "pts": 22,
        "tid": 716,
-       "form": "WWWWW"
+       "form": "WWWWL"
       },
       {
        "pos": 2,
@@ -698,6 +699,19 @@
       },
       {
        "pos": 4,
+       "team": "Real Unión",
+       "p": 9,
+       "w": 3,
+       "d": 4,
+       "l": 2,
+       "gf": 19,
+       "ga": 14,
+       "pts": 13,
+       "tid": 9586,
+       "form": "LDDDW"
+      },
+      {
+       "pos": 5,
        "team": "Mérida",
        "p": 8,
        "w": 4,
@@ -710,7 +724,7 @@
        "form": "LLWWW"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "Bilbao Athletic",
        "p": 8,
        "w": 3,
@@ -723,7 +737,7 @@
        "form": "DWLDL"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Zamora",
        "p": 8,
        "w": 3,
@@ -736,7 +750,7 @@
        "form": "LWWDD"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Cultural Leonesa",
        "p": 8,
        "w": 3,
@@ -749,7 +763,7 @@
        "form": "WDLWD"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Cacereño",
        "p": 8,
        "w": 3,
@@ -762,7 +776,7 @@
        "form": "WDLDL"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Ponferradina",
        "p": 8,
        "w": 3,
@@ -775,7 +789,7 @@
        "form": "WDWLD"
       },
       {
-       "pos": 10,
+       "pos": 11,
        "team": "Avilés",
        "p": 8,
        "w": 3,
@@ -788,7 +802,7 @@
        "form": "DDLWW"
       },
       {
-       "pos": 11,
+       "pos": 12,
        "team": "Pontevedra",
        "p": 8,
        "w": 3,
@@ -801,7 +815,7 @@
        "form": "DDLLW"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "Mirandés",
        "p": 8,
        "w": 3,
@@ -812,19 +826,6 @@
        "pts": 11,
        "tid": 799,
        "form": "DWLDL"
-      },
-      {
-       "pos": 13,
-       "team": "Real Unión",
-       "p": 8,
-       "w": 2,
-       "d": 4,
-       "l": 2,
-       "gf": 15,
-       "ga": 13,
-       "pts": 10,
-       "tid": 9586,
-       "form": "DLDDD"
       },
       {
        "pos": 14,
@@ -921,7 +922,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-10-20T00:00:00.000Z",
+     "updated": "2026-10-23T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1186,7 +1187,7 @@
      ]
     }
    ],
-   "updated": "2026-10-20T00:00:00.000Z"
+   "updated": "2026-10-23T00:00:00.000Z"
   }
  ]
 }

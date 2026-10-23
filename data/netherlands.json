@@ -146,6 +146,19 @@
     },
     {
      "pos": 8,
+     "team": "Go Ahead Eagles",
+     "p": 10,
+     "w": 3,
+     "d": 5,
+     "l": 2,
+     "gf": 23,
+     "ga": 23,
+     "pts": 14,
+     "tid": 410,
+     "form": "DDDLW"
+    },
+    {
+     "pos": 9,
      "team": "Heerenveen",
      "p": 9,
      "w": 3,
@@ -156,19 +169,6 @@
      "pts": 12,
      "tid": 210,
      "form": "LDWLW"
-    },
-    {
-     "pos": 9,
-     "team": "Go Ahead Eagles",
-     "p": 9,
-     "w": 2,
-     "d": 5,
-     "l": 2,
-     "gf": 20,
-     "ga": 21,
-     "pts": 11,
-     "tid": 410,
-     "form": "DDDDL"
     },
     {
      "pos": 10,
@@ -250,19 +250,6 @@
     },
     {
      "pos": 16,
-     "team": "Telstar",
-     "p": 9,
-     "w": 1,
-     "d": 3,
-     "l": 5,
-     "gf": 10,
-     "ga": 18,
-     "pts": 6,
-     "tid": 427,
-     "form": "LDLDL"
-    },
-    {
-     "pos": 17,
      "team": "ADO Den Haag",
      "p": 9,
      "w": 1,
@@ -273,6 +260,19 @@
      "pts": 6,
      "tid": 198,
      "form": "LLDDW"
+    },
+    {
+     "pos": 17,
+     "team": "Telstar",
+     "p": 10,
+     "w": 1,
+     "d": 3,
+     "l": 6,
+     "gf": 12,
+     "ga": 21,
+     "pts": 6,
+     "tid": 427,
+     "form": "DLDLL"
     },
     {
      "pos": 18,

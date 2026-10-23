@@ -224,15 +224,15 @@
     {
      "pos": 1,
      "team": "Stade Lausanne-Ouchy",
-     "p": 10,
+     "p": 11,
      "w": 7,
-     "d": 3,
+     "d": 4,
      "l": 0,
      "gf": 20,
      "ga": 3,
-     "pts": 24,
+     "pts": 25,
      "tid": 4269,
-     "form": "WWWDW"
+     "form": "WWDWD"
     },
     {
      "pos": 2,
@@ -262,6 +262,19 @@
     },
     {
      "pos": 4,
+     "team": "Neuchâtel Xamax",
+     "p": 11,
+     "w": 5,
+     "d": 1,
+     "l": 5,
+     "gf": 15,
+     "ga": 17,
+     "pts": 16,
+     "tid": 1015,
+     "form": "LWLWD"
+    },
+    {
+     "pos": 5,
      "team": "SC Kriens",
      "p": 10,
      "w": 4,
@@ -272,19 +285,6 @@
      "pts": 15,
      "tid": 2186,
      "form": "DLDWD"
-    },
-    {
-     "pos": 5,
-     "team": "Neuchâtel Xamax",
-     "p": 10,
-     "w": 5,
-     "d": 0,
-     "l": 5,
-     "gf": 15,
-     "ga": 17,
-     "pts": 15,
-     "tid": 1015,
-     "form": "LLWLW"
     },
     {
      "pos": 6,
@@ -302,28 +302,28 @@
     {
      "pos": 7,
      "team": "Rapperswil-Jona",
-     "p": 10,
+     "p": 11,
      "w": 3,
-     "d": 1,
+     "d": 2,
      "l": 6,
-     "gf": 15,
-     "ga": 19,
-     "pts": 10,
+     "gf": 17,
+     "ga": 21,
+     "pts": 11,
      "tid": 2185,
-     "form": "DLWWL"
+     "form": "LWWLD"
     },
     {
      "pos": 8,
      "team": "FC Wil",
-     "p": 10,
+     "p": 11,
      "w": 2,
-     "d": 4,
+     "d": 5,
      "l": 4,
-     "gf": 16,
-     "ga": 22,
-     "pts": 10,
+     "gf": 18,
+     "ga": 24,
+     "pts": 11,
      "tid": 2179,
-     "form": "DDLWD"
+     "form": "DLWDD"
     },
     {
      "pos": 9,
