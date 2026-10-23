@@ -25,14 +25,10 @@
   function range(z) { return z.from === z.to ? ord(z.from) : z.from + "–" + z.to; }
   function gd(r) { var d = r.gf - r.ga; return d > 0 ? "+" + d : d < 0 ? "−" + Math.abs(d) : "0"; }
 
-  // "2026-10-21" is a date only; anything longer carries a time. API-Football's standings stamp is a date sent as
-  // midnight UTC ("2026-10-21T00:00:00.000Z"), so that counts as a date only too: showing it as "01:00" would claim a
-  // time nobody recorded.
-  function isDateOnly(iso) { return /^\d{4}-\d{2}-\d{2}(T00:00(:00(\.0+)?)?(Z|\+00:00))?$/.test(String(iso || "")); }
+  // "2026-10-21" is a date only; anything longer carries a time.
   function ukTime(iso) {
     if (!iso) return "";
-    var dateOnly = isDateOnly(iso);
-    if (dateOnly) iso = String(iso).slice(0, 10);
+    var dateOnly = /^\d{4}-\d{2}-\d{2}$/.test(iso);
     try {
       var opts = { timeZone: "Europe/London", day: "numeric", month: "short" };
       if (!dateOnly) { opts.hour = "2-digit"; opts.minute = "2-digit"; opts.hour12 = false; }
@@ -53,6 +49,52 @@
 
   // Play-off results, worked out by scripts/build.mjs from the next season's tables.
   var OUT = { "po-won": "▲ Won play-off", "po-stayed": "Stayed up", "po-lost": "▼ Lost play-off" };
+  // UEFA league phase: what each club has already made certain, from the points still available.
+  var QTAG = { "q-r16": ["✓ Last 16", "Certain to finish in the top 8"], "q-po": ["✓ Top 24", "Certain of at least a knockout play-off place"], "q-out": ["Out", "Can no longer reach the top 24"] };
+  function markQualified(comp) {
+    var rows = comp.rows || [], md = comp.matchdays;
+    if (!md || rows.length < 24 || comp.groups) return comp;
+    // Leave out results still being played, so nothing is declared certain mid-game.
+    var base = rows.map(function (r) {
+      var lp = r.live ? (r.live.gf > r.live.ga ? 3 : r.live.gf === r.live.ga ? 1 : 0) : 0;
+      var p = r.live ? r.p - 1 : r.p, pts = r.pts - lp;
+      return { r: r, pts: pts, max: pts + 3 * Math.max(0, md - p), p: p };
+    });
+    if (base.every(function (b) { return b.p >= md; })) return comp;   // finished: the zones say it all
+    var any = false;
+    var out = Object.assign({}, comp, { rows: base.map(function (b) {
+      var catchable = base.filter(function (o) { return o !== b && o.max >= b.pts; }).length;   // could finish level or above
+      var ahead = base.filter(function (o) { return o !== b && o.pts > b.max; }).length;       // certain to finish above
+      var q = catchable <= 7 ? "q-r16" : catchable <= 23 ? "q-po" : ahead >= 24 ? "q-out" : null;
+      if (q) any = true;
+      return q ? Object.assign({}, b.r, { q: q }) : b.r;
+    }) });
+    if (any) out.notes = (comp.notes || []).concat(["✓ Last 16: certain to finish in the top 8. ✓ Top 24: certain of at least a play-off place. Out: can no longer reach the top 24. Worked out from the points still available."]);
+    return out;
+  }
+
+  // The knockouts if the league phase ended now. UEFA's bracket is fixed by position; the draw only decides
+  // which club of each pair goes where.
+  function projectedHTML(comp) {
+    var rows = comp.rows || [];
+    if (rows.length < 24 || comp.groups) return "";
+    var at = function (n) { return rows.filter(function (r) { return r.pos === n; })[0]; };
+    var who = function (n) {
+      var r = at(n), href = r && clubHref(comp, r);
+      return '<span class="pj-club"><i>' + ord(n) + "</i>" + (r ? (href ? '<a href="' + esc(href) + '">' + esc(r.team) + "</a>" : esc(r.team)) : "") + "</span>";
+    };
+    var pair = function (a, b) { return '<div class="pj-pair">' + who(a) + who(b) + "</div>"; };
+    var sets = [[1, 2, 15, 16, 17, 18], [3, 4, 13, 14, 19, 20], [5, 6, 11, 12, 21, 22], [7, 8, 9, 10, 23, 24]];
+    var po = sets.map(function (x) { return '<div class="pj-tie">' + pair(x[2], x[3]) + '<span class="pj-v">v</span>' + pair(x[4], x[5]) + "</div>"; }).join("");
+    var r16 = sets.map(function (x) {
+      return '<div class="pj-tie">' + pair(x[0], x[1]) + '<span class="pj-v">v</span><div class="pj-pair pj-from">Play-off winners<br>(' + ord(x[2]) + "–" + ord(x[5]) + ")</div></div>";
+    }).join("");
+    return '<div class="pj"><p class="pj-note"><strong>As it stands.</strong> If the league phase ended now. In each pair the draw decides who goes where; ' +
+      "the higher-placed clubs play the second leg at home. 25th–36th go out.</p>" +
+      '<div class="pj-cols"><div class="pj-col"><h3 class="br-h">Knockout play-offs</h3>' + po + "</div>" +
+      '<div class="pj-col"><h3 class="br-h">Round of 16</h3>' + r16 + "</div></div></div>";
+  }
+
 
   /* ---------- Live scores ----------
      The live worker sends today's fixtures. applyLive() copies a country's official tables, adds the score of every
@@ -173,12 +215,12 @@
         }).join("") + "</span></td>";
     }
     return '<tr class="' + cls.join(" ") + '" data-team="' + esc(r.team) + '">' +
-      // The zone colour is repeated as text for screen readers, so the table never relies on colour alone.
-      '<td class="c-pos">' + r.pos + (z ? '<span class="sr-only"> (' + esc(z.label) + ")</span>" : "") +
+      '<td class="c-pos">' + r.pos +
         (r.move ? '<span class="mv ' + (r.move > 0 ? "mv-up" : "mv-down") + '" title="' + (r.move > 0 ? "Up " : "Down ") + Math.abs(r.move) + ' as it stands">' + (r.move > 0 ? "▲" : "▼") + "</span>" : "") + "</td>" +
       '<th scope="row" class="c-club">' + (clubHref(lg, r) ? '<a class="club-link" href="' + esc(clubHref(lg, r)) + '">' + esc(r.team) + "</a>" : esc(r.team)) +
         (r.ded ? '<span class="ded" title="' + r.ded + ' points deducted">−' + r.ded + "</span>" : "") +
         (r.out ? '<span class="out ' + r.out + '">' + OUT[r.out] + "</span>" : "") +
+        (r.q ? '<span class="qtag ' + r.q + '" title="' + esc(QTAG[r.q][1]) + '">' + QTAG[r.q][0] + "</span>" : "") +
         (r.live ? '<span class="lv ' + (r.live.gf > r.live.ga ? "lv-w" : r.live.gf < r.live.ga ? "lv-l" : "lv-d") + (r.live.on ? " on" : "") +
           '" title="' + esc((r.live.home ? r.team + " " + r.live.gf + "–" + r.live.ga + " " + r.live.opp : r.live.opp + " " + r.live.ga + "–" + r.live.gf + " " + r.team) + " (" + r.live.clock + ")") + '">' +
           esc(r.live.clock) + " " + r.live.gf + "–" + r.live.ga + "</span>" : "") + "</th>" +
@@ -229,10 +271,10 @@
   function tierHTML(lg, opts) {
     opts = opts || {};
     var grouped = !!(lg.groups && lg.groups.length);
-    var meta = clubCount(lg) + " clubs · " + (lg.final ? "final table" : lg.asItStands ? "as it stands" : "as of " + ukTime(lg.updated));
+    var meta = clubCount(lg) + " clubs · " + (lg.final ? "final table" : lg.asItStands ? "as it stands" : "updated " + ukTime(lg.updated));
     var body = grouped
       ? lg.groups.map(function (g) {
-          var stamp = g.updated && g.updated !== lg.updated ? "as of " + ukTime(g.updated) : "";
+          var stamp = g.updated && g.updated !== lg.updated ? "updated " + ukTime(g.updated) : "";
           return '<div class="group"><div class="group-head"><h3>' + esc(g.name) + "</h3>" +
             (stamp ? "<span>" + stamp + "</span>" : "") + "</div>" +
             tableHTML(lg, g.rows, lg.name + ", " + g.name) + "</div>";
@@ -241,7 +283,7 @@
     if (grouped) {
       var dates = lg.groups.map(function (g) { return g.updated || lg.updated; });
       var newest = dates.slice().sort().pop();
-      meta = clubCount(lg) + " clubs in " + lg.groups.length + " groups · " + (lg.final ? "final tables" : lg.asItStands ? "as they stand" : "as of " + ukTime(newest));
+      meta = clubCount(lg) + " clubs in " + lg.groups.length + " groups · " + (lg.final ? "final tables" : lg.asItStands ? "as they stand" : "updated " + ukTime(newest));
     }
     return '<section class="tier" id="' + esc(lg.id) + '" aria-labelledby="h-' + esc(lg.id) + '">' +
       '<header class="tier-head"><p class="tier-num">' + esc(opts.eyebrow || "Tier " + lg.tier) + "</p>" +
@@ -266,12 +308,9 @@
     if (liveCount) return '<p class="stamp live now" id="stamp"><span class="dot"></span><span>' + liveCount + " game" + (liveCount === 1 ? "" : "s") +
       " live · tables show scores as they stand</span></p>";
     if (mode === "final") return '<p class="stamp final" id="stamp"><span class="dot"></span><span>Final tables</span></p>';
-    // The date is when the newest table last changed (in practice its latest matchday), not when the site last
-    // checked: a quiet midweek keeps an older date even though the feed is working.
     var live = mode === "live";
     return '<p class="stamp' + (live ? " live" : "") + '" id="stamp"><span class="dot"></span><span>' +
-      (live ? "Standings as of " : "Sample snapshot · standings as of ") + ukTime(updated) + (isDateOnly(updated) ? "" : " UK") +
-      (live ? " · checked through the day" : "") + "</span></p>";
+      (live ? "Live · updated " : "Sample snapshot · standings as of ") + ukTime(updated) + " UK</span></p>";
   }
 
   var INLINE_AD = '<div class="ad ad-inline"><span class="ad-tag">Advertisement</span>' +
@@ -364,7 +403,7 @@
   };
   function flag(country) {
     var f = FLAGS[country];
-    return f ? '<svg class="flag" viewBox="0 0 30 20" aria-hidden="true">' + f + "</svg>" : "";
+    return f ? '<svg class="flag" viewBox="0 0 30 20" width="30" height="20" aria-hidden="true">' + f + "</svg>" : "";
   }
 
   // A country's summary for the home page: enough to draw its pyramid and card without the tables.
@@ -385,20 +424,16 @@
     if (!fx.length) return "";
     var nm = function (t) { return names[t.id] || t.n; };
     var info = {};
-    all.forEach(function (s) { s.leagues.forEach(function (lg) { info[s.country + "/" + lg.id] = { short: lg.short || lg.name, name: lg.name, tier: lg.tier }; }); });
+    all.forEach(function (s) { s.leagues.forEach(function (lg) { info[s.country + "/" + lg.id] = { short: lg.short || lg.name, tier: lg.tier }; }); });
     var rank = function (f) { return isLive(f) ? 0 : f.st === "NS" ? 1 : isDone(f) ? 2 : 3; };
     fx.sort(function (a, b) {
       var ta = (info[a.c + "/" + a.l] || {}).tier || 9, tb = (info[b.c + "/" + b.l] || {}).tier || 9;
       return rank(a) - rank(b) || ta - tb || a.ko - b.ko;
     });
     var liveN = fx.filter(isLive).length;
-    // Count competitions, not countries: a night of European games is one "country" (Europe) but several
-    // competitions, and the clubs come from all over. One or two are named; more are counted.
-    var comps = [];
-    fx.forEach(function (f) { var k = f.c + "/" + f.l; if (comps.indexOf(k) < 0) comps.push(k); });
-    var where = comps.length <= 2
-      ? "the " + comps.map(function (k) { return esc((info[k] || {}).name || "league"); }).join(" and the ")
-      : comps.length + " competitions";
+    var countries = {};
+    fx.forEach(function (f) { countries[f.c] = 1; });
+    var nC = Object.keys(countries).length;
     var chips = fx.slice(0, 24).map(function (f) {
       var lg = info[f.c + "/" + f.l] || { short: "" };
       var started = f.h.g != null && f.a.g != null && !OFF_ST[f.st];
@@ -411,7 +446,7 @@
     }).join("");
     return '<section class="strip" aria-label="Today’s games"><p class="strip-head">' +
       (liveN ? '<span class="live-dot" aria-hidden="true"></span>' : "") + "Today: " + fx.length + " game" + (fx.length === 1 ? "" : "s") +
-      " in " + where + (liveN ? " · <strong>" + liveN + " live</strong>" : "") + "</p>" +
+      " in " + nC + " countr" + (nC === 1 ? "y" : "ies") + (liveN ? " · <strong>" + liveN + " live</strong>" : "") + "</p>" +
       '<ul class="strip-list">' + chips + "</ul></section>";
   }
 
@@ -461,18 +496,9 @@
     var html =
       '<section class="intro hero" aria-labelledby="intro-h">' +
       '<p class="eyebrow">Football Pyramids · ' + esc(countries[0].season) + "</p>" +
-      '<h1 id="intro-h">Football league tables, from the top flight down.</h1>' +
+      '<h1 id="intro-h">Every league table, top to bottom.</h1>' +
       '<p class="lede">' + all.length + " countries, " + nLeagues + " leagues and " + nClubs.toLocaleString("en-GB") +
-      " clubs. Each country’s divisions sit on one page in pyramid order, with the promotion and relegation places that connect them. " +
-      "Fixtures, past seasons and live scores on match days.</p>" +
-      // Club search, the quickest way in. assets/app.js wires it up and keeps it in place when the page redraws.
-      '<div class="hero-find" id="hero-find-box"><label for="hero-find">Find your club</label>' +
-        '<div class="hero-find-in"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/>' +
-        '<path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>' +
-        '<input id="hero-find" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="hero-find-list" aria-describedby="hero-find-hint" ' +
-        'placeholder="Type a club’s name" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go">' +
-        '<ul class="finder-list" id="hero-find-list" role="listbox" aria-label="Matching clubs" hidden></ul></div>' +
-        '<p class="hero-find-hint" id="hero-find-hint">Any club in these leagues, now or in past seasons: fixtures, results and its journey through the pyramid.</p></div>' +
+      " clubs. Each country’s whole football pyramid on one page, from the top flight down, with live scores on match days.</p>" +
       stampHTML(live ? "live" : "snapshot", newest, countries.reduce(function (n, c) { return n + (c.liveCount || 0); }, 0)) +
       "</section>" +
       stripHTML(opts.live, opts.europe ? all.concat([summary(opts.europe)]) : all, base, suffix, names) +
@@ -489,7 +515,7 @@
     if (ucl && opts.clubPaths) { ucl._paths = opts.clubPaths; ucl._root = base; ucl._suffix = suffix; }
     if (ucl) items.push({ key: "ucl", flagOf: "europe", label: ucl.name, lg: ucl,
       opt: { eyebrow: "UEFA · League phase", fixtures: (opts.fixtures || {})["europe/champions-league"],
-        more: { href: base + "europe/champions-league/" + suffix, text: "Champions League fixtures, knockouts, qualifying and past seasons" } } });
+        more: { href: base + "europe/champions-league/" + suffix, text: "Champions League bracket, qualifying and past seasons" } } });
     var tabs = items.map(function (it, i) {
       return '<button type="button" role="tab" class="tf-tab' + (i === 0 ? " on" : "") + '" data-tab="' + it.key + '" aria-selected="' + (i === 0) + '">' +
         flag(it.flagOf) + "<span>" + esc(it.label) + "</span></button>";
@@ -782,16 +808,13 @@
       (opts.seasons ? seasonsHTML({ name: comp.name, season: fx ? fx.season : "" }, opts.seasons) : "") +
       '<p class="lede"><strong>' + esc(compStatus(comp, fx)) + "</strong> · " + (comp.final ? (comp.groups ? "The group-stage tables" : "The league-phase table") + ", the full knockout bracket and every qualifying tie."
         : "The league-phase table, the knockout bracket as each draw is made, and every qualifying tie.") + "</p>" +
-      '<p class="fx-links">' + tzLine(mode, "europe") + "</p></section>" +
-      // Fixtures sit first in the row, as a button that opens the competition's fixtures page (it's a link, so it
-      // stays outside the tab list).
-      '<section class="comp" data-tabs="stage"><div class="comp-bar">' +
-      (opts.fixturesHref ? '<a class="tf-tab tf-go" href="' + esc(opts.fixturesHref) + '">Fixtures and results <span aria-hidden="true">→</span></a>' : "") +
-      '<div class="tf-tabs comp-tabs" role="tablist" aria-label="Stages">' +
-      tab("lp", comp.groups ? "Group stage" : "League phase") + tab("ko", "Knockouts") + tab("q", "Qualifying") + "</div></div>" +
+      '<p class="fx-links">' + (opts.fixturesHref ? '<a href="' + esc(opts.fixturesHref) + '">Fixtures and results by round →</a>' : "") +
+      tzLine(mode, "europe") + "</p></section>" +
+      '<section class="comp" data-tabs="stage"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Stages">' +
+      tab("lp", comp.groups ? "Group stage" : "League phase") + tab("ko", "Knockouts") + tab("q", "Qualifying") + "</div>" +
       panel("lp", (comp.rows && !comp.rows.length && !comp.groups ? '<p class="ko-empty">No table for this season.</p>'
-        : tierHTML(opts.clubPaths ? Object.assign(comp, { _paths: opts.clubPaths, _root: opts.root || "", _suffix: opts.suffix || "" }) : comp, { eyebrow: comp.groups ? "Group stage" : "League phase" }))) +
-      panel("ko", bracketHTML(ko, tz, now)) +
+        : tierHTML(markQualified(opts.clubPaths ? Object.assign(comp, { _paths: opts.clubPaths, _root: opts.root || "", _suffix: opts.suffix || "" }) : comp), { eyebrow: comp.groups ? "Group stage" : "League phase" }))) +
+      panel("ko", !ko.length && !comp.final && projectedHTML(comp) ? projectedHTML(comp) : bracketHTML(ko, tz, now)) +
       panel("q", qualifyingHTML(q, tz, now)) + "</section>";
   }
 
@@ -812,9 +835,9 @@
           return "<li><span>" + r.pos + "</span>" + esc(r.team) + (r.live ? ' <i class="lv on">' + esc(r.live.clock) + " " + r.live.gf + "–" + r.live.ga + "</i>" : "") + "<b>" + r.pts + " pts</b></li>";
         }).join("") + "</ol>" +
         '<span class="ecard-toggle" aria-hidden="true"><span class="when-closed">Full table</span><span class="when-open">Hide table</span></span></summary>' +
-        '<div class="ecomp-body">' + (hasTable ? tierHTML(lg, { eyebrow: c.groups ? "Group stage" : "League phase",
-          more: { href: href, text: "Fixtures, knockouts and qualifying" } })
-          : '<p class="ko-empty">No table yet. <a href="' + esc(href) + '">Fixtures and qualifying →</a></p>') + "</div></details></li>";
+        '<div class="ecomp-body">' + (hasTable ? tierHTML(markQualified(lg), { eyebrow: c.groups ? "Group stage" : "League phase",
+          more: { href: href, text: "Knockouts, qualifying and every fixture" } })
+          : '<p class="ko-empty">No table yet. <a href="' + esc(href) + '">Qualifying and fixtures →</a></p>') + "</div></details></li>";
     }).join("");
     return '<section class="intro" aria-labelledby="intro-h"><p class="eyebrow">UEFA club competitions · ' + esc(e.season) + "</p>" +
       '<h1 id="intro-h">Champions League, Europa League and Conference League</h1>' +
@@ -862,9 +885,15 @@
     var rounds = fx ? fx.groups[0].rounds.map(function (r) {
       return { key: r.key, label: r.label, mid: r.mid, fixtures: r.fixtures.map(function (f) { return mergeLive(f, lm); }) };
     }) : [];
-    // The bracket starts at the last 16 (8 ties or fewer); earlier rounds are listed.
-    var startAt = -1;
-    for (var i = 0; i < rounds.length; i++) if (tiesOf(rounds[i]).length <= 8) { startAt = i; break; }
+    // The bracket starts at the earliest round of 64 or fewer (32 ties) after which every round halves cleanly
+    // (no byes), so each tie feeds the next; earlier rounds are in "Every round".
+    var startAt = -1, counts = rounds.map(function (r) { return tiesOf(r).length; });
+    for (var i = 0; i < rounds.length && startAt < 0; i++) {
+      if ([32, 16, 8, 4, 2, 1].indexOf(counts[i]) < 0) continue;   // a full round of 64, 32, 16...
+      var clean = true;
+      for (var j = i + 1; j < rounds.length; j++) if (counts[j] * 2 !== counts[j - 1]) { clean = false; break; }
+      if (clean) startAt = i;
+    }
     var bracketRounds = startAt > -1 ? rounds.slice(startAt) : [];
     var first = bracketRounds.length ? "bracket" : "rounds";
     var current = rounds.length - 1;
@@ -890,7 +919,7 @@
       '<section class="comp" data-tabs="cup"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Views">' +
       tab("bracket", "Bracket") + tab("rounds", "Every round") + "</div>" +
       panel("bracket", bracketRounds.length ? bracketHTML(bracketRounds, tz, now)
-        : '<p class="ko-empty">The bracket starts at the last 16 and appears once that draw is made. Until then, see every round so far.</p>') +
+        : '<p class="ko-empty">The bracket starts once the cup is down to 64 clubs or fewer and that draw is made. Until then, see every round so far.</p>') +
       panel("rounds", list || '<p class="ko-empty">No ties yet. They appear as soon as the first draw is made.</p>') + "</section>";
   }
 
@@ -1089,23 +1118,15 @@
       var total = off(latest, depth);
       var cap = latest.now ? "This season so far: " + ord(latest.pos) + " " + inLeague(latest.league) + ", " + ord(latest.rank) + " of " + total + " in the pyramid."
         : "In " + latest.season + ": " + ord(latest.pos) + " " + inLeague(latest.league) + ", " + ord(latest.rank) + " of " + total + " in the pyramid.";
-      var ups = d.journey.filter(function (x) { return x.move === "up"; }).length, downs = d.journey.filter(function (x) { return x.move === "down"; }).length;
-      var oldest = d.journey[d.journey.length - 1];
-      var tally = n > 1 && (ups || downs)
-        ? " Since " + oldest.season + ": " + (ups ? ups + " promotion" + (ups === 1 ? "" : "s") : "") + (ups && downs ? " and " : "") +
-          (downs ? downs + " relegation" + (downs === 1 ? "" : "s") : "") + "."
-        : "";
-      journey = '<section class="cl-sec" id="journey"><div class="cl-sec-h"><h2>' + esc(d.name) + (/s$/.test(d.name) ? "’" : "’s") + " journey through the " + (d.adjective ? esc(d.adjective) + " " : "") + "pyramid</h2></div>" +
-        '<p class="lchart-cap">' + esc(cap + tally) + "</p>" +
+      journey = '<section class="cl-sec"><div class="cl-sec-h"><h2>Pyramid journey</h2></div>' +
+        '<p class="lchart-cap">' + esc(cap) + "</p>" +
         '<div class="lchart"><div class="lside">' + side + '</div><div class="lplot" style="height:' + h + 'px">' +
         '<svg viewBox="0 0 1000 ' + ymax + '" preserveAspectRatio="none" aria-hidden="true">' + rects + lpath + "</svg>" + dots + "</div>" +
         '<div class="lx">' + xl + "</div></div>" +
         '<details class="jmore" id="club-seasons"><summary>Season by season <span>' + n + (n === 1 ? " season" : " seasons") + "</span></summary>" +
         '<ul class="jlist">' + d.journey.map(function (x) {
           return "<li><span>" + esc(x.season) + '</span><i class="tag tier-' + x.tier + '">T' + x.tier + "</i>" +
-            "<span class=\"jl\">" + ((x.href || (x.now && tableNow)) ? '<a href="' + esc(x.href || tableNow) + '">' + esc(x.league) + "</a>" : esc(x.league)) +
-            (x.move ? ' <i class="jm ' + x.move + '" title="' + esc((x.move === "up" ? "Up to " : "Down to ") + x.to + " the next season") + '">' +
-              (x.move === "up" ? "▲ Promoted" : "▼ Relegated") + "</i>" : "") + "</span><b>" + (x.pos ? ord(x.pos) + (x.of ? " of " + x.of : "") : "") +
+            ((x.href || (x.now && tableNow)) ? '<a href="' + esc(x.href || tableNow) + '">' + esc(x.league) + "</a>" : esc(x.league)) + "<b>" + (x.pos ? ord(x.pos) + (x.of ? " of " + x.of : "") : "") +
             (x.rank ? '<em>' + ord(x.rank) + " overall</em>" : "") + "</b></li>";
         }).join("") + "</ul></details></section>";
     }
