@@ -754,7 +754,10 @@ body.no-ads main { justify-self: center !important; }
 }
 .ecards.compact .ecard-name { font-size: 19px; }
 .euro-home .section-h { margin-top: 36px; }
-.comp-tabs { margin-top: 28px; }
+.comp-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 28px; }
+.comp-bar .comp-tabs { margin-top: 0; overflow: visible; padding-bottom: 0; flex-wrap: wrap; }
+.tf-tab.tf-go { color: var(--accent); border-color: var(--accent-line); text-decoration: none; }
+.tf-tab.tf-go:hover { background: var(--accent-soft); }
 .comp .tf-panel .tier { margin-top: 18px; }
 .ko-empty { margin: 22px 0 0; padding: 18px; border: 1px dashed var(--rule-strong); border-radius: 10px; color: var(--muted); font-size: 15px; }
 
