@@ -2435,7 +2435,7 @@
   <url><loc>https://footballpyramids.com/scotland/scottish-league-cup/</loc><lastmod>2026-10-22</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/turkish-cup/</loc><lastmod>2026-10-22</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/australia/a-league-finals/</loc><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/usa/us-open-cup/</loc><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/usa/us-open-cup/</loc><lastmod>2026-10-23</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/mls-cup-playoffs/</loc><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/races/</loc><lastmod>2026-10-21</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/races/</loc><lastmod>2026-10-21</lastmod><changefreq>daily</changefreq></url>
@@ -2514,6 +2514,7 @@
   <url><loc>https://footballpyramids.com/china/china-league-one/fixtures/</loc><lastmod>2026-10-23</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/australia/a-league/fixtures/</loc><lastmod>2026-10-23</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/australia/npl/fixtures/</loc><lastmod>2026-10-23</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/state-2/fixtures/</loc><lastmod>2026-10-23</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/indonesia/indonesian-super-league/fixtures/</loc><lastmod>2026-10-23</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/mls/fixtures/</loc><lastmod>2026-10-23</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/usl-championship/fixtures/</loc><lastmod>2026-10-23</lastmod><changefreq>daily</changefreq></url>
@@ -3008,6 +3009,7 @@
   <url><loc>https://footballpyramids.com/australia/a-league-finals/2013-14/</loc><changefreq>yearly</changefreq></url>
   <url><loc>https://footballpyramids.com/australia/a-league-finals/2012-13/</loc><changefreq>yearly</changefreq></url>
   <url><loc>https://footballpyramids.com/australia/a-league-finals/2011-12/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/usa/us-open-cup/2025/</loc><changefreq>yearly</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/us-open-cup/2024/</loc><changefreq>yearly</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/us-open-cup/2023/</loc><changefreq>yearly</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/us-open-cup/2022/</loc><changefreq>yearly</changefreq></url>
