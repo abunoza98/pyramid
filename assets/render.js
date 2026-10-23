@@ -408,7 +408,8 @@
     var rows = tiers.map(function (t) {
       var detail = t.clubs + " clubs" + (t.groups ? " · " + t.groups + " groups" : "") + (t.href ? "" : " · soon");
       var inner =
-        '<span class="pyr-tier">Tier ' + t.tier + "</span>" +
+        // European competitions aren't tiers of one league system, so they're numbered as levels.
+        '<span class="pyr-tier">' + (c.country === "europe" ? "Level " : "Tier ") + t.tier + "</span>" +
         '<span class="pyr-track"><span class="pyr-bar" style="--w:' + (t.clubs / max * 100).toFixed(2) + '%"></span>' +
         '<span class="pyr-label"><span><span class="nm-long">' + esc(t.name) + '</span><span class="nm-short">' + esc(t.short || t.name) + "</span></span>" +
         "<small>" + detail + "</small></span></span>";
@@ -438,13 +439,13 @@
     var past = c.mode === "final";
     var html =
       '<section class="intro" aria-labelledby="intro-h">' +
-      '<h1 id="intro-h">The ' + esc(c.adjective) + " football pyramid</h1>" +
+      '<h1 id="intro-h">The ' + (c.system ? esc(c.system) : esc(c.adjective) + " football pyramid") + "</h1>" +
       seasonsHTML(c, opts.seasons) +
       (past
-        ? '<p class="lede">Final tables for the top ' + n + " tiers of " + esc(c.adjective) + " football in " + esc(c.season) +
-          ", from " + esc(c.leagues[0].name) + " down to " + esc(last.name) + ". Promotion, play-off and relegation places are marked from each league's records.</p>"
-        : '<p class="lede">Every league in the top ' + n + " tiers of " + esc(c.adjective) + " football, from " + esc(c.leagues[0].name) +
-          " down to " + esc(last.name) + ". Promotion, play-off and relegation places are marked on every table.</p>") +
+        ? '<p class="lede">Final tables for the top ' + n + (c.system ? " levels of the " + esc(c.system) : " tiers of " + esc(c.adjective) + " football") + " in " + esc(c.season) +
+          ", from " + esc(c.leagues[0].name) + " down to " + esc(last.name) + ". " + (c.closed ? "Play-off places are marked from each league's records." : "Promotion, relegation and play-off places are marked where they apply, from each league's records.") + "</p>"
+        : '<p class="lede">' + (c.system ? "The top " + n + " levels of the " + esc(c.system) : "Every league in the top " + n + " tiers of " + esc(c.adjective) + " football") + ", from " + esc(c.leagues[0].name) +
+          " down to " + esc(last.name) + ". " + (c.systemNote ? esc(c.systemNote) : "Promotion, relegation and play-off places are marked on each table where they apply.") + "</p>") +
       stampHTML(c.mode, c.updated, c.liveCount) + pyramidHTML(c, "", opts.cups) +
       (opts.racesHref ? '<a class="tf-tab tf-go races-link" href="' + esc(opts.racesHref) + '">Promotion and relegation races <span aria-hidden="true">→</span></a>' : "") + "</section>";
     c.leagues.forEach(function (lg, i) {
@@ -554,7 +555,7 @@
   // A country's summary for the home page: enough to draw its pyramid and card without the tables.
   function summary(c) {
     return {
-      country: c.country, name: c.name, adjective: c.adjective, code: c.code, featured: !!c.featured, region: c.region || null,
+      country: c.country, name: c.name, adjective: c.adjective, code: c.code, featured: !!c.featured, system: c.system || null, region: c.region || null,
       tiers: c.leagues.length, clubs: countryClubs(c), sizes: c.leagues.map(clubCount),
       leagues: c.leagues.map(function (lg) {
         return { id: lg.id, tier: lg.tier, name: lg.name, short: lg.short, clubs: clubCount(lg), groupCount: lg.groups ? lg.groups.length : 0,
@@ -646,7 +647,7 @@
     var panels = all.map(function (s, i) {
       var href = base + s.country + "/" + suffix, eu = s.country === "europe";
       return '<div class="xp-panel' + (i === 0 ? " on" : "") + '" data-panel="' + s.country + '" role="tabpanel">' +
-        '<div class="xp-head"><h2>' + flag(s.country) + (eu ? "European competitions" : "The " + esc(s.adjective) + " pyramid") + "</h2>" +
+        '<div class="xp-head"><h2>' + flag(s.country) + (eu ? "European competitions" : "The " + (s.system ? esc(s.system) : esc(s.adjective) + " pyramid")) + "</h2>" +
         "<p>" + (eu ? s.tiers + " competitions · " + s.clubs + " clubs in the league phase" : s.tiers + " tier" + (s.tiers === 1 ? "" : "s") + " · " + s.clubs + " clubs") + "</p></div>" +
         pyramidHTML(s, eu ? base + "europe/" : href, (cupsBy || {})[s.country]) +
         '<a class="more" href="' + href + '">' + (eu ? "Open the European tables and brackets" : "Open every " + esc(s.adjective) + " table") + ' <span aria-hidden="true">→</span></a></div>';
@@ -705,7 +706,7 @@
       '<p class="eyebrow">Football Pyramids · ' + esc(countries[0].season) + "</p>" +
       '<h1 id="intro-h">Football league tables, from the top flight down.</h1>' +
       '<p class="lede">' + all.length + " countries, " + nLeagues + " leagues and " + nClubs.toLocaleString("en-GB") +
-      " clubs. Each country’s divisions sit on one page in pyramid order, with the promotion and relegation places that connect them. " +
+      " clubs. Each country’s divisions sit together in league-system order, with promotion, relegation and play-off places shown where they apply. " +
       "Fixtures, past seasons and live scores on match days.</p>" +
       // Club search, the quickest way in. assets/app.js wires it up and keeps it in place when the page redraws.
       '<div class="hero-find" id="hero-find-box"><label for="hero-find">Find your club</label>' +

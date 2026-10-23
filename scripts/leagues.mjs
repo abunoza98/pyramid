@@ -373,6 +373,7 @@ export const COUNTRIES = [
   },
   {
     country: "australia", region: "asia", code: "AUS", name: "Australia", adjective: "Australian", apiCountry: "Australia",
+    systemNote: "There's no promotion or relegation between the A-League and the state leagues. Within each state, clubs move between its NPL and its second division.",
     // The A-League finals series, like the MLS playoffs, comes in the league's own fixtures (188) after the regular
     // season: only those rounds are kept. The API's round names for it vary by season, so the common ones are mapped.
     cups: [{ apiId: 188, id: "a-league-finals", name: "A-League Finals", short: "ALF",
@@ -432,6 +433,9 @@ export const COUNTRIES = [
   },
   {
     country: "usa", region: "north-america", calendar: true, code: "USA", name: "USA", adjective: "American", apiCountry: "USA",
+    // Not a promotion-and-relegation pyramid: named as a league system, and no races page.
+    closed: true, system: "US soccer league system",
+    systemNote: "The US system doesn't use promotion and relegation between these leagues; play-off places are marked on each table.",
     // The Open Cup is the national knockout cup. The MLS Cup playoffs aren't a separate competition in API-Football:
     // they come in league 253 after the regular season, so only those rounds are kept. Round One is best of three.
     // Round names are set without the "Play-offs - " prefix the API may use; dist says how far each is from the final.
