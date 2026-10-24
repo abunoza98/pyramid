@@ -27,6 +27,12 @@ if [ -f scripts/add-club-stakes.mjs ]; then
   node scripts/add-club-stakes.mjs
 fi
 
+# Add club achievements from saved league/cup history and infer the usual home stadium from venue names already
+# present on current league fixtures. This is local post-processing only: no extra football-data API calls.
+if [ -f scripts/add-club-profile.mjs ]; then
+  node scripts/add-club-profile.mjs
+fi
+
 if [ -z "$(git status --porcelain)" ]; then
   echo "No changes."
   exit 0
