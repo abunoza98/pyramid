@@ -9,6 +9,12 @@
 set -u
 msg="$1"
 
+# Club pages can link directly to the adjacent covered tier where the competition rules explicitly connect them.
+# This uses only the saved site/config data and makes no football-data API calls.
+if [ -f scripts/add-club-routes.mjs ]; then
+  node scripts/add-club-routes.mjs
+fi
+
 # build.mjs writes the main club/league search index. Add current domestic cups afterwards so every normal
 # data-update workflow keeps global search complete without duplicating cup configuration in the browser.
 if [ -f data/search.json ] && [ -f scripts/add-cups-to-search.mjs ]; then
