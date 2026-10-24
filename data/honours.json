@@ -1,0 +1,4 @@
+{
+  "_note": "All-time honours for any competition (league titles especially), used on club pages' Honours line. Same shape as cup-titles.json: keys are 'country/competition-id' as in scripts/leagues.mjs (e.g. 'england/premier-league'); 'through' is the last season the list covers, by its starting year (2025 = 2025-26); 'titles' lists each club as { n: name as the site shows it, tid: API-Football club ID where known, v: number of titles, years: optional list of seasons won }. Wins after 'through' are added from the site's own records. Leave a competition out until its list is complete: without it, the line counts the site's records only and says so.",
+  "_example": { "england/premier-league": { "through": 2025, "source": "https://en.wikipedia.org/wiki/List_of_English_football_champions", "titles": [ { "n": "Manchester United", "tid": 33, "v": 20 } ] } }
+}
