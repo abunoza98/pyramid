@@ -388,15 +388,15 @@
     {
      "pos": 5,
      "team": "Criciúma",
-     "p": 34,
+     "p": 35,
      "w": 17,
      "d": 8,
-     "l": 9,
-     "gf": 35,
-     "ga": 28,
+     "l": 10,
+     "gf": 36,
+     "ga": 30,
      "pts": 59,
      "tid": 140,
-     "form": "WWLWW"
+     "form": "WLWWL"
     },
     {
      "pos": 6,
@@ -413,6 +413,19 @@
     },
     {
      "pos": 7,
+     "team": "Sport Recife",
+     "p": 35,
+     "w": 14,
+     "d": 12,
+     "l": 9,
+     "gf": 47,
+     "ga": 38,
+     "pts": 54,
+     "tid": 123,
+     "form": "WWDLW"
+    },
+    {
+     "pos": 8,
      "team": "CRB",
      "p": 34,
      "w": 15,
@@ -425,7 +438,7 @@
      "form": "WLWDL"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Operário-PR",
      "p": 35,
      "w": 14,
@@ -436,19 +449,6 @@
      "pts": 51,
      "tid": 1223,
      "form": "LLLLW"
-    },
-    {
-     "pos": 9,
-     "team": "Sport Recife",
-     "p": 34,
-     "w": 13,
-     "d": 12,
-     "l": 9,
-     "gf": 45,
-     "ga": 37,
-     "pts": 51,
-     "tid": 123,
-     "form": "LWWDL"
     },
     {
      "pos": 10,

@@ -352,28 +352,28 @@
       {
        "pos": 10,
        "team": "Atlético Tucumán",
-       "p": 13,
-       "w": 3,
+       "p": 14,
+       "w": 4,
        "d": 5,
        "l": 5,
-       "gf": 12,
+       "gf": 13,
        "ga": 13,
-       "pts": 14,
+       "pts": 17,
        "tid": 455,
-       "form": "LLLDL"
+       "form": "LLDLW"
       },
       {
        "pos": 11,
        "team": "Tigre",
-       "p": 13,
+       "p": 14,
        "w": 3,
        "d": 4,
-       "l": 6,
+       "l": 7,
        "gf": 13,
-       "ga": 15,
+       "ga": 16,
        "pts": 13,
        "tid": 452,
-       "form": "LLLLD"
+       "form": "LLLDL"
       },
       {
        "pos": 12,
