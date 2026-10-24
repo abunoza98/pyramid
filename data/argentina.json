@@ -826,15 +826,15 @@
       {
        "pos": 10,
        "team": "San Martín (Tucumán)",
-       "p": 34,
+       "p": 35,
        "w": 11,
        "d": 13,
-       "l": 10,
-       "gf": 38,
-       "ga": 35,
+       "l": 11,
+       "gf": 39,
+       "ga": 37,
        "pts": 46,
        "tid": 485,
-       "form": "LDWLW"
+       "form": "DWLWL"
       },
       {
        "pos": 11,
@@ -851,6 +851,19 @@
       },
       {
        "pos": 12,
+       "team": "Quilmes",
+       "p": 35,
+       "w": 11,
+       "d": 9,
+       "l": 15,
+       "gf": 32,
+       "ga": 30,
+       "pts": 42,
+       "tid": 480,
+       "form": "WDLLW"
+      },
+      {
+       "pos": 13,
        "team": "Almagro",
        "p": 35,
        "w": 11,
@@ -863,7 +876,7 @@
        "form": "LWWLD"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Agropecuario",
        "p": 34,
        "w": 10,
@@ -874,19 +887,6 @@
        "pts": 40,
        "tid": 462,
        "form": "WLDWL"
-      },
-      {
-       "pos": 14,
-       "team": "Quilmes",
-       "p": 34,
-       "w": 10,
-       "d": 9,
-       "l": 15,
-       "gf": 30,
-       "ga": 29,
-       "pts": 39,
-       "tid": 480,
-       "form": "LWDLL"
       },
       {
        "pos": 15,
