@@ -435,7 +435,9 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     .filter((cup) => fixtures[`${c.country}/${cup.id}`] || cupPast[`${c.country}/${cup.id}`])
     .map((cup) => {
       const fx = fixtures[`${c.country}/${cup.id}`];
-      if (fx) return { id: cup.id, name: cup.name, status: FP.cupStatus(fx), span: FP.cupSpan(fx), href: `${rel}${cup.id}/${suffix}` };
+      // The season goes in front when it isn't the country's (the state leagues' calendar-year finals beside the
+      // A-League's 2026–27, say), so a card never reads as this season's when it isn't.
+      if (fx) return { id: cup.id, name: cup.name, status: (fx.season && fx.season !== c.season ? `${fx.season}: ` : "") + FP.cupStatus(fx), span: FP.cupSpan(fx), href: `${rel}${cup.id}/${suffix}` };
       const last = cupPast[`${c.country}/${cup.id}`][0];
       return { id: cup.id, name: cup.name, status: (cup.until ? `Ended in ${cup.until + 1} · ` : `${last.season}: `) + FP.cupStatus(last), span: "", href: `${rel}${cup.id}/${suffix}` };
     })
@@ -443,6 +445,70 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       const e = m.editions[0];
       return { id: m.def.id, name: m.def.name, status: `${e.season}: ${FP.compStatus(e.comp, e.fx)}`, span: "16 clubs from the state NPLs", href: `${rel}${m.def.id}/${suffix}` };
     }));
+  // Row tags for a country's season ({ leagueId: { clubKey: [badges], _notes } }, see FP.countryMain's marks):
+  // - the grand final winner of each state league's finals (champions: only on the current page; past pages
+  //   get them from markPostseasonChampions),
+  // - Australian Championship places: the foundation clubs and each state's qualifier, for the edition the
+  //   season's tables decided,
+  // - promotions and relegations announced after the season, from data/manual/<country>/movements/<year>.json.
+  const movementFiles = {};
+  const seasonMarks = async (c, leagues, year, rel, { champions }) => {
+    const cfg = COUNTRIES.find((x) => x.country === c.country) || {};
+    const marks = {};
+    const key = (r) => (r.tid ? String(r.tid) : "n:" + FP.slug(r.team));
+    const add = (lgId, r, b) => { const m = (marks[lgId] = marks[lgId] || {}); (m[key(r)] = m[key(r)] || []).push(b); };
+    const note = (lgId, line) => { const m = (marks[lgId] = marks[lgId] || {}); (m._notes = m._notes || []).includes(line) || m._notes.push(line); };
+    const rowsIn = (lgId, group) => leagues.filter((l) => l.id === lgId).flatMap((l) => FP.groupsOf(l).filter((g) => !group || g.name === group).flatMap((g) => g.rows));
+    const find = (rows, name, id) => rows.find((r) => id && r.tid && Number(r.tid) === Number(id)) || rows.find((r) => FP.slug(r.team) === FP.slug(name));
+    if (champions) for (const cup of (cfg.cups || []).filter((x) => x.championOf)) {
+      const fx = fixtures[`${c.country}/${cup.id}`];
+      if (!fx || Number(String(fx.season).slice(0, 4)) !== year) continue;
+      const rounds = fx.groups[0].rounds, last = rounds[rounds.length - 1];
+      const t = last && /final/i.test(last.label) ? FP.tiesOf(last)[0] : null;
+      if (!t || t.winner == null) continue;
+      const w = t.teams[t.winner], row = find(rowsIn(cup.championOf, cup.championGroup), w.n, w.id);
+      if (row) add(cup.championOf, row, { t: "🏆 " + (cup.championLabel || `${cup.name} winner`), c: "out champ", h: `Won the ${cup.championName || cup.name} ${fx.season}`, u: `${rel}${cup.id}/${suffix}` });
+    }
+    for (const m of Object.values(manual).filter((x) => x.cfg.country === c.country)) {
+      const i = m.editions.findIndex((e) => e.year === year);
+      if (i < 0) continue;
+      const e = m.editions[i], href = `${rel}${m.def.id}/${i === 0 ? "" : e.year + "/"}${suffix}`, rows = rowsIn(m.def.feeder);
+      for (const n of e.ed.foundation || []) {
+        const r = find(rows, n);
+        if (r) add(m.def.feeder, r, { t: "✓ Aus Championship", c: "qtag q-ac", h: `Foundation club: plays in every ${m.def.name}`, u: href });
+      }
+      for (const q of e.qualifiers) {
+        const r = find(rows, q.team, q.tid);
+        if (r) add(m.def.feeder, r, { t: "✓ Aus Championship", c: "qtag q-ac", h: `Qualified for the ${m.def.name} ${e.season} as NPL ${q.state}'s club`, u: href });
+      }
+      note(m.def.feeder, `✓ Aus Championship: in the ${m.def.name} ${e.season}, either as one of the eight foundation clubs (${(e.ed.foundation || []).join(", ")}) or as its state's qualifier.`);
+    }
+    const mvKey = `${c.country}/${year}`;
+    if (!(mvKey in movementFiles)) {
+      try { movementFiles[mvKey] = JSON.parse(await readFile(path.join(root, "data", "manual", c.country, "movements", `${year}.json`), "utf8")); } catch { movementFiles[mvKey] = null; }
+    }
+    const mv = movementFiles[mvKey];
+    if (mv) {
+      const top = leagues.find((l) => l.tier === 2), below = leagues.find((l) => l.tier === 3);
+      for (const [state, s] of Object.entries(mv.states || {})) {
+        for (const n of s.down || []) {
+          const r = top && find(rowsIn(top.id, state), n);
+          if (r) add(top.id, r, { t: "▼ Relegated", c: "out po-lost", h: `Down to the second division for ${mv.into}` });
+          else console.warn(`movements ${year}: ${n} not in ${state}'s top table`);
+        }
+        for (const n of s.up || []) {
+          const r = below && find(rowsIn(below.id), n);
+          if (r) add(below.id, r, { t: "▲ Promoted", c: "out", h: `Up to NPL ${state} for ${mv.into}` });
+          else console.warn(`movements ${year}: ${n} not in the second divisions`);
+        }
+        for (const line of [s.note, s.open].filter(Boolean)) { if (top) note(top.id, `${state}: ${line}`); if (below) note(below.id, `${state}: ${line}`); }
+      }
+      if (top) note(top.id, `▼ Relegated / ▲ Promoted: the moves for ${mv.into} as announced by each state's federation.`);
+      if (below) note(below.id, `▲ Promoted / ▼ Relegated: the moves for ${mv.into} as announced by each state's federation.`);
+    }
+    return Object.keys(marks).length ? marks : null;
+  };
+
   let europe = null;
   try { europe = JSON.parse(await readFile(path.join(root, "data", "europe.json"), "utf8")); } catch {}
   HAS_EUROPE = !!europe;
@@ -500,13 +566,14 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   // Country pages
   for (const c of countries) {
     const { first, last } = tierNames(c);
+    const nowMarks = await seasonMarks(c, c.leagues, Number(String(c.season).slice(0, 4)), "", { champions: true });
     await write(`${c.country}/index.html`, shell({
       title: `${c.system ? c.system.charAt(0).toUpperCase() + c.system.slice(1) : c.adjective + " football pyramid"}: ${first} to ${last} tables | Football Pyramids`,
       description: `Every ${c.adjective} league table from ${first} down to ${last} on one page, with ${c.closed ? "play-off" : "promotion, relegation and play-off"} places marked.`,
       canonical: `${SITE}/${c.country}/`, base: "../", suffix, page: "country", country: c.country,
       stamps: { [c.country]: c.updated }, countries, seasons: seasonList(c, history[c.country], "", suffix, null),
-      attrs: { fixtures: fxLinks(false), cups: cupCards(c, ""), races: c.closed ? "" : `races/${suffix}` },
-      main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null), fixtures: fxLinks(false), cups: cupCards(c, ""), racesHref: c.closed ? "" : `races/${suffix}` })
+      attrs: { fixtures: fxLinks(false), cups: cupCards(c, ""), races: c.closed ? "" : `races/${suffix}`, ...(nowMarks ? { marks: nowMarks } : {}) },
+      main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null), fixtures: fxLinks(false), cups: cupCards(c, ""), marks: nowMarks, racesHref: c.closed ? "" : `races/${suffix}` })
     }));
     // Promotion and relegation races: each league's zones and the clubs just outside them, from the current tables.
     // Not for a league system without promotion and relegation (the USA).
@@ -597,6 +664,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       const next = h.year + 1 === liveYear ? c : history[c.country].find((x) => x.year === h.year + 1);
       labelCupPlaces(markOutcomes(applyPlayoffRules(h), next));
       markPostseasonChampions(c, h, "../");
+      const pastMarks = await seasonMarks(c, h.leagues, h.year, "../", { champions: false });
       const n = tierNames(h);
       const seasons = seasonList(c, history[c.country], "../", suffix, h.year);
       await write(`${c.country}/${slug(h.year, c.country)}/index.html`, shell({
@@ -604,7 +672,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         description: `Final ${h.season} tables for ${c.adjective} football, from ${n.first} down to ${n.last}, with promotion and relegation marked.`,
         canonical: `${SITE}/${c.country}/${slug(h.year, c.country)}/`, base: "../../", suffix, page: "history", country: c.country,
         jsonld: crumbs([["Football Pyramids", SITE + "/"], [c.name, `${SITE}/${c.country}/`], [h.season, `${SITE}/${c.country}/${slug(h.year, c.country)}/`]]),
-        stamps: {}, countries, main: FP.countryMain(Object.assign(h, { system: c.system, closed: c.closed }), { seasons, clubPaths: pathByName[c.country], root: "../../", suffix, cups: pastCupCards(c, h.year, "../") })
+        stamps: {}, countries, main: FP.countryMain(Object.assign(h, { system: c.system, closed: c.closed }), { seasons, clubPaths: pathByName[c.country], root: "../../", suffix, cups: pastCupCards(c, h.year, "../"), marks: pastMarks })
       }));
     }
   }

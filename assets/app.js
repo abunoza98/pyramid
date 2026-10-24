@@ -227,6 +227,8 @@
   try { CUPSMAP = JSON.parse(body.getAttribute("data-cupsmap") || "{}"); } catch (e) {}
   var CUPS = [];
   try { CUPS = JSON.parse(body.getAttribute("data-cups") || "[]"); } catch (e) {}
+  var MARKS = null;
+  try { MARKS = JSON.parse(body.getAttribute("data-marks") || "null"); } catch (e) {}
   var FIXLINKS = {};
   try { FIXLINKS = JSON.parse(body.getAttribute("data-fixtures") || "{}"); } catch (e) {}
   var MOVERS = [];
@@ -559,7 +561,7 @@
     if (!MINE.every(function (c) { return official[c]; })) return;
     var withLive = MINE.map(function (c) { return FP.applyLive(official[c], live); });
     var html;
-    if (PAGE === "country") html = FP.countryMain(withLive[0], { seasons: seasons, fixtures: FIXLINKS, cups: CUPS, racesHref: body.getAttribute("data-races") || "" });
+    if (PAGE === "country") html = FP.countryMain(withLive[0], { seasons: seasons, fixtures: FIXLINKS, cups: CUPS, marks: MARKS, racesHref: body.getAttribute("data-races") || "" });
     else if (PAGE === "cup") {
       if (!compFx) return;
       html = FP.cupMain({ name: compFx.name, country: COUNTRY }, compFx, { tz: fxState.tz, live: live, seasons: seasons, fxRound: fxState.round, myClub: myClub,
