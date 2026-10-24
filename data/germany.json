@@ -360,6 +360,19 @@
     },
     {
      "pos": 4,
+     "team": "1. FC Magdeburg",
+     "p": 9,
+     "w": 5,
+     "d": 1,
+     "l": 3,
+     "gf": 20,
+     "ga": 12,
+     "pts": 16,
+     "tid": 179,
+     "form": "WDWLW"
+    },
+    {
+     "pos": 5,
      "team": "1. FC Kaiserslautern",
      "p": 8,
      "w": 4,
@@ -372,7 +385,7 @@
      "form": "WLWDW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "1. FC Heidenheim",
      "p": 9,
      "w": 4,
@@ -383,19 +396,6 @@
      "pts": 15,
      "tid": 180,
      "form": "WDDLD"
-    },
-    {
-     "pos": 6,
-     "team": "1. FC Magdeburg",
-     "p": 8,
-     "w": 4,
-     "d": 1,
-     "l": 3,
-     "gf": 14,
-     "ga": 11,
-     "pts": 13,
-     "tid": 179,
-     "form": "WDWLW"
     },
     {
      "pos": 7,
@@ -477,19 +477,6 @@
     },
     {
      "pos": 13,
-     "team": "Karlsruher SC",
-     "p": 8,
-     "w": 2,
-     "d": 2,
-     "l": 4,
-     "gf": 10,
-     "ga": 14,
-     "pts": 8,
-     "tid": 785,
-     "form": "LLLWL"
-    },
-    {
-     "pos": 14,
      "team": "VfL Bochum",
      "p": 9,
      "w": 2,
@@ -502,7 +489,7 @@
      "form": "DLLLD"
     },
     {
-     "pos": 15,
+     "pos": 14,
      "team": "Hannover 96",
      "p": 8,
      "w": 2,
@@ -513,6 +500,19 @@
      "pts": 8,
      "tid": 166,
      "form": "DLWLD"
+    },
+    {
+     "pos": 15,
+     "team": "Karlsruher SC",
+     "p": 9,
+     "w": 2,
+     "d": 2,
+     "l": 5,
+     "gf": 11,
+     "ga": 20,
+     "pts": 8,
+     "tid": 785,
+     "form": "LLLWL"
     },
     {
      "pos": 16,

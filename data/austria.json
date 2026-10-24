@@ -4,7 +4,7 @@
  "adjective": "Austrian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-23T00:00:00.000Z",
+ "updated": "2026-10-24T00:00:00.000Z",
  "belowNote": "Landesliga champions come up",
  "leagues": [
   {
@@ -442,7 +442,7 @@
    "groups": [
     {
      "name": "East",
-     "updated": "2026-10-23T00:00:00.000Z",
+     "updated": "2026-10-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -656,7 +656,7 @@
     },
     {
      "name": "North",
-     "updated": "2026-10-23T00:00:00.000Z",
+     "updated": "2026-10-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -857,23 +857,36 @@
     },
     {
      "name": "South",
-     "updated": "2026-10-23T00:00:00.000Z",
+     "updated": "2026-10-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
        "team": "Velden",
-       "p": 12,
+       "p": 13,
        "w": 7,
        "d": 5,
-       "l": 0,
+       "l": 1,
        "gf": 21,
-       "ga": 10,
+       "ga": 13,
        "pts": 26,
        "tid": 21390,
-       "form": "WDWWD"
+       "form": "DWWDL"
       },
       {
        "pos": 2,
+       "team": "Austria Klagenfurt",
+       "p": 13,
+       "w": 7,
+       "d": 2,
+       "l": 4,
+       "gf": 22,
+       "ga": 18,
+       "pts": 23,
+       "tid": 1405,
+       "form": "LLDLW"
+      },
+      {
+       "pos": 3,
        "team": "Deutschlandsberger SC",
        "p": 12,
        "w": 6,
@@ -886,7 +899,7 @@
        "form": "WDDWL"
       },
       {
-       "pos": 3,
+       "pos": 4,
        "team": "Völkermarkt",
        "p": 12,
        "w": 6,
@@ -899,7 +912,7 @@
        "form": "WDWLW"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Treibach",
        "p": 12,
        "w": 6,
@@ -910,19 +923,6 @@
        "pts": 20,
        "tid": 4962,
        "form": "LWLWL"
-      },
-      {
-       "pos": 5,
-       "team": "Austria Klagenfurt",
-       "p": 12,
-       "w": 6,
-       "d": 2,
-       "l": 4,
-       "gf": 19,
-       "ga": 18,
-       "pts": 20,
-       "tid": 1405,
-       "form": "WLLDL"
       },
       {
        "pos": 6,
@@ -940,15 +940,15 @@
       {
        "pos": 7,
        "team": "Weiz",
-       "p": 11,
+       "p": 12,
        "w": 4,
        "d": 6,
-       "l": 1,
+       "l": 2,
        "gf": 16,
-       "ga": 10,
+       "ga": 12,
        "pts": 18,
        "tid": 4996,
-       "form": "WDDWD"
+       "form": "DDWDL"
       },
       {
        "pos": 8,
@@ -990,6 +990,19 @@
       },
       {
        "pos": 11,
+       "team": "Hartberg II",
+       "p": 12,
+       "w": 3,
+       "d": 4,
+       "l": 5,
+       "gf": 20,
+       "ga": 25,
+       "pts": 13,
+       "tid": 28052,
+       "form": "WDDWW"
+      },
+      {
+       "pos": 12,
        "team": "Allerheiligen",
        "p": 12,
        "w": 3,
@@ -1002,7 +1015,7 @@
        "form": "LWLLL"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "Gleisdorf 09",
        "p": 12,
        "w": 3,
@@ -1015,7 +1028,7 @@
        "form": "LDWLW"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Bleiburg",
        "p": 12,
        "w": 2,
@@ -1026,19 +1039,6 @@
        "pts": 10,
        "tid": 8273,
        "form": "LLWDL"
-      },
-      {
-       "pos": 14,
-       "team": "Hartberg II",
-       "p": 11,
-       "w": 2,
-       "d": 4,
-       "l": 5,
-       "gf": 18,
-       "ga": 25,
-       "pts": 10,
-       "tid": 28052,
-       "form": "DWDDW"
       },
       {
        "pos": 15,
@@ -1070,7 +1070,7 @@
     },
     {
      "name": "West",
-     "updated": "2026-10-23T00:00:00.000Z",
+     "updated": "2026-10-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1283,7 +1283,7 @@
      ]
     }
    ],
-   "updated": "2026-10-23T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   }
  ]
 }

@@ -166,16 +166,16 @@
     {
      "pos": 11,
      "team": "Java United",
-     "p": 6,
+     "p": 7,
      "w": 2,
-     "d": 2,
+     "d": 3,
      "l": 2,
-     "gf": 9,
-     "ga": 9,
-     "pts": 6,
+     "gf": 10,
+     "ga": 10,
+     "pts": 7,
      "ded": 2,
      "tid": 22409,
-     "form": "LLWWD"
+     "form": "LWWDD"
     },
     {
      "pos": 12,
@@ -259,15 +259,15 @@
     {
      "pos": 18,
      "team": "Persijap",
-     "p": 6,
+     "p": 7,
      "w": 0,
-     "d": 0,
+     "d": 1,
      "l": 6,
-     "gf": 2,
-     "ga": 14,
-     "pts": 0,
+     "gf": 3,
+     "ga": 15,
+     "pts": 1,
      "tid": 11132,
-     "form": "LLLLL"
+     "form": "LLLLD"
     }
    ],
    "updated": "2026-10-24T00:00:00.000Z"
