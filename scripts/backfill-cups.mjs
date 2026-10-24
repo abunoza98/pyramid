@@ -70,7 +70,7 @@ async function main() {
       const file = path.join(dir, `${year}.json`), fxFile = path.join(dir, `${year}-fixtures.json`);
       if (!force && await exists(file) && await exists(fxFile)) { try { done.push(JSON.parse(await readFile(file, "utf8"))); } catch {} continue; }
       const fx = await get(`/fixtures?league=${cup.apiId}&season=${year}&timezone=UTC`);
-      const list = cupStage((fx.response || []).map((x) => ({ round: x.league?.round, f: slim(x) })), cup);
+      let list = cupStage((fx.response || []).map((x) => ({ round: x.league?.round, f: slim(x) })), cup);
       if (!list.length) continue;
       cupRounds(list, cup.rounds);
       // Each club's league that season ("PL", "L2"…), from the saved tables, for the tags and giant-killings.
@@ -79,6 +79,8 @@ async function main() {
         const t = tags.get(side.id) || tags.get("n:" + slugOf(side.n));
         if (t) { side.t = t.s; side.tier = t.tier; }
       }
+      if (cup.bothTier) list = list.filter(({ f }) => f.h.tier === cup.bothTier && f.a.tier === cup.bothTier);
+      if (!list.length) continue;
       const rounds = toRounds(list);
       const s = summarise(rounds, { ...learnLabels(done), ...(cup.dist || {}) });
       const out = { country: c.country, cup: cup.id, name: cup.name, season: seasonLabel(year, cupSeason), year, ...s };
