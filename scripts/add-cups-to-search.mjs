@@ -36,6 +36,11 @@ for (const country of COUNTRIES) {
   }
 }
 
+// Hand-kept competitions (scripts/manual-comps.mjs), e.g. the Australian Championship.
+for (const country of COUNTRIES) for (const m of country.manual || []) {
+  add({ type: "competition", country: country.country, countryName: country.name, path: `${country.country}/${m.id}/`, name: m.name, short: m.short || "" });
+}
+
 search.sort((a, b) => a.name.localeCompare(b.name) || a.countryName.localeCompare(b.countryName));
 await writeFile(file, JSON.stringify(search));
 console.log(`Search index: ${search.length} entries including current domestic cups.`);

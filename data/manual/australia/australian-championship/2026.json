@@ -1,0 +1,53 @@
+{
+  "_note": "Kept by hand: see 2025.json for the fields. Kick-off times with +11:00 are Melbourne time as listed by austadiums.com; d alone = time not confirmed. Group-stage draws go to a shootout: so = its winner.",
+  "name": "Australian Championship",
+  "season": "2026",
+  "year": 2026,
+  "updated": "2026-10-25",
+  "rounds": 6,
+  "shootoutPoints": true,
+  "foundation": ["APIA Leichhardt Tigers", "Avondale", "Marconi Stallions", "Preston Lions", "South Melbourne", "Sydney Olympic", "Sydney United", "Wollongong Wolves"],
+  "groups": {
+    "A": ["South Melbourne", "Sydney United", "Canberra FC", "Sutherland Sharks"],
+    "B": ["APIA Leichhardt Tigers", "Avondale", "Adelaide City", "Broadmeadow Magic"],
+    "C": ["Marconi Stallions", "Sydney Olympic", "Oakleigh Cannons", "Bayswater City"],
+    "D": ["Preston Lions", "Wollongong Wolves", "South Hobart", "Lions FC"]
+  },
+  "notes": [],
+  "sources": ["https://www.austadiums.com/sport/comp/aus-championship/fixture?season=2026", "https://www.betexplorer.com/football/australia/australian-championship/results/", "https://football360.com.au/australian-championship-results-broadmeadow-avondale-jyden-harb-marconi-oakleigh/", "https://greekcitytimes.com/2026/10/24/south-melbourne-bonus-point/"],
+  "matches": [
+    { "g": "D", "d": "2026-10-15", "h": "Preston Lions", "a": "Wollongong Wolves", "s": [0, 0], "so": "a" },
+    { "g": "B", "d": "2026-10-16", "h": "Adelaide City", "a": "Avondale", "s": [2, 2], "so": "a" },
+    { "g": "C", "d": "2026-10-16", "h": "Oakleigh Cannons", "a": "Sydney Olympic", "s": [4, 2] },
+    { "g": "A", "d": "2026-10-17", "h": "Sutherland Sharks", "a": "South Melbourne", "s": [0, 1] },
+    { "g": "B", "d": "2026-10-17", "h": "Broadmeadow Magic", "a": "APIA Leichhardt Tigers", "s": [0, 0], "so": "h" },
+    { "g": "C", "d": "2026-10-17", "h": "Bayswater City", "a": "Marconi Stallions", "s": [3, 1] },
+    { "g": "A", "d": "2026-10-18", "h": "Sydney United", "a": "Canberra FC", "s": [1, 1], "so": "h" },
+    { "g": "D", "d": "2026-10-18", "h": "Lions FC", "a": "South Hobart", "s": [1, 2] },
+
+    { "g": "D", "at": "2026-10-22T19:30+11:00", "h": "Lions FC", "a": "Preston Lions", "s": [2, 1], "v": "Luxury Paints Stadium" },
+    { "g": "A", "at": "2026-10-23T19:30+11:00", "h": "South Melbourne", "a": "Sydney United", "s": [1, 1], "so": "h", "v": "Lakeside Stadium" },
+    { "g": "B", "at": "2026-10-23T19:30+11:00", "h": "Adelaide City", "a": "APIA Leichhardt Tigers", "s": [1, 3], "v": "Adelaide City Park" },
+    { "g": "B", "at": "2026-10-24T15:00+11:00", "h": "Avondale", "a": "Broadmeadow Magic", "s": [1, 2], "v": "Avenger Park" },
+    { "g": "C", "at": "2026-10-24T15:00+11:00", "h": "Marconi Stallions", "a": "Oakleigh Cannons", "s": [0, 0], "so": "h", "v": "Marconi Stadium" },
+    { "g": "A", "at": "2026-10-24T17:00+11:00", "h": "Canberra FC", "a": "Sutherland Sharks", "s": [0, 2], "v": "Deakin Stadium" },
+    { "g": "D", "at": "2026-10-25T15:00+11:00", "h": "Wollongong Wolves", "a": "South Hobart", "v": "Macedonia Park" },
+    { "g": "C", "at": "2026-10-25T15:00+11:00", "h": "Sydney Olympic", "a": "Bayswater City", "v": "Sydney Olympic Park Athletic Centre" },
+
+    { "g": "A", "d": "2026-10-29", "h": "Canberra FC", "a": "South Melbourne" },
+    { "g": "C", "d": "2026-10-30", "h": "Sydney Olympic", "a": "Marconi Stallions" },
+    { "g": "B", "d": "2026-10-30", "h": "Broadmeadow Magic", "a": "Adelaide City" },
+    { "g": "A", "d": "2026-10-31", "h": "Sutherland Sharks", "a": "Sydney United" },
+    { "g": "D", "d": "2026-10-31", "h": "Wollongong Wolves", "a": "Lions FC" },
+    { "g": "D", "d": "2026-10-31", "h": "South Hobart", "a": "Preston Lions" },
+    { "g": "B", "d": "2026-11-01", "h": "APIA Leichhardt Tigers", "a": "Avondale" },
+    { "g": "C", "d": "2026-11-01", "h": "Bayswater City", "a": "Oakleigh Cannons" },
+
+    { "g": "C", "d": "2026-11-05", "h": "Sydney Olympic", "a": "Oakleigh Cannons" },
+    { "g": "A", "d": "2026-11-06", "h": "Canberra FC", "a": "Sydney United" },
+    { "g": "C", "d": "2026-11-07", "h": "Marconi Stallions", "a": "Bayswater City" },
+    { "g": "B", "d": "2026-11-07", "h": "APIA Leichhardt Tigers", "a": "Broadmeadow Magic" },
+    { "g": "D", "d": "2026-11-07", "h": "Wollongong Wolves", "a": "Preston Lions" },
+    { "g": "A", "d": "2026-11-07", "h": "South Melbourne", "a": "Sutherland Sharks" }
+  ]
+}
