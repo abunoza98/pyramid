@@ -9,6 +9,12 @@
 set -u
 msg="$1"
 
+# build.mjs writes the main club/league search index. Add current domestic cups afterwards so every normal
+# data-update workflow keeps global search complete without duplicating cup configuration in the browser.
+if [ -f data/search.json ] && [ -f scripts/add-cups-to-search.mjs ]; then
+  node scripts/add-cups-to-search.mjs
+fi
+
 if [ -z "$(git status --porcelain)" ]; then
   echo "No changes."
   exit 0
