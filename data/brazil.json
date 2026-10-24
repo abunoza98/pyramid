@@ -302,7 +302,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-23T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   },
   {
    "id": "serie-b",
@@ -465,6 +465,19 @@
     },
     {
      "pos": 11,
+     "team": "Botafogo-SP",
+     "p": 35,
+     "w": 13,
+     "d": 8,
+     "l": 14,
+     "gf": 40,
+     "ga": 38,
+     "pts": 47,
+     "tid": 2618,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 12,
      "team": "Cuiabá",
      "p": 34,
      "w": 11,
@@ -477,7 +490,7 @@
      "form": "LWDLL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "São Bernardo",
      "p": 34,
      "w": 12,
@@ -488,19 +501,6 @@
      "pts": 46,
      "tid": 7865,
      "form": "DWLDL"
-    },
-    {
-     "pos": 13,
-     "team": "Botafogo-SP",
-     "p": 34,
-     "w": 12,
-     "d": 8,
-     "l": 14,
-     "gf": 38,
-     "ga": 38,
-     "pts": 44,
-     "tid": 2618,
-     "form": "WLWWW"
     },
     {
      "pos": 14,
@@ -544,15 +544,15 @@
     {
      "pos": 17,
      "team": "Avaí",
-     "p": 34,
+     "p": 35,
      "w": 10,
      "d": 7,
-     "l": 17,
+     "l": 18,
      "gf": 33,
-     "ga": 43,
+     "ga": 45,
      "pts": 37,
      "tid": 145,
-     "form": "LLWWD"
+     "form": "LWWDL"
     },
     {
      "pos": 18,

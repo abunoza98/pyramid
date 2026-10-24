@@ -282,16 +282,16 @@
     },
     {
      "pos": 6,
-     "team": "Karlovac 1919",
-     "p": 9,
+     "team": "Orijent 1919",
+     "p": 10,
      "w": 4,
-     "d": 2,
+     "d": 3,
      "l": 3,
-     "gf": 12,
-     "ga": 12,
-     "pts": 14,
-     "tid": 15295,
-     "form": "LLDWW"
+     "gf": 10,
+     "ga": 9,
+     "pts": 15,
+     "tid": 6256,
+     "form": "WLWDW"
     },
     {
      "pos": 7,
@@ -321,6 +321,19 @@
     },
     {
      "pos": 9,
+     "team": "Karlovac 1919",
+     "p": 10,
+     "w": 4,
+     "d": 2,
+     "l": 4,
+     "gf": 12,
+     "ga": 14,
+     "pts": 14,
+     "tid": 15295,
+     "form": "LDWWL"
+    },
+    {
+     "pos": 10,
      "team": "Kustošija",
      "p": 10,
      "w": 3,
@@ -333,7 +346,7 @@
      "form": "WLDWW"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Dinamo Zagreb II",
      "p": 10,
      "w": 4,
@@ -344,19 +357,6 @@
      "pts": 12,
      "tid": 22416,
      "form": "LWWLL"
-    },
-    {
-     "pos": 11,
-     "team": "Orijent 1919",
-     "p": 9,
-     "w": 3,
-     "d": 3,
-     "l": 3,
-     "gf": 8,
-     "ga": 9,
-     "pts": 12,
-     "tid": 6256,
-     "form": "LWLWD"
     },
     {
      "pos": 12,

@@ -674,15 +674,15 @@
       {
        "pos": 2,
        "team": "UD Logroñés",
-       "p": 8,
-       "w": 5,
+       "p": 9,
+       "w": 6,
        "d": 2,
        "l": 1,
-       "gf": 17,
-       "ga": 11,
-       "pts": 17,
+       "gf": 20,
+       "ga": 12,
+       "pts": 20,
        "tid": 5280,
-       "form": "DWWLD"
+       "form": "WWLDW"
       },
       {
        "pos": 3,
@@ -699,6 +699,19 @@
       },
       {
        "pos": 4,
+       "team": "Cacereño",
+       "p": 9,
+       "w": 4,
+       "d": 3,
+       "l": 2,
+       "gf": 8,
+       "ga": 5,
+       "pts": 15,
+       "tid": 9384,
+       "form": "DLDLW"
+      },
+      {
+       "pos": 5,
        "team": "Mirandés",
        "p": 9,
        "w": 4,
@@ -711,7 +724,7 @@
        "form": "WLDLW"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "Extremadura",
        "p": 9,
        "w": 4,
@@ -724,7 +737,7 @@
        "form": "LWWDW"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Real Unión",
        "p": 9,
        "w": 3,
@@ -737,7 +750,20 @@
        "form": "LDDDW"
       },
       {
-       "pos": 7,
+       "pos": 8,
+       "team": "Ponferradina",
+       "p": 9,
+       "w": 3,
+       "d": 4,
+       "l": 2,
+       "gf": 6,
+       "ga": 6,
+       "pts": 13,
+       "tid": 4907,
+       "form": "DWLDD"
+      },
+      {
+       "pos": 9,
        "team": "Mérida",
        "p": 8,
        "w": 4,
@@ -750,33 +776,20 @@
        "form": "LLWWW"
       },
       {
-       "pos": 8,
+       "pos": 10,
        "team": "Bilbao Athletic",
-       "p": 8,
+       "p": 9,
        "w": 3,
        "d": 3,
-       "l": 2,
-       "gf": 13,
-       "ga": 10,
+       "l": 3,
+       "gf": 14,
+       "ga": 12,
        "pts": 12,
        "tid": 9579,
-       "form": "DWLDL"
+       "form": "WLDLL"
       },
       {
-       "pos": 9,
-       "team": "Zamora",
-       "p": 8,
-       "w": 3,
-       "d": 3,
-       "l": 2,
-       "gf": 10,
-       "ga": 8,
-       "pts": 12,
-       "tid": 9418,
-       "form": "LWWDD"
-      },
-      {
-       "pos": 10,
+       "pos": 11,
        "team": "Cultural Leonesa",
        "p": 8,
        "w": 3,
@@ -789,43 +802,30 @@
        "form": "WDLWD"
       },
       {
-       "pos": 11,
-       "team": "Cacereño",
-       "p": 8,
-       "w": 3,
-       "d": 3,
-       "l": 2,
-       "gf": 7,
-       "ga": 5,
-       "pts": 12,
-       "tid": 9384,
-       "form": "WDLDL"
-      },
-      {
        "pos": 12,
-       "team": "Ponferradina",
-       "p": 8,
+       "team": "Zamora",
+       "p": 9,
        "w": 3,
        "d": 3,
-       "l": 2,
-       "gf": 6,
-       "ga": 6,
+       "l": 3,
+       "gf": 10,
+       "ga": 9,
        "pts": 12,
-       "tid": 4907,
-       "form": "WDWLD"
+       "tid": 9418,
+       "form": "WWDDL"
       },
       {
        "pos": 13,
        "team": "Avilés",
-       "p": 8,
+       "p": 9,
        "w": 3,
        "d": 2,
-       "l": 3,
-       "gf": 14,
-       "ga": 10,
+       "l": 4,
+       "gf": 15,
+       "ga": 13,
        "pts": 11,
        "tid": 9632,
-       "form": "DDLWW"
+       "form": "DLWWL"
       },
       {
        "pos": 14,
@@ -843,18 +843,31 @@
       {
        "pos": 15,
        "team": "Barakaldo",
-       "p": 8,
+       "p": 9,
        "w": 2,
-       "d": 3,
+       "d": 4,
        "l": 3,
        "gf": 8,
        "ga": 10,
-       "pts": 9,
+       "pts": 10,
        "tid": 5251,
-       "form": "LDDLW"
+       "form": "DDLWD"
       },
       {
        "pos": 16,
+       "team": "Unionistas",
+       "p": 9,
+       "w": 3,
+       "d": 1,
+       "l": 5,
+       "gf": 12,
+       "ga": 15,
+       "pts": 10,
+       "tid": 5281,
+       "form": "LWDLW"
+      },
+      {
+       "pos": 17,
        "team": "Coria",
        "p": 8,
        "w": 2,
@@ -867,7 +880,7 @@
        "form": "DDLLW"
       },
       {
-       "pos": 17,
+       "pos": 18,
        "team": "Deportivo Fabril",
        "p": 9,
        "w": 2,
@@ -878,19 +891,6 @@
        "pts": 8,
        "tid": 9610,
        "form": "WLLLL"
-      },
-      {
-       "pos": 18,
-       "team": "Unionistas",
-       "p": 8,
-       "w": 2,
-       "d": 1,
-       "l": 5,
-       "gf": 10,
-       "ga": 14,
-       "pts": 7,
-       "tid": 5281,
-       "form": "WLWDL"
       },
       {
        "pos": 19,

@@ -396,6 +396,19 @@
     },
     {
      "pos": 5,
+     "team": "Benevento",
+     "p": 8,
+     "w": 4,
+     "d": 2,
+     "l": 2,
+     "gf": 13,
+     "ga": 7,
+     "pts": 14,
+     "tid": 506,
+     "form": "WWWDW"
+    },
+    {
+     "pos": 6,
      "team": "Pisa",
      "p": 7,
      "w": 4,
@@ -408,7 +421,7 @@
      "form": "WLDWW"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Südtirol",
      "p": 8,
      "w": 3,
@@ -421,7 +434,7 @@
      "form": "DWDLD"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Avellino",
      "p": 8,
      "w": 3,
@@ -432,19 +445,6 @@
      "pts": 11,
      "tid": 528,
      "form": "DLWDL"
-    },
-    {
-     "pos": 8,
-     "team": "Benevento",
-     "p": 7,
-     "w": 3,
-     "d": 2,
-     "l": 2,
-     "gf": 10,
-     "ga": 7,
-     "pts": 11,
-     "tid": 506,
-     "form": "LWWWD"
     },
     {
      "pos": 9,
@@ -462,15 +462,15 @@
     {
      "pos": 10,
      "team": "Arezzo",
-     "p": 7,
+     "p": 8,
      "w": 3,
      "d": 1,
-     "l": 3,
+     "l": 4,
      "gf": 8,
-     "ga": 14,
+     "ga": 17,
      "pts": 10,
      "tid": 876,
-     "form": "LWLDW"
+     "form": "WLDWL"
     },
     {
      "pos": 11,

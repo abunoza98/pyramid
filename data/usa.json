@@ -4,8 +4,11 @@
  "adjective": "American",
  "season": "2026",
  "mode": "live",
- "updated": "2026-10-23T00:00:00.000Z",
+ "updated": "2026-10-24T00:00:00.000Z",
  "belowNote": "There's no promotion or relegation between US leagues; these are the professional divisions from the top",
+ "system": "US soccer league system",
+ "systemNote": "The US system doesn't use promotion and relegation between these leagues; play-off places are marked on each table.",
+ "closed": true,
  "leagues": [
   {
    "id": "mls",
@@ -34,7 +37,7 @@
    "groups": [
     {
      "name": "Western Conference",
-     "updated": "2026-10-22T00:00:00.000Z",
+     "updated": "2026-10-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -235,20 +238,20 @@
     },
     {
      "name": "Eastern Conference",
-     "updated": "2026-10-22T00:00:00.000Z",
+     "updated": "2026-10-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
        "team": "Nashville SC",
-       "p": 30,
-       "w": 20,
+       "p": 31,
+       "w": 21,
        "d": 7,
        "l": 3,
-       "gf": 64,
+       "gf": 66,
        "ga": 23,
-       "pts": 67,
+       "pts": 70,
        "tid": 9569,
-       "form": "WWWWD"
+       "form": "WWWDW"
       },
       {
        "pos": 2,
@@ -422,20 +425,20 @@
       {
        "pos": 15,
        "team": "CF Montréal",
-       "p": 30,
+       "p": 31,
        "w": 6,
        "d": 7,
-       "l": 17,
+       "l": 18,
        "gf": 36,
-       "ga": 60,
+       "ga": 62,
        "pts": 25,
        "tid": 1614,
-       "form": "LWLLD"
+       "form": "WLLDL"
       }
      ]
     }
    ],
-   "updated": "2026-10-22T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   },
   {
    "id": "usl-championship",
@@ -457,7 +460,7 @@
    "groups": [
     {
      "name": "Eastern Conference",
-     "updated": "2026-10-23T00:00:00.000Z",
+     "updated": "2026-10-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -632,7 +635,7 @@
     },
     {
      "name": "Western Conference",
-     "updated": "2026-10-23T00:00:00.000Z",
+     "updated": "2026-10-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -793,7 +796,7 @@
      ]
     }
    ],
-   "updated": "2026-10-23T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   },
   {
    "id": "usl-league-one",
@@ -1034,7 +1037,7 @@
      "form": "LWLLW"
     }
    ],
-   "updated": "2026-10-22T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   }
  ]
 }

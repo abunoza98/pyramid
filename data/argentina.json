@@ -709,15 +709,15 @@
       {
        "pos": 1,
        "team": "Tristan Suarez",
-       "p": 34,
+       "p": 35,
        "w": 16,
-       "d": 14,
+       "d": 15,
        "l": 4,
-       "gf": 33,
-       "ga": 15,
-       "pts": 62,
+       "gf": 34,
+       "ga": 16,
+       "pts": 63,
        "tid": 1965,
-       "form": "DWDDW"
+       "form": "WDDWD"
       },
       {
        "pos": 2,
@@ -852,15 +852,15 @@
       {
        "pos": 12,
        "team": "Almagro",
-       "p": 34,
+       "p": 35,
        "w": 11,
-       "d": 8,
+       "d": 9,
        "l": 15,
-       "gf": 31,
-       "ga": 41,
-       "pts": 41,
+       "gf": 32,
+       "ga": 42,
+       "pts": 42,
        "tid": 482,
-       "form": "LLWWL"
+       "form": "LWWLD"
       },
       {
        "pos": 13,

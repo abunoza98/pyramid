@@ -370,6 +370,19 @@
     },
     {
      "pos": 4,
+     "team": "Lokeren-Temse",
+     "p": 7,
+     "w": 4,
+     "d": 1,
+     "l": 2,
+     "gf": 15,
+     "ga": 11,
+     "pts": 13,
+     "tid": 14128,
+     "form": "LLWDW"
+    },
+    {
+     "pos": 5,
      "team": "Francs Borains",
      "p": 6,
      "w": 4,
@@ -382,7 +395,7 @@
      "form": "LWWWL"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Sporting Hasselt",
      "p": 7,
      "w": 4,
@@ -395,7 +408,7 @@
      "form": "LLWLW"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Excelsior Virton",
      "p": 7,
      "w": 3,
@@ -406,19 +419,6 @@
      "pts": 10,
      "tid": 4715,
      "form": "LWDLL"
-    },
-    {
-     "pos": 7,
-     "team": "Lokeren-Temse",
-     "p": 6,
-     "w": 3,
-     "d": 1,
-     "l": 2,
-     "gf": 13,
-     "ga": 11,
-     "pts": 10,
-     "tid": 14128,
-     "form": "WLLWD"
     },
     {
      "pos": 8,
@@ -448,19 +448,6 @@
     },
     {
      "pos": 10,
-     "team": "Gent II",
-     "p": 6,
-     "w": 2,
-     "d": 2,
-     "l": 2,
-     "gf": 9,
-     "ga": 11,
-     "pts": 8,
-     "tid": 19685,
-     "form": "WDLDW"
-    },
-    {
-     "pos": 11,
      "team": "Genk II",
      "p": 8,
      "w": 2,
@@ -471,6 +458,19 @@
      "pts": 8,
      "tid": 19045,
      "form": "WLDLD"
+    },
+    {
+     "pos": 11,
+     "team": "Gent II",
+     "p": 7,
+     "w": 2,
+     "d": 2,
+     "l": 3,
+     "gf": 9,
+     "ga": 13,
+     "pts": 8,
+     "tid": 19685,
+     "form": "DLDWL"
     },
     {
      "pos": 12,

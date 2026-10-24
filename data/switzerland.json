@@ -49,15 +49,15 @@
     {
      "pos": 2,
      "team": "BSC Young Boys",
-     "p": 10,
-     "w": 6,
+     "p": 11,
+     "w": 7,
      "d": 4,
      "l": 0,
-     "gf": 33,
+     "gf": 35,
      "ga": 18,
-     "pts": 22,
+     "pts": 25,
      "tid": 565,
-     "form": "WDDWW"
+     "form": "DDWWW"
     },
     {
      "pos": 3,
@@ -101,15 +101,15 @@
     {
      "pos": 6,
      "team": "FC St. Gallen",
-     "p": 10,
+     "p": 11,
      "w": 5,
      "d": 1,
-     "l": 4,
+     "l": 5,
      "gf": 17,
-     "ga": 19,
+     "ga": 21,
      "pts": 16,
      "tid": 1011,
-     "form": "WLLWW"
+     "form": "LLWWL"
     },
     {
      "pos": 7,
@@ -860,6 +860,19 @@
       },
       {
        "pos": 2,
+       "team": "Courtételle",
+       "p": 11,
+       "w": 7,
+       "d": 1,
+       "l": 3,
+       "gf": 23,
+       "ga": 12,
+       "pts": 22,
+       "tid": 17480,
+       "form": "WLWWW"
+      },
+      {
+       "pos": 3,
        "team": "Schötz",
        "p": 11,
        "w": 6,
@@ -872,7 +885,7 @@
        "form": "WWWWL"
       },
       {
-       "pos": 3,
+       "pos": 4,
        "team": "Muttenz",
        "p": 11,
        "w": 6,
@@ -883,19 +896,6 @@
        "pts": 20,
        "tid": 12707,
        "form": "LWDWW"
-      },
-      {
-       "pos": 4,
-       "team": "Courtételle",
-       "p": 10,
-       "w": 6,
-       "d": 1,
-       "l": 3,
-       "gf": 20,
-       "ga": 11,
-       "pts": 19,
-       "tid": 17480,
-       "form": "LWLWW"
       },
       {
        "pos": 5,
@@ -965,15 +965,15 @@
       {
        "pos": 10,
        "team": "Grasshopper II",
-       "p": 10,
+       "p": 11,
        "w": 5,
        "d": 0,
-       "l": 5,
-       "gf": 16,
-       "ga": 17,
+       "l": 6,
+       "gf": 17,
+       "ga": 20,
        "pts": 15,
        "tid": 12704,
-       "form": "WLWWL"
+       "form": "LWWLL"
       },
       {
        "pos": 11,
