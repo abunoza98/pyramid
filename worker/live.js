@@ -9,7 +9,7 @@
    It reads the list of leagues and the current tables from the site itself (data/live-leagues.json and data/<country>.json),
    so adding a league to the site needs no change here.
 
-   API use: about 170 requests a day for fixture lists, plus one a minute while games are on
+   API use: one request every 3 hours for the day's fixture list (all leagues at once), plus one a minute while games are on
    (a busy Saturday is roughly 700). KV writes only happen when a score or status changes (well under the free 1,000 a day). */
 
 const API = "https://v3.football.api-sports.io";
@@ -20,7 +20,6 @@ const OFF = ["PST", "CANC", "ABD", "AWD", "WO"];
 const SCHEDULE_EVERY_MS = 3 * 3600 * 1000;   // re-check today's fixture list every 3 hours (kick-off changes)
 const WRITE_CAP = 950;                          // stay under KV's free 1,000 writes a day
 const GAP_MS = 2500;                            // gap between API requests in the same minute
-const SCHEDULE_BATCH = 3;                       // fixture lists fetched per minute (19 leagues take 7 minutes)
 
 export default {
   async scheduled(event, env, ctx) {
@@ -89,8 +88,9 @@ export async function tick(env, opts = {}) {
     return r.ok ? r.json() : null;
   };
 
-  // Paused after API-Football said "too many requests"? Wait it out.
-  if (s.pauseUntil && now < s.pauseUntil) return { wrote: false, state: s };
+  // Paused after API-Football said "too many requests"? Live scores still go out (one request a minute); only the
+  // fixture-list refresh waits.
+  const paused = !!(s.pauseUntil && now < s.pauseUntil);
   let failed = null;
   const tryApi = async (q) => {
     for (let attempt = 1; ; attempt++) {
@@ -115,38 +115,61 @@ export async function tick(env, opts = {}) {
     }
   };
 
-  // 1. Today's fixtures, from the leagues the site lists. A few leagues a minute, so we never send a burst.
-  if (!s.pending?.length && (s.day !== today || now - s.scheduleAt > SCHEDULE_EVERY_MS)) {
+  // 1. Live scores, only when a game is on (or about to be). First, so nothing else in the minute can hold them up.
+  const active = s.fixtures.filter((f) => !DONE.includes(f.st) && !OFF.includes(f.st) &&
+    now >= f.ko * 1000 - 5 * 60000 && now <= f.ko * 1000 + 4 * 3600000);
+  if (active.length) {
+    // Every live game, filtered here: a list of 100+ league IDs in the URL is fragile, and it's still one request.
+    const live = failed ? null : await tryApi(`/fixtures?live=all`);
+    const seen = new Set();
+    for (const x of live || []) {
+      const m = s.leagues[x.league.id];
+      if (!m) continue;
+      seen.add(x.fixture.id);
+      const i = s.fixtures.findIndex((f) => f.id === x.fixture.id);
+      const old = i > -1 ? s.fixtures[i] : null;
+      const f = fromApi(x, m, old, old ? old.day : today);
+      if (!old) { f.h.b = null; f.a.b = null; s.fixtures.push(f); } else s.fixtures[i] = f;
+    }
+    // Games that were live last minute but aren't now have finished (or stopped): fetch their final state.
+    // Also any game still "not started" well after kick-off (missed while the worker was down, or delayed).
+    const gone = !live ? [] : s.fixtures.filter((f) => !seen.has(f.id) &&
+      (LIVE.includes(f.st) || (f.st === "NS" && now > f.ko * 1000 + 110 * 60000 && now <= f.ko * 1000 + 4 * 3600000))).slice(0, 20);
+    if (gone.length) await settle(gone);
+  }
+
+  // 2. Today's fixtures for every league the site lists: ONE request for the whole day, filtered here. (It used to be
+  // one request per league, a few a minute; with over 100 leagues that took the best part of an hour every 3 hours and
+  // kept running into API-Football's per-minute limit, and each "too many requests" paused live scores too.)
+  // Runs after the live scores, so a problem here can never hold them up.
+  if (!paused && !failed && (s.day !== today || now - s.scheduleAt > SCHEDULE_EVERY_MS)) {
     const cfg = await site("/data/live-leagues.json");
     if (!cfg) throw new Error("couldn't read live-leagues.json from the site (blocked or not deployed?)");
     s.leagues = cfg.leagues;
     s.season = cfg.season;
-    s.pending = Object.keys(cfg.leagues);
-    s.scheduleAt = now;
+    s.pending = [];
     if (s.day !== today) {
       // New day: keep only games still running past midnight.
       s.fixtures = s.fixtures.filter((f) => LIVE.includes(f.st));
       s.day = today;
     }
-  }
-  if (s.pending?.length) {
-    const played = {};   // country -> Map(club id -> games played in the official table)
-    const playedFor = async (c) => {
-      if (!played[c]) {
-        played[c] = new Map();
-        const d = await site(`/data/${c}.json`);
-        for (const lg of d?.leagues || []) for (const r of lg.groups ? lg.groups.flatMap((g) => g.rows) : lg.rows || []) {
-          if (r.tid) played[c].set(r.tid, { p: r.p, team: r.team });
+    const all = await tryApi(`/fixtures?date=${s.day}&timezone=UTC`);
+    if (all) {
+      s.scheduleAt = now;   // only once the list is in; otherwise try again next minute
+      const played = {};   // country -> Map(club id -> games played in the official table)
+      const playedFor = async (c) => {
+        if (!played[c]) {
+          played[c] = new Map();
+          const d = await site(`/data/${c}.json`);
+          for (const lg of d?.leagues || []) for (const r of lg.groups ? lg.groups.flatMap((g) => g.rows) : lg.rows || []) {
+            if (r.tid) played[c].set(r.tid, { p: r.p, team: r.team });
+          }
         }
-      }
-      return played[c];
-    };
-    for (const id of s.pending.slice(0, SCHEDULE_BATCH)) {
-      const m = s.leagues[id];
-      // A calendar-year league (Brazil, the USA…) carries its own season as `s` in live-leagues.json.
-      const list = await tryApi(`/fixtures?league=${id}&season=${(m && m.s) || s.season}&date=${s.day}&timezone=UTC`);
-      if (!list) break;
-      for (const x of list) {
+        return played[c];
+      };
+      for (const x of all) {
+        const m = s.leagues[x.league?.id];
+        if (!m) continue;   // a league the site doesn't show
         const i = s.fixtures.findIndex((f) => f.id === x.fixture.id);
         const old = i > -1 ? s.fixtures[i] : null;
         const f = fromApi(x, m, old, s.day);
@@ -163,34 +186,10 @@ export async function tick(env, opts = {}) {
           f.h.n = p.get(f.h.id)?.team || f.h.n;
           f.a.n = p.get(f.a.id)?.team || f.a.n;
           s.fixtures.push(f);
-        } else s.fixtures[i] = f;
+        } else s.fixtures[i] = f;   // fromApi keeps the stored names and games-played counts
       }
-      s.pending = s.pending.filter((x) => x !== id);
+      s.fixtures.sort((a, b) => a.ko - b.ko || a.id - b.id);
     }
-    s.fixtures.sort((a, b) => a.ko - b.ko || a.id - b.id);
-  }
-
-  // 2. Live scores, only when a game is on (or about to be).
-  const active = s.fixtures.filter((f) => !DONE.includes(f.st) && !OFF.includes(f.st) &&
-    now >= f.ko * 1000 - 5 * 60000 && now <= f.ko * 1000 + 4 * 3600000);
-  if (active.length) {
-    const ids = Object.keys(s.leagues);
-    const live = failed ? null : await tryApi(`/fixtures?live=${ids.join("-")}`);
-    const seen = new Set();
-    for (const x of live || []) {
-      const m = s.leagues[x.league.id];
-      if (!m) continue;
-      seen.add(x.fixture.id);
-      const i = s.fixtures.findIndex((f) => f.id === x.fixture.id);
-      const old = i > -1 ? s.fixtures[i] : null;
-      const f = fromApi(x, m, old, old ? old.day : today);
-      if (!old) { f.h.b = null; f.a.b = null; s.fixtures.push(f); } else s.fixtures[i] = f;
-    }
-    // Games that were live last minute but aren't now have finished (or stopped): fetch their final state.
-    // Also any game still "not started" well after kick-off (missed while the worker was down, or delayed).
-    const gone = !live ? [] : s.fixtures.filter((f) => !seen.has(f.id) &&
-      (LIVE.includes(f.st) || (f.st === "NS" && now > f.ko * 1000 + 110 * 60000 && now <= f.ko * 1000 + 4 * 3600000))).slice(0, 20);
-    if (gone.length) await settle(gone);
   }
 
   // 3. Safety net: a game still marked live (or not started) two hours or more after kick-off, outside the
