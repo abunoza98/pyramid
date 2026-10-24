@@ -23,9 +23,20 @@ function seasonPath(season) {
   return String(season || "").replace(/–/g, "-").replace(/\s+/g, "");
 }
 
+function roundName(round) {
+  return String(round?.label || round?.key || "").trim();
+}
+
+function isMainRound(round, mine = []) {
+  if (mine.some((f) => MAIN_STAGES.has(f.stage))) return true;
+  const s = roundName(round);
+  if (!s || /qualif|preliminary/i.test(s)) return false;
+  return /^group\b|group stage|league (?:phase|stage)|regular season|knockout.*play|play-?off round|round of (?:16|32|64)|^(?:8th|16th|32nd|1\/8|1\/16|1\/32)\s+finals?$|quarter|semi|^finals?$/i.test(s);
+}
+
 function friendlyRound(entry, year) {
   const round = entry?.round || {};
-  const s = String(round.label || round.key || "").trim();
+  const s = roundName(round);
   const stage = entry?.mine?.map((f) => f.stage).find((x) => MAIN_STAGES.has(x)) ||
     (round.fixtures || []).map((f) => f.stage).find((x) => MAIN_STAGES.has(x));
 
@@ -46,8 +57,17 @@ function friendlyRound(entry, year) {
 }
 
 function wonFinal(round, club, tid) {
-  const s = String(round?.label || round?.key || "").trim();
+  const s = roundName(round);
   if (!/^finals?$/i.test(s)) return false;
+
+  // Historical UEFA files reliably save the fixture-level winner even when their legacy stage code is generic.
+  for (const f of round.fixtures || []) {
+    if (!DONE.has(f.st) || !hasClub(f, club, tid)) continue;
+    if (sameTeam(f.h, club, tid) && f.w === "h") return true;
+    if (sameTeam(f.a, club, tid) && f.w === "a") return true;
+  }
+
+  // Keep the tie-based fallback for any two-leg/future formats where the winner is derived from aggregate data.
   for (const tie of FP.tiesOf({ fixtures: round.fixtures || [] })) {
     const mine = tie.teams.findIndex((t) => sameTeam(t, club, tid));
     if (mine > -1 && tie.done && tie.winner === mine) return true;
@@ -64,8 +84,9 @@ function runFromFixtures(fx, club, tid, current) {
   }
 
   // A qualifying-round appearance is not treated as a European run unless the club actually reaches
-  // the main competition (group/league phase or knockout stage).
-  const main = rounds.filter((x) => x.mine.some((f) => MAIN_STAGES.has(f.stage)));
+  // the main competition. Modern files use lp/ko stage tags; older UEFA files can label every fixture "q",
+  // so their group/league and knockout round names are the authoritative fallback.
+  const main = rounds.filter((x) => isMainRound(x.round, x.mine));
   if (!main.length) return null;
 
   const last = main[main.length - 1];
@@ -164,12 +185,12 @@ function europeanChartHTML(runs) {
     const href = r.current ? `../../../europe/${r.comp.id}/` : `../../../europe/${r.comp.id}/${seasonPath(r.season)}/`;
     const sideClass = r.x < 13 ? " l" : r.x > 87 ? " r" : "";
     const below = r.y < 24 ? " below" : "";
-    const status = r.won ? "Won" : r.current ? "Currently at" : "Reached";
+    const detail = r.won ? "Won the competition" : (r.current ? "Currently at " : "Reached ") + r.stage.toLowerCase();
     const aria = `${r.season}: ${r.comp.name}, ${r.stage}`;
     return '<a class="ld cr-dot er-dot er-' + r.comp.cls + (r.won ? " won" : "") +
       '" style="left:' + r.x.toFixed(2) + '%;top:' + r.y.toFixed(2) + '%" href="' + esc(href) + '" aria-label="' +
       esc(aria) + '"><span class="ltip' + sideClass + below + '"><b>' + esc(r.season) + ' · ' +
-      esc(r.comp.name) + '</b>' + esc(status + " " + r.stage.toLowerCase()) + '</span></a>';
+      esc(r.comp.name) + '</b>' + esc(detail) + '</span></a>';
   }).join("");
 
   const axis = years.map((year) => {
