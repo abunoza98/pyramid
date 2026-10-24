@@ -380,7 +380,8 @@ export const COUNTRIES = [
       only: "^(?!Regular Season)", strip: "^(finals?( series)?|play-?offs?|playoffs?)\\s*-\\s*",
       rounds: { "Quarter-finals": "Elimination finals", "Elimination Finals": "Elimination finals", "Elimination Final": "Elimination finals",
         "1/8-finals": "Elimination finals", "Semi-finals": "Semi-finals", "Final": "Grand Final", "Grand Final": "Grand Final" },
-      dist: { "Elimination finals": 2, "Semi-finals": 1, "Grand Final": 0 } }],
+      dist: { "Elimination finals": 2, "Semi-finals": 1, "Grand Final": 0 },
+      championOf: "a-league", championLabel: "Grand Final winner" }],
     // Australia spans several time zones, so local kick-off times go by the home club (A-League) or the state
     // (NPL and state leagues). Anything not listed is on Sydney time.
     tz: { home: "Australia/Sydney",
@@ -443,7 +444,8 @@ export const COUNTRIES = [
       { apiId: 253, id: "mls-cup-playoffs", name: "MLS Cup Playoffs", short: "MLSP",
         only: "^(?!Regular Season|Group Stage)", strip: "^(play-?offs?|playoffs?)\\s*-\\s*", series: "^(1/8-finals|round one)",
         rounds: { "1/16-finals": "Wild card", "1/8-finals": "Round One", "Quarter-finals": "Conference semi-finals", "Semi-finals": "Conference finals", "Final": "MLS Cup final" },
-        dist: { "Wild card": 4, "Round One": 3, "Conference semi-finals": 2, "Conference finals": 1, "MLS Cup final": 0 } }],
+        dist: { "Wild card": 4, "Round One": 3, "Conference semi-finals": 2, "Conference finals": 1, "MLS Cup final": 0 },
+        championOf: "mls", championLabel: "MLS Cup winner" }],
     belowNote: "There's no promotion or relegation between US leagues; these are the professional divisions from the top",
     names: { "Los Angeles Galaxy": "LA Galaxy", "San Diego": "San Diego FC", "Austin": "Austin FC", "Charlotte": "Charlotte FC",
       "Atlanta United FC": "Atlanta United", "Minnesota United FC": "Minnesota United", "DC United": "D.C. United",

@@ -272,6 +272,8 @@
       '<th scope="row" class="c-club">' + (clubHref(lg, r) ? '<a class="club-link" href="' + esc(clubHref(lg, r)) + '">' + esc(r.team) + "</a>" : esc(r.team)) +
         (r.ded ? '<span class="ded" title="' + r.ded + ' points deducted">−' + r.ded + "</span>" : "") +
         (r.out ? '<span class="out ' + r.out + '">' + OUT[r.out] + "</span>" : "") +
+        (r.title ? (r.title.href ? '<a class="out champ" href="' + esc(r.title.href) + '" title="Open the postseason bracket">🏆 ' + esc(r.title.label) + "</a>"
+          : '<span class="out champ">🏆 ' + esc(r.title.label) + "</span>") : "") +
         (r.q ? '<span class="qtag ' + r.q + '" title="' + esc(QTAG[r.q][1]) + '">' + QTAG[r.q][0] + "</span>" : "") +
         (r.live ? '<span class="lv ' + (r.live.gf > r.live.ga ? "lv-w" : r.live.gf < r.live.ga ? "lv-l" : "lv-d") + (r.live.on ? " on" : "") +
           '" title="' + esc((r.live.home ? r.team + " " + r.live.gf + "–" + r.live.ga + " " + r.live.opp : r.live.opp + " " + r.live.ga + "–" + r.live.gf + " " + r.team) + " (" + r.live.clock + ")") + '">' +

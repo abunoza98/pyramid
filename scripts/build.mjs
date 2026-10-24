@@ -364,19 +364,42 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     }
     return out;
   };
-  // Cups on a past season's pyramid: who won each that season, linking to that season's cup page when it has one
-  // (its ties have been saved by scripts/backfill-cups.mjs), otherwise shown without a link.
-  const pastCupCards = (c, year, rel) => ((COUNTRIES.find((x) => x.country === c.country) || {}).cups || []).map((cup) => {
-    const sum = ((cupHistory[c.country] || {})[cup.id] || []).find((x) => x.year === year);
-    if (!sum) return null;
+  // Where a saved cup/finals season lives. When there is no current edition yet, the latest completed
+  // one is deliberately served at the competition root; older editions have their own season folder.
+  const pastCupHref = (c, cup, year, rel) => {
     const fx = fixtures[`${c.country}/${cup.id}`];
     const past = (cupPast[`${c.country}/${cup.id}`] || []).filter((p) => !fx || p.season !== fx.season);
     const own = (fx ? past : past.slice(1)).some((p) => p.year === year);
-    const href = own ? `${rel}${cup.id}/${slug(year, c.country)}/${suffix}` : !fx && past[0] && past[0].year === year ? `${rel}${cup.id}/${suffix}` : null;
+    return own ? `${rel}${cup.id}/${slug(year, c.country)}/${suffix}` : !fx && past[0] && past[0].year === year ? `${rel}${cup.id}/${suffix}` : null;
+  };
+  // Cups on a past season's pyramid: who won each that season, linking to the bracket/ties when saved.
+  const pastCupCards = (c, year, rel) => ((COUNTRIES.find((x) => x.country === c.country) || {}).cups || []).map((cup) => {
+    const sum = ((cupHistory[c.country] || {})[cup.id] || []).find((x) => x.year === year);
+    if (!sum) return null;
+    const href = pastCupHref(c, cup, year, rel);
     const w = sum.winner, fin = w && sum.clubs && sum.clubs[w.id];
     const status = w ? `Won by ${w.n}` + (fin && fin[3] ? ` (beat ${fin[3]}${fin[4] ? " " + fin[4] : ""} in the final)` : "") : "";
     return { id: cup.id, name: cup.name, status, span: "", href };
   }).filter(Boolean);
+  // Some leagues crown their champion through a postseason rather than the regular-season table (A-League, MLS).
+  // Mark that postseason winner on the historical league table and link the badge to that season's bracket.
+  const markPostseasonChampions = (c, season, rel) => {
+    const cfg = COUNTRIES.find((x) => x.country === c.country);
+    if (!cfg) return season;
+    for (const cup of (cfg.cups || []).filter((x) => x.championOf)) {
+      const sum = ((cupHistory[c.country] || {})[cup.id] || []).find((x) => x.year === season.year);
+      const winner = sum && sum.winner;
+      const lg = season.leagues.find((x) => x.id === cup.championOf);
+      if (!winner || !lg) continue;
+      const rows = FP.groupsOf(lg).flatMap((g) => g.rows);
+      const clean = (n) => FP.slug(n).replace(/-fc$/, "");
+      const row = rows.find((r) => winner.id && r.tid && Number(r.tid) === Number(winner.id)) ||
+        rows.find((r) => FP.slug(r.team) === FP.slug(winner.n)) || rows.find((r) => clean(r.team) === clean(winner.n));
+      if (!row) continue;
+      row.title = { label: cup.championLabel || `${cup.name} winner`, href: pastCupHref(c, cup, season.year, rel) };
+    }
+    return season;
+  };
   // Cards for a country's cups (status from the fixtures), with links relative to the country page.
   const cupCards = (c, rel) => ((COUNTRIES.find((x) => x.country === c.country) || {}).cups || [])
     .filter((cup) => fixtures[`${c.country}/${cup.id}`] || cupPast[`${c.country}/${cup.id}`])
@@ -518,6 +541,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     for (const h of history[c.country]) {
       const next = h.year + 1 === liveYear ? c : history[c.country].find((x) => x.year === h.year + 1);
       labelCupPlaces(markOutcomes(applyPlayoffRules(h), next));
+      markPostseasonChampions(c, h, "../");
       const n = tierNames(h);
       const seasons = seasonList(c, history[c.country], "../", suffix, h.year);
       await write(`${c.country}/${slug(h.year, c.country)}/index.html`, shell({
