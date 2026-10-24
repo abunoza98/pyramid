@@ -144,6 +144,19 @@
     },
     {
      "pos": 10,
+     "team": "Atlético San Luis",
+     "p": 14,
+     "w": 5,
+     "d": 4,
+     "l": 5,
+     "gf": 19,
+     "ga": 22,
+     "pts": 19,
+     "tid": 2314,
+     "form": "WLDWW"
+    },
+    {
+     "pos": 11,
      "team": "Tijuana",
      "p": 12,
      "w": 4,
@@ -156,7 +169,7 @@
      "form": "DLDDD"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Pumas UNAM",
      "p": 13,
      "w": 4,
@@ -167,19 +180,6 @@
      "pts": 16,
      "tid": 2286,
      "form": "DLDWL"
-    },
-    {
-     "pos": 12,
-     "team": "Atlético San Luis",
-     "p": 13,
-     "w": 4,
-     "d": 4,
-     "l": 5,
-     "gf": 18,
-     "ga": 22,
-     "pts": 16,
-     "tid": 2314,
-     "form": "WWLDW"
     },
     {
      "pos": 13,
@@ -210,15 +210,15 @@
     {
      "pos": 15,
      "team": "Atlante",
-     "p": 13,
+     "p": 14,
      "w": 3,
      "d": 5,
-     "l": 5,
+     "l": 6,
      "gf": 14,
-     "ga": 19,
+     "ga": 20,
      "pts": 14,
      "tid": 2312,
-     "form": "DWLLW"
+     "form": "WLLWL"
     },
     {
      "pos": 16,
