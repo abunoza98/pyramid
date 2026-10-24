@@ -1,5 +1,5 @@
-// Add European competition history to club pages using saved UEFA fixture history/current fixture JSON.
-// No football-data API calls are made here.
+// Put qualified UEFA runs into the same chart area as domestic cup runs on club pages.
+// Uses only saved UEFA fixture history/current fixture JSON; no football-data API calls.
 import { readFile, writeFile, readdir } from "node:fs/promises";
 import { createRequire } from "node:module";
 
@@ -13,31 +13,41 @@ const COMPS = [
   { id: "conference-league", name: "Conference League", short: "UECL", cls: "uecl" }
 ];
 const DONE = new Set(["FT", "AET", "PEN", "AWD", "WO"]);
+const MAIN_STAGES = new Set(["lp", "ko"]);
 const clean = (name) => FP.slug(name).replace(/-fc$/, "");
 const sameTeam = (team, club, tid) => !!team && ((tid && team.id && Number(team.id) === Number(tid)) || clean(team.n) === clean(club));
 const hasClub = (f, club, tid) => sameTeam(f.h, club, tid) || sameTeam(f.a, club, tid);
+const compRank = (comp) => COMPS.findIndex((c) => c.id === comp.id);
 
 function seasonPath(season) {
   return String(season || "").replace(/–/g, "-").replace(/\s+/g, "");
 }
 
-function friendlyRound(round) {
-  const s = String(round?.label || round?.key || "").trim();
-  const stage = round?.fixtures?.[0]?.stage;
+function friendlyRound(entry, year) {
+  const round = entry?.round || {};
+  const s = String(round.label || round.key || "").trim();
+  const stage = entry?.mine?.map((f) => f.stage).find((x) => MAIN_STAGES.has(x)) ||
+    (round.fixtures || []).map((f) => f.stage).find((x) => MAIN_STAGES.has(x));
+
+  // UEFA's saved fixtures call the pre-2024 group rounds "Matchday N" too, so the season tells us
+  // whether an lp fixture is the old group stage or the new league phase.
+  if (stage === "lp") return Number(year) >= 2024 ? "League phase" : "Group stage";
   if (!s) return "European campaign";
-  if (stage === "lp") return /group/i.test(s) ? "Group stage" : "League phase";
   if (/league (phase|stage)|regular season/i.test(s)) return "League phase";
-  if (/group stage|group [a-z0-9]+$/i.test(s)) return "Group stage";
-  if (/knockout.*play/i.test(s)) return "Knockout play-offs";
-  if (/round of 16|1\/8/i.test(s)) return "Round of 16";
+  if (/^group\b|group stage/i.test(s)) return "Group stage";
+  if (/knockout.*play|play-?off round/i.test(s)) return "Knockout play-offs";
+  if (/round of 16/i.test(s) || /^(?:8th|1\/8)\s+finals?$/i.test(s)) return "Round of 16";
+  if (/round of 32/i.test(s) || /^(?:16th|1\/16)\s+finals?$/i.test(s)) return "Round of 32";
+  if (/round of 64/i.test(s) || /^(?:32nd|1\/32)\s+finals?$/i.test(s)) return "Round of 64";
   if (/quarter/i.test(s)) return "Quarter-finals";
   if (/semi/i.test(s)) return "Semi-finals";
-  if (/final/i.test(s) && !/qual/i.test(s)) return "Final";
+  if (/^finals?$/i.test(s)) return "Final";
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
 function wonFinal(round, club, tid) {
-  if (!round || !/final/i.test(String(round.label || round.key || "")) || /qual/i.test(String(round.label || round.key || ""))) return false;
+  const s = String(round?.label || round?.key || "").trim();
+  if (!/^finals?$/i.test(s)) return false;
   for (const tie of FP.tiesOf({ fixtures: round.fixtures || [] })) {
     const mine = tie.teams.findIndex((t) => sameTeam(t, club, tid));
     if (mine > -1 && tie.done && tie.winner === mine) return true;
@@ -52,15 +62,20 @@ function runFromFixtures(fx, club, tid, current) {
     const mine = (round.fixtures || []).filter((f) => hasClub(f, club, tid));
     if (mine.length) rounds.push({ round, mine });
   }
-  if (!rounds.length) return null;
 
-  const last = rounds[rounds.length - 1];
+  // A qualifying-round appearance is not treated as a European run unless the club actually reaches
+  // the main competition (group/league phase or knockout stage).
+  const main = rounds.filter((x) => x.mine.some((f) => MAIN_STAGES.has(f.stage)));
+  if (!main.length) return null;
+
+  const last = main[main.length - 1];
+  const year = Number(fx.year ?? String(fx.season || "").slice(0, 4));
   const won = wonFinal(last.round, club, tid);
   const upcoming = current && last.mine.some((f) => !DONE.has(f.st) && !["CANC", "PST", "ABD"].includes(f.st));
   return {
-    year: Number(fx.year ?? String(fx.season || "").slice(0, 4)),
+    year,
     season: fx.season || String(fx.year || ""),
-    stage: won ? "Winners" : friendlyRound(last.round),
+    stage: won ? "Winners" : friendlyRound(last, year),
     won,
     current: !!current && !won && upcoming
   };
@@ -78,36 +93,154 @@ async function competitionSeasons(comp) {
   return out;
 }
 
-const EURO_STYLE = `<style data-europe-runs-style>
-.cl-euro-runs .cup-note{margin-bottom:12px}.er-legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin:0 0 14px;font-size:12px;color:var(--muted)}.er-legend span{display:inline-flex;align-items:center;gap:6px}.er-list{list-style:none;margin:0;padding:0;display:grid;gap:4px}.er-row{display:grid;grid-template-columns:70px 16px minmax(0,1fr);align-items:center;gap:10px;padding:8px 2px;border-bottom:1px solid var(--rule)}.er-season{font:500 12px/1.3 var(--mono);color:var(--muted)}.er-dot{display:inline-block;width:11px;height:11px;border-radius:50%;box-shadow:0 0 0 1px rgba(18,27,42,.18)}.er-dot.er-ucl{background:#5267D9}.er-dot.er-uel{background:#E67E22}.er-dot.er-uecl{background:#24A66A}.er-dot.won{box-shadow:0 0 0 2px #E8B931,0 0 0 4px rgba(232,185,49,.24)}.er-run{min-width:0;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}.er-run a{color:var(--ink);text-decoration:none}.er-run a:hover{color:var(--accent);text-decoration:underline}.er-run span{font-size:13px;color:var(--muted)}@media(max-width:520px){.er-row{grid-template-columns:62px 14px minmax(0,1fr);gap:7px}.er-run{display:grid;gap:1px}}
-</style>`;
+const EURO_LEVELS = [
+  { key: "Winners", label: "Won" },
+  { key: "Final", label: "Final" },
+  { key: "Semi-finals", label: "Semis" },
+  { key: "Quarter-finals", label: "Quarters" },
+  { key: "Round of 16", label: "Last 16" },
+  { key: "Round of 32", label: "Last 32 / KO" },
+  { key: "Round of 64", label: "Last 64" },
+  { key: "Group stage", label: "Group / league" }
+];
+const LEVEL_H = 100 / EURO_LEVELS.length;
 
-function europeanRunsHTML(runs) {
-  if (!runs.length) return "";
-  const legend = COMPS.map((c) => `<span><i class="er-dot er-${c.cls}" aria-hidden="true"></i>${esc(c.name)}</span>`).join("") +
-    '<span><i class="er-dot er-ucl won" aria-hidden="true"></i>Competition winner</span>';
-  const rows = runs.map((r) => {
-    const href = r.current ? `../../../europe/${r.comp.id}/` : `../../../europe/${r.comp.id}/${seasonPath(r.season)}/`;
-    return '<li class="er-row"><span class="er-season">' + esc(r.season) + '</span>' +
-      '<i class="er-dot er-' + r.comp.cls + (r.won ? " won" : "") + '" aria-hidden="true"></i>' +
-      '<span class="er-run"><a href="' + esc(href) + '"><strong>' + esc(r.comp.name) + '</strong></a>' +
-      '<span>' + esc(r.stage) + (r.current ? " · current" : "") + "</span></span></li>";
-  }).join("");
-  return '<section class="cl-sec cl-euro-runs" id="europe-runs"><div class="cl-sec-h"><h2>European runs</h2></div>' +
-    '<p class="cup-note">Furthest stage reached in each UEFA competition covered by Football Pyramids.</p>' +
-    '<div class="er-legend" aria-label="European competition key">' + legend + '</div><ul class="er-list">' + rows + "</ul></section>";
+function stageLevel(stage) {
+  if (stage === "Winners") return 0;
+  if (stage === "Final") return 1;
+  if (stage === "Semi-finals") return 2;
+  if (stage === "Quarter-finals") return 3;
+  if (stage === "Round of 16") return 4;
+  if (stage === "Round of 32" || stage === "Knockout play-offs") return 5;
+  if (stage === "Round of 64") return 6;
+  return 7; // Group stage / league phase
 }
 
-function insertEuropeanRuns(html, section) {
-  html = html.replace(/<style data-europe-runs-style>[\s\S]*?<\/style>/, "");
-  html = html.replace(/<section class="cl-sec cl-euro-runs"[\s\S]*?<\/section>/, "");
-  if (!section) return html;
-  const achievements = html.match(/<section class="cl-sec cl-achievements"[\s\S]*?<\/section>/);
-  if (achievements) return html.replace(achievements[0], achievements[0] + EURO_STYLE + section);
-  const journey = html.match(/<section class="cl-sec" id="journey">[\s\S]*?<\/section>/);
-  if (journey) return html.replace(journey[0], journey[0] + EURO_STYLE + section);
+function seasonShort(year) {
+  return String(year).slice(-2) + "–" + String(year + 1).slice(-2);
+}
+
+const EURO_STYLE = `<style data-europe-runs-style>
+.cl-runs-sec .run-tabs{margin:0 0 14px}.cl-runs-sec .tf-panel{margin-top:0}.er-legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin:0 0 12px;font-size:12px;color:var(--muted)}.er-legend span{display:inline-flex;align-items:center;gap:6px}.er-key{display:inline-block;width:10px;height:10px;border-radius:50%;border:2px solid transparent}.er-key.er-ucl,.er-dot.er-ucl{background:#5267D9;border-color:#3549B5}.er-key.er-uel,.er-dot.er-uel{background:#E67E22;border-color:#B85E0E}.er-key.er-uecl,.er-dot.er-uecl{background:#24A66A;border-color:#147747}.er-key.won,.er-dot.won{box-shadow:0 0 0 2px #E8B931,0 0 0 4px rgba(232,185,49,.24)}.er-dot{display:block;text-decoration:none}.er-line line{stroke:var(--rule-strong);stroke-width:2;opacity:.8}.er-note{margin:-3px 0 12px;font-size:12px;color:var(--muted)}
+</style>`;
+
+function europeanChartHTML(runs) {
+  if (!runs.length) return "";
+  const points = runs.slice().sort((a, b) => a.year - b.year || compRank(a.comp) - compRank(b.comp));
+  const minYear = points[0].year, maxYear = points[points.length - 1].year;
+  const years = Array.from({ length: maxYear - minYear + 1 }, (_, i) => minYear + i);
+  const perYear = new Map();
+  for (const p of points) {
+    if (!perYear.has(p.year)) perYear.set(p.year, []);
+    perYear.get(p.year).push(p);
+  }
+
+  const plotted = [];
+  for (const year of years) {
+    const same = (perYear.get(year) || []).sort((a, b) => compRank(a.comp) - compRank(b.comp));
+    const base = years.length === 1 ? 50 : ((year - minYear + 0.5) / years.length) * 100;
+    const offsetStep = Math.min(1.15, 18 / years.length);
+    same.forEach((r, i) => plotted.push({
+      ...r,
+      x: base + (i - (same.length - 1) / 2) * offsetStep,
+      y: (stageLevel(r.stage) + 0.5) * LEVEL_H
+    }));
+  }
+
+  const bands = EURO_LEVELS.map((l, i) =>
+    '<rect class="lb' + (i % 2 ? " alt" : "") + '" x="0" width="1000" y="' + (i * LEVEL_H).toFixed(2) +
+    '" height="' + LEVEL_H.toFixed(2) + '"/>').join("");
+  const lines = plotted.slice(1).map((p, i) => {
+    const prev = plotted[i];
+    if (p.year - prev.year > 1) return "";
+    return '<line x1="' + (prev.x * 10).toFixed(1) + '" y1="' + prev.y.toFixed(2) + '" x2="' +
+      (p.x * 10).toFixed(1) + '" y2="' + p.y.toFixed(2) + '"/>';
+  }).join("");
+  const side = EURO_LEVELS.map((l, i) =>
+    '<span class="ls cr-l" style="top:' + (i * LEVEL_H).toFixed(2) + '%;height:' + LEVEL_H.toFixed(2) +
+    '%" title="' + esc(l.key) + '"><b>' + esc(l.label) + '</b></span>').join("");
+
+  const dots = plotted.map((r) => {
+    const href = r.current ? `../../../europe/${r.comp.id}/` : `../../../europe/${r.comp.id}/${seasonPath(r.season)}/`;
+    const sideClass = r.x < 13 ? " l" : r.x > 87 ? " r" : "";
+    const below = r.y < 24 ? " below" : "";
+    const status = r.won ? "Won" : r.current ? "Currently at" : "Reached";
+    const aria = `${r.season}: ${r.comp.name}, ${r.stage}`;
+    return '<a class="ld cr-dot er-dot er-' + r.comp.cls + (r.won ? " won" : "") +
+      '" style="left:' + r.x.toFixed(2) + '%;top:' + r.y.toFixed(2) + '%" href="' + esc(href) + '" aria-label="' +
+      esc(aria) + '"><span class="ltip' + sideClass + below + '"><b>' + esc(r.season) + ' · ' +
+      esc(r.comp.name) + '</b>' + esc(status + " " + r.stage.toLowerCase()) + '</span></a>';
+  }).join("");
+
+  const axis = years.map((year) => {
+    const x = years.length === 1 ? 50 : ((year - minYear + 0.5) / years.length) * 100;
+    return '<span style="left:' + x.toFixed(2) + '%">' + seasonShort(year) + '</span>';
+  }).join("");
+  const legend = COMPS.map((c) => '<span><i class="er-key er-' + c.cls + '" aria-hidden="true"></i>' +
+    esc(c.name) + '</span>').join("") +
+    '<span><i class="er-key er-ucl won" aria-hidden="true"></i>Winner</span>';
+
+  return '<div class="cr er-chart"><div class="cr-h"><div><h3>Europe</h3><p>Only seasons where the club reached the main UEFA competition are shown.</p></div></div>' +
+    '<div class="er-legend" aria-label="European competition key">' + legend + '</div>' +
+    '<p class="er-note">No dot means the club did not qualify for the group/league or knockout stage that season.</p>' +
+    '<div class="lchart cr-chart"><div class="lside">' + side + '</div><div class="lplot" style="height:' +
+    (EURO_LEVELS.length * 24) + 'px"><svg viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true">' +
+    bands + '<g class="er-line">' + lines + '</g></svg>' + dots + '</div><div class="lx">' + axis + '</div></div></div>';
+}
+
+function cleanOldEurope(html) {
+  html = html.replace(/<style data-europe-runs-style>[\s\S]*?<\/style>/g, "");
+  html = html.replace(/<section class="cl-sec cl-euro-runs"[\s\S]*?<\/section>/g, "");
+  return html;
+}
+
+function runsSection(cupBody, europeBody) {
+  const hasCups = !!cupBody;
+  const tabs = (hasCups
+    ? '<button type="button" role="tab" class="tf-tab on" data-tab="cups" aria-selected="true">Cups</button>'
+    : "") +
+    '<button type="button" role="tab" class="tf-tab' + (hasCups ? "" : " on") +
+    '" data-tab="europe" aria-selected="' + (hasCups ? "false" : "true") + '">Europe</button>';
+  const panels = (hasCups
+    ? '<div class="tf-panel on" data-panel="cups" role="tabpanel">' + cupBody + '</div>'
+    : "") +
+    '<div class="tf-panel' + (hasCups ? "" : " on") + '" data-panel="europe" role="tabpanel">' + europeBody + '</div>';
+  return EURO_STYLE + '<section class="cl-sec cl-runs-sec" data-tabs="club-runs"><div class="cl-sec-h"><h2>Runs</h2></div>' +
+    '<div class="tf-tabs cl-tabs run-tabs" role="tablist" aria-label="Run history">' + tabs + '</div>' + panels + '</section>';
+}
+
+function insertEuropeanRuns(html, runs) {
+  html = cleanOldEurope(html);
+
+  // Idempotence if this post-processor is run twice without a full site rebuild.
+  const existing = html.match(/<section class="cl-sec cl-runs-sec" data-tabs="club-runs">[\s\S]*?<\/section>/);
+  let cupBody = "";
+  if (existing) {
+    const cups = existing[0].match(/<div class="tf-panel on" data-panel="cups" role="tabpanel">([\s\S]*?)<\/div>\s*<div class="tf-panel/);
+    if (cups) cupBody = cups[1];
+    html = html.replace(existing[0], "");
+  } else {
+    const cup = html.match(/<section class="cl-sec"><div class="cl-sec-h"><h2>Cup runs<\/h2><\/div>([\s\S]*?)<\/section>/);
+    if (cup) {
+      cupBody = cup[1];
+      html = html.replace(cup[0], "");
+    }
+  }
+
+  if (!runs.length) {
+    if (cupBody) {
+      const cupSection = '<section class="cl-sec"><div class="cl-sec-h"><h2>Cup runs</h2></div>' + cupBody + '</section>';
+      const comps = html.match(/<section class="cl-sec cl-comps-sec"[\s\S]*?<\/section>/);
+      return comps ? html.replace(comps[0], comps[0] + cupSection) : html + cupSection;
+    }
+    return html;
+  }
+
+  const section = runsSection(cupBody, europeanChartHTML(runs));
+  const comps = html.match(/<section class="cl-sec cl-comps-sec"[\s\S]*?<\/section>/);
+  if (comps) return html.replace(comps[0], comps[0] + section);
   const fixtures = '<div class="cl-cols">';
-  return html.includes(fixtures) ? html.replace(fixtures, EURO_STYLE + section + fixtures) : html;
+  return html.includes(fixtures) ? html.replace(fixtures, section + fixtures) : html + section;
 }
 
 // Build one UEFA-history index up front, rather than re-scanning every European fixture for every domestic club page.
@@ -128,7 +261,7 @@ for (const comp of COMPS) {
   }
 }
 for (const runs of europeByClub.values()) {
-  runs.sort((a, b) => b.year - a.year || COMPS.findIndex((c) => c.id === a.comp.id) - COMPS.findIndex((c) => c.id === b.comp.id));
+  runs.sort((a, b) => b.year - a.year || compRank(a.comp) - compRank(b.comp));
 }
 
 let search = [];
@@ -147,7 +280,7 @@ for (const club of clubs.values()) {
   let html;
   try { html = await readFile(file, "utf8"); } catch { continue; }
   const original = html;
-  html = insertEuropeanRuns(html, europeanRunsHTML(runs));
+  html = insertEuropeanRuns(html, runs);
   if (html !== original) { await writeFile(file, html); changed++; }
 }
 
