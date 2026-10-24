@@ -33,6 +33,11 @@ if [ -f scripts/add-club-profile.mjs ]; then
   node scripts/add-club-profile.mjs
 fi
 
+# Add saved Champions League / Europa League / Conference League runs to club pages. No extra API calls.
+if [ -f scripts/add-club-europe.mjs ]; then
+  node scripts/add-club-europe.mjs
+fi
+
 if [ -z "$(git status --porcelain)" ]; then
   echo "No changes."
   exit 0
