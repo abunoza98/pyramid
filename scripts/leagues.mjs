@@ -391,7 +391,18 @@ export const COUNTRIES = [
         "1/8-finals": "Elimination finals", "Semi-finals": "Semi-finals", "Final": "Grand Final", "Grand Final": "Grand Final" },
       dist: { "Elimination finals": 2, "Semi-finals": 1, "Grand Final": 0 },
       championOf: "a-league", championLabel: "Grand Final winner" },
-      { apiId: 874, id: "australia-cup", name: "Australia Cup", short: "AUSC", calendar: true }],
+      { apiId: 874, id: "australia-cup", name: "Australia Cup", short: "AUSC", calendar: true },
+      // Each state NPL's finals series, which ends in its grand final (the regular-season winner is the premier; the
+      // grand final winner is the champion). The finals come in the state league's own fixtures (as for the
+      // A-League), so only the finals rounds are kept, and only games between two of that state's NPL clubs
+      // (bothTier): the same rounds also hold promotion/relegation play-offs against second-division clubs.
+      ...[["nsw", "NSW", 192], ["victoria", "Victoria", 195], ["queensland", "Queensland", 482], ["wa", "Western Australia", 196],
+          ["sa", "South Australia", 194], ["nnsw", "Northern NSW", 481], ["act", "Capital Territory", 189], ["tasmania", "Tasmania", 648]]
+        .map(([id, state, apiId]) => ({ apiId, id: `npl-${id}-finals`, name: `NPL ${state} Finals`, short: `NPL ${id.toUpperCase()}`, calendar: true,
+          only: "final", strip: "^(finals?( series)?|play-?offs?)\\s*-\\s*", bothTier: 2,
+          rounds: { "Final": "Grand Final", "Grand final": "Grand Final" },
+          dist: { "Grand Final": 0, "Semi-finals": 1, "Preliminary Final": 1, "Quarter-finals": 2 },
+          championOf: "npl", championGroup: state, championName: `NPL ${state} Grand Final`, championLabel: "Grand Final winner" }))],
     // Australia spans several time zones, so local kick-off times go by the home club (A-League) or the state
     // (NPL and state leagues). Anything not listed is on Sydney time.
     tz: { home: "Australia/Sydney",

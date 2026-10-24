@@ -2436,6 +2436,14 @@
   <url><loc>https://footballpyramids.com/turkey/turkish-cup/</loc><lastmod>2026-10-22</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/australia/a-league-finals/</loc><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/australia/australia-cup/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-nsw-finals/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-victoria-finals/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-queensland-finals/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-wa-finals/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-sa-finals/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-nnsw-finals/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-act-finals/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-tasmania-finals/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/us-open-cup/</loc><lastmod>2026-10-23</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/mls-cup-playoffs/</loc><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/races/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq></url>
@@ -2518,7 +2526,7 @@
   <url><loc>https://footballpyramids.com/australia/state-2/fixtures/</loc><lastmod>2026-10-23</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/indonesia/indonesian-super-league/fixtures/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/mls/fixtures/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/usa/usl-championship/fixtures/</loc><lastmod>2026-10-23</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/usa/usl-championship/fixtures/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/usl-league-one/fixtures/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/mexico/liga-mx/fixtures/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/mexico/liga-de-expansion/fixtures/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq></url>
@@ -3015,6 +3023,41 @@
   <url><loc>https://footballpyramids.com/australia/australia-cup/2023-24/</loc><changefreq>yearly</changefreq></url>
   <url><loc>https://footballpyramids.com/australia/australia-cup/2022-23/</loc><changefreq>yearly</changefreq></url>
   <url><loc>https://footballpyramids.com/australia/australia-cup/2021-22/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-nsw-finals/2024-25/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-nsw-finals/2022-23/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-nsw-finals/2020-21/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-victoria-finals/2024-25/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-victoria-finals/2023-24/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-victoria-finals/2022-23/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-queensland-finals/2024-25/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-queensland-finals/2023-24/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-queensland-finals/2022-23/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-queensland-finals/2021-22/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-queensland-finals/2020-21/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-wa-finals/2024-25/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-wa-finals/2023-24/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-wa-finals/2022-23/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-wa-finals/2021-22/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-wa-finals/2020-21/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-wa-finals/2019-20/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-sa-finals/2024-25/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-sa-finals/2023-24/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-sa-finals/2022-23/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-sa-finals/2021-22/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-sa-finals/2020-21/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-sa-finals/2019-20/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-nnsw-finals/2024-25/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-nnsw-finals/2023-24/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-nnsw-finals/2022-23/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-nnsw-finals/2020-21/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-act-finals/2024-25/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-act-finals/2023-24/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-act-finals/2022-23/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-act-finals/2020-21/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-act-finals/2019-20/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-act-finals/2018-19/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-act-finals/2017-18/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/australia/npl-act-finals/2016-17/</loc><changefreq>yearly</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/us-open-cup/2025/</loc><changefreq>yearly</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/us-open-cup/2024/</loc><changefreq>yearly</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/us-open-cup/2023/</loc><changefreq>yearly</changefreq></url>

@@ -113,6 +113,10 @@ async function main() {
               const t = tags.get(side.id);
               if (t) { side.t = t.s; side.tier = t.tier; }
             }
+            // Only games between two clubs of the given tier (a state NPL's finals, without the play-offs against
+            // second-division clubs that share their rounds).
+            if (cfg.bothTier) list = list.filter(({ f }) => f.h.tier === cfg.bothTier && f.a.tier === cfg.bothTier);
+            if (cfg.only && !list.length) { groups.length = 0; break; }
           }
           if (!list.length) throw new Error(`no fixtures for league ${part.apiId}`);
           // Where a country spans time zones, each game carries its own (z) for local kick-off times.
