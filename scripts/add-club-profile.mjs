@@ -11,6 +11,22 @@ const require = createRequire(import.meta.url);
 const FP = require("../assets/render.js");
 const esc = FP.esc;
 
+// All-time honours lists, where we have them: data/cup-titles.json (cups, already used by the Runs chart) and
+// data/honours.json (any competition, leagues included). Both are keyed "country/competition-id", each with
+// `through` (the last season the list covers, by starting year) and `titles: [{ n, tid?, v, years? }]`. A club's
+// total is the list's count up to `through` plus wins in our own records after it; without a list, it's our records
+// alone and the line says so. Adding a competition to honours.json later needs no code change.
+let HONOURS = {};
+for (const f of ["data/cup-titles.json", "data/honours.json"]) {
+  try { const d = JSON.parse(await readFile(f, "utf8")); for (const [k, v] of Object.entries(d)) if (!k.startsWith("_")) HONOURS[k] = v; } catch {}
+}
+const honourOf = (key, clubName, tid) => {
+  const h = HONOURS[key];
+  if (!h) return null;
+  const e = (h.titles || []).find((x) => (tid && x.tid ? Number(x.tid) === Number(tid) : clean(x.n) === clean(clubName)));
+  return { through: h.through, v: e ? e.v || 0 : 0, years: e && e.years ? e.years : null };
+};
+
 const groupsOf = (lg) => lg.groups?.length ? lg.groups : [{ name: "", rows: lg.rows || [] }];
 const clean = (name) => FP.slug(name).replace(/-fc$/, "");
 const yearOf = (season) => Number(String(season || "").slice(0, 4));
@@ -89,7 +105,7 @@ async function cupWinsFor(cfg, clubName, tid) {
       const same = (tid && winner.id && Number(winner.id) === Number(tid)) || clean(winner.n) === clean(clubName);
       if (!same) continue;
       wins.push({ year: sum.year ?? Number(file.slice(0, 4)), season: sum.season || String(file.slice(0, 4)),
-        kind: "cup", text: championText(cfg, cup) });
+        kind: "cup", key: `${cfg.country}/${cup.id}`, text: championText(cfg, cup).replace(/ winner$/, "") });
     }
 
     // Current-season cup wins are already present in the regular fixture cache once the final is complete.
@@ -99,36 +115,58 @@ async function cupWinsFor(cfg, clubName, tid) {
       const sum = summarise(fx.groups[0].rounds, cup.dist || {});
       const winner = sum.winner;
       const same = winner && ((tid && winner.id && Number(winner.id) === Number(tid)) || clean(winner.n) === clean(clubName));
-      if (same) wins.push({ year: yearOf(fx.season), season: fx.season, kind: "cup", text: championText(cfg, cup) });
+      if (same) wins.push({ year: yearOf(fx.season), season: fx.season, kind: "cup", key: `${cfg.country}/${cup.id}`, text: championText(cfg, cup).replace(/ winner$/, "") });
     }
   }
   return wins;
 }
 
-function achievementHTML(items) {
-  if (!items.length) return "";
-  const unique = [], seen = new Set();
-  for (const x of items.sort((a, b) => b.year - a.year || ({ cup: 0, league: 1, promotion: 2 }[a.kind] ?? 9) - ({ cup: 0, league: 1, promotion: 2 }[b.kind] ?? 9))) {
-    const key = `${x.season}|${x.text}`;
-    if (!seen.has(key)) { seen.add(key); unique.push(x); }
+// One line under the club's position: "Honours: 🏆 4 Premier League · 2 FA Cup · ▲ 2 promotions", which opens to
+// the seasons. Titles per competition come from the all-time list where there is one (plus our wins since), else
+// from our records; promotions always from our records. Labelled "Honours" only when every title count is all-time.
+// since: { competition key: first season on record } for counts that come from our records only.
+function honoursHTML(items, clubName, tid, since) {
+  const titles = new Map(), promos = [];
+  for (const x of items) {
+    if (x.kind === "promotion") { promos.push(x); continue; }
+    const k = x.key || x.text;
+    if (!titles.has(k)) titles.set(k, { key: k, text: x.text, ours: [] });
+    if (!titles.get(k).ours.some((y) => y.season === x.season)) titles.get(k).ours.push(x);
   }
-  const row = (x) => '<li><span class="ctag' + (x.kind === "cup" || x.kind === "league" ? ' ctag-cup' : '') + '">' +
-    (x.kind === "promotion" ? "▲" : "🏆") + '</span><strong>' + esc(x.text) + '</strong><span class="cl-time" style="margin-left:auto">' + esc(x.season) + "</span></li>";
-  const first = unique.slice(0, 8).map(row).join("");
-  const more = unique.length > 8 ? '<details class="cl-more ach-more"><summary>Show ' + (unique.length - 8) +
-    ' earlier achievement' + (unique.length - 8 === 1 ? "" : "s") + '</summary><ul class="cl-comps">' + unique.slice(8).map(row).join("") + "</ul></details>" : "";
-  return '<section class="cl-sec cl-achievements" id="achievements"><div class="cl-sec-h"><h2>Achievements in our records</h2></div>' +
-    '<p class="cup-note">Only league seasons and cup competitions currently covered by Football Pyramids are counted.</p>' +
-    '<ul class="cl-comps">' + first + "</ul>" + more + "</section>";
+  // Competitions where the club has all-time titles but none in our records.
+  for (const [k, h] of Object.entries(HONOURS)) {
+    if (titles.has(k) || !k.startsWith(items.country + "/")) continue;
+    const e = honourOf(k, clubName, tid);
+    if (e && e.v) titles.set(k, { key: k, text: items.names[k] || k.split("/")[1], ours: [] });
+  }
+  const list = [...titles.values()].map((t) => {
+    const h = honourOf(t.key, clubName, tid);
+    if (!h) return { ...t, n: t.ours.length, years: t.ours.map((y) => y.season), since: since[t.key] || null };
+    const later = t.ours.filter((y) => y.year > h.through);
+    const years = (h.years || []).map(String).concat(later.map((y) => y.season));
+    return { ...t, n: h.v + later.length, years: h.years ? years : later.map((y) => y.season), partial: !h.years && h.v > 0 };
+  }).filter((t) => t.n > 0).sort((a, b) => b.n - a.n || a.text.localeCompare(b.text));
+  if (!list.length && !promos.length) return "";
+  // A count from our records only says where it starts: "8 Premier League (since 2010–11)". All-time counts don't.
+  const parts = list.map((t) => `${t.n} ${esc(t.text)}${t.since ? ` <small>(since ${esc(t.since)})</small>` : ""}`);
+  const head = (list.length ? "🏆 " + parts.join(" · ") : "") + (list.length && promos.length ? " · " : "") +
+    (promos.length ? `▲ ${promos.length} promotion${promos.length === 1 ? "" : "s"}` : "");
+  const label = "Honours";
+  const note = list.some((t) => t.since) || promos.length
+    ? '<p class="hn-note">Cup totals are all-time where we hold the full list. Counts marked "since" and promotions come from the seasons on this site.</p>' : "";
+  const detail = list.map((t) => `<li><b>${esc(t.text)}</b> <span>${t.n}</span>${t.years.length ? `<i>${esc(t.years.slice().sort().reverse().join(", "))}${t.partial ? " and earlier" : ""}</i>` : ""}</li>`).join("") +
+    (promos.length ? `<li><b>Promotions</b> <span>${promos.length}</span><i>${promos.sort((a, b) => b.year - a.year).map((p) => `${esc(p.season)} ${esc(p.text)}`).join("; ")}</i></li>` : "");
+  return `<details class="cl-honours"><summary><strong>${label}:</strong> ${head}</summary><ul>${detail}</ul>${note}</details>`;
 }
 
-function insertAchievements(html, section) {
+function insertAchievements(html, line) {
   html = html.replace(/<section class="cl-sec cl-achievements"[\s\S]*?<\/section>/, "");
-  if (!section) return html;
-  const journey = html.match(/<section class="cl-sec" id="journey">[\s\S]*?<\/section>/);
-  if (journey) return html.replace(journey[0], journey[0] + section);
-  const fixtures = '<div class="cl-cols">';
-  return html.includes(fixtures) ? html.replace(fixtures, section + fixtures) : html;
+  html = html.replace(/<details class="cl-honours">[\s\S]*?<\/details>/, "");
+  if (!line) return html;
+  const ctx = html.match(/<p class="cl-context">[\s\S]*?<\/p>/);
+  if (ctx) return html.replace(ctx[0], ctx[0] + line);
+  const lede = html.match(/<p class="lede">[\s\S]*?<\/p>/);
+  return lede ? html.replace(lede[0], lede[0] + line) : html;
 }
 
 function insertStadium(html, stadium) {
@@ -159,6 +197,17 @@ for (const cfg of COUNTRIES) {
     clubs.set(key, { name: s.current ? rec.name : (prev.name || rec.name), tid: s.current && rec.tid ? rec.tid : (prev.tid || rec.tid || null) });
   }
 
+  // Current names of every competition, for honours the club has only in an all-time list.
+  const names = Object.fromEntries([...cfg.leagues.map((l) => [`${cfg.country}/${l.id}`, l.name.replace(/ Men$/, "")]),
+    ...(cfg.cups || []).map((c) => [`${cfg.country}/${c.id}`, championText(cfg, c).replace(/ winner$/, "")])]);
+  // First season on record per competition, for "since" on counts without an all-time list.
+  const sinceByKey = {};
+  for (const s of seasons) for (const rec of s.records.values()) { const k = `${cfg.country}/${rec.leagueId}`; if (!sinceByKey[k]) sinceByKey[k] = s.season; }
+  for (const cup of cfg.cups || []) {
+    let files = [];
+    try { files = (await readdir(`data/history/${cfg.country}/cups/${cup.id}`)).filter((f) => /^\d{4}\.json$/.test(f)).sort(); } catch {}
+    if (files.length) { try { sinceByKey[`${cfg.country}/${cup.id}`] = JSON.parse(await readFile(`data/history/${cfg.country}/cups/${cup.id}/${files[0]}`, "utf8")).season; } catch {} }
+  }
   const postseasonLeagues = new Set((cfg.cups || []).filter((c) => c.championOf).map((c) => c.championOf));
   const fixtureByLeague = new Map();
   for (const lg of current.leagues || []) {
@@ -172,13 +221,15 @@ for (const cfg of COUNTRIES) {
       const rec = s.records.get(key);
       if (!rec) continue;
       if (rec.titleEligible && rec.pos === 1 && !postseasonLeagues.has(rec.leagueId)) {
-        achievements.push({ year: s.year, season: s.season, kind: "league", text: `${rec.league} winner` });
+        // Grouped by league ID under its current name, so renamed leagues (A-League / A-League Men) count together.
+        const nowName = (cfg.leagues.find((l) => l.id === rec.leagueId) || {}).name || rec.league;
+        achievements.push({ year: s.year, season: s.season, kind: "league", key: `${cfg.country}/${rec.leagueId}`, text: nowName.replace(/ Men$/, "") });
       }
       const next = byYear.get(s.year + 1)?.records.get(key);
       if (next && next.tier < rec.tier) {
         const viaPlayoff = /play-?off/i.test(rec.zone?.label || "");
         achievements.push({ year: s.year, season: s.season, kind: "promotion",
-          text: viaPlayoff ? `Promoted via play-offs to ${next.league}` : `Promoted to ${next.league}` });
+          text: `to ${next.league}${viaPlayoff ? " via the play-offs" : ""}` });
       }
     }
     achievements.push(...await cupWinsFor(cfg, club.name, club.tid));
@@ -192,7 +243,8 @@ for (const cfg of COUNTRIES) {
     try { html = await readFile(file, "utf8"); } catch { continue; }
     const original = html;
     html = insertStadium(html, stadium);
-    html = insertAchievements(html, achievementHTML(achievements));
+    achievements.country = cfg.country; achievements.names = names;
+    html = insertAchievements(html, honoursHTML(achievements, club.name, club.tid, sinceByKey));
     if (html !== original) { await writeFile(file, html); changed++; }
   }
 }

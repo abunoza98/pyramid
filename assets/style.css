@@ -1119,3 +1119,16 @@ body[data-page="home"].hero-find-on .bar .finder { opacity: 0; visibility: hidde
 .mv-more > summary { cursor: pointer; padding: 10px 2px; font-size: 14px; font-weight: 600; color: var(--accent); }
 .mv-more[open] > summary { border-bottom: 1px solid var(--rule); }
 .mv-more .mv-list { border-top: 0; }
+/* Club page: one-line honours under the position, opening to the seasons */
+.cl-honours { margin: -6px 0 14px; font-size: 14px; }
+.cl-honours > summary { cursor: pointer; list-style: none; color: var(--ink); }
+.cl-honours > summary::-webkit-details-marker { display: none; }
+.cl-honours > summary::after { content: " ▾"; font-size: 11px; color: var(--muted); }
+.cl-honours[open] > summary::after { content: " ▴"; }
+.cl-honours > summary strong { font-weight: 600; color: var(--muted); }
+.cl-honours ul { list-style: none; margin: 8px 0 0; padding: 0; border-top: 1px solid var(--rule); }
+.cl-honours li { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 10px; padding: 6px 0; border-bottom: 1px solid var(--rule); }
+.cl-honours li span { font-weight: 700; font-variant-numeric: tabular-nums; }
+.cl-honours li i { grid-column: 1 / -1; font-style: normal; font-size: 12px; color: var(--muted); }
+.cl-honours .hn-note { margin: 6px 0 0; font-size: 12px; color: var(--muted); }
+.cl-honours > summary small { font-size: 12px; color: var(--muted); }
