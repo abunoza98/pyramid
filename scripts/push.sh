@@ -15,6 +15,12 @@ if [ -f data/search.json ] && [ -f scripts/add-cups-to-search.mjs ]; then
   node scripts/add-cups-to-search.mjs
 fi
 
+# Club pages are generated from the same saved standings. Add a concise current-season context line after each
+# build without making any extra football-data API calls.
+if [ -f scripts/add-club-stakes.mjs ]; then
+  node scripts/add-club-stakes.mjs
+fi
+
 if [ -z "$(git status --porcelain)" ]; then
   echo "No changes."
   exit 0
