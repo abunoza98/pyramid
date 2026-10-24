@@ -573,16 +573,16 @@
     },
     {
      "pos": 2,
-     "team": "Dragones de Oaxaca",
-     "p": 8,
-     "w": 5,
-     "d": 2,
-     "l": 1,
-     "gf": 19,
-     "ga": 8,
-     "pts": 19,
-     "tid": 26393,
-     "form": "WLWWD"
+     "team": "Acambaro",
+     "p": 9,
+     "w": 6,
+     "d": 1,
+     "l": 2,
+     "gf": 29,
+     "ga": 10,
+     "pts": 20,
+     "tid": 22051,
+     "form": "LLWWW"
     },
     {
      "pos": 3,
@@ -599,16 +599,16 @@
     },
     {
      "pos": 3,
-     "team": "Acambaro",
+     "team": "Dragones de Oaxaca",
      "p": 8,
      "w": 5,
-     "d": 1,
-     "l": 2,
-     "gf": 27,
-     "ga": 10,
-     "pts": 17,
-     "tid": 22051,
-     "form": "WLLWW"
+     "d": 2,
+     "l": 1,
+     "gf": 19,
+     "ga": 8,
+     "pts": 19,
+     "tid": 26393,
+     "form": "WLWWD"
     },
     {
      "pos": 4,
@@ -639,15 +639,15 @@
     {
      "pos": 5,
      "team": "Correcaminos UAT II",
-     "p": 8,
+     "p": 9,
      "w": 4,
      "d": 2,
-     "l": 2,
+     "l": 3,
      "gf": 12,
-     "ga": 9,
+     "ga": 11,
      "pts": 15,
      "tid": 17782,
-     "form": "LWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 5,
@@ -796,7 +796,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-23T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   }
  ]
 }

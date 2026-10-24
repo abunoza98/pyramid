@@ -59,6 +59,19 @@
       },
       {
        "pos": 3,
+       "team": "Lanús",
+       "p": 14,
+       "w": 7,
+       "d": 3,
+       "l": 4,
+       "gf": 17,
+       "ga": 10,
+       "pts": 24,
+       "tid": 446,
+       "form": "WDWWD"
+      },
+      {
+       "pos": 4,
        "team": "Defensa Y Justicia",
        "p": 13,
        "w": 7,
@@ -71,7 +84,7 @@
        "form": "WDWWL"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Vélez Sarsfield",
        "p": 13,
        "w": 6,
@@ -82,19 +95,6 @@
        "pts": 24,
        "tid": 438,
        "form": "DWDLW"
-      },
-      {
-       "pos": 5,
-       "team": "Lanús",
-       "p": 13,
-       "w": 7,
-       "d": 2,
-       "l": 4,
-       "gf": 16,
-       "ga": 9,
-       "pts": 23,
-       "tid": 446,
-       "form": "WWDWW"
       },
       {
        "pos": 6,
@@ -364,6 +364,19 @@
       },
       {
        "pos": 11,
+       "team": "Banfield",
+       "p": 14,
+       "w": 3,
+       "d": 5,
+       "l": 6,
+       "gf": 15,
+       "ga": 20,
+       "pts": 14,
+       "tid": 449,
+       "form": "DDWLD"
+      },
+      {
+       "pos": 12,
        "team": "Tigre",
        "p": 14,
        "w": 3,
@@ -374,19 +387,6 @@
        "pts": 13,
        "tid": 452,
        "form": "LLLDL"
-      },
-      {
-       "pos": 12,
-       "team": "Banfield",
-       "p": 13,
-       "w": 3,
-       "d": 4,
-       "l": 6,
-       "gf": 14,
-       "ga": 19,
-       "pts": 13,
-       "tid": 449,
-       "form": "DDDWL"
       },
       {
        "pos": 13,
@@ -464,7 +464,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-10-22T00:00:00.000Z",
+     "updated": "2026-10-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -704,7 +704,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-10-22T00:00:00.000Z",
+     "updated": "2026-10-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -943,7 +943,7 @@
      ]
     }
    ],
-   "updated": "2026-10-22T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   },
   {
    "id": "primera-b-metropolitana",
@@ -1263,7 +1263,7 @@
      "form": "LLLDD"
     }
    ],
-   "updated": "2026-10-20T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   },
   {
    "id": "primera-c",

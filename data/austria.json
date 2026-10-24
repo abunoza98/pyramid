@@ -29,15 +29,15 @@
     {
      "pos": 1,
      "team": "Rapid Wien",
-     "p": 9,
-     "w": 8,
+     "p": 10,
+     "w": 9,
      "d": 0,
      "l": 1,
-     "gf": 26,
-     "ga": 8,
-     "pts": 24,
+     "gf": 31,
+     "ga": 9,
+     "pts": 27,
      "tid": 781,
-     "form": "LWWWW"
+     "form": "WWWWW"
     },
     {
      "pos": 2,
@@ -146,15 +146,15 @@
     {
      "pos": 10,
      "team": "Austria Lustenau",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 2,
-     "l": 5,
-     "gf": 11,
-     "ga": 19,
+     "l": 6,
+     "gf": 12,
+     "ga": 24,
      "pts": 8,
      "tid": 1399,
-     "form": "LLWLL"
+     "form": "LWLLL"
     },
     {
      "pos": 11,

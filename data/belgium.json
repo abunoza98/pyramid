@@ -147,6 +147,19 @@
     },
     {
      "pos": 8,
+     "team": "Lommel United",
+     "p": 9,
+     "w": 3,
+     "d": 3,
+     "l": 3,
+     "gf": 11,
+     "ga": 11,
+     "pts": 12,
+     "tid": 259,
+     "form": "LLDWD"
+    },
+    {
+     "pos": 9,
      "team": "Zulte Waregem",
      "p": 8,
      "w": 3,
@@ -159,7 +172,7 @@
      "form": "DWLLL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Standard Liège",
      "p": 8,
      "w": 3,
@@ -170,19 +183,6 @@
      "pts": 11,
      "tid": 733,
      "form": "WWLLL"
-    },
-    {
-     "pos": 10,
-     "team": "Lommel United",
-     "p": 8,
-     "w": 3,
-     "d": 2,
-     "l": 3,
-     "gf": 9,
-     "ga": 9,
-     "pts": 11,
-     "tid": 259,
-     "form": "WLLDW"
     },
     {
      "pos": 11,
@@ -239,15 +239,15 @@
     {
      "pos": 15,
      "team": "OH Leuven",
-     "p": 8,
+     "p": 9,
      "w": 1,
-     "d": 2,
+     "d": 3,
      "l": 5,
-     "gf": 6,
-     "ga": 14,
-     "pts": 5,
+     "gf": 8,
+     "ga": 16,
+     "pts": 6,
      "tid": 260,
-     "form": "LLDWD"
+     "form": "LDWDD"
     },
     {
      "pos": 16,
