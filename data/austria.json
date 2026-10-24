@@ -93,32 +93,45 @@
     },
     {
      "pos": 6,
-     "team": "WSG Tirol",
-     "p": 9,
-     "w": 3,
+     "team": "TSV Hartberg",
+     "p": 10,
+     "w": 4,
      "d": 2,
      "l": 4,
-     "gf": 12,
-     "ga": 14,
-     "pts": 11,
-     "tid": 1398,
-     "form": "WDLLW"
+     "gf": 16,
+     "ga": 19,
+     "pts": 14,
+     "tid": 1072,
+     "form": "DDWLW"
     },
     {
      "pos": 7,
-     "team": "TSV Hartberg",
-     "p": 9,
+     "team": "WSG Tirol",
+     "p": 10,
      "w": 3,
-     "d": 2,
+     "d": 3,
      "l": 4,
-     "gf": 15,
-     "ga": 19,
-     "pts": 11,
-     "tid": 1072,
-     "form": "WDDWL"
+     "gf": 13,
+     "ga": 15,
+     "pts": 12,
+     "tid": 1398,
+     "form": "DLLWD"
     },
     {
      "pos": 8,
+     "team": "Grazer AK",
+     "p": 10,
+     "w": 2,
+     "d": 4,
+     "l": 4,
+     "gf": 8,
+     "ga": 23,
+     "pts": 10,
+     "tid": 4256,
+     "form": "WDDLD"
+    },
+    {
+     "pos": 9,
      "team": "Rheindorf Altach",
      "p": 10,
      "w": 3,
@@ -129,19 +142,6 @@
      "pts": 9,
      "tid": 618,
      "form": "LLWLW"
-    },
-    {
-     "pos": 9,
-     "team": "Grazer AK",
-     "p": 9,
-     "w": 2,
-     "d": 3,
-     "l": 4,
-     "gf": 7,
-     "ga": 22,
-     "pts": 9,
-     "tid": 4256,
-     "form": "DWDDL"
     },
     {
      "pos": 10,
@@ -172,12 +172,12 @@
     {
      "pos": 12,
      "team": "Wolfsberger AC",
-     "p": 9,
+     "p": 10,
      "w": 1,
      "d": 2,
-     "l": 6,
+     "l": 7,
      "gf": 7,
-     "ga": 18,
+     "ga": 19,
      "pts": 5,
      "tid": 1025,
      "form": "LLLLL"
@@ -258,6 +258,19 @@
     },
     {
      "pos": 4,
+     "team": "Admira Wacker",
+     "p": 10,
+     "w": 6,
+     "d": 0,
+     "l": 4,
+     "gf": 13,
+     "ga": 10,
+     "pts": 18,
+     "tid": 1023,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 5,
      "team": "SKU Amstetten",
      "p": 10,
      "w": 4,
@@ -270,7 +283,7 @@
      "form": "WWDDW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Austria Salzburg",
      "p": 10,
      "w": 5,
@@ -283,33 +296,33 @@
      "form": "DLWWL"
     },
     {
-     "pos": 6,
-     "team": "Admira Wacker",
-     "p": 9,
-     "w": 5,
-     "d": 0,
-     "l": 4,
-     "gf": 12,
-     "ga": 10,
-     "pts": 15,
-     "tid": 1023,
-     "form": "WWLWW"
-    },
-    {
      "pos": 7,
      "team": "Wacker Innsbruck",
-     "p": 9,
+     "p": 10,
      "w": 4,
      "d": 2,
-     "l": 3,
+     "l": 4,
      "gf": 12,
-     "ga": 10,
+     "ga": 11,
      "pts": 14,
      "tid": 1073,
-     "form": "LDDWL"
+     "form": "DDWLL"
     },
     {
      "pos": 8,
+     "team": "FC Liefering",
+     "p": 10,
+     "w": 4,
+     "d": 2,
+     "l": 4,
+     "gf": 20,
+     "ga": 22,
+     "pts": 14,
+     "tid": 1400,
+     "form": "LLWLD"
+    },
+    {
+     "pos": 9,
      "team": "Floridsdorfer AC",
      "p": 10,
      "w": 4,
@@ -320,19 +333,6 @@
      "pts": 13,
      "tid": 1395,
      "form": "LWLLL"
-    },
-    {
-     "pos": 9,
-     "team": "FC Liefering",
-     "p": 9,
-     "w": 4,
-     "d": 1,
-     "l": 4,
-     "gf": 18,
-     "ga": 20,
-     "pts": 13,
-     "tid": 1400,
-     "form": "WLLWL"
     },
     {
      "pos": 10,
@@ -349,6 +349,19 @@
     },
     {
      "pos": 11,
+     "team": "Schwarz-Weiß Bregenz",
+     "p": 10,
+     "w": 3,
+     "d": 3,
+     "l": 4,
+     "gf": 13,
+     "ga": 15,
+     "pts": 12,
+     "tid": 8259,
+     "form": "WLLDD"
+    },
+    {
+     "pos": 12,
      "team": "SKN St. Pölten",
      "p": 10,
      "w": 3,
@@ -359,19 +372,6 @@
      "pts": 11,
      "tid": 1027,
      "form": "WWLDD"
-    },
-    {
-     "pos": 12,
-     "team": "Schwarz-Weiß Bregenz",
-     "p": 9,
-     "w": 3,
-     "d": 2,
-     "l": 4,
-     "gf": 11,
-     "ga": 13,
-     "pts": 11,
-     "tid": 8259,
-     "form": "LWLLD"
     },
     {
      "pos": 13,
@@ -673,6 +673,19 @@
       },
       {
        "pos": 2,
+       "team": "LASK Juniors",
+       "p": 13,
+       "w": 8,
+       "d": 3,
+       "l": 2,
+       "gf": 39,
+       "ga": 11,
+       "pts": 27,
+       "tid": 11225,
+       "form": "WWWDW"
+      },
+      {
+       "pos": 3,
        "team": "Wals-Grünau",
        "p": 13,
        "w": 7,
@@ -683,19 +696,6 @@
        "pts": 26,
        "tid": 8261,
        "form": "DWDLW"
-      },
-      {
-       "pos": 3,
-       "team": "LASK Juniors",
-       "p": 12,
-       "w": 7,
-       "d": 3,
-       "l": 2,
-       "gf": 35,
-       "ga": 11,
-       "pts": 24,
-       "tid": 11225,
-       "form": "WWWWD"
       },
       {
        "pos": 4,
@@ -713,15 +713,15 @@
       {
        "pos": 5,
        "team": "Kuchl",
-       "p": 12,
+       "p": 13,
        "w": 6,
        "d": 3,
-       "l": 3,
+       "l": 4,
        "gf": 24,
-       "ga": 19,
+       "ga": 23,
        "pts": 21,
        "tid": 14714,
-       "form": "WLWDW"
+       "form": "LWDWL"
       },
       {
        "pos": 6,

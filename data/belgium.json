@@ -83,15 +83,15 @@
     {
      "pos": 3,
      "team": "Charleroi",
-     "p": 8,
+     "p": 9,
      "w": 7,
      "d": 0,
-     "l": 1,
+     "l": 2,
      "gf": 16,
-     "ga": 7,
+     "ga": 10,
      "pts": 21,
      "tid": 736,
-     "form": "WLWWW"
+     "form": "LWWWL"
     },
     {
      "pos": 4,
@@ -186,6 +186,19 @@
     },
     {
      "pos": 11,
+     "team": "Antwerp",
+     "p": 9,
+     "w": 3,
+     "d": 1,
+     "l": 5,
+     "gf": 15,
+     "ga": 20,
+     "pts": 10,
+     "tid": 740,
+     "form": "LLLLW"
+    },
+    {
+     "pos": 12,
      "team": "SK Beveren",
      "p": 8,
      "w": 3,
@@ -198,7 +211,7 @@
      "form": "LWWLL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Sint-Truiden",
      "p": 8,
      "w": 2,
@@ -209,19 +222,6 @@
      "pts": 8,
      "tid": 735,
      "form": "LWLLL"
-    },
-    {
-     "pos": 13,
-     "team": "Antwerp",
-     "p": 8,
-     "w": 2,
-     "d": 1,
-     "l": 5,
-     "gf": 12,
-     "ga": 20,
-     "pts": 7,
-     "tid": 740,
-     "form": "LLLLL"
     },
     {
      "pos": 14,

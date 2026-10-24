@@ -331,6 +331,19 @@
     },
     {
      "pos": 2,
+     "team": "VVV Venlo",
+     "p": 12,
+     "w": 8,
+     "d": 1,
+     "l": 3,
+     "gf": 34,
+     "ga": 20,
+     "pts": 25,
+     "tid": 204,
+     "form": "LWWDW"
+    },
+    {
+     "pos": 3,
      "team": "Emmen",
      "p": 12,
      "w": 8,
@@ -341,19 +354,6 @@
      "pts": 25,
      "tid": 208,
      "form": "WDWWW"
-    },
-    {
-     "pos": 3,
-     "team": "VVV Venlo",
-     "p": 11,
-     "w": 7,
-     "d": 1,
-     "l": 3,
-     "gf": 30,
-     "ga": 18,
-     "pts": 22,
-     "tid": 204,
-     "form": "WLWWD"
     },
     {
      "pos": 4,
@@ -526,19 +526,6 @@
     },
     {
      "pos": 17,
-     "team": "FC Dordrecht",
-     "p": 11,
-     "w": 3,
-     "d": 2,
-     "l": 6,
-     "gf": 14,
-     "ga": 27,
-     "pts": 11,
-     "tid": 409,
-     "form": "LWDLW"
-    },
-    {
-     "pos": 18,
      "team": "FC Eindhoven",
      "p": 12,
      "w": 3,
@@ -549,6 +536,19 @@
      "pts": 11,
      "tid": 422,
      "form": "LDLLL"
+    },
+    {
+     "pos": 18,
+     "team": "FC Dordrecht",
+     "p": 12,
+     "w": 3,
+     "d": 2,
+     "l": 7,
+     "gf": 16,
+     "ga": 31,
+     "pts": 11,
+     "tid": 409,
+     "form": "WDLWL"
     },
     {
      "pos": 19,
@@ -616,6 +616,19 @@
     },
     {
      "pos": 2,
+     "team": "De Treffers",
+     "p": 11,
+     "w": 6,
+     "d": 4,
+     "l": 1,
+     "gf": 30,
+     "ga": 14,
+     "pts": 22,
+     "tid": 1277,
+     "form": "WLWWD"
+    },
+    {
+     "pos": 3,
      "team": "IJsselmeervogels",
      "p": 11,
      "w": 7,
@@ -626,19 +639,6 @@
      "pts": 22,
      "tid": 1280,
      "form": "LWLWW"
-    },
-    {
-     "pos": 3,
-     "team": "De Treffers",
-     "p": 10,
-     "w": 6,
-     "d": 3,
-     "l": 1,
-     "gf": 27,
-     "ga": 11,
-     "pts": 21,
-     "tid": 1277,
-     "form": "WWLWW"
     },
     {
      "pos": 4,
@@ -733,6 +733,19 @@
     },
     {
      "pos": 11,
+     "team": "Sparta Rotterdam II",
+     "p": 11,
+     "w": 3,
+     "d": 4,
+     "l": 4,
+     "gf": 28,
+     "ga": 24,
+     "pts": 13,
+     "tid": 10320,
+     "form": "WLLLD"
+    },
+    {
+     "pos": 12,
      "team": "Almere City II",
      "p": 11,
      "w": 4,
@@ -745,7 +758,7 @@
      "form": "LWWLW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "AFC Amsterdam",
      "p": 11,
      "w": 4,
@@ -758,7 +771,7 @@
      "form": "LLWLL"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Rijnsburgse Boys",
      "p": 11,
      "w": 4,
@@ -769,19 +782,6 @@
      "pts": 13,
      "tid": 1248,
      "form": "LWLWL"
-    },
-    {
-     "pos": 14,
-     "team": "Sparta Rotterdam II",
-     "p": 10,
-     "w": 3,
-     "d": 3,
-     "l": 4,
-     "gf": 25,
-     "ga": 21,
-     "pts": 12,
-     "tid": 10320,
-     "form": "DWLLL"
     },
     {
      "pos": 15,
