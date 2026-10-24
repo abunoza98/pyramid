@@ -131,15 +131,15 @@
     {
      "pos": 7,
      "team": "Lokomotiva",
-     "p": 10,
+     "p": 11,
      "w": 3,
-     "d": 1,
+     "d": 2,
      "l": 6,
      "gf": 13,
      "ga": 17,
-     "pts": 10,
+     "pts": 11,
      "tid": 1017,
-     "form": "LDLLW"
+     "form": "DLLWD"
     },
     {
      "pos": 8,
@@ -156,6 +156,19 @@
     },
     {
      "pos": 9,
+     "team": "Gorica",
+     "p": 11,
+     "w": 1,
+     "d": 4,
+     "l": 6,
+     "gf": 7,
+     "ga": 15,
+     "pts": 7,
+     "tid": 1068,
+     "form": "DWLDD"
+    },
+    {
+     "pos": 10,
      "team": "Rudeš",
      "p": 10,
      "w": 2,
@@ -166,19 +179,6 @@
      "pts": 7,
      "tid": 1019,
      "form": "LLDWL"
-    },
-    {
-     "pos": 10,
-     "team": "Gorica",
-     "p": 10,
-     "w": 1,
-     "d": 3,
-     "l": 6,
-     "gf": 7,
-     "ga": 15,
-     "pts": 6,
-     "tid": 1068,
-     "form": "LDWLD"
     }
    ],
    "updated": "2026-10-24T00:00:00.000Z"

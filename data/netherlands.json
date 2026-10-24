@@ -604,18 +604,31 @@
     {
      "pos": 1,
      "team": "Quick Boys",
-     "p": 10,
-     "w": 8,
+     "p": 11,
+     "w": 9,
      "d": 1,
      "l": 1,
-     "gf": 29,
-     "ga": 7,
-     "pts": 25,
+     "gf": 32,
+     "ga": 8,
+     "pts": 28,
      "tid": 1272,
-     "form": "LWWWD"
+     "form": "WWWDW"
     },
     {
      "pos": 2,
+     "team": "IJsselmeervogels",
+     "p": 11,
+     "w": 7,
+     "d": 1,
+     "l": 3,
+     "gf": 16,
+     "ga": 10,
+     "pts": 22,
+     "tid": 1280,
+     "form": "LWLWW"
+    },
+    {
+     "pos": 3,
      "team": "De Treffers",
      "p": 10,
      "w": 6,
@@ -628,46 +641,46 @@
      "form": "WWLWW"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Kozakken Boys",
-     "p": 10,
+     "p": 11,
      "w": 6,
      "d": 3,
-     "l": 1,
+     "l": 2,
      "gf": 25,
-     "ga": 12,
+     "ga": 13,
      "pts": 21,
      "tid": 1242,
-     "form": "WDWWD"
-    },
-    {
-     "pos": 4,
-     "team": "IJsselmeervogels",
-     "p": 10,
-     "w": 6,
-     "d": 1,
-     "l": 3,
-     "gf": 14,
-     "ga": 9,
-     "pts": 19,
-     "tid": 1280,
-     "form": "WLWLW"
+     "form": "DWWDL"
     },
     {
      "pos": 5,
      "team": "HHC",
-     "p": 10,
-     "w": 5,
+     "p": 11,
+     "w": 6,
      "d": 3,
      "l": 2,
-     "gf": 20,
+     "gf": 21,
      "ga": 16,
-     "pts": 18,
+     "pts": 21,
      "tid": 1278,
-     "form": "LLWDW"
+     "form": "LWDWW"
     },
     {
      "pos": 6,
+     "team": "Barendrecht",
+     "p": 11,
+     "w": 6,
+     "d": 2,
+     "l": 3,
+     "gf": 20,
+     "ga": 17,
+     "pts": 20,
+     "tid": 1271,
+     "form": "WWLWW"
+    },
+    {
+     "pos": 7,
      "team": "GVVV Veenendaal",
      "p": 11,
      "w": 6,
@@ -680,7 +693,7 @@
      "form": "WWWLW"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "RKAV Volendam",
      "p": 11,
      "w": 5,
@@ -693,46 +706,59 @@
      "form": "LLWWW"
     },
     {
-     "pos": 8,
-     "team": "Barendrecht",
-     "p": 10,
-     "w": 5,
-     "d": 2,
-     "l": 3,
-     "gf": 19,
-     "ga": 17,
-     "pts": 17,
-     "tid": 1271,
-     "form": "DWWLW"
-    },
-    {
      "pos": 9,
      "team": "Spakenburg",
-     "p": 10,
+     "p": 11,
      "w": 4,
      "d": 2,
-     "l": 4,
-     "gf": 12,
-     "ga": 15,
+     "l": 5,
+     "gf": 13,
+     "ga": 17,
      "pts": 14,
      "tid": 1249,
-     "form": "DLWLD"
+     "form": "LWLDL"
     },
     {
      "pos": 10,
-     "team": "AFC Amsterdam",
-     "p": 10,
+     "team": "Katwijk",
+     "p": 11,
      "w": 4,
-     "d": 1,
+     "d": 2,
      "l": 5,
      "gf": 15,
-     "ga": 18,
-     "pts": 13,
-     "tid": 1252,
-     "form": "WLLWL"
+     "ga": 22,
+     "pts": 14,
+     "tid": 1237,
+     "form": "WLLLW"
     },
     {
      "pos": 11,
+     "team": "Almere City II",
+     "p": 11,
+     "w": 4,
+     "d": 1,
+     "l": 6,
+     "gf": 22,
+     "ga": 21,
+     "pts": 13,
+     "tid": 9130,
+     "form": "LWWLW"
+    },
+    {
+     "pos": 12,
+     "team": "AFC Amsterdam",
+     "p": 11,
+     "w": 4,
+     "d": 1,
+     "l": 6,
+     "gf": 15,
+     "ga": 19,
+     "pts": 13,
+     "tid": 1252,
+     "form": "LLWLL"
+    },
+    {
+     "pos": 13,
      "team": "Rijnsburgse Boys",
      "p": 11,
      "w": 4,
@@ -745,7 +771,7 @@
      "form": "LWLWL"
     },
     {
-     "pos": 12,
+     "pos": 14,
      "team": "Sparta Rotterdam II",
      "p": 10,
      "w": 3,
@@ -758,43 +784,17 @@
      "form": "DWLLL"
     },
     {
-     "pos": 13,
-     "team": "Katwijk",
-     "p": 10,
-     "w": 3,
-     "d": 2,
-     "l": 5,
-     "gf": 12,
-     "ga": 21,
-     "pts": 11,
-     "tid": 1237,
-     "form": "LWLLL"
-    },
-    {
-     "pos": 14,
-     "team": "Almere City II",
-     "p": 10,
-     "w": 3,
-     "d": 1,
-     "l": 6,
-     "gf": 21,
-     "ga": 21,
-     "pts": 10,
-     "tid": 9130,
-     "form": "DLWWL"
-    },
-    {
      "pos": 15,
      "team": "Hoek",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 4,
-     "l": 4,
-     "gf": 11,
-     "ga": 15,
+     "l": 5,
+     "gf": 12,
+     "ga": 18,
      "pts": 10,
      "tid": 1276,
-     "form": "DLWLD"
+     "form": "LWLDL"
     },
     {
      "pos": 16,
@@ -812,28 +812,28 @@
     {
      "pos": 17,
      "team": "Kloetinge",
-     "p": 10,
+     "p": 11,
      "w": 1,
      "d": 4,
-     "l": 5,
-     "gf": 15,
-     "ga": 26,
+     "l": 6,
+     "gf": 16,
+     "ga": 29,
      "pts": 7,
      "tid": 3930,
-     "form": "LDLDL"
+     "form": "DLDLL"
     },
     {
      "pos": 18,
      "team": "ROHDA Raalte",
-     "p": 10,
+     "p": 11,
      "w": 0,
      "d": 1,
-     "l": 9,
+     "l": 10,
      "gf": 9,
-     "ga": 32,
+     "ga": 33,
      "pts": 1,
      "tid": 6269,
-     "form": "LDLLL"
+     "form": "DLLLL"
     }
    ],
    "updated": "2026-10-24T00:00:00.000Z"

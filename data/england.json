@@ -1060,6 +1060,19 @@
     },
     {
      "pos": 4,
+     "team": "Cheltenham Town",
+     "p": 13,
+     "w": 6,
+     "d": 3,
+     "l": 4,
+     "gf": 22,
+     "ga": 22,
+     "pts": 21,
+     "tid": 1372,
+     "form": "LLLWW"
+    },
+    {
+     "pos": 5,
      "team": "Walsall",
      "p": 11,
      "w": 4,
@@ -1070,19 +1083,6 @@
      "pts": 19,
      "tid": 1342,
      "form": "WDDDW"
-    },
-    {
-     "pos": 5,
-     "team": "Cheltenham Town",
-     "p": 12,
-     "w": 5,
-     "d": 3,
-     "l": 4,
-     "gf": 21,
-     "ga": 22,
-     "pts": 18,
-     "tid": 1372,
-     "form": "WLLLW"
     },
     {
      "pos": 6,
@@ -1151,6 +1151,32 @@
     },
     {
      "pos": 11,
+     "team": "Swindon Town",
+     "p": 13,
+     "w": 4,
+     "d": 4,
+     "l": 5,
+     "gf": 13,
+     "ga": 16,
+     "pts": 16,
+     "tid": 1353,
+     "form": "LLDWD"
+    },
+    {
+     "pos": 12,
+     "team": "Bristol Rovers",
+     "p": 13,
+     "w": 5,
+     "d": 1,
+     "l": 7,
+     "gf": 16,
+     "ga": 20,
+     "pts": 16,
+     "tid": 1334,
+     "form": "LLLLD"
+    },
+    {
+     "pos": 13,
      "team": "Accrington Stanley",
      "p": 12,
      "w": 3,
@@ -1163,20 +1189,20 @@
      "form": "DWDWD"
     },
     {
-     "pos": 12,
+     "pos": 14,
      "team": "Newport County",
-     "p": 12,
+     "p": 13,
      "w": 3,
      "d": 6,
-     "l": 3,
+     "l": 4,
      "gf": 16,
-     "ga": 15,
+     "ga": 16,
      "pts": 15,
      "tid": 1367,
-     "form": "WDWDD"
+     "form": "DWDDL"
     },
     {
-     "pos": 13,
+     "pos": 15,
      "team": "Tranmere Rovers",
      "p": 12,
      "w": 3,
@@ -1189,7 +1215,7 @@
      "form": "DLDLW"
     },
     {
-     "pos": 14,
+     "pos": 16,
      "team": "Rochdale",
      "p": 12,
      "w": 4,
@@ -1200,32 +1226,6 @@
      "pts": 15,
      "tid": 1339,
      "form": "WWDLD"
-    },
-    {
-     "pos": 15,
-     "team": "Swindon Town",
-     "p": 12,
-     "w": 4,
-     "d": 3,
-     "l": 5,
-     "gf": 13,
-     "ga": 16,
-     "pts": 15,
-     "tid": 1353,
-     "form": "DLLDW"
-    },
-    {
-     "pos": 16,
-     "team": "Bristol Rovers",
-     "p": 12,
-     "w": 5,
-     "d": 0,
-     "l": 7,
-     "gf": 16,
-     "ga": 20,
-     "pts": 15,
-     "tid": 1334,
-     "form": "WLLLL"
     },
     {
      "pos": 17,
@@ -1255,16 +1255,16 @@
     },
     {
      "pos": 19,
-     "team": "Colchester United",
+     "team": "Northampton Town",
      "p": 11,
-     "w": 2,
-     "d": 6,
-     "l": 3,
-     "gf": 11,
-     "ga": 14,
-     "pts": 12,
-     "tid": 1361,
-     "form": "DDLDD"
+     "w": 3,
+     "d": 4,
+     "l": 4,
+     "gf": 8,
+     "ga": 8,
+     "pts": 13,
+     "tid": 1337,
+     "form": "LDWLW"
     },
     {
      "pos": 20,
@@ -1281,6 +1281,19 @@
     },
     {
      "pos": 21,
+     "team": "Colchester United",
+     "p": 12,
+     "w": 2,
+     "d": 6,
+     "l": 4,
+     "gf": 11,
+     "ga": 16,
+     "pts": 12,
+     "tid": 1361,
+     "form": "DLDDL"
+    },
+    {
+     "pos": 22,
      "team": "Oldham Athletic",
      "p": 11,
      "w": 3,
@@ -1293,7 +1306,7 @@
      "form": "LLDWL"
     },
     {
-     "pos": 22,
+     "pos": 23,
      "team": "Rotherham United",
      "p": 12,
      "w": 2,
@@ -1304,19 +1317,6 @@
      "pts": 11,
      "tid": 73,
      "form": "DLLLD"
-    },
-    {
-     "pos": 23,
-     "team": "Northampton Town",
-     "p": 10,
-     "w": 2,
-     "d": 4,
-     "l": 4,
-     "gf": 6,
-     "ga": 8,
-     "pts": 10,
-     "tid": 1337,
-     "form": "LLDWL"
     },
     {
      "pos": 24,
@@ -1474,7 +1474,7 @@
      "ga": 16,
      "pts": 21,
      "tid": 1819,
-     "form": "WWWWW"
+     "form": "WWWW"
     },
     {
      "pos": 9,
@@ -1591,7 +1591,7 @@
      "ga": 22,
      "pts": 15,
      "tid": 1378,
-     "form": "DLDDL"
+     "form": "LDDL"
     },
     {
      "pos": 18,
@@ -2097,7 +2097,7 @@
        "ga": 14,
        "pts": 21,
        "tid": 4678,
-       "form": "WDWWW"
+       "form": "DWWW"
       },
       {
        "pos": 5,
@@ -2149,7 +2149,7 @@
        "ga": 17,
        "pts": 18,
        "tid": 4687,
-       "form": "WWLDL"
+       "form": "WLDL"
       },
       {
        "pos": 9,

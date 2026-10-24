@@ -315,13 +315,13 @@
     {
      "pos": 2,
      "team": "Nantong Zhiyun",
-     "p": 27,
-     "w": 14,
+     "p": 28,
+     "w": 15,
      "d": 9,
      "l": 4,
-     "gf": 36,
+     "gf": 37,
      "ga": 20,
-     "pts": 51,
+     "pts": 54,
      "tid": 2626,
      "form": "WWWWW"
     },
@@ -341,12 +341,12 @@
     {
      "pos": 4,
      "team": "Shenzhen Juniors",
-     "p": 27,
+     "p": 28,
      "w": 12,
      "d": 10,
-     "l": 5,
+     "l": 6,
      "gf": 42,
-     "ga": 31,
+     "ga": 32,
      "pts": 46,
      "tid": 23265,
      "form": "DLDDL"
@@ -366,6 +366,19 @@
     },
     {
      "pos": 6,
+     "team": "Hebei Kungfu",
+     "p": 28,
+     "w": 11,
+     "d": 7,
+     "l": 10,
+     "gf": 29,
+     "ga": 28,
+     "pts": 40,
+     "tid": 17264,
+     "form": "WWDLW"
+    },
+    {
+     "pos": 7,
      "team": "Yanbian Longding",
      "p": 27,
      "w": 10,
@@ -376,19 +389,6 @@
      "pts": 39,
      "tid": 17271,
      "form": "LLDLW"
-    },
-    {
-     "pos": 7,
-     "team": "Hebei Kungfu",
-     "p": 27,
-     "w": 10,
-     "d": 7,
-     "l": 10,
-     "gf": 26,
-     "ga": 26,
-     "pts": 37,
-     "tid": 17264,
-     "form": "WWDLW"
     },
     {
      "pos": 8,
@@ -433,12 +433,12 @@
     {
      "pos": 11,
      "team": "Ningbo Professional",
-     "p": 27,
+     "p": 28,
      "w": 9,
      "d": 7,
-     "l": 11,
-     "gf": 28,
-     "ga": 32,
+     "l": 12,
+     "gf": 30,
+     "ga": 35,
      "pts": 31,
      "ded": 3,
      "tid": 27556,
@@ -460,6 +460,19 @@
     },
     {
      "pos": 13,
+     "team": "Nanjing City",
+     "p": 28,
+     "w": 7,
+     "d": 7,
+     "l": 14,
+     "gf": 27,
+     "ga": 39,
+     "pts": 28,
+     "tid": 16619,
+     "form": "LLDWW"
+    },
+    {
+     "pos": 14,
      "team": "Heilongjiang Lava Spring",
      "p": 27,
      "w": 5,
@@ -470,19 +483,6 @@
      "pts": 27,
      "tid": 1445,
      "form": "LDDLW"
-    },
-    {
-     "pos": 14,
-     "team": "Nanjing City",
-     "p": 27,
-     "w": 6,
-     "d": 7,
-     "l": 14,
-     "gf": 22,
-     "ga": 37,
-     "pts": 25,
-     "tid": 16619,
-     "form": "LLDWW"
     },
     {
      "pos": 15,
@@ -501,12 +501,12 @@
     {
      "pos": 16,
      "team": "Dongguan United",
-     "p": 27,
+     "p": 28,
      "w": 3,
      "d": 7,
-     "l": 17,
-     "gf": 26,
-     "ga": 59,
+     "l": 18,
+     "gf": 28,
+     "ga": 64,
      "pts": 16,
      "tid": 17263,
      "form": "DWLLL"

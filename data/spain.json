@@ -186,6 +186,19 @@
     },
     {
      "pos": 12,
+     "team": "Elche",
+     "p": 10,
+     "w": 2,
+     "d": 4,
+     "l": 4,
+     "gf": 14,
+     "ga": 17,
+     "pts": 10,
+     "tid": 797,
+     "form": "LWDDW"
+    },
+    {
+     "pos": 13,
      "team": "Villarreal",
      "p": 9,
      "w": 2,
@@ -198,7 +211,7 @@
      "form": "LWWLD"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Athletic Bilbao",
      "p": 8,
      "w": 2,
@@ -209,19 +222,6 @@
      "pts": 9,
      "tid": 531,
      "form": "DDDL"
-    },
-    {
-     "pos": 14,
-     "team": "Rayo Vallecano",
-     "p": 8,
-     "w": 2,
-     "d": 3,
-     "l": 3,
-     "gf": 12,
-     "ga": 17,
-     "pts": 9,
-     "tid": 728,
-     "form": "LWDD"
     },
     {
      "pos": 15,
@@ -238,6 +238,19 @@
     },
     {
      "pos": 16,
+     "team": "Rayo Vallecano",
+     "p": 9,
+     "w": 2,
+     "d": 3,
+     "l": 4,
+     "gf": 12,
+     "ga": 20,
+     "pts": 9,
+     "tid": 728,
+     "form": "WDDL"
+    },
+    {
+     "pos": 17,
      "team": "Espanyol",
      "p": 9,
      "w": 2,
@@ -250,7 +263,7 @@
      "form": "WLLDL"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Racing Santander",
      "p": 9,
      "w": 2,
@@ -261,19 +274,6 @@
      "pts": 8,
      "tid": 4665,
      "form": "WLLDL"
-    },
-    {
-     "pos": 18,
-     "team": "Elche",
-     "p": 9,
-     "w": 1,
-     "d": 4,
-     "l": 4,
-     "gf": 11,
-     "ga": 17,
-     "pts": 7,
-     "tid": 797,
-     "form": "DLWDD"
     },
     {
      "pos": 19,

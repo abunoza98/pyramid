@@ -140,6 +140,19 @@
     },
     {
      "pos": 8,
+     "team": "Erzurumspor FK",
+     "p": 9,
+     "w": 4,
+     "d": 2,
+     "l": 3,
+     "gf": 8,
+     "ga": 12,
+     "pts": 14,
+     "tid": 1009,
+     "form": "LWDWW"
+    },
+    {
+     "pos": 9,
      "team": "Çorum FK",
      "p": 8,
      "w": 4,
@@ -152,7 +165,7 @@
      "form": "WWLWW"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Alanyaspor",
      "p": 9,
      "w": 3,
@@ -165,7 +178,7 @@
      "form": "DWDLL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Başakşehir",
      "p": 8,
      "w": 3,
@@ -176,19 +189,6 @@
      "pts": 11,
      "tid": 564,
      "form": "LLWDW"
-    },
-    {
-     "pos": 11,
-     "team": "Erzurumspor FK",
-     "p": 8,
-     "w": 3,
-     "d": 2,
-     "l": 3,
-     "gf": 5,
-     "ga": 11,
-     "pts": 11,
-     "tid": 1009,
-     "form": "WLWDW"
     },
     {
      "pos": 12,
@@ -219,15 +219,15 @@
     {
      "pos": 14,
      "team": "Gaziantep FK",
-     "p": 8,
+     "p": 9,
      "w": 2,
      "d": 2,
-     "l": 4,
-     "gf": 8,
-     "ga": 12,
+     "l": 5,
+     "gf": 9,
+     "ga": 15,
      "pts": 8,
      "tid": 3573,
-     "form": "WDLLL"
+     "form": "DLLLL"
     },
     {
      "pos": 15,

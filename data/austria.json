@@ -589,6 +589,19 @@
       },
       {
        "pos": 12,
+       "team": "Donau",
+       "p": 13,
+       "w": 3,
+       "d": 6,
+       "l": 4,
+       "gf": 25,
+       "ga": 22,
+       "pts": 15,
+       "tid": 8365,
+       "form": "LDDLW"
+      },
+      {
+       "pos": 13,
        "team": "Gloggnitz",
        "p": 13,
        "w": 3,
@@ -601,7 +614,7 @@
        "form": "LWDDD"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Favoritner AC",
        "p": 13,
        "w": 4,
@@ -612,19 +625,6 @@
        "pts": 13,
        "tid": 8367,
        "form": "LDWLL"
-      },
-      {
-       "pos": 14,
-       "team": "Donau",
-       "p": 12,
-       "w": 2,
-       "d": 6,
-       "l": 4,
-       "gf": 17,
-       "ga": 21,
-       "pts": 12,
-       "tid": 8365,
-       "form": "DLDDL"
       },
       {
        "pos": 15,
@@ -642,15 +642,15 @@
       {
        "pos": 16,
        "team": "Wienerberg",
-       "p": 12,
+       "p": 13,
        "w": 0,
        "d": 1,
-       "l": 11,
-       "gf": 6,
-       "ga": 39,
+       "l": 12,
+       "gf": 7,
+       "ga": 47,
        "pts": 1,
        "tid": 5008,
-       "form": "LLLDL"
+       "form": "LLDLL"
       }
      ]
     },
@@ -738,6 +738,19 @@
       },
       {
        "pos": 7,
+       "team": "Grödig",
+       "p": 13,
+       "w": 6,
+       "d": 1,
+       "l": 6,
+       "gf": 21,
+       "ga": 21,
+       "pts": 19,
+       "tid": 4974,
+       "form": "LWLLW"
+      },
+      {
+       "pos": 8,
        "team": "SK Vorwarts Steyr",
        "p": 13,
        "w": 5,
@@ -750,43 +763,30 @@
        "form": "WLDWL"
       },
       {
-       "pos": 8,
-       "team": "Leonfelden",
-       "p": 12,
-       "w": 4,
-       "d": 4,
-       "l": 4,
-       "gf": 23,
-       "ga": 25,
-       "pts": 16,
-       "tid": 27885,
-       "form": "DLLWW"
-      },
-      {
        "pos": 9,
-       "team": "Grödig",
-       "p": 12,
-       "w": 5,
-       "d": 1,
-       "l": 6,
-       "gf": 18,
-       "ga": 20,
-       "pts": 16,
-       "tid": 4974,
-       "form": "DLWLL"
+       "team": "Leonfelden",
+       "p": 13,
+       "w": 4,
+       "d": 5,
+       "l": 4,
+       "gf": 25,
+       "ga": 27,
+       "pts": 17,
+       "tid": 27885,
+       "form": "LLWWD"
       },
       {
        "pos": 10,
        "team": "TSV St. Johann",
-       "p": 12,
+       "p": 13,
        "w": 4,
-       "d": 3,
+       "d": 4,
        "l": 5,
-       "gf": 12,
-       "ga": 17,
-       "pts": 15,
+       "gf": 14,
+       "ga": 19,
+       "pts": 16,
        "tid": 4994,
-       "form": "LWDLD"
+       "form": "WDLDD"
       },
       {
        "pos": 11,
@@ -843,15 +843,15 @@
       {
        "pos": 15,
        "team": "Pinzgau Saalfelden",
-       "p": 12,
+       "p": 13,
        "w": 1,
        "d": 2,
-       "l": 9,
-       "gf": 13,
-       "ga": 29,
+       "l": 10,
+       "gf": 14,
+       "ga": 32,
        "pts": 5,
        "tid": 4980,
-       "form": "LDLLL"
+       "form": "DLLLL"
       }
      ]
     },
@@ -874,6 +874,19 @@
       },
       {
        "pos": 2,
+       "team": "Treibach",
+       "p": 13,
+       "w": 7,
+       "d": 2,
+       "l": 4,
+       "gf": 25,
+       "ga": 17,
+       "pts": 23,
+       "tid": 4962,
+       "form": "WLWLW"
+      },
+      {
+       "pos": 3,
        "team": "Austria Klagenfurt",
        "p": 13,
        "w": 7,
@@ -886,7 +899,7 @@
        "form": "LLDLW"
       },
       {
-       "pos": 3,
+       "pos": 4,
        "team": "Deutschlandsberger SC",
        "p": 12,
        "w": 6,
@@ -899,7 +912,7 @@
        "form": "WDDWL"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Völkermarkt",
        "p": 12,
        "w": 6,
@@ -910,19 +923,6 @@
        "pts": 20,
        "tid": 4987,
        "form": "WDWLW"
-      },
-      {
-       "pos": 5,
-       "team": "Treibach",
-       "p": 12,
-       "w": 6,
-       "d": 2,
-       "l": 4,
-       "gf": 24,
-       "ga": 17,
-       "pts": 20,
-       "tid": 4962,
-       "form": "LWLWL"
       },
       {
        "pos": 6,
@@ -1029,42 +1029,42 @@
       },
       {
        "pos": 14,
-       "team": "Bleiburg",
-       "p": 12,
+       "team": "Wolfsberg",
+       "p": 13,
        "w": 2,
-       "d": 4,
+       "d": 5,
        "l": 6,
-       "gf": 16,
-       "ga": 21,
-       "pts": 10,
-       "tid": 8273,
-       "form": "LLWDL"
+       "gf": 11,
+       "ga": 28,
+       "pts": 11,
+       "tid": 4967,
+       "form": "WLLWD"
       },
       {
        "pos": 15,
-       "team": "Wolfsberg",
-       "p": 12,
+       "team": "Bleiburg",
+       "p": 13,
        "w": 2,
        "d": 4,
-       "l": 6,
-       "gf": 10,
-       "ga": 27,
+       "l": 7,
+       "gf": 16,
+       "ga": 22,
        "pts": 10,
-       "tid": 4967,
-       "form": "DWLLW"
+       "tid": 8273,
+       "form": "LWDLL"
       },
       {
        "pos": 16,
        "team": "Donau Klagenfurt",
-       "p": 12,
+       "p": 13,
        "w": 1,
-       "d": 4,
+       "d": 5,
        "l": 7,
-       "gf": 12,
-       "ga": 22,
-       "pts": 7,
+       "gf": 13,
+       "ga": 23,
+       "pts": 8,
        "tid": 21723,
-       "form": "LLLWD"
+       "form": "LLWDD"
       }
      ]
     },
@@ -1101,15 +1101,15 @@
       {
        "pos": 3,
        "team": "Hohenems",
-       "p": 12,
-       "w": 9,
+       "p": 13,
+       "w": 10,
        "d": 0,
        "l": 3,
-       "gf": 28,
-       "ga": 14,
-       "pts": 27,
+       "gf": 33,
+       "ga": 16,
+       "pts": 30,
        "tid": 4945,
-       "form": "WWWLL"
+       "form": "WWLLW"
       },
       {
        "pos": 4,
@@ -1148,20 +1148,20 @@
        "ga": 23,
        "pts": 24,
        "tid": 8258,
-       "form": "WLWWW"
+       "form": "LWWWW"
       },
       {
        "pos": 7,
        "team": "Swarovski Tirol II",
-       "p": 12,
+       "p": 13,
        "w": 6,
        "d": 2,
-       "l": 4,
-       "gf": 34,
-       "ga": 20,
+       "l": 5,
+       "gf": 36,
+       "ga": 25,
        "pts": 20,
        "tid": 8344,
-       "form": "WWWLD"
+       "form": "WWLDL"
       },
       {
        "pos": 8,
@@ -1191,6 +1191,19 @@
       },
       {
        "pos": 10,
+       "team": "Lauterach",
+       "p": 13,
+       "w": 4,
+       "d": 3,
+       "l": 6,
+       "gf": 24,
+       "ga": 27,
+       "pts": 15,
+       "tid": 8255,
+       "form": "WLWWW"
+      },
+      {
+       "pos": 11,
        "team": "SVG Reichenau",
        "p": 13,
        "w": 4,
@@ -1203,7 +1216,7 @@
        "form": "LLWWL"
       },
       {
-       "pos": 11,
+       "pos": 12,
        "team": "Kufstein",
        "p": 13,
        "w": 3,
@@ -1216,30 +1229,17 @@
        "form": "LLWDW"
       },
       {
-       "pos": 12,
-       "team": "Lauterach",
-       "p": 12,
-       "w": 3,
-       "d": 3,
-       "l": 6,
-       "gf": 22,
-       "ga": 27,
-       "pts": 12,
-       "tid": 8255,
-       "form": "LWLWW"
-      },
-      {
        "pos": 13,
        "team": "Lochau",
-       "p": 12,
+       "p": 13,
        "w": 3,
        "d": 2,
-       "l": 7,
+       "l": 8,
        "gf": 16,
-       "ga": 29,
+       "ga": 31,
        "pts": 11,
        "tid": 8359,
-       "form": "LLDWL"
+       "form": "LDWLL"
       },
       {
        "pos": 14,
@@ -1265,7 +1265,7 @@
        "ga": 38,
        "pts": 7,
        "tid": 8361,
-       "form": "WDDLL"
+       "form": "DDLLL"
       },
       {
        "pos": 16,
