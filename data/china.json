@@ -405,6 +405,20 @@
     },
     {
      "pos": 9,
+     "team": "Changchun Yatai",
+     "p": 28,
+     "w": 11,
+     "d": 6,
+     "l": 11,
+     "gf": 45,
+     "ga": 45,
+     "pts": 35,
+     "ded": 4,
+     "tid": 834,
+     "form": "LDDDW"
+    },
+    {
+     "pos": 10,
      "team": "Dalian Huayi",
      "p": 28,
      "w": 8,
@@ -415,20 +429,6 @@
      "pts": 34,
      "tid": 5652,
      "form": "LLDDW"
-    },
-    {
-     "pos": 10,
-     "team": "Changchun Yatai",
-     "p": 27,
-     "w": 10,
-     "d": 6,
-     "l": 11,
-     "gf": 41,
-     "ga": 44,
-     "pts": 32,
-     "ded": 4,
-     "tid": 834,
-     "form": "DLDDD"
     },
     {
      "pos": 11,
@@ -487,16 +487,16 @@
     {
      "pos": 15,
      "team": "Meizhou Kejia",
-     "p": 27,
+     "p": 28,
      "w": 7,
      "d": 4,
-     "l": 16,
-     "gf": 25,
-     "ga": 54,
+     "l": 17,
+     "gf": 26,
+     "ga": 58,
      "pts": 16,
      "ded": 9,
      "tid": 1439,
-     "form": "WLDLL"
+     "form": "LDLLL"
     },
     {
      "pos": 16,
