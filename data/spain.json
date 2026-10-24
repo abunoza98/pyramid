@@ -57,13 +57,13 @@
     {
      "pos": 2,
      "team": "Atlético Madrid",
-     "p": 9,
-     "w": 7,
+     "p": 10,
+     "w": 8,
      "d": 1,
      "l": 1,
-     "gf": 19,
+     "gf": 20,
      "ga": 8,
-     "pts": 22,
+     "pts": 25,
      "tid": 530,
      "form": "WWWWW"
     },
@@ -161,15 +161,15 @@
     {
      "pos": 10,
      "team": "Deportivo La Coruña",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 5,
-     "l": 2,
+     "l": 3,
      "gf": 13,
-     "ga": 12,
+     "ga": 13,
      "pts": 11,
      "tid": 544,
-     "form": "DLDLD"
+     "form": "LDLDL"
     },
     {
      "pos": 11,
@@ -338,15 +338,15 @@
     {
      "pos": 1,
      "team": "Almería",
-     "p": 10,
+     "p": 11,
      "w": 8,
-     "d": 0,
+     "d": 1,
      "l": 2,
-     "gf": 20,
-     "ga": 7,
-     "pts": 24,
+     "gf": 22,
+     "ga": 9,
+     "pts": 25,
      "tid": 723,
-     "form": "WWWWW"
+     "form": "WWWWD"
     },
     {
      "pos": 2,
@@ -428,6 +428,19 @@
     },
     {
      "pos": 8,
+     "team": "Oviedo",
+     "p": 11,
+     "w": 5,
+     "d": 3,
+     "l": 3,
+     "gf": 15,
+     "ga": 12,
+     "pts": 18,
+     "tid": 718,
+     "form": "WLWWD"
+    },
+    {
+     "pos": 9,
      "team": "Burgos",
      "p": 10,
      "w": 5,
@@ -438,19 +451,6 @@
      "pts": 17,
      "tid": 9580,
      "form": "WWLLW"
-    },
-    {
-     "pos": 9,
-     "team": "Oviedo",
-     "p": 10,
-     "w": 5,
-     "d": 2,
-     "l": 3,
-     "gf": 13,
-     "ga": 10,
-     "pts": 17,
-     "tid": 718,
-     "form": "LWLWW"
     },
     {
      "pos": 10,
@@ -725,6 +725,19 @@
       },
       {
        "pos": 6,
+       "team": "Pontevedra",
+       "p": 9,
+       "w": 4,
+       "d": 2,
+       "l": 3,
+       "gf": 12,
+       "ga": 11,
+       "pts": 14,
+       "tid": 9407,
+       "form": "DLLWW"
+      },
+      {
+       "pos": 7,
        "team": "Extremadura",
        "p": 9,
        "w": 4,
@@ -737,7 +750,7 @@
        "form": "LWWDW"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Real Unión",
        "p": 9,
        "w": 3,
@@ -750,7 +763,7 @@
        "form": "LDDDW"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Ponferradina",
        "p": 9,
        "w": 3,
@@ -763,7 +776,7 @@
        "form": "DWLDD"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Mérida",
        "p": 8,
        "w": 4,
@@ -776,7 +789,7 @@
        "form": "LLWWW"
       },
       {
-       "pos": 10,
+       "pos": 11,
        "team": "Bilbao Athletic",
        "p": 9,
        "w": 3,
@@ -787,19 +800,6 @@
        "pts": 12,
        "tid": 9579,
        "form": "WLDLL"
-      },
-      {
-       "pos": 11,
-       "team": "Cultural Leonesa",
-       "p": 8,
-       "w": 3,
-       "d": 3,
-       "l": 2,
-       "gf": 9,
-       "ga": 7,
-       "pts": 12,
-       "tid": 725,
-       "form": "WDLWD"
       },
       {
        "pos": 12,
@@ -816,6 +816,19 @@
       },
       {
        "pos": 13,
+       "team": "Cultural Leonesa",
+       "p": 9,
+       "w": 3,
+       "d": 3,
+       "l": 3,
+       "gf": 10,
+       "ga": 9,
+       "pts": 12,
+       "tid": 725,
+       "form": "DLWDL"
+      },
+      {
+       "pos": 14,
        "team": "Avilés",
        "p": 9,
        "w": 3,
@@ -826,19 +839,6 @@
        "pts": 11,
        "tid": 9632,
        "form": "DLWWL"
-      },
-      {
-       "pos": 14,
-       "team": "Pontevedra",
-       "p": 8,
-       "w": 3,
-       "d": 2,
-       "l": 3,
-       "gf": 10,
-       "ga": 10,
-       "pts": 11,
-       "tid": 9407,
-       "form": "DDLLW"
       },
       {
        "pos": 15,

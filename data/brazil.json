@@ -83,15 +83,15 @@
     {
      "pos": 4,
      "team": "Athletico Paranaense",
-     "p": 31,
+     "p": 32,
      "w": 15,
-     "d": 8,
+     "d": 9,
      "l": 8,
-     "gf": 49,
-     "ga": 37,
-     "pts": 53,
+     "gf": 50,
+     "ga": 38,
+     "pts": 54,
      "tid": 134,
-     "form": "DWDWL"
+     "form": "WDWLD"
     },
     {
      "pos": 5,
@@ -148,15 +148,15 @@
     {
      "pos": 9,
      "team": "São Paulo",
-     "p": 31,
+     "p": 32,
      "w": 12,
-     "d": 6,
+     "d": 7,
      "l": 13,
-     "gf": 36,
-     "ga": 35,
-     "pts": 42,
+     "gf": 37,
+     "ga": 36,
+     "pts": 43,
      "tid": 126,
-     "form": "WLLWW"
+     "form": "LLWWD"
     },
     {
      "pos": 10,
@@ -174,15 +174,15 @@
     {
      "pos": 11,
      "team": "Botafogo",
-     "p": 31,
+     "p": 32,
      "w": 10,
      "d": 9,
-     "l": 12,
+     "l": 13,
      "gf": 44,
-     "ga": 48,
+     "ga": 51,
      "pts": 39,
      "tid": 120,
-     "form": "WLLDW"
+     "form": "LLDWL"
     },
     {
      "pos": 12,
@@ -200,28 +200,28 @@
     {
      "pos": 13,
      "team": "Vitória",
-     "p": 31,
+     "p": 32,
      "w": 10,
-     "d": 7,
+     "d": 8,
      "l": 14,
-     "gf": 34,
-     "ga": 45,
-     "pts": 37,
+     "gf": 35,
+     "ga": 46,
+     "pts": 38,
      "tid": 136,
-     "form": "DLWLD"
+     "form": "LWLDD"
     },
     {
      "pos": 14,
      "team": "Mirassol",
-     "p": 31,
+     "p": 32,
      "w": 9,
-     "d": 9,
+     "d": 10,
      "l": 13,
-     "gf": 36,
-     "ga": 44,
-     "pts": 36,
+     "gf": 37,
+     "ga": 45,
+     "pts": 37,
      "tid": 7848,
-     "form": "DWDLW"
+     "form": "WDLWD"
     },
     {
      "pos": 15,
@@ -238,6 +238,19 @@
     },
     {
      "pos": 16,
+     "team": "Internacional",
+     "p": 32,
+     "w": 8,
+     "d": 11,
+     "l": 13,
+     "gf": 36,
+     "ga": 40,
+     "pts": 35,
+     "tid": 119,
+     "form": "LWDLW"
+    },
+    {
+     "pos": 17,
      "team": "Corinthians",
      "p": 31,
      "w": 8,
@@ -248,19 +261,6 @@
      "pts": 33,
      "tid": 131,
      "form": "LLLLD"
-    },
-    {
-     "pos": 17,
-     "team": "Internacional",
-     "p": 31,
-     "w": 7,
-     "d": 11,
-     "l": 13,
-     "gf": 33,
-     "ga": 40,
-     "pts": 32,
-     "tid": 119,
-     "form": "WLWDL"
     },
     {
      "pos": 18,
@@ -655,7 +655,7 @@
        "ga": 15,
        "pts": 30,
        "tid": 7826,
-       "form": "WDLWD"
+       "form": "DLWDL"
       },
       {
        "pos": 4,
@@ -668,7 +668,7 @@
        "ga": 30,
        "pts": 30,
        "tid": 7833,
-       "form": "WDDWD"
+       "form": "DDWDW"
       },
       {
        "pos": 5,
@@ -895,7 +895,7 @@
        "ga": 7,
        "pts": 11,
        "tid": 7826,
-       "form": "WDLWD"
+       "form": "DLWDL"
       },
       {
        "pos": 2,
@@ -953,7 +953,7 @@
        "ga": 2,
        "pts": 11,
        "tid": 7833,
-       "form": "WDDWD"
+       "form": "DDWDW"
       },
       {
        "pos": 2,

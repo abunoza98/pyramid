@@ -328,15 +328,15 @@
     {
      "pos": 1,
      "team": "Saint-Étienne",
-     "p": 9,
-     "w": 7,
+     "p": 10,
+     "w": 8,
      "d": 1,
      "l": 1,
-     "gf": 22,
+     "gf": 23,
      "ga": 8,
-     "pts": 22,
+     "pts": 25,
      "tid": 1063,
-     "form": "WLDWW"
+     "form": "LDWWW"
     },
     {
      "pos": 2,
@@ -510,15 +510,15 @@
     {
      "pos": 15,
      "team": "Nantes",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 2,
-     "l": 5,
+     "l": 6,
      "gf": 11,
-     "ga": 16,
+     "ga": 17,
      "pts": 8,
      "tid": 83,
-     "form": "WLWDL"
+     "form": "LWDLL"
     },
     {
      "pos": 16,
