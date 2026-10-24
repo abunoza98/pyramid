@@ -38,6 +38,11 @@ if [ -f scripts/add-club-europe.mjs ]; then
   node scripts/add-club-europe.mjs
 fi
 
+# Keep domestic cup and European run history in one selector: e.g. FA Cup | EFL Cup | Europe.
+if [ -f scripts/unify-club-runs.mjs ]; then
+  node scripts/unify-club-runs.mjs
+fi
+
 if [ -z "$(git status --porcelain)" ]; then
   echo "No changes."
   exit 0
