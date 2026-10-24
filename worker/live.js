@@ -219,10 +219,19 @@ const KNOCKOUT = /play-?offs?|wild ?card|final|quarter|semi|1\/\d+-finals?|knock
 function fromApi(x, m, old, day) {
   const side = (t, g, o) => ({ id: t.id, n: (o && o.n) || t.name, g: g ?? null, b: o ? o.b : undefined });
   const round = String(x.league?.round || "");
+  const st = x.fixture.status?.short || "NS", hg = x.goals?.home ?? null, ag = x.goals?.away ?? null;
+  // The match clock. API-Football's half start times (periods) can be several minutes off (tonight's A-League game
+  // showed the second half starting exactly an hour after kick-off), so the pages count from the minute the API
+  // reports (status.elapsed) instead, anchored to when we read it (el at `at`). The anchor only moves when the
+  // score or status changes, so this adds no saves: minutes pass at the same rate either way, and half-time is a
+  // status change that sets a fresh anchor.
+  const el = x.fixture.status?.elapsed ?? null;
+  const keep = old && old.at && old.el != null && old.st === st && old.h?.g === hg && old.a?.g === ag;
+  const clockAnchor = el == null ? {} : keep ? { el: old.el, at: old.at } : { el, at: Math.floor(Date.now() / 1000) };
   return {
     id: x.fixture.id, c: m.c, l: m.l, g: m.g || null, day, ...(KNOCKOUT.test(round) ? { ko1: 1 } : {}),
     ko: x.fixture.timestamp, st: x.fixture.status?.short || "NS",
-    p1: x.fixture.periods?.first || null, p2: x.fixture.periods?.second || null,
+    p1: x.fixture.periods?.first || null, p2: x.fixture.periods?.second || null, ...clockAnchor,
     h: side(x.teams.home, x.goals?.home, old && old.h),
     a: side(x.teams.away, x.goals?.away, old && old.a)
   };
