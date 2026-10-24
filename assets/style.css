@@ -1132,3 +1132,11 @@ body[data-page="home"].hero-find-on .bar .finder { opacity: 0; visibility: hidde
 .cl-honours li i { grid-column: 1 / -1; font-style: normal; font-size: 12px; color: var(--muted); }
 .cl-honours .hn-note { margin: 6px 0 0; font-size: 12px; color: var(--muted); }
 .cl-honours > summary small { font-size: 12px; color: var(--muted); }
+
+/* Notes under a hand-kept competition (Australian Championship): who qualifies and the format. */
+.comp-about { margin: 28px 0 0; max-width: 70ch; font-size: 15px; }
+.comp-about h2 { font-size: 18px; margin: 20px 0 6px; }
+.comp-about p { margin: 6px 0; }
+.comp-q { margin: 6px 0; padding-left: 18px; display: grid; gap: 3px; }
+.comp-q small, .comp-about small { color: var(--muted); }
+.comp-src { color: var(--muted); font-size: 13px; }

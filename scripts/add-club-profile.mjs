@@ -138,7 +138,7 @@ function honoursHTML(items, clubName, tid, since) {
   for (const [k, h] of Object.entries(HONOURS)) {
     if (titles.has(k) || !k.startsWith(items.country + "/")) continue;
     const e = honourOf(k, clubName, tid);
-    if (e && e.v) titles.set(k, { key: k, text: items.names[k] || k.split("/")[1], ours: [] });
+    if (e && e.v) titles.set(k, { key: k, text: items.names[k] || h.name || k.split("/")[1], ours: [] });
   }
   const list = [...titles.values()].map((t) => {
     const h = honourOf(t.key, clubName, tid);

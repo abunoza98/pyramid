@@ -380,6 +380,9 @@ export const COUNTRIES = [
   {
     country: "australia", region: "asia", code: "AUS", name: "Australia", adjective: "Australian", apiCountry: "Australia",
     systemNote: "There's no promotion or relegation between the A-League and the state leagues. Within each state, clubs move between its NPL and its second division.",
+    // Kept by hand (no API covers it yet): data/manual/australia/australian-championship/<year>.json. Its own page,
+    // not a tier: clubs qualify through their state NPL and stay in it. See scripts/manual-comps.mjs.
+    manual: [{ id: "australian-championship", name: "Australian Championship", short: "AUS CH", feeder: "npl" }],
     // The A-League finals series, like the MLS playoffs, comes in the league's own fixtures (188) after the regular
     // season: only those rounds are kept. The API's round names for it vary by season, so the common ones are mapped.
     cups: [{ apiId: 188, id: "a-league-finals", name: "A-League Finals", short: "ALF",

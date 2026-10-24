@@ -20,6 +20,7 @@ import { seasonFor, seasonLabel, seasonSlug } from "./season.mjs";
 import { summarise, learnLabels } from "./cupruns.mjs";
 export { applyPlayoffRules, labelCupPlaces };
 import { contactPage, privacyPage } from "./pages.mjs";
+import { loadManual } from "./manual-comps.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const require = createRequire(import.meta.url);
@@ -297,6 +298,30 @@ function tierNames(c) {
   return { first, last };
 }
 
+// The "who qualifies" and format notes under a hand-kept competition (the Australian Championship).
+function manualAboutHTML(m, e, paths, rel, suffix) {
+  const esc = FP.esc;
+  const link = (team, tid) => {
+    const p = (tid && paths[tid]) || paths["n:" + FP.slug(team)];
+    return p ? `<a href="${esc(rel + p + suffix)}">${esc(team)}</a>` : esc(team);
+  };
+  const ord = (n) => n + (n % 10 === 1 && n % 100 !== 11 ? "st" : n % 10 === 2 && n % 100 !== 12 ? "nd" : n % 10 === 3 && n % 100 !== 13 ? "rd" : "th");
+  const q = e.qualifiers.map((x) => `<li><b>NPL ${esc(x.state)}</b> ${link(x.team, x.tid)}` +
+    (x.premierIsFoundation ? ` <small>(${ord(x.pos)}: the premiers, ${esc(x.premier)}, are a foundation club)</small>` : x.pos === 1 ? " <small>(premiers)</small>" : "") + "</li>").join("");
+  const foundation = (e.ed.foundation || []).map((n) => {
+    const row = e.comp.groups.flatMap((g) => g.rows).find((r) => r.team === n);
+    return link(n, row && row.tid);
+  }).join(", ");
+  return `<section class="comp-about" aria-labelledby="about-h"><h2 id="about-h">Who plays in it</h2>` +
+    `<p>Sixteen clubs: the eight foundation clubs, plus one club from each state's National Premier League. A state's place goes to its regular-season premiers; when the premiers are a foundation club (already in), it goes to the highest-placed club that isn't. It's a competition, not a division: there's no promotion to the A-League, and every club goes back to its state league the next season.</p>` +
+    (foundation ? `<p><b>Foundation clubs:</b> ${foundation}.</p>` : "") +
+    (q ? `<p><b>Qualified through the ${esc(e.season)} state leagues:</b></p><ul class="comp-q">${q}</ul>` : "") +
+    `<h2>Format</h2><p>Four groups of four, playing each other home and away (six games each). The top two in each group reach the quarter-finals, hosted by the group winners, then come one-off semi-finals and a final.` +
+    (e.ed.shootoutPoints ? " A drawn group game goes to a penalty shootout: the winner gets 2 points, the loser 1." : "") + "</p>" +
+    (e.ed.notes || []).map((n) => `<p>${esc(n)}</p>`).join("") +
+    `<p class="comp-src">${e.comp.final ? "Results entered by hand from published match reports" : "No live scores: results are added by hand after each matchday"} (last updated ${esc(new Date(e.ed.updated + "T12:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }))}).</p></section>`;
+}
+
 export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}) {
   const countries = await loadCountries(root);
   const history = await loadHistory(root);
@@ -307,6 +332,10 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     if (history[c.country]) history[c.country] = history[c.country].filter((h) => h.year < live);
   }
   const fixtures = await loadFixtures(root);
+  // Hand-kept competitions (the Australian Championship): the newest edition joins the fixtures, so its games
+  // show on club pages like any cup's.
+  const manual = await loadManual(root);
+  for (const [k, m] of Object.entries(manual)) fixtures[k] = m.editions[0].fx;
   const cupHistory = await loadCupHistory(root);
   // All-time titles per cup up to a season (data/cup-titles.json); later wins come from our own cup data.
   let cupTitles = {};
@@ -409,7 +438,11 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       if (fx) return { id: cup.id, name: cup.name, status: FP.cupStatus(fx), span: FP.cupSpan(fx), href: `${rel}${cup.id}/${suffix}` };
       const last = cupPast[`${c.country}/${cup.id}`][0];
       return { id: cup.id, name: cup.name, status: (cup.until ? `Ended in ${cup.until + 1} · ` : `${last.season}: `) + FP.cupStatus(last), span: "", href: `${rel}${cup.id}/${suffix}` };
-    });
+    })
+    .concat(Object.values(manual).filter((m) => m.cfg.country === c.country).map((m) => {
+      const e = m.editions[0];
+      return { id: m.def.id, name: m.def.name, status: `${e.season}: ${FP.compStatus(e.comp, e.fx)}`, span: "16 clubs from the state NPLs", href: `${rel}${m.def.id}/${suffix}` };
+    }));
   let europe = null;
   try { europe = JSON.parse(await readFile(path.join(root, "data", "europe.json"), "utf8")); } catch {}
   HAS_EUROPE = !!europe;
@@ -517,6 +550,27 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
           main: FP.cupMain(cup, p, { tz: "venue", seasons: picker("../", p.year), fxPaths: pathsForFx(p, c.country), root: "../../../", suffix })
         }));
         cupPastUrls.push(`/${c.country}/${cup.id}/${slug(p.year, c.country)}/`);
+      }
+    }
+    // Hand-kept competitions: the newest edition at /<country>/<id>/, earlier ones at /<country>/<id>/<year>/.
+    for (const m of Object.values(manual).filter((x) => x.cfg.country === c.country)) {
+      const { def } = m;
+      const picker = (rel, onYear) => m.editions.map((e, i) => ({ label: e.season, href: i === 0 ? (rel || "./") + suffix : `${rel}${e.year}/${suffix}`, current: onYear === (i === 0 ? null : e.year) }));
+      for (const [i, e] of m.editions.entries()) {
+        const rel = i === 0 ? "../../" : "../../../";
+        const paths = { ...pathsForFx(e.fx, c.country), ...pathsFor(e.comp) };
+        const seasons = m.editions.length > 1 ? picker(i === 0 ? "" : "../", i === 0 ? null : e.year) : null;
+        const dir = i === 0 ? `${c.country}/${def.id}/` : `${c.country}/${def.id}/${e.year}/`;
+        await write(`${dir}index.html`, shell({
+          title: `${def.name} ${e.season}: groups, bracket and results | Football Pyramids`,
+          description: `The ${def.name} ${e.season}: the group tables, the knockout bracket, every result, and how each state's NPL club qualified.`,
+          canonical: `${SITE}/${dir}`, base: rel, suffix, page: "comp-history", country: c.country, stamps: {}, countries, seasons,
+          main: FP.compMain(e.comp, e.fx, { tz: "venue", country: c.country, eyebrow: `${c.name} · National second tier`, seasons, clubPaths: paths, root: rel, suffix,
+            lede: e.comp.final ? "The group tables, the knockout bracket and every result." : "The group tables, every result so far and the fixtures to come; the bracket fills in once the groups are done.",
+            koEmpty: "The top two in each group go through to the quarter-finals. The ties appear here once the group stage is over.",
+            after: manualAboutHTML(m, e, paths, rel, suffix) })
+        }));
+        if (i === 0) cupUrls.push(`/${dir}`); else cupPastUrls.push(`/${dir}`);
       }
     }
     // Fixtures pages, one per league and cup

@@ -826,6 +826,7 @@
     if (f.ht && (on || done) && f.st !== "1H") notes.push("HT " + f.ht[0] + "–" + f.ht[1]);
     if (f.st === "AET") notes.push("After extra time");
     if (f.pen) notes.push("Penalties " + f.pen[0] + "–" + f.pen[1]);
+    if (f.so && !f.pen && done) notes.push(esc((f.so === "h" ? f.h.n : f.a.n) + " won the shootout"));
     if (f.v) notes.push(esc(f.v));
     var win = done && hasScore ? (f.hg > f.ag ? "h" : f.hg < f.ag ? "a" : "") : "";
     if (tags && done) {
@@ -844,7 +845,7 @@
   }
 
   function roundRange(r, tz) {
-    var ts = r.fixtures.filter(function (f) { return !GONE[f.st] && f.st !== "TBD"; }).map(function (f) { return f.ts; });
+    var ts = r.fixtures.filter(function (f) { return !GONE[f.st] && f.st !== "TBD" && !f.nodate; }).map(function (f) { return f.ts; });
     if (!ts.length) return "";
     var a = Math.min.apply(null, ts), b = Math.max.apply(null, ts);
     var da = fmt(a, tz, { day: "numeric", month: "short" }), db = fmt(b, tz, { day: "numeric", month: "short" });
@@ -863,7 +864,7 @@
     var days = [], byDay = {}, off = [];
     games.forEach(function (f) {
       if (GONE[f.st] && !isLive(f) && f.st !== "ABD" && f.st !== "AWD") { off.push(f); return; }
-      var d = fmt(f.ts, vz(f, tz), { weekday: "long", day: "numeric", month: "long" });
+      var d = f.nodate ? "Date not confirmed" : fmt(f.ts, vz(f, tz), { weekday: "long", day: "numeric", month: "long" });
       if (!byDay[d]) { byDay[d] = []; days.push(d); }
       byDay[d].push(f);
     });
@@ -1051,8 +1052,8 @@
 
   // The knockout bracket: one column per round. Each round's ties are put in the order of the round after it,
   // so winners line up with where they go next. Rounds not yet drawn simply aren't there yet.
-  function bracketHTML(rounds, tz, now, links) {
-    if (!rounds.length) return '<p class="ko-empty">The knockout ties appear here as soon as each draw is made, after the league phase.</p>';
+  function bracketHTML(rounds, tz, now, links, empty) {
+    if (!rounds.length) return '<p class="ko-empty">' + esc(empty || "The knockout ties appear here as soon as each draw is made, after the league phase.") + "</p>";
     var cols = rounds.map(function (r) { return { label: r.label, ties: tiesOf(r) }; });
     for (var k = cols.length - 2; k >= 0; k--) {
       var next = cols[k + 1].ties, pos = {};
@@ -1083,7 +1084,8 @@
 
   // "League phase · matchday 3 of 8", "Round of 16", "Final" etc.
   function compStatus(comp, fx) {
-    if (!fx) return "League phase";
+    var phase = comp && comp.groups ? "Group stage" : "League phase";
+    if (!fx) return phase;
     var rounds = fx.groups[0].rounds;
     var ko = rounds.filter(function (r) { return r.fixtures[0] && r.fixtures[0].stage === "ko"; });
     var lp = rounds.filter(function (r) { return r.fixtures[0] && r.fixtures[0].stage === "lp"; });
@@ -1097,9 +1099,9 @@
       }
       return /^knockout/i.test(open.label) ? open.label : "Knockouts: " + open.label.toLowerCase().replace(/^\w/, function (c) { return c.toUpperCase(); });
     }
-    var done = lp.filter(finished).length;
-    if (lp.length && done === lp.length) return "League phase complete";
-    if (lp.length) return "League phase · " + done + " of " + lp.length + " matchdays played";
+    var done = lp.filter(finished).length, of = Math.max(lp.length, (comp && comp.matchdays) || 0);
+    if (lp.length && done === of) return phase + " complete";
+    if (lp.length) return phase + " · " + done + " of " + of + (comp && comp.groups ? " rounds" : " matchdays") + " played";
     return "Qualifying";
   }
 
@@ -1107,7 +1109,7 @@
     opts = opts || {};
     var links = opts.fxPaths || opts.clubPaths ? { paths: opts.fxPaths || opts.clubPaths, root: opts.root || "", suffix: opts.suffix || "" } : null;
     var mode = opts.tz === "local" ? "local" : "venue", now = opts.now || Date.now();
-    var tz = zoneOfMode(mode, "europe");
+    var zc = opts.country || "europe", tz = zoneOfMode(mode, zc);
     var lpRounds = fx ? stageRounds(fx, "lp", opts.live) : [];
     var ko = fx ? stageRounds(fx, "ko", opts.live) : [];
     var q = fx ? stageRounds(fx, "q", opts.live) : [];
@@ -1122,19 +1124,19 @@
     };
     var panel = function (k, html) { return '<div class="tf-panel' + (k === first ? " on" : "") + '" data-panel="' + k + '" role="tabpanel">' + html + "</div>"; };
     return '<section class="intro fx-intro" aria-labelledby="intro-h">' +
-      '<p class="eyebrow">UEFA · ' + esc(fx ? fx.season : "") + "</p>" +
+      '<p class="eyebrow">' + esc(opts.eyebrow || "UEFA") + " · " + esc(fx ? fx.season : "") + "</p>" +
       '<h1 id="intro-h"><span class="comp-dot c-' + esc(comp.id) + '" aria-hidden="true"></span>' + esc(comp.name) + "</h1>" +
       (opts.seasons ? seasonsHTML({ name: comp.name, season: fx ? fx.season : "" }, opts.seasons) : "") +
-      '<p class="lede"><strong>' + esc(compStatus(comp, fx)) + "</strong> · " + (comp.final ? (comp.groups ? "The group-stage tables" : "The league-phase table") + ", the full knockout bracket and every fixture and result, qualifying included."
+      '<p class="lede"><strong>' + esc(compStatus(comp, fx)) + "</strong> · " + (opts.lede ? esc(opts.lede) : comp.final ? (comp.groups ? "The group-stage tables" : "The league-phase table") + ", the full knockout bracket and every fixture and result, qualifying included."
         : "The league-phase table, the knockout bracket as each draw is made, and every fixture and result.") + "</p></section>" +
       '<section class="comp" data-tabs="stage"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Stages">' +
       tab("lp", comp.groups ? "Group stage" : "League phase") + (fx ? tab("fx", "Fixtures and results") : "") +
       tab("ko", "Knockouts") + (inQual ? tab("q", "Qualifying") : "") + "</div>" +
       panel("lp", (comp.rows && !comp.rows.length && !comp.groups ? '<p class="ko-empty">No table for this season.</p>'
         : tierHTML(markQualified(opts.clubPaths ? Object.assign(comp, { _paths: opts.clubPaths, _root: opts.root || "", _suffix: opts.suffix || "" }) : comp), { eyebrow: comp.groups ? "Group stage" : "League phase" }))) +
-      (fx ? panel("fx", fxTabHTML(fx, { tzZone: tz, tzLine: tzLine(mode, "europe"), now: now, live: opts.live, round: opts.fxRound, myClub: opts.myClub, links: links })) : "") +
-      panel("ko", !ko.length && !comp.final && projectedHTML(comp) ? projectedHTML(comp) : bracketHTML(ko, tz, now, links)) +
-      (inQual ? panel("q", qualifyingHTML(q, tz, now, links)) : "") + "</section>";
+      (fx ? panel("fx", fxTabHTML(fx, { tzZone: tz, tzLine: tzLine(mode, zc), now: now, live: opts.live, round: opts.fxRound, myClub: opts.myClub, links: links })) : "") +
+      panel("ko", !ko.length && !comp.final && projectedHTML(comp) ? projectedHTML(comp) : bracketHTML(ko, tz, now, links, opts.koEmpty)) +
+      (inQual ? panel("q", qualifyingHTML(q, tz, now, links)) : "") + "</section>" + (opts.after || "");
   }
 
   // The /europe/ page: a card per competition.
