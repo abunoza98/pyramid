@@ -61,7 +61,7 @@ ${emailLine(contact.email)}
 </article>`;
 }
 
-export function privacyPage({ contact }) {
+export function privacyPage({ contact, analytics = false }) {
   const who = contact.operator
     ? `Football Pyramids is run by ${esc(contact.operator)}, based in ${esc(contact.based)}.`
     : `Football Pyramids is an independent website run from ${esc(contact.based)}.`;
@@ -83,7 +83,9 @@ ${emailLine(contact.email)}
 
 <h2>Hosting</h2>
 <p>The site is hosted by Cloudflare. Like any web host, Cloudflare processes your IP address and basic details about your browser when you visit, so it can deliver pages and protect the site from attacks. We don't use these details to identify you. Cloudflare's <a href="https://www.cloudflare.com/privacypolicy/">privacy policy</a> explains how it handles this data. Live scores load from a separate service of ours, also run on Cloudflare (on its workers.dev address).</p>
-
+${analytics ? `<h2>Visitor statistics</h2>
+<p>We count visits with Cloudflare Web Analytics, to see which pages people use. It doesn't use cookies or store anything on your device, doesn't collect personal data and doesn't follow you across other sites.</p>
+` : ""}
 <h2>What's stored in your browser</h2>
 <p>If you use the club finder, the site remembers the club you picked in your browser's local storage, so it's highlighted on your next visit. This stays on your device and is never sent to us. To remove it, clear the club finder with the × button or clear your browser's data for this site.</p>
 <p>On fixtures pages, if you switch between times in your own time zone and local kick-off times, that choice is stored the same way.</p>

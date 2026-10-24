@@ -12,6 +12,10 @@ export const ADS = false;
 export const LIVE_URL = "https://footballpyramids-live.shrill-breeze-e2a5.workers.dev/live.json";
 // Google AdSense publisher ID. The AdSense script loads on every page and ads.txt is written from this.
 export const ADSENSE_CLIENT = "ca-pub-3336933659025894";
+// Cloudflare Web Analytics: visitor numbers with no cookies and no personal data. Paste the site token from
+// Cloudflare (Analytics & Logs > Web Analytics > the site > Manage site > JS snippet: the "token" value). Leave "" for
+// none, or if you switch on Cloudflare's automatic setup instead, which adds the same script without this.
+export const ANALYTICS_TOKEN = "";
 
 export const CONTACT = { email: "hello@footballpyramids.com", operator: "Arrow Sport Pty Ltd", based: "Australia" };
 

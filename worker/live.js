@@ -6,6 +6,10 @@
      - Secret            API_FOOTBALL_KEY   your API-Football key
      - KV namespace       LIVE               bound under the name LIVE
      - Cron trigger       * * * * *          (every minute)
+   Optional:
+     - Variable          WRITE_CAP          most KV saves a day (default 20000). The worker saves at most once a
+                                            minute, so it can't use more than 1,440 a day; the cap is a safety net.
+                                            On the free plan set it to 950 (the free tier allows 1,000).
    It reads the list of leagues and the current tables from the site itself (data/live-leagues.json and data/<country>.json),
    so adding a league to the site needs no change here.
 
@@ -18,7 +22,10 @@ const LIVE = ["1H", "HT", "2H", "ET", "BT", "P", "SUSP", "INT", "LIVE"];
 const DONE = ["FT", "AET", "PEN"];
 const OFF = ["PST", "CANC", "ABD", "AWD", "WO"];
 const SCHEDULE_EVERY_MS = 3 * 3600 * 1000;   // re-check today's fixture list every 3 hours (kick-off changes)
-const WRITE_CAP = 950;                          // stay under KV's free 1,000 writes a day
+// Most KV saves a day, set by the WRITE_CAP variable in the dashboard. The Workers Paid plan includes about 33,000 a
+// day (1 million a month) and the worker can't save more than once a minute (1,440 a day), so the default is only a
+// safety net against a bug saving in a loop.
+const DEFAULT_WRITE_CAP = 20000;
 const GAP_MS = 2500;                            // gap between API requests in the same minute
 
 export default {
@@ -206,7 +213,8 @@ export async function tick(env, opts = {}) {
   // 4. Save only if something changed.
   if (JSON.stringify({ ...s, updated: 0, writes: null }) === before) return { wrote: false, state: s };
   if (s.writes.day !== today) s.writes = { day: today, n: 0 };
-  if (s.writes.n >= WRITE_CAP) { console.log("daily write cap reached"); return { wrote: false, state: s }; }
+  const cap = Number(env.WRITE_CAP) > 0 ? Number(env.WRITE_CAP) : DEFAULT_WRITE_CAP;
+  if (s.writes.n >= cap) { console.log("daily write cap reached"); return { wrote: false, state: s }; }
   s.writes.n++;
   s.updated = now;
   await env.LIVE.put("state", JSON.stringify(s));
