@@ -13,7 +13,7 @@ import path from "node:path";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
-import { COUNTRIES, EUROPE, SITE, CONTACT, ADS, ADSENSE_CLIENT, LIVE_URL, venueZone } from "./leagues.mjs";
+import { COUNTRIES, EUROPE, SITE, CONTACT, ADS, ADSENSE_CLIENT, ANALYTICS_TOKEN, LIVE_URL, venueZone } from "./leagues.mjs";
 import { zoneAt, applyPlayoffRules, labelCupPlaces } from "./zones.mjs";
 import { regroupEurope } from "./rounds.mjs";
 import { seasonFor, seasonLabel, seasonSlug } from "./season.mjs";
@@ -118,7 +118,7 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
 <link rel="preload" href="${base}assets/fonts/big-shoulders-display-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${base}assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${base}assets/style.css?v=${VER["style.css"]}">
-${suffix ? "" : ldScript(jsonld)}${ADSENSE_CLIENT && !suffix ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>\n` : ""}</head>
+${ANALYTICS_TOKEN && !suffix ? `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "${esc(ANALYTICS_TOKEN)}"}'></script>\n` : ""}${suffix ? "" : ldScript(jsonld)}${ADSENSE_CLIENT && !suffix ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>\n` : ""}</head>
 <body${ADS ? "" : ' class="no-ads"'} data-page="${page}" data-base="${base}" data-index="${suffix}"${country ? ` data-country="${country}"` : ""} data-countries="${featured.map((c) => c.country).join(",")}"${page === "home" ? ` data-others="${esc(JSON.stringify(others.map(FP.summary)))}"` : ""} data-stamps="${esc(JSON.stringify(stamps))}"${seasons ? ` data-seasons="${esc(JSON.stringify(seasons))}"` : ""}${LIVE_URL && ["home", "country", "fixtures", "europe", "comp", "cup", "club"].includes(page) ? ` data-live="${esc(LIVE_URL)}"` : ""}${Object.entries(attrs).map(([k, v]) => ` data-${k}="${esc(typeof v === "string" ? v : JSON.stringify(v))}"`).join("")}>
 <header class="bar">
   <div class="bar-inner">
@@ -887,7 +887,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     title: "Privacy policy | Football Pyramids",
     description: "How Football Pyramids handles data, cookies and advertising.",
     canonical: `${SITE}/privacy/`, base: "../", suffix, page: "static", stamps: {}, countries,
-    main: privacyPage({ contact: CONTACT })
+    main: privacyPage({ contact: CONTACT, analytics: !!ANALYTICS_TOKEN })
   }));
 
   // Club index retained for compatibility, plus a unified search index for clubs and leagues.
