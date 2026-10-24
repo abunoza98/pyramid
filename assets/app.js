@@ -272,6 +272,7 @@
     applyViews();
     var games2 = document.querySelector("#main-content .strip-list");
     if (games2) { games2.scrollLeft = gamesX; requestAnimationFrame(function () { stripArrows(games2); }); }
+    requestAnimationFrame(bracketLines);
     window.scrollTo(0, y);
   }
   /* ---------- Table / Form switch: re-sort a division by points from the last five games ---------- */
@@ -324,17 +325,116 @@
       box.querySelectorAll("[data-panel]").forEach(function (p) { p.classList.toggle("on", p.getAttribute("data-panel") === want); });
     });
   }
+
+  /* ---------- Knockout bracket connector lines ----------
+     The bracket renderer already orders ties so later rounds line up. Draw the actual progression over that layout:
+     use the winner/participant name when the next round is known, and only fall back to pair-by-pair linking when a
+     round cleanly halves. This also handles formats such as A-League/UEFA rounds where new seeded clubs can enter. */
+  function bracketLines() {
+    document.querySelectorAll(".bracket").forEach(function (br) {
+      var old = br.querySelector(".br-lines");
+      if (old) old.remove();
+      var oldNote = br.previousElementSibling;
+      if (oldNote && oldNote.classList && oldNote.classList.contains("br-progress")) oldNote.remove();
+      if (!br.offsetWidth || !br.offsetHeight) return;   // hidden tab: draw when it is opened
+
+      var cols = Array.prototype.slice.call(br.children).filter(function (x) { return x.classList && x.classList.contains("br-col"); });
+      if (cols.length < 2) return;
+      br.style.position = "relative";
+      cols.forEach(function (c) { c.style.position = "relative"; c.style.zIndex = "1"; });
+
+      var finalTies = cols[cols.length - 1].querySelectorAll(".tie");
+      if (finalTies.length > 1) {
+        var h = cols[cols.length - 1].querySelector(".br-h");
+        var note = document.createElement("p");
+        note.className = "br-progress";
+        note.textContent = "Bracket currently shown through " + (h ? h.textContent.trim() : "this round") + ". Later rounds appear here once they are drawn.";
+        note.style.margin = "14px 0 -6px";
+        note.style.fontSize = "13px";
+        note.style.color = "var(--muted)";
+        br.parentNode.insertBefore(note, br);
+      }
+
+      var rect = br.getBoundingClientRect(), w = br.scrollWidth, hgt = br.scrollHeight;
+      var ns = "http://www.w3.org/2000/svg";
+      var svg = document.createElementNS(ns, "svg");
+      svg.setAttribute("class", "br-lines");
+      svg.setAttribute("aria-hidden", "true");
+      svg.setAttribute("width", w);
+      svg.setAttribute("height", hgt);
+      svg.setAttribute("viewBox", "0 0 " + w + " " + hgt);
+      svg.style.position = "absolute";
+      svg.style.left = "0";
+      svg.style.top = "0";
+      svg.style.width = w + "px";
+      svg.style.height = hgt + "px";
+      svg.style.pointerEvents = "none";
+      svg.style.zIndex = "0";
+      svg.style.overflow = "visible";
+
+      var names = function (tie) { return (tie.getAttribute("data-teams") || "").split("|").filter(Boolean); };
+      var hasName = function (tie, name) { return name && names(tie).indexOf(name) > -1; };
+      var winnerName = function (tie) {
+        var rows = tie.querySelectorAll(".tie-team"), ns2 = names(tie);
+        for (var i = 0; i < rows.length; i++) if (rows[i].classList.contains("tie-won")) return ns2[i] || null;
+        return null;
+      };
+      var targetFor = function (tie, i, current, next) {
+        var win = winnerName(tie), mine = names(tie), found = [];
+        if (win) {
+          for (var a = 0; a < next.length; a++) if (hasName(next[a], win)) return next[a];
+        }
+        for (var b = 0; b < next.length; b++) {
+          if (mine.some(function (n) { return hasName(next[b], n); })) found.push(next[b]);
+        }
+        if (found.length === 1) return found[0];
+        if (current.length === next.length * 2) return next[Math.floor(i / 2)] || null;
+        return null;
+      };
+
+      for (var c = 0; c < cols.length - 1; c++) {
+        var current = Array.prototype.slice.call(cols[c].querySelectorAll(".tie"));
+        var next = Array.prototype.slice.call(cols[c + 1].querySelectorAll(".tie"));
+        current.forEach(function (tie, i) {
+          var target = targetFor(tie, i, current, next);
+          if (!target) return;
+          var a = tie.getBoundingClientRect(), b = target.getBoundingClientRect();
+          var x1 = a.right - rect.left + br.scrollLeft;
+          var y1 = a.top + a.height / 2 - rect.top + br.scrollTop;
+          var x2 = b.left - rect.left + br.scrollLeft;
+          var y2 = b.top + b.height / 2 - rect.top + br.scrollTop;
+          if (x2 <= x1) return;
+          var mid = x1 + (x2 - x1) / 2;
+          var p = document.createElementNS(ns, "path");
+          p.setAttribute("d", "M " + x1 + " " + y1 + " H " + mid + " V " + y2 + " H " + x2);
+          p.setAttribute("fill", "none");
+          p.setAttribute("stroke", "var(--rule-strong)");
+          p.setAttribute("stroke-width", "1.5");
+          p.setAttribute("stroke-linecap", "round");
+          p.setAttribute("stroke-linejoin", "round");
+          p.setAttribute("vector-effect", "non-scaling-stroke");
+          svg.appendChild(p);
+        });
+      }
+      if (svg.childNodes.length) br.insertBefore(svg, br.firstChild);
+    });
+  }
+
   document.addEventListener("click", function (e) {
     var b = e.target.closest && e.target.closest("[data-tab]");
     if (!b) return;
     var box = b.closest("[data-tabs]");
     tabState[box.getAttribute("data-tabs")] = b.getAttribute("data-tab");
     applyTabs();
+    requestAnimationFrame(bracketLines);
     // Competition and cup pages: the address ends in #fixtures while that tab is open, so it can be shared.
     if (FX_TABS.indexOf(box.getAttribute("data-tabs")) > -1 && history.replaceState) {
       history.replaceState(null, "", location.pathname + location.search + (b.getAttribute("data-tab") === "fx" ? "#fixtures" : ""));
     }
   });
+  window.addEventListener("resize", function () { requestAnimationFrame(bracketLines); });
+  requestAnimationFrame(bracketLines);
+
   /* ---------- Today's games: horizontal strip with explicit controls ---------- */
   function stripArrows(row) {
     if (!row) return;
@@ -503,6 +603,7 @@
     }
     redraw(html);
     applyTabs();
+    requestAnimationFrame(bracketLines);
     liveShown = relevant().length > 0;
   }
   function refreshTables() {
