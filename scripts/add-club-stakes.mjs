@@ -94,6 +94,15 @@ function stakeParts(lg, rows, me) {
   return parts.slice(0, 2);
 }
 
+function placeStake(html, stake) {
+  const nextMatch = html.match(/<section class="next-match[^"]*"[\s\S]*?<\/section>/);
+  if (nextMatch) return html.replace(nextMatch[0], nextMatch[0] + stake);
+  const journey = '<section class="cl-sec" id="journey">';
+  if (html.includes(journey)) return html.replace(journey, stake + journey);
+  const fixtures = '<div class="cl-cols">';
+  return html.includes(fixtures) ? html.replace(fixtures, stake + fixtures) : html;
+}
+
 let changed = 0;
 for (const cfg of COUNTRIES) {
   let country;
@@ -109,13 +118,11 @@ for (const cfg of COUNTRIES) {
         let html;
         try { html = await readFile(file, "utf8"); } catch { continue; }
 
-        // Idempotent on repeated scheduled builds: only write when the final page really differs.
+        // Idempotent on repeated scheduled builds. Remove either the original class or the story-positioned version.
         const original = html;
-        html = html.replace(/<p class="cup-note cl-stakes">[\s\S]*?<\/p>/, "");
-        const stake = `<p class="cup-note cl-stakes"><strong>What’s at stake:</strong> ${parts.map(esc).join(" · ")}</p>`;
-        const marker = '<p class="fx-links">';
-        if (!html.includes(marker)) continue;
-        const next = html.replace(marker, stake + marker);
+        html = html.replace(/<p class="cup-note (?:cl-stakes|club-stakes)"(?: data-club-stakes)?[\s\S]*?<\/p>/, "");
+        const stake = `<p class="cup-note club-stakes" data-club-stakes><strong>What’s at stake:</strong> ${parts.map(esc).join(" · ")}</p>`;
+        const next = placeStake(html, stake);
         if (next !== original) { await writeFile(file, next); changed++; }
       }
     }
