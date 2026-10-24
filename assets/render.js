@@ -689,7 +689,9 @@
     suffix = suffix || "";
     others = others || [];
     opts = opts || {};
-    var all = countries.map(summary).concat(others);
+    // `countries` are the featured ones by definition. Mark them so here, because the browser's redraw uses the
+    // data files, which don't carry the flag (without it the picker would open on Europe, not England).
+    var all = countries.map(function (c) { var s = summary(c); s.featured = true; return s; }).concat(others);
     var names = {};   // club ID -> name as shown on the site, for the strip
     countries.forEach(function (c) { c.leagues.forEach(function (lg) { groupsOf(lg).forEach(function (g) { g.rows.forEach(function (r) { if (r.tid) names[r.tid] = r.team; }); }); }); });
     // The newest date across every table on the page (all tiers, plus the Champions League), so the hero never shows
