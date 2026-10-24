@@ -204,35 +204,32 @@
     $("club-find").focus();
   });
 
-
   /* ---------- Live refresh ----------
      Official tables: data/<country>.json, re-read every 5 minutes.
      Live scores: the live worker's /live.json, read every 30 seconds while a game is on and
      every 5 minutes otherwise. The page is redrawn with FP.applyLive() laid over the official tables. */
   var LIVE_URL = body.getAttribute("data-live") || "";
-  var current = {};   // country -> updated stamp on screen
+  var current = {};
   try { current = JSON.parse(body.getAttribute("data-stamps") || "{}"); } catch (e) {}
-  var official = {};  // country -> official data
+  var official = {};
   var live = null, liveText = "", liveShown = false, lastTables = 0;
   var seasons = null;
   try { seasons = JSON.parse(body.getAttribute("data-seasons") || "null"); } catch (e) {}
   var MINE = PAGE === "country" || PAGE === "cup" ? [COUNTRY] : PAGE === "europe" || PAGE === "comp" ? ["europe"] : COUNTRIES;
   var STATUSES = {}, EUROPE_SUM = null, compFx = null, compFxLoaded = false;
   try { STATUSES = JSON.parse(body.getAttribute("data-statuses") || "{}"); } catch (e) {}
-  // The home page shows the Champions League table too, so it also loads data/europe.json.
   if (PAGE === "home" && body.getAttribute("data-europe")) MINE = MINE.concat(["europe"]);
-  // The home page's strip shows every country's games, not just the featured ones.
-  var CLUBPATHS = null;   // club pages by club ID, for tables that mix countries (Europe)
+  var CLUBPATHS = null;
   try { CLUBPATHS = JSON.parse(body.getAttribute("data-clubpaths") || "null"); } catch (e) {}
-  var CUPSMAP = {};   // the home page's cup chips, by country
+  var CUPSMAP = {};
   try { CUPSMAP = JSON.parse(body.getAttribute("data-cupsmap") || "{}"); } catch (e) {}
-  var CUPS = [];   // a country page's cup cards
+  var CUPS = [];
   try { CUPS = JSON.parse(body.getAttribute("data-cups") || "[]"); } catch (e) {}
-  var FIXLINKS = {};   // links from each table to its fixtures page
+  var FIXLINKS = {};
   try { FIXLINKS = JSON.parse(body.getAttribute("data-fixtures") || "{}"); } catch (e) {}
-  var MOVERS = [];   // the home page's "Up and down this season" lines
+  var MOVERS = [];
   try { MOVERS = JSON.parse(body.getAttribute("data-movers") || "[]"); } catch (e) {}
-  var OTHERS = [];   // the home page's "More pyramids" cards
+  var OTHERS = [];
   try { OTHERS = JSON.parse(body.getAttribute("data-others") || "[]"); } catch (e) {}
   var initialAnchor = PAGE === "country" && location.hash.length > 1 && location.hash !== "#club" ? location.hash.slice(1) : null;
 
@@ -249,12 +246,9 @@
   function redraw(html) {
     var y = window.scrollY;
     var open = {};
-    // Keep open/closed sections as the visitor left them (only those with an id, plus the seasons list).
     var key = function (d) { return d.id || (d.classList.contains("seasons") ? "seasons" : null); };
     document.querySelectorAll("#main-content details").forEach(function (d) { var k = key(d); if (k) open[k] = d.open; });
-    // The home page's club search is moved across rather than redrawn, so typing (and focus) survives a live update.
     var heroFind = $("hero-find-box");
-    // Sideways rows keep their scroll position through live redraws.
     var wheel = document.querySelector("#main-content .xp-tabs"), wheelX = wheel ? wheel.scrollLeft : 0;
     var games = document.querySelector("#main-content .strip-list"), gamesX = games ? games.scrollLeft : 0;
     $("main-content").innerHTML = html;
@@ -273,6 +267,7 @@
     applyViews();
     var games2 = document.querySelector("#main-content .strip-list");
     if (games2) { games2.scrollLeft = gamesX; requestAnimationFrame(function () { stripArrows(games2); }); }
+    requestAnimationFrame(bracketLines);
     if (initialAnchor) {
       var anchor = document.getElementById(initialAnchor);
       if (anchor) {
@@ -281,8 +276,8 @@
       } else window.scrollTo(0, y);
     } else window.scrollTo(0, y);
   }
-  /* ---------- Table / Form switch: re-sort a division by points from the last five games ---------- */
-  var views = {};   // division id -> "form", kept when the page redraws
+
+  var views = {};
   function sortRows(sec, byForm) {
     sec.classList.toggle("by-form", byForm);
     sec.querySelectorAll(".tview button").forEach(function (b) {
@@ -309,7 +304,6 @@
     sortRows(sec, byForm);
   });
 
-  // Column headings stick below the header bar, whose height changes with screen width.
   function setBarHeight() {
     var bar = document.querySelector(".bar");
     if (bar) document.documentElement.style.setProperty("--bar-h", bar.offsetHeight + "px");
@@ -317,9 +311,8 @@
   setBarHeight();
   window.addEventListener("resize", setBarHeight);
 
-  /* ---------- Tabs on the home page (pyramid explorer, top-flight tables) ---------- */
   document.documentElement.classList.add("js");
-  var tabState = {};   // tab group -> chosen tab, kept when the page redraws
+  var tabState = {};
   function applyTabs() {
     document.querySelectorAll("[data-tabs]").forEach(function (box) {
       var want = tabState[box.getAttribute("data-tabs")];
@@ -331,17 +324,103 @@
       box.querySelectorAll("[data-panel]").forEach(function (p) { p.classList.toggle("on", p.getAttribute("data-panel") === want); });
     });
   }
+
+  /* ---------- Knockout bracket connector lines ---------- */
+  function bracketLines() {
+    document.querySelectorAll(".bracket").forEach(function (br) {
+      var old = br.querySelector(".br-lines");
+      if (old) old.remove();
+      var oldNote = br.previousElementSibling;
+      if (oldNote && oldNote.classList && oldNote.classList.contains("br-progress")) oldNote.remove();
+      if (!br.offsetWidth || !br.offsetHeight) return;
+      var cols = Array.prototype.slice.call(br.children).filter(function (x) { return x.classList && x.classList.contains("br-col"); });
+      if (cols.length < 2) return;
+      br.style.position = "relative";
+      cols.forEach(function (c) { c.style.position = "relative"; c.style.zIndex = "1"; });
+      var finalTies = cols[cols.length - 1].querySelectorAll(".tie");
+      if (finalTies.length > 1) {
+        var h = cols[cols.length - 1].querySelector(".br-h");
+        var note = document.createElement("p");
+        note.className = "br-progress";
+        note.textContent = "Bracket currently shown through " + (h ? h.textContent.trim() : "this round") + ". Later rounds appear here once they are drawn.";
+        note.style.margin = "14px 0 -6px";
+        note.style.fontSize = "13px";
+        note.style.color = "var(--muted)";
+        br.parentNode.insertBefore(note, br);
+      }
+      var rect = br.getBoundingClientRect(), w = br.scrollWidth, hgt = br.scrollHeight;
+      var ns = "http://www.w3.org/2000/svg";
+      var svg = document.createElementNS(ns, "svg");
+      svg.setAttribute("class", "br-lines");
+      svg.setAttribute("aria-hidden", "true");
+      svg.setAttribute("width", w);
+      svg.setAttribute("height", hgt);
+      svg.setAttribute("viewBox", "0 0 " + w + " " + hgt);
+      svg.style.position = "absolute";
+      svg.style.left = "0";
+      svg.style.top = "0";
+      svg.style.width = w + "px";
+      svg.style.height = hgt + "px";
+      svg.style.pointerEvents = "none";
+      svg.style.zIndex = "0";
+      svg.style.overflow = "visible";
+      var names = function (tie) { return (tie.getAttribute("data-teams") || "").split("|").filter(Boolean); };
+      var hasName = function (tie, name) { return name && names(tie).indexOf(name) > -1; };
+      var winnerName = function (tie) {
+        var rows = tie.querySelectorAll(".tie-team"), ns2 = names(tie);
+        for (var i = 0; i < rows.length; i++) if (rows[i].classList.contains("tie-won")) return ns2[i] || null;
+        return null;
+      };
+      var targetFor = function (tie, i, current, next) {
+        var win = winnerName(tie), mine = names(tie), found = [];
+        if (win) for (var a = 0; a < next.length; a++) if (hasName(next[a], win)) return next[a];
+        for (var b = 0; b < next.length; b++) if (mine.some(function (n) { return hasName(next[b], n); })) found.push(next[b]);
+        if (found.length === 1) return found[0];
+        if (current.length === next.length * 2) return next[Math.floor(i / 2)] || null;
+        return null;
+      };
+      for (var c = 0; c < cols.length - 1; c++) {
+        var current = Array.prototype.slice.call(cols[c].querySelectorAll(".tie"));
+        var next = Array.prototype.slice.call(cols[c + 1].querySelectorAll(".tie"));
+        current.forEach(function (tie, i) {
+          var target = targetFor(tie, i, current, next);
+          if (!target) return;
+          var a = tie.getBoundingClientRect(), b = target.getBoundingClientRect();
+          var x1 = a.right - rect.left + br.scrollLeft;
+          var y1 = a.top + a.height / 2 - rect.top + br.scrollTop;
+          var x2 = b.left - rect.left + br.scrollLeft;
+          var y2 = b.top + b.height / 2 - rect.top + br.scrollTop;
+          if (x2 <= x1) return;
+          var mid = x1 + (x2 - x1) / 2;
+          var p = document.createElementNS(ns, "path");
+          p.setAttribute("d", "M " + x1 + " " + y1 + " H " + mid + " V " + y2 + " H " + x2);
+          p.setAttribute("fill", "none");
+          p.setAttribute("stroke", "var(--rule-strong)");
+          p.setAttribute("stroke-width", "1.5");
+          p.setAttribute("stroke-linecap", "round");
+          p.setAttribute("stroke-linejoin", "round");
+          p.setAttribute("vector-effect", "non-scaling-stroke");
+          svg.appendChild(p);
+        });
+      }
+      if (svg.childNodes.length) br.insertBefore(svg, br.firstChild);
+    });
+  }
+
   document.addEventListener("click", function (e) {
     var b = e.target.closest && e.target.closest("[data-tab]");
     if (!b) return;
     var box = b.closest("[data-tabs]");
     tabState[box.getAttribute("data-tabs")] = b.getAttribute("data-tab");
     applyTabs();
-    // Competition and cup pages: the address ends in #fixtures while that tab is open, so it can be shared.
+    requestAnimationFrame(bracketLines);
     if (FX_TABS.indexOf(box.getAttribute("data-tabs")) > -1 && history.replaceState) {
       history.replaceState(null, "", location.pathname + location.search + (b.getAttribute("data-tab") === "fx" ? "#fixtures" : ""));
     }
   });
+  window.addEventListener("resize", function () { requestAnimationFrame(bracketLines); });
+  requestAnimationFrame(bracketLines);
+
   /* ---------- Today's games: horizontal strip with explicit controls ---------- */
   function stripArrows(row) {
     if (!row) return;
@@ -376,17 +455,13 @@
   window.addEventListener("resize", stripRows);
   stripRows();
 
-  /* ---------- The home page's country picker: a sideways-scrolling row with arrows for mouse users ---------- */
   function wheelArrows(row) {
     var wheel = row.parentNode, max = row.scrollWidth - row.clientWidth;
     var prev = wheel.querySelector(".xp-arrow.prev"), next = wheel.querySelector(".xp-arrow.next");
-    var loop = !!row.getAttribute("data-loop");   // a looping row never runs out in either direction
+    var loop = !!row.getAttribute("data-loop");
     if (prev) prev.disabled = !loop && row.scrollLeft <= 2;
     if (next) next.disabled = !loop && row.scrollLeft >= max - 2;
   }
-  /* Endless scrolling: when the row is wider than the screen, a copy of the countries goes either side of the real
-     ones, and whenever the view drifts into a copy it's moved back by exactly one set, which looks the same. The
-     copies are hidden from screen readers and the keyboard; clicking one picks that country as usual. */
   function loopWheel(row) {
     if (row.getAttribute("data-loop") || row.scrollWidth <= row.clientWidth + 2) return;
     var items = Array.prototype.slice.call(row.children);
@@ -423,21 +498,17 @@
     var row = a.parentNode.querySelector(".xp-tabs");
     row.scrollBy({ left: Number(a.getAttribute("data-xp-scroll")) * row.clientWidth * 0.8, behavior: "smooth" });
   });
-  // Scroll events don't bubble, so listen in the capture phase.
   document.addEventListener("scroll", function (e) {
     var row = e.target;
     if (!(row && row.classList && row.classList.contains("xp-tabs"))) return;
     wheelArrows(row);
     if (!row.getAttribute("data-loop")) return;
-    // Move back into the real set once scrolling settles (moving it mid-swipe or mid-animation would jolt), or straight
-    // away at the very ends, where the browser would otherwise stop.
     var max = row.scrollWidth - row.clientWidth;
     if (row.scrollLeft <= 1 || row.scrollLeft >= max - 1) recentre(row);
     clearTimeout(loopTimers[0]);
     loopTimers[0] = setTimeout(function () { recentre(row); }, 140);
   }, true);
   window.addEventListener("resize", wheels);
-  // On first load, bring the chosen country into view.
   function showChosen() {
     document.querySelectorAll(".xp-tabs").forEach(function (row) {
       loopWheel(row);
@@ -450,13 +521,9 @@
   }
   showChosen();
 
-
-  // Arriving at /<competition>/#fixtures (old fixtures pages redirect here) opens that tab.
   var FX_TABS = ["stage", "cup"];
   if (location.hash === "#fixtures") { FX_TABS.forEach(function (k) { tabState[k] = "fx"; }); applyTabs(); }
 
-  /* ---------- Fixtures and results tab (competition and cup pages) ----------
-     Every round is on the page; the picker shows one. The choice survives live redraws. */
   function showRound(nav, i) {
     var panel = nav.parentNode, rounds = panel.querySelectorAll(".fx-round");
     i = Math.max(0, Math.min(i, rounds.length - 1));
@@ -495,21 +562,20 @@
       if (!compFx) return;
       html = FP.cupMain({ name: compFx.name, country: COUNTRY }, compFx, { tz: fxState.tz, live: live, seasons: seasons, fxRound: fxState.round, myClub: myClub,
         fxPaths: CLUBPATHS, root: BASE, suffix: SUFFIX });
-    }
-    else if (PAGE === "europe") html = FP.europeMain(withLive[0], { statuses: STATUSES, base: "", suffix: SUFFIX, clubPaths: CLUBPATHS, root: BASE });
+    } else if (PAGE === "europe") html = FP.europeMain(withLive[0], { statuses: STATUSES, base: "", suffix: SUFFIX, clubPaths: CLUBPATHS, root: BASE });
     else if (PAGE === "comp") {
       var id = body.getAttribute("data-league");
       var comp = withLive[0].leagues.filter(function (l) { return l.id === id; })[0];
       if (!comp) return;
       html = FP.compMain(comp, compFx, { tz: fxState.tz, live: live, seasons: seasons, fxRound: fxState.round, myClub: myClub,
         clubPaths: CLUBPATHS, root: BASE, suffix: SUFFIX });
-    }
-    else {
+    } else {
       var eu = MINE.indexOf("europe") > -1 ? withLive[MINE.indexOf("europe")] : null;
       html = FP.homeMain(withLive.filter(function (c) { return c.country !== "europe"; }), BASE, SUFFIX, OTHERS, { live: live, fixtures: FIXLINKS, europe: eu, cups: CUPSMAP, clubPaths: CLUBPATHS, movers: MOVERS });
     }
     redraw(html);
     applyTabs();
+    requestAnimationFrame(bracketLines);
     liveShown = relevant().length > 0;
   }
   function refreshTables() {
@@ -533,7 +599,6 @@
         return true;
       });
   }
-  // How long until the next look at live scores.
   function nextDelay() {
     var now = Date.now() / 1000, soon = false, on = false;
     relevant().forEach(function (f) {
@@ -548,7 +613,6 @@
     if (!window.fetch || !window.FP || ["home", "country", "europe", "comp", "cup"].indexOf(PAGE) < 0) return;
     if (document.hidden) return;
     var needTables = !lastTables || Date.now() - lastTables > REFRESH_MS;
-    // A competition page also needs its fixtures (for the bracket and qualifying ties), once.
     var needFx = (PAGE === "comp" || PAGE === "cup") && !compFxLoaded;
     var fxLoad = needFx ? fetch(BASE + "data/fixtures/" + (PAGE === "cup" ? COUNTRY : "europe") + "/" + body.getAttribute("data-league") + ".json?t=" + Date.now(), { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
@@ -556,14 +620,11 @@
     Promise.all([needTables ? refreshTables() : Promise.resolve(false), refreshLive(), fxLoad]).then(function (res) {
       var tablesChanged = res[0] || res[2], liveChanged = res[1];
       var anyLive = relevant().some(FP.isLive);
-      // Redraw when the tables or scores change, every cycle while a game is on (the clock moves),
-      // and once more when the last game drops off so the page goes back to the official tables.
       if (tablesChanged || (liveChanged && (relevant().length || liveShown)) || anyLive) render();
       timer = setTimeout(cycle, nextDelay());
     });
   }
 
-  /* ---------- "More" countries menu: close it when tapping elsewhere ---------- */
   document.addEventListener("click", function (e) {
     document.querySelectorAll(".nav-more[open]").forEach(function (open) { if (!open.contains(e.target)) open.open = false; });
   });
@@ -572,7 +633,6 @@
     if (open && e.key === "Escape") { open.open = false; open.querySelector("summary").focus(); }
   });
 
-  /* ---------- Copy buttons (contact email) ---------- */
   document.addEventListener("click", function (e) {
     var btn = e.target.closest && e.target.closest(".copy");
     if (!btn) return;
@@ -582,8 +642,6 @@
     else toast(text);
   });
 
-  /* ---------- Privacy and cookie settings ----------
-     Appears once Google's consent tool (AdSense Privacy & messaging) is on the page. */
   var ps = $("privacy-settings");
   if (ps) {
     window.googlefc = window.googlefc || {};
@@ -594,11 +652,7 @@
     });
   }
 
-  /* ---------- Fixtures pages ----------
-     The page arrives showing the current round in UK time. Here it switches to the visitor's time zone,
-     lets them move between rounds and groups, and lays today's live scores over the list. */
   var TZ_KEY = "pyramid:tz";
-
   var fxData = null, fxState = { tz: "local", group: 0, round: null };
   try { var savedTz = localStorage.getItem(TZ_KEY); if (savedTz === "venue" || savedTz === "uk") fxState.tz = "venue"; } catch (e) {}
   function fxRender() {
@@ -637,7 +691,6 @@
       fxRender();
     });
   }
-  // Your time / local kick-off time switch (fixtures and competition pages). The choice is remembered.
   document.addEventListener("click", function (e) {
     var t = e.target.closest && e.target.closest(".tz-toggle");
     if (!t) return;
@@ -656,21 +709,15 @@
     });
   }
 
-  /* ---------- Club pages ----------
-     Rendered by the build; here the dates and times switch to the visitor's time zone. */
-  // Pyramid chart dots and form chips: on touch screens the first tap shows the label, a second tap opens the table.
   document.addEventListener("click", function (e) {
     var dot = e.target.closest ? e.target.closest(".ld, .fchip") : null;
     var open = document.querySelectorAll(".ld.open, .fchip.open");
     for (var i = 0; i < open.length; i++) if (open[i] !== dot) open[i].classList.remove("open");
     if (!dot) return;
     var canHover = window.matchMedia && window.matchMedia("(hover: hover)").matches;
-    // Form chips: hover only with a mouse; on touch screens a tap shows the label until something else is tapped.
     if (dot.classList.contains("fchip")) { if (!canHover) dot.classList.toggle("open"); return; }
     if (!canHover && !dot.classList.contains("open")) { e.preventDefault(); dot.classList.add("open"); }
   });
-  // Keep a label on screen. Its side (left, centred, right) is set by where its chip or dot usually sits, but on a
-  // phone the form chips can wrap onto a new line, so measure once it shows and nudge it back inside the screen.
   function fitTip(host) {
     var tip = host && host.querySelector(".ltip");
     if (!tip) return;
@@ -686,9 +733,6 @@
     document.addEventListener(type, function (e) { fitTip(e.target.closest ? e.target.closest(".ld, .fchip") : null); });
   });
   function clubRender() { if (window.FP) FP.retime($("main-content"), fxState.tz, COUNTRY); }
-  /* Live scores on club pages. The page is built from the fixture files (checked every two hours), so a game in
-     progress shows whatever score it had then. Here the live worker's scores are laid over the next-match card and
-     the fixture rows, matched by fixture ID, every 30 seconds while one of this club's games is on. */
   var CLUB_DONE = ["FT", "AET", "PEN"], clubTimer = null;
   function clubLive() {
     clearTimeout(clubTimer);
@@ -720,10 +764,6 @@
     });
   }
 
-  /* ---------- Installable app ----------
-     Registers sw.js so phones can add the site to the home screen and open it offline. Only on the live site
-     (https, or localhost when testing), not in the offline preview build. To switch it off for everyone, replace
-     this register() call with: navigator.serviceWorker.getRegistrations().then(function (rs) { rs.forEach(function (r) { r.unregister(); }); }); */
   if ("serviceWorker" in navigator && !body.getAttribute("data-index") &&
       (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
     window.addEventListener("load", function () {
@@ -731,7 +771,6 @@
     });
   }
 
-  /* ---------- Start ---------- */
   var arrivedForClub = location.hash === "#club";
   if (arrivedForClub && history.replaceState) history.replaceState(null, "", location.pathname + location.search);
   applyClub(arrivedForClub);
