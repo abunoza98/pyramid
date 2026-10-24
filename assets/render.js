@@ -154,6 +154,12 @@
   // "67′", "HT", "45+′" etc. Worked out from when each half kicked off, so it ticks without new data.
   function clock(f, now) {
     now = (now || Date.now()) / 1000;
+    // From the minute the API last reported (el, read at `at`), plus the time since: it matches the match clock where
+    // the API's half start times don't. Older feeds without it fall back to counting from the half start.
+    if ((f.st === "1H" || f.st === "2H") && f.el != null && f.at) {
+      var e = f.el + Math.max(0, Math.floor((now - f.at) / 60));
+      return f.st === "1H" ? (e > 45 ? "45+′" : Math.max(1, e) + "′") : (e > 90 ? "90+′" : Math.max(46, e) + "′");
+    }
     if (f.st === "1H" && f.p1) { var m = Math.floor((now - f.p1) / 60) + 1; return m > 45 ? "45+′" : Math.max(1, m) + "′"; }
     if (f.st === "2H" && f.p2) { var n = 45 + Math.floor((now - f.p2) / 60) + 1; return n > 90 ? "90+′" : Math.max(46, n) + "′"; }
     return { HT: "HT", ET: "ET", BT: "ET", P: "Pens", SUSP: "Susp.", INT: "Stopped", FT: "FT", AET: "AET", PEN: "Pens" }[f.st] || "Live";
