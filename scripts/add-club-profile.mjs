@@ -82,6 +82,7 @@ function homeStadium(fx, clubName, tid) {
 }
 
 function championText(cfg, cup) {
+  if (cup.championName) return `${cup.championName} winner`;   // shown without " winner" on the Honours line
   if (!cup.championOf) return `${cup.name} winner`;
   if (cup.championLabel) {
     if (/^(mls|a-league|.*\bcup\b)/i.test(cup.championLabel)) return cup.championLabel;
