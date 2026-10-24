@@ -1,0 +1,179 @@
+name: Implement playoff champions in historical tables
+
+on:
+  push:
+    branches:
+      - feature/playoff-champions-history
+
+permissions:
+  contents: write
+
+jobs:
+  implement:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/playoff-champions-history
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Patch source
+        shell: bash
+        run: |
+          python <<'PY'
+          from pathlib import Path
+
+          p = Path('scripts/leagues.mjs')
+          s = p.read_text()
+          old = '''      dist: { "Elimination finals": 2, "Semi-finals": 1, "Grand Final": 0 } }],'''
+          new = '''      dist: { "Elimination finals": 2, "Semi-finals": 1, "Grand Final": 0 },
+      championOf: "a-league", championLabel: "Grand Final winner" }],'''
+          if old not in s:
+            raise SystemExit('A-League Finals config marker not found')
+          s = s.replace(old, new, 1)
+
+          old = '''        dist: { "Wild card": 4, "Round One": 3, "Conference semi-finals": 2, "Conference finals": 1, "MLS Cup final": 0 } }],'''
+          new = '''        dist: { "Wild card": 4, "Round One": 3, "Conference semi-finals": 2, "Conference finals": 1, "MLS Cup final": 0 },
+        championOf: "mls", championLabel: "MLS Cup winner" }],'''
+          if old not in s:
+            raise SystemExit('MLS Cup Playoffs config marker not found')
+          s = s.replace(old, new, 1)
+          p.write_text(s)
+
+          p = Path('scripts/build.mjs')
+          s = p.read_text()
+          old = '''  // Cups on a past season's pyramid: who won each that season, linking to that season's cup page when it has one
+  // (its ties have been saved by scripts/backfill-cups.mjs), otherwise shown without a link.
+  const pastCupCards = (c, year, rel) => ((COUNTRIES.find((x) => x.country === c.country) || {}).cups || []).map((cup) => {
+    const sum = ((cupHistory[c.country] || {})[cup.id] || []).find((x) => x.year === year);
+    if (!sum) return null;
+    const fx = fixtures[`${c.country}/${cup.id}`];
+    const past = (cupPast[`${c.country}/${cup.id}`] || []).filter((p) => !fx || p.season !== fx.season);
+    const own = (fx ? past : past.slice(1)).some((p) => p.year === year);
+    const href = own ? `${rel}${cup.id}/${slug(year, c.country)}/${suffix}` : !fx && past[0] && past[0].year === year ? `${rel}${cup.id}/${suffix}` : null;
+    const w = sum.winner, fin = w && sum.clubs && sum.clubs[w.id];
+    const status = w ? `Won by ${w.n}` + (fin && fin[3] ? ` (beat ${fin[3]}${fin[4] ? " " + fin[4] : ""} in the final)` : "") : "";
+    return { id: cup.id, name: cup.name, status, span: "", href };
+  }).filter(Boolean);'''
+          new = '''  // Where a saved cup/finals season lives. When there is no current edition yet, the latest completed
+  // one is deliberately served at the competition root; older editions have their own season folder.
+  const pastCupHref = (c, cup, year, rel) => {
+    const fx = fixtures[`${c.country}/${cup.id}`];
+    const past = (cupPast[`${c.country}/${cup.id}`] || []).filter((p) => !fx || p.season !== fx.season);
+    const own = (fx ? past : past.slice(1)).some((p) => p.year === year);
+    return own ? `${rel}${cup.id}/${slug(year, c.country)}/${suffix}` : !fx && past[0] && past[0].year === year ? `${rel}${cup.id}/${suffix}` : null;
+  };
+  // Cups on a past season's pyramid: who won each that season, linking to the bracket/ties when saved.
+  const pastCupCards = (c, year, rel) => ((COUNTRIES.find((x) => x.country === c.country) || {}).cups || []).map((cup) => {
+    const sum = ((cupHistory[c.country] || {})[cup.id] || []).find((x) => x.year === year);
+    if (!sum) return null;
+    const href = pastCupHref(c, cup, year, rel);
+    const w = sum.winner, fin = w && sum.clubs && sum.clubs[w.id];
+    const status = w ? `Won by ${w.n}` + (fin && fin[3] ? ` (beat ${fin[3]}${fin[4] ? " " + fin[4] : ""} in the final)` : "") : "";
+    return { id: cup.id, name: cup.name, status, span: "", href };
+  }).filter(Boolean);
+  // Some leagues crown their champion through a postseason rather than the regular-season table (A-League, MLS).
+  // Mark that postseason winner on the historical league table and link the badge to that season's bracket.
+  const markPostseasonChampions = (c, season, rel) => {
+    const cfg = COUNTRIES.find((x) => x.country === c.country);
+    if (!cfg) return season;
+    for (const cup of (cfg.cups || []).filter((x) => x.championOf)) {
+      const sum = ((cupHistory[c.country] || {})[cup.id] || []).find((x) => x.year === season.year);
+      const winner = sum && sum.winner;
+      const lg = season.leagues.find((x) => x.id === cup.championOf);
+      if (!winner || !lg) continue;
+      const rows = FP.groupsOf(lg).flatMap((g) => g.rows);
+      const clean = (n) => FP.slug(n).replace(/-fc$/, "");
+      const row = rows.find((r) => winner.id && r.tid && Number(r.tid) === Number(winner.id)) ||
+        rows.find((r) => FP.slug(r.team) === FP.slug(winner.n)) || rows.find((r) => clean(r.team) === clean(winner.n));
+      if (!row) continue;
+      row.title = { label: cup.championLabel || `${cup.name} winner`, href: pastCupHref(c, cup, season.year, rel) };
+    }
+    return season;
+  };'''
+          if old not in s:
+            raise SystemExit('pastCupCards block not found')
+          s = s.replace(old, new, 1)
+
+          old = '''      labelCupPlaces(markOutcomes(applyPlayoffRules(h), next));
+      const n = tierNames(h);'''
+          new = '''      labelCupPlaces(markOutcomes(applyPlayoffRules(h), next));
+      markPostseasonChampions(c, h, "../");
+      const n = tierNames(h);'''
+          if old not in s:
+            raise SystemExit('historical season marker not found')
+          s = s.replace(old, new, 1)
+          p.write_text(s)
+
+          p = Path('assets/render.js')
+          s = p.read_text()
+          old = '''        (r.out ? '<span class="out ' + r.out + '">' + OUT[r.out] + "</span>" : "") +
+        (r.q ? '<span class="qtag ' + r.q + '" title="' + esc(QTAG[r.q][1]) + '">' + QTAG[r.q][0] + "</span>" : "") +'''
+          new = '''        (r.out ? '<span class="out ' + r.out + '">' + OUT[r.out] + "</span>" : "") +
+        (r.title ? (r.title.href ? '<a class="out champ" href="' + esc(r.title.href) + '" title="Open the postseason bracket">🏆 ' + esc(r.title.label) + "</a>"
+          : '<span class="out champ">🏆 ' + esc(r.title.label) + "</span>") : "") +
+        (r.q ? '<span class="qtag ' + r.q + '" title="' + esc(QTAG[r.q][1]) + '">' + QTAG[r.q][0] + "</span>" : "") +'''
+          if old not in s:
+            raise SystemExit('row badge marker not found')
+          s = s.replace(old, new, 1)
+          p.write_text(s)
+
+          p = Path('assets/style.css')
+          s = p.read_text()
+          old = '''.out.po-lost { background: var(--down); }
+.out.po-stayed { background: var(--muted); }'''
+          new = '''.out.po-lost { background: var(--down); }
+.out.po-stayed { background: var(--muted); }
+.out.champ { background: var(--ink); text-decoration: none; }
+.out.champ:hover { text-decoration: underline; text-underline-offset: 2px; }'''
+          if old not in s:
+            raise SystemExit('outcome CSS marker not found')
+          s = s.replace(old, new, 1)
+          p.write_text(s)
+          PY
+
+      - name: Validate JavaScript
+        run: |
+          node --check assets/render.js
+          node --check scripts/build.mjs
+          node --check scripts/leagues.mjs
+
+      - name: Build preview
+        run: |
+          rm -rf /tmp/pyramid-preview
+          node scripts/build.mjs --preview /tmp/pyramid-preview
+
+      - name: Validate historical champions and brackets
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const assert = require('assert');
+          const au = fs.readFileSync('/tmp/pyramid-preview/australia/2025-26/index.html', 'utf8');
+          const us = fs.readFileSync('/tmp/pyramid-preview/usa/2025/index.html', 'utf8');
+          assert(au.includes('Auckland FC'));
+          assert(au.includes('🏆 Grand Final winner'));
+          assert(au.includes('a-league-finals/'));
+          assert(us.includes('Inter Miami'));
+          assert(us.includes('🏆 MLS Cup winner'));
+          assert(us.includes('mls-cup-playoffs/'));
+          const auBracket = fs.readFileSync('/tmp/pyramid-preview/australia/a-league-finals/index.html', 'utf8');
+          const usBracket = fs.readFileSync('/tmp/pyramid-preview/usa/mls-cup-playoffs/index.html', 'utf8');
+          assert(auBracket.includes('Grand Final'));
+          assert(usBracket.includes('MLS Cup'));
+          const us24 = fs.readFileSync('/tmp/pyramid-preview/usa/2024/index.html', 'utf8');
+          assert(us24.includes('🏆 MLS Cup winner'));
+          assert(us24.includes('../mls-cup-playoffs/2024/index.html'));
+          assert(fs.existsSync('/tmp/pyramid-preview/usa/mls-cup-playoffs/2024/index.html'));
+          console.log('Historical playoff champions and bracket links validated');
+          NODE
+
+      - name: Commit implementation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/implement-playoff-champions-history.yml
+          git add scripts/leagues.mjs scripts/build.mjs assets/render.js assets/style.css
+          git commit -m "feat: mark playoff champions in historical tables"
+          git push origin feature/playoff-champions-history
