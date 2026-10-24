@@ -4,7 +4,7 @@
  "adjective": "French",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-23T00:00:00.000Z",
+ "updated": "2026-10-24T00:00:00.000Z",
  "belowNote": "Promoted clubs from National 1 come up",
  "leagues": [
   {
@@ -288,7 +288,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-23T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   },
   {
    "id": "ligue-2",
@@ -432,15 +432,15 @@
     {
      "pos": 9,
      "team": "Dijon",
-     "p": 9,
+     "p": 10,
      "w": 3,
      "d": 3,
-     "l": 3,
-     "gf": 16,
-     "ga": 16,
+     "l": 4,
+     "gf": 17,
+     "ga": 18,
      "pts": 12,
      "tid": 89,
-     "form": "DWWWL"
+     "form": "WWWLL"
     },
     {
      "pos": 10,
@@ -483,6 +483,19 @@
     },
     {
      "pos": 13,
+     "team": "Rodez",
+     "p": 10,
+     "w": 3,
+     "d": 1,
+     "l": 6,
+     "gf": 16,
+     "ga": 22,
+     "pts": 10,
+     "tid": 1301,
+     "form": "LLLLW"
+    },
+    {
+     "pos": 14,
      "team": "Boulogne",
      "p": 9,
      "w": 1,
@@ -495,7 +508,7 @@
      "form": "DDLDW"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Nantes",
      "p": 9,
      "w": 2,
@@ -508,7 +521,7 @@
      "form": "WLWDL"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Grenoble",
      "p": 10,
      "w": 2,
@@ -521,7 +534,7 @@
      "form": "WDLLL"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Clermont",
      "p": 10,
      "w": 0,
@@ -532,19 +545,6 @@
      "pts": 7,
      "tid": 99,
      "form": "DDLDL"
-    },
-    {
-     "pos": 17,
-     "team": "Rodez",
-     "p": 9,
-     "w": 2,
-     "d": 1,
-     "l": 6,
-     "gf": 14,
-     "ga": 21,
-     "pts": 7,
-     "tid": 1301,
-     "form": "LLLLL"
     },
     {
      "pos": 18,
@@ -560,7 +560,7 @@
      "form": "LDLDL"
     }
    ],
-   "updated": "2026-10-23T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   },
   {
    "id": "ligue-3",

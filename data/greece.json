@@ -4,7 +4,7 @@
  "adjective": "Greek",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-22T00:00:00.000Z",
+ "updated": "2026-10-24T00:00:00.000Z",
  "belowNote": "Gamma Ethniki group winners come up",
  "leagues": [
   {
@@ -252,15 +252,15 @@
     {
      "pos": 2,
      "team": "Kallithea",
-     "p": 7,
+     "p": 8,
      "w": 5,
-     "d": 1,
+     "d": 2,
      "l": 1,
-     "gf": 9,
-     "ga": 4,
-     "pts": 16,
+     "gf": 10,
+     "ga": 5,
+     "pts": 17,
      "tid": 2095,
-     "form": "WWWWD"
+     "form": "WWWDD"
     },
     {
      "pos": 3,
@@ -277,45 +277,58 @@
     },
     {
      "pos": 4,
-     "team": "Larisa",
-     "p": 7,
-     "w": 3,
-     "d": 3,
-     "l": 1,
-     "gf": 9,
-     "ga": 4,
-     "pts": 12,
-     "tid": 953,
-     "form": "WWDLD"
+     "team": "Panserraikos",
+     "p": 8,
+     "w": 4,
+     "d": 2,
+     "l": 2,
+     "gf": 12,
+     "ga": 8,
+     "pts": 14,
+     "tid": 2099,
+     "form": "WDWDW"
     },
     {
      "pos": 5,
-     "team": "Panserraikos",
-     "p": 7,
+     "team": "Larisa",
+     "p": 8,
      "w": 3,
-     "d": 2,
-     "l": 2,
-     "gf": 9,
-     "ga": 6,
-     "pts": 11,
-     "tid": 2099,
-     "form": "LWDWD"
+     "d": 4,
+     "l": 1,
+     "gf": 10,
+     "ga": 5,
+     "pts": 13,
+     "tid": 953,
+     "form": "WDLDD"
     },
     {
      "pos": 6,
-     "team": "Ellas Syros",
-     "p": 7,
-     "w": 2,
-     "d": 4,
-     "l": 1,
-     "gf": 9,
-     "ga": 4,
-     "pts": 10,
-     "tid": 22244,
-     "form": "WDDLD"
+     "team": "Niki Volos",
+     "p": 8,
+     "w": 3,
+     "d": 2,
+     "l": 3,
+     "gf": 10,
+     "ga": 8,
+     "pts": 11,
+     "tid": 5056,
+     "form": "WDWDW"
     },
     {
      "pos": 7,
+     "team": "Ellas Syros",
+     "p": 8,
+     "w": 2,
+     "d": 4,
+     "l": 2,
+     "gf": 11,
+     "ga": 7,
+     "pts": 10,
+     "tid": 22244,
+     "form": "DDLDL"
+    },
+    {
+     "pos": 8,
      "team": "Panthrakikos",
      "p": 7,
      "w": 2,
@@ -328,33 +341,7 @@
      "form": "WLDLD"
     },
     {
-     "pos": 8,
-     "team": "Niki Volos",
-     "p": 7,
-     "w": 2,
-     "d": 2,
-     "l": 3,
-     "gf": 8,
-     "ga": 8,
-     "pts": 8,
-     "tid": 5056,
-     "form": "LWDWD"
-    },
-    {
      "pos": 9,
-     "team": "Apollon Pontou",
-     "p": 7,
-     "w": 2,
-     "d": 2,
-     "l": 3,
-     "gf": 6,
-     "ga": 7,
-     "pts": 8,
-     "tid": 2102,
-     "form": "LWDWL"
-    },
-    {
-     "pos": 10,
      "team": "Anagennisi Karditsas",
      "p": 7,
      "w": 2,
@@ -367,7 +354,7 @@
      "form": "DLLWW"
     },
     {
-     "pos": 11,
+     "pos": 10,
      "team": "Asteras Tripolis II",
      "p": 7,
      "w": 2,
@@ -380,7 +367,33 @@
      "form": "WLWDD"
     },
     {
+     "pos": 11,
+     "team": "Nestos Chrisoupolis",
+     "p": 8,
+     "w": 2,
+     "d": 2,
+     "l": 4,
+     "gf": 7,
+     "ga": 10,
+     "pts": 8,
+     "tid": 12367,
+     "form": "LLLDW"
+    },
+    {
      "pos": 12,
+     "team": "Apollon Pontou",
+     "p": 8,
+     "w": 2,
+     "d": 2,
+     "l": 4,
+     "gf": 6,
+     "ga": 9,
+     "pts": 8,
+     "tid": 2102,
+     "form": "WDWLL"
+    },
+    {
+     "pos": 13,
      "team": "PAOK II",
      "p": 7,
      "w": 2,
@@ -393,30 +406,17 @@
      "form": "WLDLW"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Olympiacos B",
-     "p": 7,
+     "p": 8,
      "w": 1,
      "d": 3,
-     "l": 3,
-     "gf": 9,
-     "ga": 14,
+     "l": 4,
+     "gf": 10,
+     "ga": 16,
      "pts": 6,
      "tid": 18017,
-     "form": "LLDLD"
-    },
-    {
-     "pos": 14,
-     "team": "Nestos Chrisoupolis",
-     "p": 7,
-     "w": 1,
-     "d": 2,
-     "l": 4,
-     "gf": 5,
-     "ga": 9,
-     "pts": 5,
-     "tid": 12367,
-     "form": "LLLLD"
+     "form": "LDLDL"
     },
     {
      "pos": 15,
@@ -445,7 +445,7 @@
      "form": "LLDLD"
     }
    ],
-   "updated": "2026-10-20T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   }
  ]
 }

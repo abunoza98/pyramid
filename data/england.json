@@ -38,15 +38,15 @@
     {
      "pos": 1,
      "team": "Manchester City",
-     "p": 7,
+     "p": 8,
      "w": 7,
      "d": 0,
-     "l": 0,
-     "gf": 19,
-     "ga": 7,
+     "l": 1,
+     "gf": 20,
+     "ga": 9,
      "pts": 21,
      "tid": 50,
-     "form": "WWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 2,
@@ -102,6 +102,19 @@
     },
     {
      "pos": 6,
+     "team": "Aston Villa",
+     "p": 8,
+     "w": 3,
+     "d": 2,
+     "l": 3,
+     "gf": 9,
+     "ga": 12,
+     "pts": 11,
+     "tid": 66,
+     "form": "LWDWW"
+    },
+    {
+     "pos": 7,
      "team": "Brentford",
      "p": 7,
      "w": 2,
@@ -114,7 +127,7 @@
      "form": "DDWDL"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Leeds United",
      "p": 7,
      "w": 2,
@@ -127,7 +140,7 @@
      "form": "DWDLD"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Everton",
      "p": 7,
      "w": 2,
@@ -140,7 +153,7 @@
      "form": "DDWDL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Ipswich Town",
      "p": 8,
      "w": 3,
@@ -153,7 +166,7 @@
      "form": "WLWLD"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Hull City",
      "p": 7,
      "w": 2,
@@ -166,7 +179,7 @@
      "form": "DDLDL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Newcastle United",
      "p": 7,
      "w": 2,
@@ -177,19 +190,6 @@
      "pts": 8,
      "tid": 34,
      "form": "DLWLL"
-    },
-    {
-     "pos": 12,
-     "team": "Aston Villa",
-     "p": 7,
-     "w": 2,
-     "d": 2,
-     "l": 3,
-     "gf": 7,
-     "ga": 11,
-     "pts": 8,
-     "tid": 66,
-     "form": "DLWDW"
     },
     {
      "pos": 13,
@@ -677,6 +677,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Huddersfield Town",
+     "p": 12,
+     "w": 7,
+     "d": 4,
+     "l": 1,
+     "gf": 24,
+     "ga": 11,
+     "pts": 25,
+     "tid": 37,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 2,
      "team": "Stockport County",
      "p": 11,
      "w": 7,
@@ -687,19 +700,6 @@
      "pts": 22,
      "tid": 4686,
      "form": "DWWWW"
-    },
-    {
-     "pos": 2,
-     "team": "Huddersfield Town",
-     "p": 11,
-     "w": 6,
-     "d": 4,
-     "l": 1,
-     "gf": 22,
-     "ga": 10,
-     "pts": 22,
-     "tid": 37,
-     "form": "LWDWW"
     },
     {
      "pos": 3,
@@ -781,6 +781,19 @@
     },
     {
      "pos": 9,
+     "team": "Luton Town",
+     "p": 11,
+     "w": 5,
+     "d": 2,
+     "l": 4,
+     "gf": 21,
+     "ga": 19,
+     "pts": 17,
+     "tid": 1359,
+     "form": "LWLWW"
+    },
+    {
+     "pos": 10,
      "team": "Stevenage",
      "p": 10,
      "w": 4,
@@ -791,19 +804,6 @@
      "pts": 15,
      "tid": 1368,
      "form": "WLWLW"
-    },
-    {
-     "pos": 10,
-     "team": "Leicester City",
-     "p": 10,
-     "w": 4,
-     "d": 3,
-     "l": 3,
-     "gf": 16,
-     "ga": 15,
-     "pts": 15,
-     "tid": 46,
-     "form": "WDLWW"
     },
     {
      "pos": 11,
@@ -820,6 +820,19 @@
     },
     {
      "pos": 12,
+     "team": "Leicester City",
+     "p": 11,
+     "w": 4,
+     "d": 3,
+     "l": 4,
+     "gf": 17,
+     "ga": 17,
+     "pts": 15,
+     "tid": 46,
+     "form": "DLWWL"
+    },
+    {
+     "pos": 13,
      "team": "Leyton Orient",
      "p": 11,
      "w": 4,
@@ -830,19 +843,6 @@
      "pts": 14,
      "tid": 1373,
      "form": "WLDWL"
-    },
-    {
-     "pos": 13,
-     "team": "Luton Town",
-     "p": 10,
-     "w": 4,
-     "d": 2,
-     "l": 4,
-     "gf": 19,
-     "ga": 18,
-     "pts": 14,
-     "tid": 1359,
-     "form": "LLWLW"
     },
     {
      "pos": 14,
@@ -977,15 +977,15 @@
     {
      "pos": 24,
      "team": "Wigan Athletic",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 1,
-     "l": 7,
-     "gf": 7,
-     "ga": 15,
+     "l": 8,
+     "gf": 8,
+     "ga": 17,
      "pts": 7,
      "tid": 61,
-     "form": "DLLWL"
+     "form": "LLWLL"
     }
    ],
    "updated": "2026-10-24T00:00:00.000Z"
@@ -1388,15 +1388,15 @@
     {
      "pos": 2,
      "team": "Harrogate Town",
-     "p": 13,
-     "w": 9,
+     "p": 14,
+     "w": 10,
      "d": 1,
      "l": 3,
-     "gf": 29,
-     "ga": 17,
-     "pts": 28,
+     "gf": 32,
+     "ga": 18,
+     "pts": 31,
      "tid": 1842,
-     "form": "LWWWW"
+     "form": "WWWWW"
     },
     {
      "pos": 3,
@@ -1530,19 +1530,32 @@
     },
     {
      "pos": 13,
-     "team": "Sutton United",
-     "p": 13,
+     "team": "Eastleigh",
+     "p": 14,
      "w": 5,
      "d": 3,
-     "l": 5,
-     "gf": 14,
-     "ga": 18,
+     "l": 6,
+     "gf": 18,
+     "ga": 22,
      "pts": 18,
-     "tid": 1835,
-     "form": "DDLDL"
+     "tid": 1822,
+     "form": "LDLLW"
     },
     {
      "pos": 14,
+     "team": "Sutton United",
+     "p": 14,
+     "w": 5,
+     "d": 3,
+     "l": 6,
+     "gf": 15,
+     "ga": 21,
+     "pts": 18,
+     "tid": 1835,
+     "form": "DLDLL"
+    },
+    {
+     "pos": 15,
      "team": "Carlisle United",
      "p": 13,
      "w": 4,
@@ -1555,7 +1568,7 @@
      "form": "LLWWD"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Woking",
      "p": 13,
      "w": 4,
@@ -1568,7 +1581,7 @@
      "form": "DWLWL"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Forest Green Rovers",
      "p": 12,
      "w": 4,
@@ -1579,19 +1592,6 @@
      "pts": 15,
      "tid": 1378,
      "form": "DLDDL"
-    },
-    {
-     "pos": 17,
-     "team": "Eastleigh",
-     "p": 13,
-     "w": 4,
-     "d": 3,
-     "l": 6,
-     "gf": 14,
-     "ga": 20,
-     "pts": 15,
-     "tid": 1822,
-     "form": "WLDLL"
     },
     {
      "pos": 18,
@@ -1635,15 +1635,15 @@
     {
      "pos": 21,
      "team": "Boston United",
-     "p": 13,
+     "p": 14,
      "w": 3,
      "d": 3,
-     "l": 7,
-     "gf": 15,
-     "ga": 23,
+     "l": 8,
+     "gf": 17,
+     "ga": 27,
      "pts": 12,
      "tid": 8146,
-     "form": "WLDLL"
+     "form": "LDLLL"
     },
     {
      "pos": 22,
@@ -1727,7 +1727,7 @@
    "groups": [
     {
      "name": "North",
-     "updated": "2026-10-23T00:00:00.000Z",
+     "updated": "2026-10-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,

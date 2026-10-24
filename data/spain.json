@@ -699,6 +699,19 @@
       },
       {
        "pos": 4,
+       "team": "Extremadura",
+       "p": 9,
+       "w": 4,
+       "d": 1,
+       "l": 4,
+       "gf": 16,
+       "ga": 10,
+       "pts": 13,
+       "tid": 24612,
+       "form": "LWWDW"
+      },
+      {
+       "pos": 5,
        "team": "Real Unión",
        "p": 9,
        "w": 3,
@@ -711,7 +724,7 @@
        "form": "LDDDW"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "Mérida",
        "p": 8,
        "w": 4,
@@ -724,7 +737,7 @@
        "form": "LLWWW"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Bilbao Athletic",
        "p": 8,
        "w": 3,
@@ -737,7 +750,7 @@
        "form": "DWLDL"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Zamora",
        "p": 8,
        "w": 3,
@@ -750,7 +763,7 @@
        "form": "LWWDD"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Cultural Leonesa",
        "p": 8,
        "w": 3,
@@ -763,7 +776,7 @@
        "form": "WDLWD"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Cacereño",
        "p": 8,
        "w": 3,
@@ -776,7 +789,7 @@
        "form": "WDLDL"
       },
       {
-       "pos": 10,
+       "pos": 11,
        "team": "Ponferradina",
        "p": 8,
        "w": 3,
@@ -789,7 +802,7 @@
        "form": "WDWLD"
       },
       {
-       "pos": 11,
+       "pos": 12,
        "team": "Avilés",
        "p": 8,
        "w": 3,
@@ -802,7 +815,7 @@
        "form": "DDLWW"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "Pontevedra",
        "p": 8,
        "w": 3,
@@ -815,7 +828,7 @@
        "form": "DDLLW"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Mirandés",
        "p": 8,
        "w": 3,
@@ -826,19 +839,6 @@
        "pts": 11,
        "tid": 799,
        "form": "DWLDL"
-      },
-      {
-       "pos": 14,
-       "team": "Extremadura",
-       "p": 8,
-       "w": 3,
-       "d": 1,
-       "l": 4,
-       "gf": 11,
-       "ga": 10,
-       "pts": 10,
-       "tid": 24612,
-       "form": "LLWWD"
       },
       {
        "pos": 15,
@@ -855,19 +855,6 @@
       },
       {
        "pos": 16,
-       "team": "Deportivo Fabril",
-       "p": 8,
-       "w": 2,
-       "d": 2,
-       "l": 4,
-       "gf": 8,
-       "ga": 11,
-       "pts": 8,
-       "tid": 9610,
-       "form": "DWLLL"
-      },
-      {
-       "pos": 17,
        "team": "Coria",
        "p": 8,
        "w": 2,
@@ -878,6 +865,19 @@
        "pts": 8,
        "tid": 9827,
        "form": "DDLLW"
+      },
+      {
+       "pos": 17,
+       "team": "Deportivo Fabril",
+       "p": 9,
+       "w": 2,
+       "d": 2,
+       "l": 5,
+       "gf": 8,
+       "ga": 16,
+       "pts": 8,
+       "tid": 9610,
+       "form": "WLLLL"
       },
       {
        "pos": 18,

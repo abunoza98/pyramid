@@ -4,7 +4,7 @@
  "adjective": "Croatian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-23T00:00:00.000Z",
+ "updated": "2026-10-24T00:00:00.000Z",
  "belowNote": "Treća NL champions come up",
  "leagues": [
   {
@@ -181,7 +181,7 @@
      "form": "LDWLD"
     }
    ],
-   "updated": "2026-10-22T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   },
   {
    "id": "prva-nl",
@@ -230,6 +230,19 @@
     },
     {
      "pos": 2,
+     "team": "BSK Bijelo Brdo",
+     "p": 10,
+     "w": 5,
+     "d": 2,
+     "l": 3,
+     "gf": 12,
+     "ga": 9,
+     "pts": 17,
+     "tid": 1487,
+     "form": "LWLDW"
+    },
+    {
+     "pos": 3,
      "team": "Jadran LP",
      "p": 9,
      "w": 4,
@@ -242,7 +255,7 @@
      "form": "WWWDD"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Cibalia",
      "p": 10,
      "w": 4,
@@ -255,7 +268,7 @@
      "form": "WWLLW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Segesta Sisak",
      "p": 9,
      "w": 4,
@@ -266,19 +279,6 @@
      "pts": 14,
      "tid": 5722,
      "form": "WWDLW"
-    },
-    {
-     "pos": 5,
-     "team": "BSK Bijelo Brdo",
-     "p": 9,
-     "w": 4,
-     "d": 2,
-     "l": 3,
-     "gf": 10,
-     "ga": 9,
-     "pts": 14,
-     "tid": 1487,
-     "form": "WLWLD"
     },
     {
      "pos": 6,
@@ -387,15 +387,15 @@
     {
      "pos": 14,
      "team": "Vukovar",
-     "p": 9,
+     "p": 10,
      "w": 3,
      "d": 2,
-     "l": 4,
+     "l": 5,
      "gf": 14,
-     "ga": 17,
+     "ga": 19,
      "pts": 11,
      "tid": 5730,
-     "form": "WLLWL"
+     "form": "LLWLL"
     },
     {
      "pos": 15,
@@ -424,7 +424,7 @@
      "form": "WWLLD"
     }
    ],
-   "updated": "2026-10-23T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   },
   {
    "id": "druga-nl",
@@ -658,7 +658,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-10-23T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   }
  ]
 }

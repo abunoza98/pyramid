@@ -4,7 +4,7 @@
  "adjective": "Dutch",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-23T00:00:00.000Z",
+ "updated": "2026-10-24T00:00:00.000Z",
  "belowNote": "The top Derde Divisie clubs come up",
  "leagues": [
   {
@@ -288,7 +288,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-10-23T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   },
   {
    "id": "eerste-divisie",
@@ -577,7 +577,7 @@
      "form": "WLLLL"
     }
    ],
-   "updated": "2026-10-23T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   },
   {
    "id": "tweede-divisie",
@@ -668,6 +668,32 @@
     },
     {
      "pos": 6,
+     "team": "GVVV Veenendaal",
+     "p": 11,
+     "w": 6,
+     "d": 0,
+     "l": 5,
+     "gf": 24,
+     "ga": 20,
+     "pts": 18,
+     "tid": 1261,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 7,
+     "team": "RKAV Volendam",
+     "p": 11,
+     "w": 5,
+     "d": 3,
+     "l": 3,
+     "gf": 21,
+     "ga": 20,
+     "pts": 18,
+     "tid": 1238,
+     "form": "LLWWW"
+    },
+    {
+     "pos": 8,
      "team": "Barendrecht",
      "p": 10,
      "w": 5,
@@ -678,32 +704,6 @@
      "pts": 17,
      "tid": 1271,
      "form": "DWWLW"
-    },
-    {
-     "pos": 7,
-     "team": "GVVV Veenendaal",
-     "p": 10,
-     "w": 5,
-     "d": 0,
-     "l": 5,
-     "gf": 22,
-     "ga": 20,
-     "pts": 15,
-     "tid": 1261,
-     "form": "WWWWL"
-    },
-    {
-     "pos": 8,
-     "team": "RKAV Volendam",
-     "p": 10,
-     "w": 4,
-     "d": 3,
-     "l": 3,
-     "gf": 20,
-     "ga": 20,
-     "pts": 15,
-     "tid": 1238,
-     "form": "DLLWW"
     },
     {
      "pos": 9,
@@ -734,15 +734,15 @@
     {
      "pos": 11,
      "team": "Rijnsburgse Boys",
-     "p": 10,
+     "p": 11,
      "w": 4,
      "d": 1,
-     "l": 5,
+     "l": 6,
      "gf": 17,
-     "ga": 26,
+     "ga": 27,
      "pts": 13,
      "tid": 1248,
-     "form": "WLWLW"
+     "form": "LWLWL"
     },
     {
      "pos": 12,
@@ -799,15 +799,15 @@
     {
      "pos": 16,
      "team": "Koninklijke HFC",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 3,
-     "l": 5,
+     "l": 6,
      "gf": 13,
-     "ga": 19,
+     "ga": 21,
      "pts": 9,
      "tid": 1246,
-     "form": "LDLLW"
+     "form": "DLLWL"
     },
     {
      "pos": 17,
@@ -836,7 +836,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-20T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   }
  ]
 }

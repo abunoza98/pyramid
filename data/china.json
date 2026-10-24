@@ -323,7 +323,7 @@
      "ga": 20,
      "pts": 51,
      "tid": 2626,
-     "form": "LWWWW"
+     "form": "WWWWW"
     },
     {
      "pos": 3,
@@ -349,7 +349,7 @@
      "ga": 31,
      "pts": 46,
      "tid": 23265,
-     "form": "DDLDD"
+     "form": "DLDDL"
     },
     {
      "pos": 5,
@@ -388,7 +388,7 @@
      "ga": 26,
      "pts": 37,
      "tid": 17264,
-     "form": "DWWDL"
+     "form": "WWDLW"
     },
     {
      "pos": 8,
@@ -442,7 +442,7 @@
      "pts": 31,
      "ded": 3,
      "tid": 27556,
-     "form": "LLLDD"
+     "form": "LLDDL"
     },
     {
      "pos": 12,
@@ -482,7 +482,7 @@
      "ga": 37,
      "pts": 25,
      "tid": 16619,
-     "form": "LLLDW"
+     "form": "LLDWW"
     },
     {
      "pos": 15,
@@ -509,7 +509,7 @@
      "ga": 59,
      "pts": 16,
      "tid": 17263,
-     "form": "LDWLL"
+     "form": "DWLLL"
     }
    ],
    "updated": "2026-10-24T00:00:00.000Z"
