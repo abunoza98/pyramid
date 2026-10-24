@@ -100,16 +100,17 @@ for (const cfg of COUNTRIES) {
         let html;
         try { html = await readFile(file, "utf8"); } catch { continue; }
 
-        // Idempotent on repeated scheduled builds.
+        // Idempotent on repeated scheduled builds: only write when the final page really differs.
+        const original = html;
         html = html.replace(/<p class="cup-note cl-stakes">[\s\S]*?<\/p>/, "");
         const stake = `<p class="cup-note cl-stakes"><strong>What’s at stake:</strong> ${parts.map(esc).join(" · ")}</p>`;
         const marker = '<p class="fx-links">';
         if (!html.includes(marker)) continue;
         const next = html.replace(marker, stake + marker);
-        if (next !== html) { await writeFile(file, next); changed++; }
+        if (next !== original) { await writeFile(file, next); changed++; }
       }
     }
   }
 }
 
-console.log(`Club context: added current stakes to ${changed} club pages.`);
+console.log(`Club context: updated current stakes on ${changed} club pages.`);
