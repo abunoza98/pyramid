@@ -69,6 +69,19 @@
     },
     {
      "pos": 3,
+     "team": "Cruzeiro",
+     "p": 32,
+     "w": 16,
+     "d": 6,
+     "l": 10,
+     "gf": 51,
+     "ga": 46,
+     "pts": 54,
+     "tid": 135,
+     "form": "WWLWW"
+    },
+    {
+     "pos": 4,
      "team": "Athletico Paranaense",
      "p": 31,
      "w": 15,
@@ -79,19 +92,6 @@
      "pts": 53,
      "tid": 134,
      "form": "DWDWL"
-    },
-    {
-     "pos": 4,
-     "team": "Cruzeiro",
-     "p": 31,
-     "w": 15,
-     "d": 6,
-     "l": 10,
-     "gf": 50,
-     "ga": 46,
-     "pts": 51,
-     "tid": 135,
-     "form": "LWWLW"
     },
     {
      "pos": 5,
@@ -278,15 +278,15 @@
     {
      "pos": 19,
      "team": "Remo",
-     "p": 31,
+     "p": 32,
      "w": 5,
      "d": 11,
-     "l": 15,
+     "l": 16,
      "gf": 34,
-     "ga": 49,
+     "ga": 50,
      "pts": 26,
      "tid": 1198,
-     "form": "LLDDD"
+     "form": "LDDDL"
     },
     {
      "pos": 20,

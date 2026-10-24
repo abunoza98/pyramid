@@ -235,28 +235,28 @@
     {
      "pos": 17,
      "team": "Necaxa",
-     "p": 13,
+     "p": 14,
      "w": 2,
-     "d": 3,
+     "d": 4,
      "l": 8,
-     "gf": 15,
-     "ga": 26,
-     "pts": 9,
+     "gf": 16,
+     "ga": 27,
+     "pts": 10,
      "tid": 2288,
-     "form": "LLDLL"
+     "form": "LDLLD"
     },
     {
      "pos": 18,
      "team": "FC Juárez",
-     "p": 13,
+     "p": 14,
      "w": 1,
-     "d": 1,
+     "d": 2,
      "l": 11,
-     "gf": 8,
-     "ga": 32,
-     "pts": 4,
+     "gf": 9,
+     "ga": 33,
+     "pts": 5,
      "tid": 2298,
-     "form": "WLDLL"
+     "form": "LDLLD"
     }
    ],
    "updated": "2026-10-23T00:00:00.000Z"
@@ -319,6 +319,19 @@
     },
     {
      "pos": 4,
+     "team": "Cancún",
+     "p": 14,
+     "w": 6,
+     "d": 4,
+     "l": 4,
+     "gf": 26,
+     "ga": 18,
+     "pts": 22,
+     "tid": 14276,
+     "form": "LWDDW"
+    },
+    {
+     "pos": 5,
      "team": "Piratas",
      "p": 13,
      "w": 6,
@@ -331,7 +344,7 @@
      "form": "WLWLW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Venados FC",
      "p": 13,
      "w": 6,
@@ -344,7 +357,7 @@
      "form": "LWWDD"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Durango",
      "p": 13,
      "w": 6,
@@ -355,19 +368,6 @@
      "pts": 21,
      "tid": 15941,
      "form": "WWWDW"
-    },
-    {
-     "pos": 7,
-     "team": "Cancún",
-     "p": 13,
-     "w": 5,
-     "d": 4,
-     "l": 4,
-     "gf": 22,
-     "ga": 18,
-     "pts": 19,
-     "tid": 14276,
-     "form": "WLWDD"
     },
     {
      "pos": 8,
@@ -476,15 +476,15 @@
     {
      "pos": 16,
      "team": "Tepatitlán",
-     "p": 13,
+     "p": 14,
      "w": 2,
      "d": 1,
-     "l": 10,
+     "l": 11,
      "gf": 10,
-     "ga": 37,
+     "ga": 41,
      "pts": 7,
      "tid": 14279,
-     "form": "LWDLL"
+     "form": "WDLLL"
     }
    ],
    "updated": "2026-10-23T00:00:00.000Z"
@@ -796,7 +796,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-22T00:00:00.000Z"
+   "updated": "2026-10-23T00:00:00.000Z"
   }
  ]
 }
