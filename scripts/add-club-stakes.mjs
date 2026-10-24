@@ -1,7 +1,8 @@
 // Add a concise "What's at stake" line to current club pages from the standings already saved in data/<country>.json.
 // This is deliberately descriptive rather than predictive: it only reports the club's current zone and the points
 // gap to the nearest meaningful promotion/play-off/qualification or relegation boundary.
-import { readFile, writeFile } from "node:fs/promises";
+// Historical country pages also get adjacent-season navigation that preserves the current league anchor.
+import { readFile, writeFile, readdir } from "node:fs/promises";
 import { createRequire } from "node:module";
 import { COUNTRIES } from "./leagues.mjs";
 
@@ -121,4 +122,77 @@ for (const cfg of COUNTRIES) {
   }
 }
 
-console.log(`Club context: updated current stakes on ${changed} club pages.`);
+const stripTags = (s) => s.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+const seasonContextScript = `<script data-season-link-context>
+(function () {
+  function updateSeasonLinks() {
+    try {
+      var hash = location.hash && document.getElementById(location.hash.slice(1)) ? location.hash : "";
+      var club = new URLSearchParams(location.search).get("club");
+      var links = document.querySelectorAll(".seasons a, .season-step-nav a");
+      for (var i = 0; i < links.length; i++) {
+        var a = links[i];
+        var base = a.getAttribute("data-season-base");
+        if (!base) {
+          base = (a.getAttribute("href") || "").split("#")[0].split("?")[0];
+          a.setAttribute("data-season-base", base);
+        }
+        var href = base;
+        if (club) href += (href.indexOf("?") > -1 ? "&" : "?") + "club=" + encodeURIComponent(club);
+        a.setAttribute("href", href + hash);
+      }
+    } catch (e) {}
+  }
+  updateSeasonLinks();
+  window.addEventListener("hashchange", updateSeasonLinks);
+})();
+</script>`;
+
+function addSeasonNavigation(html) {
+  html = html.replace(/<nav class="tf-tabs season-step-nav"[\s\S]*?<\/nav>/, "");
+  html = html.replace(/\n?<script data-season-link-context>[\s\S]*?<\/script>/, "");
+
+  const details = html.match(/<details class="seasons">[\s\S]*?<\/details>/);
+  if (!details) return html;
+  const items = Array.from(details[0].matchAll(/<li>([\s\S]*?)<\/li>/g)).map((m) => m[1]);
+  const current = items.findIndex((x) => /aria-current="page"/.test(x));
+  if (current < 0) return html;
+
+  const item = (idx) => {
+    if (idx < 0 || idx >= items.length) return null;
+    const href = items[idx].match(/href="([^"]+)"/);
+    if (!href) return null;
+    return { href: href[1], label: stripTags(items[idx]) };
+  };
+  // The season list is newest to oldest: older goes left, newer goes right.
+  const older = item(current + 1);
+  const newer = item(current - 1);
+  const currentLabel = stripTags(items[current]);
+  if (!older && !newer) return html;
+
+  const nav = '<nav class="tf-tabs season-step-nav" aria-label="Browse adjacent seasons" style="margin:10px 0 14px">' +
+    (older ? `<a class="tf-tab" href="${older.href}">← ${older.label}</a>` : "") +
+    `<span class="tf-tab on" aria-current="page">${currentLabel}</span>` +
+    (newer ? `<a class="tf-tab" href="${newer.href}">${newer.label} →</a>` : "") +
+    "</nav>";
+
+  html = html.replace(details[0], details[0] + nav);
+  return html.replace("</body>", seasonContextScript + "\n</body>");
+}
+
+let historyChanged = 0;
+for (const cfg of COUNTRIES) {
+  let dirs = [];
+  try { dirs = await readdir(cfg.country, { withFileTypes: true }); } catch {}
+  for (const dir of dirs) {
+    if (!dir.isDirectory() || !/^\d{4}(?:-\d{2})?$/.test(dir.name)) continue;
+    const file = `${cfg.country}/${dir.name}/index.html`;
+    let html;
+    try { html = await readFile(file, "utf8"); } catch { continue; }
+    if (!html.includes('data-page="history"')) continue;
+    const next = addSeasonNavigation(html);
+    if (next !== html) { await writeFile(file, next); historyChanged++; }
+  }
+}
+
+console.log(`Club context: updated current stakes on ${changed} club pages; season navigation on ${historyChanged} historical pages.`);
