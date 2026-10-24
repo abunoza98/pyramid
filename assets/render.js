@@ -596,10 +596,12 @@
         '<span class="chip-row"><span>' + esc(nm(f.h)) + "</span><b>" + (started ? f.h.g : "") + "</b></span>" +
         '<span class="chip-row"><span>' + esc(nm(f.a)) + "</span><b>" + (started ? f.a.g : "") + "</b></span></a></li>";
     }).join("");
-    return '<section class="strip" aria-label="Today’s games"><p class="strip-head">' +
+    return '<section class="strip" aria-label="Today’s games"><div class="strip-head"><p>' +
       (liveN ? '<span class="live-dot" aria-hidden="true"></span>' : "") + "Today: " + fx.length + " game" + (fx.length === 1 ? "" : "s") +
-      " in " + where + (liveN ? " · <strong>" + liveN + " live</strong>" : "") + "</p>" +
-      '<ul class="strip-list">' + chips + "</ul></section>";
+      " in " + where + (liveN ? " · <strong>" + liveN + " live</strong>" : "") + '</p><div class="strip-nav" role="group" aria-label="Scroll today’s games">' +
+      '<button class="strip-arrow prev" type="button" data-strip-scroll="-1" aria-label="Previous games">‹</button>' +
+      '<button class="strip-arrow next" type="button" data-strip-scroll="1" aria-label="Next games">›</button></div></div>' +
+      '<ul class="strip-list" tabindex="0" aria-label="Today’s fixtures">' + chips + "</ul></section>";
   }
 
   // Home page: the three European competitions, under the strip.
