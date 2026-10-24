@@ -653,7 +653,7 @@
   }
 
   var TZ_KEY = "pyramid:tz";
-  var fxData = null, fxState = { tz: "local", group: 0, round: null };
+  var fxData = null, fxLinks = null, fxState = { tz: "local", group: 0, round: null };
   try { var savedTz = localStorage.getItem(TZ_KEY); if (savedTz === "venue" || savedTz === "uk") fxState.tz = "venue"; } catch (e) {}
   function fxRender() {
     if (!fxData) return;
@@ -661,7 +661,8 @@
     $("main-content").innerHTML = FP.fixturesMain(fxData, {
       tz: fxState.tz, group: fxState.group, round: fxState.round, live: live, myClub: myClub,
       tableHref: body.getAttribute("data-table") || "",
-      tableText: COUNTRY === "europe" && fxData ? fxData.name + (fxData.year ? " " + fxData.season : " table and bracket") : null
+      tableText: COUNTRY === "europe" && fxData ? fxData.name + (fxData.year ? " " + fxData.season : " table and bracket") : null,
+      links: fxLinks
     });
     window.scrollTo(0, y);
   }
@@ -675,6 +676,16 @@
       .then(function (d) {
         if (!d || !d.groups) return;
         fxData = d;
+        var paths = {};
+        d.groups.forEach(function (g) { (g.rounds || []).forEach(function (r) { (r.fixtures || []).forEach(function (f) {
+          [f.h, f.a].forEach(function (t) {
+            if (!t || !t.n) return;
+            var s = FP.slug(t.n), p = COUNTRY + "/club/" + s + "/";
+            if (t.id) paths[t.id] = p;
+            paths["n:" + s] = p;
+          });
+        }); }); });
+        fxLinks = COUNTRY === "europe" ? null : { paths: paths, root: BASE, suffix: SUFFIX };
         fxRender();
         fxLive();
       });
