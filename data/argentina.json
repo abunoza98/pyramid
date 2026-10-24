@@ -46,6 +46,19 @@
       },
       {
        "pos": 2,
+       "team": "Defensa Y Justicia",
+       "p": 14,
+       "w": 8,
+       "d": 3,
+       "l": 3,
+       "gf": 20,
+       "ga": 13,
+       "pts": 27,
+       "tid": 442,
+       "form": "DWWLW"
+      },
+      {
+       "pos": 3,
        "team": "Boca Juniors",
        "p": 13,
        "w": 6,
@@ -58,7 +71,7 @@
        "form": "WWWDW"
       },
       {
-       "pos": 3,
+       "pos": 4,
        "team": "Lanús",
        "p": 14,
        "w": 7,
@@ -69,19 +82,6 @@
        "pts": 24,
        "tid": 446,
        "form": "WDWWD"
-      },
-      {
-       "pos": 4,
-       "team": "Defensa Y Justicia",
-       "p": 13,
-       "w": 7,
-       "d": 3,
-       "l": 3,
-       "gf": 18,
-       "ga": 12,
-       "pts": 24,
-       "tid": 442,
-       "form": "WDWWL"
       },
       {
        "pos": 5,
@@ -216,15 +216,15 @@
       {
        "pos": 15,
        "team": "Talleres",
-       "p": 13,
+       "p": 14,
        "w": 2,
        "d": 3,
-       "l": 8,
-       "gf": 12,
-       "ga": 20,
+       "l": 9,
+       "gf": 13,
+       "ga": 22,
        "pts": 9,
        "tid": 456,
-       "form": "WLLDL"
+       "form": "LLDLL"
       }
      ]
     },
@@ -469,15 +469,15 @@
       {
        "pos": 1,
        "team": "Ferro Carril Oeste",
-       "p": 34,
+       "p": 35,
        "w": 19,
        "d": 8,
-       "l": 7,
+       "l": 8,
        "gf": 38,
-       "ga": 28,
+       "ga": 31,
        "pts": 65,
        "tid": 470,
-       "form": "WWLDW"
+       "form": "WLDWL"
       },
       {
        "pos": 2,
@@ -572,6 +572,19 @@
       },
       {
        "pos": 9,
+       "team": "Chaco For Ever",
+       "p": 35,
+       "w": 11,
+       "d": 10,
+       "l": 14,
+       "gf": 36,
+       "ga": 36,
+       "pts": 43,
+       "tid": 1946,
+       "form": "LDWLW"
+      },
+      {
+       "pos": 10,
        "team": "Los Andes",
        "p": 34,
        "w": 9,
@@ -582,19 +595,6 @@
        "pts": 41,
        "tid": 483,
        "form": "LWLLD"
-      },
-      {
-       "pos": 10,
-       "team": "Chaco For Ever",
-       "p": 34,
-       "w": 10,
-       "d": 10,
-       "l": 14,
-       "gf": 33,
-       "ga": 36,
-       "pts": 40,
-       "tid": 1946,
-       "form": "WLDWL"
       },
       {
        "pos": 11,
@@ -979,41 +979,41 @@
     {
      "pos": 1,
      "team": "Excursionistas",
-     "p": 40,
-     "w": 23,
+     "p": 41,
+     "w": 24,
      "d": 9,
      "l": 8,
-     "gf": 64,
+     "gf": 68,
      "ga": 31,
-     "pts": 78,
+     "pts": 81,
      "tid": 8385,
-     "form": "WWLWD"
+     "form": "WLWDW"
     },
     {
      "pos": 2,
      "team": "Arsenal Sarandi",
-     "p": 40,
-     "w": 20,
+     "p": 41,
+     "w": 21,
      "d": 13,
      "l": 7,
-     "gf": 53,
-     "ga": 26,
-     "pts": 73,
+     "gf": 55,
+     "ga": 27,
+     "pts": 76,
      "tid": 459,
-     "form": "LWLWD"
+     "form": "WLWDW"
     },
     {
      "pos": 3,
      "team": "Sportivo Italiano",
-     "p": 40,
+     "p": 41,
      "w": 19,
      "d": 12,
-     "l": 9,
+     "l": 10,
      "gf": 47,
-     "ga": 29,
+     "ga": 33,
      "pts": 69,
      "tid": 8388,
-     "form": "DWWWD"
+     "form": "WWWDL"
     },
     {
      "pos": 4,
@@ -1030,42 +1030,42 @@
     },
     {
      "pos": 5,
-     "team": "Deportivo Camioneros",
-     "p": 40,
+     "team": "Villa Dalmine",
+     "p": 41,
      "w": 18,
-     "d": 13,
+     "d": 14,
      "l": 9,
-     "gf": 47,
-     "ga": 32,
-     "pts": 67,
-     "tid": 3943,
-     "form": "LLLDW"
+     "gf": 40,
+     "ga": 27,
+     "pts": 68,
+     "tid": 481,
+     "form": "DLDLW"
     },
     {
      "pos": 6,
-     "team": "Villa Dalmine",
-     "p": 40,
-     "w": 17,
-     "d": 14,
-     "l": 9,
-     "gf": 39,
-     "ga": 27,
-     "pts": 65,
-     "tid": 481,
-     "form": "WDLDL"
+     "team": "Deportivo Camioneros",
+     "p": 41,
+     "w": 18,
+     "d": 13,
+     "l": 10,
+     "gf": 48,
+     "ga": 34,
+     "pts": 67,
+     "tid": 3943,
+     "form": "LLDWL"
     },
     {
      "pos": 7,
      "team": "Deportivo Armenio",
-     "p": 40,
+     "p": 41,
      "w": 17,
      "d": 11,
-     "l": 12,
+     "l": 13,
      "gf": 42,
-     "ga": 38,
+     "ga": 39,
      "pts": 62,
      "tid": 2427,
-     "form": "WWWDD"
+     "form": "WWDDL"
     },
     {
      "pos": 8,
@@ -1082,42 +1082,42 @@
     },
     {
      "pos": 9,
-     "team": "Comunicaciones",
-     "p": 40,
-     "w": 14,
-     "d": 15,
-     "l": 11,
-     "gf": 39,
-     "ga": 34,
-     "pts": 57,
-     "tid": 8008,
-     "form": "WDDDD"
+     "team": "Deportivo Laferrere",
+     "p": 41,
+     "w": 15,
+     "d": 13,
+     "l": 13,
+     "gf": 50,
+     "ga": 52,
+     "pts": 58,
+     "tid": 1924,
+     "form": "LWDWW"
     },
     {
      "pos": 10,
-     "team": "Deportivo Laferrere",
-     "p": 40,
+     "team": "Comunicaciones",
+     "p": 41,
      "w": 14,
-     "d": 13,
-     "l": 13,
-     "gf": 49,
-     "ga": 52,
-     "pts": 55,
-     "tid": 1924,
-     "form": "LLWDW"
+     "d": 15,
+     "l": 12,
+     "gf": 39,
+     "ga": 35,
+     "pts": 57,
+     "tid": 8008,
+     "form": "DDDDL"
     },
     {
      "pos": 11,
      "team": "San Martín Burzaco",
-     "p": 40,
+     "p": 41,
      "w": 12,
      "d": 15,
-     "l": 13,
+     "l": 14,
      "gf": 41,
-     "ga": 45,
+     "ga": 46,
      "pts": 51,
      "tid": 8387,
-     "form": "WLWLD"
+     "form": "LWLDL"
     },
     {
      "pos": 12,
@@ -1134,19 +1134,32 @@
     },
     {
      "pos": 13,
-     "team": "Deportivo Merlo",
-     "p": 40,
-     "w": 11,
-     "d": 15,
-     "l": 14,
+     "team": "Flandria",
+     "p": 41,
+     "w": 13,
+     "d": 9,
+     "l": 19,
      "gf": 39,
-     "ga": 53,
+     "ga": 49,
      "pts": 48,
-     "tid": 8383,
-     "form": "WLDDW"
+     "tid": 471,
+     "form": "LDWWW"
     },
     {
      "pos": 14,
+     "team": "Deportivo Merlo",
+     "p": 41,
+     "w": 11,
+     "d": 15,
+     "l": 15,
+     "gf": 39,
+     "ga": 54,
+     "pts": 48,
+     "tid": 8383,
+     "form": "LDDWL"
+    },
+    {
+     "pos": 15,
      "team": "Dock Sud",
      "p": 40,
      "w": 11,
@@ -1159,7 +1172,33 @@
      "form": "DWLLL"
     },
     {
-     "pos": 15,
+     "pos": 16,
+     "team": "Argentino de Merlo",
+     "p": 41,
+     "w": 12,
+     "d": 11,
+     "l": 18,
+     "gf": 37,
+     "ga": 44,
+     "pts": 47,
+     "tid": 2430,
+     "form": "LLLLW"
+    },
+    {
+     "pos": 17,
+     "team": "Argentino Quilmes",
+     "p": 41,
+     "w": 10,
+     "d": 17,
+     "l": 14,
+     "gf": 33,
+     "ga": 40,
+     "pts": 47,
+     "tid": 8376,
+     "form": "DDDLW"
+    },
+    {
+     "pos": 18,
      "team": "Liniers",
      "p": 40,
      "w": 10,
@@ -1170,45 +1209,6 @@
      "pts": 45,
      "tid": 8395,
      "form": "LLWDD"
-    },
-    {
-     "pos": 16,
-     "team": "Flandria",
-     "p": 40,
-     "w": 12,
-     "d": 9,
-     "l": 19,
-     "gf": 36,
-     "ga": 48,
-     "pts": 45,
-     "tid": 471,
-     "form": "LLDWW"
-    },
-    {
-     "pos": 17,
-     "team": "Argentino de Merlo",
-     "p": 40,
-     "w": 11,
-     "d": 11,
-     "l": 18,
-     "gf": 36,
-     "ga": 44,
-     "pts": 44,
-     "tid": 2430,
-     "form": "WLLLL"
-    },
-    {
-     "pos": 18,
-     "team": "Argentino Quilmes",
-     "p": 40,
-     "w": 9,
-     "d": 17,
-     "l": 14,
-     "gf": 32,
-     "ga": 40,
-     "pts": 44,
-     "tid": 8376,
-     "form": "DDDDL"
     },
     {
      "pos": 19,
@@ -1252,15 +1252,15 @@
     {
      "pos": 22,
      "team": "Ituzaingó",
-     "p": 40,
+     "p": 41,
      "w": 1,
      "d": 14,
-     "l": 25,
-     "gf": 27,
-     "ga": 64,
+     "l": 26,
+     "gf": 28,
+     "ga": 67,
      "pts": 17,
      "tid": 8386,
-     "form": "LLLDD"
+     "form": "LLDDL"
     }
    ],
    "updated": "2026-10-24T00:00:00.000Z"

@@ -335,18 +335,31 @@
     {
      "pos": 2,
      "team": "1. FC Nürnberg",
-     "p": 8,
+     "p": 9,
      "w": 5,
      "d": 3,
-     "l": 0,
+     "l": 1,
      "gf": 21,
-     "ga": 11,
+     "ga": 12,
      "pts": 18,
      "tid": 171,
-     "form": "DWWDD"
+     "form": "WWDDL"
     },
     {
      "pos": 3,
+     "team": "1. FC Kaiserslautern",
+     "p": 9,
+     "w": 5,
+     "d": 3,
+     "l": 1,
+     "gf": 9,
+     "ga": 4,
+     "pts": 18,
+     "tid": 745,
+     "form": "LWDWW"
+    },
+    {
+     "pos": 4,
      "team": "VfL Wolfsburg",
      "p": 9,
      "w": 4,
@@ -359,7 +372,7 @@
      "form": "LWDWD"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "1. FC Magdeburg",
      "p": 9,
      "w": 5,
@@ -370,19 +383,6 @@
      "pts": 16,
      "tid": 179,
      "form": "WDWLW"
-    },
-    {
-     "pos": 5,
-     "team": "1. FC Kaiserslautern",
-     "p": 8,
-     "w": 4,
-     "d": 3,
-     "l": 1,
-     "gf": 8,
-     "ga": 4,
-     "pts": 15,
-     "tid": 745,
-     "form": "WLWDW"
     },
     {
      "pos": 6,

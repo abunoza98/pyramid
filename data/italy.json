@@ -43,6 +43,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Lazio",
+     "p": 8,
+     "w": 7,
+     "d": 1,
+     "l": 0,
+     "gf": 16,
+     "ga": 5,
+     "pts": 22,
+     "tid": 487,
+     "form": "DWWWW"
+    },
+    {
+     "pos": 2,
      "team": "Inter Milan",
      "p": 7,
      "w": 6,
@@ -53,19 +66,6 @@
      "pts": 19,
      "tid": 505,
      "form": "WWDWW"
-    },
-    {
-     "pos": 2,
-     "team": "Lazio",
-     "p": 7,
-     "w": 6,
-     "d": 1,
-     "l": 0,
-     "gf": 14,
-     "ga": 4,
-     "pts": 19,
-     "tid": 487,
-     "form": "WDWWW"
     },
     {
      "pos": 3,
@@ -278,15 +278,15 @@
     {
      "pos": 19,
      "team": "Parma",
-     "p": 7,
+     "p": 8,
      "w": 1,
      "d": 1,
-     "l": 5,
-     "gf": 4,
-     "ga": 13,
+     "l": 6,
+     "gf": 5,
+     "ga": 15,
      "pts": 4,
      "tid": 523,
-     "form": "DLWLL"
+     "form": "LWLLL"
     },
     {
      "pos": 20,

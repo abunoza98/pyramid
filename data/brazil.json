@@ -335,29 +335,29 @@
    "rows": [
     {
      "pos": 1,
-     "team": "Vila Nova",
-     "p": 34,
+     "team": "Novorizontino",
+     "p": 35,
      "w": 18,
-     "d": 8,
-     "l": 8,
-     "gf": 48,
-     "ga": 33,
-     "pts": 62,
-     "tid": 142,
-     "form": "WWDWD"
+     "d": 10,
+     "l": 7,
+     "gf": 62,
+     "ga": 30,
+     "pts": 64,
+     "tid": 7834,
+     "form": "WWWDW"
     },
     {
      "pos": 2,
-     "team": "Novorizontino",
-     "p": 34,
-     "w": 17,
-     "d": 10,
-     "l": 7,
-     "gf": 61,
-     "ga": 30,
-     "pts": 61,
-     "tid": 7834,
-     "form": "DWWWD"
+     "team": "Vila Nova",
+     "p": 35,
+     "w": 18,
+     "d": 8,
+     "l": 9,
+     "gf": 50,
+     "ga": 36,
+     "pts": 62,
+     "tid": 142,
+     "form": "WDWDL"
     },
     {
      "pos": 3,
@@ -400,19 +400,6 @@
     },
     {
      "pos": 6,
-     "team": "Atlético Goianiense",
-     "p": 34,
-     "w": 14,
-     "d": 12,
-     "l": 8,
-     "gf": 42,
-     "ga": 32,
-     "pts": 54,
-     "tid": 144,
-     "form": "WWLDD"
-    },
-    {
-     "pos": 7,
      "team": "Sport Recife",
      "p": 35,
      "w": 14,
@@ -423,6 +410,19 @@
      "pts": 54,
      "tid": 123,
      "form": "WWDLW"
+    },
+    {
+     "pos": 7,
+     "team": "Atlético Goianiense",
+     "p": 35,
+     "w": 14,
+     "d": 12,
+     "l": 9,
+     "gf": 42,
+     "ga": 33,
+     "pts": 54,
+     "tid": 144,
+     "form": "WLDDL"
     },
     {
      "pos": 8,
@@ -465,6 +465,19 @@
     },
     {
      "pos": 11,
+     "team": "São Bernardo",
+     "p": 35,
+     "w": 13,
+     "d": 10,
+     "l": 12,
+     "gf": 49,
+     "ga": 39,
+     "pts": 49,
+     "tid": 7865,
+     "form": "WLDLW"
+    },
+    {
+     "pos": 12,
      "team": "Botafogo-SP",
      "p": 35,
      "w": 13,
@@ -477,7 +490,7 @@
      "form": "LWWWW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Cuiabá",
      "p": 34,
      "w": 11,
@@ -488,19 +501,6 @@
      "pts": 47,
      "tid": 1193,
      "form": "LWDLL"
-    },
-    {
-     "pos": 13,
-     "team": "São Bernardo",
-     "p": 34,
-     "w": 12,
-     "d": 10,
-     "l": 12,
-     "gf": 46,
-     "ga": 37,
-     "pts": 46,
-     "tid": 7865,
-     "form": "DWLDL"
     },
     {
      "pos": 14,

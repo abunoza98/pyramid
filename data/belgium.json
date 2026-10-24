@@ -122,15 +122,15 @@
     {
      "pos": 6,
      "team": "Westerlo",
-     "p": 8,
+     "p": 9,
      "w": 4,
-     "d": 1,
+     "d": 2,
      "l": 3,
-     "gf": 20,
-     "ga": 17,
-     "pts": 13,
+     "gf": 24,
+     "ga": 21,
+     "pts": 14,
      "tid": 261,
-     "form": "DWWWW"
+     "form": "WWWWD"
     },
     {
      "pos": 7,
@@ -160,19 +160,6 @@
     },
     {
      "pos": 9,
-     "team": "Zulte Waregem",
-     "p": 8,
-     "w": 3,
-     "d": 2,
-     "l": 3,
-     "gf": 10,
-     "ga": 9,
-     "pts": 11,
-     "tid": 600,
-     "form": "DWLLL"
-    },
-    {
-     "pos": 10,
      "team": "Standard Liège",
      "p": 8,
      "w": 3,
@@ -183,6 +170,19 @@
      "pts": 11,
      "tid": 733,
      "form": "WWLLL"
+    },
+    {
+     "pos": 10,
+     "team": "Zulte Waregem",
+     "p": 9,
+     "w": 3,
+     "d": 2,
+     "l": 4,
+     "gf": 10,
+     "ga": 12,
+     "pts": 11,
+     "tid": 600,
+     "form": "WLLLL"
     },
     {
      "pos": 11,
@@ -200,15 +200,15 @@
     {
      "pos": 12,
      "team": "SK Beveren",
-     "p": 8,
+     "p": 9,
      "w": 3,
-     "d": 0,
+     "d": 1,
      "l": 5,
-     "gf": 8,
-     "ga": 14,
-     "pts": 9,
+     "gf": 12,
+     "ga": 18,
+     "pts": 10,
      "tid": 738,
-     "form": "LWWLL"
+     "form": "WWLLD"
     },
     {
      "pos": 13,
@@ -225,6 +225,19 @@
     },
     {
      "pos": 14,
+     "team": "La Louvière",
+     "p": 9,
+     "w": 2,
+     "d": 1,
+     "l": 6,
+     "gf": 11,
+     "ga": 18,
+     "pts": 7,
+     "tid": 5902,
+     "form": "LWLLW"
+    },
+    {
+     "pos": 15,
      "team": "KV Mechelen",
      "p": 8,
      "w": 1,
@@ -237,7 +250,7 @@
      "form": "DLLDW"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "OH Leuven",
      "p": 9,
      "w": 1,
@@ -248,19 +261,6 @@
      "pts": 6,
      "tid": 260,
      "form": "LDWDD"
-    },
-    {
-     "pos": 16,
-     "team": "La Louvière",
-     "p": 8,
-     "w": 1,
-     "d": 1,
-     "l": 6,
-     "gf": 8,
-     "ga": 18,
-     "pts": 4,
-     "tid": 5902,
-     "form": "DLWLL"
     },
     {
      "pos": 17,
