@@ -4,7 +4,7 @@
 //   node scripts/build.mjs                 builds into the project folder (what goes live)
 //   node scripts/build.mjs --preview DIR   builds a copy with explicit index.html links, for opening offline
 //
-// Output: index.html, <country>/index.html, data/clubs.json, sitemap.xml, robots.txt
+// Output: index.html, <country>/index.html, data/clubs.json, data/search.json, sitemap.xml, robots.txt
 
 import { readFile, writeFile, mkdir, copyFile, readdir, rm } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
@@ -127,10 +127,10 @@ ${suffix ? "" : ldScript(jsonld)}${ADSENSE_CLIENT && !suffix ? `<script async sr
     </a>
     <nav class="nav" aria-label="Countries">${nav}</nav>
     <div class="finder">
-      <label class="sr-only" for="club-find">Find a club</label>
+      <label class="sr-only" for="club-find">Search clubs or leagues</label>
       <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
-      <input id="club-find" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="club-find-list" placeholder="Find a club" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">
-      <ul class="finder-list" id="club-find-list" role="listbox" aria-label="Matching clubs" hidden></ul>
+      <input id="club-find" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="club-find-list" placeholder="Search clubs or leagues" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">
+      <ul class="finder-list" id="club-find-list" role="listbox" aria-label="Matching clubs or leagues" hidden></ul>
       <button id="club-clear" type="button" aria-label="Clear highlighted club" hidden>×</button>
     </div>
   </div>
@@ -865,7 +865,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     main: privacyPage({ contact: CONTACT })
   }));
 
-  // Club index for the finder
+  // Club index retained for compatibility, plus a unified search index for clubs and leagues.
   const clubs = [];
   for (const c of countries) {
     for (const lg of c.leagues) {
@@ -875,10 +875,23 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       }
     }
   }
-  // Then clubs that are only in past seasons, marked with the last season they were seen.
   clubs.push(...pastFinder);
   clubs.sort((a, b) => a.team.localeCompare(b.team));
   await write("data/clubs.json", JSON.stringify(clubs));
+
+  const search = [], searchSeen = new Set();
+  const addSearch = (x) => {
+    const k = [x.type, x.country, x.name, x.path || "", x.hash || ""].join("|");
+    if (!searchSeen.has(k)) { searchSeen.add(k); search.push(x); }
+  };
+  for (const c of clubs) addSearch({ type: "club", name: c.team, country: c.country, countryName: c.countryName, league: c.league, tier: c.tier,
+    ...(c.past ? { past: c.past } : {}), ...(c.path ? { path: c.path } : {}) });
+  for (const c of countries) for (const lg of c.leagues) addSearch({ type: "league", name: lg.name, short: lg.short, country: c.country, countryName: c.name,
+    tier: lg.tier, path: `${c.country}/`, hash: lg.id });
+  if (europe) for (const lg of europe.leagues) addSearch({ type: "competition", name: lg.name, short: lg.short, country: "europe", countryName: "Europe",
+    path: `europe/${lg.id}/` });
+  search.sort((a, b) => a.name.localeCompare(b.name) || a.countryName.localeCompare(b.countryName));
+  await write("data/search.json", JSON.stringify(search));
 
   // For the live-scores worker: which API-Football league IDs belong to which table on the site.
   // `s` is a league's own season where it differs from everyone else's: calendar-year leagues (Brazil, the USA,

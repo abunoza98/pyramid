@@ -1,4 +1,4 @@
-/* Football Pyramids: browser behaviour. Club finder, remembered club, and live refresh of the tables. */
+/* Football Pyramids: browser behaviour. Club and league search, remembered club, and live refresh of the tables. */
 (function () {
   "use strict";
   var body = document.querySelector("[data-page]") || document.body;
@@ -52,49 +52,52 @@
     try { if (myClub) localStorage.setItem(STORE_KEY, myClub); else localStorage.removeItem(STORE_KEY); } catch (e) {}
   }
 
-  /* ---------- Club finder (searches every country, current and past clubs) ----------
-     A combobox: type, pick from the list with the mouse or the arrow keys, Enter opens the club's page.
-     Matching ignores accents, case and punctuation, so "koln" finds "1. FC Köln". Used by the header box on every
-     page and the big box on the home page. */
-  var clubs = null;   // [{team, country, countryName, league, tier, past?, path?, _n}]
-  var clubsLoading = null;
+  /* ---------- Club and league search ----------
+     Searches every current league plus every current and past club. A combobox: type, pick from the list with the
+     mouse or arrow keys, Enter opens the club page or jumps straight to the league table. Matching ignores accents,
+     case and punctuation, so "koln" finds "1. FC Köln". Club aliases such as "Spurs" still work. */
+  var searchItems = null;
+  var searchLoading = null;
   function norm(s) {
     var t = String(s || "").toLowerCase();
     try { t = t.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); } catch (e) {}
     return t.replace(/ø/g, "o").replace(/ł/g, "l").replace(/ß/g, "ss").replace(/ı/g, "i").replace(/&/g, " and ")
       .replace(/[^a-z0-9]+/g, " ").trim();
   }
-  function loadClubs() {
-    if (clubs) return Promise.resolve(clubs);
-    if (clubsLoading) return clubsLoading;
-    clubsLoading = fetch(BASE + "data/clubs.json", { cache: "no-cache" })
+  function itemName(x) { return x.name || x.team || ""; }
+  function loadSearch() {
+    if (searchItems) return Promise.resolve(searchItems);
+    if (searchLoading) return searchLoading;
+    searchLoading = fetch(BASE + "data/search.json", { cache: "no-cache" })
       .then(function (r) { return r.ok ? r.json() : []; })
       .catch(function () { return []; })
       .then(function (list) {
-        list.forEach(function (c) { c._n = norm(c.team); });
-        clubs = list;
+        list.forEach(function (x) { x._n = norm(itemName(x)); x._short = norm(x.short || ""); });
+        searchItems = list;
         return list;
       });
-    return clubsLoading;
+    return searchLoading;
   }
-  // Best matches first: exact name, then names starting with the text, then a word starting with it, then anywhere.
-  // Clubs in this season's tables come before clubs only seen in past seasons, and higher tiers before lower.
-  function searchClubs(q, max) {
-    if (!clubs) return [];
+  function searchAll(q, max) {
+    if (!searchItems) return [];
     var raw = q.trim().toLowerCase();
     var n = norm(ALIASES[raw] || raw);
     if (!n) return [];
     var out = [];
-    clubs.forEach(function (c) {
-      var s = c._n === n ? 0 : c._n.indexOf(n) === 0 ? 1 : (" " + c._n).indexOf(" " + n) > -1 ? 2 : c._n.indexOf(n) > -1 ? 3 : -1;
-      if (s > -1) out.push({ c: c, s: s });
+    searchItems.forEach(function (x) {
+      var s = x._n === n || x._short === n ? 0
+        : x._n.indexOf(n) === 0 || (x._short && x._short.indexOf(n) === 0) ? 1
+        : (" " + x._n).indexOf(" " + n) > -1 ? 2
+        : x._n.indexOf(n) > -1 ? 3 : -1;
+      if (s > -1) out.push({ x: x, s: s });
     });
+    function typeRank(x) { return x.past ? 2 : x.type === "league" || x.type === "competition" ? 0 : 1; }
     out.sort(function (a, b) {
-      return a.s - b.s || (a.c.past ? 1 : 0) - (b.c.past ? 1 : 0) || (a.c.tier || 9) - (b.c.tier || 9) || a.c.team.localeCompare(b.c.team);
+      return a.s - b.s || typeRank(a.x) - typeRank(b.x) || (a.x.tier || 9) - (b.x.tier || 9) || itemName(a.x).localeCompare(itemName(b.x));
     });
-    return out.slice(0, max || 8).map(function (x) { return x.c; });
+    return out.slice(0, max || 8).map(function (r) { return r.x; });
   }
-  function matchClub(q) { return searchClubs(q, 1)[0] || null; }
+  function matchSearch(q) { return searchAll(q, 1)[0] || null; }
   var toastTimer;
   function toast(msg) {
     var t = $("toast");
@@ -102,14 +105,17 @@
     clearTimeout(toastTimer);
     toastTimer = setTimeout(function () { t.hidden = true; }, 3200);
   }
-  function goToClub(c, input) {
-    setClub(c.team);
-    if (input) { input.value = c.team; input.blur(); }
-    // Open the club's page (it stays highlighted in every table from now on).
-    if (c.path) { location.href = BASE + c.path + SUFFIX; return; }
-    // No club page: show it in its table instead.
+  function goToItem(x, input) {
+    var name = itemName(x);
+    if (input) { input.value = name; input.blur(); }
+    if (x.type === "league" || x.type === "competition") {
+      location.href = BASE + x.path + SUFFIX + (x.hash ? "#" + x.hash : "");
+      return;
+    }
+    setClub(name);
+    if (x.path) { location.href = BASE + x.path + SUFFIX; return; }
     if (applyClub(true)) return;
-    location.href = BASE + c.country + "/" + SUFFIX + "#club";
+    location.href = BASE + x.country + "/" + SUFFIX + "#club";
   }
   function finder(input) {
     var list = $(input.getAttribute("aria-controls"));
@@ -130,14 +136,17 @@
     function show() {
       var q = input.value;
       if (!q.trim()) { close(); return; }
-      results = searchClubs(q, 8);
+      results = searchAll(q, 8);
       if (!results.length) {
-        list.innerHTML = '<li class="finder-none" role="presentation">No club called “' + FP.esc(q.trim()) + "” in these leagues yet.</li>";
+        list.innerHTML = '<li class="finder-none" role="presentation">No matching club or league in the competitions covered here.</li>';
       } else {
-        list.innerHTML = results.map(function (c, i) {
-          var meta = c.past ? c.countryName + " · last seen " + c.past + ", " + c.league : c.league + " · " + c.countryName;
+        list.innerHTML = results.map(function (x, i) {
+          var kind = x.type === "competition" ? "Competition" : x.type === "league" ? "League" : "Club";
+          var meta = x.type === "club"
+            ? (x.past ? kind + " · " + x.countryName + " · last seen " + x.past + ", " + x.league : kind + " · " + x.league + " · " + x.countryName)
+            : kind + (x.tier ? " · Tier " + x.tier : "") + " · " + x.countryName;
           return '<li role="option" id="' + list.id + "-" + i + '" aria-selected="false" data-i="' + i + '">' +
-            FP.flag(c.country) + '<span class="fl-name">' + FP.esc(c.team) + '</span><span class="fl-meta">' + FP.esc(meta) + "</span></li>";
+            FP.flag(x.country) + '<span class="fl-name">' + FP.esc(itemName(x)) + '</span><span class="fl-meta">' + FP.esc(meta) + "</span></li>";
         }).join("");
       }
       list.hidden = false; input.setAttribute("aria-expanded", "true");
@@ -146,25 +155,24 @@
     function choose() {
       var q = input.value;
       if (!q.trim()) return;
-      loadClubs().then(function () {
-        var c = results[active] || matchClub(q);
-        if (c) { close(); goToClub(c, input); }
-        else toast("No club called “" + q.trim() + "” in these leagues yet.");
+      loadSearch().then(function () {
+        var x = results[active] || matchSearch(q);
+        if (x) { close(); goToItem(x, input); }
+        else toast("No matching club or league in the competitions covered here.");
       });
     }
     input.addEventListener("focus", function () {
-      // The header box shows the remembered club; select it so typing starts a new search.
       if (input.value && input.value === myClub) { try { input.select(); } catch (e) {} }
-      loadClubs().then(function () { if (input.value && document.activeElement === input && input.value !== myClub) show(); });
+      loadSearch().then(function () { if (input.value && document.activeElement === input && input.value !== myClub) show(); });
     });
     input.addEventListener("input", function () {
       if (input === $("club-find") && !input.value) { setClub(null); applyClub(false); }
-      loadClubs().then(show);
+      loadSearch().then(show);
     });
     input.addEventListener("keydown", function (e) {
       if (e.key === "ArrowDown" || e.key === "ArrowUp") {
         e.preventDefault();
-        if (list.hidden) { loadClubs().then(show); return; }
+        if (list.hidden) { loadSearch().then(show); return; }
         if (!results.length) return;
         setActive((active + (e.key === "ArrowDown" ? 1 : -1) + results.length) % results.length);
       } else if (e.key === "Enter") {
@@ -174,19 +182,17 @@
       }
     });
     input.addEventListener("blur", function () { closeTimer = setTimeout(close, 150); });
-    // mousedown keeps the focus in the box, so the list doesn't close before the click lands.
     list.addEventListener("mousedown", function (e) { e.preventDefault(); clearTimeout(closeTimer); });
     list.addEventListener("click", function (e) {
       var li = e.target.closest && e.target.closest("[role=option]");
       if (!li) return;
-      var c = results[Number(li.getAttribute("data-i"))];
-      if (c) { close(); goToClub(c, input); }
+      var x = results[Number(li.getAttribute("data-i"))];
+      if (x) { close(); goToItem(x, input); }
     });
   }
   finder($("club-find"));
   if ($("hero-find")) {
     finder($("hero-find"));
-    // One search at a time on the home page: the header box hides while the big one is in view.
     if (window.IntersectionObserver) {
       new IntersectionObserver(function (es) { body.classList.toggle("hero-find-on", es[0].isIntersecting); }).observe($("hero-find-box"));
     }
@@ -197,6 +203,7 @@
     applyClub(false);
     $("club-find").focus();
   });
+
 
   /* ---------- Live refresh ----------
      Official tables: data/<country>.json, re-read every 5 minutes.

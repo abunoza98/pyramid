@@ -710,14 +710,14 @@
       '<p class="lede">' + all.length + " countries, " + nLeagues + " leagues and " + nClubs.toLocaleString("en-GB") +
       " clubs. Each country’s divisions sit together in league-system order, with promotion, relegation and play-off places shown where they apply. " +
       "Fixtures, past seasons and live scores on match days.</p>" +
-      // Club search, the quickest way in. assets/app.js wires it up and keeps it in place when the page redraws.
-      '<div class="hero-find" id="hero-find-box"><label for="hero-find">Find your club</label>' +
+      // Club and league search, the quickest way in. assets/app.js wires it up and keeps it in place when the page redraws.
+      '<div class="hero-find" id="hero-find-box"><label for="hero-find">Find a club or league</label>' +
         '<div class="hero-find-in"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/>' +
         '<path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>' +
         '<input id="hero-find" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="hero-find-list" aria-describedby="hero-find-hint" ' +
-        'placeholder="Type a club’s name" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go">' +
-        '<ul class="finder-list" id="hero-find-list" role="listbox" aria-label="Matching clubs" hidden></ul></div>' +
-        '<p class="hero-find-hint" id="hero-find-hint">Any club in these leagues, now or in past seasons: fixtures, results and its journey through the pyramid.</p></div>' +
+        'placeholder="Type a club or league name" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go">' +
+        '<ul class="finder-list" id="hero-find-list" role="listbox" aria-label="Matching clubs or leagues" hidden></ul></div>' +
+        '<p class="hero-find-hint" id="hero-find-hint">Search any club or league covered here. Club results open fixtures, results and its pyramid journey; league results jump straight to the table.</p></div>' +
       stampHTML(live ? "live" : "snapshot", newest, countries.reduce(function (n, c) { return n + (c.liveCount || 0); }, 0)) +
       "</section>" +
       stripHTML(opts.live, opts.europe ? all.concat([summary(opts.europe)]) : all, base, suffix, names) +
