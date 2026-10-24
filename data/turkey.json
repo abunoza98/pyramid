@@ -383,6 +383,19 @@
     },
     {
      "pos": 6,
+     "team": "Muğlaspor",
+     "p": 12,
+     "w": 4,
+     "d": 6,
+     "l": 2,
+     "gf": 18,
+     "ga": 14,
+     "pts": 18,
+     "tid": 7414,
+     "form": "DDLWW"
+    },
+    {
+     "pos": 7,
      "team": "Mardin 1969",
      "p": 11,
      "w": 5,
@@ -395,7 +408,7 @@
      "form": "LLWWL"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Antalyaspor",
      "p": 11,
      "w": 6,
@@ -408,7 +421,7 @@
      "form": "WWWLW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Sarıyer",
      "p": 11,
      "w": 4,
@@ -419,19 +432,6 @@
      "pts": 16,
      "tid": 3605,
      "form": "DWDLD"
-    },
-    {
-     "pos": 9,
-     "team": "Muğlaspor",
-     "p": 11,
-     "w": 3,
-     "d": 6,
-     "l": 2,
-     "gf": 13,
-     "ga": 14,
-     "pts": 15,
-     "tid": 7414,
-     "form": "DDDLW"
     },
     {
      "pos": 10,
@@ -554,15 +554,15 @@
     {
      "pos": 19,
      "team": "İstanbulspor",
-     "p": 11,
+     "p": 12,
      "w": 1,
      "d": 2,
-     "l": 8,
+     "l": 9,
      "gf": 9,
-     "ga": 26,
+     "ga": 31,
      "pts": 5,
      "tid": 3578,
-     "form": "LWLLL"
+     "form": "WLLLL"
     },
     {
      "pos": 20,
@@ -612,6 +612,9 @@
     "Kastamonuspor: 3 points deducted.",
     "Hatayspor: 4 points deducted.",
     "Adana Demirspor: 7 points deducted.",
+    "Ankaragücü: 3 points deducted.",
+    "İnegölspor: 3 points deducted.",
+    "Serik Spor: 3 points deducted.",
     "İskenderunspor: 1 point deducted."
    ],
    "groups": [
@@ -673,6 +676,19 @@
       },
       {
        "pos": 5,
+       "team": "İnegöl Kafkas Gençlik",
+       "p": 8,
+       "w": 5,
+       "d": 1,
+       "l": 2,
+       "gf": 14,
+       "ga": 9,
+       "pts": 16,
+       "tid": 21996,
+       "form": "WLWWW"
+      },
+      {
+       "pos": 6,
        "team": "Şanlıurfaspor",
        "p": 8,
        "w": 4,
@@ -685,7 +701,7 @@
        "form": "LDWWW"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Çorluspor 1947",
        "p": 8,
        "w": 4,
@@ -696,19 +712,6 @@
        "pts": 14,
        "tid": 22451,
        "form": "LWLWD"
-      },
-      {
-       "pos": 7,
-       "team": "İnegöl Kafkas Gençlik",
-       "p": 7,
-       "w": 4,
-       "d": 1,
-       "l": 2,
-       "gf": 13,
-       "ga": 9,
-       "pts": 13,
-       "tid": 21996,
-       "form": "DWLWW"
       },
       {
        "pos": 8,
@@ -845,16 +848,16 @@
       {
        "pos": 18,
        "team": "Adana Demirspor",
-       "p": 7,
+       "p": 8,
        "w": 2,
        "d": 1,
-       "l": 4,
+       "l": 5,
        "gf": 6,
-       "ga": 11,
+       "ga": 12,
        "pts": 0,
        "ded": 7,
        "tid": 3563,
-       "form": "DLLWL"
+       "form": "LLWLL"
       }
      ]
     },
@@ -877,6 +880,19 @@
       },
       {
        "pos": 2,
+       "team": "Yeni Orduspor",
+       "p": 8,
+       "w": 6,
+       "d": 0,
+       "l": 2,
+       "gf": 19,
+       "ga": 9,
+       "pts": 18,
+       "tid": 7426,
+       "form": "LWWWW"
+      },
+      {
+       "pos": 3,
        "team": "Adana 01 FK",
        "p": 8,
        "w": 5,
@@ -889,7 +905,7 @@
        "form": "WWWWD"
       },
       {
-       "pos": 3,
+       "pos": 4,
        "team": "Ankara Demirspor",
        "p": 8,
        "w": 5,
@@ -899,19 +915,6 @@
        "ga": 11,
        "pts": 16,
        "tid": 3581,
-       "form": "LLWWW"
-      },
-      {
-       "pos": 4,
-       "team": "Yeni Orduspor",
-       "p": 7,
-       "w": 5,
-       "d": 0,
-       "l": 2,
-       "gf": 14,
-       "ga": 5,
-       "pts": 15,
-       "tid": 7426,
        "form": "LLWWW"
       },
       {
@@ -969,15 +972,15 @@
       {
        "pos": 9,
        "team": "Beyoğlu Yeni Çarşı",
-       "p": 6,
+       "p": 7,
        "w": 3,
        "d": 1,
-       "l": 2,
-       "gf": 11,
-       "ga": 7,
+       "l": 3,
+       "gf": 15,
+       "ga": 12,
        "pts": 10,
        "tid": 7406,
-       "form": "WWWLL"
+       "form": "WWLLL"
       },
       {
        "pos": 10,
@@ -994,19 +997,6 @@
       },
       {
        "pos": 11,
-       "team": "Ankaragücü",
-       "p": 6,
-       "w": 2,
-       "d": 2,
-       "l": 2,
-       "gf": 11,
-       "ga": 7,
-       "pts": 8,
-       "tid": 1010,
-       "form": "LDWWD"
-      },
-      {
-       "pos": 12,
        "team": "Kütahyaspor",
        "p": 8,
        "w": 2,
@@ -1019,20 +1009,21 @@
        "form": "LLLDW"
       },
       {
-       "pos": 13,
-       "team": "İnegölspor",
-       "p": 7,
-       "w": 1,
+       "pos": 12,
+       "team": "Ankaragücü",
+       "p": 6,
+       "w": 2,
        "d": 2,
-       "l": 4,
-       "gf": 8,
-       "ga": 13,
+       "l": 2,
+       "gf": 11,
+       "ga": 7,
        "pts": 5,
-       "tid": 3612,
-       "form": "LLWLD"
+       "ded": 3,
+       "tid": 1010,
+       "form": "LDWWD"
       },
       {
-       "pos": 14,
+       "pos": 13,
        "team": "Fethiyespor",
        "p": 7,
        "w": 1,
@@ -1045,20 +1036,7 @@
        "form": "DWLLD"
       },
       {
-       "pos": 15,
-       "team": "Serik Spor",
-       "p": 8,
-       "w": 1,
-       "d": 2,
-       "l": 5,
-       "gf": 6,
-       "ga": 15,
-       "pts": 5,
-       "tid": 7421,
-       "form": "LLLLL"
-      },
-      {
-       "pos": 16,
+       "pos": 14,
        "team": "Kırklarelispor",
        "p": 6,
        "w": 1,
@@ -1069,6 +1047,34 @@
        "pts": 4,
        "tid": 3596,
        "form": "LDLLL"
+      },
+      {
+       "pos": 15,
+       "team": "İnegölspor",
+       "p": 7,
+       "w": 1,
+       "d": 2,
+       "l": 4,
+       "gf": 8,
+       "ga": 13,
+       "pts": 2,
+       "ded": 3,
+       "tid": 3612,
+       "form": "LLWLD"
+      },
+      {
+       "pos": 16,
+       "team": "Serik Spor",
+       "p": 8,
+       "w": 1,
+       "d": 2,
+       "l": 5,
+       "gf": 6,
+       "ga": 15,
+       "pts": 2,
+       "ded": 3,
+       "tid": 7421,
+       "form": "LLLLL"
       },
       {
        "pos": 17,

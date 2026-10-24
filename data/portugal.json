@@ -173,15 +173,15 @@
     {
      "pos": 10,
      "team": "Estrela da Amadora",
-     "p": 8,
+     "p": 9,
      "w": 2,
      "d": 4,
-     "l": 2,
+     "l": 3,
      "gf": 14,
-     "ga": 15,
+     "ga": 17,
      "pts": 10,
      "tid": 15130,
-     "form": "DWDLL"
+     "form": "WDLLL"
     },
     {
      "pos": 11,
@@ -250,6 +250,19 @@
     },
     {
      "pos": 16,
+     "team": "Casa Pia",
+     "p": 9,
+     "w": 2,
+     "d": 1,
+     "l": 6,
+     "gf": 5,
+     "ga": 17,
+     "pts": 7,
+     "tid": 4716,
+     "form": "DLWLW"
+    },
+    {
+     "pos": 17,
      "team": "Nacional",
      "p": 8,
      "w": 1,
@@ -260,19 +273,6 @@
      "pts": 4,
      "tid": 225,
      "form": "LLLLL"
-    },
-    {
-     "pos": 17,
-     "team": "Casa Pia",
-     "p": 8,
-     "w": 1,
-     "d": 1,
-     "l": 6,
-     "gf": 3,
-     "ga": 17,
-     "pts": 4,
-     "tid": 4716,
-     "form": "LDLWL"
     },
     {
      "pos": 18,

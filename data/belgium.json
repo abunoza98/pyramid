@@ -4,7 +4,7 @@
  "adjective": "Belgian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-15T00:00:00.000Z",
+ "updated": "2026-10-24T00:00:00.000Z",
  "belowNote": "The top amateur clubs come up",
  "leagues": [
   {
@@ -289,7 +289,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-10-15T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   },
   {
    "id": "challenger-pro-league",
@@ -397,15 +397,15 @@
     {
      "pos": 6,
      "team": "Excelsior Virton",
-     "p": 6,
+     "p": 7,
      "w": 3,
      "d": 1,
-     "l": 2,
-     "gf": 11,
-     "ga": 6,
+     "l": 3,
+     "gf": 12,
+     "ga": 9,
      "pts": 10,
      "tid": 4715,
-     "form": "WLWDL"
+     "form": "LWDLL"
     },
     {
      "pos": 7,
@@ -422,6 +422,19 @@
     },
     {
      "pos": 8,
+     "team": "Club Brugge II",
+     "p": 7,
+     "w": 2,
+     "d": 3,
+     "l": 2,
+     "gf": 11,
+     "ga": 13,
+     "pts": 9,
+     "tid": 14130,
+     "form": "LDDLD"
+    },
+    {
+     "pos": 9,
      "team": "Lierse",
      "p": 6,
      "w": 2,
@@ -432,19 +445,6 @@
      "pts": 8,
      "tid": 6219,
      "form": "WDDLW"
-    },
-    {
-     "pos": 9,
-     "team": "Club Brugge II",
-     "p": 6,
-     "w": 2,
-     "d": 2,
-     "l": 2,
-     "gf": 11,
-     "ga": 13,
-     "pts": 8,
-     "tid": 14130,
-     "form": "WLDDL"
     },
     {
      "pos": 10,
@@ -462,15 +462,15 @@
     {
      "pos": 11,
      "team": "Genk II",
-     "p": 7,
+     "p": 8,
      "w": 2,
-     "d": 1,
+     "d": 2,
      "l": 4,
      "gf": 12,
      "ga": 15,
-     "pts": 7,
+     "pts": 8,
      "tid": 19045,
-     "form": "WWLDL"
+     "form": "WLDLD"
     },
     {
      "pos": 12,
@@ -487,6 +487,19 @@
     },
     {
      "pos": 13,
+     "team": "Seraing United",
+     "p": 8,
+     "w": 1,
+     "d": 2,
+     "l": 5,
+     "gf": 11,
+     "ga": 16,
+     "pts": 5,
+     "tid": 10244,
+     "form": "LLDLW"
+    },
+    {
+     "pos": 14,
      "team": "Liège",
      "p": 7,
      "w": 1,
@@ -497,19 +510,6 @@
      "pts": 5,
      "tid": 6220,
      "form": "LDDLL"
-    },
-    {
-     "pos": 14,
-     "team": "Seraing United",
-     "p": 7,
-     "w": 0,
-     "d": 2,
-     "l": 5,
-     "gf": 8,
-     "ga": 15,
-     "pts": 2,
-     "tid": 10244,
-     "form": "DLLDL"
     },
     {
      "pos": 15,
@@ -525,7 +525,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-15T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   }
  ]
 }

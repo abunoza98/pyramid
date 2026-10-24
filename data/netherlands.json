@@ -172,6 +172,19 @@
     },
     {
      "pos": 10,
+     "team": "Utrecht",
+     "p": 10,
+     "w": 3,
+     "d": 3,
+     "l": 4,
+     "gf": 17,
+     "ga": 27,
+     "pts": 12,
+     "tid": 207,
+     "form": "WLWWD"
+    },
+    {
+     "pos": 11,
      "team": "Excelsior",
      "p": 9,
      "w": 3,
@@ -182,19 +195,6 @@
      "pts": 11,
      "tid": 196,
      "form": "DLDLL"
-    },
-    {
-     "pos": 11,
-     "team": "Utrecht",
-     "p": 9,
-     "w": 3,
-     "d": 2,
-     "l": 4,
-     "gf": 16,
-     "ga": 26,
-     "pts": 11,
-     "tid": 207,
-     "form": "DWLWW"
     },
     {
      "pos": 12,
@@ -238,15 +238,15 @@
     {
      "pos": 15,
      "team": "PEC Zwolle",
-     "p": 9,
+     "p": 10,
      "w": 2,
-     "d": 1,
+     "d": 2,
      "l": 6,
-     "gf": 10,
-     "ga": 22,
-     "pts": 7,
+     "gf": 11,
+     "ga": 23,
+     "pts": 8,
      "tid": 193,
-     "form": "DLLLW"
+     "form": "LLLWD"
     },
     {
      "pos": 16,
