@@ -19,9 +19,9 @@ function statusLabel(z) {
   if (!z) return "";
   const label = String(z.label || "");
   if (/^promotion$/i.test(label)) return "Automatic promotion place";
+  if (/relegation play-?off/i.test(label)) return "Relegation play-off place";
   if (/play-?offs?/i.test(label)) return label.replace(/play-?offs?/i, "Play-off") + (/(place|round|final)/i.test(label) ? "" : " place");
   if (/^relegation$/i.test(label)) return "Relegation place";
-  if (/relegation play-?off/i.test(label)) return "Relegation play-off place";
   return label ? label + (/(place|round|final|semi|qualif)/i.test(label) ? "" : " place") : "";
 }
 
@@ -52,14 +52,22 @@ function stakeParts(lg, rows, me) {
       return parts.slice(0, 2);
     }
 
-    // Inside a promotion/play-off/Europe zone: show the cushion to dropping out of that zone.
+    // In an automatic-promotion place, second (or lower in a multi-place zone) is more interesting relative to 1st.
+    if (/^promotion$/i.test(active.label || "") && me.pos > 1) {
+      const leader = rowAt(rows, 1);
+      if (leader) {
+        const gap = leader.pts - me.pts;
+        parts.push(gap > 0 ? `${pointText(gap)} behind 1st` : "Level on points with 1st");
+        return parts.slice(0, 2);
+      }
+    }
+
+    // Inside a play-off/Europe/promotion zone: show the cushion to dropping out of that zone.
     const below = rowAt(rows, active.to + 1);
     if (below) {
       const gap = me.pts - below.pts;
-      parts.push(gap > 0 ? `${pointText(gap)} clear of the ${targetLabel(active)} cut-off` : `Level on points at the ${targetLabel(active)} cut-off`);
-    } else if (me.pos > 1) {
-      const leader = rowAt(rows, 1);
-      if (leader && leader.pts > me.pts) parts.push(`${pointText(leader.pts - me.pts)} behind 1st`);
+      const target = /^promotion$/i.test(active.label || "") ? "promotion" : targetLabel(active);
+      parts.push(gap > 0 ? `${pointText(gap)} clear of the ${target} cut-off` : `Level on points at the ${target} cut-off`);
     }
     return parts.slice(0, 2);
   }
