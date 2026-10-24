@@ -381,7 +381,8 @@ export const COUNTRIES = [
       rounds: { "Quarter-finals": "Elimination finals", "Elimination Finals": "Elimination finals", "Elimination Final": "Elimination finals",
         "1/8-finals": "Elimination finals", "Semi-finals": "Semi-finals", "Final": "Grand Final", "Grand Final": "Grand Final" },
       dist: { "Elimination finals": 2, "Semi-finals": 1, "Grand Final": 0 },
-      championOf: "a-league", championLabel: "Grand Final winner" }],
+      championOf: "a-league", championLabel: "Grand Final winner" },
+      { apiId: 874, id: "australia-cup", name: "Australia Cup", short: "AUSC", calendar: true }],
     // Australia spans several time zones, so local kick-off times go by the home club (A-League) or the state
     // (NPL and state leagues). Anything not listed is on Sydney time.
     tz: { home: "Australia/Sydney",

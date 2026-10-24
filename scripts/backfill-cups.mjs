@@ -62,7 +62,8 @@ async function main() {
   let saved = 0;
   for (const c of COUNTRIES) for (const cup of c.cups || []) {
     const body = await get(`/leagues?id=${cup.apiId}`);
-    const years = (body?.response?.[0]?.seasons || []).map((s) => s.year).filter((y) => y < seasonFor(c) && (!cup.until || y <= cup.until)).sort((a, b) => a - b);
+    const cupSeason = cup.calendar ? { calendar: true } : c;
+    const years = (body?.response?.[0]?.seasons || []).map((s) => s.year).filter((y) => y < seasonFor(cupSeason) && (!cup.until || y <= cup.until)).sort((a, b) => a - b);
     const dir = path.join(outRoot, "data", "history", c.country, "cups", cup.id);
     const done = [];
     for (const year of years) {
@@ -80,10 +81,10 @@ async function main() {
       }
       const rounds = toRounds(list);
       const s = summarise(rounds, { ...learnLabels(done), ...(cup.dist || {}) });
-      const out = { country: c.country, cup: cup.id, name: cup.name, season: seasonLabel(year, c), year, ...s };
+      const out = { country: c.country, cup: cup.id, name: cup.name, season: seasonLabel(year, cupSeason), year, ...s };
       await mkdir(dir, { recursive: true });
       await writeFile(fxFile, JSON.stringify({ country: c.country, countryName: c.name, league: cup.id, name: cup.name, cup: true,
-        season: seasonLabel(year, c), year, groups: [{ name: null, rounds }] }) + "\n");
+        season: seasonLabel(year, cupSeason), year, groups: [{ name: null, rounds }] }) + "\n");
       await writeFile(file, JSON.stringify(out) + "\n");
       done.push(out);
       saved++;

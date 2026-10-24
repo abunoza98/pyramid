@@ -253,8 +253,9 @@
     document.querySelectorAll("#main-content details").forEach(function (d) { var k = key(d); if (k) open[k] = d.open; });
     // The home page's club search is moved across rather than redrawn, so typing (and focus) survives a live update.
     var heroFind = $("hero-find-box");
-    // The country picker keeps its sideways scroll position through the redraw.
+    // Sideways rows keep their scroll position through live redraws.
     var wheel = document.querySelector("#main-content .xp-tabs"), wheelX = wheel ? wheel.scrollLeft : 0;
+    var games = document.querySelector("#main-content .strip-list"), gamesX = games ? games.scrollLeft : 0;
     $("main-content").innerHTML = html;
     if (wheel && document.querySelector("#main-content .xp-tabs")) {
       var row2 = document.querySelector("#main-content .xp-tabs");
@@ -269,6 +270,8 @@
     });
     applyClub(false);
     applyViews();
+    var games2 = document.querySelector("#main-content .strip-list");
+    if (games2) { games2.scrollLeft = gamesX; requestAnimationFrame(function () { stripArrows(games2); }); }
     window.scrollTo(0, y);
   }
   /* ---------- Table / Form switch: re-sort a division by points from the last five games ---------- */
@@ -332,6 +335,40 @@
       history.replaceState(null, "", location.pathname + location.search + (b.getAttribute("data-tab") === "fx" ? "#fixtures" : ""));
     }
   });
+  /* ---------- Today's games: horizontal strip with explicit controls ---------- */
+  function stripArrows(row) {
+    if (!row) return;
+    var strip = row.closest(".strip"), max = Math.max(0, row.scrollWidth - row.clientWidth);
+    if (!strip) return;
+    var prev = strip.querySelector(".strip-arrow.prev"), next = strip.querySelector(".strip-arrow.next"), nav = strip.querySelector(".strip-nav");
+    if (nav) nav.hidden = max <= 2;
+    if (prev) prev.disabled = row.scrollLeft <= 2;
+    if (next) next.disabled = row.scrollLeft >= max - 2;
+  }
+  function stripRows() { document.querySelectorAll(".strip-list").forEach(stripArrows); }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("[data-strip-scroll]");
+    if (!a) return;
+    var row = a.closest(".strip").querySelector(".strip-list"), card = row.querySelector(".chip");
+    var gap = parseFloat(getComputedStyle(row).columnGap || getComputedStyle(row).gap) || 8;
+    var step = card ? card.getBoundingClientRect().width + gap : row.clientWidth * 0.75;
+    row.scrollBy({ left: Number(a.getAttribute("data-strip-scroll")) * step * 2, behavior: "smooth" });
+  });
+  document.addEventListener("keydown", function (e) {
+    var row = e.target && e.target.classList && e.target.classList.contains("strip-list") ? e.target : null;
+    if (!row || (e.key !== "ArrowLeft" && e.key !== "ArrowRight")) return;
+    e.preventDefault();
+    var card = row.querySelector(".chip"), gap = parseFloat(getComputedStyle(row).columnGap || getComputedStyle(row).gap) || 8;
+    var step = card ? card.getBoundingClientRect().width + gap : row.clientWidth * 0.75;
+    row.scrollBy({ left: (e.key === "ArrowLeft" ? -1 : 1) * step, behavior: "smooth" });
+  });
+  document.addEventListener("scroll", function (e) {
+    var row = e.target;
+    if (row && row.classList && row.classList.contains("strip-list")) stripArrows(row);
+  }, true);
+  window.addEventListener("resize", stripRows);
+  stripRows();
+
   /* ---------- The home page's country picker: a sideways-scrolling row with arrows for mouse users ---------- */
   function wheelArrows(row) {
     var wheel = row.parentNode, max = row.scrollWidth - row.clientWidth;
