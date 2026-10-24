@@ -281,6 +281,7 @@
         (r.title ? (r.title.href ? '<a class="out champ" href="' + esc(r.title.href) + '" title="Open the postseason bracket">🏆 ' + esc(r.title.label) + "</a>"
           : '<span class="out champ">🏆 ' + esc(r.title.label) + "</span>") : "") +
         (r.q ? '<span class="qtag ' + r.q + '" title="' + esc(QTAG[r.q][1]) + '">' + QTAG[r.q][0] + "</span>" : "") +
+        badgesHTML(r.badges) +
         (r.live ? '<span class="lv ' + (r.live.gf > r.live.ga ? "lv-w" : r.live.gf < r.live.ga ? "lv-l" : "lv-d") + (r.live.on ? " on" : "") +
           '" title="' + esc((r.live.home ? r.team + " " + r.live.gf + "–" + r.live.ga + " " + r.live.opp : r.live.opp + " " + r.live.ga + "–" + r.live.gf + " " + r.team) + " (" + r.live.clock + ")") + '">' +
           esc(r.live.clock) + " " + r.live.gf + "–" + r.live.ga + "</span>" : "") + "</th>" +
@@ -292,6 +293,29 @@
       '<td class="c-n c-ga">' + r.ga + "</td>" +
       '<td class="c-gd">' + gd(r) + "</td>" + form +
       '<td class="c-pts"><span class="v-t">' + r.pts + '</span><span class="v-f">' + formPts(r.form) + "</span></td></tr>";
+  }
+
+  // Extra row tags set by the build: { t: text, c: class, h: tooltip, u: link } (grand final winners, Australian
+  // Championship places, promotions and relegations decided after the season).
+  function badgesHTML(list) {
+    return (list || []).map(function (b) {
+      var attr = ' class="' + esc(b.c || "out") + '"' + (b.h ? ' title="' + esc(b.h) + '"' : "");
+      return b.u ? "<a" + attr + ' href="' + esc(b.u) + '">' + esc(b.t) + "</a>" : "<span" + attr + ">" + esc(b.t) + "</span>";
+    }).join("");
+  }
+  // marks: { leagueId: { "<club ID>" or "n:<slug>": [badges], _notes: [lines] } }. Returns the league with its rows
+  // tagged (copies, so the data itself is untouched and a re-render with fresh data gets the same tags).
+  function markLeague(lg, marks) {
+    var m = marks && marks[lg.id];
+    if (!m) return lg;
+    var tag = function (r) {
+      var b = (r.tid && m[r.tid]) || m["n:" + slug(r.team)];
+      return b ? Object.assign({}, r, { badges: b }) : r;
+    };
+    var out = Object.assign({}, lg, { notes: (lg.notes || []).concat(m._notes || []) });
+    if (lg.groups) out.groups = lg.groups.map(function (g) { return Object.assign({}, g, { rows: g.rows.map(tag) }); });
+    if (lg.rows) out.rows = lg.rows.map(tag);
+    return out;
   }
 
   function tableHTML(lg, rows, caption) {
@@ -418,7 +442,8 @@
       var inner =
         // European competitions aren't tiers of one league system, so they're numbered as levels.
         '<span class="pyr-tier">' + (c.country === "europe" ? "Level " : "Tier ") + t.tier + "</span>" +
-        '<span class="pyr-track"><span class="pyr-bar" style="--w:' + (t.clubs / max * 100).toFixed(2) + '%"></span>' +
+        // A bar too narrow for its name (12 A-League clubs above 99 NPL ones) gets the name beside it instead.
+        '<span class="pyr-track' + (t.clubs / max < 0.3 ? " pyr-narrow" : "") + '" style="--w:' + (t.clubs / max * 100).toFixed(2) + '%"><span class="pyr-bar"></span>' +
         '<span class="pyr-label"><span><span class="nm-long">' + esc(t.name) + '</span><span class="nm-short">' + esc(t.short || t.name) + "</span></span>" +
         "<small>" + detail + "</small></span></span>";
       return t.href ? '<a class="pyr-row" href="' + t.href + '">' + inner + "</a>" : '<div class="pyr-row soon">' + inner + "</div>";
@@ -459,7 +484,7 @@
     c.leagues.forEach(function (lg, i) {
       if (!past) { lg._club = "club/"; lg._suffix = opts.suffix || ""; }
       else if (opts.clubPaths) { lg._paths = opts.clubPaths; lg._root = opts.root || ""; lg._suffix = opts.suffix || ""; }
-      html += tierHTML(lg, { fixtures: (opts.fixtures || {})[c.country + "/" + lg.id] }) + bandHTML(lg, c.leagues[i + 1] || null, c.belowNote);
+      html += tierHTML(markLeague(lg, opts.marks), { fixtures: (opts.fixtures || {})[c.country + "/" + lg.id] }) + bandHTML(lg, c.leagues[i + 1] || null, c.belowNote);
       if (i === 1) html += INLINE_AD;
     });
     return html;

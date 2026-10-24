@@ -1,0 +1,19 @@
+{
+  "_note": "Kept by hand: clubs going up from each state's second division to its NPL, and down, after the season (the API has no zones for these leagues). Club names as the site shows them. 'open' lists moves still to be confirmed (play-offs); leave a state out when it has no promotion or relegation, or it isn't known yet.",
+  "season": 2026,
+  "into": 2027,
+  "states": {
+    "NSW": { "down": ["Sydney Olympic"], "up": [], "open": "Blacktown City's relegation play-off and League One's promotion aren't recorded here yet.",
+      "sources": ["https://football360.com.au/npl-australian-football-premiers-golden-boot-standings-relegation-promotion-details/"] },
+    "Victoria": { "down": ["Bentleigh Greens", "Green Gully", "Dandenong Thunder"], "up": ["Brunswick Juventus FC", "Melbourne Knights", "Northcote City"],
+      "sources": ["https://neoskosmos.com/en/2026/08/17/sport/football/npl-victoria-men-pankyprios-relegated/", "https://dandenong.starcommunity.com.au/sport/2026-08-17/city-wins-third-on-the-trot-as-thunder-relegation-confirmed/", "https://football360.com.au/npl-australian-football-premiers-golden-boot-standings-relegation-promotion-details/", "https://en.wikipedia.org/wiki/2026_Victoria_Premier_League_1"] },
+    "Queensland": { "down": ["Brisbane Roar II"], "up": ["Brisbane Strikers", "Broadbeach United"],
+      "sources": ["https://football360.com.au/npl-australian-football-premiers-golden-boot-standings-relegation-promotion-details/"] },
+    "Western Australia": { "down": ["Balcatta"], "up": ["Floreat Athena"], "open": "The inter-divisional play-off isn't recorded here yet.",
+      "sources": ["https://footballwest.com.au/news/back-to-back-titles-for-bayswater-but-balcatta-relegated/", "https://footballwest.com.au/news/floreat-back-in-the-npl-as-division-one-champions/"] },
+    "South Australia": { "down": ["Adelaide Comets", "Para Hills Knights"], "up": ["Adelaide Raiders"], "open": "Modbury Jets' promotion play-off isn't recorded here yet.",
+      "sources": ["https://en.wikipedia.org/wiki/2026_Football_South_Australia_season"] },
+    "Northern NSW": { "down": ["Charlestown City Blues"], "up": ["Lake Macquarie"], "note": "Kahibah stayed up by winning the promotion/relegation play-off.",
+      "sources": ["https://northernnswfootball.com.au/news/race-promotionrelegation-kotara-south-bolwarra-lorn-and-charlestown-earn-promotion-2027"] }
+  }
+}
