@@ -4,7 +4,7 @@
  "adjective": "Argentine",
  "season": "2026",
  "mode": "live",
- "updated": "2026-10-23T00:00:00.000Z",
+ "updated": "2026-10-24T00:00:00.000Z",
  "belowNote": "Promoted clubs from Primera D come up",
  "leagues": [
   {
@@ -29,7 +29,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-10-23T00:00:00.000Z",
+     "updated": "2026-10-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -112,15 +112,15 @@
       {
        "pos": 7,
        "team": "Gimnasia (Mendoza)",
-       "p": 13,
+       "p": 14,
        "w": 6,
        "d": 2,
-       "l": 5,
-       "gf": 15,
-       "ga": 13,
+       "l": 6,
+       "gf": 16,
+       "ga": 15,
        "pts": 20,
        "tid": 1066,
-       "form": "LDLWL"
+       "form": "DLWLL"
       },
       {
        "pos": 8,
@@ -176,6 +176,19 @@
       },
       {
        "pos": 12,
+       "team": "Platense",
+       "p": 14,
+       "w": 3,
+       "d": 5,
+       "l": 6,
+       "gf": 14,
+       "ga": 20,
+       "pts": 14,
+       "tid": 1064,
+       "form": "LDDLW"
+      },
+      {
+       "pos": 13,
        "team": "Deportivo Riestra",
        "p": 13,
        "w": 2,
@@ -186,19 +199,6 @@
        "pts": 12,
        "tid": 476,
        "form": "LDDLD"
-      },
-      {
-       "pos": 13,
-       "team": "Platense",
-       "p": 13,
-       "w": 2,
-       "d": 5,
-       "l": 6,
-       "gf": 12,
-       "ga": 19,
-       "pts": 11,
-       "tid": 1064,
-       "form": "LLDDL"
       },
       {
        "pos": 14,
@@ -230,7 +230,7 @@
     },
     {
      "name": "Group B",
-     "updated": "2026-10-23T00:00:00.000Z",
+     "updated": "2026-10-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -430,7 +430,7 @@
      ]
     }
    ],
-   "updated": "2026-10-23T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   },
   {
    "id": "primera-nacional",

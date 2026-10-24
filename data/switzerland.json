@@ -4,7 +4,7 @@
  "adjective": "Swiss",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-23T00:00:00.000Z",
+ "updated": "2026-10-24T00:00:00.000Z",
  "belowNote": "The top 2. Liga Interregional clubs come up",
  "leagues": [
   {
@@ -190,7 +190,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-10-13T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   },
   {
    "id": "challenge-league",
@@ -352,7 +352,7 @@
      "form": "LLLWL"
     }
    ],
-   "updated": "2026-10-23T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   },
   {
    "id": "promotion-league",
@@ -629,11 +629,11 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-10-12T00:00:00.000Z",
+     "updated": "2026-10-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
-       "team": "Azzurri",
+       "team": "Azzurri Bienne",
        "p": 10,
        "w": 8,
        "d": 0,
@@ -661,14 +661,14 @@
        "pos": 3,
        "team": "Servette II",
        "p": 10,
-       "w": 5,
-       "d": 4,
+       "w": 6,
+       "d": 3,
        "l": 1,
        "gf": 19,
-       "ga": 17,
-       "pts": 19,
+       "ga": 16,
+       "pts": 21,
        "tid": 16323,
-       "form": "DWWDD"
+       "form": "DWWDW"
       },
       {
        "pos": 4,
@@ -750,19 +750,6 @@
       },
       {
        "pos": 10,
-       "team": "Chênois",
-       "p": 10,
-       "w": 3,
-       "d": 3,
-       "l": 4,
-       "gf": 17,
-       "ga": 18,
-       "pts": 12,
-       "tid": 12692,
-       "form": "WWDLD"
-      },
-      {
-       "pos": 11,
        "team": "Echallens",
        "p": 10,
        "w": 3,
@@ -775,7 +762,7 @@
        "form": "WLLWL"
       },
       {
-       "pos": 12,
+       "pos": 11,
        "team": "Meyrin",
        "p": 10,
        "w": 3,
@@ -786,6 +773,19 @@
        "pts": 11,
        "tid": 6630,
        "form": "DLLLD"
+      },
+      {
+       "pos": 12,
+       "team": "Chênois",
+       "p": 10,
+       "w": 3,
+       "d": 2,
+       "l": 5,
+       "gf": 16,
+       "ga": 18,
+       "pts": 11,
+       "tid": 12692,
+       "form": "WWDLL"
       },
       {
        "pos": 13,
@@ -843,7 +843,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-10-12T00:00:00.000Z",
+     "updated": "2026-10-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1057,7 +1057,7 @@
     },
     {
      "name": "Group 3",
-     "updated": "2026-10-18T00:00:00.000Z",
+     "updated": "2026-10-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1270,7 +1270,7 @@
      ]
     }
    ],
-   "updated": "2026-10-18T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   }
  ]
 }
