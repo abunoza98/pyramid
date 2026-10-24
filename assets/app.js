@@ -234,6 +234,7 @@
   try { MOVERS = JSON.parse(body.getAttribute("data-movers") || "[]"); } catch (e) {}
   var OTHERS = [];   // the home page's "More pyramids" cards
   try { OTHERS = JSON.parse(body.getAttribute("data-others") || "[]"); } catch (e) {}
+  var initialAnchor = PAGE === "country" && location.hash.length > 1 && location.hash !== "#club" ? location.hash.slice(1) : null;
 
   function valid(c) {
     return c && Array.isArray(c.leagues) && c.leagues.length && c.leagues.every(function (lg) {
@@ -272,7 +273,13 @@
     applyViews();
     var games2 = document.querySelector("#main-content .strip-list");
     if (games2) { games2.scrollLeft = gamesX; requestAnimationFrame(function () { stripArrows(games2); }); }
-    window.scrollTo(0, y);
+    if (initialAnchor) {
+      var anchor = document.getElementById(initialAnchor);
+      if (anchor) {
+        initialAnchor = null;
+        requestAnimationFrame(function () { anchor.scrollIntoView({ block: "start" }); });
+      } else window.scrollTo(0, y);
+    } else window.scrollTo(0, y);
   }
   /* ---------- Table / Form switch: re-sort a division by points from the last five games ---------- */
   var views = {};   // division id -> "form", kept when the page redraws
