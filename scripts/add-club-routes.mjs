@@ -80,10 +80,12 @@ for (const cfg of COUNTRIES) {
         try { html = await readFile(file, "utf8"); } catch { continue; }
         const original = html;
 
-        // Keep the existing pyramid-route augmentation idempotent.
+        // Keep the existing pyramid-route augmentation idempotent. The timezone row must stay the first .fx-links
+        // block because FP.retime() updates that first block in place when the visitor changes time zone.
         html = html.replace(/<p class="fx-links cl-routes">[\s\S]*?<\/p>/, "");
-        const marker = '<p class="fx-links">';
-        if (routesHtml && html.includes(marker)) html = html.replace(marker, routesHtml + marker);
+        if (routesHtml) {
+          html = html.replace(/<p class="fx-links">[\s\S]*?<\/p>/, (timezone) => timezone + routesHtml);
+        }
 
         // Journey dots and season-by-season league links now carry the club name into historical table pages.
         html = journeyWithClub(html, row.team, cfg.country);
