@@ -15,6 +15,7 @@ footballpyramids.com: Europe's top five leagues on the home page, and a full pyr
 | `scripts/leagues.mjs` | The settings for every country and league: API IDs, promotion/relegation zones, notes, club-name fixes. |
 | `scripts/update-standings.mjs` | Pulls fresh tables from API-Football, writes the data files and rebuilds the pages. |
 | `scripts/build.mjs` | Rebuilds the pages, sitemap and robots.txt from the data files. |
+| `scripts/add-club-*.mjs`, `unify-club-runs.mjs`, `add-cups-to-search.mjs` | Club-page extras (pyramid route links, what's at stake, stadium and achievements, European runs, the combined Runs chart) and cups in search. `build.mjs` runs them at the end of every build; no API calls. |
 | `.github/workflows/update-standings.yml` | Runs the updater on GitHub every hour through the day. |
 | `test/api-football-sample.json` | A sample API response for testing without a key. |
 

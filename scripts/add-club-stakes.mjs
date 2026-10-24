@@ -28,13 +28,23 @@ function statusLabel(z) {
   return label ? label + (/(place|round|final|semi|qualif)/i.test(label) ? "" : " place") : "";
 }
 
+// Generic places read in lower case ("automatic promotion", "play-offs"); named competitions keep their capitals
+// ("AFC Champions League Two", "Conference League").
 function targetLabel(z) {
   if (!z) return "";
-  const label = lower(z.label);
+  const raw = String(z.label || ""), label = lower(raw);
   if (label === "promotion") return "automatic promotion";
-  if (/play-?off/.test(label)) return label.replace(/play-?offs?/, "play-offs");
-  return label || "the target places";
+  if (/^(promotion |relegation )?play-?offs?$/.test(label) || label === "relegation") return label.replace(/play-?offs?/, "play-offs");
+  if (/play-?off/.test(label) && !/[A-Z]{2,}|League|Cup|Copa|Liga/.test(raw)) return label.replace(/play-?offs?/, "play-offs");
+  return raw || "the target places";
 }
+
+// Per-league context, set before each league is worked on:
+//   promotes      the league sends clubs up (false for top flights and systems without promotion, so a play-off is
+//                 just a play-off, not a "promotion play-off");
+//   playoffTitle  the champion is decided by a postseason (MLS, USL, A-League, Liga MX), so first place isn't "the title";
+//   certain       mathematical certainty may be claimed at all (not where relegation goes by multi-season averages).
+let CTX = { promotes: true, playoffTitle: false, certain: true };
 
 function fixtureTotals(fx) {
   if (!fx?.groups?.length) return null;
@@ -101,7 +111,8 @@ function cannotReachAbove(table, me, safePos) {
 }
 
 function certaintyParts(lg, rows, me, table) {
-  if (!table || lg.final) return [];
+  if (!table || lg.final || !CTX.certain) return [];
+  const PO = CTX.promotes ? "a promotion play-off place" : "a play-off place";
 
   const zones = (lg.zones || []).slice().sort((a, b) => a.from - b.from);
   const automatic = zones.find((z) => /^promotion$/i.test(z.label || ""));
@@ -115,9 +126,10 @@ function certaintyParts(lg, rows, me, table) {
   // League title: strict points only, so tied maximums never get called mathematically certain.
   if (me.pos === 1) {
     const title = guaranteeTop(table, me, 1);
-    if (title?.secured) dramatic.push("Champions — title mathematically secured");
+    if (title?.secured) dramatic.push(CTX.playoffTitle ? "First place mathematically secured" : "Champions — title mathematically secured");
     else if (title && title.need > 0 && title.need <= 6 && title.need <= title.available) {
-      dramatic.push(guaranteeText(title.need, "guarantees the title", "guarantee the title"));
+      const what = CTX.playoffTitle ? "first place" : "the title";
+      dramatic.push(guaranteeText(title.need, `guarantees ${what}`, `guarantee ${what}`));
     }
   }
 
@@ -133,9 +145,9 @@ function certaintyParts(lg, rows, me, table) {
   const playoffCut = promotionPlayoff?.to;
   if (playoffCut && me.pos <= playoffCut && !(automatic && me.pos <= automatic.to && dramatic.length)) {
     const po = guaranteeTop(table, me, playoffCut);
-    if (po?.secured) dramatic.push("At least a promotion play-off place secured");
+    if (po?.secured) dramatic.push(`At least ${PO} secured`);
     else if (po && po.need > 0 && po.need <= 6 && po.need <= po.available) {
-      dramatic.push(guaranteeText(po.need, "guarantees a promotion play-off place", "guarantee a promotion play-off place"));
+      dramatic.push(guaranteeText(po.need, `guarantees ${PO}`, `guarantee ${PO}`));
     }
   }
 
@@ -254,7 +266,13 @@ for (const cfg of COUNTRIES) {
   let country;
   try { country = JSON.parse(await readFile(`data/${cfg.country}.json`, "utf8")); } catch { continue; }
 
+  const titleBy = new Set((cfg.cups || []).filter((x) => x.championOf).map((x) => x.championOf));
   for (const lg of country.leagues || []) {
+    CTX = {
+      promotes: lg.tier > 1 && !cfg.closed && !cfg.noPromotion,
+      playoffTitle: !!(cfg.closed || cfg.playoffTitle || titleBy.has(lg.id)),
+      certain: !cfg.noCertainty
+    };
     let fx = null;
     try { fx = JSON.parse(await readFile(`data/fixtures/${cfg.country}/${lg.id}.json`, "utf8")); } catch {}
     const totals = fixtureTotals(fx);

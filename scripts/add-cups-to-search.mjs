@@ -30,8 +30,9 @@ for (const country of COUNTRIES) {
       countryName: country.name,
       path: `${country.country}/${cup.id}/`
     };
-    add({ ...base, name: cup.name, short: cup.short || "" });
-    for (const name of aliases[`${country.country}/${cup.id}`] || []) add({ ...base, name });
+    // Sponsor and other names are searched (aka) but don't show as separate results.
+    const aka = aliases[`${country.country}/${cup.id}`] || [];
+    add({ ...base, name: cup.name, short: cup.short || "", ...(aka.length ? { aka } : {}) });
   }
 }
 
