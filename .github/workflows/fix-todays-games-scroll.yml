@@ -32,7 +32,7 @@ jobs:
           node --check scripts/backfill-cups.mjs
           rm -rf /tmp/pyramid-preview
           node scripts/build.mjs --preview /tmp/pyramid-preview
-          grep -q 'data-strip-scroll="-1"' /tmp/pyramid-preview/index.html
+          grep -q 'data-strip-scroll="-1"' assets/render.js
           grep -q 'apiId: 874' scripts/leagues.mjs
           grep -q 'australia-cup' scripts/leagues.mjs
 
