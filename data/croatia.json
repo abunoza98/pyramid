@@ -79,15 +79,15 @@
     {
      "pos": 3,
      "team": "Varaždin",
-     "p": 10,
+     "p": 11,
      "w": 5,
      "d": 3,
-     "l": 2,
-     "gf": 14,
-     "ga": 8,
+     "l": 3,
+     "gf": 15,
+     "ga": 10,
      "pts": 18,
      "tid": 1483,
-     "form": "DDDWL"
+     "form": "DDWLL"
     },
     {
      "pos": 4,
@@ -117,6 +117,19 @@
     },
     {
      "pos": 6,
+     "team": "Slaven Belupo",
+     "p": 11,
+     "w": 4,
+     "d": 1,
+     "l": 6,
+     "gf": 14,
+     "ga": 23,
+     "pts": 13,
+     "tid": 1018,
+     "form": "LDWLW"
+    },
+    {
+     "pos": 7,
      "team": "Istra 1961",
      "p": 10,
      "w": 3,
@@ -129,7 +142,7 @@
      "form": "DWLWL"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Lokomotiva",
      "p": 11,
      "w": 3,
@@ -140,19 +153,6 @@
      "pts": 11,
      "tid": 1017,
      "form": "DLLWD"
-    },
-    {
-     "pos": 8,
-     "team": "Slaven Belupo",
-     "p": 10,
-     "w": 3,
-     "d": 1,
-     "l": 6,
-     "gf": 12,
-     "ga": 22,
-     "pts": 10,
-     "tid": 1018,
-     "form": "WLDWL"
     },
     {
      "pos": 9,

@@ -70,15 +70,15 @@
     {
      "pos": 3,
      "team": "Roma",
-     "p": 7,
+     "p": 8,
      "w": 5,
-     "d": 2,
+     "d": 3,
      "l": 0,
-     "gf": 16,
-     "ga": 3,
-     "pts": 17,
+     "gf": 19,
+     "ga": 6,
+     "pts": 18,
      "tid": 497,
-     "form": "WWDDW"
+     "form": "WDDWD"
     },
     {
      "pos": 4,
@@ -147,6 +147,19 @@
     },
     {
      "pos": 9,
+     "team": "Napoli",
+     "p": 8,
+     "w": 3,
+     "d": 2,
+     "l": 3,
+     "gf": 13,
+     "ga": 10,
+     "pts": 11,
+     "tid": 492,
+     "form": "WDWLD"
+    },
+    {
+     "pos": 10,
      "team": "Juventus",
      "p": 7,
      "w": 3,
@@ -157,19 +170,6 @@
      "pts": 11,
      "tid": 496,
      "form": "DLWDL"
-    },
-    {
-     "pos": 10,
-     "team": "Napoli",
-     "p": 7,
-     "w": 3,
-     "d": 1,
-     "l": 3,
-     "gf": 10,
-     "ga": 7,
-     "pts": 10,
-     "tid": 492,
-     "form": "LWDWL"
     },
     {
      "pos": 11,
@@ -383,6 +383,19 @@
     },
     {
      "pos": 4,
+     "team": "Ascoli",
+     "p": 8,
+     "w": 4,
+     "d": 3,
+     "l": 1,
+     "gf": 14,
+     "ga": 6,
+     "pts": 15,
+     "tid": 507,
+     "form": "LWDDW"
+    },
+    {
+     "pos": 5,
      "team": "Pisa",
      "p": 7,
      "w": 4,
@@ -395,7 +408,7 @@
      "form": "WLDWW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Südtirol",
      "p": 8,
      "w": 3,
@@ -406,19 +419,6 @@
      "pts": 13,
      "tid": 1578,
      "form": "DWDLD"
-    },
-    {
-     "pos": 6,
-     "team": "Ascoli",
-     "p": 7,
-     "w": 3,
-     "d": 3,
-     "l": 1,
-     "gf": 8,
-     "ga": 5,
-     "pts": 12,
-     "tid": 507,
-     "form": "WLWDD"
     },
     {
      "pos": 7,
@@ -593,15 +593,15 @@
     {
      "pos": 20,
      "team": "Catanzaro",
-     "p": 7,
+     "p": 8,
      "w": 1,
      "d": 1,
-     "l": 5,
-     "gf": 8,
-     "ga": 14,
+     "l": 6,
+     "gf": 9,
+     "ga": 20,
      "pts": 4,
      "tid": 1687,
-     "form": "LWLLD"
+     "form": "WLLDL"
     }
    ],
    "updated": "2026-10-24T00:00:00.000Z"
@@ -657,18 +657,31 @@
       {
        "pos": 1,
        "team": "Cittadella",
-       "p": 10,
+       "p": 11,
        "w": 9,
        "d": 0,
-       "l": 1,
-       "gf": 17,
-       "ga": 4,
+       "l": 2,
+       "gf": 18,
+       "ga": 6,
        "pts": 27,
        "tid": 510,
-       "form": "WWLWW"
+       "form": "WLWWL"
       },
       {
        "pos": 2,
+       "team": "Union Brescia",
+       "p": 11,
+       "w": 6,
+       "d": 4,
+       "l": 1,
+       "gf": 19,
+       "ga": 9,
+       "pts": 22,
+       "tid": 26356,
+       "form": "DDWLW"
+      },
+      {
+       "pos": 3,
        "team": "Trento",
        "p": 10,
        "w": 5,
@@ -679,19 +692,6 @@
        "pts": 20,
        "tid": 17147,
        "form": "WDDWW"
-      },
-      {
-       "pos": 3,
-       "team": "Union Brescia",
-       "p": 10,
-       "w": 5,
-       "d": 4,
-       "l": 1,
-       "gf": 17,
-       "ga": 8,
-       "pts": 19,
-       "tid": 26356,
-       "form": "WDDWL"
       },
       {
        "pos": 4,
@@ -735,15 +735,15 @@
       {
        "pos": 7,
        "team": "Alcione Milano",
-       "p": 10,
+       "p": 11,
        "w": 3,
        "d": 6,
-       "l": 1,
-       "gf": 17,
-       "ga": 15,
+       "l": 2,
+       "gf": 18,
+       "ga": 17,
        "pts": 15,
        "tid": 17824,
-       "form": "LDDDW"
+       "form": "DDDWL"
       },
       {
        "pos": 8,
@@ -812,6 +812,19 @@
       },
       {
        "pos": 13,
+       "team": "Carpi",
+       "p": 11,
+       "w": 3,
+       "d": 3,
+       "l": 5,
+       "gf": 16,
+       "ga": 21,
+       "pts": 12,
+       "tid": 17825,
+       "form": "LLLWW"
+      },
+      {
+       "pos": 14,
        "team": "Novara",
        "p": 10,
        "w": 2,
@@ -824,7 +837,7 @@
        "form": "DLWLD"
       },
       {
-       "pos": 14,
+       "pos": 15,
        "team": "Juventus Next Gen",
        "p": 10,
        "w": 2,
@@ -837,7 +850,7 @@
        "form": "LDLDW"
       },
       {
-       "pos": 15,
+       "pos": 16,
        "team": "Dolomiti Bellunesi",
        "p": 11,
        "w": 2,
@@ -848,19 +861,6 @@
        "pts": 10,
        "tid": 17820,
        "form": "DLLLL"
-      },
-      {
-       "pos": 16,
-       "team": "Carpi",
-       "p": 10,
-       "w": 2,
-       "d": 3,
-       "l": 5,
-       "gf": 14,
-       "ga": 20,
-       "pts": 9,
-       "tid": 17825,
-       "form": "DLLLW"
       },
       {
        "pos": 17,
@@ -936,15 +936,15 @@
       {
        "pos": 2,
        "team": "Ravenna",
-       "p": 10,
-       "w": 6,
+       "p": 11,
+       "w": 7,
        "d": 2,
        "l": 2,
-       "gf": 16,
+       "gf": 20,
        "ga": 6,
-       "pts": 20,
+       "pts": 23,
        "tid": 1705,
-       "form": "WWLWL"
+       "form": "WLWLW"
       },
       {
        "pos": 3,
@@ -1170,15 +1170,15 @@
       {
        "pos": 20,
        "team": "Vis Pesaro",
-       "p": 9,
+       "p": 10,
        "w": 1,
        "d": 1,
-       "l": 7,
+       "l": 8,
        "gf": 10,
-       "ga": 20,
+       "ga": 24,
        "pts": 4,
        "tid": 1708,
-       "form": "LLWLL"
+       "form": "LWLLL"
       }
      ]
     },
@@ -1383,6 +1383,19 @@
       },
       {
        "pos": 16,
+       "team": "Savoia",
+       "p": 11,
+       "w": 2,
+       "d": 5,
+       "l": 4,
+       "gf": 12,
+       "ga": 17,
+       "pts": 11,
+       "tid": 9564,
+       "form": "LDWLD"
+      },
+      {
+       "pos": 17,
        "team": "Casarano",
        "p": 10,
        "w": 3,
@@ -1393,19 +1406,6 @@
        "pts": 11,
        "tid": 9542,
        "form": "DLLDL"
-      },
-      {
-       "pos": 17,
-       "team": "Savoia",
-       "p": 10,
-       "w": 2,
-       "d": 4,
-       "l": 4,
-       "gf": 11,
-       "ga": 16,
-       "pts": 10,
-       "tid": 9564,
-       "form": "DLDWL"
       },
       {
        "pos": 18,
@@ -1423,15 +1423,15 @@
       {
        "pos": 19,
        "team": "Cosenza",
-       "p": 10,
+       "p": 11,
        "w": 1,
-       "d": 2,
+       "d": 3,
        "l": 7,
-       "gf": 8,
-       "ga": 22,
-       "pts": 5,
+       "gf": 9,
+       "ga": 23,
+       "pts": 6,
        "tid": 10137,
-       "form": "DLLWL"
+       "form": "LLWLD"
       },
       {
        "pos": 20,

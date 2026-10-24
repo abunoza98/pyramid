@@ -1413,6 +1413,19 @@
     },
     {
      "pos": 4,
+     "team": "Worthing",
+     "p": 14,
+     "w": 8,
+     "d": 3,
+     "l": 3,
+     "gf": 29,
+     "ga": 19,
+     "pts": 27,
+     "tid": 7761,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 5,
      "team": "Altrincham",
      "p": 14,
      "w": 9,
@@ -1425,7 +1438,7 @@
      "form": "WWLWW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Yeovil Town",
      "p": 14,
      "w": 7,
@@ -1436,19 +1449,6 @@
      "pts": 25,
      "tid": 1377,
      "form": "WDWWL"
-    },
-    {
-     "pos": 6,
-     "team": "Worthing",
-     "p": 13,
-     "w": 7,
-     "d": 3,
-     "l": 3,
-     "gf": 27,
-     "ga": 18,
-     "pts": 24,
-     "tid": 7761,
-     "form": "WWDWW"
     },
     {
      "pos": 7,
@@ -1518,15 +1518,15 @@
     {
      "pos": 12,
      "team": "Kidderminster Harriers",
-     "p": 13,
+     "p": 14,
      "w": 5,
      "d": 5,
-     "l": 3,
-     "gf": 15,
-     "ga": 12,
+     "l": 4,
+     "gf": 16,
+     "ga": 14,
      "pts": 20,
      "tid": 4695,
-     "form": "DLLDD"
+     "form": "LLDDL"
     },
     {
      "pos": 13,

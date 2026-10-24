@@ -172,6 +172,19 @@
     },
     {
      "pos": 10,
+     "team": "Cambuur",
+     "p": 10,
+     "w": 3,
+     "d": 3,
+     "l": 4,
+     "gf": 19,
+     "ga": 22,
+     "pts": 12,
+     "tid": 420,
+     "form": "WDWDW"
+    },
+    {
+     "pos": 11,
      "team": "Utrecht",
      "p": 10,
      "w": 3,
@@ -184,7 +197,7 @@
      "form": "WLWWD"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Excelsior",
      "p": 9,
      "w": 3,
@@ -197,7 +210,7 @@
      "form": "DLDLL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "NEC Nijmegen",
      "p": 9,
      "w": 2,
@@ -210,7 +223,7 @@
      "form": "DLDDD"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Sparta Rotterdam",
      "p": 9,
      "w": 2,
@@ -221,19 +234,6 @@
      "pts": 9,
      "tid": 426,
      "form": "DLLDW"
-    },
-    {
-     "pos": 14,
-     "team": "Cambuur",
-     "p": 9,
-     "w": 2,
-     "d": 3,
-     "l": 4,
-     "gf": 13,
-     "ga": 21,
-     "pts": 9,
-     "tid": 420,
-     "form": "DWDWD"
     },
     {
      "pos": 15,
@@ -277,15 +277,15 @@
     {
      "pos": 18,
      "team": "Willem II",
-     "p": 9,
+     "p": 10,
      "w": 0,
      "d": 2,
-     "l": 7,
-     "gf": 9,
-     "ga": 26,
+     "l": 8,
+     "gf": 10,
+     "ga": 32,
      "pts": 2,
      "tid": 195,
-     "form": "DLLLL"
+     "form": "LLLLL"
     }
    ],
    "updated": "2026-10-24T00:00:00.000Z"

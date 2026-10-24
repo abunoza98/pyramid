@@ -49,6 +49,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Amed SK",
+     "p": 9,
+     "w": 6,
+     "d": 2,
+     "l": 1,
+     "gf": 20,
+     "ga": 10,
+     "pts": 20,
+     "tid": 3579,
+     "form": "WWDWW"
+    },
+    {
+     "pos": 2,
      "team": "Galatasaray",
      "p": 8,
      "w": 6,
@@ -59,19 +72,6 @@
      "pts": 19,
      "tid": 645,
      "form": "WWLWW"
-    },
-    {
-     "pos": 2,
-     "team": "Amed SK",
-     "p": 8,
-     "w": 5,
-     "d": 2,
-     "l": 1,
-     "gf": 18,
-     "ga": 9,
-     "pts": 17,
-     "tid": 3579,
-     "form": "DWWDW"
     },
     {
      "pos": 3,
@@ -258,12 +258,12 @@
     {
      "pos": 17,
      "team": "Samsunspor",
-     "p": 8,
+     "p": 9,
      "w": 1,
      "d": 1,
-     "l": 6,
-     "gf": 7,
-     "ga": 19,
+     "l": 7,
+     "gf": 8,
+     "ga": 21,
      "pts": 4,
      "tid": 3603,
      "form": "LLLLL"
@@ -422,19 +422,32 @@
     },
     {
      "pos": 9,
-     "team": "Sarıyer",
-     "p": 11,
+     "team": "Fatih Karagümrük",
+     "p": 12,
      "w": 4,
      "d": 4,
-     "l": 3,
-     "gf": 14,
+     "l": 4,
+     "gf": 16,
      "ga": 15,
      "pts": 16,
-     "tid": 3605,
-     "form": "DWDLD"
+     "tid": 3589,
+     "form": "WDLLW"
     },
     {
      "pos": 10,
+     "team": "Sarıyer",
+     "p": 12,
+     "w": 4,
+     "d": 4,
+     "l": 4,
+     "gf": 14,
+     "ga": 17,
+     "pts": 16,
+     "tid": 3605,
+     "form": "WDLDL"
+    },
+    {
+     "pos": 11,
      "team": "Bandırmaspor",
      "p": 12,
      "w": 3,
@@ -447,7 +460,7 @@
      "form": "LWDLL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Bodrum FK",
      "p": 11,
      "w": 3,
@@ -460,7 +473,7 @@
      "form": "WDLWW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Ümraniyespor",
      "p": 11,
      "w": 3,
@@ -471,19 +484,6 @@
      "pts": 13,
      "tid": 3577,
      "form": "WDWW"
-    },
-    {
-     "pos": 13,
-     "team": "Fatih Karagümrük",
-     "p": 11,
-     "w": 3,
-     "d": 4,
-     "l": 4,
-     "gf": 14,
-     "ga": 15,
-     "pts": 13,
-     "tid": 3589,
-     "form": "DWDLL"
     },
     {
      "pos": 14,
@@ -624,6 +624,32 @@
      "rows": [
       {
        "pos": 1,
+       "team": "Aliağa FAŞ",
+       "p": 8,
+       "w": 7,
+       "d": 0,
+       "l": 1,
+       "gf": 17,
+       "ga": 11,
+       "pts": 21,
+       "tid": 21993,
+       "form": "WWWWW"
+      },
+      {
+       "pos": 2,
+       "team": "Elazığspor",
+       "p": 8,
+       "w": 6,
+       "d": 1,
+       "l": 1,
+       "gf": 22,
+       "ga": 7,
+       "pts": 19,
+       "tid": 3571,
+       "form": "DLWWW"
+      },
+      {
+       "pos": 3,
        "team": "Muş Sport Klübü",
        "p": 8,
        "w": 6,
@@ -636,7 +662,7 @@
        "form": "WWWWL"
       },
       {
-       "pos": 2,
+       "pos": 4,
        "team": "Güzide Gebzespor",
        "p": 8,
        "w": 5,
@@ -647,32 +673,6 @@
        "pts": 18,
        "tid": 6511,
        "form": "DDWWW"
-      },
-      {
-       "pos": 3,
-       "team": "Aliağa FAŞ",
-       "p": 7,
-       "w": 6,
-       "d": 0,
-       "l": 1,
-       "gf": 15,
-       "ga": 10,
-       "pts": 18,
-       "tid": 21993,
-       "form": "LWWWW"
-      },
-      {
-       "pos": 4,
-       "team": "Elazığspor",
-       "p": 7,
-       "w": 5,
-       "d": 1,
-       "l": 1,
-       "gf": 18,
-       "ga": 4,
-       "pts": 16,
-       "tid": 3571,
-       "form": "WDLWW"
       },
       {
        "pos": 5,
@@ -716,15 +716,15 @@
       {
        "pos": 8,
        "team": "Isparta 32 Spor",
-       "p": 7,
+       "p": 8,
        "w": 3,
        "d": 2,
-       "l": 2,
-       "gf": 13,
-       "ga": 12,
+       "l": 3,
+       "gf": 16,
+       "ga": 16,
        "pts": 11,
        "tid": 6523,
-       "form": "DWWWD"
+       "form": "WWWDL"
       },
       {
        "pos": 9,
@@ -755,15 +755,15 @@
       {
        "pos": 11,
        "team": "68 Aksaray Belediyespor",
-       "p": 7,
+       "p": 8,
        "w": 2,
        "d": 3,
-       "l": 2,
-       "gf": 12,
-       "ga": 9,
+       "l": 3,
+       "gf": 13,
+       "ga": 11,
        "pts": 9,
        "tid": 6507,
-       "form": "DLLDW"
+       "form": "LLDWL"
       },
       {
        "pos": 12,
@@ -868,15 +868,15 @@
       {
        "pos": 1,
        "team": "Sakaryaspor",
-       "p": 7,
+       "p": 8,
        "w": 6,
        "d": 1,
-       "l": 0,
-       "gf": 17,
-       "ga": 7,
+       "l": 1,
+       "gf": 18,
+       "ga": 10,
        "pts": 19,
        "tid": 3602,
-       "form": "WWWDW"
+       "form": "WWDWL"
       },
       {
        "pos": 2,
@@ -920,28 +920,28 @@
       {
        "pos": 5,
        "team": "24 Erzincanspor",
-       "p": 6,
-       "w": 3,
+       "p": 7,
+       "w": 4,
        "d": 3,
        "l": 0,
-       "gf": 12,
-       "ga": 8,
-       "pts": 12,
+       "gf": 15,
+       "ga": 9,
+       "pts": 15,
        "tid": 7392,
-       "form": "DWDWW"
+       "form": "WDWWW"
       },
       {
        "pos": 6,
        "team": "1461 Trabzon FK",
-       "p": 7,
+       "p": 8,
        "w": 3,
-       "d": 2,
+       "d": 3,
        "l": 2,
-       "gf": 14,
-       "ga": 11,
-       "pts": 11,
+       "gf": 16,
+       "ga": 13,
+       "pts": 12,
        "tid": 6340,
-       "form": "DWWDW"
+       "form": "WWDWD"
       },
       {
        "pos": 7,
@@ -1011,16 +1011,16 @@
       {
        "pos": 12,
        "team": "Ankaragücü",
-       "p": 6,
+       "p": 7,
        "w": 2,
-       "d": 2,
+       "d": 3,
        "l": 2,
-       "gf": 11,
-       "ga": 7,
-       "pts": 5,
+       "gf": 13,
+       "ga": 9,
+       "pts": 6,
        "ded": 3,
        "tid": 1010,
-       "form": "LDWWD"
+       "form": "DWWDD"
       },
       {
        "pos": 13,
@@ -1593,6 +1593,19 @@
      "rows": [
       {
        "pos": 1,
+       "team": "Yeşilyurt Belediyespor",
+       "p": 8,
+       "w": 7,
+       "d": 1,
+       "l": 0,
+       "gf": 30,
+       "ga": 3,
+       "pts": 22,
+       "tid": 6541,
+       "form": "WWWDW"
+      },
+      {
+       "pos": 2,
        "team": "Karaköprü Belediyespor",
        "p": 8,
        "w": 7,
@@ -1603,19 +1616,6 @@
        "pts": 21,
        "tid": 7408,
        "form": "WWLWW"
-      },
-      {
-       "pos": 2,
-       "team": "Yeşilyurt Belediyespor",
-       "p": 7,
-       "w": 6,
-       "d": 1,
-       "l": 0,
-       "gf": 26,
-       "ga": 3,
-       "pts": 19,
-       "tid": 6541,
-       "form": "WWWWD"
       },
       {
        "pos": 3,
@@ -1658,6 +1658,19 @@
       },
       {
        "pos": 6,
+       "team": "Niğde Belediyesispor",
+       "p": 8,
+       "w": 6,
+       "d": 0,
+       "l": 2,
+       "gf": 18,
+       "ga": 9,
+       "pts": 18,
+       "tid": 22445,
+       "form": "WWLLW"
+      },
+      {
+       "pos": 7,
        "team": "Bitlis Özgüzelderespor",
        "p": 8,
        "w": 5,
@@ -1670,20 +1683,20 @@
        "form": "LWWDD"
       },
       {
-       "pos": 7,
-       "team": "Niğde Belediyesispor",
-       "p": 7,
-       "w": 5,
+       "pos": 8,
+       "team": "Yeni Mersin Idmanyurdu",
+       "p": 8,
+       "w": 4,
        "d": 0,
-       "l": 2,
-       "gf": 16,
-       "ga": 8,
-       "pts": 15,
-       "tid": 22445,
-       "form": "WWWLL"
+       "l": 4,
+       "gf": 10,
+       "ga": 10,
+       "pts": 12,
+       "tid": 6546,
+       "form": "WLLWW"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Kırıkkale Büyük Anadolu",
        "p": 7,
        "w": 3,
@@ -1694,19 +1707,6 @@
        "pts": 10,
        "tid": 6531,
        "form": "DLWWW"
-      },
-      {
-       "pos": 9,
-       "team": "Yeni Mersin Idmanyurdu",
-       "p": 7,
-       "w": 3,
-       "d": 0,
-       "l": 4,
-       "gf": 8,
-       "ga": 10,
-       "pts": 9,
-       "tid": 6546,
-       "form": "WWLLW"
       },
       {
        "pos": 10,
@@ -1737,28 +1737,28 @@
       {
        "pos": 12,
        "team": "Ağrı 1970",
-       "p": 7,
+       "p": 8,
        "w": 2,
        "d": 2,
-       "l": 3,
-       "gf": 4,
-       "ga": 6,
+       "l": 4,
+       "gf": 5,
+       "ga": 8,
        "pts": 8,
        "tid": 6509,
-       "form": "LWWDL"
+       "form": "WWDLL"
       },
       {
        "pos": 13,
        "team": "Silifke Belediyespor",
-       "p": 7,
+       "p": 8,
        "w": 2,
        "d": 1,
-       "l": 4,
+       "l": 5,
        "gf": 9,
-       "ga": 13,
+       "ga": 17,
        "pts": 7,
        "tid": 21998,
-       "form": "WLLWL"
+       "form": "LLWLL"
       },
       {
        "pos": 14,
@@ -1776,15 +1776,15 @@
       {
        "pos": 15,
        "team": "Yozgat Bld Bozokspor",
-       "p": 7,
+       "p": 8,
        "w": 1,
        "d": 2,
-       "l": 4,
+       "l": 5,
        "gf": 3,
-       "ga": 18,
+       "ga": 20,
        "pts": 5,
        "tid": 22448,
-       "form": "WLLDD"
+       "form": "LLDDL"
       },
       {
        "pos": 16,
