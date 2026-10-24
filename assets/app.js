@@ -72,7 +72,7 @@
       .then(function (r) { return r.ok ? r.json() : []; })
       .catch(function () { return []; })
       .then(function (list) {
-        list.forEach(function (x) { x._n = norm(itemName(x)); x._short = norm(x.short || ""); });
+        list.forEach(function (x) { x._n = norm(itemName(x)); x._short = norm(x.short || ""); x._aka = (x.aka || []).map(norm); });
         searchItems = list;
         return list;
       });
@@ -89,6 +89,8 @@
         : x._n.indexOf(n) === 0 || (x._short && x._short.indexOf(n) === 0) ? 1
         : (" " + x._n).indexOf(" " + n) > -1 ? 2
         : x._n.indexOf(n) > -1 ? 3 : -1;
+      // Other names (a cup's sponsor name, say) match as well as the name itself, without a result of their own.
+      if (s < 0 && x._aka.some(function (a) { return a.indexOf(n) > -1 || (" " + a).indexOf(" " + n) > -1; })) s = 2;
       if (s > -1) out.push({ x: x, s: s });
     });
     function typeRank(x) { return x.past ? 2 : x.type === "league" || x.type === "competition" ? 0 : 1; }

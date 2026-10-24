@@ -1528,7 +1528,7 @@
         ? " Since " + oldest.season + ": " + (ups ? ups + " promotion" + (ups === 1 ? "" : "s") : "") + (ups && downs ? " and " : "") +
           (downs ? downs + " relegation" + (downs === 1 ? "" : "s") : "") + "."
         : "";
-      journey = '<section class="cl-sec" id="journey"><div class="cl-sec-h"><h2>' + esc(d.name) + (/s$/.test(d.name) ? "’" : "’s") + " journey through the " + (d.adjective ? esc(d.adjective) + " " : "") + "pyramid</h2></div>" +
+      journey = '<section class="cl-sec" id="journey"><div class="cl-sec-h"><h2>' + esc(d.name) + (/s$/.test(d.name) ? "’" : "’s") + " journey through the " + (d.system ? esc(d.system) : (d.adjective ? esc(d.adjective) + " " : "") + "pyramid") + "</h2></div>" +
         '<p class="lchart-cap">' + esc(cap + tally) + "</p>" + splitNote +
         '<div class="lchart"><div class="lside">' + side + '</div><div class="lplot" style="height:' + h + 'px">' +
         '<svg viewBox="0 0 1000 ' + ymax + '" preserveAspectRatio="none" aria-hidden="true">' + rects + lpath + "</svg>" + dots + "</div>" +

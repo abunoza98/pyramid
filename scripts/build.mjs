@@ -12,6 +12,7 @@ import { createRequire } from "node:module";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
 import { COUNTRIES, EUROPE, SITE, CONTACT, ADS, ADSENSE_CLIENT, LIVE_URL, venueZone } from "./leagues.mjs";
 import { zoneAt, applyPlayoffRules, labelCupPlaces } from "./zones.mjs";
 import { regroupEurope } from "./rounds.mjs";
@@ -818,7 +819,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       const journey = moves([{ season: c.season, year: Number(String(c.season).slice(0, 4)), tier: lg.tier, league: phNow ? lg.name : divisionName(lg, g), pos: posNow,
         of: phNow ? phNow.size : g.rows.length, rank: rankIn(sizesNow, lg.tier, posNow), sizes: sizesNow, now: true }, ...pastSeasons(c, r.team, tid)]);
       const data = {
-        tid, name: r.team, country: c.country, countryName: c.name, adjective: c.adjective, season: c.season, comps, root: base, suffix,
+        tid, name: r.team, country: c.country, countryName: c.name, adjective: c.adjective, system: c.system || null, season: c.season, comps, root: base, suffix,
         pos: r.pos, pts: r.pts, p: r.p,
         league: { ...tableOf(c, lg), short: lg.short, group: FP.groupsOf(lg).length > 1 ? g.name : null, rows: g.rows,
           tableHref: `${base}${c.country}/${suffix}#${lg.id}`, _club: `${base}${c.country}/club/`, _suffix: suffix },
@@ -840,7 +841,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       const journey = moves(pastSeasons(k.c, k.name));
       if (!journey.length) continue;
       const last = journey[0];
-      const data = { tid: null, name: k.name, country: k.c.country, countryName: k.c.name, adjective: k.c.adjective, season: k.c.season, comps: {}, root: base, suffix,
+      const data = { tid: null, name: k.name, country: k.c.country, countryName: k.c.name, adjective: k.c.adjective, system: k.c.system || null, season: k.c.season, comps: {}, root: base, suffix,
         league: null, fx: [], journey, ladder: laddersOf(k.c), cupRuns: cupRunsOf(k.c, k.name, null),
         note: `Not in the ${k.c.adjective} leagues covered here this season. Last seen in ${last.season}: ${last.league}, ${ordinal(last.pos)}.` };
       await write(`${k.path}index.html`, shell({
@@ -968,6 +969,15 @@ ${past.concat(euroPast, cupPastUrls).map((u) => `  <url><loc>${SITE}${u}</loc><c
     for (const rel of ["assets/style.css", "assets/render.js", "assets/app.js", ...fonts, ...countries.map((c) => `data/${c.country}.json`)]) {
       await mkdir(path.dirname(path.join(outDir, rel)), { recursive: true });
       await copyFile(path.join(root, rel), path.join(outDir, rel));
+    }
+  }
+  // Club-page extras added after the main pages are written: pyramid route links, cups in search, what's at stake,
+  // stadium and achievements, European runs, and the combined Runs chart. They run here, on every build, in this
+  // order, so `node scripts/build.mjs` always produces the whole site (each step reads the pages just written, so
+  // running the build again gives the same result). No football-data API calls.
+  if (!preview) {
+    for (const step of ["add-club-routes", "add-cups-to-search", "add-club-stakes", "add-club-profile", "add-club-europe", "unify-club-runs"]) {
+      execFileSync(process.execPath, [path.join(ROOT, "scripts", `${step}.mjs`)], { cwd: outDir, stdio: ["ignore", "inherit", "inherit"] });
     }
   }
   return written;

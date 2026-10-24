@@ -329,6 +329,8 @@ export const COUNTRIES = [
     ]
   },
   {
+    // Relegation goes by multi-season points averages (promedios), not the table alone: no "mathematically" claims.
+    noCertainty: true,
     country: "argentina", region: "south-america", calendar: true, code: "ARG", name: "Argentina", adjective: "Argentine", apiCountry: "Argentina",
     belowNote: "Promoted clubs from Primera D come up",
     names: { "Estudiantes L.P.": "Estudiantes", "Velez Sarsfield": "Vélez Sarsfield", "Talleres Cordoba": "Talleres", "Lanus": "Lanús",
@@ -467,6 +469,9 @@ export const COUNTRIES = [
   },
   {
     country: "mexico", region: "north-america", code: "MEX", name: "Mexico", adjective: "Mexican", apiCountry: "Mexico",
+    // Promotion between Liga MX and the Liga de Expansión is suspended, and each half-season's champion comes from the
+    // Liguilla play-offs, so first place isn't the title.
+    noPromotion: true, playoffTitle: true,
     belowNote: "Promotion between Liga Premier and the Liga de Expansión is suspended",
     names: { "Club America": "América", "Guadalajara Chivas": "Guadalajara", "U.N.A.M. - Pumas": "Pumas UNAM",
       "Club Queretaro": "Querétaro", "Atletico San Luis": "Atlético San Luis", "Leon": "León", "FC Juarez": "FC Juárez",

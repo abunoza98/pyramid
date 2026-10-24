@@ -9,39 +9,8 @@
 set -u
 msg="$1"
 
-# Club pages can link directly to the adjacent covered tier where the competition rules explicitly connect them.
-# This uses only the saved site/config data and makes no football-data API calls.
-if [ -f scripts/add-club-routes.mjs ]; then
-  node scripts/add-club-routes.mjs
-fi
-
-# build.mjs writes the main club/league search index. Add current domestic cups afterwards so every normal
-# data-update workflow keeps global search complete without duplicating cup configuration in the browser.
-if [ -f data/search.json ] && [ -f scripts/add-cups-to-search.mjs ]; then
-  node scripts/add-cups-to-search.mjs
-fi
-
-# Club pages are generated from the same saved standings. Add a concise current-season context line after each
-# build without making any extra football-data API calls.
-if [ -f scripts/add-club-stakes.mjs ]; then
-  node scripts/add-club-stakes.mjs
-fi
-
-# Add club achievements from saved league/cup history and infer the usual home stadium from venue names already
-# present on current league fixtures. This is local post-processing only: no extra football-data API calls.
-if [ -f scripts/add-club-profile.mjs ]; then
-  node scripts/add-club-profile.mjs
-fi
-
-# Add saved Champions League / Europa League / Conference League runs to club pages. No extra API calls.
-if [ -f scripts/add-club-europe.mjs ]; then
-  node scripts/add-club-europe.mjs
-fi
-
-# Keep domestic cup and European run history in one selector: e.g. FA Cup | EFL Cup | Europe.
-if [ -f scripts/unify-club-runs.mjs ]; then
-  node scripts/unify-club-runs.mjs
-fi
+# The club-page extras (routes, stakes, profile, Europe, combined runs, cups in search) now run inside
+# scripts/build.mjs itself, so every build includes them and this script only commits and pushes.
 
 if [ -z "$(git status --porcelain)" ]; then
   echo "No changes."

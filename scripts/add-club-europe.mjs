@@ -2,6 +2,7 @@
 // Uses only saved UEFA fixture history/current fixture JSON; no football-data API calls.
 import { readFile, writeFile, readdir } from "node:fs/promises";
 import { createRequire } from "node:module";
+import { COUNTRIES } from "./leagues.mjs";
 
 const require = createRequire(import.meta.url);
 const FP = require("../assets/render.js");
@@ -15,7 +16,9 @@ const COMPS = [
 const DONE = new Set(["FT", "AET", "PEN", "AWD", "WO"]);
 const MAIN_STAGES = new Set(["lp", "ko"]);
 const clean = (name) => FP.slug(name).replace(/-fc$/, "");
-const sameTeam = (team, club, tid) => !!team && ((tid && team.id && Number(team.id) === Number(tid)) || clean(team.n) === clean(club));
+// Club IDs decide when both sides have one; the name is only a fallback. (Matching on either let Argentina's Lugano
+// pick up Swiss FC Lugano's European seasons.)
+const sameTeam = (team, club, tid) => !!team && (tid && team.id ? Number(team.id) === Number(tid) : clean(team.n) === clean(club));
 const hasClub = (f, club, tid) => sameTeam(f.h, club, tid) || sameTeam(f.a, club, tid);
 const compRank = (comp) => COMPS.findIndex((c) => c.id === comp.id);
 
@@ -275,9 +278,11 @@ for (const comp of COMPS) {
     for (const team of teams.values()) {
       const run = runFromFixtures(season.fx, team.n, team.id, season.current);
       if (!run) continue;
-      const key = clean(team.n);
-      if (!europeByClub.has(key)) europeByClub.set(key, []);
-      europeByClub.get(key).push({ ...run, comp });
+      for (const key of [team.id ? `t:${team.id}` : null, `n:${clean(team.n)}`]) {
+        if (!key) continue;
+        if (!europeByClub.has(key)) europeByClub.set(key, []);
+        europeByClub.get(key).push({ ...run, comp });
+      }
     }
   }
 }
@@ -294,9 +299,20 @@ for (const item of search) {
   if (!existing || (!item.past && existing.past)) clubs.set(item.path, item);
 }
 
+// Each current club's API ID, from the saved tables, so runs are matched by ID. Clubs without one (only in past
+// seasons) fall back to the name, and only in European countries, so a namesake elsewhere never inherits them.
+const tidByPath = new Map(), european = new Set(COUNTRIES.filter((c) => c.region === "europe").map((c) => c.country));
+for (const c of COUNTRIES) {
+  let d = null;
+  try { d = JSON.parse(await readFile(`data/${c.country}.json`, "utf8")); } catch { continue; }
+  for (const lg of d.leagues || []) for (const g of lg.groups?.length ? lg.groups : [{ rows: lg.rows || [] }]) for (const r of g.rows) {
+    if (r.tid) tidByPath.set(`${c.country}/club/${FP.slug(r.team)}/`, r.tid);
+  }
+}
 let changed = 0;
 for (const club of clubs.values()) {
-  const runs = europeByClub.get(clean(club.name)) || [];
+  const tid = tidByPath.get(club.path);
+  const runs = (tid ? europeByClub.get(`t:${tid}`) : european.has(club.country) ? europeByClub.get(`n:${clean(club.name)}`) : null) || [];
   const file = `${club.path}index.html`;
   let html;
   try { html = await readFile(file, "utf8"); } catch { continue; }
