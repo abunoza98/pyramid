@@ -1,7 +1,7 @@
-// Add promotion/relegation destination links to current club pages using the configured league pyramid.
+// Add neutral neighbouring-tier links to current club pages using the configured league pyramid.
 // Also make historical journey links preserve the club being viewed, so the historical table can highlight it.
-// A route only appears when that league explicitly has a promotion/relegation rule and the adjacent tier is covered
-// on the site. This deliberately leaves closed/disconnected systems such as MLS and the A-League unlinked.
+// A neighbouring tier only appears when that league explicitly has a promotion/relegation rule and the adjacent tier is
+// covered on the site. This deliberately leaves closed/disconnected systems such as MLS and the A-League unlinked.
 import { readFile, writeFile, readdir } from "node:fs/promises";
 import { createRequire } from "node:module";
 import { COUNTRIES } from "./leagues.mjs";
@@ -19,10 +19,10 @@ function routesFor(cfg, league) {
   const lower = leagueAtTier(cfg, league.tier + 1);
 
   if (league.promotionNote && higher) {
-    out.push({ dir: "up", text: `Promotion → ${higher.name}`, href: `../../../${cfg.country}/#${higher.id}` });
+    out.push({ relation: "above", text: `${higher.name} (tier above)`, href: `../../../${cfg.country}/#${higher.id}` });
   }
   if (league.relegationNote && lower) {
-    out.push({ dir: "down", text: `Relegation → ${lower.name}`, href: `../../../${cfg.country}/#${lower.id}` });
+    out.push({ relation: "below", text: `${lower.name} (tier below)`, href: `../../../${cfg.country}/#${lower.id}` });
   }
   return out;
 }
@@ -69,8 +69,8 @@ for (const cfg of COUNTRIES) {
     const league = (cfg.leagues || []).find((l) => l.id === dataLeague.id);
     if (!league) continue;
     const routes = routesFor(cfg, league);
-    const routesHtml = routes.length ? '<p class="fx-links cl-routes">' + routes.map((r) =>
-      `<a class="cx-${r.dir}" href="${esc(r.href)}">${r.dir === "up" ? "▲" : "▼"} ${esc(r.text)}</a>`
+    const routesHtml = routes.length ? '<p class="fx-links cl-routes"><span>Pyramid:</span>' + routes.map((r) =>
+      `<a href="${esc(r.href)}" data-tier-relation="${r.relation}">${esc(r.text)}</a>`
     ).join("") + "</p>" : "";
 
     for (const group of groupsOf(dataLeague)) {
