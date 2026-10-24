@@ -4,7 +4,7 @@
  "adjective": "Australian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-23T00:00:00.000Z",
+ "updated": "2026-10-24T00:00:00.000Z",
  "belowNote": "Below the NPL, each state has its own divisions",
  "systemNote": "There's no promotion or relegation between the A-League and the state leagues. Within each state, clubs move between its NPL and its second division.",
  "leagues": [
@@ -41,19 +41,32 @@
    "rows": [
     {
      "pos": 1,
-     "team": "Auckland FC",
-     "p": 1,
+     "team": "Western Sydney Wanderers",
+     "p": 2,
      "w": 1,
-     "d": 0,
+     "d": 1,
      "l": 0,
-     "gf": 3,
-     "ga": 1,
-     "pts": 3,
-     "tid": 24608,
-     "form": "W"
+     "gf": 5,
+     "ga": 2,
+     "pts": 4,
+     "tid": 939,
+     "form": "DW"
     },
     {
      "pos": 2,
+     "team": "Macarthur FC",
+     "p": 2,
+     "w": 1,
+     "d": 1,
+     "l": 0,
+     "gf": 3,
+     "ga": 2,
+     "pts": 4,
+     "tid": 15550,
+     "form": "WD"
+    },
+    {
+     "pos": 3,
      "team": "Brisbane Roar",
      "p": 1,
      "w": 1,
@@ -66,7 +79,7 @@
      "form": "W"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Wellington Phoenix",
      "p": 1,
      "w": 1,
@@ -79,20 +92,33 @@
      "form": "W"
     },
     {
-     "pos": 4,
-     "team": "Macarthur FC",
-     "p": 1,
+     "pos": 5,
+     "team": "Auckland FC",
+     "p": 2,
      "w": 1,
      "d": 0,
-     "l": 0,
-     "gf": 2,
-     "ga": 1,
+     "l": 1,
+     "gf": 5,
+     "ga": 6,
      "pts": 3,
-     "tid": 15550,
-     "form": "W"
+     "tid": 24608,
+     "form": "WL"
     },
     {
-     "pos": 5,
+     "pos": 6,
+     "team": "Newcastle Jets",
+     "p": 2,
+     "w": 0,
+     "d": 2,
+     "l": 0,
+     "gf": 3,
+     "ga": 3,
+     "pts": 2,
+     "tid": 946,
+     "form": "DD"
+    },
+    {
+     "pos": 7,
      "team": "Central Coast Mariners",
      "p": 1,
      "w": 0,
@@ -105,20 +131,7 @@
      "form": "D"
     },
     {
-     "pos": 6,
-     "team": "Newcastle Jets",
-     "p": 1,
-     "w": 0,
-     "d": 1,
-     "l": 0,
-     "gf": 2,
-     "ga": 2,
-     "pts": 1,
-     "tid": 946,
-     "form": "D"
-    },
-    {
-     "pos": 7,
+     "pos": 8,
      "team": "Sydney FC",
      "p": 1,
      "w": 0,
@@ -131,20 +144,33 @@
      "form": "D"
     },
     {
-     "pos": 8,
-     "team": "Western Sydney Wanderers",
-     "p": 1,
+     "pos": 9,
+     "team": "Melbourne Victory",
+     "p": 2,
      "w": 0,
      "d": 1,
-     "l": 0,
-     "gf": 0,
-     "ga": 0,
+     "l": 1,
+     "gf": 2,
+     "ga": 3,
      "pts": 1,
-     "tid": 939,
-     "form": "D"
+     "tid": 944,
+     "form": "LD"
     },
     {
-     "pos": 9,
+     "pos": 10,
+     "team": "Melbourne City",
+     "p": 2,
+     "w": 0,
+     "d": 1,
+     "l": 1,
+     "gf": 2,
+     "ga": 4,
+     "pts": 1,
+     "tid": 945,
+     "form": "LD"
+    },
+    {
+     "pos": 11,
      "team": "Adelaide United",
      "p": 0,
      "w": 0,
@@ -156,20 +182,7 @@
      "tid": 948
     },
     {
-     "pos": 10,
-     "team": "Melbourne Victory",
-     "p": 1,
-     "w": 0,
-     "d": 0,
-     "l": 1,
-     "gf": 1,
-     "ga": 2,
-     "pts": 0,
-     "tid": 944,
-     "form": "L"
-    },
-    {
-     "pos": 11,
+     "pos": 12,
      "team": "Perth Glory",
      "p": 2,
      "w": 0,
@@ -180,22 +193,9 @@
      "pts": 0,
      "tid": 940,
      "form": "LL"
-    },
-    {
-     "pos": 12,
-     "team": "Melbourne City",
-     "p": 1,
-     "w": 0,
-     "d": 0,
-     "l": 1,
-     "gf": 1,
-     "ga": 3,
-     "pts": 0,
-     "tid": 945,
-     "form": "L"
     }
    ],
-   "updated": "2026-10-23T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   },
   {
    "id": "npl",

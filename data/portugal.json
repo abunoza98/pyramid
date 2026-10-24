@@ -4,7 +4,7 @@
  "adjective": "Portuguese",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-23T00:00:00.000Z",
+ "updated": "2026-10-24T00:00:00.000Z",
  "belowNote": "Liga 3's top clubs come up, one through a play-off",
  "leagues": [
   {
@@ -342,6 +342,19 @@
     },
     {
      "pos": 2,
+     "team": "Académica",
+     "p": 8,
+     "w": 5,
+     "d": 0,
+     "l": 3,
+     "gf": 14,
+     "ga": 10,
+     "pts": 15,
+     "tid": 239,
+     "form": "LLLWW"
+    },
+    {
+     "pos": 3,
      "team": "Sporting CP B",
      "p": 7,
      "w": 5,
@@ -354,7 +367,7 @@
      "form": "LWWLW"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Farense",
      "p": 7,
      "w": 4,
@@ -367,7 +380,7 @@
      "form": "DLDWW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Penafiel",
      "p": 7,
      "w": 4,
@@ -380,7 +393,7 @@
      "form": "WWWWL"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Benfica B",
      "p": 7,
      "w": 4,
@@ -391,19 +404,6 @@
      "pts": 13,
      "tid": 229,
      "form": "DLLWW"
-    },
-    {
-     "pos": 6,
-     "team": "Académica",
-     "p": 7,
-     "w": 4,
-     "d": 0,
-     "l": 3,
-     "gf": 10,
-     "ga": 10,
-     "pts": 12,
-     "tid": 239,
-     "form": "WLLLW"
     },
     {
      "pos": 7,
@@ -447,15 +447,15 @@
     {
      "pos": 10,
      "team": "Leixões",
-     "p": 7,
+     "p": 8,
      "w": 3,
      "d": 1,
-     "l": 3,
+     "l": 4,
      "gf": 9,
-     "ga": 8,
+     "ga": 12,
      "pts": 10,
      "tid": 244,
-     "form": "LWWDL"
+     "form": "WWDLL"
     },
     {
      "pos": 11,
@@ -562,7 +562,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-23T00:00:00.000Z"
+   "updated": "2026-10-24T00:00:00.000Z"
   }
  ]
 }
