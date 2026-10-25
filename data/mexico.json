@@ -171,15 +171,15 @@
     {
      "pos": 12,
      "team": "Pumas UNAM",
-     "p": 13,
+     "p": 14,
      "w": 4,
-     "d": 4,
+     "d": 5,
      "l": 5,
-     "gf": 19,
-     "ga": 22,
-     "pts": 16,
+     "gf": 20,
+     "ga": 23,
+     "pts": 17,
      "tid": 2286,
-     "form": "DLDWL"
+     "form": "LDWLD"
     },
     {
      "pos": 13,
@@ -197,15 +197,15 @@
     {
      "pos": 14,
      "team": "Tigres UANL",
-     "p": 13,
+     "p": 14,
      "w": 3,
-     "d": 5,
+     "d": 6,
      "l": 5,
-     "gf": 14,
-     "ga": 18,
-     "pts": 14,
+     "gf": 15,
+     "ga": 19,
+     "pts": 15,
      "tid": 2279,
-     "form": "LWWDL"
+     "form": "WWDLD"
     },
     {
      "pos": 15,
