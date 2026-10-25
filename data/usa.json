@@ -4,7 +4,7 @@
  "adjective": "American",
  "season": "2026",
  "mode": "live",
- "updated": "2026-10-24T00:00:00.000Z",
+ "updated": "2026-10-25T00:00:00.000Z",
  "belowNote": "There's no promotion or relegation between US leagues; these are the professional divisions from the top",
  "system": "US soccer league system",
  "systemNote": "The US system doesn't use promotion and relegation between these leagues; play-off places are marked on each table.",
@@ -460,7 +460,7 @@
    "groups": [
     {
      "name": "Eastern Conference",
-     "updated": "2026-10-24T00:00:00.000Z",
+     "updated": "2026-10-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -478,15 +478,15 @@
       {
        "pos": 2,
        "team": "Charleston Battery",
-       "p": 29,
-       "w": 15,
+       "p": 30,
+       "w": 16,
        "d": 5,
        "l": 9,
-       "gf": 55,
+       "gf": 56,
        "ga": 35,
-       "pts": 50,
+       "pts": 53,
        "tid": 3990,
-       "form": "WWLDW"
+       "form": "WLDWW"
       },
       {
        "pos": 3,
@@ -569,18 +569,31 @@
       {
        "pos": 9,
        "team": "Indy Eleven",
-       "p": 29,
+       "p": 30,
        "w": 9,
        "d": 7,
-       "l": 13,
+       "l": 14,
        "gf": 35,
-       "ga": 40,
+       "ga": 41,
        "pts": 34,
        "tid": 3996,
-       "form": "LLDLL"
+       "form": "LDLLL"
       },
       {
        "pos": 10,
+       "team": "Loudoun United",
+       "p": 30,
+       "w": 6,
+       "d": 13,
+       "l": 11,
+       "gf": 38,
+       "ga": 48,
+       "pts": 31,
+       "tid": 3999,
+       "form": "DWLDW"
+      },
+      {
+       "pos": 11,
        "team": "Birmingham Legion",
        "p": 29,
        "w": 6,
@@ -593,30 +606,17 @@
        "form": "WLWDW"
       },
       {
-       "pos": 11,
-       "team": "Loudoun United",
-       "p": 29,
-       "w": 5,
-       "d": 13,
-       "l": 11,
-       "gf": 34,
-       "ga": 45,
-       "pts": 28,
-       "tid": 3999,
-       "form": "WDWLD"
-      },
-      {
        "pos": 12,
        "team": "Brooklyn FC",
-       "p": 29,
+       "p": 30,
        "w": 5,
        "d": 6,
-       "l": 18,
-       "gf": 31,
-       "ga": 59,
+       "l": 19,
+       "gf": 34,
+       "ga": 63,
        "pts": 21,
        "tid": 27252,
-       "form": "LLLWL"
+       "form": "LLWLL"
       },
       {
        "pos": 13,
@@ -635,7 +635,7 @@
     },
     {
      "name": "Western Conference",
-     "updated": "2026-10-24T00:00:00.000Z",
+     "updated": "2026-10-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -796,7 +796,7 @@
      ]
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "usl-league-one",
