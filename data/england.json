@@ -115,6 +115,19 @@
     },
     {
      "pos": 7,
+     "team": "Leeds United",
+     "p": 8,
+     "w": 2,
+     "d": 5,
+     "l": 1,
+     "gf": 9,
+     "ga": 6,
+     "pts": 11,
+     "tid": 63,
+     "form": "WDLDD"
+    },
+    {
+     "pos": 8,
      "team": "Newcastle United",
      "p": 8,
      "w": 3,
@@ -127,7 +140,7 @@
      "form": "LWLLW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Aston Villa",
      "p": 8,
      "w": 3,
@@ -138,19 +151,6 @@
      "pts": 11,
      "tid": 66,
      "form": "LWDWW"
-    },
-    {
-     "pos": 9,
-     "team": "Leeds United",
-     "p": 7,
-     "w": 2,
-     "d": 4,
-     "l": 1,
-     "gf": 9,
-     "ga": 6,
-     "pts": 10,
-     "tid": 63,
-     "form": "DWDLD"
     },
     {
      "pos": 10,
@@ -285,15 +285,15 @@
     {
      "pos": 20,
      "team": "Sunderland",
-     "p": 7,
+     "p": 8,
      "w": 1,
-     "d": 1,
+     "d": 2,
      "l": 5,
      "gf": 6,
      "ga": 14,
-     "pts": 4,
+     "pts": 5,
      "tid": 746,
-     "form": "DLLLL"
+     "form": "LLLLD"
     }
    ],
    "updated": "2026-10-25T00:00:00.000Z"

@@ -410,15 +410,15 @@
     {
      "pos": 6,
      "team": "Pisa",
-     "p": 7,
+     "p": 8,
      "w": 4,
-     "d": 1,
+     "d": 2,
      "l": 2,
-     "gf": 14,
-     "ga": 9,
-     "pts": 13,
+     "gf": 15,
+     "ga": 10,
+     "pts": 14,
      "tid": 801,
-     "form": "WLDWW"
+     "form": "LDWWD"
     },
     {
      "pos": 7,
@@ -474,6 +474,19 @@
     },
     {
      "pos": 11,
+     "team": "Hellas Verona",
+     "p": 8,
+     "w": 2,
+     "d": 3,
+     "l": 3,
+     "gf": 15,
+     "ga": 13,
+     "pts": 9,
+     "tid": 504,
+     "form": "LWLDD"
+    },
+    {
+     "pos": 12,
      "team": "Virtus Entella",
      "p": 8,
      "w": 2,
@@ -486,7 +499,7 @@
      "form": "WDDWL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Vicenza",
      "p": 8,
      "w": 2,
@@ -497,19 +510,6 @@
      "pts": 9,
      "tid": 1584,
      "form": "DLLDW"
-    },
-    {
-     "pos": 13,
-     "team": "Hellas Verona",
-     "p": 7,
-     "w": 2,
-     "d": 2,
-     "l": 3,
-     "gf": 14,
-     "ga": 12,
-     "pts": 8,
-     "tid": 504,
-     "form": "WLWLD"
     },
     {
      "pos": 14,

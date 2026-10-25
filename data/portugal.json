@@ -160,15 +160,15 @@
     {
      "pos": 9,
      "team": "Braga",
-     "p": 8,
+     "p": 9,
      "w": 3,
      "d": 2,
-     "l": 3,
+     "l": 4,
      "gf": 9,
-     "ga": 10,
+     "ga": 11,
      "pts": 11,
      "tid": 217,
-     "form": "LWDLL"
+     "form": "WDLLL"
     },
     {
      "pos": 10,
@@ -185,6 +185,19 @@
     },
     {
      "pos": 11,
+     "team": "Famalicão",
+     "p": 9,
+     "w": 2,
+     "d": 4,
+     "l": 3,
+     "gf": 14,
+     "ga": 11,
+     "pts": 10,
+     "tid": 242,
+     "form": "DDWLW"
+    },
+    {
+     "pos": 12,
      "team": "Estrela da Amadora",
      "p": 9,
      "w": 2,
@@ -197,7 +210,7 @@
      "form": "WDLLL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Vitória de Guimarães",
      "p": 9,
      "w": 2,
@@ -210,7 +223,7 @@
      "form": "DLDLW"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Marítimo",
      "p": 9,
      "w": 2,
@@ -223,30 +236,17 @@
      "form": "LLDLL"
     },
     {
-     "pos": 14,
-     "team": "Famalicão",
-     "p": 8,
-     "w": 1,
-     "d": 4,
-     "l": 3,
-     "gf": 10,
-     "ga": 11,
-     "pts": 7,
-     "tid": 242,
-     "form": "DDDWL"
-    },
-    {
      "pos": 15,
-     "team": "Rio Ave",
-     "p": 8,
+     "team": "Nacional",
+     "p": 9,
      "w": 2,
      "d": 1,
-     "l": 5,
-     "gf": 8,
-     "ga": 17,
+     "l": 6,
+     "gf": 10,
+     "ga": 18,
      "pts": 7,
-     "tid": 226,
-     "form": "LLDLW"
+     "tid": 225,
+     "form": "LLLLW"
     },
     {
      "pos": 16,
@@ -263,16 +263,16 @@
     },
     {
      "pos": 17,
-     "team": "Nacional",
-     "p": 8,
-     "w": 1,
+     "team": "Rio Ave",
+     "p": 9,
+     "w": 2,
      "d": 1,
      "l": 6,
-     "gf": 9,
-     "ga": 18,
-     "pts": 4,
-     "tid": 225,
-     "form": "LLLLL"
+     "gf": 8,
+     "ga": 21,
+     "pts": 7,
+     "tid": 226,
+     "form": "LDLWL"
     },
     {
      "pos": 18,
@@ -447,15 +447,15 @@
     {
      "pos": 10,
      "team": "União de Leiria",
-     "p": 7,
+     "p": 8,
      "w": 3,
-     "d": 1,
+     "d": 2,
      "l": 3,
-     "gf": 10,
-     "ga": 9,
-     "pts": 10,
+     "gf": 11,
+     "ga": 10,
+     "pts": 11,
      "tid": 4662,
-     "form": "WWWDL"
+     "form": "WWDLD"
     },
     {
      "pos": 11,
@@ -498,6 +498,19 @@
     },
     {
      "pos": 14,
+     "team": "FC Porto B",
+     "p": 8,
+     "w": 2,
+     "d": 2,
+     "l": 4,
+     "gf": 7,
+     "ga": 15,
+     "pts": 8,
+     "tid": 243,
+     "form": "LLDWD"
+    },
+    {
+     "pos": 15,
      "team": "Felgueiras 1932",
      "p": 8,
      "w": 1,
@@ -508,19 +521,6 @@
      "pts": 7,
      "tid": 4744,
      "form": "WLLLD"
-    },
-    {
-     "pos": 15,
-     "team": "FC Porto B",
-     "p": 7,
-     "w": 2,
-     "d": 1,
-     "l": 4,
-     "gf": 6,
-     "ga": 14,
-     "pts": 7,
-     "tid": 243,
-     "form": "WLLDW"
     },
     {
      "pos": 16,

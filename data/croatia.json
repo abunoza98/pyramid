@@ -4,7 +4,7 @@
  "adjective": "Croatian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-24T00:00:00.000Z",
+ "updated": "2026-10-25T00:00:00.000Z",
  "belowNote": "Treća NL champions come up",
  "leagues": [
   {
@@ -91,19 +91,6 @@
     },
     {
      "pos": 4,
-     "team": "Osijek",
-     "p": 10,
-     "w": 5,
-     "d": 2,
-     "l": 3,
-     "gf": 19,
-     "ga": 15,
-     "pts": 17,
-     "tid": 616,
-     "form": "LWDLD"
-    },
-    {
-     "pos": 5,
      "team": "Rijeka",
      "p": 9,
      "w": 5,
@@ -114,6 +101,19 @@
      "pts": 17,
      "tid": 561,
      "form": "WDWLW"
+    },
+    {
+     "pos": 5,
+     "team": "Osijek",
+     "p": 11,
+     "w": 5,
+     "d": 2,
+     "l": 4,
+     "gf": 19,
+     "ga": 16,
+     "pts": 17,
+     "tid": 616,
+     "form": "WDLDL"
     },
     {
      "pos": 6,
@@ -156,6 +156,19 @@
     },
     {
      "pos": 9,
+     "team": "Rudeš",
+     "p": 11,
+     "w": 3,
+     "d": 1,
+     "l": 7,
+     "gf": 14,
+     "ga": 27,
+     "pts": 10,
+     "tid": 1019,
+     "form": "LDWLW"
+    },
+    {
+     "pos": 10,
      "team": "Gorica",
      "p": 11,
      "w": 1,
@@ -166,22 +179,9 @@
      "pts": 7,
      "tid": 1068,
      "form": "DWLDD"
-    },
-    {
-     "pos": 10,
-     "team": "Rudeš",
-     "p": 10,
-     "w": 2,
-     "d": 1,
-     "l": 7,
-     "gf": 13,
-     "ga": 27,
-     "pts": 7,
-     "tid": 1019,
-     "form": "LLDWL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "prva-nl",
