@@ -119,6 +119,19 @@
       },
       {
        "pos": 7,
+       "team": "Seattle Sounders",
+       "p": 31,
+       "w": 11,
+       "d": 10,
+       "l": 10,
+       "gf": 41,
+       "ga": 39,
+       "pts": 43,
+       "tid": 1595,
+       "form": "WWLDD"
+      },
+      {
+       "pos": 8,
        "team": "Colorado Rapids",
        "p": 31,
        "w": 12,
@@ -129,19 +142,6 @@
        "pts": 42,
        "tid": 1610,
        "form": "LDDDW"
-      },
-      {
-       "pos": 8,
-       "team": "Seattle Sounders",
-       "p": 30,
-       "w": 11,
-       "d": 9,
-       "l": 10,
-       "gf": 39,
-       "ga": 37,
-       "pts": 42,
-       "tid": 1595,
-       "form": "WWWLD"
       },
       {
        "pos": 9,
@@ -171,6 +171,32 @@
       },
       {
        "pos": 11,
+       "team": "Portland Timbers",
+       "p": 31,
+       "w": 10,
+       "d": 7,
+       "l": 14,
+       "gf": 54,
+       "ga": 58,
+       "pts": 37,
+       "tid": 1617,
+       "form": "LDLDW"
+      },
+      {
+       "pos": 12,
+       "team": "San Diego FC",
+       "p": 31,
+       "w": 8,
+       "d": 11,
+       "l": 12,
+       "gf": 55,
+       "ga": 58,
+       "pts": 35,
+       "tid": 25484,
+       "form": "DLDDD"
+      },
+      {
+       "pos": 13,
        "team": "Minnesota United",
        "p": 31,
        "w": 8,
@@ -181,32 +207,6 @@
        "pts": 35,
        "tid": 1612,
        "form": "LDDWD"
-      },
-      {
-       "pos": 12,
-       "team": "Portland Timbers",
-       "p": 30,
-       "w": 9,
-       "d": 7,
-       "l": 14,
-       "gf": 51,
-       "ga": 56,
-       "pts": 34,
-       "tid": 1617,
-       "form": "LLDLD"
-      },
-      {
-       "pos": 13,
-       "team": "San Diego FC",
-       "p": 30,
-       "w": 8,
-       "d": 10,
-       "l": 12,
-       "gf": 53,
-       "ga": 56,
-       "pts": 34,
-       "tid": 25484,
-       "form": "DDLDD"
       },
       {
        "pos": 14,
@@ -295,15 +295,15 @@
       {
        "pos": 5,
        "team": "Charlotte FC",
-       "p": 30,
+       "p": 31,
        "w": 13,
        "d": 8,
-       "l": 9,
-       "gf": 53,
-       "ga": 45,
+       "l": 10,
+       "gf": 55,
+       "ga": 48,
        "pts": 47,
        "tid": 18310,
-       "form": "WLWLD"
+       "form": "LWLDL"
       },
       {
        "pos": 6,
