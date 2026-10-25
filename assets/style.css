@@ -1144,3 +1144,13 @@ body[data-page="home"].hero-find-on .bar .finder { opacity: 0; visibility: hidde
 .comp-src { color: var(--muted); font-size: 13px; }
 .qtag.q-ac { color: var(--accent); border-color: var(--accent-line); text-decoration: none; }
 a.qtag.q-ac:hover { background: var(--accent-soft); }
+
+/* Two-level competition nav on a country page (Australia): competition families, then states. Both rows scroll
+   sideways on small screens (.tf-tabs). */
+.cnav { margin-top: 18px; }
+.cnav-sub { margin-top: 6px; }
+.cnav-sub .tf-tab { padding-top: 4px; padding-bottom: 4px; font-size: 13px; }
+.cnav .tf-tab { flex: 0 0 auto; white-space: nowrap; }
+.cnav > .tf-panel { margin-top: 12px; }
+.cnav > .tf-panel > .pyr-cups { margin-top: 4px; border-top: 0; padding-top: 0; }
+.js .is-off, .is-filtered { display: none !important; }

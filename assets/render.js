@@ -370,7 +370,8 @@
     var body = grouped
       ? lg.groups.map(function (g) {
           var stamp = g.updated && g.updated !== lg.updated ? "as of " + ukTime(g.updated) : "";
-          return '<div class="group"><div class="group-head"><h3>' + esc(g.name) + "</h3>" +
+          var key = lg._key ? lg._key(g) : null;
+          return '<div class="group"' + (key ? ' data-key="' + esc(key) + '" data-filter-by="' + esc(lg._filterBy) + '"' : "") + '><div class="group-head"><h3>' + esc(g.name) + "</h3>" +
             (stamp ? "<span>" + stamp + "</span>" : "") + "</div>" +
             tableHTML(phaseLg(lg, g), g.rows, lg.name + ", " + g.name) + "</div>";
         }).join("")
@@ -420,11 +421,12 @@
   // c: a country's data, or a home-page summary (whose leagues carry clubs/groups counts). link: page the bars link to.
   // cups: [{ name, href, status, span }] shown as chips under the bars.
   var CUP_ICON = '<svg class="cup-ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2h8v3a4 4 0 0 1-8 0V2zM4 3H2v1a2.5 2.5 0 0 0 2.6 2.5M12 3h2v1a2.5 2.5 0 0 1-2.6 2.5M8 9v3M5 14h6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-  function cupChipsHTML(cups) {
+  function cupChipsHTML(cups, label, filterBy) {
     if (!cups || !cups.length) return "";
-    return '<div class="pyr-cups"><span class="pyr-cups-h">Cups</span>' + cups.map(function (c) {
+    return '<div class="pyr-cups"><span class="pyr-cups-h">' + esc(label || "Cups") + "</span>" + cups.map(function (c) {
       // A chip without a page to open (a past season whose ties aren't saved yet) is shown but not linked.
-      var tag = c.href ? 'a class="cup-chip" href="' + esc(c.href) + '"' : 'span class="cup-chip no-link"';
+      var key = c.key && filterBy ? ' data-key="' + esc(c.key) + '" data-filter-by="' + esc(filterBy) + '"' : "";
+      var tag = (c.href ? 'a class="cup-chip" href="' + esc(c.href) + '"' : 'span class="cup-chip no-link"') + key;
       return "<" + tag + ">" + CUP_ICON + '<span class="cup-chip-name">' + esc(c.name) + "</span>" +
         '<span class="cup-chip-meta">' + esc([c.span, c.status].filter(Boolean).join(" · ")) + "</span></" + tag.split(" ")[0] + ">";
     }).join("") + "</div>";
@@ -479,15 +481,65 @@
           ", from " + esc(c.leagues[0].name) + " down to " + esc(last.name) + ". " + (c.closed ? "Play-off places are marked from each league's records." : "Promotion, relegation and play-off places are marked where they apply, from each league's records.") + "</p>"
         : '<p class="lede">' + (c.system ? "The top " + n + " levels of the " + esc(c.system) : "Every league in the top " + n + " tiers of " + esc(c.adjective) + " football") + ", from " + esc(c.leagues[0].name) +
           " down to " + esc(last.name) + ". " + (c.systemNote ? esc(c.systemNote) : "Promotion, relegation and play-off places are marked on each table where they apply.") + "</p>") +
-      stampHTML(c.mode, c.updated, c.liveCount) + pyramidHTML(c, "", opts.cups) +
-      (opts.racesHref ? '<a class="tf-tab tf-go races-link" href="' + esc(opts.racesHref) + '">Promotion and relegation races <span aria-hidden="true">→</span></a>' : "") + "</section>";
+      stampHTML(c.mode, c.updated, c.liveCount);
+    var nav = opts.nav;
+    // With a two-level nav, the state competitions' cups (NPL finals) sit with their state's table, not on the overview.
+    var stateCup = function (cup) { return nav && cup.group && navKeyOf(nav, cup.group); };
+    var overview = pyramidHTML(c, "", (opts.cups || []).filter(function (cup) { return !stateCup(cup); })) +
+      (opts.racesHref ? '<a class="tf-tab tf-go races-link" href="' + esc(opts.racesHref) + '">Promotion and relegation races <span aria-hidden="true">→</span></a>' : "");
+    var tiers = {};
     c.leagues.forEach(function (lg, i) {
       if (!past) { lg._club = "club/"; lg._suffix = opts.suffix || ""; }
       else if (opts.clubPaths) { lg._paths = opts.clubPaths; lg._root = opts.root || ""; lg._suffix = opts.suffix || ""; }
-      html += tierHTML(markLeague(lg, opts.marks), { fixtures: (opts.fixtures || {})[c.country + "/" + lg.id] }) + bandHTML(lg, c.leagues[i + 1] || null, c.belowNote);
-      if (i === 1) html += INLINE_AD;
+      var shown = Object.assign({}, markLeague(lg, opts.marks));
+      if (nav) { shown._key = function (g) { return navKeyOf(nav, g.name); }; shown._filterBy = "st-" + c.country; }
+      tiers[lg.id] = tierHTML(shown, { fixtures: (opts.fixtures || {})[c.country + "/" + lg.id] }) + bandHTML(lg, c.leagues[i + 1] || null, c.belowNote) +
+        (i === 1 ? INLINE_AD : "");
     });
-    return html;
+    if (nav) return html + "</section>" + countryNavHTML(c, nav, overview, tiers, (opts.cups || []).filter(stateCup));
+    return html + overview + "</section>" + c.leagues.map(function (lg) { return tiers[lg.id]; }).join("");
+  }
+
+  /* ---------- Two-level navigation (Australia) ----------
+     nav: { tabs: [{ id, label, league?, href?, states? }], states: [[key, name pattern, display name]] }
+     The first row switches between the overview and each competition family (links go to cup pages); for a family
+     split by state (states: true), a second row filters it to one state, or "All" stacked. Uses the site's tabs
+     (data-tabs / data-tab / data-panel in app.js); the state row filters [data-key] elements instead of swapping panels. */
+  function navKeyOf(nav, name) {
+    var s = (nav.states || []).filter(function (x) { return new RegExp(x[1]).test(name || ""); })[0];
+    return s ? s[0] : null;
+  }
+  function countryNavHTML(c, nav, overview, tiers, stateCups) {
+    var tabs = nav.tabs.filter(function (t) { return t.href || t.id === "overview" || tiers[t.league]; });
+    var filterBy = "st-" + c.country;
+    var split = tabs.filter(function (t) { return t.states; }).map(function (t) { return t.id; });
+    var btn = function (id, label, on) {
+      return '<button type="button" role="tab" class="tf-tab' + (on ? " on" : "") + '" data-tab="' + esc(id) + '" aria-selected="' + on + '">' + esc(label) + "</button>";
+    };
+    var row = tabs.map(function (t) {
+      return t.href ? '<a class="tf-tab tf-go" href="' + esc(t.href) + '">' + esc(t.label) + "</a>" : btn(t.id, t.label, t.id === "overview");
+    }).join("");
+    var sub = split.length && (nav.states || []).length
+      ? '<div class="cnav-sub is-off" data-tabs="' + filterBy + '" data-filter data-show-on="' + split.join(" ") + '" data-on="all">' +
+        '<div class="tf-tabs" role="tablist" aria-label="States">' + btn("all", "All", true) +
+        nav.states.map(function (st) { return btn(st[0], st[0], false); }).join("") + "</div></div>" : "";
+    var lgOf = function (id) { return c.leagues.filter(function (l) { return l.id === id; })[0]; };
+    var panels = tabs.filter(function (t) { return !t.href; }).map(function (t) {
+      var body = t.id === "overview" ? overview : tiers[t.league];
+      if (t.states) {
+        var lg = lgOf(t.league), have = {};
+        groupsOf(lg).forEach(function (g) { var k = navKeyOf(nav, g.name); if (k) have[k] = true; });
+        // A state with no table in this family says so when picked, instead of showing an empty page.
+        body += nav.states.filter(function (st) { return !have[st[0]]; }).map(function (st) {
+          return '<p class="ko-empty is-filtered" data-key="' + esc(st[0]) + '" data-only data-filter-by="' + filterBy + '">The site doesn\'t cover a ' + esc(lg.name.replace(/s$/, "")) + " for " + esc(st[2] || st[0]) + " yet.</p>";
+        }).join("");
+        var cups = stateCups.filter(function (cup) { return cup.of === t.league; }).map(function (cup) { return Object.assign({}, cup, { key: navKeyOf(nav, cup.group) }); });
+        if (cups.length) body = cupChipsHTML(cups, "Finals", filterBy) + body;
+      }
+      return '<div class="tf-panel' + (t.id === "overview" ? " on" : "") + '" data-panel="' + esc(t.id) + '" role="tabpanel">' + body + "</div>";
+    }).join("");
+    return '<section class="cnav" data-tabs="nav-' + esc(c.country) + '" data-on="overview" data-hashtabs>' +
+      '<div class="tf-tabs cnav-main" role="tablist" aria-label="' + esc(c.name) + ' competitions">' + row + "</div>" + sub + panels + "</section>";
   }
 
   /* ---------- Promotion and relegation races ----------

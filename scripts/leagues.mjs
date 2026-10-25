@@ -382,6 +382,21 @@ export const COUNTRIES = [
     systemNote: "There's no promotion or relegation between the A-League and the state leagues. Within each state, clubs move between its NPL and its second division.",
     // Kept by hand (no API covers it yet): data/manual/australia/australian-championship/<year>.json. Its own page,
     // not a tier: clubs qualify through their state NPL and stay in it. See scripts/manual-comps.mjs.
+    // Two-level navigation on the Australia page (FP.countryMain): competition families, then a state filter for the
+    // families split by state. A tab with `cup` links to that cup's page; one with `league` shows that tier.
+    // states: [pill label, pattern matching the state's group names in both tiers, name used in messages].
+    nav: {
+      tabs: [
+        { id: "overview", label: "Overview" },
+        { id: "a-league", league: "a-league", label: "A-League Men" },
+        { cup: "a-league-finals", label: "A-League Finals" },
+        { cup: "australia-cup", label: "Australia Cup" },
+        { id: "npl", league: "npl", label: "NPL", states: true },
+        { id: "state-2", league: "state-2", label: "State 2nd divisions", states: true }
+      ],
+      states: [["NSW", "^NSW", "NSW"], ["VIC", "^Victoria", "Victoria"], ["QLD", "^Queensland", "Queensland"], ["SA", "^(South Australia|SA )", "South Australia"],
+        ["WA", "^(Western Australia|WA )", "Western Australia"], ["TAS", "^Tasmania", "Tasmania"], ["ACT", "^(Capital Territory|ACT)", "the ACT"], ["NNSW", "^Northern NSW", "Northern NSW"]]
+    },
     manual: [{ id: "australian-championship", name: "Australian Championship", short: "AUS CH", feeder: "npl" }],
     // The A-League finals series, like the MLS playoffs, comes in the league's own fixtures (188) after the regular
     // season: only those rounds are kept. The API's round names for it vary by season, so the common ones are mapped.

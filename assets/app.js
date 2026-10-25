@@ -229,6 +229,8 @@
   try { CUPS = JSON.parse(body.getAttribute("data-cups") || "[]"); } catch (e) {}
   var MARKS = null;
   try { MARKS = JSON.parse(body.getAttribute("data-marks") || "null"); } catch (e) {}
+  var NAV = null;
+  try { NAV = JSON.parse(body.getAttribute("data-nav") || "null"); } catch (e) {}
   var FIXLINKS = {};
   try { FIXLINKS = JSON.parse(body.getAttribute("data-fixtures") || "{}"); } catch (e) {}
   var MOVERS = [];
@@ -319,14 +321,36 @@
   var tabState = {};
   function applyTabs() {
     document.querySelectorAll("[data-tabs]").forEach(function (box) {
-      var want = tabState[box.getAttribute("data-tabs")];
+      var name = box.getAttribute("data-tabs"), want = tabState[name];
       if (!want) return;
+      // Only this box's own tabs and panels: a box can hold another (the state row inside Australia's nav).
+      var own = function (el) { return el.closest("[data-tabs]") === box; };
       box.querySelectorAll("[data-tab]").forEach(function (b) {
+        if (!own(b)) return;
         var on = b.getAttribute("data-tab") === want;
         b.classList.toggle("on", on); b.setAttribute("aria-selected", on);
       });
-      box.querySelectorAll("[data-panel]").forEach(function (p) { p.classList.toggle("on", p.getAttribute("data-panel") === want); });
+      box.querySelectorAll("[data-panel]").forEach(function (p) { if (own(p)) p.classList.toggle("on", p.getAttribute("data-panel") === want); });
+      box.setAttribute("data-on", want);
+      // Rows shown only with some tabs (the state row, for NPL and State 2nd divisions).
+      box.querySelectorAll("[data-show-on]").forEach(function (el) {
+        if (el.parentNode.closest("[data-tabs]") === box) el.classList.toggle("is-off", el.getAttribute("data-show-on").split(" ").indexOf(want) < 0);
+      });
+      // Filter tabs ("All", or one state): hide the elements tagged with another key. data-only: shown only for its key.
+      if (box.hasAttribute("data-filter")) document.querySelectorAll('[data-filter-by="' + name + '"]').forEach(function (el) {
+        var k = el.getAttribute("data-key");
+        el.classList.toggle("is-filtered", el.hasAttribute("data-only") ? k !== want : want !== "all" && k !== want);
+      });
     });
+  }
+  // A link to "#npl" etc. on a page whose nav has that tab opens the tab (pyramid bars, links from other pages).
+  function goTab(id) {
+    var b = id && document.querySelector('[data-hashtabs] [data-tab="' + id.replace(/"/g, "") + '"]');
+    if (!b) return false;
+    var box = b.closest("[data-tabs]");
+    tabState[box.getAttribute("data-tabs")] = id;
+    applyTabs();
+    return box;
   }
 
   /* ---------- Knockout bracket connector lines ---------- */
@@ -412,12 +436,22 @@
   }
 
   document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (a) {
+      var box = goTab(a.getAttribute("href").slice(1));
+      if (box) { e.preventDefault(); box.scrollIntoView({ block: "start" }); if (history.replaceState) history.replaceState(null, "", a.getAttribute("href")); }
+      return;
+    }
     var b = e.target.closest && e.target.closest("[data-tab]");
     if (!b) return;
     var box = b.closest("[data-tabs]");
     tabState[box.getAttribute("data-tabs")] = b.getAttribute("data-tab");
     applyTabs();
     requestAnimationFrame(bracketLines);
+    if (box.hasAttribute("data-hashtabs") && history.replaceState) {
+      var t = b.getAttribute("data-tab");
+      history.replaceState(null, "", location.pathname + location.search + (t === "overview" ? "" : "#" + t));
+    }
     if (FX_TABS.indexOf(box.getAttribute("data-tabs")) > -1 && history.replaceState) {
       history.replaceState(null, "", location.pathname + location.search + (b.getAttribute("data-tab") === "fx" ? "#fixtures" : ""));
     }
@@ -526,6 +560,7 @@
   showChosen();
 
   var FX_TABS = ["stage", "cup"];
+  if (location.hash.length > 1) goTab(location.hash.slice(1));
   if (location.hash === "#fixtures") { FX_TABS.forEach(function (k) { tabState[k] = "fx"; }); applyTabs(); }
 
   function showRound(nav, i) {
@@ -561,7 +596,7 @@
     if (!MINE.every(function (c) { return official[c]; })) return;
     var withLive = MINE.map(function (c) { return FP.applyLive(official[c], live); });
     var html;
-    if (PAGE === "country") html = FP.countryMain(withLive[0], { seasons: seasons, fixtures: FIXLINKS, cups: CUPS, marks: MARKS, racesHref: body.getAttribute("data-races") || "" });
+    if (PAGE === "country") html = FP.countryMain(withLive[0], { seasons: seasons, fixtures: FIXLINKS, cups: CUPS, marks: MARKS, nav: NAV, racesHref: body.getAttribute("data-races") || "" });
     else if (PAGE === "cup") {
       if (!compFx) return;
       html = FP.cupMain({ name: compFx.name, country: COUNTRY }, compFx, { tz: fxState.tz, live: live, seasons: seasons, fxRound: fxState.round, myClub: myClub,

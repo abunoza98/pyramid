@@ -409,7 +409,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     const href = pastCupHref(c, cup, year, rel);
     const w = sum.winner, fin = w && sum.clubs && sum.clubs[w.id];
     const status = w ? `Won by ${w.n}` + (fin && fin[3] ? ` (beat ${fin[3]}${fin[4] ? " " + fin[4] : ""} in the final)` : "") : "";
-    return { id: cup.id, name: cup.name, status, span: "", href };
+    return { id: cup.id, name: cup.name, status, span: "", href, group: cup.championGroup, of: cup.championOf };
   }).filter(Boolean);
   // Some leagues crown their champion through a postseason rather than the regular-season table (A-League, MLS).
   // Mark that postseason winner on the historical league table and link the badge to that season's bracket.
@@ -437,9 +437,10 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       const fx = fixtures[`${c.country}/${cup.id}`];
       // The season goes in front when it isn't the country's (the state leagues' calendar-year finals beside the
       // A-League's 2026–27, say), so a card never reads as this season's when it isn't.
-      if (fx) return { id: cup.id, name: cup.name, status: (fx.season && fx.season !== c.season ? `${fx.season}: ` : "") + FP.cupStatus(fx), span: FP.cupSpan(fx), href: `${rel}${cup.id}/${suffix}` };
+      const where = { group: cup.championGroup, of: cup.championOf };
+      if (fx) return { id: cup.id, name: cup.name, status: (fx.season && fx.season !== c.season ? `${fx.season}: ` : "") + FP.cupStatus(fx), span: FP.cupSpan(fx), href: `${rel}${cup.id}/${suffix}`, ...where };
       const last = cupPast[`${c.country}/${cup.id}`][0];
-      return { id: cup.id, name: cup.name, status: (cup.until ? `Ended in ${cup.until + 1} · ` : `${last.season}: `) + FP.cupStatus(last), span: "", href: `${rel}${cup.id}/${suffix}` };
+      return { id: cup.id, name: cup.name, status: (cup.until ? `Ended in ${cup.until + 1} · ` : `${last.season}: `) + FP.cupStatus(last), span: "", href: `${rel}${cup.id}/${suffix}`, ...where };
     })
     .concat(Object.values(manual).filter((m) => m.cfg.country === c.country).map((m) => {
       const e = m.editions[0];
@@ -451,6 +452,14 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   // - Australian Championship places: the foundation clubs and each state's qualifier, for the edition the
   //   season's tables decided,
   // - promotions and relegations announced after the season, from data/manual/<country>/movements/<year>.json.
+  // A country's two-level nav (scripts/leagues.mjs `nav`), with each cup tab pointed at that page's cup card's link
+  // (left out when the season has no page for it).
+  const navFor = (c, cards) => {
+    const cfg = COUNTRIES.find((x) => x.country === c.country);
+    if (!cfg || !cfg.nav) return null;
+    const tabs = cfg.nav.tabs.map((t) => (t.cup ? { id: t.cup, label: t.label, href: (cards.find((x) => x.id === t.cup) || {}).href } : t)).filter((t) => !("href" in t) || t.href);
+    return { tabs, states: cfg.nav.states };
+  };
   const movementFiles = {};
   const seasonMarks = async (c, leagues, year, rel, { champions }) => {
     const cfg = COUNTRIES.find((x) => x.country === c.country) || {};
@@ -572,8 +581,8 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       description: `Every ${c.adjective} league table from ${first} down to ${last} on one page, with ${c.closed ? "play-off" : "promotion, relegation and play-off"} places marked.`,
       canonical: `${SITE}/${c.country}/`, base: "../", suffix, page: "country", country: c.country,
       stamps: { [c.country]: c.updated }, countries, seasons: seasonList(c, history[c.country], "", suffix, null),
-      attrs: { fixtures: fxLinks(false), cups: cupCards(c, ""), races: c.closed ? "" : `races/${suffix}`, ...(nowMarks ? { marks: nowMarks } : {}) },
-      main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null), fixtures: fxLinks(false), cups: cupCards(c, ""), marks: nowMarks, racesHref: c.closed ? "" : `races/${suffix}` })
+      attrs: { fixtures: fxLinks(false), cups: cupCards(c, ""), races: c.closed ? "" : `races/${suffix}`, ...(nowMarks ? { marks: nowMarks } : {}), ...(navFor(c, cupCards(c, "")) ? { nav: navFor(c, cupCards(c, "")) } : {}) },
+      main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null), fixtures: fxLinks(false), cups: cupCards(c, ""), marks: nowMarks, nav: navFor(c, cupCards(c, "")), racesHref: c.closed ? "" : `races/${suffix}` })
     }));
     // Promotion and relegation races: each league's zones and the clubs just outside them, from the current tables.
     // Not for a league system without promotion and relegation (the USA).
@@ -672,7 +681,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         description: `Final ${h.season} tables for ${c.adjective} football, from ${n.first} down to ${n.last}, with promotion and relegation marked.`,
         canonical: `${SITE}/${c.country}/${slug(h.year, c.country)}/`, base: "../../", suffix, page: "history", country: c.country,
         jsonld: crumbs([["Football Pyramids", SITE + "/"], [c.name, `${SITE}/${c.country}/`], [h.season, `${SITE}/${c.country}/${slug(h.year, c.country)}/`]]),
-        stamps: {}, countries, main: FP.countryMain(Object.assign(h, { system: c.system, closed: c.closed }), { seasons, clubPaths: pathByName[c.country], root: "../../", suffix, cups: pastCupCards(c, h.year, "../"), marks: pastMarks })
+        stamps: {}, countries, main: FP.countryMain(Object.assign(h, { system: c.system, closed: c.closed }), { seasons, clubPaths: pathByName[c.country], root: "../../", suffix, cups: pastCupCards(c, h.year, "../"), marks: pastMarks, nav: navFor(c, pastCupCards(c, h.year, "../")) })
       }));
     }
   }
