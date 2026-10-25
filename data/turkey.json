@@ -4,7 +4,7 @@
  "adjective": "Turkish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-24T00:00:00.000Z",
+ "updated": "2026-10-25T00:00:00.000Z",
  "belowNote": "Regional amateur league champions come up",
  "leagues": [
   {
@@ -1109,7 +1109,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-10-24T00:00:00.000Z",
+     "updated": "2026-10-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1349,7 +1349,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-10-24T00:00:00.000Z",
+     "updated": "2026-10-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1589,7 +1589,7 @@
     },
     {
      "name": "Group 3",
-     "updated": "2026-10-24T00:00:00.000Z",
+     "updated": "2026-10-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1619,6 +1619,19 @@
       },
       {
        "pos": 3,
+       "team": "Talasgücü Belediyespor",
+       "p": 8,
+       "w": 6,
+       "d": 2,
+       "l": 0,
+       "gf": 18,
+       "ga": 5,
+       "pts": 20,
+       "tid": 21995,
+       "form": "WWWDW"
+      },
+      {
+       "pos": 4,
        "team": "Kırşehir Belediyespor",
        "p": 8,
        "w": 6,
@@ -1631,7 +1644,7 @@
        "form": "WWDWW"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Mazıdağı Fosfatspor",
        "p": 8,
        "w": 5,
@@ -1642,19 +1655,6 @@
        "pts": 18,
        "tid": 20295,
        "form": "WWDWD"
-      },
-      {
-       "pos": 5,
-       "team": "Talasgücü Belediyespor",
-       "p": 8,
-       "w": 5,
-       "d": 3,
-       "l": 0,
-       "gf": 15,
-       "ga": 5,
-       "pts": 18,
-       "tid": 21995,
-       "form": "WWWDD"
       },
       {
        "pos": 6,
@@ -1804,13 +1804,13 @@
        "team": "Yeni Malatyaspor",
        "p": 8,
        "w": 0,
-       "d": 1,
-       "l": 7,
+       "d": 0,
+       "l": 8,
        "gf": 0,
-       "ga": 21,
-       "pts": 1,
+       "ga": 24,
+       "pts": 0,
        "tid": 999,
-       "form": "LLLLD"
+       "form": "LLLLL"
       },
       {
        "pos": 18,
@@ -1828,7 +1828,7 @@
      ]
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   }
  ]
 }

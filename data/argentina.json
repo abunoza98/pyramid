@@ -235,15 +235,15 @@
       {
        "pos": 1,
        "team": "Rosario Central",
-       "p": 13,
-       "w": 7,
+       "p": 14,
+       "w": 8,
        "d": 4,
        "l": 2,
-       "gf": 20,
+       "gf": 22,
        "ga": 11,
-       "pts": 25,
+       "pts": 28,
        "tid": 437,
-       "form": "WWDWW"
+       "form": "WDWWW"
       },
       {
        "pos": 2,
@@ -326,15 +326,15 @@
       {
        "pos": 8,
        "team": "Huracán",
-       "p": 13,
+       "p": 14,
        "w": 5,
        "d": 4,
-       "l": 4,
+       "l": 5,
        "gf": 12,
-       "ga": 12,
+       "ga": 14,
        "pts": 19,
        "tid": 445,
-       "form": "WWWLL"
+       "form": "WWLLL"
       },
       {
        "pos": 9,
@@ -521,28 +521,28 @@
       {
        "pos": 5,
        "team": "Colón",
-       "p": 34,
-       "w": 14,
+       "p": 35,
+       "w": 15,
        "d": 12,
        "l": 8,
-       "gf": 41,
+       "gf": 43,
        "ga": 27,
-       "pts": 54,
+       "pts": 57,
        "tid": 448,
-       "form": "WDWDD"
+       "form": "DWDDW"
       },
       {
        "pos": 6,
        "team": "Ciudad de Bolívar",
-       "p": 34,
+       "p": 35,
        "w": 13,
        "d": 12,
-       "l": 9,
+       "l": 10,
        "gf": 30,
-       "ga": 29,
+       "ga": 31,
        "pts": 51,
        "tid": 16612,
-       "form": "LWWWW"
+       "form": "WWWWL"
       },
       {
        "pos": 7,

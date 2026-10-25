@@ -96,15 +96,15 @@
     {
      "pos": 5,
      "team": "Fluminense",
-     "p": 31,
+     "p": 32,
      "w": 14,
      "d": 9,
-     "l": 8,
-     "gf": 49,
-     "ga": 39,
+     "l": 9,
+     "gf": 50,
+     "ga": 41,
      "pts": 51,
      "tid": 124,
-     "form": "WWLLD"
+     "form": "WWLLL"
     },
     {
      "pos": 6,
@@ -122,28 +122,28 @@
     {
      "pos": 7,
      "team": "Bahia",
-     "p": 31,
+     "p": 32,
      "w": 13,
-     "d": 10,
+     "d": 11,
      "l": 8,
-     "gf": 44,
-     "ga": 39,
-     "pts": 49,
+     "gf": 45,
+     "ga": 40,
+     "pts": 50,
      "tid": 118,
-     "form": "WLLWL"
+     "form": "LLWLD"
     },
     {
      "pos": 8,
      "team": "Santos",
-     "p": 31,
+     "p": 32,
      "w": 12,
-     "d": 9,
+     "d": 10,
      "l": 10,
-     "gf": 48,
-     "ga": 46,
-     "pts": 45,
+     "gf": 49,
+     "ga": 47,
+     "pts": 46,
      "tid": 128,
-     "form": "WWDLW"
+     "form": "WDLWD"
     },
     {
      "pos": 9,
@@ -291,15 +291,15 @@
     {
      "pos": 20,
      "team": "Chapecoense",
-     "p": 30,
-     "w": 3,
+     "p": 31,
+     "w": 4,
      "d": 9,
      "l": 18,
-     "gf": 30,
-     "ga": 62,
-     "pts": 18,
+     "gf": 32,
+     "ga": 63,
+     "pts": 21,
      "tid": 132,
-     "form": "DLLLD"
+     "form": "DLLLW"
     }
    ],
    "updated": "2026-10-24T00:00:00.000Z"

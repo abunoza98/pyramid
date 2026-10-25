@@ -691,6 +691,19 @@
       },
       {
        "pos": 5,
+       "team": "San Antonio FC",
+       "p": 30,
+       "w": 11,
+       "d": 12,
+       "l": 7,
+       "gf": 32,
+       "ga": 30,
+       "pts": 45,
+       "tid": 4017,
+       "form": "DLDWW"
+      },
+      {
+       "pos": 6,
        "team": "Colorado Springs Switchbacks",
        "p": 29,
        "w": 12,
@@ -703,7 +716,7 @@
        "form": "DDDDW"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "FC Tulsa",
        "p": 29,
        "w": 11,
@@ -714,19 +727,6 @@
        "pts": 43,
        "tid": 4022,
        "form": "DWDDL"
-      },
-      {
-       "pos": 7,
-       "team": "San Antonio FC",
-       "p": 29,
-       "w": 10,
-       "d": 12,
-       "l": 7,
-       "gf": 30,
-       "ga": 29,
-       "pts": 42,
-       "tid": 4017,
-       "form": "DDLDW"
       },
       {
        "pos": 8,
@@ -744,15 +744,15 @@
       {
        "pos": 9,
        "team": "Orange County SC",
-       "p": 29,
+       "p": 30,
        "w": 10,
        "d": 9,
-       "l": 10,
-       "gf": 38,
-       "ga": 47,
+       "l": 11,
+       "gf": 39,
+       "ga": 49,
        "pts": 39,
        "tid": 4007,
-       "form": "LWLLL"
+       "form": "WLLLL"
       },
       {
        "pos": 10,
@@ -818,67 +818,67 @@
     {
      "pos": 1,
      "team": "Charlotte Independence",
-     "p": 31,
+     "p": 32,
      "w": 20,
      "d": 6,
-     "l": 5,
-     "gf": 73,
-     "ga": 42,
+     "l": 6,
+     "gf": 74,
+     "ga": 46,
      "pts": 66,
      "tid": 3991,
-     "form": "WDWWW"
+     "form": "DWWWL"
     },
     {
      "pos": 2,
      "team": "Union Omaha",
-     "p": 31,
+     "p": 32,
      "w": 19,
-     "d": 4,
+     "d": 5,
      "l": 8,
      "gf": 54,
      "ga": 34,
-     "pts": 61,
+     "pts": 62,
      "tid": 10283,
-     "form": "WWWLL"
+     "form": "WWLLD"
     },
     {
      "pos": 3,
-     "team": "Forward Madison",
-     "p": 31,
-     "w": 16,
+     "team": "Boise",
+     "p": 32,
+     "w": 17,
      "d": 7,
      "l": 8,
-     "gf": 54,
-     "ga": 30,
-     "pts": 55,
-     "tid": 9025,
-     "form": "WLDLW"
+     "gf": 51,
+     "ga": 41,
+     "pts": 58,
+     "tid": 27251,
+     "form": "LWWWW"
     },
     {
      "pos": 4,
-     "team": "Boise",
-     "p": 31,
+     "team": "Forward Madison",
+     "p": 32,
      "w": 16,
-     "d": 7,
+     "d": 8,
      "l": 8,
-     "gf": 49,
-     "ga": 41,
-     "pts": 55,
-     "tid": 27251,
-     "form": "DLWWW"
+     "gf": 54,
+     "ga": 30,
+     "pts": 56,
+     "tid": 9025,
+     "form": "LDLWD"
     },
     {
      "pos": 5,
      "team": "Spokane Velocity",
-     "p": 31,
+     "p": 32,
      "w": 16,
      "d": 6,
-     "l": 9,
+     "l": 10,
      "gf": 50,
-     "ga": 43,
+     "ga": 44,
      "pts": 54,
      "tid": 22785,
-     "form": "DWLWD"
+     "form": "WLWDL"
     },
     {
      "pos": 6,
@@ -908,55 +908,55 @@
     },
     {
      "pos": 8,
-     "team": "Fort Wayne",
-     "p": 31,
-     "w": 12,
-     "d": 9,
-     "l": 10,
-     "gf": 47,
-     "ga": 40,
-     "pts": 45,
-     "tid": 16679,
-     "form": "DDWWL"
-    },
-    {
-     "pos": 9,
      "team": "Naples",
-     "p": 31,
-     "w": 13,
+     "p": 32,
+     "w": 14,
      "d": 4,
      "l": 14,
-     "gf": 38,
+     "gf": 39,
      "ga": 46,
-     "pts": 43,
+     "pts": 46,
      "tid": 25485,
      "form": "WWWWW"
     },
     {
+     "pos": 9,
+     "team": "Fort Wayne",
+     "p": 32,
+     "w": 12,
+     "d": 9,
+     "l": 11,
+     "gf": 47,
+     "ga": 42,
+     "pts": 45,
+     "tid": 16679,
+     "form": "DWWLL"
+    },
+    {
      "pos": 10,
      "team": "Westchester SC",
-     "p": 31,
+     "p": 32,
      "w": 11,
-     "d": 6,
+     "d": 7,
      "l": 14,
-     "gf": 53,
-     "ga": 49,
-     "pts": 39,
+     "gf": 55,
+     "ga": 51,
+     "pts": 40,
      "tid": 25488,
-     "form": "WDWWW"
+     "form": "DWWWD"
     },
     {
      "pos": 11,
      "team": "Sarasota Paradise",
-     "p": 31,
+     "p": 32,
      "w": 11,
-     "d": 6,
+     "d": 7,
      "l": 14,
-     "gf": 47,
-     "ga": 49,
-     "pts": 39,
+     "gf": 49,
+     "ga": 51,
+     "pts": 40,
      "tid": 21289,
-     "form": "WLWWL"
+     "form": "LWWLD"
     },
     {
      "pos": 12,
@@ -973,6 +973,19 @@
     },
     {
      "pos": 13,
+     "team": "Portland Hearts of Pine",
+     "p": 32,
+     "w": 8,
+     "d": 10,
+     "l": 14,
+     "gf": 48,
+     "ga": 58,
+     "pts": 34,
+     "tid": 25486,
+     "form": "LDLLW"
+    },
+    {
+     "pos": 14,
      "team": "Alta",
      "p": 31,
      "w": 8,
@@ -985,30 +998,17 @@
      "form": "LLLDL"
     },
     {
-     "pos": 14,
-     "team": "Portland Hearts of Pine",
-     "p": 31,
-     "w": 7,
-     "d": 10,
-     "l": 14,
-     "gf": 44,
-     "ga": 57,
-     "pts": 31,
-     "tid": 25486,
-     "form": "DLDLL"
-    },
-    {
      "pos": 15,
      "team": "Greenville Triumph",
-     "p": 31,
-     "w": 7,
+     "p": 32,
+     "w": 8,
      "d": 6,
      "l": 18,
-     "gf": 36,
+     "gf": 37,
      "ga": 60,
-     "pts": 27,
+     "pts": 30,
      "tid": 9026,
-     "form": "LLDWL"
+     "form": "LDWLW"
     },
     {
      "pos": 16,
@@ -1026,15 +1026,15 @@
     {
      "pos": 17,
      "team": "Richmond Kickers",
-     "p": 31,
+     "p": 32,
      "w": 7,
      "d": 5,
-     "l": 19,
+     "l": 20,
      "gf": 37,
-     "ga": 64,
+     "ga": 65,
      "pts": 26,
      "tid": 4024,
-     "form": "LWLLW"
+     "form": "WLLWL"
     }
    ],
    "updated": "2026-10-24T00:00:00.000Z"
