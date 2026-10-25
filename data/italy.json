@@ -345,15 +345,15 @@
     {
      "pos": 1,
      "team": "Palermo",
-     "p": 7,
-     "w": 6,
+     "p": 8,
+     "w": 7,
      "d": 1,
      "l": 0,
-     "gf": 16,
-     "ga": 7,
-     "pts": 19,
+     "gf": 18,
+     "ga": 8,
+     "pts": 22,
      "tid": 522,
-     "form": "WDWWW"
+     "form": "DWWWW"
     },
     {
      "pos": 2,
@@ -554,15 +554,15 @@
     {
      "pos": 17,
      "team": "Carrarese",
-     "p": 7,
+     "p": 8,
      "w": 2,
      "d": 1,
-     "l": 4,
-     "gf": 6,
-     "ga": 7,
+     "l": 5,
+     "gf": 7,
+     "ga": 9,
      "pts": 7,
      "tid": 1581,
-     "form": "LLLWW"
+     "form": "LLWWL"
     },
     {
      "pos": 18,
@@ -949,15 +949,15 @@
       {
        "pos": 3,
        "team": "Grosseto",
-       "p": 10,
-       "w": 5,
+       "p": 11,
+       "w": 6,
        "d": 4,
        "l": 1,
-       "gf": 21,
+       "gf": 23,
        "ga": 13,
-       "pts": 19,
+       "pts": 22,
        "tid": 9499,
-       "form": "WWLWD"
+       "form": "WLWDW"
       },
       {
        "pos": 4,
@@ -974,32 +974,45 @@
       },
       {
        "pos": 5,
-       "team": "Reggiana",
-       "p": 10,
+       "team": "Torres",
+       "p": 11,
        "w": 5,
-       "d": 2,
+       "d": 3,
        "l": 3,
-       "gf": 14,
-       "ga": 9,
-       "pts": 17,
-       "tid": 880,
-       "form": "WLLWL"
+       "gf": 13,
+       "ga": 12,
+       "pts": 18,
+       "tid": 9534,
+       "form": "DDWLW"
       },
       {
        "pos": 6,
-       "team": "Guidonia Montecelio",
-       "p": 10,
-       "w": 4,
-       "d": 4,
-       "l": 2,
+       "team": "Reggiana",
+       "p": 11,
+       "w": 5,
+       "d": 2,
+       "l": 4,
        "gf": 14,
-       "ga": 10,
-       "pts": 16,
-       "tid": 882,
-       "form": "DLWDW"
+       "ga": 11,
+       "pts": 17,
+       "tid": 880,
+       "form": "LLWLL"
       },
       {
        "pos": 7,
+       "team": "Guidonia Montecelio",
+       "p": 11,
+       "w": 4,
+       "d": 4,
+       "l": 3,
+       "gf": 14,
+       "ga": 12,
+       "pts": 16,
+       "tid": 882,
+       "form": "LWDWL"
+      },
+      {
+       "pos": 8,
        "team": "Livorno",
        "p": 11,
        "w": 4,
@@ -1012,7 +1025,7 @@
        "form": "WLDDL"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Perugia",
        "p": 11,
        "w": 5,
@@ -1025,7 +1038,7 @@
        "form": "WWLWL"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Vado",
        "p": 11,
        "w": 4,
@@ -1036,19 +1049,6 @@
        "pts": 15,
        "tid": 9442,
        "form": "DWWDW"
-      },
-      {
-       "pos": 10,
-       "team": "Torres",
-       "p": 10,
-       "w": 4,
-       "d": 3,
-       "l": 3,
-       "gf": 11,
-       "ga": 12,
-       "pts": 15,
-       "tid": 9534,
-       "form": "DDDWL"
       },
       {
        "pos": 11,
@@ -1091,6 +1091,19 @@
       },
       {
        "pos": 14,
+       "team": "Forlì",
+       "p": 11,
+       "w": 2,
+       "d": 6,
+       "l": 3,
+       "gf": 16,
+       "ga": 16,
+       "pts": 12,
+       "tid": 1688,
+       "form": "DLDLD"
+      },
+      {
+       "pos": 15,
        "team": "Atalanta U23",
        "p": 10,
        "w": 4,
@@ -1101,19 +1114,6 @@
        "pts": 12,
        "tid": 22104,
        "form": "LLLWL"
-      },
-      {
-       "pos": 15,
-       "team": "Forlì",
-       "p": 10,
-       "w": 2,
-       "d": 5,
-       "l": 3,
-       "gf": 16,
-       "ga": 16,
-       "pts": 11,
-       "tid": 1688,
-       "form": "DDLDL"
       },
       {
        "pos": 16,
@@ -1144,15 +1144,15 @@
       {
        "pos": 18,
        "team": "Pianese",
-       "p": 10,
+       "p": 11,
        "w": 1,
-       "d": 5,
+       "d": 6,
        "l": 4,
        "gf": 6,
        "ga": 10,
-       "pts": 8,
+       "pts": 9,
        "tid": 6381,
-       "form": "DLWDD"
+       "form": "LWDDD"
       },
       {
        "pos": 19,
@@ -1227,6 +1227,19 @@
       },
       {
        "pos": 4,
+       "team": "Catania",
+       "p": 11,
+       "w": 6,
+       "d": 1,
+       "l": 4,
+       "gf": 24,
+       "ga": 12,
+       "pts": 19,
+       "tid": 1580,
+       "form": "WWWLW"
+      },
+      {
+       "pos": 5,
        "team": "Monopoli",
        "p": 11,
        "w": 5,
@@ -1239,7 +1252,7 @@
        "form": "WDLWW"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "Audace Cerignola",
        "p": 11,
        "w": 5,
@@ -1252,7 +1265,7 @@
        "form": "LDWWL"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Scafatese",
        "p": 10,
        "w": 4,
@@ -1265,7 +1278,7 @@
        "form": "DWWDW"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Casertana",
        "p": 11,
        "w": 4,
@@ -1278,30 +1291,17 @@
        "form": "LLWDD"
       },
       {
-       "pos": 8,
-       "team": "Catania",
-       "p": 10,
-       "w": 5,
-       "d": 1,
-       "l": 4,
-       "gf": 18,
-       "ga": 12,
-       "pts": 16,
-       "tid": 1580,
-       "form": "DWWWL"
-      },
-      {
        "pos": 9,
        "team": "Cavese",
-       "p": 10,
+       "p": 11,
        "w": 4,
        "d": 3,
-       "l": 3,
+       "l": 4,
        "gf": 20,
-       "ga": 17,
+       "ga": 18,
        "pts": 15,
        "tid": 1712,
-       "form": "LWWDW"
+       "form": "WWDWL"
       },
       {
        "pos": 10,
@@ -1331,6 +1331,19 @@
       },
       {
        "pos": 12,
+       "team": "Foggia",
+       "p": 11,
+       "w": 4,
+       "d": 2,
+       "l": 5,
+       "gf": 11,
+       "ga": 13,
+       "pts": 14,
+       "tid": 521,
+       "form": "WWLLW"
+      },
+      {
+       "pos": 13,
        "team": "Picerno",
        "p": 10,
        "w": 4,
@@ -1343,7 +1356,7 @@
        "form": "LWLLL"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Altamura",
        "p": 11,
        "w": 3,
@@ -1356,7 +1369,7 @@
        "form": "LDLWD"
       },
       {
-       "pos": 14,
+       "pos": 15,
        "team": "Barletta",
        "p": 11,
        "w": 2,
@@ -1367,19 +1380,6 @@
        "pts": 11,
        "tid": 19968,
        "form": "LLDWL"
-      },
-      {
-       "pos": 15,
-       "team": "Foggia",
-       "p": 10,
-       "w": 3,
-       "d": 2,
-       "l": 5,
-       "gf": 10,
-       "ga": 13,
-       "pts": 11,
-       "tid": 521,
-       "form": "LWWLL"
       },
       {
        "pos": 16,
@@ -1410,15 +1410,15 @@
       {
        "pos": 18,
        "team": "Giugliano",
-       "p": 10,
+       "p": 11,
        "w": 3,
        "d": 1,
-       "l": 6,
+       "l": 7,
        "gf": 15,
-       "ga": 23,
+       "ga": 29,
        "pts": 10,
        "tid": 9556,
-       "form": "LWLLW"
+       "form": "WLLWL"
       },
       {
        "pos": 19,

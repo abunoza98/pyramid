@@ -89,15 +89,15 @@
     {
      "pos": 4,
      "team": "Bayer Leverkusen",
-     "p": 6,
+     "p": 7,
      "w": 4,
      "d": 1,
-     "l": 1,
+     "l": 2,
      "gf": 16,
-     "ga": 9,
+     "ga": 12,
      "pts": 13,
      "tid": 168,
-     "form": "WDWWW"
+     "form": "DWWWL"
     },
     {
      "pos": 5,
@@ -166,6 +166,19 @@
     },
     {
      "pos": 10,
+     "team": "TSG Hoffenheim",
+     "p": 7,
+     "w": 3,
+     "d": 0,
+     "l": 4,
+     "gf": 14,
+     "ga": 14,
+     "pts": 9,
+     "tid": 167,
+     "form": "WLLWW"
+    },
+    {
+     "pos": 11,
      "team": "Hamburger SV",
      "p": 7,
      "w": 3,
@@ -178,7 +191,7 @@
      "form": "LWWWL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "1. FC Köln",
      "p": 7,
      "w": 2,
@@ -191,7 +204,7 @@
      "form": "DLWLD"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "SC Paderborn",
      "p": 7,
      "w": 2,
@@ -204,7 +217,7 @@
      "form": "LWLDW"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Eintracht Frankfurt",
      "p": 7,
      "w": 2,
@@ -215,19 +228,6 @@
      "pts": 8,
      "tid": 169,
      "form": "WDLWL"
-    },
-    {
-     "pos": 14,
-     "team": "TSG Hoffenheim",
-     "p": 6,
-     "w": 2,
-     "d": 0,
-     "l": 4,
-     "gf": 11,
-     "ga": 14,
-     "pts": 6,
-     "tid": 167,
-     "form": "LWLLW"
     },
     {
      "pos": 15,
@@ -706,6 +706,19 @@
     },
     {
      "pos": 10,
+     "team": "Preußen Münster",
+     "p": 11,
+     "w": 4,
+     "d": 3,
+     "l": 4,
+     "gf": 19,
+     "ga": 21,
+     "pts": 15,
+     "tid": 1313,
+     "form": "LDLLW"
+    },
+    {
+     "pos": 11,
      "team": "Fortuna Düsseldorf",
      "p": 11,
      "w": 4,
@@ -718,7 +731,7 @@
      "form": "LDWLD"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "SV Meppen",
      "p": 11,
      "w": 4,
@@ -731,7 +744,7 @@
      "form": "LDWDW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "VfB Stuttgart II",
      "p": 11,
      "w": 4,
@@ -744,7 +757,7 @@
      "form": "DDWWL"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Waldhof Mannheim",
      "p": 10,
      "w": 4,
@@ -755,19 +768,6 @@
      "pts": 13,
      "tid": 4268,
      "form": "LWWLL"
-    },
-    {
-     "pos": 14,
-     "team": "Preußen Münster",
-     "p": 10,
-     "w": 3,
-     "d": 3,
-     "l": 4,
-     "gf": 18,
-     "ga": 21,
-     "pts": 12,
-     "tid": 1313,
-     "form": "DLDLL"
     },
     {
      "pos": 15,
@@ -824,15 +824,15 @@
     {
      "pos": 19,
      "team": "Fortuna Köln",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 4,
-     "l": 4,
+     "l": 5,
      "gf": 8,
-     "ga": 11,
+     "ga": 12,
      "pts": 10,
      "tid": 1326,
-     "form": "LWDLL"
+     "form": "WDLLL"
     },
     {
      "pos": 20,

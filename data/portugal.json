@@ -172,6 +172,19 @@
     },
     {
      "pos": 10,
+     "team": "Moreirense",
+     "p": 9,
+     "w": 3,
+     "d": 2,
+     "l": 4,
+     "gf": 11,
+     "ga": 16,
+     "pts": 11,
+     "tid": 215,
+     "form": "LWDLW"
+    },
+    {
+     "pos": 11,
      "team": "Estrela da Amadora",
      "p": 9,
      "w": 2,
@@ -184,7 +197,7 @@
      "form": "WDLLL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Vitória de Guimarães",
      "p": 9,
      "w": 2,
@@ -195,19 +208,6 @@
      "pts": 8,
      "tid": 224,
      "form": "DLDLW"
-    },
-    {
-     "pos": 12,
-     "team": "Moreirense",
-     "p": 8,
-     "w": 2,
-     "d": 2,
-     "l": 4,
-     "gf": 8,
-     "ga": 15,
-     "pts": 8,
-     "tid": 215,
-     "form": "LLWDL"
     },
     {
      "pos": 13,
@@ -277,18 +277,18 @@
     {
      "pos": 18,
      "team": "Estoril",
-     "p": 8,
+     "p": 9,
      "w": 0,
      "d": 2,
-     "l": 6,
-     "gf": 4,
-     "ga": 12,
+     "l": 7,
+     "gf": 5,
+     "ga": 15,
      "pts": 2,
      "tid": 230,
-     "form": "LDLLL"
+     "form": "DLLLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "liga-portugal-2",
@@ -329,6 +329,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Lusitânia Lourosa",
+     "p": 8,
+     "w": 5,
+     "d": 3,
+     "l": 0,
+     "gf": 14,
+     "ga": 7,
+     "pts": 18,
+     "tid": 6358,
+     "form": "WWWDD"
+    },
+    {
+     "pos": 2,
      "team": "Sporting CP B",
      "p": 8,
      "w": 6,
@@ -339,19 +352,6 @@
      "pts": 18,
      "tid": 761,
      "form": "WWLWW"
-    },
-    {
-     "pos": 2,
-     "team": "Lusitânia Lourosa",
-     "p": 7,
-     "w": 5,
-     "d": 2,
-     "l": 0,
-     "gf": 12,
-     "ga": 5,
-     "pts": 17,
-     "tid": 6358,
-     "form": "DWWWD"
     },
     {
      "pos": 3,
@@ -498,6 +498,19 @@
     },
     {
      "pos": 14,
+     "team": "Felgueiras 1932",
+     "p": 8,
+     "w": 1,
+     "d": 4,
+     "l": 3,
+     "gf": 7,
+     "ga": 9,
+     "pts": 7,
+     "tid": 4744,
+     "form": "WLLLD"
+    },
+    {
+     "pos": 15,
      "team": "FC Porto B",
      "p": 7,
      "w": 2,
@@ -508,19 +521,6 @@
      "pts": 7,
      "tid": 243,
      "form": "WLLDW"
-    },
-    {
-     "pos": 15,
-     "team": "Felgueiras 1932",
-     "p": 7,
-     "w": 1,
-     "d": 3,
-     "l": 3,
-     "gf": 5,
-     "ga": 7,
-     "pts": 6,
-     "tid": 4744,
-     "form": "DWLLL"
     },
     {
      "pos": 16,

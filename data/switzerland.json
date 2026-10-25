@@ -62,15 +62,15 @@
     {
      "pos": 3,
      "team": "FC Sion",
-     "p": 10,
-     "w": 6,
+     "p": 11,
+     "w": 7,
      "d": 1,
      "l": 3,
-     "gf": 23,
+     "gf": 24,
      "ga": 17,
-     "pts": 19,
+     "pts": 22,
      "tid": 630,
-     "form": "WWWDL"
+     "form": "WDLWW"
     },
     {
      "pos": 4,
@@ -114,15 +114,15 @@
     {
      "pos": 7,
      "team": "FC Basel",
-     "p": 10,
+     "p": 11,
      "w": 4,
-     "d": 1,
+     "d": 2,
      "l": 5,
      "gf": 17,
      "ga": 20,
-     "pts": 13,
+     "pts": 14,
      "tid": 551,
-     "form": "LLWLL"
+     "form": "WLLDD"
     },
     {
      "pos": 8,
@@ -166,28 +166,28 @@
     {
      "pos": 11,
      "team": "Grasshopper Club",
-     "p": 10,
+     "p": 11,
      "w": 2,
-     "d": 2,
+     "d": 3,
      "l": 6,
      "gf": 13,
      "ga": 26,
-     "pts": 8,
+     "pts": 9,
      "tid": 1013,
-     "form": "DWLLL"
+     "form": "LLLDD"
     },
     {
      "pos": 12,
      "team": "Lausanne-Sport",
-     "p": 10,
+     "p": 11,
      "w": 1,
      "d": 3,
-     "l": 6,
+     "l": 7,
      "gf": 7,
-     "ga": 16,
+     "ga": 17,
      "pts": 6,
      "tid": 1014,
-     "form": "DLLLL"
+     "form": "LLLLL"
     }
    ],
    "updated": "2026-10-25T00:00:00.000Z"
@@ -382,18 +382,31 @@
     {
      "pos": 1,
      "team": "Biel-Bienne",
-     "p": 11,
+     "p": 12,
      "w": 8,
-     "d": 2,
+     "d": 3,
      "l": 1,
-     "gf": 25,
-     "ga": 12,
-     "pts": 26,
+     "gf": 27,
+     "ga": 14,
+     "pts": 27,
      "tid": 12700,
-     "form": "WWWWD"
+     "form": "WWWDD"
     },
     {
      "pos": 2,
+     "team": "Bulle",
+     "p": 13,
+     "w": 8,
+     "d": 3,
+     "l": 2,
+     "gf": 30,
+     "ga": 20,
+     "pts": 27,
+     "tid": 6618,
+     "form": "LWDWW"
+    },
+    {
+     "pos": 3,
      "team": "FC Schaffhausen",
      "p": 11,
      "w": 8,
@@ -404,19 +417,6 @@
      "pts": 25,
      "tid": 2182,
      "form": "DWWWW"
-    },
-    {
-     "pos": 3,
-     "team": "Bulle",
-     "p": 12,
-     "w": 7,
-     "d": 3,
-     "l": 2,
-     "gf": 27,
-     "ga": 18,
-     "pts": 24,
-     "tid": 6618,
-     "form": "WLWDW"
     },
     {
      "pos": 4,
@@ -434,28 +434,28 @@
     {
      "pos": 5,
      "team": "Cham",
-     "p": 11,
+     "p": 12,
      "w": 7,
-     "d": 1,
+     "d": 2,
      "l": 3,
-     "gf": 19,
-     "ga": 14,
-     "pts": 22,
+     "gf": 21,
+     "ga": 16,
+     "pts": 23,
      "tid": 6621,
-     "form": "LWWLW"
+     "form": "WWLWD"
     },
     {
      "pos": 6,
      "team": "Grand-Saconnex",
-     "p": 12,
+     "p": 13,
      "w": 7,
      "d": 0,
-     "l": 5,
-     "gf": 23,
-     "ga": 16,
+     "l": 6,
+     "gf": 25,
+     "ga": 19,
      "pts": 21,
      "tid": 17415,
-     "form": "WWWLL"
+     "form": "WWLLL"
     },
     {
      "pos": 7,
@@ -685,6 +685,19 @@
       },
       {
        "pos": 5,
+       "team": "Portalban / Gletterens",
+       "p": 11,
+       "w": 5,
+       "d": 2,
+       "l": 4,
+       "gf": 19,
+       "ga": 13,
+       "pts": 17,
+       "tid": 16337,
+       "form": "LDWWW"
+      },
+      {
+       "pos": 6,
        "team": "Naters",
        "p": 11,
        "w": 5,
@@ -697,7 +710,7 @@
        "form": "WWLLW"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Sion II",
        "p": 11,
        "w": 4,
@@ -710,30 +723,17 @@
        "form": "LWDLL"
       },
       {
-       "pos": 7,
-       "team": "Portalban / Gletterens",
-       "p": 10,
-       "w": 4,
-       "d": 2,
-       "l": 4,
-       "gf": 18,
-       "ga": 13,
-       "pts": 14,
-       "tid": 16337,
-       "form": "WLDWW"
-      },
-      {
        "pos": 8,
        "team": "Monthey",
-       "p": 10,
+       "p": 11,
        "w": 3,
        "d": 5,
-       "l": 2,
+       "l": 3,
        "gf": 15,
-       "ga": 13,
+       "ga": 14,
        "pts": 14,
        "tid": 6631,
-       "form": "DLWLW"
+       "form": "LWLWL"
       },
       {
        "pos": 9,

@@ -4,7 +4,7 @@
  "adjective": "English",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-24T00:00:00.000Z",
+ "updated": "2026-10-25T00:00:00.000Z",
  "belowNote": "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
  "leagues": [
   {
@@ -64,18 +64,31 @@
     {
      "pos": 3,
      "team": "Brighton & Hove Albion",
-     "p": 7,
+     "p": 8,
      "w": 5,
      "d": 1,
-     "l": 1,
+     "l": 2,
      "gf": 23,
-     "ga": 5,
+     "ga": 7,
      "pts": 16,
      "tid": 51,
-     "form": "DWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 4,
+     "team": "Liverpool",
+     "p": 8,
+     "w": 4,
+     "d": 3,
+     "l": 1,
+     "gf": 11,
+     "ga": 8,
+     "pts": 15,
+     "tid": 40,
+     "form": "DWLWW"
+    },
+    {
+     "pos": 5,
      "team": "Chelsea",
      "p": 8,
      "w": 4,
@@ -88,20 +101,33 @@
      "form": "DLWWL"
     },
     {
-     "pos": 5,
-     "team": "Liverpool",
-     "p": 7,
-     "w": 3,
-     "d": 3,
+     "pos": 6,
+     "team": "Brentford",
+     "p": 8,
+     "w": 2,
+     "d": 5,
      "l": 1,
-     "gf": 9,
-     "ga": 8,
-     "pts": 12,
-     "tid": 40,
-     "form": "WDWLW"
+     "gf": 14,
+     "ga": 9,
+     "pts": 11,
+     "tid": 55,
+     "form": "DWDLD"
     },
     {
-     "pos": 6,
+     "pos": 7,
+     "team": "Newcastle United",
+     "p": 8,
+     "w": 3,
+     "d": 2,
+     "l": 3,
+     "gf": 12,
+     "ga": 14,
+     "pts": 11,
+     "tid": 34,
+     "form": "LWLLW"
+    },
+    {
+     "pos": 8,
      "team": "Aston Villa",
      "p": 8,
      "w": 3,
@@ -114,20 +140,7 @@
      "form": "LWDWW"
     },
     {
-     "pos": 7,
-     "team": "Brentford",
-     "p": 7,
-     "w": 2,
-     "d": 4,
-     "l": 1,
-     "gf": 13,
-     "ga": 8,
-     "pts": 10,
-     "tid": 55,
-     "form": "DDWDL"
-    },
-    {
-     "pos": 8,
+     "pos": 9,
      "team": "Leeds United",
      "p": 7,
      "w": 2,
@@ -140,7 +153,20 @@
      "form": "DWDLD"
     },
     {
-     "pos": 9,
+     "pos": 10,
+     "team": "Hull City",
+     "p": 8,
+     "w": 2,
+     "d": 4,
+     "l": 2,
+     "gf": 9,
+     "ga": 8,
+     "pts": 10,
+     "tid": 64,
+     "form": "DLDLD"
+    },
+    {
+     "pos": 11,
      "team": "Everton",
      "p": 8,
      "w": 2,
@@ -153,7 +179,7 @@
      "form": "DWDLL"
     },
     {
-     "pos": 10,
+     "pos": 12,
      "team": "Ipswich Town",
      "p": 8,
      "w": 3,
@@ -166,20 +192,20 @@
      "form": "WLWLD"
     },
     {
-     "pos": 11,
-     "team": "Hull City",
-     "p": 7,
+     "pos": 13,
+     "team": "AFC Bournemouth",
+     "p": 8,
      "w": 2,
      "d": 3,
-     "l": 2,
-     "gf": 8,
-     "ga": 7,
+     "l": 3,
+     "gf": 12,
+     "ga": 13,
      "pts": 9,
-     "tid": 64,
-     "form": "DDLDL"
+     "tid": 35,
+     "form": "DLLWW"
     },
     {
-     "pos": 12,
+     "pos": 14,
      "team": "Tottenham Hotspur",
      "p": 8,
      "w": 2,
@@ -192,7 +218,7 @@
      "form": "DLDWW"
     },
     {
-     "pos": 13,
+     "pos": 15,
      "team": "Fulham",
      "p": 8,
      "w": 2,
@@ -205,56 +231,30 @@
      "form": "DDLWW"
     },
     {
-     "pos": 14,
-     "team": "Newcastle United",
-     "p": 7,
-     "w": 2,
-     "d": 2,
-     "l": 3,
-     "gf": 10,
-     "ga": 14,
-     "pts": 8,
-     "tid": 34,
-     "form": "DLWLL"
-    },
-    {
-     "pos": 15,
+     "pos": 16,
      "team": "Manchester United",
-     "p": 7,
+     "p": 8,
      "w": 1,
      "d": 4,
-     "l": 2,
+     "l": 3,
      "gf": 10,
-     "ga": 10,
+     "ga": 13,
      "pts": 7,
      "tid": 33,
-     "form": "DLDDD"
-    },
-    {
-     "pos": 16,
-     "team": "Crystal Palace",
-     "p": 7,
-     "w": 2,
-     "d": 1,
-     "l": 4,
-     "gf": 9,
-     "ga": 17,
-     "pts": 7,
-     "tid": 52,
-     "form": "WLDWL"
+     "form": "LDDDL"
     },
     {
      "pos": 17,
-     "team": "AFC Bournemouth",
-     "p": 7,
-     "w": 1,
-     "d": 3,
-     "l": 3,
+     "team": "Crystal Palace",
+     "p": 8,
+     "w": 2,
+     "d": 1,
+     "l": 5,
      "gf": 9,
-     "ga": 13,
-     "pts": 6,
-     "tid": 35,
-     "form": "DDLLW"
+     "ga": 19,
+     "pts": 7,
+     "tid": 52,
+     "form": "LDWLL"
     },
     {
      "pos": 18,
@@ -296,7 +296,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "championship",

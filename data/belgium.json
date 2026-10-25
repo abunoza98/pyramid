@@ -56,6 +56,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Club Brugge",
+     "p": 9,
+     "w": 8,
+     "d": 0,
+     "l": 1,
+     "gf": 22,
+     "ga": 6,
+     "pts": 24,
+     "tid": 569,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
      "team": "Gent",
      "p": 8,
      "w": 7,
@@ -66,19 +79,6 @@
      "pts": 22,
      "tid": 631,
      "form": "WWDWW"
-    },
-    {
-     "pos": 2,
-     "team": "Club Brugge",
-     "p": 8,
-     "w": 7,
-     "d": 0,
-     "l": 1,
-     "gf": 19,
-     "ga": 4,
-     "pts": 21,
-     "tid": 569,
-     "form": "LWWWW"
     },
     {
      "pos": 3,
@@ -213,15 +213,15 @@
     {
      "pos": 13,
      "team": "Sint-Truiden",
-     "p": 8,
+     "p": 9,
      "w": 2,
      "d": 2,
-     "l": 4,
-     "gf": 15,
-     "ga": 16,
+     "l": 5,
+     "gf": 17,
+     "ga": 19,
      "pts": 8,
      "tid": 735,
-     "form": "LWLLL"
+     "form": "WLLLL"
     },
     {
      "pos": 14,
@@ -332,13 +332,13 @@
     {
      "pos": 1,
      "team": "Beerschot VA",
-     "p": 7,
-     "w": 6,
+     "p": 8,
+     "w": 7,
      "d": 0,
      "l": 1,
-     "gf": 18,
-     "ga": 6,
-     "pts": 18,
+     "gf": 20,
+     "ga": 7,
+     "pts": 21,
      "tid": 263,
      "form": "WWWWW"
     },
@@ -358,15 +358,15 @@
     {
      "pos": 3,
      "team": "AS Eupen",
-     "p": 6,
+     "p": 7,
      "w": 5,
      "d": 0,
-     "l": 1,
-     "gf": 13,
-     "ga": 5,
+     "l": 2,
+     "gf": 14,
+     "ga": 7,
      "pts": 15,
      "tid": 739,
-     "form": "LWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 4,

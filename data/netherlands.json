@@ -68,6 +68,19 @@
     },
     {
      "pos": 2,
+     "team": "Ajax",
+     "p": 10,
+     "w": 6,
+     "d": 3,
+     "l": 1,
+     "gf": 29,
+     "ga": 13,
+     "pts": 21,
+     "tid": 194,
+     "form": "WDDWW"
+    },
+    {
+     "pos": 3,
      "team": "AZ Alkmaar",
      "p": 9,
      "w": 6,
@@ -80,7 +93,7 @@
      "form": "WDWLD"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "PSV Eindhoven",
      "p": 10,
      "w": 6,
@@ -91,19 +104,6 @@
      "pts": 20,
      "tid": 197,
      "form": "WLWLD"
-    },
-    {
-     "pos": 4,
-     "team": "Ajax",
-     "p": 9,
-     "w": 5,
-     "d": 3,
-     "l": 1,
-     "gf": 27,
-     "ga": 12,
-     "pts": 18,
-     "tid": 194,
-     "form": "WWDDW"
     },
     {
      "pos": 5,
@@ -225,15 +225,15 @@
     {
      "pos": 14,
      "team": "Sparta Rotterdam",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 3,
-     "l": 4,
-     "gf": 16,
-     "ga": 22,
+     "l": 5,
+     "gf": 17,
+     "ga": 24,
      "pts": 9,
      "tid": 426,
-     "form": "DLLDW"
+     "form": "LLDWL"
     },
     {
      "pos": 15,
