@@ -140,10 +140,10 @@
       if (!q.trim()) { close(); return; }
       results = searchAll(q, 8);
       if (!results.length) {
-        list.innerHTML = '<li class="finder-none" role="presentation">No matching club or league in the competitions covered here.</li>';
+        list.innerHTML = '<li class="finder-none" role="presentation">No matching club, league or competition in the competitions covered here.</li>';
       } else {
         list.innerHTML = results.map(function (x, i) {
-          var kind = x.type === "competition" ? "Competition" : x.type === "league" ? "League" : "Club";
+          var kind = x.type === "competition" ? (x.kind || (x.country === "europe" ? "Continental" : "Competition")) : x.type === "league" ? "League" : "Club";
           var meta = x.type === "club"
             ? (x.past ? kind + " · " + x.countryName + " · last seen " + x.past + ", " + x.league : kind + " · " + x.league + " · " + x.countryName)
             : kind + (x.tier ? " · Tier " + x.tier : "") + " · " + x.countryName;
@@ -160,7 +160,7 @@
       loadSearch().then(function () {
         var x = results[active] || matchSearch(q);
         if (x) { close(); goToItem(x, input); }
-        else toast("No matching club or league in the competitions covered here.");
+        else toast("No matching club, league or competition in the competitions covered here.");
       });
     }
     input.addEventListener("focus", function () {
