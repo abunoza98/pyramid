@@ -764,6 +764,19 @@
       },
       {
        "pos": 9,
+       "team": "Mérida",
+       "p": 9,
+       "w": 4,
+       "d": 1,
+       "l": 4,
+       "gf": 15,
+       "ga": 12,
+       "pts": 13,
+       "tid": 10140,
+       "form": "LWWWD"
+      },
+      {
+       "pos": 10,
        "team": "Ponferradina",
        "p": 9,
        "w": 3,
@@ -774,19 +787,6 @@
        "pts": 13,
        "tid": 4907,
        "form": "DWLDD"
-      },
-      {
-       "pos": 10,
-       "team": "Mérida",
-       "p": 8,
-       "w": 4,
-       "d": 0,
-       "l": 4,
-       "gf": 15,
-       "ga": 12,
-       "pts": 12,
-       "tid": 10140,
-       "form": "LLWWW"
       },
       {
        "pos": 11,
@@ -869,15 +869,15 @@
       {
        "pos": 17,
        "team": "Coria",
-       "p": 8,
+       "p": 9,
        "w": 2,
-       "d": 2,
+       "d": 3,
        "l": 4,
        "gf": 12,
        "ga": 16,
-       "pts": 8,
+       "pts": 9,
        "tid": 9827,
-       "form": "DDLLW"
+       "form": "DLLWD"
       },
       {
        "pos": 18,

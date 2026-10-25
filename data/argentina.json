@@ -46,6 +46,19 @@
       },
       {
        "pos": 2,
+       "team": "Boca Juniors",
+       "p": 14,
+       "w": 7,
+       "d": 6,
+       "l": 1,
+       "gf": 22,
+       "ga": 14,
+       "pts": 27,
+       "tid": 451,
+       "form": "WWDWW"
+      },
+      {
+       "pos": 3,
        "team": "Defensa Y Justicia",
        "p": 14,
        "w": 8,
@@ -56,19 +69,6 @@
        "pts": 27,
        "tid": 442,
        "form": "DWWLW"
-      },
-      {
-       "pos": 3,
-       "team": "Boca Juniors",
-       "p": 13,
-       "w": 6,
-       "d": 6,
-       "l": 1,
-       "gf": 21,
-       "ga": 14,
-       "pts": 24,
-       "tid": 451,
-       "form": "WWWDW"
       },
       {
        "pos": 4,
@@ -125,15 +125,15 @@
       {
        "pos": 8,
        "team": "Independiente",
-       "p": 13,
+       "p": 14,
        "w": 5,
        "d": 4,
-       "l": 4,
+       "l": 5,
        "gf": 12,
-       "ga": 13,
+       "ga": 14,
        "pts": 19,
        "tid": 453,
-       "form": "DWLDD"
+       "form": "WLDDL"
       },
       {
        "pos": 9,

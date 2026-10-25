@@ -372,6 +372,19 @@
     },
     {
      "pos": 8,
+     "team": "Tlaxcala",
+     "p": 14,
+     "w": 5,
+     "d": 4,
+     "l": 5,
+     "gf": 27,
+     "ga": 27,
+     "pts": 19,
+     "tid": 14280,
+     "form": "WDWDW"
+    },
+    {
+     "pos": 9,
      "team": "Alebrijes de Oaxaca",
      "p": 14,
      "w": 6,
@@ -384,7 +397,7 @@
      "form": "LLWWW"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Mineros de Zacatecas",
      "p": 14,
      "w": 5,
@@ -397,7 +410,7 @@
      "form": "WLDLL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Tapatío",
      "p": 13,
      "w": 5,
@@ -410,30 +423,17 @@
      "form": "WLLWL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Correcaminos Uat",
-     "p": 13,
+     "p": 14,
      "w": 4,
      "d": 4,
-     "l": 5,
+     "l": 6,
      "gf": 21,
-     "ga": 22,
+     "ga": 24,
      "pts": 16,
      "tid": 2313,
-     "form": "LWDLL"
-    },
-    {
-     "pos": 12,
-     "team": "Tlaxcala",
-     "p": 13,
-     "w": 4,
-     "d": 4,
-     "l": 5,
-     "gf": 25,
-     "ga": 27,
-     "pts": 16,
-     "tid": 14280,
-     "form": "LWDWD"
+     "form": "WDLLL"
     },
     {
      "pos": 13,
