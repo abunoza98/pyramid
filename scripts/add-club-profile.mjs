@@ -1,6 +1,8 @@
-// Add two club-page profile details without making any new football-data API calls:
+// Add club-page profile details and polish without making any new football-data API calls:
 // - achievements from saved league/cup history
 // - the club's usual home stadium from venue names already stored on league fixtures
+// - de-duplicated results/form when the same fixture also appears in a finals competition
+// - generic club-page metadata wording that works outside Europe
 import { readFile, writeFile, readdir } from "node:fs/promises";
 import { createRequire } from "node:module";
 import { COUNTRIES } from "./leagues.mjs";
@@ -122,7 +124,7 @@ async function cupWinsFor(cfg, clubName, tid) {
   return wins;
 }
 
-// One line under the club's position: "Honours: 🏆 4 Premier League · 2 FA Cup · ▲ 2 promotions", which opens to
+// One line under the club's position: "Honours: 🏆 Premier League ×4 · FA Cup ×2 · ▲ 2 promotions", which opens to
 // the seasons. Titles per competition come from the all-time list where there is one (plus our wins since), else
 // from our records; promotions always from our records. Labelled "Honours" only when every title count is all-time.
 // since: { competition key: first season on record } for counts that come from our records only.
@@ -148,13 +150,13 @@ function honoursHTML(items, clubName, tid, since) {
     return { ...t, n: h.v + later.length, years: h.years ? years : later.map((y) => y.season), partial: !h.years && h.v > 0 };
   }).filter((t) => t.n > 0).sort((a, b) => b.n - a.n || a.text.localeCompare(b.text));
   if (!list.length && !promos.length) return "";
-  // A count from our records only says where it starts: "8 Premier League (since 2010–11)". All-time counts don't.
-  const parts = list.map((t) => `${t.n} ${esc(t.text)}${t.since ? ` <small>(since ${esc(t.since)})</small>` : ""}`);
+  // A count from our records only says where it starts. All-time counts don't.
+  const parts = list.map((t) => `${esc(t.text)} ×${t.n}${t.since ? ` <small>(since ${esc(t.since)})</small>` : ""}`);
   const head = (list.length ? "🏆 " + parts.join(" · ") : "") + (list.length && promos.length ? " · " : "") +
     (promos.length ? `▲ ${promos.length} promotion${promos.length === 1 ? "" : "s"}` : "");
   const label = "Honours";
   const note = list.some((t) => t.since) || promos.length
-    ? '<p class="hn-note">Cup totals are all-time where we hold the full list. Counts marked "since" and promotions come from the seasons on this site.</p>' : "";
+    ? '<p class="hn-note">Title totals are all-time where we hold the full list. Counts marked "since" and promotions come from the seasons on this site.</p>' : "";
   const detail = list.map((t) => `<li><b>${esc(t.text)}</b> <span>${t.n}</span>${t.years.length ? `<i>${esc(t.years.slice().sort().reverse().join(", "))}${t.partial ? " and earlier" : ""}</i>` : ""}</li>`).join("") +
     (promos.length ? `<li><b>Promotions</b> <span>${promos.length}</span><i>${promos.sort((a, b) => b.year - a.year).map((p) => `${esc(p.season)} ${esc(p.text)}`).join("; ")}</i></li>` : "");
   return `<details class="cl-honours"><summary><strong>${label}:</strong> ${head}</summary><ul>${detail}</ul>${note}</details>`;
@@ -179,6 +181,67 @@ function insertStadium(html, stadium) {
   const routes = html.match(/<p class="fx-links cl-routes">[\s\S]*?<\/p>/);
   if (routes) return html.replace(routes[0], line + routes[0]);
   return html.includes('<p class="fx-links">') ? html.replace('<p class="fx-links">', line + '<p class="fx-links">') : html;
+}
+
+const decodeText = (s) => String(s || "").replace(/<[^>]*>/g, "")
+  .replace(/&amp;/g, "&").replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">").trim();
+
+function resultRowInfo(row) {
+  const id = row.match(/data-fid="([^"]+)"/)?.[1] || "";
+  const wdl = row.match(/class="wdl wdl-([WDL])"/)?.[1] || "";
+  const time = row.match(/<time\b[^>]*>[\s\S]*?<\/time>/)?.[0] || "";
+  const comp = decodeText(row.match(/<span class="ctag [^"]*" title="([^"]*)">/)?.[1] || "");
+  const ha = row.match(/<span class="cl-ha">([HA])<\/span>/)?.[1] || "";
+  const opp = decodeText(row.match(/<span class="cl-opp">([\s\S]*?)<\/span>/)?.[1] || "");
+  const score = decodeText(row.match(/<span class="cl-score">([\s\S]*?)<\/span>/)?.[1] || "");
+  return { id, wdl, time, comp, ha, opp, score, priority: /ctag-league/.test(row) ? 0 : 1 };
+}
+
+function formChip(info, i, n) {
+  if (!info.wdl || !info.time) return "";
+  const side = i === 0 ? " l" : i === n - 1 ? " r" : "";
+  const where = info.ha === "H" ? "Home v " : info.ha === "A" ? "Away at " : "v ";
+  const verb = info.wdl === "W" ? "Won" : info.wdl === "L" ? "Lost" : "Drew";
+  return `<b class="fchip ${info.wdl}" tabindex="0">${info.wdl}<span class="ltip${side}"><b>${info.time}${info.comp ? ` · ${esc(info.comp)}` : ""}</b>${where}${esc(info.opp)}${info.score ? `<i>${verb} ${esc(info.score)}</i>` : ""}</span></b>`;
+}
+
+// Some finals feeds reuse the same API fixture IDs as the parent league. On club pages that previously made one
+// real match appear twice (and could distort Last 5). Keep one row per fixture ID, preferring the named cup/finals
+// competition over the generic league copy, then rebuild the visible six + collapsed remainder and Last 5.
+function dedupeResults(html) {
+  const re = /<section class="cl-sec"><div class="cl-sec-h"><h2>Results<\/h2><\/div>[\s\S]*?<\/section>/;
+  const section = html.match(re)?.[0];
+  if (!section) return html;
+  const rows = section.match(/<li class="cl-row"[\s\S]*?<\/li>/g) || [];
+  if (!rows.length) return html;
+
+  const chosen = new Map(), order = [];
+  rows.forEach((row, i) => {
+    const info = resultRowInfo(row);
+    const key = info.id || `row-${i}`;
+    if (!chosen.has(key)) {
+      chosen.set(key, { row, info, i });
+      order.push(key);
+    } else if (info.priority > chosen.get(key).info.priority) {
+      chosen.set(key, { row, info, i: chosen.get(key).i });
+    }
+  });
+  const unique = order.map((k) => chosen.get(k)).sort((a, b) => a.i - b.i);
+  if (unique.length === rows.length) return html.replaceAll("across league, cups and Europe", "across all competitions");
+
+  const visible = unique.slice(0, 6).map((x) => x.row).join("");
+  const more = unique.slice(6).map((x) => x.row).join("");
+  const head = '<section class="cl-sec"><div class="cl-sec-h"><h2>Results</h2></div>';
+  const details = more ? `<details class="cl-more" id="more-result"><summary>All ${unique.length} result${unique.length === 1 ? "" : "s"}</summary><ul class="cl-list">${more}</ul></details>` : "";
+  html = html.replace(section, `${head}<ul class="cl-list">${visible}</ul>${details}</section>`);
+
+  const last = unique.slice(0, 5).map((x) => x.info);
+  const chips = last.map((x, i) => formChip(x, i, last.length)).join("");
+  html = html.replace(/<p class="lede">[\s\S]*?<\/p>/, (lede) => {
+    if (!/Last 5 matches:/.test(lede)) return lede;
+    return lede.replace(/Last 5 matches:[\s\S]*<\/p>$/, `Last 5 matches: <span class="form">${chips}</span></p>`);
+  });
+  return html.replaceAll("across league, cups and Europe", "across all competitions");
 }
 
 let changed = 0;
@@ -243,6 +306,7 @@ for (const cfg of COUNTRIES) {
     let html;
     try { html = await readFile(file, "utf8"); } catch { continue; }
     const original = html;
+    html = dedupeResults(html);
     html = insertStadium(html, stadium);
     achievements.country = cfg.country; achievements.names = names;
     html = insertAchievements(html, honoursHTML(achievements, club.name, club.tid, sinceByKey));
@@ -250,4 +314,4 @@ for (const cfg of COUNTRIES) {
   }
 }
 
-console.log(`Club profiles: updated stadium/achievements on ${changed} generated club pages.`);
+console.log(`Club profiles: polished results, metadata, stadium and achievements on ${changed} generated club pages.`);
