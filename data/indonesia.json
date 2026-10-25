@@ -4,7 +4,7 @@
  "adjective": "Indonesian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-24T00:00:00.000Z",
+ "updated": "2026-10-25T00:00:00.000Z",
  "belowNote": "Championship (second tier) clubs come up; API-Football doesn't have its tables yet",
  "leagues": [
   {
@@ -49,18 +49,31 @@
     {
      "pos": 2,
      "team": "Dewa United",
-     "p": 6,
+     "p": 7,
      "w": 4,
      "d": 2,
-     "l": 0,
+     "l": 1,
      "gf": 12,
-     "ga": 6,
+     "ga": 10,
      "pts": 14,
      "tid": 17902,
-     "form": "DWWDW"
+     "form": "WWDWL"
     },
     {
      "pos": 3,
+     "team": "Bali United",
+     "p": 7,
+     "w": 4,
+     "d": 1,
+     "l": 2,
+     "gf": 20,
+     "ga": 8,
+     "pts": 13,
+     "tid": 2448,
+     "form": "LWLWD"
+    },
+    {
+     "pos": 4,
      "team": "Madura United",
      "p": 6,
      "w": 4,
@@ -73,30 +86,17 @@
      "form": "WWLDW"
     },
     {
-     "pos": 4,
-     "team": "Bali United",
-     "p": 6,
-     "w": 4,
-     "d": 0,
-     "l": 2,
-     "gf": 19,
-     "ga": 7,
-     "pts": 12,
-     "tid": 2448,
-     "form": "WLWLW"
-    },
-    {
      "pos": 5,
      "team": "Persita",
-     "p": 5,
+     "p": 6,
      "w": 3,
-     "d": 2,
+     "d": 3,
      "l": 0,
-     "gf": 11,
-     "ga": 8,
-     "pts": 11,
+     "gf": 12,
+     "ga": 9,
+     "pts": 12,
      "tid": 4244,
-     "form": "DWDWW"
+     "form": "WDWWD"
     },
     {
      "pos": 6,
@@ -139,6 +139,19 @@
     },
     {
      "pos": 9,
+     "team": "Arema FC",
+     "p": 7,
+     "w": 2,
+     "d": 3,
+     "l": 2,
+     "gf": 16,
+     "ga": 14,
+     "pts": 9,
+     "tid": 2438,
+     "form": "DDLLW"
+    },
+    {
+     "pos": 10,
      "team": "Persebaya Surabaya",
      "p": 6,
      "w": 2,
@@ -151,7 +164,7 @@
      "form": "WDWDL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "PSM Makassar",
      "p": 6,
      "w": 2,
@@ -164,7 +177,7 @@
      "form": "DDLWW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Java United",
      "p": 7,
      "w": 2,
@@ -176,19 +189,6 @@
      "ded": 2,
      "tid": 22409,
      "form": "LWWDD"
-    },
-    {
-     "pos": 12,
-     "team": "Arema FC",
-     "p": 6,
-     "w": 1,
-     "d": 3,
-     "l": 2,
-     "gf": 12,
-     "ga": 14,
-     "pts": 6,
-     "tid": 2438,
-     "form": "DDDLL"
     },
     {
      "pos": 13,
@@ -270,7 +270,7 @@
      "form": "LLLLD"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   }
  ]
 }
