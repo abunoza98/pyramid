@@ -42,67 +42,67 @@
       {
        "pos": 1,
        "team": "Vancouver Whitecaps",
-       "p": 30,
+       "p": 31,
        "w": 16,
        "d": 7,
-       "l": 7,
+       "l": 8,
        "gf": 63,
-       "ga": 31,
+       "ga": 32,
        "pts": 55,
        "tid": 1603,
-       "form": "DLDDW"
+       "form": "LDDWL"
       },
       {
        "pos": 2,
-       "team": "St. Louis City",
-       "p": 30,
-       "w": 14,
+       "team": "FC Dallas",
+       "p": 31,
+       "w": 15,
        "d": 9,
        "l": 7,
-       "gf": 56,
-       "ga": 41,
-       "pts": 51,
-       "tid": 20787,
-       "form": "WWWDL"
+       "gf": 58,
+       "ga": 47,
+       "pts": 54,
+       "tid": 1597,
+       "form": "WLWDW"
       },
       {
        "pos": 3,
-       "team": "FC Dallas",
-       "p": 30,
+       "team": "St. Louis City",
+       "p": 31,
        "w": 14,
        "d": 9,
-       "l": 7,
-       "gf": 55,
-       "ga": 47,
+       "l": 8,
+       "gf": 56,
+       "ga": 44,
        "pts": 51,
-       "tid": 1597,
-       "form": "DWLWD"
+       "tid": 20787,
+       "form": "WWDLL"
       },
       {
        "pos": 4,
        "team": "San Jose Earthquakes",
-       "p": 30,
+       "p": 31,
        "w": 13,
        "d": 9,
-       "l": 8,
+       "l": 9,
        "gf": 52,
-       "ga": 42,
+       "ga": 45,
        "pts": 48,
        "tid": 1596,
-       "form": "DWDDD"
+       "form": "WDDDL"
       },
       {
        "pos": 5,
        "team": "Houston Dynamo",
-       "p": 30,
+       "p": 31,
        "w": 13,
-       "d": 8,
+       "d": 9,
        "l": 9,
        "gf": 41,
        "ga": 39,
-       "pts": 47,
+       "pts": 48,
        "tid": 1600,
-       "form": "DLDDD"
+       "form": "LDDDD"
       },
       {
        "pos": 6,
@@ -119,6 +119,19 @@
       },
       {
        "pos": 7,
+       "team": "Colorado Rapids",
+       "p": 31,
+       "w": 12,
+       "d": 6,
+       "l": 13,
+       "gf": 42,
+       "ga": 41,
+       "pts": 42,
+       "tid": 1610,
+       "form": "LDDDW"
+      },
+      {
+       "pos": 8,
        "team": "Seattle Sounders",
        "p": 30,
        "w": 11,
@@ -131,7 +144,7 @@
        "form": "WWWLD"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "LA Galaxy",
        "p": 31,
        "w": 10,
@@ -144,33 +157,33 @@
        "form": "WWLWD"
       },
       {
-       "pos": 9,
-       "team": "Colorado Rapids",
-       "p": 30,
-       "w": 11,
-       "d": 6,
-       "l": 13,
-       "gf": 41,
-       "ga": 41,
-       "pts": 39,
-       "tid": 1610,
-       "form": "DLDDD"
-      },
-      {
        "pos": 10,
        "team": "Real Salt Lake",
-       "p": 30,
-       "w": 10,
+       "p": 31,
+       "w": 11,
        "d": 6,
        "l": 14,
-       "gf": 45,
+       "gf": 48,
        "ga": 48,
-       "pts": 36,
+       "pts": 39,
        "tid": 1606,
-       "form": "LWLDW"
+       "form": "WLDWW"
       },
       {
        "pos": 11,
+       "team": "Minnesota United",
+       "p": 31,
+       "w": 8,
+       "d": 11,
+       "l": 12,
+       "gf": 47,
+       "ga": 55,
+       "pts": 35,
+       "tid": 1612,
+       "form": "LDDWD"
+      },
+      {
+       "pos": 12,
        "team": "Portland Timbers",
        "p": 30,
        "w": 9,
@@ -183,7 +196,7 @@
        "form": "LLDLD"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "San Diego FC",
        "p": 30,
        "w": 8,
@@ -196,43 +209,30 @@
        "form": "DDLDD"
       },
       {
-       "pos": 13,
-       "team": "Minnesota United",
-       "p": 30,
-       "w": 8,
-       "d": 10,
-       "l": 12,
-       "gf": 47,
-       "ga": 55,
-       "pts": 34,
-       "tid": 1612,
-       "form": "LLDDW"
-      },
-      {
        "pos": 14,
        "team": "Austin FC",
-       "p": 30,
-       "w": 7,
+       "p": 31,
+       "w": 8,
        "d": 10,
        "l": 13,
-       "gf": 38,
-       "ga": 56,
-       "pts": 31,
+       "gf": 40,
+       "ga": 57,
+       "pts": 34,
        "tid": 16489,
-       "form": "DDLLL"
+       "form": "DLLLW"
       },
       {
        "pos": 15,
        "team": "Sporting Kansas City",
-       "p": 30,
+       "p": 31,
        "w": 6,
        "d": 4,
-       "l": 20,
-       "gf": 36,
-       "ga": 75,
+       "l": 21,
+       "gf": 37,
+       "ga": 77,
        "pts": 22,
        "tid": 1611,
-       "form": "WLDLL"
+       "form": "LDLLL"
       }
      ]
     },
@@ -255,6 +255,19 @@
       },
       {
        "pos": 2,
+       "team": "New England Revolution",
+       "p": 31,
+       "w": 17,
+       "d": 4,
+       "l": 10,
+       "gf": 51,
+       "ga": 42,
+       "pts": 55,
+       "tid": 1609,
+       "form": "LLWWW"
+      },
+      {
+       "pos": 3,
        "team": "Inter Miami",
        "p": 31,
        "w": 15,
@@ -267,30 +280,17 @@
        "form": "LWWWL"
       },
       {
-       "pos": 3,
-       "team": "New England Revolution",
-       "p": 30,
-       "w": 16,
-       "d": 4,
-       "l": 10,
-       "gf": 49,
-       "ga": 41,
-       "pts": 52,
-       "tid": 1609,
-       "form": "WLLWW"
-      },
-      {
        "pos": 4,
        "team": "Chicago Fire",
-       "p": 30,
-       "w": 14,
+       "p": 31,
+       "w": 15,
        "d": 6,
        "l": 10,
-       "gf": 52,
-       "ga": 44,
-       "pts": 48,
+       "gf": 55,
+       "ga": 46,
+       "pts": 51,
        "tid": 1607,
-       "form": "WWWLL"
+       "form": "WWLLW"
       },
       {
        "pos": 5,
@@ -308,31 +308,44 @@
       {
        "pos": 6,
        "team": "Philadelphia Union",
-       "p": 30,
+       "p": 31,
        "w": 13,
        "d": 7,
-       "l": 10,
-       "gf": 61,
-       "ga": 48,
+       "l": 11,
+       "gf": 62,
+       "ga": 50,
        "pts": 46,
        "tid": 1599,
-       "form": "WWWWD"
+       "form": "WWWDL"
       },
       {
        "pos": 7,
        "team": "Orlando City SC",
-       "p": 30,
+       "p": 31,
        "w": 12,
-       "d": 5,
+       "d": 6,
        "l": 13,
-       "gf": 58,
-       "ga": 70,
-       "pts": 41,
+       "gf": 60,
+       "ga": 72,
+       "pts": 42,
        "tid": 1598,
-       "form": "LLWDW"
+       "form": "LWDWD"
       },
       {
        "pos": 8,
+       "team": "FC Cincinnati",
+       "p": 31,
+       "w": 11,
+       "d": 9,
+       "l": 11,
+       "gf": 64,
+       "ga": 71,
+       "pts": 42,
+       "tid": 2242,
+       "form": "WLLWW"
+      },
+      {
+       "pos": 9,
        "team": "New York Red Bulls",
        "p": 31,
        "w": 11,
@@ -342,19 +355,6 @@
        "ga": 56,
        "pts": 39,
        "tid": 1602,
-       "form": "LWLLW"
-      },
-      {
-       "pos": 9,
-       "team": "FC Cincinnati",
-       "p": 30,
-       "w": 10,
-       "d": 9,
-       "l": 11,
-       "gf": 62,
-       "ga": 71,
-       "pts": 39,
-       "tid": 2242,
        "form": "LWLLW"
       },
       {
@@ -386,41 +386,41 @@
       {
        "pos": 12,
        "team": "New York City FC",
-       "p": 30,
+       "p": 31,
        "w": 8,
-       "d": 10,
+       "d": 11,
        "l": 12,
-       "gf": 43,
-       "ga": 41,
-       "pts": 34,
+       "gf": 45,
+       "ga": 43,
+       "pts": 35,
        "tid": 1604,
-       "form": "LDLLD"
+       "form": "DLLDD"
       },
       {
        "pos": 13,
        "team": "D.C. United",
-       "p": 30,
+       "p": 31,
        "w": 7,
        "d": 12,
-       "l": 11,
+       "l": 12,
        "gf": 38,
-       "ga": 53,
+       "ga": 55,
        "pts": 33,
        "tid": 1615,
-       "form": "DLWLL"
+       "form": "LWLLL"
       },
       {
        "pos": 14,
        "team": "Atlanta United",
-       "p": 30,
+       "p": 31,
        "w": 8,
        "d": 6,
-       "l": 16,
-       "gf": 37,
-       "ga": 51,
+       "l": 17,
+       "gf": 39,
+       "ga": 54,
        "pts": 30,
        "tid": 1608,
-       "form": "WDLWL"
+       "form": "DLWLL"
       },
       {
        "pos": 15,
@@ -652,6 +652,19 @@
       },
       {
        "pos": 2,
+       "team": "Sacramento Republic",
+       "p": 30,
+       "w": 13,
+       "d": 12,
+       "l": 5,
+       "gf": 42,
+       "ga": 28,
+       "pts": 51,
+       "tid": 4015,
+       "form": "WDDWW"
+      },
+      {
+       "pos": 3,
        "team": "El Paso Locomotive",
        "p": 30,
        "w": 15,
@@ -664,20 +677,20 @@
        "form": "DLWLL"
       },
       {
-       "pos": 3,
-       "team": "Sacramento Republic",
-       "p": 29,
-       "w": 12,
-       "d": 12,
-       "l": 5,
-       "gf": 39,
-       "ga": 26,
+       "pos": 4,
+       "team": "Lexington SC",
+       "p": 30,
+       "w": 14,
+       "d": 6,
+       "l": 10,
+       "gf": 57,
+       "ga": 39,
        "pts": 48,
-       "tid": 4015,
-       "form": "WWDDW"
+       "tid": 20808,
+       "form": "WWDWD"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Colorado Springs Switchbacks",
        "p": 30,
        "w": 13,
@@ -688,19 +701,6 @@
        "pts": 47,
        "tid": 3992,
        "form": "DDDWW"
-      },
-      {
-       "pos": 5,
-       "team": "Lexington SC",
-       "p": 29,
-       "w": 14,
-       "d": 5,
-       "l": 10,
-       "gf": 54,
-       "ga": 36,
-       "pts": 47,
-       "tid": 20808,
-       "form": "WWWDW"
       },
       {
        "pos": 6,
@@ -731,15 +731,15 @@
       {
        "pos": 8,
        "team": "Phoenix Rising",
-       "p": 29,
+       "p": 30,
        "w": 10,
-       "d": 9,
+       "d": 10,
        "l": 10,
-       "gf": 42,
-       "ga": 43,
-       "pts": 39,
+       "gf": 45,
+       "ga": 46,
+       "pts": 40,
        "tid": 4009,
-       "form": "LLLWW"
+       "form": "LLWWD"
       },
       {
        "pos": 9,
@@ -757,41 +757,41 @@
       {
        "pos": 10,
        "team": "Oakland Roots",
-       "p": 29,
+       "p": 30,
        "w": 9,
        "d": 11,
-       "l": 9,
-       "gf": 37,
-       "ga": 37,
+       "l": 10,
+       "gf": 39,
+       "ga": 40,
        "pts": 38,
        "tid": 10874,
-       "form": "WWDDW"
+       "form": "WDDWL"
       },
       {
        "pos": 11,
        "team": "Las Vegas Lights",
-       "p": 29,
+       "p": 30,
        "w": 10,
        "d": 6,
-       "l": 13,
-       "gf": 40,
-       "ga": 46,
+       "l": 14,
+       "gf": 41,
+       "ga": 48,
        "pts": 36,
        "tid": 3998,
-       "form": "DLWLL"
+       "form": "LWLLL"
       },
       {
        "pos": 12,
        "team": "Monterey Bay",
-       "p": 29,
-       "w": 5,
+       "p": 30,
+       "w": 6,
        "d": 6,
        "l": 18,
-       "gf": 30,
-       "ga": 51,
-       "pts": 21,
+       "gf": 32,
+       "ga": 52,
+       "pts": 24,
        "tid": 18375,
-       "form": "LLWLL"
+       "form": "LWLLW"
       }
      ]
     }
@@ -961,18 +961,31 @@
     {
      "pos": 12,
      "team": "Corpus Christi",
-     "p": 31,
+     "p": 32,
      "w": 9,
-     "d": 9,
+     "d": 10,
      "l": 13,
-     "gf": 34,
-     "ga": 49,
-     "pts": 36,
+     "gf": 36,
+     "ga": 51,
+     "pts": 37,
      "tid": 4043,
-     "form": "WLLLL"
+     "form": "LLLLD"
     },
     {
      "pos": 13,
+     "team": "Alta",
+     "p": 32,
+     "w": 8,
+     "d": 10,
+     "l": 14,
+     "gf": 40,
+     "ga": 48,
+     "pts": 34,
+     "tid": 25838,
+     "form": "LLDLD"
+    },
+    {
+     "pos": 14,
      "team": "Portland Hearts of Pine",
      "p": 32,
      "w": 8,
@@ -983,19 +996,6 @@
      "pts": 34,
      "tid": 25486,
      "form": "LDLLW"
-    },
-    {
-     "pos": 14,
-     "team": "Alta",
-     "p": 31,
-     "w": 8,
-     "d": 9,
-     "l": 14,
-     "gf": 38,
-     "ga": 46,
-     "pts": 33,
-     "tid": 25838,
-     "form": "LLLDL"
     },
     {
      "pos": 15,

@@ -40,6 +40,19 @@
     },
     {
      "pos": 2,
+     "team": "Guadalajara",
+     "p": 14,
+     "w": 7,
+     "d": 5,
+     "l": 2,
+     "gf": 21,
+     "ga": 12,
+     "pts": 26,
+     "tid": 2278,
+     "form": "LDDWW"
+    },
+    {
+     "pos": 3,
      "team": "Toluca",
      "p": 14,
      "w": 6,
@@ -50,19 +63,6 @@
      "pts": 23,
      "tid": 2281,
      "form": "DLDDD"
-    },
-    {
-     "pos": 3,
-     "team": "Guadalajara",
-     "p": 13,
-     "w": 6,
-     "d": 5,
-     "l": 2,
-     "gf": 20,
-     "ga": 12,
-     "pts": 23,
-     "tid": 2278,
-     "form": "DLDDW"
     },
     {
      "pos": 4,
@@ -105,15 +105,15 @@
     {
      "pos": 7,
      "team": "Monterrey",
-     "p": 12,
+     "p": 13,
      "w": 6,
      "d": 2,
-     "l": 4,
+     "l": 5,
      "gf": 23,
-     "ga": 17,
+     "ga": 18,
      "pts": 20,
      "tid": 2282,
-     "form": "WLDWW"
+     "form": "LDWWL"
     },
     {
      "pos": 8,
@@ -281,31 +281,44 @@
     {
      "pos": 1,
      "team": "CA La Paz",
-     "p": 13,
-     "w": 7,
+     "p": 14,
+     "w": 8,
      "d": 3,
      "l": 3,
-     "gf": 30,
-     "ga": 17,
-     "pts": 24,
+     "gf": 33,
+     "ga": 18,
+     "pts": 27,
      "tid": 19024,
-     "form": "WWLWD"
+     "form": "WLWDW"
     },
     {
      "pos": 2,
      "team": "Leones Negros UDG",
-     "p": 13,
-     "w": 7,
+     "p": 14,
+     "w": 8,
      "d": 3,
      "l": 3,
-     "gf": 29,
+     "gf": 31,
      "ga": 19,
-     "pts": 24,
+     "pts": 27,
      "tid": 2307,
-     "form": "LWWDL"
+     "form": "WWDLW"
     },
     {
      "pos": 3,
+     "team": "Piratas",
+     "p": 14,
+     "w": 7,
+     "d": 3,
+     "l": 4,
+     "gf": 26,
+     "ga": 14,
+     "pts": 24,
+     "tid": 27935,
+     "form": "LWLWW"
+    },
+    {
+     "pos": 4,
      "team": "Venados FC",
      "p": 14,
      "w": 7,
@@ -318,7 +331,7 @@
      "form": "WWDDW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Monarcas",
      "p": 13,
      "w": 7,
@@ -331,7 +344,7 @@
      "form": "WLDDL"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Cancún",
      "p": 14,
      "w": 6,
@@ -342,19 +355,6 @@
      "pts": 22,
      "tid": 14276,
      "form": "LWDDW"
-    },
-    {
-     "pos": 6,
-     "team": "Piratas",
-     "p": 13,
-     "w": 6,
-     "d": 3,
-     "l": 4,
-     "gf": 21,
-     "ga": 14,
-     "pts": 21,
-     "tid": 27935,
-     "form": "WLWLW"
     },
     {
      "pos": 7,
@@ -385,15 +385,15 @@
     {
      "pos": 9,
      "team": "Mineros de Zacatecas",
-     "p": 13,
+     "p": 14,
      "w": 5,
      "d": 3,
-     "l": 5,
+     "l": 6,
      "gf": 26,
-     "ga": 23,
+     "ga": 25,
      "pts": 18,
      "tid": 2299,
-     "form": "WWLDL"
+     "form": "WLDLL"
     },
     {
      "pos": 10,
@@ -410,19 +410,6 @@
     },
     {
      "pos": 11,
-     "team": "Dorados",
-     "p": 13,
-     "w": 4,
-     "d": 4,
-     "l": 5,
-     "gf": 23,
-     "ga": 24,
-     "pts": 16,
-     "tid": 2297,
-     "form": "DLLLW"
-    },
-    {
-     "pos": 12,
      "team": "Correcaminos Uat",
      "p": 13,
      "w": 4,
@@ -435,7 +422,7 @@
      "form": "LWDLL"
     },
     {
-     "pos": 13,
+     "pos": 12,
      "team": "Tlaxcala",
      "p": 13,
      "w": 4,
@@ -448,17 +435,30 @@
      "form": "LWDWD"
     },
     {
+     "pos": 13,
+     "team": "Dorados",
+     "p": 14,
+     "w": 4,
+     "d": 4,
+     "l": 6,
+     "gf": 23,
+     "ga": 29,
+     "pts": 16,
+     "tid": 2297,
+     "form": "LLLWL"
+    },
+    {
      "pos": 14,
      "team": "CDS Tampico Madero",
-     "p": 13,
+     "p": 14,
      "w": 4,
      "d": 3,
-     "l": 6,
-     "gf": 14,
-     "ga": 20,
+     "l": 7,
+     "gf": 15,
+     "ga": 23,
      "pts": 15,
      "tid": 19905,
-     "form": "DLLDW"
+     "form": "LLDWL"
     },
     {
      "pos": 15,
