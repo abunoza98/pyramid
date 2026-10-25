@@ -20,12 +20,15 @@ const add = (x) => {
   }
 };
 
+const cupKind = (cup) => /\b(finals?|play-?offs?)\b/i.test(`${cup.name || ""} ${cup.id || ""}`) ? "Finals" : "Cup";
+
 for (const country of COUNTRIES) {
   for (const cup of country.cups || []) {
     // Historical-only cups have season pages but no current competition landing page.
     if (cup.until) continue;
     const base = {
       type: "competition",
+      kind: cupKind(cup),
       country: country.country,
       countryName: country.name,
       path: `${country.country}/${cup.id}/`
@@ -38,7 +41,8 @@ for (const country of COUNTRIES) {
 
 // Hand-kept competitions (scripts/manual-comps.mjs), e.g. the Australian Championship.
 for (const country of COUNTRIES) for (const m of country.manual || []) {
-  add({ type: "competition", country: country.country, countryName: country.name, path: `${country.country}/${m.id}/`, name: m.name, short: m.short || "" });
+  add({ type: "competition", kind: "Competition", country: country.country, countryName: country.name,
+    path: `${country.country}/${m.id}/`, name: m.name, short: m.short || "" });
 }
 
 search.sort((a, b) => a.name.localeCompare(b.name) || a.countryName.localeCompare(b.countryName));
