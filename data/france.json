@@ -4,7 +4,7 @@
  "adjective": "French",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-24T00:00:00.000Z",
+ "updated": "2026-10-25T00:00:00.000Z",
  "belowNote": "Promoted clubs from National 1 come up",
  "leagues": [
   {
@@ -55,6 +55,32 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Lille",
+     "p": 8,
+     "w": 4,
+     "d": 3,
+     "l": 1,
+     "gf": 11,
+     "ga": 6,
+     "pts": 15,
+     "tid": 79,
+     "form": "WLWDD"
+    },
+    {
+     "pos": 2,
+     "team": "Monaco",
+     "p": 8,
+     "w": 4,
+     "d": 3,
+     "l": 1,
+     "gf": 11,
+     "ga": 7,
+     "pts": 15,
+     "tid": 91,
+     "form": "DWDLD"
+    },
+    {
+     "pos": 3,
      "team": "Lyon",
      "p": 7,
      "w": 4,
@@ -67,7 +93,7 @@
      "form": "WDWLW"
     },
     {
-     "pos": 2,
+     "pos": 4,
      "team": "Paris Saint-Germain",
      "p": 7,
      "w": 4,
@@ -80,20 +106,7 @@
      "form": "LWWWW"
     },
     {
-     "pos": 3,
-     "team": "Lille",
-     "p": 7,
-     "w": 4,
-     "d": 2,
-     "l": 1,
-     "gf": 10,
-     "ga": 5,
-     "pts": 14,
-     "tid": 79,
-     "form": "WWLWD"
-    },
-    {
-     "pos": 4,
+     "pos": 5,
      "team": "Paris FC",
      "p": 8,
      "w": 4,
@@ -104,19 +117,6 @@
      "pts": 14,
      "tid": 114,
      "form": "DWLWL"
-    },
-    {
-     "pos": 5,
-     "team": "Monaco",
-     "p": 7,
-     "w": 4,
-     "d": 2,
-     "l": 1,
-     "gf": 10,
-     "ga": 6,
-     "pts": 14,
-     "tid": 91,
-     "form": "WDWDL"
     },
     {
      "pos": 6,
@@ -288,7 +288,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "ligue-2",

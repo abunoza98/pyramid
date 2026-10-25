@@ -40,6 +40,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Olympiacos",
+     "p": 8,
+     "w": 6,
+     "d": 1,
+     "l": 1,
+     "gf": 12,
+     "ga": 2,
+     "pts": 19,
+     "tid": 553,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 2,
      "team": "Panathinaikos",
      "p": 7,
      "w": 6,
@@ -52,7 +65,7 @@
      "form": "WWWLW"
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "AEK Athens",
      "p": 7,
      "w": 5,
@@ -63,19 +76,6 @@
      "pts": 17,
      "tid": 575,
      "form": "WDWWW"
-    },
-    {
-     "pos": 3,
-     "team": "Olympiacos",
-     "p": 7,
-     "w": 5,
-     "d": 1,
-     "l": 1,
-     "gf": 7,
-     "ga": 2,
-     "pts": 16,
-     "tid": 553,
-     "form": "DLWWW"
     },
     {
      "pos": 4,
@@ -119,15 +119,15 @@
     {
      "pos": 7,
      "team": "Kalamata",
-     "p": 7,
+     "p": 8,
      "w": 3,
      "d": 1,
-     "l": 3,
+     "l": 4,
      "gf": 13,
-     "ga": 12,
+     "ga": 17,
      "pts": 10,
      "tid": 5046,
-     "form": "DWLWW"
+     "form": "WLWWL"
     },
     {
      "pos": 8,

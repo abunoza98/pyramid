@@ -538,18 +538,31 @@
     {
      "pos": 13,
      "team": "Kreuzlingen",
-     "p": 12,
+     "p": 13,
      "w": 4,
      "d": 3,
-     "l": 5,
-     "gf": 18,
-     "ga": 18,
+     "l": 6,
+     "gf": 20,
+     "ga": 23,
      "pts": 15,
      "tid": 14504,
-     "form": "DDWWL"
+     "form": "DWWLL"
     },
     {
      "pos": 14,
+     "team": "Young Boys II",
+     "p": 13,
+     "w": 4,
+     "d": 3,
+     "l": 6,
+     "gf": 28,
+     "ga": 34,
+     "pts": 15,
+     "tid": 12698,
+     "form": "LLLDW"
+    },
+    {
+     "pos": 15,
      "team": "Lugano II",
      "p": 12,
      "w": 4,
@@ -560,19 +573,6 @@
      "pts": 12,
      "tid": 17441,
      "form": "LLLLW"
-    },
-    {
-     "pos": 15,
-     "team": "Young Boys II",
-     "p": 12,
-     "w": 3,
-     "d": 3,
-     "l": 6,
-     "gf": 23,
-     "ga": 32,
-     "pts": 12,
-     "tid": 12698,
-     "form": "DLLLD"
     },
     {
      "pos": 16,
@@ -990,16 +990,16 @@
       },
       {
        "pos": 12,
-       "team": "FC Wohlen",
-       "p": 10,
-       "w": 3,
-       "d": 3,
-       "l": 4,
-       "gf": 11,
-       "ga": 15,
-       "pts": 12,
-       "tid": 2183,
-       "form": "LDWLD"
+       "team": "Bassecourt",
+       "p": 11,
+       "w": 4,
+       "d": 1,
+       "l": 6,
+       "gf": 13,
+       "ga": 21,
+       "pts": 13,
+       "tid": 6614,
+       "form": "WDLLW"
       },
       {
        "pos": 13,
@@ -1016,16 +1016,16 @@
       },
       {
        "pos": 14,
-       "team": "Bassecourt",
-       "p": 10,
+       "team": "FC Wohlen",
+       "p": 11,
        "w": 3,
-       "d": 1,
-       "l": 6,
-       "gf": 11,
-       "ga": 20,
-       "pts": 10,
-       "tid": 6614,
-       "form": "WWDLL"
+       "d": 3,
+       "l": 5,
+       "gf": 12,
+       "ga": 17,
+       "pts": 12,
+       "tid": 2183,
+       "form": "DWLDL"
       },
       {
        "pos": 15,

@@ -109,15 +109,15 @@
     {
      "pos": 6,
      "team": "Frosinone",
-     "p": 7,
+     "p": 8,
      "w": 4,
-     "d": 1,
+     "d": 2,
      "l": 2,
-     "gf": 13,
-     "ga": 9,
-     "pts": 13,
+     "gf": 17,
+     "ga": 13,
+     "pts": 14,
      "tid": 512,
-     "form": "WDWLW"
+     "form": "DWLWD"
     },
     {
      "pos": 7,
@@ -174,15 +174,15 @@
     {
      "pos": 11,
      "team": "Atalanta",
-     "p": 7,
+     "p": 8,
      "w": 3,
-     "d": 0,
+     "d": 1,
      "l": 4,
-     "gf": 10,
-     "ga": 11,
-     "pts": 9,
+     "gf": 14,
+     "ga": 15,
+     "pts": 10,
      "tid": 499,
-     "form": "LLLWL"
+     "form": "LLWLD"
     },
     {
      "pos": 12,
@@ -238,6 +238,19 @@
     },
     {
      "pos": 16,
+     "team": "Genoa",
+     "p": 8,
+     "w": 2,
+     "d": 1,
+     "l": 5,
+     "gf": 6,
+     "ga": 13,
+     "pts": 7,
+     "tid": 495,
+     "form": "DLWLW"
+    },
+    {
+     "pos": 17,
      "team": "Udinese",
      "p": 7,
      "w": 1,
@@ -248,19 +261,6 @@
      "pts": 4,
      "tid": 494,
      "form": "LLLLL"
-    },
-    {
-     "pos": 17,
-     "team": "Genoa",
-     "p": 7,
-     "w": 1,
-     "d": 1,
-     "l": 5,
-     "gf": 5,
-     "ga": 13,
-     "pts": 4,
-     "tid": 495,
-     "form": "LDLWL"
     },
     {
      "pos": 18,
@@ -291,15 +291,15 @@
     {
      "pos": 20,
      "team": "Venezia",
-     "p": 7,
+     "p": 8,
      "w": 1,
      "d": 0,
-     "l": 6,
+     "l": 7,
      "gf": 6,
-     "ga": 16,
+     "ga": 17,
      "pts": 3,
      "tid": 517,
-     "form": "LLLLW"
+     "form": "LLLWL"
     }
    ],
    "updated": "2026-10-25T00:00:00.000Z"
@@ -787,15 +787,15 @@
       {
        "pos": 11,
        "team": "Desenzano",
-       "p": 10,
+       "p": 11,
        "w": 3,
        "d": 4,
-       "l": 3,
-       "gf": 9,
-       "ga": 11,
+       "l": 4,
+       "gf": 10,
+       "ga": 13,
        "pts": 13,
        "tid": 17816,
-       "form": "DDWWL"
+       "form": "DWWLL"
       },
       {
        "pos": 12,
@@ -825,6 +825,19 @@
       },
       {
        "pos": 14,
+       "team": "Giana Erminio",
+       "p": 11,
+       "w": 2,
+       "d": 5,
+       "l": 4,
+       "gf": 12,
+       "ga": 14,
+       "pts": 11,
+       "tid": 865,
+       "form": "DDDWW"
+      },
+      {
+       "pos": 15,
        "team": "Novara",
        "p": 10,
        "w": 2,
@@ -837,7 +850,7 @@
        "form": "DLWLD"
       },
       {
-       "pos": 15,
+       "pos": 16,
        "team": "Dolomiti Bellunesi",
        "p": 11,
        "w": 2,
@@ -850,7 +863,7 @@
        "form": "DLLLL"
       },
       {
-       "pos": 16,
+       "pos": 17,
        "team": "Juventus Next Gen",
        "p": 11,
        "w": 2,
@@ -863,7 +876,7 @@
        "form": "DLDWL"
       },
       {
-       "pos": 17,
+       "pos": 18,
        "team": "Pro Vercelli",
        "p": 10,
        "w": 2,
@@ -874,19 +887,6 @@
        "pts": 9,
        "tid": 526,
        "form": "LDWLL"
-      },
-      {
-       "pos": 18,
-       "team": "Giana Erminio",
-       "p": 10,
-       "w": 1,
-       "d": 5,
-       "l": 4,
-       "gf": 10,
-       "ga": 13,
-       "pts": 8,
-       "tid": 865,
-       "form": "DDDDW"
       },
       {
        "pos": 19,
