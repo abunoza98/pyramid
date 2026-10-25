@@ -1342,6 +1342,193 @@
     if (line) line.innerHTML = tzLine(mode, country);
   }
 
+  /* ---------- Pyramid journey chart ----------
+     One chart for every journey on the site: a club page passes one series, a comparison page two.
+       cfg.slots     the seasons along the bottom, oldest first: [{ season, year, sizes: [20, 24, 24, ...], now }]
+       cfg.series    [{ name, pts: [point or null per slot], tableNow }]; a point is a journey entry
+                     ({ season, tier, league, pos, of, rank, sizes, move, now, href }). null leaves a gap in the line.
+       cfg.ladder    the country's divisions ({ tier, name, short, split }), cfg.adjective ("English")
+       cfg.mode      "rank" (default: place across the whole pyramid) or "tier" (equal-height divisions, each club
+                     placed inside its division by how far up the table it finished)
+     Positions run down the page: 1st in the top flight at the top. */
+  var JNUM = ["", "one", "two", "three", "four", "five", "six", "seven", "eight"];
+  function journeyScale(ladder, pts, adjective) {
+    var depth = 0;
+    while (depth < ladder.length && !ladder[depth].split) depth++;
+    // Overall positions only make sense down to the last single national division: below that a tier splits
+    // into parallel regional groups (England's National League North and South), which can't be ranked
+    // against each other. nat is how many divisions the overall ranking covers.
+    var nat = depth;
+    // Past seasons may cover fewer divisions (England's saved seasons before 2022–23 stop at League Two), so the
+    // count and the wording come from each season's own data: "of 92 across the top four", "of 116 across the top five".
+    var tiersIn = function (x) { var k = 0; for (var i = 0; i < nat; i++) if (x.sizes && x.sizes[i]) k++; return k; };
+    var s = {
+      nat: nat,
+      tiersIn: tiersIn,
+      acrossOf: function (x) { var k = tiersIn(x); return "across the top " + (JNUM[k] || k) + " " + (adjective ? adjective + " " : "") + "divisions"; },
+      ranked: function (x) { return nat > 1 && x.rank && x.tier <= nat && tiersIn(x) > 1; },
+      natTotal: function (x) { var o = 0; for (var i = 0; i < nat; i++) o += (x.sizes && x.sizes[i]) || 0; return o; }
+    };
+    s.depth = Math.max(depth, Math.max.apply(null, pts.map(function (x) { return x.tier; }).concat([0])), 1);
+    return s;
+  }
+  var JMARK = { champ: "Champions", up: "Promoted", down: "Relegated" };
+  // Gold: top-flight champions. Green: went up the next season (automatically or through the play-offs).
+  // Red: went down. The season in progress is never marked.
+  function journeyMark(x) { return x.now ? "" : x.tier === 1 && x.pos === 1 ? "champ" : x.move === "up" ? "up" : x.move === "down" ? "down" : ""; }
+  // The chart's geometry, as numbers only: x across 0–1000, y down 0–ymax. The page (journeyPlot) and the comparison
+  // page's shareable image (assets/compare.js) both draw from this, so they can never disagree.
+  function journeyGeometry(cfg) {
+    var slots = cfg.slots, n = slots.length, ladder = cfg.ladder || [];
+    var tierMode = cfg.mode === "tier";
+    var all = [];
+    cfg.series.forEach(function (s) { s.pts.forEach(function (x) { if (x) all.push(x); }); });
+    var sc = journeyScale(ladder, all, cfg.adjective), depth = sc.depth;
+    // Tier view is about which division each club was in, so it stops one division below the lowest either reached.
+    if (tierMode) depth = Math.min(depth, Math.max(2, Math.max.apply(null, all.map(function (x) { return x.tier; }).concat([1])) + 1));
+    var sz = function (x, t) { return (x.sizes && x.sizes[t]) || 0; };
+    var off = function (x, t) { var o = 0; for (var i = 0; i < t; i++) o += sz(x, i); return o; };
+    // Tier view: every division the same height (10 units), whatever its size.
+    var TH = 10;
+    var SZ = tierMode ? function (x, t) { return sz(x, t) ? TH : 0; } : sz;
+    var OFF = tierMode ? function (x, t) { return t * TH; } : off;
+    var ymax = tierMode ? depth * TH : Math.max.apply(null, slots.map(function (x) { return off(x, depth); })) || 1;
+    var cell = 1000 / n, X = function (k) { return (k + 0.5) * cell; };
+    // Shaded bands per division, joined across seasons with the same division sizes.
+    var bands = [], runs = [];
+    slots.forEach(function (x, k) {
+      var key = (x.sizes || []).slice(0, depth).join(",");
+      if (runs.length && runs[runs.length - 1].key === key) runs[runs.length - 1].to = k;
+      else runs.push({ key: key, from: k, to: k, x: x });
+    });
+    runs.forEach(function (r) {
+      for (var t = 0; t < depth; t++) if (SZ(r.x, t)) bands.push({ t: t, x: r.from * cell, w: (r.to - r.from + 1) * cell, y: OFF(r.x, t), h: SZ(r.x, t) });
+    });
+    // Tier view places a club inside its division by how far up the table it finished, so two clubs in the same
+    // division in the same season stay apart.
+    var yOf = tierMode
+      ? function (x) { return (x.tier - 1) * TH + (x.of ? (x.pos - 0.5) / x.of : 0.5) * TH; }
+      : function (x) { return x.rank - 0.5; };
+    // Lines: one per series, broken wherever a season is missing (never joined across a gap).
+    var lines = cfg.series.map(function (s) {
+      var segs = [], cur = [];
+      s.pts.forEach(function (x, k) {
+        if (x) cur.push([X(k), Math.round(yOf(x) * 1000) / 1000]);
+        else if (cur.length) { segs.push(cur); cur = []; }
+      });
+      if (cur.length) segs.push(cur);
+      return segs;
+    });
+    var dots = [];
+    cfg.series.forEach(function (s, si) {
+      s.pts.forEach(function (x, k) { if (x) dots.push({ s: si, k: k, x: X(k), y: yOf(x), p: x, mark: journeyMark(x) }); });
+    });
+    // Division labels down the side, placed for the newest season.
+    var latest = slots[n - 1];
+    var side = [];
+    ladder.slice(0, depth).forEach(function (l, t) {
+      if (!SZ(latest, t)) return;
+      var ra = off(latest, t);
+      side.push({ t: t, name: l.name, short: l.short || l.name, y: OFF(latest, t), h: SZ(latest, t), range: tierMode ? "Tier " + (t + 1) : (ra + 1) + "–" + (ra + sz(latest, t)) });
+    });
+    // Season labels, thinned so they never overlap: at most 9 on a wide screen and 5 on a phone, always keeping the newest.
+    var wide = Math.ceil(n / 9), narrow = Math.ceil(n / 5);
+    var xl = slots.map(function (x, k) {
+      var back = n - 1 - k;
+      return { x: X(k), k: k, wide: !(back % wide), narrow: !(back % narrow),
+        label: x.now ? "Now" : String(x.season).replace(/^\d\d(\d\d)[–-]\d\d(\d\d)$/, "$1–$2").replace(/^\d\d(\d\d)[–-](\d\d)$/, "$1–$2").replace(/^\d\d(\d\d)$/, "$1") };
+    });
+    var have = {}; all.forEach(function (x) { var m = journeyMark(x); if (m) have[m] = 1; });
+    return { n: n, ymax: ymax, depth: depth, tierMode: tierMode, scale: sc, bands: bands, lines: lines, dots: dots, side: side, xl: xl,
+      marks: ["champ", "up", "down"].filter(function (k2) { return have[k2]; }) };
+  }
+  function journeyPlot(cfg) {
+    var g = journeyGeometry(cfg), sc = g.scale, ymax = g.ymax, n = g.n, multi = cfg.series.length > 1;
+    var pct = function (v, of) { return Math.round(v / of * 10000) / 100 + "%"; };
+    var rects = g.bands.map(function (b) {
+      return '<rect class="lb' + (b.t === 0 ? " top" : b.t % 2 ? " alt" : "") + '" x="' + b.x + '" width="' + b.w + '" y="' + b.y + '" height="' + b.h + '"/>';
+    }).join("");
+    var lpath = "";
+    g.lines.forEach(function (segs, si) {
+      segs.forEach(function (sg) {
+        if (sg.length > 1) lpath += '<polyline class="lp' + (multi ? " lp-s" + si : "") + '" vector-effect="non-scaling-stroke" points="' + sg.map(function (p) { return p[0] + "," + p[1]; }).join(" ") + '"/>';
+      });
+    });
+    var side = g.side.map(function (l) {
+      return '<span class="ls" style="top:' + pct(l.y, ymax) + ";height:" + pct(l.h, ymax) + '" title="' + esc(l.name) + '"><b>' + esc(l.short) + "</b><i>" + l.range + "</i></span>";
+    }).join("");
+    // Each dot opens a label with the season, league and position, linking to that season's table.
+    var dots = g.dots.map(function (d) {
+      var s = cfg.series[d.s], x = d.p, m = d.mark;
+      var href = x.now ? s.tableNow : x.href, at = d.x / 1000;
+      var tip = '<span class="ltip' + (at < 0.2 ? " l" : at > 0.8 ? " r" : "") + (d.y / ymax < 0.25 ? " below" : "") + '"><b>' + esc(x.season) + "</b>" +
+        (multi ? '<strong class="lt-club lt-s' + d.s + '">' + esc(s.name) + "</strong>" : "") +
+        esc(x.league) + ": " + ord(x.pos) + (x.of ? " of " + x.of : "") + (m ? ' · <em class="lt-' + m + '">' + JMARK[m] + "</em>" : "") +
+        (sc.ranked(x) ? "<i>" + ord(x.rank) + " of " + sc.natTotal(x) + " " + sc.acrossOf(x) + "</i>" : x.tier > sc.nat ? "<i>Tier " + x.tier + "</i>" : "") + (href ? "<u>View table →</u>" : "") + "</span>";
+      var attrs = ' class="ld' + (multi ? " s" + d.s : "") + (x.now ? " now" : "") + (m ? " m-" + m : "") + '" style="left:' + pct(d.x, 1000) + ";top:" + pct(d.y, ymax) + '" aria-label="' +
+        esc((multi ? s.name + ", " : "") + x.season + ": " + x.league + ", " + ord(x.pos)) + '"';
+      return href ? "<a" + attrs + ' href="' + esc(href) + '">' + tip + "</a>" : "<span" + attrs + ' tabindex="0">' + tip + "</span>";
+    }).join("");
+    var xl = g.xl.map(function (l) {
+      var cls = (!l.wide ? "hw" : !l.narrow ? "hn" : "") + (l.k === 0 && n > 1 ? " first" : l.k === n - 1 && n > 1 ? " last" : "");
+      return '<span class="' + cls + '" style="left:' + pct(l.x, 1000) + '">' + esc(l.label) + "</span>";
+    }).join("");
+    var h = g.tierMode ? Math.max(200, Math.min(380, g.depth * 64)) : Math.max(200, Math.min(380, Math.round(ymax * 2.6)));
+    var html = '<div class="lchart' + (g.tierMode ? " tier-mode" : "") + '"><div class="lside">' + side + '</div><div class="lplot" style="height:' + h + 'px">' +
+      '<svg viewBox="0 0 1000 ' + ymax + '" preserveAspectRatio="none" aria-hidden="true">' + rects + lpath + "</svg>" + dots + "</div>" +
+      '<div class="lx">' + xl + "</div></div>";
+    // Key: the clubs (comparison) and only the colours these seasons use.
+    var clubs = multi ? cfg.series.map(function (s, si) { return '<li class="lkey-club"><i class="lk-s' + si + '"></i>' + esc(s.name) + "</li>"; }).join("") : "";
+    if (g.marks.length || clubs) html += '<ul class="lkey">' + clubs + g.marks.map(function (k2) { return '<li><i class="m-' + k2 + '"></i>' + JMARK[k2] + "</li>"; }).join("") + "</ul>";
+    return { html: html, scale: sc, geometry: g };
+  }
+
+  /* ---------- Club context breadcrumb ----------
+     COUNTRY ▾ · LEAGUE ▾ · SEASON, the same on every club page whatever the country. Everything comes from data the
+     build passes in (d.nav), never from per-country conditions:
+       d.nav.countries  [{ c: "germany", n: "Germany" }, ...]   every country on the site
+       d.nav.leagues    [{ id: "2-bundesliga", n: "2. Bundesliga", t: 2 }, ...]   the club's own country's leagues
+     Countries open that country's pyramid page; leagues jump to that table on this country's page.
+     extra: optional last item instead of the season ("Club comparison" on comparison pages). */
+  function clubCrumbs(d, extra) {
+    var nav = d.nav || {}, base = d.root || "", sfx = d.suffix || "";
+    var cur = d.league && d.league.id;
+    var pick = function (label, cls, items) {
+      if (!items) return '<span class="crumb-fixed">' + label + "</span>";
+      return '<details class="crumb-pick ' + cls + '"><summary>' + label + '</summary><div class="crumb-panel">' + items + "</div></details>";
+    };
+    var countries = (nav.countries || []).length > 1 ? nav.countries.map(function (c) {
+      // nav.countryPath: where a country leads, if not its pyramid page ("compare/{c}/" on comparison pages).
+      return '<a href="' + esc(base + (nav.countryPath ? nav.countryPath.replace("{c}", c.c) : c.c + "/") + sfx) + '"' + (c.c === d.country ? ' aria-current="true"' : "") + ">" + flag(c.c) + "<span>" + esc(c.n) + "</span></a>";
+    }).join("") : "";
+    var leagues = (nav.leagues || []).length ? nav.leagues.map(function (l) {
+      return '<a href="' + esc(base + d.country + "/" + sfx + "#" + l.id) + '"' + (l.id === cur ? ' aria-current="true"' : "") + '><i class="tag tier-' + l.t + '">T' + l.t + "</i><span>" + esc(l.n) + "</span></a>";
+    }).join("") : "";
+    var countryLabel = esc(d.countryName);
+    // A club outside the covered leagues this season still gets the league menu, labelled for what it holds.
+    var leagueLabel = d.league ? esc(d.league.name) : "Leagues";
+    var leaguePart = d.league || leagues ? '<i class="crumb-sep" aria-hidden="true">·</i>' + pick(leagueLabel, "crumb-league", leagues) : "";
+    var last = extra ? esc(extra) : esc(d.season);
+    return '<div class="eyebrow crumbs crumb-bar"' + (cur ? ' data-league="' + esc(cur) + '"' : "") + ">" +
+      pick(countryLabel, "crumb-country", countries) + leaguePart +
+      '<i class="crumb-sep" aria-hidden="true">·</i><span class="crumb-season">' + last + "</span></div>";
+  }
+
+  /* ---------- Club comparison page (the static part; assets/compare.js draws the rest) ---------- */
+  function compareShell(d) {
+    return '<section class="intro cmp-intro" aria-labelledby="intro-h">' +
+      clubCrumbs({ nav: { countries: d.nav.countries, countryPath: "compare/{c}/" }, root: d.root, suffix: d.suffix, country: d.country, countryName: d.countryName, league: null }, "Club comparison") +
+      '<h1 id="intro-h" class="cup-h cmp-h">' + flag(d.country) + '<span id="cmp-title">Compare ' + esc(d.adjective) + " clubs</span></h1>" +
+      '<p class="lede" id="cmp-lede">Two clubs on one chart: every season of their journeys through the ' + esc(d.system || d.adjective + " pyramid") + ".</p>" +
+      '<div class="cmp-pickers" id="cmp-pickers">' +
+        '<div class="cmp-pick" data-side="a"><label for="cmp-a">Club 1</label><div class="cmp-field"><input id="cmp-a" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="cmp-a-list" placeholder="Search ' + esc(d.adjective) + ' clubs" autocomplete="off" spellcheck="false"><ul class="finder-list cmp-list" id="cmp-a-list" role="listbox" hidden></ul></div></div>' +
+        '<b class="cmp-vs" aria-hidden="true">vs</b>' +
+        '<div class="cmp-pick" data-side="b"><label for="cmp-b">Club 2</label><div class="cmp-field"><input id="cmp-b" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="cmp-b-list" placeholder="Search ' + esc(d.adjective) + ' clubs" autocomplete="off" spellcheck="false"><ul class="finder-list cmp-list" id="cmp-b-list" role="listbox" hidden></ul></div></div>' +
+      "</div>" +
+      '<noscript><p class="lede">The comparison is drawn in your browser, so it needs JavaScript switched on.</p></noscript></section>' +
+      '<div id="cmp-app" aria-live="polite"></div>';
+  }
+
   function clubMain(d, opts) {
     opts = opts || {};
     var mode = opts.tz === "local" ? "local" : "venue", now = opts.now || Date.now();
@@ -1535,77 +1722,15 @@
     var journey = "";
     if ((d.journey || []).length) {
       var j = d.journey.slice().reverse(), n = j.length;
-      var ladder = d.ladder || [];
-      var depth = 0;
-      while (depth < ladder.length && !ladder[depth].split) depth++;
-      // Overall positions only make sense down to the last single national division: below that a tier splits
-      // into parallel regional groups (England's National League North and South), which can't be ranked
-      // against each other. nat is how many divisions the overall ranking covers.
-      var nat = depth;
-      var NUM = ["", "one", "two", "three", "four", "five", "six", "seven", "eight"];
-      // Past seasons may cover fewer divisions (England's saved seasons before 2022–23 stop at League Two), so the
-      // count and the wording come from each season's own data: "of 92 across the top four", "of 116 across the top five".
-      var tiersIn = function (x) { var k = 0; for (var i = 0; i < nat; i++) if (x.sizes && x.sizes[i]) k++; return k; };
-      var acrossOf = function (x) { var k = tiersIn(x); return "across the top " + (NUM[k] || k) + " " + (d.adjective ? d.adjective + " " : "") + "divisions"; };
-      var ranked = function (x) { return nat > 1 && x.rank && x.tier <= nat && tiersIn(x) > 1; };
-      var natTotal = function (x) { var o = 0; for (var i = 0; i < nat; i++) o += (x.sizes && x.sizes[i]) || 0; return o; };
-      depth = Math.max(depth, Math.max.apply(null, j.map(function (x) { return x.tier; })), 1);
-      var sz = function (x, t) { return (x.sizes && x.sizes[t]) || 0; };
-      var off = function (x, t) { var o = 0; for (var i = 0; i < t; i++) o += sz(x, i); return o; };
-      var ymax = Math.max.apply(null, j.map(function (x) { return off(x, depth); })) || 1;
-      var cell = 1000 / n, X = function (k) { return (k + 0.5) * cell; };
-      var pct = function (v, of) { return Math.round(v / of * 10000) / 100 + "%"; };
-      // Shaded bands per division, joined across seasons with the same division sizes.
-      var rects = "", runs = [];
-      j.forEach(function (x, k) {
-        var key = (x.sizes || []).slice(0, depth).join(",");
-        if (runs.length && runs[runs.length - 1].key === key) runs[runs.length - 1].to = k;
-        else runs.push({ key: key, from: k, to: k, x: x });
-      });
-      runs.forEach(function (r) {
-        for (var t = 0; t < depth; t++) if (sz(r.x, t)) rects += '<rect class="lb' + (t === 0 ? " top" : t % 2 ? " alt" : "") + '" x="' + (r.from * cell) + '" width="' + ((r.to - r.from + 1) * cell) +
-          '" y="' + off(r.x, t) + '" height="' + sz(r.x, t) + '"/>';
-      });
-      var yOf = function (x) { return x.rank - 0.5; };
-      var lpath = n > 1 ? '<polyline class="lp" vector-effect="non-scaling-stroke" points="' + j.map(function (x, k) { return X(k) + "," + yOf(x); }).join(" ") + '"/>' : "";
-      // Division labels down the side, placed for the newest season.
+      var plot = journeyPlot({ slots: j, series: [{ name: d.name, pts: j, tableNow: d.league && d.league.tableHref }], ladder: d.ladder || [], adjective: d.adjective });
+      var sc = plot.scale, nat = sc.nat, ladder = d.ladder || [];
       var latest = j[n - 1];
-      var side = ladder.slice(0, depth).map(function (l, t) {
-        var a = off(latest, t), b = a + sz(latest, t);
-        if (!sz(latest, t)) return "";
-        return '<span class="ls" style="top:' + pct(a, ymax) + ";height:" + pct(b - a, ymax) + '" title="' + esc(l.name) + '"><b>' + esc(l.short || l.name) + "</b><i>" + (a + 1) + "–" + b + "</i></span>";
-      }).join("");
-      // Each dot opens a label with the season, league and position, linking to that season's table.
-      var tableNow = d.league && d.league.tableHref;
-      // Gold: top-flight champions. Green: went up the next season (automatically or through the play-offs).
-      // Red: went down. The season in progress is never marked.
-      var mark = function (x) { return x.now ? "" : x.tier === 1 && x.pos === 1 ? "champ" : x.move === "up" ? "up" : x.move === "down" ? "down" : ""; };
-      var MARK = { champ: "Champions", up: "Promoted", down: "Relegated" };
-      var dots = j.map(function (x, k) {
-        var href = x.now ? tableNow : x.href, at = X(k) / 1000, m = mark(x);
-        var tip = '<span class="ltip' + (at < 0.2 ? " l" : at > 0.8 ? " r" : "") + (yOf(x) / ymax < 0.25 ? " below" : "") + '"><b>' + esc(x.season) + "</b>" +
-          esc(x.league) + ": " + ord(x.pos) + (x.of ? " of " + x.of : "") + (m ? ' · <em class="lt-' + m + '">' + MARK[m] + "</em>" : "") +
-          (ranked(x) ? "<i>" + ord(x.rank) + " of " + natTotal(x) + " " + acrossOf(x) + "</i>" : x.tier > nat ? "<i>Tier " + x.tier + "</i>" : "") + (href ? "<u>View table →</u>" : "") + "</span>";
-        var attrs = ' class="ld' + (x.now ? " now" : "") + (m ? " m-" + m : "") + '" style="left:' + pct(X(k), 1000) + ";top:" + pct(yOf(x), ymax) + '" aria-label="' +
-          esc(x.season + ": " + x.league + ", " + ord(x.pos)) + '"';
-        return href ? "<a" + attrs + ' href="' + esc(href) + '">' + tip + "</a>" : "<span" + attrs + ' tabindex="0">' + tip + "</span>";
-      }).join("");
-      // Season labels, thinned so they never overlap: at most 9 on a wide screen and 5 on a phone,
-      // always keeping the newest. A tick marks every season.
-      var wide = Math.ceil(n / 9), narrow = Math.ceil(n / 5);
-      var xl = j.map(function (x, k) {
-        var back = n - 1 - k;
-        var lab = x.now ? "Now" : String(x.season).replace(/^\d\d(\d\d)[–-]\d\d(\d\d)$/, "$1–$2").replace(/^\d\d(\d\d)[–-](\d\d)$/, "$1–$2").replace(/^\d\d(\d\d)$/, "$1");
-        var cls = (back % wide ? "hw" : back % narrow ? "hn" : "") + (k === 0 && n > 1 ? " first" : back === 0 && n > 1 ? " last" : "");
-        return '<span class="' + cls + '" style="left:' + pct(X(k), 1000) + '">' + esc(lab) + "</span>";
-      }).join("");
-      var h = Math.max(200, Math.min(380, Math.round(ymax * 2.6)));
       var where = ord(latest.pos) + " " + inLeague(latest.league) +
-        (ranked(latest) ? ", " + ord(latest.rank) + " of " + natTotal(latest) + " " + acrossOf(latest) : latest.tier > nat ? ", tier " + latest.tier : "");
+        (sc.ranked(latest) ? ", " + ord(latest.rank) + " of " + sc.natTotal(latest) + " " + sc.acrossOf(latest) : latest.tier > nat ? ", tier " + latest.tier : "");
       var cap = (latest.now ? "This season so far: " : "In " + latest.season + ": ") + where + ".";
       // Say why a regional season has no overall position, but only for clubs that have one.
       var splitNote = nat > 1 && j.some(function (x) { return x.tier > nat; }) && ladder[nat]
-        ? '<p class="lchart-note">Overall positions count the top ' + (NUM[nat] || nat) + " divisions. " + esc(ladder[nat].name) +
+        ? '<p class="lchart-note">Overall positions count the top ' + (JNUM[nat] || nat) + " divisions. " + esc(ladder[nat].name) +
           " (tier " + (nat + 1) + ") is split into regional groups, so seasons there aren't ranked against the rest.</p>" : "";
       var ups = d.journey.filter(function (x) { return x.move === "up"; }).length, downs = d.journey.filter(function (x) { return x.move === "down"; }).length;
       var oldest = d.journey[d.journey.length - 1];
@@ -1613,23 +1738,18 @@
         ? " Since " + oldest.season + ": " + (ups ? ups + " promotion" + (ups === 1 ? "" : "s") : "") + (ups && downs ? " and " : "") +
           (downs ? downs + " relegation" + (downs === 1 ? "" : "s") : "") + "."
         : "";
-      journey = '<section class="cl-sec" id="journey"><div class="cl-sec-h"><h2>' + esc(d.name) + (/s$/.test(d.name) ? "’" : "’s") + " journey through the " + (d.system ? esc(d.system) : (d.adjective ? esc(d.adjective) + " " : "") + "pyramid") + "</h2></div>" +
-        '<p class="lchart-cap">' + esc(cap + tally) + "</p>" + splitNote +
-        '<div class="lchart"><div class="lside">' + side + '</div><div class="lplot" style="height:' + h + 'px">' +
-        '<svg viewBox="0 0 1000 ' + ymax + '" preserveAspectRatio="none" aria-hidden="true">' + rects + lpath + "</svg>" + dots + "</div>" +
-        '<div class="lx">' + xl + "</div></div>" +
-        (function () {   // key, only for the colours this club has
-          var have = {}; j.forEach(function (x) { var m = mark(x); if (m) have[m] = 1; });
-          var keys = ["champ", "up", "down"].filter(function (k2) { return have[k2]; });
-          return keys.length ? '<ul class="lkey">' + keys.map(function (k2) { return '<li><i class="m-' + k2 + '"></i>' + MARK[k2] + "</li>"; }).join("") + "</ul>" : "";
-        })() +
+      var tableNow = d.league && d.league.tableHref;
+      // Compare: only where the club has a journey worth comparing (two seasons or more) and a page of its own.
+      var cmp = d.compareHref ? '<a class="cmp-btn" href="' + esc(d.compareHref) + '" data-compare="' + esc(d.slug || "") + '">Compare with another club</a>' : "";
+      journey = '<section class="cl-sec" id="journey"><div class="cl-sec-h"><h2>' + esc(d.name) + (/s$/.test(d.name) ? "’" : "’s") + " journey through the " + (d.system ? esc(d.system) : (d.adjective ? esc(d.adjective) + " " : "") + "pyramid") + "</h2>" + cmp + "</div>" +
+        '<p class="lchart-cap">' + esc(cap + tally) + "</p>" + splitNote + plot.html +
         '<details class="jmore" id="club-seasons"><summary>Season by season <span>' + n + (n === 1 ? " season" : " seasons") + "</span></summary>" +
         '<ul class="jlist">' + d.journey.map(function (x) {
           return "<li><span>" + esc(x.season) + '</span><i class="tag tier-' + x.tier + '">T' + x.tier + "</i>" +
             "<span class=\"jl\">" + ((x.href || (x.now && tableNow)) ? '<a href="' + esc(x.href || tableNow) + '">' + esc(x.league) + "</a>" : esc(x.league)) +
             (x.move ? ' <i class="jm ' + x.move + '" title="' + esc((x.move === "up" ? "Up to " : "Down to ") + x.to + " the next season") + '">' +
               (x.move === "up" ? "▲ Promoted" : "▼ Relegated") + "</i>" : "") + "</span><b>" + (x.pos ? ord(x.pos) + (x.of ? " of " + x.of : "") : "") +
-            (ranked(x) ? '<em>' + ord(x.rank) + " of " + natTotal(x) + "</em>" : "") + "</b></li>";
+            (sc.ranked(x) ? '<em>' + ord(x.rank) + " of " + sc.natTotal(x) + "</em>" : "") + "</b></li>";
         }).join("") + "</ul></details></section>";
     }
 
@@ -1645,9 +1765,8 @@
       return '<b class="fchip ' + r + '" tabindex="0">' + r + tip + "</b>";
     }).join("");
     return '<section class="intro fx-intro" aria-labelledby="intro-h">' +
-      // Breadcrumb: the country's pyramid, then the club's league table on it.
-      '<p class="eyebrow crumbs"><a href="' + esc(d.root + d.country + "/" + d.suffix) + '">' + esc(d.countryName) + "</a>" +
-        (lg ? " · " + (lg.tableHref ? '<a href="' + esc(lg.tableHref) + '">' + esc(lg.name) + "</a>" : esc(lg.name)) : "") + " · " + esc(d.season) + "</p>" +
+      // Breadcrumb: the country (switch to any other pyramid), then the club's league (switch to any table in it).
+      clubCrumbs(d) +
       '<h1 id="intro-h" class="cup-h">' + flag(d.country) + "<span>" + esc(d.name) + "</span></h1>" +
       '<p class="lede">' + (d.pos ? "<strong>" + ord(d.pos) + " " + esc(inLeague(lg.name)) + "</strong>, " + d.pts + " points from " + d.p + " games." : esc(d.note || "")) +
       (formStr ? ' Last 5 matches: <span class="form">' + formChips + "</span>" : "") + "</p>" +
@@ -1666,6 +1785,6 @@
 
   return {
     slug: slug, esc: esc, ukTime: ukTime, phases: phases, clubCount: clubCount, countryClubs: countryClubs, groupsOf: groupsOf,
-    countryMain: countryMain, racesMain: racesMain, homeMain: homeMain, summary: summary, flag: flag, fixturesMain: fixturesMain, currentRound: currentRound, compMain: compMain, europeMain: europeMain, cupMain: cupMain, cupStatus: cupStatus, cupSpan: cupSpan, inLeague: inLeague, clubMain: clubMain, retime: retime, compStatus: compStatus, tiesOf: tiesOf, applyLive: applyLive, clock: clock, isLive: isLive
+    countryMain: countryMain, racesMain: racesMain, homeMain: homeMain, summary: summary, flag: flag, fixturesMain: fixturesMain, currentRound: currentRound, compMain: compMain, europeMain: europeMain, cupMain: cupMain, cupStatus: cupStatus, cupSpan: cupSpan, inLeague: inLeague, clubMain: clubMain, clubCrumbs: clubCrumbs, compareShell: compareShell, journeyPlot: journeyPlot, journeyGeometry: journeyGeometry, journeyScale: journeyScale, journeyMark: journeyMark, retime: retime, compStatus: compStatus, tiesOf: tiesOf, applyLive: applyLive, clock: clock, isLive: isLive
   };
 });

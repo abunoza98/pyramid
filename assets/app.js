@@ -303,9 +303,10 @@
     document.querySelectorAll("section.tier").forEach(function (sec) { if (views[sec.id] === "form") sortRows(sec, true); });
   }
   document.addEventListener("click", function (e) {
-    var b = e.target.closest && e.target.closest(".tview button");
-    if (!b) return;
-    var sec = b.closest("section.tier"), byForm = b.getAttribute("data-view") === "form";
+    var b = e.target.closest && e.target.closest(".tview button[data-view]");
+    var sec = b && b.closest("section.tier");
+    if (!sec) return;   // other switches (the comparison page's) handle themselves
+    var byForm = b.getAttribute("data-view") === "form";
     views[sec.id] = byForm ? "form" : "table";
     sortRows(sec, byForm);
   });
@@ -665,12 +666,27 @@
   }
 
   document.addEventListener("click", function (e) {
-    document.querySelectorAll(".nav-more[open]").forEach(function (open) { if (!open.contains(e.target)) open.open = false; });
+    document.querySelectorAll(".nav-more[open], .crumb-pick[open]").forEach(function (open) { if (!open.contains(e.target)) open.open = false; });
+    // Picking from a breadcrumb menu closes it, so going back to this page doesn't find it still open.
+    var pickLink = e.target.closest && e.target.closest(".crumb-panel a");
+    if (pickLink) pickLink.closest(".crumb-pick").open = false;
   });
   document.addEventListener("keydown", function (e) {
-    var open = document.querySelector(".nav-more[open]");
+    var open = document.querySelector(".nav-more[open], .crumb-pick[open]");
     if (open && e.key === "Escape") { open.open = false; open.querySelector("summary").focus(); }
   });
+  // Breadcrumb menus: only one open at a time, kept inside the screen, and opened on the current choice.
+  document.addEventListener("toggle", function (e) {
+    var d = e.target;
+    if (!d.classList || !d.classList.contains("crumb-pick") || !d.open) return;
+    document.querySelectorAll(".crumb-pick[open]").forEach(function (o) { if (o !== d) o.open = false; });
+    var panel = d.querySelector(".crumb-panel");
+    panel.style.left = "0px";
+    var r = panel.getBoundingClientRect(), vw = document.documentElement.clientWidth;
+    if (r.right > vw - 12) panel.style.left = Math.min(0, vw - 12 - r.right) + "px";
+    var here = panel.querySelector("[aria-current]");
+    if (here) { panel.scrollTop = Math.max(0, here.offsetTop - panel.clientHeight / 2); }
+  }, true);
 
   document.addEventListener("click", function (e) {
     var btn = e.target.closest && e.target.closest(".copy");

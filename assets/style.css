@@ -213,6 +213,37 @@ main { min-width: 0; width: 100%; max-width: 820px; justify-self: center; }
 .eyebrow { margin: 0; font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
 .crumbs a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--accent-line); }
 .crumbs a:hover { border-bottom-color: var(--accent); }
+/* Club context breadcrumb: COUNTRY ▾ · LEAGUE ▾ · SEASON, with a menu on the first two. Same on every club page. */
+.crumb-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 6px; }
+.crumb-sep { font-style: normal; color: var(--muted); }
+.crumb-pick { position: relative; }
+.crumb-pick > summary {
+  list-style: none; cursor: pointer; white-space: nowrap;
+  border-bottom: 1px solid var(--accent-line); line-height: 1.4;
+}
+.crumb-pick > summary::-webkit-details-marker { display: none; }
+.crumb-pick > summary::after { content: " ▾"; font-size: 10px; }
+.crumb-pick[open] > summary::after { content: " ▴"; }
+.crumb-pick > summary:hover, .crumb-pick[open] > summary { border-bottom-color: var(--accent); }
+.crumb-panel {
+  position: absolute; z-index: 30; top: calc(100% + 8px); left: 0;
+  display: grid; gap: 2px; padding: 6px; min-width: 220px;
+  max-width: calc(100vw - 32px); max-height: min(60vh, 420px); overflow-y: auto; overscroll-behavior: contain;
+  background: var(--sheet); border: 1px solid var(--rule-strong); border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(14, 20, 28, 0.14);
+  text-transform: none; letter-spacing: 0;
+}
+.crumb-panel a {
+  display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 6px; border: 0;
+  text-decoration: none; color: var(--ink);
+  font-family: var(--display); font-weight: 700; font-size: 17px; letter-spacing: 0.03em; text-transform: uppercase; white-space: nowrap;
+}
+.crumb-panel a .flag { flex: none; width: 22px; height: auto; border-radius: 2px; }
+.crumb-panel a .tag { flex: none; }
+.crumb-panel a span { overflow: hidden; text-overflow: ellipsis; }
+.crumb-panel a:hover { background: var(--hover); }
+.crumb-panel a[aria-current] { background: var(--ink); color: var(--paper); }
+.crumb-panel a[aria-current] .tag { background: var(--paper); color: var(--ink); }
 h1 {
   margin: 8px 0 0; max-width: 20ch;
   font-family: var(--display); font-weight: 800; font-size: clamp(2.4rem, 6.4vw, 3.9rem);
@@ -1154,3 +1185,123 @@ a.qtag.q-ac:hover { background: var(--accent-soft); }
 .cnav > .tf-panel { margin-top: 12px; }
 .cnav > .tf-panel > .pyr-cups { margin-top: 4px; border-top: 0; padding-top: 0; }
 .js .is-off, .is-filtered { display: none !important; }
+
+/* ---------- Club comparison ---------- */
+/* Second club: the page's ink colour, a dashed line and square dots, so the two clubs differ in more than colour. */
+.lplot .lp.lp-s1 { stroke: var(--ink); stroke-width: 2; stroke-dasharray: 6 4; }
+.ld.s1 { border-radius: 2px; border-color: var(--ink); width: 10px; height: 10px; margin: -5px 0 0 -5px; }
+.ld.s1.now { background: var(--ink); box-shadow: 0 0 0 3px var(--rule-strong); }
+.ld.s1.m-up { background: var(--up); border-color: var(--up); }
+.ld.s1.m-down { background: var(--down); border-color: var(--down); }
+.ld.s1.m-champ { background: #E8B931; border-color: #B8860B; }
+.ltip .lt-club { display: block; font-weight: 700; }
+.ltip .lt-club.lt-s0 { color: var(--accent-flash); }
+.lk-s0, .lk-s1 { display: inline-block; flex: none; width: 18px; height: 0; border-top: 3px solid var(--accent); border-radius: 0 !important; vertical-align: middle; position: relative; }
+.lk-s1 { border-top: 2px dashed var(--ink); }
+.lk-s0::after, .lk-s1::after { content: ""; position: absolute; left: 4px; top: -7px; width: 7px; height: 7px; border: 2px solid var(--accent); background: var(--sheet); border-radius: 50%; }
+.lk-s1::after { border-color: var(--ink); border-radius: 1px; top: -6px; }
+.lkey .lkey-club { color: var(--ink); font-weight: 600; }
+.lkey .lkey-club i { width: 18px; height: 0; border-radius: 0; }
+.lchart.tier-mode .ls i { font-size: 10px; }
+
+/* Club page: the Compare button beside the journey heading, and its search box. */
+.cl-sec-h .cmp-btn {
+  flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 8px;
+  border: 1px solid var(--accent-line); background: var(--sheet); color: var(--accent); font-size: 13px; font-weight: 600; white-space: nowrap;
+}
+.cl-sec-h .cmp-btn::before { content: "⇄"; font-size: 14px; }
+.cl-sec-h .cmp-btn:hover { background: var(--accent-soft); }
+@media (max-width: 599px) {
+  #journey > .cl-sec-h { flex-direction: column; align-items: flex-start; }
+}
+.cmp-box { margin: 0 0 14px; padding: 12px; background: var(--sheet); border: 1px solid var(--rule-strong); border-radius: 10px; }
+.cmp-box label, .cmp-pick label { display: block; margin-bottom: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.cmp-field { position: relative; }
+.cmp-field input {
+  width: 100%; height: 44px; padding: 0 12px; font: inherit; font-size: 16px; color: var(--ink);
+  background: var(--paper); border: 1px solid var(--rule-strong); border-radius: 8px;
+}
+.cmp-field input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+.cmp-field .cmp-list { left: 0; right: auto; width: 100%; }
+
+/* Comparison page */
+.cmp-h span { overflow-wrap: anywhere; }
+.cmp-pickers { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: end; gap: 12px; margin-top: 20px; max-width: 760px; }
+.cmp-pick .cmp-field input { background: var(--sheet); font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: 0.02em; text-transform: uppercase; }
+.cmp-pick .cmp-field input::placeholder { font-family: var(--body); font-weight: 400; font-size: 15px; text-transform: none; letter-spacing: 0; }
+.cmp-pick[data-side="a"] .cmp-field input { box-shadow: inset 4px 0 0 var(--accent); }
+.cmp-pick[data-side="b"] .cmp-field input { box-shadow: inset 4px 0 0 var(--ink); }
+.cmp-vs { padding-bottom: 10px; font-family: var(--display); font-weight: 800; font-size: 22px; color: var(--muted); text-transform: uppercase; }
+@media (max-width: 559px) {
+  .cmp-pickers { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .cmp-vs { padding: 4px 0 0; font-size: 16px; }
+}
+.cmp-empty { margin: 28px 0; padding: 22px; border: 1px dashed var(--rule-strong); border-radius: 10px; color: var(--muted); text-align: center; }
+.cmp-note { margin: 0 0 10px; padding: 10px 12px; border-left: 3px solid var(--mid); background: var(--sheet); font-size: 14px; }
+.cmp-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 24px 0 0; padding: 10px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.cmp-controls select {
+  height: 34px; padding: 0 28px 0 10px; font: 600 13px/1 var(--body); color: var(--ink); cursor: pointer;
+  background: var(--sheet); border: 1px solid var(--rule-strong); border-radius: 8px;
+}
+.cmp-custom { display: inline-flex; align-items: center; gap: 6px; }
+.cmp-custom i { font-style: normal; color: var(--muted); }
+.cmp-mode button { padding: 8px 12px; font-size: 13px; }
+.cmp-actions { display: flex; gap: 8px; margin-left: auto; }
+.cmp-act { height: 34px; padding: 0 14px; font: 600 13px/1 var(--body); color: var(--ink); background: var(--sheet); border: 1px solid var(--rule-strong); border-radius: 8px; cursor: pointer; white-space: nowrap; }
+.cmp-act:hover { background: var(--hover); }
+.cmp-act-main { color: var(--paper); background: var(--accent); border-color: var(--accent); }
+.cmp-act-main:hover { background: var(--accent); opacity: 0.9; }
+@media (max-width: 559px) {
+  .cmp-actions { margin-left: 0; width: 100%; }
+  .cmp-actions .cmp-act { flex: 1; }
+}
+.cmp-export { margin: 12px 0 0; padding: 12px; background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; }
+.cmp-ex-h { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.cmp-ex-h .tview button span { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.cmp-ex-btns { display: flex; gap: 8px; }
+.cmp-preview { margin-top: 12px; display: flex; justify-content: center; }
+.cmp-preview img { display: block; width: auto; height: auto; max-width: 100%; max-height: 60vh; border-radius: 6px; box-shadow: 0 6px 24px rgba(14, 20, 28, 0.25); }
+.cmp-wait { margin: 0; padding: 40px 0; color: var(--muted); font-size: 14px; }
+.cmp-chart .cl-sec-h h2 { overflow-wrap: anywhere; }
+.cmp-span { font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+.cmp-table-wrap { overflow-x: auto; background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; }
+.cmp-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.cmp-table th, .cmp-table td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+.cmp-table tr:last-child > * { border-bottom: 0; }
+.cmp-table thead th { font-weight: 700; font-size: 13px; }
+.cmp-table thead th .lk-s0, .cmp-table thead th .lk-s1 { margin-right: 8px; }
+.cmp-table tbody th { font-weight: 400; color: var(--muted); white-space: nowrap; }
+.cmp-sum .cmp-table td { font-weight: 600; }
+.cmp-table .cmp-both { text-align: center; }
+.cmp-seasons th:first-child { font-family: var(--mono); font-size: 12px; }
+.cmp-seasons td { white-space: nowrap; }
+.cmp-seasons td a { color: var(--ink); text-decoration: none; }
+.cmp-seasons td a:hover { color: var(--accent); text-decoration: underline; }
+.cmp-seasons .cs-out { color: var(--muted); font-size: 12px; font-style: italic; }
+.cmp-seasons .jm { font-style: normal; font-size: 11px; }
+.cmp-seasons .jm.up { color: var(--up); } .cmp-seasons .jm.down { color: var(--down); }
+.cmp-shared { list-style: none; margin: 0; padding: 0; background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; }
+.cmp-shared li { display: grid; grid-template-columns: 74px minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 9px 12px; border-bottom: 1px solid var(--rule); font-size: 14px; }
+.cmp-shared li:last-child { border-bottom: 0; }
+.cmp-shared .cs-season { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.cmp-shared .cs-league a { color: var(--ink); text-decoration: none; font-weight: 600; }
+.cmp-shared .cs-league a:hover { color: var(--accent); }
+.cmp-shared .cs-pos { display: flex; gap: 14px; }
+.cmp-shared .cs-pos b { font-weight: 400; color: var(--muted); white-space: nowrap; }
+.cmp-shared .cs-pos b.ahead { font-weight: 700; color: var(--ink); }
+.cmp-shared .cs-pos i { margin-right: 6px; }
+@media (max-width: 559px) {
+  .cmp-shared li { grid-template-columns: 64px minmax(0, 1fr); }
+  .cmp-shared .cs-pos { grid-column: 2; flex-wrap: wrap; gap: 4px 12px; }
+}
+.cmp-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 28px 0 0; }
+.cmp-links a { font-size: 14px; font-weight: 600; color: var(--accent); text-decoration: none; }
+.cmp-table thead th { position: static; text-align: left; }
+.cmp-sum .cmp-table { table-layout: fixed; }
+.cmp-sum .cmp-table th, .cmp-sum .cmp-table td { white-space: normal; overflow-wrap: anywhere; }
+.cmp-sum .cmp-table tbody th { width: 34%; }
+@media (max-width: 559px) {
+  .cmp-table { font-size: 13px; }
+  .cmp-table th, .cmp-table td { padding: 8px; }
+  .cmp-sum .cmp-table tbody th { width: 30%; }
+}
