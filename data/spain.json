@@ -83,15 +83,15 @@
     {
      "pos": 4,
      "team": "Real Betis",
-     "p": 9,
+     "p": 10,
      "w": 6,
-     "d": 1,
+     "d": 2,
      "l": 2,
      "gf": 16,
      "ga": 14,
-     "pts": 19,
+     "pts": 20,
      "tid": 543,
-     "form": "WWDWL"
+     "form": "WDWLD"
     },
     {
      "pos": 5,
@@ -147,6 +147,19 @@
     },
     {
      "pos": 9,
+     "team": "Celta Vigo",
+     "p": 10,
+     "w": 2,
+     "d": 6,
+     "l": 2,
+     "gf": 10,
+     "ga": 7,
+     "pts": 12,
+     "tid": 538,
+     "form": "DWDWD"
+    },
+    {
+     "pos": 10,
      "team": "Villarreal",
      "p": 10,
      "w": 3,
@@ -157,19 +170,6 @@
      "pts": 12,
      "tid": 533,
      "form": "WWLDW"
-    },
-    {
-     "pos": 10,
-     "team": "Celta Vigo",
-     "p": 9,
-     "w": 2,
-     "d": 5,
-     "l": 2,
-     "gf": 10,
-     "ga": 7,
-     "pts": 11,
-     "tid": 538,
-     "form": "DDWDW"
     },
     {
      "pos": 11,
@@ -480,19 +480,6 @@
     },
     {
      "pos": 12,
-     "team": "Eldense",
-     "p": 10,
-     "w": 4,
-     "d": 2,
-     "l": 4,
-     "gf": 13,
-     "ga": 13,
-     "pts": 14,
-     "tid": 9692,
-     "form": "LLWWW"
-    },
-    {
-     "pos": 13,
      "team": "Tenerife",
      "p": 11,
      "w": 3,
@@ -503,6 +490,19 @@
      "pts": 14,
      "tid": 719,
      "form": "DLDDD"
+    },
+    {
+     "pos": 13,
+     "team": "Eldense",
+     "p": 11,
+     "w": 4,
+     "d": 2,
+     "l": 5,
+     "gf": 13,
+     "ga": 15,
+     "pts": 14,
+     "tid": 9692,
+     "form": "LWWWL"
     },
     {
      "pos": 14,
@@ -558,6 +558,19 @@
     },
     {
      "pos": 18,
+     "team": "Cádiz",
+     "p": 11,
+     "w": 2,
+     "d": 4,
+     "l": 5,
+     "gf": 14,
+     "ga": 14,
+     "pts": 10,
+     "tid": 724,
+     "form": "DWLLW"
+    },
+    {
+     "pos": 19,
      "team": "Andorra",
      "p": 10,
      "w": 3,
@@ -570,7 +583,7 @@
      "form": "LWDWL"
     },
     {
-     "pos": 19,
+     "pos": 20,
      "team": "Real Sociedad B",
      "p": 11,
      "w": 2,
@@ -583,43 +596,30 @@
      "form": "LLLLL"
     },
     {
-     "pos": 20,
-     "team": "Cádiz",
-     "p": 10,
-     "w": 1,
-     "d": 4,
-     "l": 5,
-     "gf": 11,
-     "ga": 13,
-     "pts": 7,
-     "tid": 724,
-     "form": "LDWLL"
-    },
-    {
      "pos": 21,
      "team": "Ceuta",
-     "p": 10,
+     "p": 11,
      "w": 1,
      "d": 2,
-     "l": 7,
-     "gf": 9,
-     "ga": 22,
+     "l": 8,
+     "gf": 10,
+     "ga": 25,
      "pts": 5,
      "tid": 10139,
-     "form": "DWDLL"
+     "form": "WDLLL"
     },
     {
      "pos": 22,
      "team": "Albacete",
-     "p": 10,
-     "w": 0,
+     "p": 11,
+     "w": 1,
      "d": 1,
      "l": 9,
-     "gf": 6,
+     "gf": 8,
      "ga": 22,
-     "pts": 1,
+     "pts": 4,
      "tid": 722,
-     "form": "LLLLL"
+     "form": "LLLLW"
     }
    ],
    "updated": "2026-10-25T00:00:00.000Z"
@@ -656,7 +656,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-10-24T00:00:00.000Z",
+     "updated": "2026-10-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1017,6 +1017,19 @@
       },
       {
        "pos": 8,
+       "team": "Algeciras",
+       "p": 9,
+       "w": 4,
+       "d": 1,
+       "l": 4,
+       "gf": 13,
+       "ga": 13,
+       "pts": 13,
+       "tid": 9597,
+       "form": "WWLWW"
+      },
+      {
+       "pos": 9,
        "team": "Hércules",
        "p": 8,
        "w": 4,
@@ -1027,19 +1040,6 @@
        "pts": 13,
        "tid": 4666,
        "form": "WWDWL"
-      },
-      {
-       "pos": 9,
-       "team": "Real Madrid Castilla",
-       "p": 8,
-       "w": 3,
-       "d": 3,
-       "l": 2,
-       "gf": 11,
-       "ga": 9,
-       "pts": 12,
-       "tid": 9575,
-       "form": "DLWDW"
       },
       {
        "pos": 10,
@@ -1056,6 +1056,19 @@
       },
       {
        "pos": 11,
+       "team": "Real Madrid Castilla",
+       "p": 9,
+       "w": 3,
+       "d": 3,
+       "l": 3,
+       "gf": 11,
+       "ga": 11,
+       "pts": 12,
+       "tid": 9575,
+       "form": "LWDWL"
+      },
+      {
+       "pos": 12,
        "team": "Antequera",
        "p": 9,
        "w": 2,
@@ -1068,7 +1081,7 @@
        "form": "WDDLD"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "Gimnàstic",
        "p": 8,
        "w": 3,
@@ -1081,7 +1094,7 @@
        "form": "LLLDW"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Atlético Madrileño",
        "p": 9,
        "w": 2,
@@ -1092,19 +1105,6 @@
        "pts": 10,
        "tid": 9570,
        "form": "LLDLD"
-      },
-      {
-       "pos": 14,
-       "team": "Algeciras",
-       "p": 8,
-       "w": 3,
-       "d": 1,
-       "l": 4,
-       "gf": 11,
-       "ga": 13,
-       "pts": 10,
-       "tid": 9597,
-       "form": "DWWLW"
       },
       {
        "pos": 15,

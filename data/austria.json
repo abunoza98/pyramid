@@ -42,28 +42,28 @@
     {
      "pos": 2,
      "team": "Red Bull Salzburg",
-     "p": 9,
-     "w": 6,
+     "p": 10,
+     "w": 7,
      "d": 3,
      "l": 0,
-     "gf": 21,
-     "ga": 4,
-     "pts": 21,
+     "gf": 24,
+     "ga": 5,
+     "pts": 24,
      "tid": 571,
-     "form": "WDWDW"
+     "form": "DWDWW"
     },
     {
      "pos": 3,
      "team": "LASK",
-     "p": 9,
+     "p": 10,
      "w": 6,
      "d": 1,
-     "l": 2,
-     "gf": 23,
-     "ga": 9,
+     "l": 3,
+     "gf": 24,
+     "ga": 12,
      "pts": 19,
      "tid": 1026,
-     "form": "WLDLW"
+     "form": "LDLWL"
     },
     {
      "pos": 4,

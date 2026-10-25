@@ -236,6 +236,19 @@
     },
     {
      "pos": 2,
+     "team": "Yverdon Sport",
+     "p": 11,
+     "w": 6,
+     "d": 4,
+     "l": 1,
+     "gf": 21,
+     "ga": 11,
+     "pts": 22,
+     "tid": 6653,
+     "form": "WLDWW"
+    },
+    {
+     "pos": 3,
      "team": "FC Winterthur",
      "p": 11,
      "w": 6,
@@ -246,19 +259,6 @@
      "pts": 21,
      "tid": 2180,
      "form": "WWWLW"
-    },
-    {
-     "pos": 3,
-     "team": "Yverdon Sport",
-     "p": 10,
-     "w": 5,
-     "d": 4,
-     "l": 1,
-     "gf": 16,
-     "ga": 9,
-     "pts": 19,
-     "tid": 6653,
-     "form": "WWLDW"
     },
     {
      "pos": 4,
@@ -276,15 +276,15 @@
     {
      "pos": 5,
      "team": "SC Kriens",
-     "p": 10,
+     "p": 11,
      "w": 4,
      "d": 3,
-     "l": 3,
-     "gf": 17,
-     "ga": 12,
+     "l": 4,
+     "gf": 19,
+     "ga": 17,
      "pts": 15,
      "tid": 2186,
-     "form": "DLDWD"
+     "form": "LDWDL"
     },
     {
      "pos": 6,
@@ -564,18 +564,31 @@
     {
      "pos": 15,
      "team": "Lugano II",
-     "p": 12,
+     "p": 13,
      "w": 4,
-     "d": 0,
+     "d": 1,
      "l": 8,
-     "gf": 19,
-     "ga": 26,
-     "pts": 12,
+     "gf": 20,
+     "ga": 27,
+     "pts": 13,
      "tid": 17441,
-     "form": "LLLLW"
+     "form": "LLLWD"
     },
     {
      "pos": 16,
+     "team": "Bellinzona",
+     "p": 13,
+     "w": 2,
+     "d": 3,
+     "l": 8,
+     "gf": 10,
+     "ga": 25,
+     "pts": 9,
+     "tid": 6616,
+     "form": "DLLWD"
+    },
+    {
+     "pos": 17,
      "team": "Bavois",
      "p": 12,
      "w": 2,
@@ -586,19 +599,6 @@
      "pts": 8,
      "tid": 6615,
      "form": "LLLLL"
-    },
-    {
-     "pos": 17,
-     "team": "Bellinzona",
-     "p": 12,
-     "w": 2,
-     "d": 2,
-     "l": 8,
-     "gf": 9,
-     "ga": 24,
-     "pts": 8,
-     "tid": 6616,
-     "form": "LDLLW"
     },
     {
      "pos": 18,
@@ -848,15 +848,15 @@
       {
        "pos": 1,
        "team": "Langenthal",
-       "p": 10,
+       "p": 11,
        "w": 7,
-       "d": 2,
+       "d": 3,
        "l": 1,
        "gf": 27,
        "ga": 18,
-       "pts": 23,
+       "pts": 24,
        "tid": 12705,
-       "form": "WWLWD"
+       "form": "WLWDD"
       },
       {
        "pos": 2,
@@ -913,15 +913,15 @@
       {
        "pos": 6,
        "team": "Delémont",
-       "p": 10,
+       "p": 11,
        "w": 5,
-       "d": 2,
+       "d": 3,
        "l": 3,
        "gf": 17,
        "ga": 10,
-       "pts": 17,
+       "pts": 18,
        "tid": 12702,
-       "form": "WLWLW"
+       "form": "LWLWD"
       },
       {
        "pos": 7,

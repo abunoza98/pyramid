@@ -154,18 +154,31 @@
     {
      "pos": 9,
      "team": "Çorum FK",
-     "p": 8,
+     "p": 9,
      "w": 4,
      "d": 1,
-     "l": 3,
+     "l": 4,
      "gf": 18,
-     "ga": 13,
+     "ga": 15,
      "pts": 13,
      "tid": 6343,
-     "form": "WWLWW"
+     "form": "WLWWL"
     },
     {
      "pos": 10,
+     "team": "Göztepe",
+     "p": 9,
+     "w": 3,
+     "d": 3,
+     "l": 3,
+     "gf": 19,
+     "ga": 16,
+     "pts": 12,
+     "tid": 994,
+     "form": "DDWWW"
+    },
+    {
+     "pos": 11,
      "team": "Alanyaspor",
      "p": 9,
      "w": 3,
@@ -178,7 +191,7 @@
      "form": "DWDLL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Başakşehir",
      "p": 8,
      "w": 3,
@@ -191,7 +204,7 @@
      "form": "LLWDW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Rizespor",
      "p": 8,
      "w": 3,
@@ -202,19 +215,6 @@
      "pts": 10,
      "tid": 1007,
      "form": "LWDLL"
-    },
-    {
-     "pos": 13,
-     "team": "Göztepe",
-     "p": 8,
-     "w": 2,
-     "d": 3,
-     "l": 3,
-     "gf": 17,
-     "ga": 16,
-     "pts": 9,
-     "tid": 994,
-     "form": "LDDWW"
     },
     {
      "pos": 14,
@@ -318,6 +318,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Bursaspor",
+     "p": 12,
+     "w": 9,
+     "d": 1,
+     "l": 2,
+     "gf": 26,
+     "ga": 11,
+     "pts": 28,
+     "tid": 1003,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 2,
      "team": "Kayserispor",
      "p": 12,
      "w": 8,
@@ -330,7 +343,7 @@
      "form": "WWWDD"
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "Iğdır FK",
      "p": 12,
      "w": 8,
@@ -341,19 +354,6 @@
      "pts": 26,
      "tid": 17259,
      "form": "DWDWW"
-    },
-    {
-     "pos": 3,
-     "team": "Bursaspor",
-     "p": 11,
-     "w": 8,
-     "d": 1,
-     "l": 2,
-     "gf": 22,
-     "ga": 9,
-     "pts": 25,
-     "tid": 1003,
-     "form": "DWLWW"
     },
     {
      "pos": 4,
@@ -371,15 +371,15 @@
     {
      "pos": 5,
      "team": "Keçiörengücü",
-     "p": 11,
+     "p": 12,
      "w": 5,
      "d": 5,
-     "l": 1,
-     "gf": 21,
-     "ga": 11,
+     "l": 2,
+     "gf": 23,
+     "ga": 15,
      "pts": 20,
      "tid": 3595,
-     "form": "DDWDW"
+     "form": "DWDWL"
     },
     {
      "pos": 6,
