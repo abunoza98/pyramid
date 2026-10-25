@@ -149,6 +149,11 @@
   /* ---------- Comparison page ---------- */
   var app = $("cmp-app"), D = null;
   var state = readState();
+  var swapHost = document.querySelector(".cmp-vs");
+  if (swapHost) {
+    swapHost.removeAttribute("aria-hidden");
+    swapHost.innerHTML = '<button type="button" class="cmp-act" id="cmp-swap" aria-label="Swap club 1 and club 2" title="Swap clubs">⇄ <span>Swap</span></button>';
+  }
 
   function readState() {
     var q = new URLSearchParams(location.search), st = { a: q.get("a") || "", b: q.get("b") || "", pair: q.get("clubs") || "" };
@@ -225,6 +230,8 @@
     $("cmp-a").value = a ? a.n : ""; $("cmp-b").value = b ? b.n : "";
     var pickers = $("cmp-pickers");
     pickers.classList.toggle("cmp-ready", !!(a && b));
+    var swap = $("cmp-swap");
+    if (swap) swap.disabled = !(a && b);
     var sys = D.system || D.adjective + " pyramid";
     if (!a || !b) {
       title.textContent = "Compare " + D.adjective + " clubs";
@@ -306,7 +313,7 @@
 
     // Season by season, both clubs side by side.
     var cell = function (x) {
-      if (!x) return '<td class="cs-out">Outside tracked pyramid</td>';
+      if (!x) return '<td class="cs-out" title="No tracked data for this club in this season">No tracked season</td>';
       return "<td><i class=\"tag tier-" + x.tier + "\">T" + x.tier + "</i> " + (x.href ? '<a href="' + esc(x.href) + '">' + esc(x.league) + "</a>" : esc(x.league)) + " <b>" + ord(x.pos) + "</b>" +
         (x.move ? ' <i class="jm ' + x.move + '">' + (x.move === "up" ? "▲" : "▼") + "</i>" : "") + "</td>";
     };
@@ -329,6 +336,16 @@
   function update(changes) {
     for (var k in changes) state[k] = changes[k];
     save(); render();
+  }
+
+  var swapBtn = $("cmp-swap");
+  if (swapBtn) {
+    swapBtn.addEventListener("click", function () {
+      if (!state.a || !state.b) return;
+      var oldA = state.a;
+      update({ a: state.b, b: oldA });
+      swapBtn.focus();
+    });
   }
 
   // Controls (delegated, since the controls are redrawn with the chart).
