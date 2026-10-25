@@ -4,7 +4,7 @@
  "adjective": "Chinese",
  "season": "2026",
  "mode": "live",
- "updated": "2026-10-24T00:00:00.000Z",
+ "updated": "2026-10-25T00:00:00.000Z",
  "belowNote": "China League Two's top clubs come up",
  "leagues": [
   {
@@ -263,7 +263,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "china-league-one",
@@ -354,15 +354,15 @@
     {
      "pos": 5,
      "team": "Shaanxi Union",
-     "p": 27,
+     "p": 28,
      "w": 13,
      "d": 6,
-     "l": 8,
+     "l": 9,
      "gf": 51,
-     "ga": 28,
+     "ga": 30,
      "pts": 45,
      "tid": 23286,
-     "form": "DWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 6,
@@ -379,6 +379,19 @@
     },
     {
      "pos": 7,
+     "team": "Wuxi Wugou",
+     "p": 28,
+     "w": 11,
+     "d": 6,
+     "l": 11,
+     "gf": 43,
+     "ga": 33,
+     "pts": 39,
+     "tid": 17269,
+     "form": "WDWLW"
+    },
+    {
+     "pos": 8,
      "team": "Yanbian Longding",
      "p": 27,
      "w": 10,
@@ -389,19 +402,6 @@
      "pts": 39,
      "tid": 17271,
      "form": "LLDLW"
-    },
-    {
-     "pos": 8,
-     "team": "Wuxi Wugou",
-     "p": 27,
-     "w": 10,
-     "d": 6,
-     "l": 11,
-     "gf": 41,
-     "ga": 33,
-     "pts": 36,
-     "tid": 17269,
-     "form": "LWDWL"
     },
     {
      "pos": 9,
@@ -512,7 +512,7 @@
      "form": "DWLLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   }
  ]
 }
