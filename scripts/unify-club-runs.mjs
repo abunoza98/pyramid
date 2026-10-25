@@ -172,14 +172,15 @@ function polishClubPage(html, clubPath) {
     html = html.replaceAll(`<span class="ctag ctag-cup">${name}</span>${name}`, `<span class="ctag ctag-cup">${short}</span>${name}`);
   }
 
-  const crumb = html.match(/<p class="eyebrow crumbs">[\s\S]*?<a\b[^>]*href="[^"]*#([^"]+)"[^>]*>/);
+  // The breadcrumb names the club's current league in data-league (its menu lists every league in the country).
+  const crumb = html.match(/<div class="eyebrow crumbs crumb-bar" data-league="([^"]+)"/);
   const currentId = crumb?.[1] || "";
   const currentLeague = (cfg.leagues || []).find((l) => l.id === currentId);
   if (currentLeague?.calendar) {
     const season = currentCalendarSeason.get(`${country}/${currentId}`);
     if (season) {
       html = html.replace(/(fixtures, results and table )\d{4}(?:–\d{2})?/g, `$1${season}`);
-      html = html.replace(/(<p class="eyebrow crumbs">[\s\S]*?) · \d{4}(?:–\d{2})?(<\/p>)/, `$1 · ${season}$2`);
+      html = html.replace(/(<span class="crumb-season">)\d{4}(?:–\d{2})?(<\/span>)/, `$1${season}$2`);
     }
   }
   html = fixCalendarJourney(html, cfg);

@@ -59,6 +59,18 @@ Past European seasons come from `scripts/backfill-europe.mjs` (run by the Backfi
 
 Each country's knockout cups are listed under `cups` in `leagues.mjs` (API-Football league IDs). The fixtures job saves them like the leagues, with each club tagged with its league (from the country's tables) so ties show "PL", "L2", "NL"… and lower-league wins are marked as upsets. Replays are folded back into their round. Pages: `/<country>/<cup>/` with Bracket and Fixtures and results tabs. Fixtures show each club's league and mark upsets; rounds with two legs or replays show as ties with aggregate scores. Country pages list their cups under the tables.
 
+## Club comparison
+
+Every club page's journey section has a **Compare with another club** button. It opens a search over the clubs in the same country and goes to `/compare/<country>/?clubs=<club-a>-vs-<club-b>`, which draws both journeys on one chart. The address also keeps the seasons shown (`range=all|5|10|2015-2022`) and the view (`mode=tier`; the default is overall pyramid position), so a copied link reopens the same comparison. The page has an At a glance summary, the seasons both clubs spent in the same division, and **Export image**: a Football Pyramids card in square (1080×1080), portrait (1080×1350) or landscape (1200×675), downloaded as a PNG or sent through the phone's share sheet.
+
+- `build.mjs` writes `data/journeys/<country>.json` (every club's journey, from the same data as the club pages) and one page per country at `/compare/<country>/`.
+- `assets/compare.js` does the rest in the browser. The chart is `FP.journeyPlot` in `assets/render.js`, the same function the club pages use; the image is drawn from `FP.journeyGeometry`, so the page and the image always agree.
+- Comparisons are within one country only, because overall pyramid positions can't be compared across countries.
+
+## Club page breadcrumb
+
+`COUNTRY ▾ · LEAGUE ▾ · SEASON` at the top of every club page comes from `FP.clubCrumbs`, fed by the build from the site's own country and league lists, so it works the same for every country. The country menu opens any country's pyramid; the league menu jumps to any table in the club's country.
+
 ## Live scores
 
 `worker/live.js` is a separate Cloudflare Worker (footballpyramids-live, on its workers.dev address). Every minute it checks today's fixtures for every league on the site (it reads `data/live-leagues.json`, which `build.mjs` writes) and, only while a game is on, asks API-Football for live scores. It saves them in a KV namespace and serves them at `/live.json`. The country and home pages read that every 30 seconds during games, lay the scores over the official tables and re-sort them ("as it stands"). Each fixture remembers how many games each club had played before kick-off, so a result is never counted twice once the official table catches up. Set `LIVE_URL` to `""` in `leagues.mjs` to switch it off.

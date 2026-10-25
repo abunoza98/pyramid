@@ -26,7 +26,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const require = createRequire(import.meta.url);
 const FP = require(path.join(ROOT, "assets/render.js"));
 // A short fingerprint per asset, added to its URL, so browsers and Cloudflare fetch the new file after each change.
-const VER = Object.fromEntries(["style.css", "render.js", "app.js"].map((f) =>
+const VER = Object.fromEntries(["style.css", "render.js", "app.js", "compare.js"].map((f) =>
   [f, createHash("sha1").update(readFileSync(path.join(ROOT, "assets", f))).digest("hex").slice(0, 8)]));
 
 const FAVICON = "data:image/svg+xml," + encodeURIComponent(
@@ -169,7 +169,7 @@ ${ANALYTICS_TOKEN && !suffix ? `<script defer src="https://static.cloudflareinsi
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 <script src="${base}assets/render.js?v=${VER["render.js"]}"></script>
 <script src="${base}assets/app.js?v=${VER["app.js"]}"></script>
-</body>
+${page === "compare" || page === "club" ? `<script src="${base}assets/compare.js?v=${VER["compare.js"]}"></script>\n` : ""}</body>
 </html>
 `;
 }
@@ -922,6 +922,19 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       return journey;
     };
     const tableOf = (c, lg) => ({ id: lg.id, name: lg.name, zones: lg.zones });
+    // The club-page breadcrumb's menus: every country on the site, and the club's own country's leagues (from the
+    // same data the country pages use, so nothing is listed by hand or only for some countries).
+    const navCountries = countries.map((x) => ({ c: x.country, n: x.name }));
+    // Every club's journey per country, saved to data/journeys/<country>.json for the comparison pages, which draw
+    // the same chart for two clubs at once. Built from exactly the journeys the club pages show.
+    const journeyIndex = {};
+    const relHref = (h) => (h && h.startsWith(base) ? h.slice(base.length) : h || null);
+    const addJourney = (c, name, sl, p, journey) => {
+      (journeyIndex[c.country] ||= []).push({ n: name, s: sl, p, j: journey.map((x) => [x.year, x.tier, x.league, x.pos, x.of || 0, x.rank || 0, x.move || "", relHref(x.href) || "", x.now ? 1 : 0]) });
+    };
+    const compareHref = (c, sl) => `${base}compare/${c.country}/${suffix}?a=${sl}`;
+    const navOf = (c) => ({ countries: navCountries,
+      leagues: c.leagues.slice().sort((a, b) => a.tier - b.tier).map((l) => ({ id: l.id, n: l.name, t: l.tier })) });
     for (const [tid, k] of index) {
       const { c, lg, g, r } = k;
       const comps = {};
@@ -954,8 +967,10 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         pos: r.pos, pts: r.pts, p: r.p,
         league: { ...tableOf(c, lg), short: lg.short, group: FP.groupsOf(lg).length > 1 ? g.name : null, rows: g.rows,
           tableHref: `${base}${c.country}/${suffix}#${lg.id}`, _club: `${base}${c.country}/club/`, _suffix: suffix },
-        fx, journey, ladder: laddersOf(c), euro, cupRuns: cupRunsOf(c, r.team, tid), context: contextOf(c, journey)
+        fx, journey, ladder: laddersOf(c), euro, cupRuns: cupRunsOf(c, r.team, tid), context: contextOf(c, journey), nav: navOf(c),
+        slug: k.slug, compareHref: compareHref(c, k.slug)
       };
+      addJourney(c, r.team, k.slug, k.path, journey);
       await write(`${k.path}index.html`, shell({
         title: `${r.team} fixtures, results and table ${c.season} | Football Pyramids`,
         description: `${r.team}: ${ordinal(r.pos)} ${FP.inLeague(lg.name)}. Every fixture and result this season across league, cups and Europe, and the club's journey through the ${c.adjective} pyramid.`,
@@ -973,7 +988,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       if (!journey.length) continue;
       const last = journey[0];
       const data = { tid: null, name: k.name, country: k.c.country, countryName: k.c.name, adjective: k.c.adjective, system: k.c.system || null, season: k.c.season, comps: {}, root: base, suffix,
-        league: null, fx: [], journey, ladder: laddersOf(k.c), cupRuns: cupRunsOf(k.c, k.name, null),
+        league: null, fx: [], journey, ladder: laddersOf(k.c), cupRuns: cupRunsOf(k.c, k.name, null), nav: navOf(k.c), slug: k.slug, compareHref: compareHref(k.c, k.slug),
         note: `Not in the ${k.c.adjective} leagues covered here this season. Last seen in ${last.season}: ${last.league}, ${ordinal(last.pos)}.` };
       await write(`${k.path}index.html`, shell({
         title: `${k.name}: seasons in the ${k.c.adjective} football pyramid | Football Pyramids`,
@@ -984,7 +999,33 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         main: FP.clubMain(data, { tz: "venue" })
       }));
       clubUrls.push(`/${k.path}`);
+      addJourney(k.c, k.name, k.slug, k.path, journey);
       pastFinder.push({ team: k.name, country: k.c.country, countryName: k.c.name, league: last.league, tier: last.tier, past: last.season, path: k.path });
+    }
+    // Club comparison: one page per country at /compare/<country>/, drawn in the browser from that country's journeys
+    // (data/journeys/<country>.json). Which two clubs, the seasons and the view are in the address
+    // (?clubs=west-ham-united-vs-millwall&range=10&mode=tier), so a link always reopens the same comparison.
+    for (const c of countries) {
+      const clubsHere = journeyIndex[c.country] || [];
+      if (!clubsHere.length) continue;
+      // Seasons along the bottom: every season saved for the country, oldest first, with each one's division sizes.
+      const slots = [...(history[c.country] || [])].reverse().map((h) => ({ season: h.season, year: h.year, sizes: sizesOf(h.leagues) }))
+        .concat([{ season: c.season, year: Number(String(c.season).slice(0, 4)), sizes: sizesOf(c.leagues), now: 1 }]);
+      clubsHere.sort((a, b) => a.n.localeCompare(b.n));
+      await write(`data/journeys/${c.country}.json`, JSON.stringify({
+        country: c.country, name: c.name, adjective: c.adjective, system: c.system || null, season: c.season,
+        ladder: laddersOf(c), slots, clubs: clubsHere,
+        leagueHref: Object.fromEntries(c.leagues.map((l) => [l.name, `${c.country}/#${l.id}`]))
+      }));
+      const meta = { country: c.country, countryName: c.name, adjective: c.adjective, system: c.system || null, season: c.season,
+        root: "../../", suffix, nav: navOf(c), league: null };
+      await write(`compare/${c.country}/index.html`, shell({
+        title: `Compare ${c.adjective} clubs: pyramid journey comparison | Football Pyramids`,
+        description: `Compare any two clubs' journeys through the ${c.system || c.adjective + " football pyramid"}, season by season.`,
+        canonical: `${SITE}/compare/${c.country}/`, base: "../../", suffix, page: "compare", country: c.country, stamps: {}, countries,
+        attrs: { journeys: `data/journeys/${c.country}.json?v=${createHash("sha1").update(JSON.stringify(clubsHere)).digest("hex").slice(0, 8)}` },
+        main: FP.compareShell(meta)
+      }));
     }
   }
 
@@ -1097,7 +1138,7 @@ ${past.concat(euroPast, cupPastUrls).map((u) => `  <url><loc>${SITE}${u}</loc><c
     const fonts = ["big-shoulders-display-latin-700-normal", "big-shoulders-display-latin-800-normal", "ibm-plex-sans-latin-400-normal",
       "ibm-plex-sans-latin-500-normal", "ibm-plex-sans-latin-600-normal", "ibm-plex-sans-latin-700-normal", "ibm-plex-mono-latin-500-normal"]
       .map((f) => `assets/fonts/${f}.woff2`);
-    for (const rel of ["assets/style.css", "assets/render.js", "assets/app.js", ...fonts, ...countries.map((c) => `data/${c.country}.json`)]) {
+    for (const rel of ["assets/style.css", "assets/render.js", "assets/app.js", "assets/compare.js", ...fonts, ...countries.map((c) => `data/${c.country}.json`)]) {
       await mkdir(path.dirname(path.join(outDir, rel)), { recursive: true });
       await copyFile(path.join(root, rel), path.join(outDir, rel));
     }
