@@ -306,6 +306,19 @@
     },
     {
      "pos": 3,
+     "team": "Venados FC",
+     "p": 14,
+     "w": 7,
+     "d": 3,
+     "l": 4,
+     "gf": 31,
+     "ga": 25,
+     "pts": 24,
+     "tid": 2311,
+     "form": "WWDDW"
+    },
+    {
+     "pos": 4,
      "team": "Monarcas",
      "p": 13,
      "w": 7,
@@ -318,7 +331,7 @@
      "form": "WLDDL"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Cancún",
      "p": 14,
      "w": 6,
@@ -331,7 +344,7 @@
      "form": "LWDDW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Piratas",
      "p": 13,
      "w": 6,
@@ -344,30 +357,17 @@
      "form": "WLWLW"
     },
     {
-     "pos": 6,
-     "team": "Venados FC",
-     "p": 13,
-     "w": 6,
-     "d": 3,
-     "l": 4,
-     "gf": 28,
-     "ga": 23,
-     "pts": 21,
-     "tid": 2311,
-     "form": "LWWDD"
-    },
-    {
      "pos": 7,
      "team": "Durango",
-     "p": 13,
+     "p": 14,
      "w": 6,
      "d": 3,
-     "l": 4,
-     "gf": 16,
-     "ga": 11,
+     "l": 5,
+     "gf": 18,
+     "ga": 14,
      "pts": 21,
      "tid": 15941,
-     "form": "WWWDW"
+     "form": "WWDWL"
     },
     {
      "pos": 8,

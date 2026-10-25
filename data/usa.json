@@ -256,15 +256,15 @@
       {
        "pos": 2,
        "team": "Inter Miami",
-       "p": 30,
+       "p": 31,
        "w": 15,
        "d": 10,
-       "l": 5,
+       "l": 6,
        "gf": 73,
-       "ga": 51,
+       "ga": 53,
        "pts": 55,
        "tid": 9568,
-       "form": "DLWWW"
+       "form": "LWWWL"
       },
       {
        "pos": 3,
@@ -333,6 +333,19 @@
       },
       {
        "pos": 8,
+       "team": "New York Red Bulls",
+       "p": 31,
+       "w": 11,
+       "d": 6,
+       "l": 14,
+       "gf": 41,
+       "ga": 56,
+       "pts": 39,
+       "tid": 1602,
+       "form": "LWLLW"
+      },
+      {
+       "pos": 9,
        "team": "FC Cincinnati",
        "p": 30,
        "w": 10,
@@ -345,7 +358,7 @@
        "form": "LWLLW"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Columbus Crew",
        "p": 31,
        "w": 11,
@@ -356,19 +369,6 @@
        "pts": 38,
        "tid": 1613,
        "form": "WLWWW"
-      },
-      {
-       "pos": 10,
-       "team": "New York Red Bulls",
-       "p": 30,
-       "w": 10,
-       "d": 6,
-       "l": 14,
-       "gf": 39,
-       "ga": 56,
-       "pts": 36,
-       "tid": 1602,
-       "form": "WLWLL"
       },
       {
        "pos": 11,
@@ -465,15 +465,15 @@
       {
        "pos": 1,
        "team": "Tampa Bay Rowdies",
-       "p": 29,
-       "w": 17,
+       "p": 30,
+       "w": 18,
        "d": 7,
        "l": 5,
-       "gf": 50,
+       "gf": 52,
        "ga": 26,
-       "pts": 58,
+       "pts": 61,
        "tid": 4021,
-       "form": "WDLWW"
+       "form": "DLWWW"
       },
       {
        "pos": 2,
@@ -529,29 +529,29 @@
       },
       {
        "pos": 6,
-       "team": "Rhode Island FC",
-       "p": 29,
-       "w": 12,
-       "d": 6,
-       "l": 11,
-       "gf": 41,
-       "ga": 31,
-       "pts": 42,
-       "tid": 22855,
-       "form": "WWLWD"
+       "team": "Hartford Athletic",
+       "p": 30,
+       "w": 10,
+       "d": 13,
+       "l": 7,
+       "gf": 35,
+       "ga": 33,
+       "pts": 43,
+       "tid": 3995,
+       "form": "DLDLW"
       },
       {
        "pos": 7,
-       "team": "Hartford Athletic",
-       "p": 29,
-       "w": 9,
-       "d": 13,
-       "l": 7,
-       "gf": 33,
-       "ga": 32,
-       "pts": 40,
-       "tid": 3995,
-       "form": "DDLDL"
+       "team": "Rhode Island FC",
+       "p": 30,
+       "w": 12,
+       "d": 6,
+       "l": 12,
+       "gf": 42,
+       "ga": 33,
+       "pts": 42,
+       "tid": 22855,
+       "form": "WLWDL"
       },
       {
        "pos": 8,
@@ -621,12 +621,12 @@
       {
        "pos": 13,
        "team": "Sporting JAX",
-       "p": 29,
+       "p": 30,
        "w": 3,
        "d": 5,
-       "l": 21,
+       "l": 22,
        "gf": 32,
-       "ga": 76,
+       "ga": 78,
        "pts": 14,
        "tid": 25959,
        "form": "LLLLL"

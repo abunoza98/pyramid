@@ -787,15 +787,15 @@
       {
        "pos": 7,
        "team": "Colegiales",
-       "p": 34,
+       "p": 35,
        "w": 14,
-       "d": 8,
+       "d": 9,
        "l": 12,
-       "gf": 35,
-       "ga": 31,
-       "pts": 50,
+       "gf": 36,
+       "ga": 32,
+       "pts": 51,
        "tid": 8377,
-       "form": "LWWDW"
+       "form": "WWDWD"
       },
       {
        "pos": 8,
@@ -839,15 +839,15 @@
       {
        "pos": 11,
        "team": "Atlético de Rafaela",
-       "p": 34,
+       "p": 35,
        "w": 12,
-       "d": 9,
+       "d": 10,
        "l": 13,
-       "gf": 28,
-       "ga": 34,
-       "pts": 45,
+       "gf": 29,
+       "ga": 35,
+       "pts": 46,
        "tid": 465,
-       "form": "WLLLW"
+       "form": "LLLWD"
       },
       {
        "pos": 12,
