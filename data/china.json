@@ -302,15 +302,15 @@
     {
      "pos": 1,
      "team": "Guangzhou E-Power",
-     "p": 27,
+     "p": 28,
      "w": 18,
-     "d": 6,
+     "d": 7,
      "l": 3,
-     "gf": 55,
-     "ga": 26,
-     "pts": 60,
+     "gf": 56,
+     "ga": 27,
+     "pts": 61,
      "tid": 23269,
-     "form": "DWWWL"
+     "form": "WWWLD"
     },
     {
      "pos": 2,
@@ -366,6 +366,19 @@
     },
     {
      "pos": 6,
+     "team": "Yanbian Longding",
+     "p": 28,
+     "w": 11,
+     "d": 9,
+     "l": 8,
+     "gf": 41,
+     "ga": 30,
+     "pts": 42,
+     "tid": 17271,
+     "form": "LDLWW"
+    },
+    {
+     "pos": 7,
      "team": "Hebei Kungfu",
      "p": 28,
      "w": 11,
@@ -378,7 +391,7 @@
      "form": "WWDLW"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Wuxi Wugou",
      "p": 28,
      "w": 11,
@@ -389,19 +402,6 @@
      "pts": 39,
      "tid": 17269,
      "form": "WDWLW"
-    },
-    {
-     "pos": 8,
-     "team": "Yanbian Longding",
-     "p": 27,
-     "w": 10,
-     "d": 9,
-     "l": 8,
-     "gf": 39,
-     "ga": 29,
-     "pts": 39,
-     "tid": 17271,
-     "form": "LLDLW"
     },
     {
      "pos": 9,
@@ -447,16 +447,16 @@
     {
      "pos": 12,
      "team": "Suzhou Dongwu",
-     "p": 27,
+     "p": 28,
      "w": 7,
-     "d": 10,
+     "d": 11,
      "l": 10,
-     "gf": 31,
-     "ga": 39,
-     "pts": 28,
+     "gf": 32,
+     "ga": 40,
+     "pts": 29,
      "ded": 3,
      "tid": 5688,
-     "form": "WDDDD"
+     "form": "DDDDD"
     },
     {
      "pos": 13,
@@ -474,15 +474,15 @@
     {
      "pos": 14,
      "team": "Heilongjiang Lava Spring",
-     "p": 27,
+     "p": 28,
      "w": 5,
      "d": 12,
-     "l": 10,
-     "gf": 38,
-     "ga": 49,
+     "l": 11,
+     "gf": 39,
+     "ga": 51,
      "pts": 27,
      "tid": 1445,
-     "form": "LDDLW"
+     "form": "DDLWL"
     },
     {
      "pos": 15,

@@ -4,7 +4,7 @@
  "adjective": "Portuguese",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-24T00:00:00.000Z",
+ "updated": "2026-10-25T00:00:00.000Z",
  "belowNote": "Liga 3's top clubs come up, one through a play-off",
  "leagues": [
   {
@@ -407,19 +407,32 @@
     },
     {
      "pos": 7,
-     "team": "Tondela",
-     "p": 7,
-     "w": 4,
-     "d": 0,
-     "l": 3,
-     "gf": 8,
-     "ga": 6,
+     "team": "AVS",
+     "p": 8,
+     "w": 3,
+     "d": 3,
+     "l": 2,
+     "gf": 10,
+     "ga": 8,
      "pts": 12,
-     "tid": 218,
-     "form": "LLWWW"
+     "tid": 21595,
+     "form": "WLDWW"
     },
     {
      "pos": 8,
+     "team": "Tondela",
+     "p": 8,
+     "w": 4,
+     "d": 0,
+     "l": 4,
+     "gf": 9,
+     "ga": 8,
+     "pts": 12,
+     "tid": 218,
+     "form": "LWWWL"
+    },
+    {
+     "pos": 9,
      "team": "Vizela",
      "p": 8,
      "w": 3,
@@ -432,7 +445,7 @@
      "form": "WWDLL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "União de Leiria",
      "p": 7,
      "w": 3,
@@ -445,7 +458,7 @@
      "form": "WWWDL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Leixões",
      "p": 8,
      "w": 3,
@@ -458,7 +471,7 @@
      "form": "WWDLL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Portimonense",
      "p": 8,
      "w": 3,
@@ -469,19 +482,6 @@
      "pts": 10,
      "tid": 216,
      "form": "LLLWL"
-    },
-    {
-     "pos": 12,
-     "team": "AVS",
-     "p": 7,
-     "w": 2,
-     "d": 3,
-     "l": 2,
-     "gf": 8,
-     "ga": 7,
-     "pts": 9,
-     "tid": 21595,
-     "form": "DWLDW"
     },
     {
      "pos": 13,
@@ -562,7 +562,7 @@
      "form": "LLLLD"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   }
  ]
 }
