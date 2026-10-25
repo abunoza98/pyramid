@@ -4,7 +4,7 @@
  "adjective": "Swiss",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-24T00:00:00.000Z",
+ "updated": "2026-10-25T00:00:00.000Z",
  "belowNote": "The top 2. Liga Interregional clubs come up",
  "leagues": [
   {
@@ -36,15 +36,15 @@
     {
      "pos": 1,
      "team": "Lugano",
-     "p": 10,
-     "w": 9,
+     "p": 11,
+     "w": 10,
      "d": 1,
      "l": 0,
-     "gf": 31,
-     "ga": 7,
-     "pts": 28,
+     "gf": 34,
+     "ga": 9,
+     "pts": 31,
      "tid": 606,
-     "form": "WDWWW"
+     "form": "DWWWW"
     },
     {
      "pos": 2,
@@ -140,15 +140,15 @@
     {
      "pos": 9,
      "team": "Thun",
-     "p": 10,
+     "p": 11,
      "w": 3,
      "d": 1,
-     "l": 6,
-     "gf": 17,
-     "ga": 27,
+     "l": 7,
+     "gf": 19,
+     "ga": 30,
      "pts": 10,
      "tid": 1012,
-     "form": "LLLWL"
+     "form": "LLWLL"
     },
     {
      "pos": 10,
@@ -190,7 +190,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "challenge-league",
@@ -352,7 +352,7 @@
      "form": "LLLWL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "promotion-league",
@@ -614,7 +614,7 @@
      "form": "WLLLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "1-liga",
@@ -629,7 +629,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-10-24T00:00:00.000Z",
+     "updated": "2026-10-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -843,7 +843,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-10-24T00:00:00.000Z",
+     "updated": "2026-10-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1057,7 +1057,7 @@
     },
     {
      "name": "Group 3",
-     "updated": "2026-10-24T00:00:00.000Z",
+     "updated": "2026-10-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1270,7 +1270,7 @@
      ]
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   }
  ]
 }

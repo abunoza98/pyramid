@@ -4,7 +4,7 @@
  "adjective": "Italian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-24T00:00:00.000Z",
+ "updated": "2026-10-25T00:00:00.000Z",
  "belowNote": "Serie D group winners come up",
  "leagues": [
   {
@@ -43,6 +43,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Inter Milan",
+     "p": 8,
+     "w": 7,
+     "d": 1,
+     "l": 0,
+     "gf": 23,
+     "ga": 10,
+     "pts": 22,
+     "tid": 505,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 2,
      "team": "Lazio",
      "p": 8,
      "w": 7,
@@ -53,19 +66,6 @@
      "pts": 22,
      "tid": 487,
      "form": "DWWWW"
-    },
-    {
-     "pos": 2,
-     "team": "Inter Milan",
-     "p": 7,
-     "w": 6,
-     "d": 1,
-     "l": 0,
-     "gf": 21,
-     "ga": 9,
-     "pts": 19,
-     "tid": 505,
-     "form": "WWDWW"
     },
     {
      "pos": 3,
@@ -265,15 +265,15 @@
     {
      "pos": 18,
      "team": "Fiorentina",
-     "p": 7,
+     "p": 8,
      "w": 1,
      "d": 1,
-     "l": 5,
-     "gf": 8,
-     "ga": 17,
+     "l": 6,
+     "gf": 9,
+     "ga": 19,
      "pts": 4,
      "tid": 502,
-     "form": "LWDLL"
+     "form": "WDLLL"
     },
     {
      "pos": 19,
@@ -302,7 +302,7 @@
      "form": "LLLLW"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "serie-b",
@@ -604,7 +604,7 @@
      "form": "WLLDL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "serie-c",
@@ -652,7 +652,7 @@
    "groups": [
     {
      "name": "Girone A",
-     "updated": "2026-10-24T00:00:00.000Z",
+     "updated": "2026-10-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -669,6 +669,19 @@
       },
       {
        "pos": 2,
+       "team": "Trento",
+       "p": 11,
+       "w": 6,
+       "d": 5,
+       "l": 0,
+       "gf": 17,
+       "ga": 6,
+       "pts": 23,
+       "tid": 17147,
+       "form": "DDWWW"
+      },
+      {
+       "pos": 3,
        "team": "Union Brescia",
        "p": 11,
        "w": 6,
@@ -679,19 +692,6 @@
        "pts": 22,
        "tid": 26356,
        "form": "DDWLW"
-      },
-      {
-       "pos": 3,
-       "team": "Trento",
-       "p": 10,
-       "w": 5,
-       "d": 5,
-       "l": 0,
-       "gf": 15,
-       "ga": 5,
-       "pts": 20,
-       "tid": 17147,
-       "form": "WDDWW"
       },
       {
        "pos": 4,
@@ -747,6 +747,19 @@
       },
       {
        "pos": 8,
+       "team": "AlbinoLeffe",
+       "p": 11,
+       "w": 3,
+       "d": 5,
+       "l": 3,
+       "gf": 16,
+       "ga": 15,
+       "pts": 14,
+       "tid": 879,
+       "form": "DWLDD"
+      },
+      {
+       "pos": 9,
        "team": "Pergolettese",
        "p": 10,
        "w": 3,
@@ -759,7 +772,7 @@
        "form": "DDDWW"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Lecco",
        "p": 10,
        "w": 3,
@@ -770,19 +783,6 @@
        "pts": 13,
        "tid": 6379,
        "form": "DLDDW"
-      },
-      {
-       "pos": 10,
-       "team": "AlbinoLeffe",
-       "p": 10,
-       "w": 3,
-       "d": 4,
-       "l": 3,
-       "gf": 16,
-       "ga": 15,
-       "pts": 13,
-       "tid": 879,
-       "form": "WDWLD"
       },
       {
        "pos": 11,
@@ -838,19 +838,6 @@
       },
       {
        "pos": 15,
-       "team": "Juventus Next Gen",
-       "p": 10,
-       "w": 2,
-       "d": 4,
-       "l": 4,
-       "gf": 10,
-       "ga": 16,
-       "pts": 10,
-       "tid": 1715,
-       "form": "LDLDW"
-      },
-      {
-       "pos": 16,
        "team": "Dolomiti Bellunesi",
        "p": 11,
        "w": 2,
@@ -861,6 +848,19 @@
        "pts": 10,
        "tid": 17820,
        "form": "DLLLL"
+      },
+      {
+       "pos": 16,
+       "team": "Juventus Next Gen",
+       "p": 11,
+       "w": 2,
+       "d": 4,
+       "l": 5,
+       "gf": 11,
+       "ga": 18,
+       "pts": 10,
+       "tid": 1715,
+       "form": "DLDWL"
       },
       {
        "pos": 17,
@@ -904,21 +904,21 @@
       {
        "pos": 20,
        "team": "Renate",
-       "p": 10,
+       "p": 11,
        "w": 0,
-       "d": 4,
+       "d": 5,
        "l": 6,
        "gf": 9,
        "ga": 16,
-       "pts": 4,
+       "pts": 5,
        "tid": 875,
-       "form": "LLDDL"
+       "form": "LDDLD"
       }
      ]
     },
     {
      "name": "Girone B",
-     "updated": "2026-10-24T00:00:00.000Z",
+     "updated": "2026-10-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1184,7 +1184,7 @@
     },
     {
      "name": "Girone C",
-     "updated": "2026-10-24T00:00:00.000Z",
+     "updated": "2026-10-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1450,7 +1450,7 @@
      ]
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   }
  ]
 }
