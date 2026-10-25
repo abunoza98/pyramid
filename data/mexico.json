@@ -40,6 +40,19 @@
     },
     {
      "pos": 2,
+     "team": "Toluca",
+     "p": 14,
+     "w": 6,
+     "d": 5,
+     "l": 3,
+     "gf": 29,
+     "ga": 19,
+     "pts": 23,
+     "tid": 2281,
+     "form": "DLDDD"
+    },
+    {
+     "pos": 3,
      "team": "Guadalajara",
      "p": 13,
      "w": 6,
@@ -52,7 +65,7 @@
      "form": "DLDDW"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Cruz Azul",
      "p": 13,
      "w": 7,
@@ -65,29 +78,16 @@
      "form": "LDDWW"
     },
     {
-     "pos": 4,
-     "team": "Toluca",
-     "p": 13,
-     "w": 6,
-     "d": 4,
-     "l": 3,
-     "gf": 28,
-     "ga": 18,
-     "pts": 22,
-     "tid": 2281,
-     "form": "LDLDD"
-    },
-    {
      "pos": 5,
      "team": "Club Leon",
-     "p": 13,
+     "p": 14,
      "w": 6,
-     "d": 3,
+     "d": 4,
      "l": 4,
-     "gf": 20,
-     "ga": 17,
-     "pts": 21,
-     "form": "DWDLW"
+     "gf": 21,
+     "ga": 18,
+     "pts": 22,
+     "form": "WDLWD"
     },
     {
      "pos": 6,

@@ -639,29 +639,29 @@
      "rows": [
       {
        "pos": 1,
-       "team": "El Paso Locomotive",
-       "p": 29,
+       "team": "New Mexico United",
+       "p": 30,
        "w": 15,
-       "d": 5,
-       "l": 9,
-       "gf": 48,
-       "ga": 37,
-       "pts": 50,
-       "tid": 3993,
-       "form": "WDLWL"
+       "d": 7,
+       "l": 8,
+       "gf": 45,
+       "ga": 34,
+       "pts": 52,
+       "tid": 4003,
+       "form": "LWWLW"
       },
       {
        "pos": 2,
-       "team": "New Mexico United",
-       "p": 29,
-       "w": 14,
-       "d": 7,
-       "l": 8,
-       "gf": 44,
-       "ga": 34,
-       "pts": 49,
-       "tid": 4003,
-       "form": "LLWWL"
+       "team": "El Paso Locomotive",
+       "p": 30,
+       "w": 15,
+       "d": 5,
+       "l": 10,
+       "gf": 48,
+       "ga": 38,
+       "pts": 50,
+       "tid": 3993,
+       "form": "DLWLL"
       },
       {
        "pos": 3,
@@ -678,6 +678,19 @@
       },
       {
        "pos": 4,
+       "team": "Colorado Springs Switchbacks",
+       "p": 30,
+       "w": 13,
+       "d": 8,
+       "l": 9,
+       "gf": 44,
+       "ga": 38,
+       "pts": 47,
+       "tid": 3992,
+       "form": "DDDWW"
+      },
+      {
+       "pos": 5,
        "team": "Lexington SC",
        "p": 29,
        "w": 14,
@@ -690,7 +703,7 @@
        "form": "WWWDW"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "San Antonio FC",
        "p": 30,
        "w": 11,
@@ -703,30 +716,17 @@
        "form": "DLDWW"
       },
       {
-       "pos": 6,
-       "team": "Colorado Springs Switchbacks",
-       "p": 29,
-       "w": 12,
-       "d": 8,
-       "l": 9,
-       "gf": 42,
-       "ga": 38,
-       "pts": 44,
-       "tid": 3992,
-       "form": "DDDDW"
-      },
-      {
        "pos": 7,
        "team": "FC Tulsa",
-       "p": 29,
+       "p": 30,
        "w": 11,
        "d": 10,
-       "l": 8,
+       "l": 9,
        "gf": 34,
-       "ga": 29,
+       "ga": 31,
        "pts": 43,
        "tid": 4022,
-       "form": "DWDDL"
+       "form": "WDDLL"
       },
       {
        "pos": 8,
