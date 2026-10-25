@@ -43,6 +43,21 @@ function journeyWithClub(html, club, country) {
   );
 }
 
+// League fixture pages are server-rendered before the browser fetches the fixture JSON. Link the club names in that
+// initial HTML too, so navigation works immediately and does not depend on the client-side re-render finishing first.
+function fixtureClubLinks(html, dataLeague, country) {
+  const links = new Map();
+  for (const group of groupsOf(dataLeague)) for (const row of group.rows || []) {
+    if (!row.tid) continue;
+    links.set(esc(row.team), `../../../${country}/club/${FP.slug(row.team)}/`);
+  }
+  if (!links.size) return html;
+  return html.replace(/(<span class="g-[ha](?: w)?">)([^<]+)(<\/span>)/g, (all, open, name, close) => {
+    const href = links.get(name);
+    return href ? `${open}<a class="club-link" href="${esc(href)}">${name}</a>${close}` : all;
+  });
+}
+
 const historyClubScript = `<script data-history-club-context>
 (function () {
   try {
@@ -92,6 +107,16 @@ for (const cfg of COUNTRIES) {
         if (html !== original) { await writeFile(file, html); changed++; }
       }
     }
+
+    // The browser already links these names after it refreshes the fixture data. Do the same in the generated HTML
+    // so a club is clickable from the first paint, including on slow connections or when JavaScript is unavailable.
+    const fixtureFile = `${cfg.country}/${dataLeague.id}/fixtures/index.html`;
+    let fixtureHtml;
+    try { fixtureHtml = await readFile(fixtureFile, "utf8"); } catch { fixtureHtml = null; }
+    if (fixtureHtml && fixtureHtml.includes('data-page="fixtures"')) {
+      const linked = fixtureClubLinks(fixtureHtml, dataLeague, cfg.country);
+      if (linked !== fixtureHtml) { await writeFile(fixtureFile, linked); changed++; }
+    }
   }
 
   // Historical country pages read ?club= transiently. This does not alter the visitor's remembered club.
@@ -110,4 +135,4 @@ for (const cfg of COUNTRIES) {
   }
 }
 
-console.log(`Club routes/history context: updated ${changed} generated pages.`);
+console.log(`Club routes/history/fixture links: updated ${changed} generated pages.`);
