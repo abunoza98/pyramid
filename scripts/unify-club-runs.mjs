@@ -1,6 +1,7 @@
 // Merge the post-built Europe chart into the existing domestic cup-run selector.
 // This runs after add-club-europe.mjs and only rewrites generated club HTML.
 import { readFile, writeFile } from "node:fs/promises";
+import { COUNTRIES } from "./leagues.mjs";
 
 function elementBounds(html, start, tag) {
   const openEnd = html.indexOf(">", start);
@@ -95,6 +96,96 @@ function addEuropeToCupSection(section, europe) {
   return section.slice(0, close) + euroPanel + section.slice(close);
 }
 
+const esc = (s) => String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+const cfgByCountry = new Map(COUNTRIES.map((c) => [c.country, c]));
+const currentCalendarSeason = new Map();
+for (const cfg of COUNTRIES) for (const lg of cfg.leagues || []) if (lg.calendar) {
+  try {
+    const fx = JSON.parse(await readFile(`data/fixtures/${cfg.country}/${lg.id}.json`, "utf8"));
+    if (fx.season) currentCalendarSeason.set(`${cfg.country}/${lg.id}`, String(fx.season));
+  } catch {}
+}
+
+function leagueIdFromHref(href) {
+  const hash = String(href || "").match(/#([^"&?]+)/)?.[1] || "";
+  try { return decodeURIComponent(hash); } catch { return hash; }
+}
+
+function calendarSeasonForHref(href, cfg) {
+  const id = leagueIdFromHref(href);
+  const lg = (cfg.leagues || []).find((l) => l.id === id);
+  if (!lg?.calendar) return null;
+  const past = String(href).match(new RegExp(`/${cfg.country}/(\\d{4})(?:-\\d{2})?/`));
+  if (past) return past[1];
+  return currentCalendarSeason.get(`${cfg.country}/${id}`) || null;
+}
+
+function fixCalendarJourney(html, cfg) {
+  const journey = findSection(html, (s) => /\bid="journey"/.test(s));
+  if (!journey) return html;
+  let section = journey.html;
+  const points = [];
+
+  section = section.replace(/<a\b[^>]*class="[^"]*\bld\b[^"]*"[^>]*>[\s\S]*?<\/a>/g, (a) => {
+    const href = a.match(/\bhref="([^"]+)"/)?.[1] || "";
+    const season = calendarSeasonForHref(href, cfg);
+    const shown = season || a.match(/<b>([^<]+)<\/b>/)?.[1] || "";
+    const now = /class="[^"]*\bnow\b/.test(a);
+    points.push({ season: shown, now });
+    if (!season) return a;
+    a = a.replace(/aria-label="[^"]*?:/, `aria-label="${season}:`);
+    return a.replace(/<b>[^<]+<\/b>/, `<b>${season}</b>`);
+  });
+
+  section = section.replace(/<li><span>([^<]*)<\/span>([\s\S]*?<a\b[^>]*href="([^"]+)"[^>]*>)/g, (all, old, middle, href) => {
+    const season = calendarSeasonForHref(href, cfg);
+    return season ? `<li><span>${season}</span>${middle}` : all;
+  });
+
+  if (points.length) {
+    const lx = section.match(/<div class="lx">[\s\S]*?<\/div>/)?.[0];
+    if (lx) {
+      let i = 0;
+      const fixed = lx.replace(/<span([^>]*)>[^<]*<\/span>/g, (all, attrs) => {
+        const p = points[i++];
+        if (!p) return all;
+        const label = p.now ? "Now" : /^\d{4}$/.test(p.season) ? p.season.slice(-2) : p.season.replace(/^20/, "");
+        return `<span${attrs}>${label}</span>`;
+      });
+      section = section.replace(lx, fixed);
+    }
+  }
+
+  return html.slice(0, journey.start) + section + html.slice(journey.end);
+}
+
+function polishClubPage(html, clubPath) {
+  const country = clubPath.split("/")[0];
+  const cfg = cfgByCountry.get(country);
+  if (!cfg) return html;
+
+  if (cfg.system) html = html.replaceAll(`${cfg.adjective} pyramid`, cfg.system);
+
+  for (const m of cfg.manual || []) {
+    const name = esc(m.name), short = esc(m.short || m.name);
+    html = html.replaceAll(`<span class="ctag ctag-cup" title="${name}">${name}</span>`, `<span class="ctag ctag-cup" title="${name}">${short}</span>`);
+    html = html.replaceAll(`<span class="ctag ctag-cup">${name}</span>${name}`, `<span class="ctag ctag-cup">${short}</span>${name}`);
+  }
+
+  const crumb = html.match(/<p class="eyebrow crumbs">[\s\S]*?<a\b[^>]*href="[^"]*#([^"]+)"[^>]*>/);
+  const currentId = crumb?.[1] || "";
+  const currentLeague = (cfg.leagues || []).find((l) => l.id === currentId);
+  if (currentLeague?.calendar) {
+    const season = currentCalendarSeason.get(`${country}/${currentId}`);
+    if (season) {
+      html = html.replace(/(fixtures, results and table )\d{4}(?:–\d{2})?/g, `$1${season}`);
+      html = html.replace(/(<p class="eyebrow crumbs">[\s\S]*?) · \d{4}(?:–\d{2})?(<\/p>)/, `$1 · ${season}$2`);
+    }
+  }
+  html = fixCalendarJourney(html, cfg);
+  return html;
+}
+
 let search = [];
 try { search = JSON.parse(await readFile("data/search.json", "utf8")); } catch {}
 const paths = [...new Set(search.filter((x) => x.type === "club" && x.path).map((x) => x.path))];
@@ -105,33 +196,35 @@ for (const path of paths) {
   let html;
   try { html = await readFile(file, "utf8"); } catch { continue; }
   const original = html;
+  html = polishClubPage(html, path);
 
   const europeSection = findSection(html, (s) => /\bcl-runs-sec\b/.test(s) && /data-panel="europe"/.test(s));
-  if (!europeSection) continue;
-  const europe = compactEurope(panelInner(europeSection.html, "europe"));
-  const nestedCups = panelInner(europeSection.html, "cups");
-  if (!europe) continue;
+  if (europeSection) {
+    const europe = compactEurope(panelInner(europeSection.html, "europe"));
+    const nestedCups = panelInner(europeSection.html, "cups");
+    if (europe) {
+      // Remove the temporary Europe-only section produced by add-club-europe.mjs.
+      html = html.slice(0, europeSection.start) + html.slice(europeSection.end);
 
-  // Remove the temporary Europe-only section produced by add-club-europe.mjs.
-  html = html.slice(0, europeSection.start) + html.slice(europeSection.end);
+      let target = findSection(html, (s) => /\bdata-europe-unified\b/.test(s));
+      if (!target) target = findSection(html, (s) => /<h2>Cup runs<\/h2>/.test(s));
 
-  let target = findSection(html, (s) => /\bdata-europe-unified\b/.test(s));
-  if (!target) target = findSection(html, (s) => /<h2>Cup runs<\/h2>/.test(s));
+      // If an earlier Europe pass already swallowed the domestic cup section, recover its original body.
+      if (!target && nestedCups) {
+        const recovered = '<section class="cl-sec"><div class="cl-sec-h"><h2>Cup runs</h2></div>' + nestedCups + '</section>';
+        html = html.slice(0, europeSection.start) + recovered + html.slice(europeSection.start);
+        target = findSection(html, (s) => /<h2>Cup runs<\/h2>/.test(s));
+      }
 
-  // If an earlier Europe pass already swallowed the domestic cup section, recover its original body.
-  if (!target && nestedCups) {
-    const recovered = '<section class="cl-sec"><div class="cl-sec-h"><h2>Cup runs</h2></div>' + nestedCups + '</section>';
-    html = html.slice(0, europeSection.start) + recovered + html.slice(europeSection.start);
-    target = findSection(html, (s) => /<h2>Cup runs<\/h2>/.test(s));
-  }
-
-  if (target) {
-    const merged = addEuropeToCupSection(target.html, europe);
-    html = html.slice(0, target.start) + merged + html.slice(target.end);
-  } else {
-    // A club with European history but no covered domestic cup still gets one compact run section.
-    const fallback = '<section class="cl-sec" data-europe-unified><div class="cl-sec-h"><h2>Runs</h2></div>' + europe + '</section>';
-    html = html.slice(0, europeSection.start) + fallback + html.slice(europeSection.start);
+      if (target) {
+        const merged = addEuropeToCupSection(target.html, europe);
+        html = html.slice(0, target.start) + merged + html.slice(target.end);
+      } else {
+        // A club with European history but no covered domestic cup still gets one compact run section.
+        const fallback = '<section class="cl-sec" data-europe-unified><div class="cl-sec-h"><h2>Runs</h2></div>' + europe + '</section>';
+        html = html.slice(0, europeSection.start) + fallback + html.slice(europeSection.start);
+      }
+    }
   }
 
   if (html !== original) {
@@ -140,4 +233,4 @@ for (const path of paths) {
   }
 }
 
-console.log(`Club runs: unified ${changed} generated club pages.`);
+console.log(`Club runs/profile polish: updated ${changed} generated club pages.`);
