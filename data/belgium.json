@@ -4,7 +4,7 @@
  "adjective": "Belgian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-24T00:00:00.000Z",
+ "updated": "2026-10-25T00:00:00.000Z",
  "belowNote": "The top amateur clubs come up",
  "leagues": [
   {
@@ -121,6 +121,19 @@
     },
     {
      "pos": 6,
+     "team": "Genk",
+     "p": 9,
+     "w": 4,
+     "d": 3,
+     "l": 2,
+     "gf": 18,
+     "ga": 13,
+     "pts": 15,
+     "tid": 742,
+     "form": "DDLWW"
+    },
+    {
+     "pos": 7,
      "team": "Westerlo",
      "p": 9,
      "w": 4,
@@ -131,19 +144,6 @@
      "pts": 14,
      "tid": 261,
      "form": "WWWWD"
-    },
-    {
-     "pos": 7,
-     "team": "Genk",
-     "p": 8,
-     "w": 3,
-     "d": 3,
-     "l": 2,
-     "gf": 16,
-     "ga": 12,
-     "pts": 12,
-     "tid": 742,
-     "form": "WDDLW"
     },
     {
      "pos": 8,
@@ -161,15 +161,15 @@
     {
      "pos": 9,
      "team": "Standard Liège",
-     "p": 8,
+     "p": 9,
      "w": 3,
      "d": 2,
-     "l": 3,
-     "gf": 13,
-     "ga": 13,
+     "l": 4,
+     "gf": 14,
+     "ga": 15,
      "pts": 11,
      "tid": 733,
-     "form": "WWLLL"
+     "form": "WLLLL"
     },
     {
      "pos": 10,
@@ -289,7 +289,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "challenger-pro-league",
@@ -525,7 +525,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   }
  ]
 }

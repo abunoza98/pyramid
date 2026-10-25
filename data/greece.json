@@ -4,7 +4,7 @@
  "adjective": "Greek",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-24T00:00:00.000Z",
+ "updated": "2026-10-25T00:00:00.000Z",
  "belowNote": "Gamma Ethniki group winners come up",
  "leagues": [
   {
@@ -222,7 +222,7 @@
      "form": "DLLLD"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "super-league-2",
@@ -239,15 +239,15 @@
     {
      "pos": 1,
      "team": "Marko",
-     "p": 7,
-     "w": 6,
+     "p": 8,
+     "w": 7,
      "d": 1,
      "l": 0,
-     "gf": 12,
+     "gf": 16,
      "ga": 5,
-     "pts": 19,
+     "pts": 22,
      "tid": 12403,
-     "form": "WWWWD"
+     "form": "WWWDW"
     },
     {
      "pos": 2,
@@ -264,19 +264,6 @@
     },
     {
      "pos": 3,
-     "team": "Panionios",
-     "p": 7,
-     "w": 4,
-     "d": 2,
-     "l": 1,
-     "gf": 8,
-     "ga": 3,
-     "pts": 14,
-     "tid": 622,
-     "form": "DWLWD"
-    },
-    {
-     "pos": 4,
      "team": "Panserraikos",
      "p": 8,
      "w": 4,
@@ -287,6 +274,19 @@
      "pts": 14,
      "tid": 2099,
      "form": "WDWDW"
+    },
+    {
+     "pos": 4,
+     "team": "Panionios",
+     "p": 8,
+     "w": 4,
+     "d": 2,
+     "l": 2,
+     "gf": 8,
+     "ga": 7,
+     "pts": 14,
+     "tid": 622,
+     "form": "WLWDL"
     },
     {
      "pos": 5,
@@ -316,6 +316,19 @@
     },
     {
      "pos": 7,
+     "team": "Anagennisi Karditsas",
+     "p": 8,
+     "w": 3,
+     "d": 2,
+     "l": 3,
+     "gf": 6,
+     "ga": 7,
+     "pts": 11,
+     "tid": 2094,
+     "form": "LLWWW"
+    },
+    {
+     "pos": 8,
      "team": "Ellas Syros",
      "p": 8,
      "w": 2,
@@ -328,43 +341,30 @@
      "form": "DDLDL"
     },
     {
-     "pos": 8,
-     "team": "Panthrakikos",
-     "p": 7,
-     "w": 2,
-     "d": 3,
-     "l": 2,
-     "gf": 7,
-     "ga": 6,
-     "pts": 9,
-     "tid": 2090,
-     "form": "WLDLD"
-    },
-    {
      "pos": 9,
-     "team": "Anagennisi Karditsas",
-     "p": 7,
+     "team": "Panthrakikos",
+     "p": 8,
      "w": 2,
-     "d": 2,
-     "l": 3,
-     "gf": 5,
-     "ga": 7,
-     "pts": 8,
-     "tid": 2094,
-     "form": "DLLWW"
+     "d": 4,
+     "l": 2,
+     "gf": 9,
+     "ga": 8,
+     "pts": 10,
+     "tid": 2090,
+     "form": "LDLDD"
     },
     {
      "pos": 10,
      "team": "Asteras Tripolis II",
-     "p": 7,
+     "p": 8,
      "w": 2,
-     "d": 2,
+     "d": 3,
      "l": 3,
-     "gf": 5,
-     "ga": 7,
-     "pts": 8,
+     "gf": 7,
+     "ga": 9,
+     "pts": 9,
      "tid": 25017,
-     "form": "WLWDD"
+     "form": "LWDDD"
     },
     {
      "pos": 11,
@@ -395,15 +395,15 @@
     {
      "pos": 13,
      "team": "PAOK II",
-     "p": 7,
+     "p": 8,
      "w": 2,
      "d": 2,
-     "l": 3,
+     "l": 4,
      "gf": 5,
-     "ga": 9,
+     "ga": 10,
      "pts": 8,
      "tid": 18018,
-     "form": "WLDLW"
+     "form": "LDLWL"
     },
     {
      "pos": 14,
@@ -445,7 +445,7 @@
      "form": "LLDLD"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   }
  ]
 }

@@ -926,6 +926,19 @@
      "rows": [
       {
        "pos": 1,
+       "team": "Villarreal B",
+       "p": 9,
+       "w": 6,
+       "d": 2,
+       "l": 1,
+       "gf": 21,
+       "ga": 10,
+       "pts": 20,
+       "tid": 9595,
+       "form": "WLDWW"
+      },
+      {
+       "pos": 2,
        "team": "Zaragoza",
        "p": 9,
        "w": 6,
@@ -936,19 +949,6 @@
        "pts": 20,
        "tid": 732,
        "form": "WWDDW"
-      },
-      {
-       "pos": 2,
-       "team": "Villarreal B",
-       "p": 8,
-       "w": 5,
-       "d": 2,
-       "l": 1,
-       "gf": 17,
-       "ga": 9,
-       "pts": 17,
-       "tid": 9595,
-       "form": "DWLDW"
       },
       {
        "pos": 3,
@@ -979,15 +979,15 @@
       {
        "pos": 5,
        "team": "Cartagena",
-       "p": 8,
+       "p": 9,
        "w": 4,
        "d": 3,
-       "l": 1,
-       "gf": 13,
-       "ga": 5,
+       "l": 2,
+       "gf": 14,
+       "ga": 9,
        "pts": 15,
        "tid": 5262,
-       "form": "LWWDW"
+       "form": "WWDWL"
       },
       {
        "pos": 6,

@@ -1227,19 +1227,32 @@
       },
       {
        "pos": 4,
-       "team": "Audace Cerignola",
-       "p": 10,
+       "team": "Monopoli",
+       "p": 11,
        "w": 5,
-       "d": 2,
+       "d": 3,
        "l": 3,
-       "gf": 18,
+       "gf": 13,
        "ga": 9,
-       "pts": 17,
-       "tid": 9539,
-       "form": "DLDWW"
+       "pts": 18,
+       "tid": 10138,
+       "form": "WDLWW"
       },
       {
        "pos": 5,
+       "team": "Audace Cerignola",
+       "p": 11,
+       "w": 5,
+       "d": 2,
+       "l": 4,
+       "gf": 18,
+       "ga": 11,
+       "pts": 17,
+       "tid": 9539,
+       "form": "LDWWL"
+      },
+      {
+       "pos": 6,
        "team": "Scafatese",
        "p": 10,
        "w": 4,
@@ -1252,7 +1265,7 @@
        "form": "DWWDW"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Casertana",
        "p": 11,
        "w": 4,
@@ -1265,7 +1278,7 @@
        "form": "LLWDD"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Catania",
        "p": 10,
        "w": 5,
@@ -1278,7 +1291,7 @@
        "form": "DWWWL"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Cavese",
        "p": 10,
        "w": 4,
@@ -1289,19 +1302,6 @@
        "pts": 15,
        "tid": 1712,
        "form": "LWWDW"
-      },
-      {
-       "pos": 9,
-       "team": "Monopoli",
-       "p": 10,
-       "w": 4,
-       "d": 3,
-       "l": 3,
-       "gf": 11,
-       "ga": 9,
-       "pts": 15,
-       "tid": 10138,
-       "form": "DWDLW"
       },
       {
        "pos": 10,

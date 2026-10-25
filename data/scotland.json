@@ -4,7 +4,7 @@
  "adjective": "Scottish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-24T00:00:00.000Z",
+ "updated": "2026-10-25T00:00:00.000Z",
  "belowNote": "The Highland/Lowland League play-off winner can come up",
  "leagues": [
   {
@@ -35,15 +35,15 @@
     {
      "pos": 1,
      "team": "Celtic",
-     "p": 9,
-     "w": 8,
+     "p": 10,
+     "w": 9,
      "d": 0,
      "l": 1,
-     "gf": 23,
-     "ga": 5,
-     "pts": 24,
+     "gf": 25,
+     "ga": 6,
+     "pts": 27,
      "tid": 247,
-     "form": "WWLWW"
+     "form": "WLWWW"
     },
     {
      "pos": 2,
@@ -178,18 +178,18 @@
     {
      "pos": 12,
      "team": "Hibernian",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 1,
-     "l": 6,
-     "gf": 9,
-     "ga": 14,
+     "l": 7,
+     "gf": 10,
+     "ga": 16,
      "pts": 7,
      "tid": 249,
-     "form": "LLDLL"
+     "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "scottish-championship",

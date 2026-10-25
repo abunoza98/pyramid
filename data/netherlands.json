@@ -56,15 +56,15 @@
     {
      "pos": 1,
      "team": "Feyenoord",
-     "p": 9,
+     "p": 10,
      "w": 7,
-     "d": 2,
+     "d": 3,
      "l": 0,
-     "gf": 31,
-     "ga": 10,
-     "pts": 23,
+     "gf": 32,
+     "ga": 11,
+     "pts": 24,
      "tid": 209,
-     "form": "WWWWW"
+     "form": "WWWWD"
     },
     {
      "pos": 2,
@@ -82,15 +82,15 @@
     {
      "pos": 3,
      "team": "PSV Eindhoven",
-     "p": 9,
+     "p": 10,
      "w": 6,
-     "d": 1,
+     "d": 2,
      "l": 2,
-     "gf": 27,
-     "ga": 12,
-     "pts": 19,
+     "gf": 28,
+     "ga": 13,
+     "pts": 20,
      "tid": 197,
-     "form": "WWLWL"
+     "form": "WLWLD"
     },
     {
      "pos": 4,
@@ -147,15 +147,15 @@
     {
      "pos": 8,
      "team": "Groningen",
-     "p": 9,
+     "p": 10,
      "w": 4,
-     "d": 2,
+     "d": 3,
      "l": 3,
-     "gf": 22,
-     "ga": 19,
-     "pts": 14,
+     "gf": 24,
+     "ga": 21,
+     "pts": 15,
      "tid": 202,
-     "form": "DDWWL"
+     "form": "DWWLD"
     },
     {
      "pos": 9,
@@ -198,6 +198,19 @@
     },
     {
      "pos": 12,
+     "team": "NEC Nijmegen",
+     "p": 10,
+     "w": 2,
+     "d": 5,
+     "l": 3,
+     "gf": 17,
+     "ga": 18,
+     "pts": 11,
+     "tid": 413,
+     "form": "LDDDD"
+    },
+    {
+     "pos": 13,
      "team": "Excelsior",
      "p": 10,
      "w": 3,
@@ -208,19 +221,6 @@
      "pts": 11,
      "tid": 196,
      "form": "LDLLL"
-    },
-    {
-     "pos": 13,
-     "team": "NEC Nijmegen",
-     "p": 9,
-     "w": 2,
-     "d": 4,
-     "l": 3,
-     "gf": 15,
-     "ga": 16,
-     "pts": 10,
-     "tid": 413,
-     "form": "DLDDD"
     },
     {
      "pos": 14,

@@ -629,15 +629,15 @@
     {
      "pos": 4,
      "team": "1. FC Saarbrücken",
-     "p": 10,
+     "p": 11,
      "w": 5,
      "d": 2,
-     "l": 3,
-     "gf": 24,
-     "ga": 17,
+     "l": 4,
+     "gf": 26,
+     "ga": 20,
      "pts": 17,
      "tid": 1639,
-     "form": "DWDLW"
+     "form": "WDLWL"
     },
     {
      "pos": 5,
@@ -837,15 +837,15 @@
     {
      "pos": 20,
      "team": "TSV Havelse",
-     "p": 10,
-     "w": 1,
+     "p": 11,
+     "w": 2,
      "d": 3,
      "l": 6,
-     "gf": 13,
-     "ga": 23,
-     "pts": 6,
+     "gf": 16,
+     "ga": 25,
+     "pts": 9,
      "tid": 9342,
-     "form": "LLLDD"
+     "form": "LLDDW"
     }
    ],
    "updated": "2026-10-25T00:00:00.000Z"
