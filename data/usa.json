@@ -491,31 +491,44 @@
       {
        "pos": 3,
        "team": "Detroit City",
-       "p": 29,
+       "p": 30,
        "w": 14,
-       "d": 8,
+       "d": 9,
        "l": 7,
        "gf": 34,
        "ga": 21,
-       "pts": 50,
+       "pts": 51,
        "tid": 9043,
-       "form": "DWWWL"
+       "form": "WWWLD"
       },
       {
        "pos": 4,
        "team": "Louisville City",
-       "p": 29,
+       "p": 30,
        "w": 13,
-       "d": 7,
+       "d": 8,
        "l": 9,
        "gf": 51,
        "ga": 43,
-       "pts": 46,
+       "pts": 47,
        "tid": 4000,
-       "form": "WDWWW"
+       "form": "DWWWD"
       },
       {
        "pos": 5,
+       "team": "Pittsburgh Riverhounds",
+       "p": 30,
+       "w": 13,
+       "d": 6,
+       "l": 11,
+       "gf": 33,
+       "ga": 30,
+       "pts": 45,
+       "tid": 4010,
+       "form": "LLWDW"
+      },
+      {
+       "pos": 6,
        "team": "Rhode Island FC",
        "p": 29,
        "w": 12,
@@ -526,19 +539,6 @@
        "pts": 42,
        "tid": 22855,
        "form": "WWLWD"
-      },
-      {
-       "pos": 6,
-       "team": "Pittsburgh Riverhounds",
-       "p": 29,
-       "w": 12,
-       "d": 6,
-       "l": 11,
-       "gf": 31,
-       "ga": 29,
-       "pts": 42,
-       "tid": 4010,
-       "form": "WLLWD"
       },
       {
        "pos": 7,
@@ -595,15 +595,15 @@
       {
        "pos": 11,
        "team": "Birmingham Legion",
-       "p": 29,
+       "p": 30,
        "w": 6,
        "d": 12,
-       "l": 11,
-       "gf": 39,
-       "ga": 44,
+       "l": 12,
+       "gf": 40,
+       "ga": 46,
        "pts": 30,
        "tid": 3989,
-       "form": "WLWDW"
+       "form": "LWDWL"
       },
       {
        "pos": 12,

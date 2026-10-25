@@ -4,7 +4,7 @@
  "adjective": "Argentine",
  "season": "2026",
  "mode": "live",
- "updated": "2026-10-24T00:00:00.000Z",
+ "updated": "2026-10-25T00:00:00.000Z",
  "belowNote": "Promoted clubs from Primera D come up",
  "leagues": [
   {
@@ -29,7 +29,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-10-24T00:00:00.000Z",
+     "updated": "2026-10-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -99,15 +99,15 @@
       {
        "pos": 6,
        "team": "Newell's Old Boys",
-       "p": 13,
+       "p": 14,
        "w": 5,
-       "d": 5,
+       "d": 6,
        "l": 3,
        "gf": 13,
        "ga": 10,
-       "pts": 20,
+       "pts": 21,
        "tid": 457,
-       "form": "DWDLW"
+       "form": "WDLWD"
       },
       {
        "pos": 7,
@@ -138,15 +138,15 @@
       {
        "pos": 9,
        "team": "San Lorenzo",
-       "p": 13,
+       "p": 14,
        "w": 5,
-       "d": 2,
+       "d": 3,
        "l": 6,
        "gf": 7,
        "ga": 12,
-       "pts": 17,
+       "pts": 18,
        "tid": 460,
-       "form": "DLLWW"
+       "form": "LLWWD"
       },
       {
        "pos": 10,
@@ -230,7 +230,7 @@
     },
     {
      "name": "Group B",
-     "updated": "2026-10-24T00:00:00.000Z",
+     "updated": "2026-10-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -430,7 +430,7 @@
      ]
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "primera-nacional",
@@ -508,15 +508,15 @@
       {
        "pos": 4,
        "team": "Deportivo Madryn",
-       "p": 34,
-       "w": 14,
+       "p": 35,
+       "w": 15,
        "d": 12,
        "l": 8,
-       "gf": 47,
-       "ga": 30,
-       "pts": 54,
+       "gf": 51,
+       "ga": 31,
+       "pts": 57,
        "tid": 1929,
-       "form": "WDWLD"
+       "form": "DWLDW"
       },
       {
        "pos": 5,
@@ -638,15 +638,15 @@
       {
        "pos": 14,
        "team": "San Telmo",
-       "p": 34,
+       "p": 35,
        "w": 9,
        "d": 11,
-       "l": 14,
-       "gf": 28,
-       "ga": 37,
+       "l": 15,
+       "gf": 29,
+       "ga": 41,
        "pts": 38,
        "tid": 1932,
-       "form": "LWWLD"
+       "form": "WWLDL"
       },
       {
        "pos": 15,

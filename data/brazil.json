@@ -43,6 +43,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Palmeiras",
+     "p": 32,
+     "w": 20,
+     "d": 9,
+     "l": 3,
+     "gf": 56,
+     "ga": 22,
+     "pts": 69,
+     "tid": 121,
+     "form": "DWWWW"
+    },
+    {
+     "pos": 2,
      "team": "Flamengo",
      "p": 31,
      "w": 20,
@@ -53,19 +66,6 @@
      "pts": 67,
      "tid": 127,
      "form": "WWDWW"
-    },
-    {
-     "pos": 2,
-     "team": "Palmeiras",
-     "p": 31,
-     "w": 19,
-     "d": 9,
-     "l": 3,
-     "gf": 54,
-     "ga": 22,
-     "pts": 66,
-     "tid": 121,
-     "form": "WDWWW"
     },
     {
      "pos": 3,
@@ -161,15 +161,15 @@
     {
      "pos": 10,
      "team": "Red Bull Bragantino",
-     "p": 31,
+     "p": 32,
      "w": 11,
      "d": 8,
-     "l": 12,
+     "l": 13,
      "gf": 39,
-     "ga": 36,
+     "ga": 38,
      "pts": 41,
      "tid": 794,
-     "form": "LLDWD"
+     "form": "LDWDL"
     },
     {
      "pos": 11,
@@ -199,6 +199,19 @@
     },
     {
      "pos": 13,
+     "team": "Vasco da Gama",
+     "p": 31,
+     "w": 10,
+     "d": 8,
+     "l": 13,
+     "gf": 39,
+     "ga": 45,
+     "pts": 38,
+     "tid": 133,
+     "form": "WWDLW"
+    },
+    {
+     "pos": 14,
      "team": "Vitória",
      "p": 32,
      "w": 10,
@@ -211,7 +224,7 @@
      "form": "LWLDD"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Mirassol",
      "p": 32,
      "w": 9,
@@ -222,19 +235,6 @@
      "pts": 37,
      "tid": 7848,
      "form": "WDLWD"
-    },
-    {
-     "pos": 15,
-     "team": "Vasco da Gama",
-     "p": 30,
-     "w": 9,
-     "d": 8,
-     "l": 13,
-     "gf": 36,
-     "ga": 43,
-     "pts": 35,
-     "tid": 133,
-     "form": "WWWDL"
     },
     {
      "pos": 16,
@@ -252,15 +252,15 @@
     {
      "pos": 17,
      "team": "Corinthians",
-     "p": 31,
+     "p": 32,
      "w": 8,
      "d": 9,
-     "l": 14,
-     "gf": 32,
-     "ga": 39,
+     "l": 15,
+     "gf": 34,
+     "ga": 42,
      "pts": 33,
      "tid": 131,
-     "form": "LLLLD"
+     "form": "LLLDL"
     },
     {
      "pos": 18,

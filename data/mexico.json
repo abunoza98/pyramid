@@ -534,16 +534,16 @@
    "rows": [
     {
      "pos": 1,
-     "team": "La Tribu de Cd. Juarez",
-     "p": 8,
-     "w": 5,
-     "d": 0,
-     "l": 3,
+     "team": "Acatlan",
+     "p": 9,
+     "w": 6,
+     "d": 1,
+     "l": 2,
      "gf": 20,
-     "ga": 10,
-     "pts": 16,
-     "tid": 28306,
-     "form": "WWLLW"
+     "ga": 15,
+     "pts": 19,
+     "tid": 24949,
+     "form": "WWLWW"
     },
     {
      "pos": 1,
@@ -560,16 +560,16 @@
     },
     {
      "pos": 2,
-     "team": "Mineros de Fresnillo",
+     "team": "La Tribu de Cd. Juarez",
      "p": 8,
-     "w": 4,
-     "d": 3,
-     "l": 1,
-     "gf": 12,
-     "ga": 4,
+     "w": 5,
+     "d": 0,
+     "l": 3,
+     "gf": 20,
+     "ga": 10,
      "pts": 16,
-     "tid": 15935,
-     "form": "WLWWD"
+     "tid": 28306,
+     "form": "WWLLW"
     },
     {
      "pos": 2,
@@ -586,16 +586,16 @@
     },
     {
      "pos": 3,
-     "team": "Acatlan",
+     "team": "Mineros de Fresnillo",
      "p": 8,
-     "w": 5,
-     "d": 1,
-     "l": 2,
-     "gf": 15,
-     "ga": 12,
+     "w": 4,
+     "d": 3,
+     "l": 1,
+     "gf": 12,
+     "ga": 4,
      "pts": 16,
-     "tid": 24949,
-     "form": "DWWLW"
+     "tid": 15935,
+     "form": "WLWWD"
     },
     {
      "pos": 3,
@@ -758,16 +758,16 @@
     {
      "pos": 9,
      "team": "Ciervos",
-     "p": 8,
+     "p": 9,
      "w": 2,
      "d": 0,
-     "l": 6,
-     "gf": 8,
-     "ga": 25,
+     "l": 7,
+     "gf": 11,
+     "ga": 30,
      "pts": 5,
      "ded": 1,
      "tid": 15925,
-     "form": "LWLLW"
+     "form": "WLLWL"
     },
     {
      "pos": 10,
