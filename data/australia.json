@@ -41,6 +41,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Wellington Phoenix",
+     "p": 2,
+     "w": 2,
+     "d": 0,
+     "l": 0,
+     "gf": 4,
+     "ga": 1,
+     "pts": 6,
+     "tid": 942,
+     "form": "WW"
+    },
+    {
+     "pos": 2,
      "team": "Western Sydney Wanderers",
      "p": 2,
      "w": 1,
@@ -53,7 +66,7 @@
      "form": "DW"
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "Macarthur FC",
      "p": 2,
      "w": 1,
@@ -66,7 +79,20 @@
      "form": "WD"
     },
     {
-     "pos": 3,
+     "pos": 4,
+     "team": "Sydney FC",
+     "p": 2,
+     "w": 1,
+     "d": 1,
+     "l": 0,
+     "gf": 2,
+     "ga": 1,
+     "pts": 4,
+     "tid": 943,
+     "form": "DW"
+    },
+    {
+     "pos": 5,
      "team": "Brisbane Roar",
      "p": 1,
      "w": 1,
@@ -79,20 +105,7 @@
      "form": "W"
     },
     {
-     "pos": 4,
-     "team": "Wellington Phoenix",
-     "p": 1,
-     "w": 1,
-     "d": 0,
-     "l": 0,
-     "gf": 2,
-     "ga": 1,
-     "pts": 3,
-     "tid": 942,
-     "form": "W"
-    },
-    {
-     "pos": 5,
+     "pos": 6,
      "team": "Auckland FC",
      "p": 2,
      "w": 1,
@@ -105,7 +118,7 @@
      "form": "WL"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Newcastle Jets",
      "p": 2,
      "w": 0,
@@ -118,33 +131,7 @@
      "form": "DD"
     },
     {
-     "pos": 7,
-     "team": "Central Coast Mariners",
-     "p": 1,
-     "w": 0,
-     "d": 1,
-     "l": 0,
-     "gf": 2,
-     "ga": 2,
-     "pts": 1,
-     "tid": 941,
-     "form": "D"
-    },
-    {
      "pos": 8,
-     "team": "Sydney FC",
-     "p": 1,
-     "w": 0,
-     "d": 1,
-     "l": 0,
-     "gf": 0,
-     "ga": 0,
-     "pts": 1,
-     "tid": 943,
-     "form": "D"
-    },
-    {
-     "pos": 9,
      "team": "Melbourne Victory",
      "p": 2,
      "w": 0,
@@ -155,6 +142,19 @@
      "pts": 1,
      "tid": 944,
      "form": "LD"
+    },
+    {
+     "pos": 9,
+     "team": "Central Coast Mariners",
+     "p": 2,
+     "w": 0,
+     "d": 1,
+     "l": 1,
+     "gf": 2,
+     "ga": 4,
+     "pts": 1,
+     "tid": 941,
+     "form": "DL"
     },
     {
      "pos": 10,
@@ -172,14 +172,15 @@
     {
      "pos": 11,
      "team": "Adelaide United",
-     "p": 0,
+     "p": 1,
      "w": 0,
      "d": 0,
-     "l": 0,
-     "gf": 0,
-     "ga": 0,
+     "l": 1,
+     "gf": 1,
+     "ga": 2,
      "pts": 0,
-     "tid": 948
+     "tid": 948,
+     "form": "L"
     },
     {
      "pos": 12,
