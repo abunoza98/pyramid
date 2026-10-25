@@ -88,7 +88,7 @@
       mode.setAttribute("data-auto-league", activeLeague);
       mode.setAttribute("aria-label", "Chart view");
       mode.removeAttribute("role");
-      mode.innerHTML = '<button type="button" class="on" disabled>League position</button>';
+      mode.innerHTML = '<button type="button" class="on" aria-disabled="true" tabindex="-1" style="cursor:default">League position</button>';
     }
 
     var chart = app.querySelector(".cmp-chart");
