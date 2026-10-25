@@ -495,15 +495,15 @@
       {
        "pos": 3,
        "team": "Deportivo Morón",
-       "p": 34,
+       "p": 35,
        "w": 17,
        "d": 7,
-       "l": 10,
+       "l": 11,
        "gf": 51,
-       "ga": 36,
+       "ga": 37,
        "pts": 58,
        "tid": 469,
-       "form": "LLWLL"
+       "form": "LWLLL"
       },
       {
        "pos": 4,
@@ -533,6 +533,19 @@
       },
       {
        "pos": 6,
+       "team": "Almirante Brown",
+       "p": 35,
+       "w": 13,
+       "d": 12,
+       "l": 10,
+       "gf": 29,
+       "ga": 24,
+       "pts": 51,
+       "tid": 8375,
+       "form": "LLDDW"
+      },
+      {
+       "pos": 7,
        "team": "Ciudad de Bolívar",
        "p": 35,
        "w": 13,
@@ -545,30 +558,17 @@
        "form": "WWWWL"
       },
       {
-       "pos": 7,
-       "team": "Almirante Brown",
-       "p": 34,
-       "w": 12,
-       "d": 12,
-       "l": 10,
-       "gf": 28,
-       "ga": 24,
-       "pts": 48,
-       "tid": 8375,
-       "form": "LLLDD"
-      },
-      {
        "pos": 8,
        "team": "CA Estudiantes",
-       "p": 34,
+       "p": 35,
        "w": 13,
-       "d": 9,
+       "d": 10,
        "l": 12,
-       "gf": 34,
-       "ga": 33,
-       "pts": 48,
+       "gf": 35,
+       "ga": 34,
+       "pts": 49,
        "tid": 1936,
-       "form": "WWLWL"
+       "form": "WLWLD"
       },
       {
        "pos": 9,
@@ -586,28 +586,28 @@
       {
        "pos": 10,
        "team": "Los Andes",
-       "p": 34,
+       "p": 35,
        "w": 9,
-       "d": 14,
+       "d": 15,
        "l": 11,
-       "gf": 26,
-       "ga": 25,
-       "pts": 41,
+       "gf": 27,
+       "ga": 26,
+       "pts": 42,
        "tid": 483,
-       "form": "LWLLD"
+       "form": "WLLDD"
       },
       {
        "pos": 11,
        "team": "Racing (Córdoba)",
-       "p": 34,
+       "p": 35,
        "w": 10,
        "d": 10,
-       "l": 14,
-       "gf": 30,
-       "ga": 40,
+       "l": 15,
+       "gf": 31,
+       "ga": 42,
        "pts": 40,
        "tid": 1957,
-       "form": "LDDWL"
+       "form": "DDWLL"
       },
       {
        "pos": 12,
@@ -637,6 +637,19 @@
       },
       {
        "pos": 14,
+       "team": "All Boys",
+       "p": 35,
+       "w": 7,
+       "d": 17,
+       "l": 11,
+       "gf": 21,
+       "ga": 30,
+       "pts": 38,
+       "tid": 464,
+       "form": "DLDDW"
+      },
+      {
+       "pos": 15,
        "team": "San Telmo",
        "p": 35,
        "w": 9,
@@ -649,7 +662,7 @@
        "form": "WWLDL"
       },
       {
-       "pos": 15,
+       "pos": 16,
        "team": "Central Norte",
        "p": 34,
        "w": 7,
@@ -660,19 +673,6 @@
        "pts": 37,
        "tid": 1951,
        "form": "LDDDW"
-      },
-      {
-       "pos": 16,
-       "team": "All Boys",
-       "p": 34,
-       "w": 6,
-       "d": 17,
-       "l": 11,
-       "gf": 19,
-       "ga": 29,
-       "pts": 35,
-       "tid": 464,
-       "form": "DDLDD"
       },
       {
        "pos": 17,
@@ -1004,6 +1004,19 @@
     },
     {
      "pos": 3,
+     "team": "Talleres Remedios",
+     "p": 41,
+     "w": 20,
+     "d": 11,
+     "l": 10,
+     "gf": 46,
+     "ga": 26,
+     "pts": 71,
+     "tid": 1927,
+     "form": "WLDLW"
+    },
+    {
+     "pos": 4,
      "team": "Sportivo Italiano",
      "p": 41,
      "w": 19,
@@ -1014,19 +1027,6 @@
      "pts": 69,
      "tid": 8388,
      "form": "WWWDL"
-    },
-    {
-     "pos": 4,
-     "team": "Talleres Remedios",
-     "p": 40,
-     "w": 19,
-     "d": 11,
-     "l": 10,
-     "gf": 42,
-     "ga": 26,
-     "pts": 68,
-     "tid": 1927,
-     "form": "DWLDL"
     },
     {
      "pos": 5,
@@ -1160,19 +1160,6 @@
     },
     {
      "pos": 15,
-     "team": "Dock Sud",
-     "p": 40,
-     "w": 11,
-     "d": 14,
-     "l": 15,
-     "gf": 41,
-     "ga": 45,
-     "pts": 47,
-     "tid": 2429,
-     "form": "DWLLL"
-    },
-    {
-     "pos": 16,
      "team": "Argentino de Merlo",
      "p": 41,
      "w": 12,
@@ -1185,7 +1172,7 @@
      "form": "LLLLW"
     },
     {
-     "pos": 17,
+     "pos": 16,
      "team": "Argentino Quilmes",
      "p": 41,
      "w": 10,
@@ -1196,6 +1183,19 @@
      "pts": 47,
      "tid": 8376,
      "form": "DDDLW"
+    },
+    {
+     "pos": 17,
+     "team": "Dock Sud",
+     "p": 41,
+     "w": 11,
+     "d": 14,
+     "l": 16,
+     "gf": 41,
+     "ga": 49,
+     "pts": 47,
+     "tid": 2429,
+     "form": "WLLLL"
     },
     {
      "pos": 18,

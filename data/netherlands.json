@@ -81,19 +81,6 @@
     },
     {
      "pos": 3,
-     "team": "AZ Alkmaar",
-     "p": 9,
-     "w": 6,
-     "d": 2,
-     "l": 1,
-     "gf": 20,
-     "ga": 10,
-     "pts": 20,
-     "tid": 201,
-     "form": "WDWLD"
-    },
-    {
-     "pos": 4,
      "team": "PSV Eindhoven",
      "p": 10,
      "w": 6,
@@ -106,7 +93,33 @@
      "form": "WLWLD"
     },
     {
+     "pos": 4,
+     "team": "Twente",
+     "p": 10,
+     "w": 6,
+     "d": 2,
+     "l": 2,
+     "gf": 19,
+     "ga": 10,
+     "pts": 20,
+     "tid": 415,
+     "form": "WWDLW"
+    },
+    {
      "pos": 5,
+     "team": "AZ Alkmaar",
+     "p": 10,
+     "w": 6,
+     "d": 2,
+     "l": 2,
+     "gf": 20,
+     "ga": 12,
+     "pts": 20,
+     "tid": 201,
+     "form": "DWLDL"
+    },
+    {
+     "pos": 6,
      "team": "Fortuna Sittard",
      "p": 10,
      "w": 5,
@@ -117,19 +130,6 @@
      "pts": 18,
      "tid": 205,
      "form": "LWDDW"
-    },
-    {
-     "pos": 6,
-     "team": "Twente",
-     "p": 9,
-     "w": 5,
-     "d": 2,
-     "l": 2,
-     "gf": 17,
-     "ga": 10,
-     "pts": 17,
-     "tid": 415,
-     "form": "WWWDL"
     },
     {
      "pos": 7,

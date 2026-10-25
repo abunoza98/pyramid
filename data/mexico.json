@@ -4,7 +4,7 @@
  "adjective": "Mexican",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-24T00:00:00.000Z",
+ "updated": "2026-10-25T00:00:00.000Z",
  "belowNote": "Promotion between Liga Premier and the Liga de Expansión is suspended",
  "leagues": [
   {
@@ -260,7 +260,7 @@
      "form": "LDLLD"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "liga-de-expansion",
@@ -488,7 +488,7 @@
      "form": "WDLLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   },
   {
    "id": "liga-premier",
@@ -561,16 +561,16 @@
     },
     {
      "pos": 2,
-     "team": "Acatlan",
+     "team": "Mineros de Fresnillo",
      "p": 9,
-     "w": 6,
-     "d": 1,
-     "l": 2,
-     "gf": 20,
-     "ga": 15,
+     "w": 5,
+     "d": 3,
+     "l": 1,
+     "gf": 16,
+     "ga": 5,
      "pts": 19,
-     "tid": 24949,
-     "form": "WWLWW"
+     "tid": 15935,
+     "form": "LWWDW"
     },
     {
      "pos": 2,
@@ -587,16 +587,16 @@
     },
     {
      "pos": 3,
-     "team": "Mineros de Fresnillo",
-     "p": 8,
-     "w": 4,
-     "d": 3,
-     "l": 1,
-     "gf": 12,
-     "ga": 4,
-     "pts": 16,
-     "tid": 15935,
-     "form": "WLWWD"
+     "team": "Acatlan",
+     "p": 9,
+     "w": 6,
+     "d": 1,
+     "l": 2,
+     "gf": 20,
+     "ga": 15,
+     "pts": 19,
+     "tid": 24949,
+     "form": "WWLWW"
     },
     {
      "pos": 3,
@@ -705,15 +705,15 @@
     {
      "pos": 7,
      "team": "Calor de San Pedro",
-     "p": 8,
+     "p": 9,
      "w": 3,
      "d": 1,
-     "l": 4,
-     "gf": 17,
-     "ga": 19,
+     "l": 5,
+     "gf": 18,
+     "ga": 23,
      "pts": 12,
      "tid": 17804,
-     "form": "LWWLL"
+     "form": "WWLLL"
     },
     {
      "pos": 8,
@@ -797,7 +797,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-25T00:00:00.000Z"
   }
  ]
 }

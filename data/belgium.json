@@ -56,6 +56,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Gent",
+     "p": 9,
+     "w": 8,
+     "d": 1,
+     "l": 0,
+     "gf": 19,
+     "ga": 4,
+     "pts": 25,
+     "tid": 631,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 2,
      "team": "Club Brugge",
      "p": 9,
      "w": 8,
@@ -66,19 +79,6 @@
      "pts": 24,
      "tid": 569,
      "form": "WWWWW"
-    },
-    {
-     "pos": 2,
-     "team": "Gent",
-     "p": 8,
-     "w": 7,
-     "d": 1,
-     "l": 0,
-     "gf": 15,
-     "ga": 4,
-     "pts": 22,
-     "tid": 631,
-     "form": "WWDWW"
     },
     {
      "pos": 3,
@@ -109,15 +109,15 @@
     {
      "pos": 5,
      "team": "Anderlecht",
-     "p": 8,
+     "p": 9,
      "w": 5,
      "d": 1,
-     "l": 2,
+     "l": 3,
      "gf": 9,
-     "ga": 6,
+     "ga": 10,
      "pts": 16,
      "tid": 554,
-     "form": "WDWWW"
+     "form": "DWWWL"
     },
     {
      "pos": 6,
@@ -422,6 +422,19 @@
     },
     {
      "pos": 8,
+     "team": "Patro Eisden",
+     "p": 8,
+     "w": 3,
+     "d": 0,
+     "l": 5,
+     "gf": 11,
+     "ga": 14,
+     "pts": 9,
+     "tid": 6222,
+     "form": "LLLWW"
+    },
+    {
+     "pos": 9,
      "team": "Club Brugge II",
      "p": 7,
      "w": 2,
@@ -434,7 +447,7 @@
      "form": "LDDLD"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Lierse",
      "p": 6,
      "w": 2,
@@ -447,7 +460,7 @@
      "form": "WDDLW"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Genk II",
      "p": 8,
      "w": 2,
@@ -460,7 +473,7 @@
      "form": "WLDLD"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Gent II",
      "p": 7,
      "w": 2,
@@ -471,19 +484,6 @@
      "pts": 8,
      "tid": 19685,
      "form": "DLDWL"
-    },
-    {
-     "pos": 12,
-     "team": "Patro Eisden",
-     "p": 7,
-     "w": 2,
-     "d": 0,
-     "l": 5,
-     "gf": 8,
-     "ga": 12,
-     "pts": 6,
-     "tid": 6222,
-     "form": "LLLLW"
     },
     {
      "pos": 13,
@@ -501,15 +501,15 @@
     {
      "pos": 14,
      "team": "Liège",
-     "p": 7,
+     "p": 8,
      "w": 1,
      "d": 2,
-     "l": 4,
-     "gf": 11,
-     "ga": 18,
+     "l": 5,
+     "gf": 13,
+     "ga": 21,
      "pts": 5,
      "tid": 6220,
-     "form": "LDDLL"
+     "form": "DDLLL"
     },
     {
      "pos": 15,

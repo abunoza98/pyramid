@@ -93,18 +93,31 @@
     {
      "pos": 5,
      "team": "PAOK",
-     "p": 7,
+     "p": 8,
      "w": 5,
      "d": 0,
-     "l": 2,
-     "gf": 15,
-     "ga": 9,
+     "l": 3,
+     "gf": 16,
+     "ga": 11,
      "pts": 15,
      "tid": 619,
-     "form": "LWWLW"
+     "form": "WWLWL"
     },
     {
      "pos": 6,
+     "team": "OFI Crete",
+     "p": 8,
+     "w": 4,
+     "d": 1,
+     "l": 3,
+     "gf": 13,
+     "ga": 12,
+     "pts": 13,
+     "tid": 1124,
+     "form": "WDLLW"
+    },
+    {
+     "pos": 7,
      "team": "Kifisia",
      "p": 8,
      "w": 3,
@@ -117,7 +130,7 @@
      "form": "DWWLW"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Kalamata",
      "p": 8,
      "w": 3,
@@ -128,19 +141,6 @@
      "pts": 10,
      "tid": 5046,
      "form": "WLWWL"
-    },
-    {
-     "pos": 8,
-     "team": "OFI Crete",
-     "p": 7,
-     "w": 3,
-     "d": 1,
-     "l": 3,
-     "gf": 11,
-     "ga": 11,
-     "pts": 10,
-     "tid": 1124,
-     "form": "WWDLL"
     },
     {
      "pos": 9,

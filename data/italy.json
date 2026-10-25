@@ -121,6 +121,19 @@
     },
     {
      "pos": 7,
+     "team": "Juventus",
+     "p": 8,
+     "w": 4,
+     "d": 2,
+     "l": 2,
+     "gf": 11,
+     "ga": 8,
+     "pts": 14,
+     "tid": 496,
+     "form": "LWDLW"
+    },
+    {
+     "pos": 8,
      "team": "Torino",
      "p": 8,
      "w": 4,
@@ -133,7 +146,7 @@
      "form": "LDWWW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Cagliari",
      "p": 8,
      "w": 4,
@@ -146,7 +159,7 @@
      "form": "WWDLL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Napoli",
      "p": 8,
      "w": 3,
@@ -157,19 +170,6 @@
      "pts": 11,
      "tid": 492,
      "form": "WDWLD"
-    },
-    {
-     "pos": 10,
-     "team": "Juventus",
-     "p": 7,
-     "w": 3,
-     "d": 2,
-     "l": 2,
-     "gf": 9,
-     "ga": 8,
-     "pts": 11,
-     "tid": 496,
-     "form": "DLWDL"
     },
     {
      "pos": 11,
@@ -187,15 +187,15 @@
     {
      "pos": 12,
      "team": "Lecce",
-     "p": 7,
+     "p": 8,
      "w": 3,
      "d": 0,
-     "l": 4,
+     "l": 5,
      "gf": 9,
-     "ga": 12,
+     "ga": 14,
      "pts": 9,
      "tid": 867,
-     "form": "LWLLW"
+     "form": "WLLWL"
     },
     {
      "pos": 13,
