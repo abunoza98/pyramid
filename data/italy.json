@@ -82,6 +82,19 @@
     },
     {
      "pos": 4,
+     "team": "AC Milan",
+     "p": 8,
+     "w": 5,
+     "d": 3,
+     "l": 0,
+     "gf": 16,
+     "ga": 7,
+     "pts": 18,
+     "tid": 489,
+     "form": "DWDWW"
+    },
+    {
+     "pos": 5,
      "team": "Como",
      "p": 8,
      "w": 5,
@@ -92,19 +105,6 @@
      "pts": 17,
      "tid": 895,
      "form": "WLDWW"
-    },
-    {
-     "pos": 5,
-     "team": "AC Milan",
-     "p": 7,
-     "w": 4,
-     "d": 3,
-     "l": 0,
-     "gf": 14,
-     "ga": 7,
-     "pts": 15,
-     "tid": 489,
-     "form": "DDWDW"
     },
     {
      "pos": 6,
@@ -252,12 +252,12 @@
     {
      "pos": 17,
      "team": "Udinese",
-     "p": 7,
+     "p": 8,
      "w": 1,
      "d": 1,
-     "l": 5,
+     "l": 6,
      "gf": 9,
-     "ga": 16,
+     "ga": 18,
      "pts": 4,
      "tid": 494,
      "form": "LLLLL"

@@ -82,15 +82,15 @@
     {
      "pos": 3,
      "team": "Sporting CP",
-     "p": 8,
+     "p": 9,
      "w": 5,
      "d": 3,
-     "l": 0,
-     "gf": 20,
-     "ga": 9,
+     "l": 1,
+     "gf": 21,
+     "ga": 11,
      "pts": 18,
      "tid": 228,
-     "form": "WWDDW"
+     "form": "WDDWL"
     },
     {
      "pos": 4,
@@ -121,15 +121,15 @@
     {
      "pos": 6,
      "team": "Académico de Viseu",
-     "p": 8,
-     "w": 4,
+     "p": 9,
+     "w": 5,
      "d": 2,
      "l": 2,
-     "gf": 11,
-     "ga": 10,
-     "pts": 14,
+     "gf": 13,
+     "ga": 11,
+     "pts": 17,
      "tid": 238,
-     "form": "LWWWW"
+     "form": "WWWWW"
     },
     {
      "pos": 7,
