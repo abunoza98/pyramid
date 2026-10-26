@@ -4,7 +4,7 @@
  "adjective": "French",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-25T00:00:00.000Z",
+ "updated": "2026-10-26T00:00:00.000Z",
  "belowNote": "Promoted clubs from National 1 come up",
  "leagues": [
   {
@@ -55,6 +55,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Paris Saint-Germain",
+     "p": 8,
+     "w": 5,
+     "d": 2,
+     "l": 1,
+     "gf": 16,
+     "ga": 9,
+     "pts": 17,
+     "tid": 85,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
      "team": "Rennes",
      "p": 8,
      "w": 5,
@@ -67,7 +80,7 @@
      "form": "WLWLW"
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "Lille",
      "p": 8,
      "w": 4,
@@ -80,7 +93,7 @@
      "form": "WLWDD"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Monaco",
      "p": 8,
      "w": 4,
@@ -93,30 +106,17 @@
      "form": "DWDLD"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Lyon",
-     "p": 7,
+     "p": 8,
      "w": 4,
      "d": 2,
-     "l": 1,
+     "l": 2,
      "gf": 13,
-     "ga": 5,
+     "ga": 7,
      "pts": 14,
      "tid": 80,
-     "form": "WDWLW"
-    },
-    {
-     "pos": 5,
-     "team": "Paris Saint-Germain",
-     "p": 7,
-     "w": 4,
-     "d": 2,
-     "l": 1,
-     "gf": 14,
-     "ga": 9,
-     "pts": 14,
-     "tid": 85,
-     "form": "LWWWW"
+     "form": "DWLWL"
     },
     {
      "pos": 6,
@@ -288,7 +288,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "ligue-2",
@@ -340,6 +340,19 @@
     },
     {
      "pos": 2,
+     "team": "Montpellier",
+     "p": 10,
+     "w": 6,
+     "d": 3,
+     "l": 1,
+     "gf": 13,
+     "ga": 6,
+     "pts": 21,
+     "tid": 82,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 3,
      "team": "Nancy",
      "p": 10,
      "w": 6,
@@ -352,30 +365,17 @@
      "form": "LWWWW"
     },
     {
-     "pos": 3,
-     "team": "Montpellier",
-     "p": 9,
-     "w": 5,
-     "d": 3,
-     "l": 1,
-     "gf": 11,
-     "ga": 5,
-     "pts": 18,
-     "tid": 82,
-     "form": "LWDWW"
-    },
-    {
      "pos": 4,
      "team": "Reims",
-     "p": 9,
+     "p": 10,
      "w": 4,
-     "d": 5,
+     "d": 6,
      "l": 0,
-     "gf": 19,
-     "ga": 11,
-     "pts": 17,
+     "gf": 20,
+     "ga": 12,
+     "pts": 18,
      "tid": 93,
-     "form": "DWDDW"
+     "form": "WDDWD"
     },
     {
      "pos": 5,
@@ -393,15 +393,15 @@
     {
      "pos": 6,
      "team": "Red Star",
-     "p": 9,
+     "p": 10,
      "w": 5,
      "d": 2,
-     "l": 2,
-     "gf": 12,
-     "ga": 10,
+     "l": 3,
+     "gf": 13,
+     "ga": 12,
      "pts": 17,
      "tid": 104,
-     "form": "WWWWL"
+     "form": "WWWLL"
     },
     {
      "pos": 7,
@@ -483,6 +483,19 @@
     },
     {
      "pos": 13,
+     "team": "Boulogne",
+     "p": 10,
+     "w": 1,
+     "d": 7,
+     "l": 2,
+     "gf": 7,
+     "ga": 7,
+     "pts": 10,
+     "tid": 1299,
+     "form": "DLDWD"
+    },
+    {
+     "pos": 14,
      "team": "Rodez",
      "p": 10,
      "w": 3,
@@ -493,19 +506,6 @@
      "pts": 10,
      "tid": 1301,
      "form": "LLLLW"
-    },
-    {
-     "pos": 14,
-     "team": "Boulogne",
-     "p": 9,
-     "w": 1,
-     "d": 6,
-     "l": 2,
-     "gf": 6,
-     "ga": 6,
-     "pts": 9,
-     "tid": 1299,
-     "form": "DDLDW"
     },
     {
      "pos": 15,
@@ -560,7 +560,7 @@
      "form": "LDLDL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "ligue-3",
