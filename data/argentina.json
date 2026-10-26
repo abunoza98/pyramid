@@ -273,6 +273,19 @@
       },
       {
        "pos": 4,
+       "team": "River Plate",
+       "p": 14,
+       "w": 7,
+       "d": 2,
+       "l": 5,
+       "gf": 19,
+       "ga": 13,
+       "pts": 23,
+       "tid": 435,
+       "form": "LWDWW"
+      },
+      {
+       "pos": 5,
        "team": "Belgrano",
        "p": 14,
        "w": 6,
@@ -285,7 +298,7 @@
        "form": "WWWLL"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "Sarmiento",
        "p": 14,
        "w": 6,
@@ -296,19 +309,6 @@
        "pts": 21,
        "tid": 474,
        "form": "LWDDL"
-      },
-      {
-       "pos": 6,
-       "team": "River Plate",
-       "p": 13,
-       "w": 6,
-       "d": 2,
-       "l": 5,
-       "gf": 18,
-       "ga": 13,
-       "pts": 20,
-       "tid": 435,
-       "form": "WLWDW"
       },
       {
        "pos": 7,
@@ -391,15 +391,15 @@
       {
        "pos": 13,
        "team": "Racing Club",
-       "p": 13,
+       "p": 14,
        "w": 3,
        "d": 3,
-       "l": 7,
+       "l": 8,
        "gf": 14,
-       "ga": 20,
+       "ga": 21,
        "pts": 12,
        "tid": 436,
-       "form": "LWWLD"
+       "form": "WWLDL"
       },
       {
        "pos": 14,
