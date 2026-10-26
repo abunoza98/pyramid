@@ -53,15 +53,15 @@
     {
      "pos": 1,
      "team": "Hajduk Split",
-     "p": 10,
+     "p": 11,
      "w": 7,
-     "d": 1,
+     "d": 2,
      "l": 2,
-     "gf": 19,
-     "ga": 9,
-     "pts": 22,
+     "gf": 21,
+     "ga": 11,
+     "pts": 23,
      "tid": 608,
-     "form": "WWLWW"
+     "form": "WLWWD"
     },
     {
      "pos": 2,
@@ -117,6 +117,19 @@
     },
     {
      "pos": 6,
+     "team": "Istra 1961",
+     "p": 11,
+     "w": 3,
+     "d": 4,
+     "l": 4,
+     "gf": 19,
+     "ga": 18,
+     "pts": 13,
+     "tid": 1016,
+     "form": "WLWLD"
+    },
+    {
+     "pos": 7,
      "team": "Slaven Belupo",
      "p": 11,
      "w": 4,
@@ -127,19 +140,6 @@
      "pts": 13,
      "tid": 1018,
      "form": "LDWLW"
-    },
-    {
-     "pos": 7,
-     "team": "Istra 1961",
-     "p": 10,
-     "w": 3,
-     "d": 3,
-     "l": 4,
-     "gf": 17,
-     "ga": 16,
-     "pts": 12,
-     "tid": 1016,
-     "form": "DWLWL"
     },
     {
      "pos": 8,

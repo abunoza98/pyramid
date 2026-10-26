@@ -370,6 +370,19 @@
     },
     {
      "pos": 5,
+     "team": "Mardin 1969",
+     "p": 12,
+     "w": 6,
+     "d": 3,
+     "l": 3,
+     "gf": 16,
+     "ga": 11,
+     "pts": 21,
+     "tid": 6533,
+     "form": "LWWLW"
+    },
+    {
+     "pos": 6,
      "team": "Keçiörengücü",
      "p": 12,
      "w": 5,
@@ -382,7 +395,7 @@
      "form": "DWDWL"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Muğlaspor",
      "p": 12,
      "w": 4,
@@ -393,19 +406,6 @@
      "pts": 18,
      "tid": 7414,
      "form": "DDLWW"
-    },
-    {
-     "pos": 7,
-     "team": "Mardin 1969",
-     "p": 11,
-     "w": 5,
-     "d": 3,
-     "l": 3,
-     "gf": 14,
-     "ga": 10,
-     "pts": 18,
-     "tid": 6533,
-     "form": "LLWWL"
     },
     {
      "pos": 8,
@@ -527,15 +527,15 @@
     {
      "pos": 17,
      "team": "Manisa FK",
-     "p": 11,
+     "p": 12,
      "w": 2,
      "d": 4,
-     "l": 5,
-     "gf": 18,
-     "ga": 20,
+     "l": 6,
+     "gf": 19,
+     "ga": 22,
      "pts": 10,
      "tid": 3597,
-     "form": "DLLDL"
+     "form": "LLDLL"
     },
     {
      "pos": 18,
