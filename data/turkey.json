@@ -49,6 +49,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Galatasaray",
+     "p": 9,
+     "w": 7,
+     "d": 1,
+     "l": 1,
+     "gf": 19,
+     "ga": 12,
+     "pts": 22,
+     "tid": 645,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 2,
      "team": "Amed SK",
      "p": 9,
      "w": 6,
@@ -61,7 +74,7 @@
      "form": "WWDWW"
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "Trabzonspor",
      "p": 9,
      "w": 6,
@@ -72,19 +85,6 @@
      "pts": 19,
      "tid": 998,
      "form": "LWWWW"
-    },
-    {
-     "pos": 3,
-     "team": "Galatasaray",
-     "p": 8,
-     "w": 6,
-     "d": 1,
-     "l": 1,
-     "gf": 17,
-     "ga": 11,
-     "pts": 19,
-     "tid": 645,
-     "form": "WWLWW"
     },
     {
      "pos": 4,
@@ -102,15 +102,15 @@
     {
      "pos": 5,
      "team": "Fenerbahçe",
-     "p": 8,
+     "p": 9,
      "w": 5,
      "d": 1,
-     "l": 2,
-     "gf": 22,
-     "ga": 6,
+     "l": 3,
+     "gf": 23,
+     "ga": 8,
      "pts": 16,
      "tid": 611,
-     "form": "LDWWW"
+     "form": "DWWWL"
     },
     {
      "pos": 6,

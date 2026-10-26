@@ -611,6 +611,19 @@
       },
       {
        "pos": 12,
+       "team": "Defensores De Belgrano",
+       "p": 35,
+       "w": 8,
+       "d": 15,
+       "l": 12,
+       "gf": 25,
+       "ga": 32,
+       "pts": 39,
+       "tid": 1067,
+       "form": "LDLDD"
+      },
+      {
+       "pos": 13,
        "team": "Atlético Mitre",
        "p": 35,
        "w": 8,
@@ -621,19 +634,6 @@
        "pts": 39,
        "tid": 466,
        "form": "LWDWL"
-      },
-      {
-       "pos": 13,
-       "team": "Defensores De Belgrano",
-       "p": 34,
-       "w": 8,
-       "d": 14,
-       "l": 12,
-       "gf": 25,
-       "ga": 32,
-       "pts": 38,
-       "tid": 1067,
-       "form": "WLDLD"
       },
       {
        "pos": 14,
@@ -690,15 +690,15 @@
       {
        "pos": 18,
        "team": "San Miguel",
-       "p": 34,
+       "p": 35,
        "w": 6,
-       "d": 14,
+       "d": 15,
        "l": 14,
        "gf": 27,
        "ga": 41,
-       "pts": 32,
+       "pts": 33,
        "tid": 8379,
-       "form": "DLLDL"
+       "form": "LLDLD"
       }
      ]
     },
@@ -1122,15 +1122,15 @@
     {
      "pos": 12,
      "team": "Villa San Carlos",
-     "p": 40,
+     "p": 41,
      "w": 12,
      "d": 14,
-     "l": 14,
+     "l": 15,
      "gf": 40,
-     "ga": 43,
+     "ga": 45,
      "pts": 50,
      "tid": 8380,
-     "form": "DWWLW"
+     "form": "WWLWL"
     },
     {
      "pos": 13,
@@ -1239,15 +1239,15 @@
     {
      "pos": 21,
      "team": "UAI Urquiza",
-     "p": 40,
-     "w": 6,
+     "p": 41,
+     "w": 7,
      "d": 21,
      "l": 13,
-     "gf": 23,
+     "gf": 25,
      "ga": 36,
-     "pts": 39,
+     "pts": 42,
      "tid": 1956,
-     "form": "LDWWD"
+     "form": "DWWDW"
     },
     {
      "pos": 22,

@@ -4,7 +4,7 @@
  "adjective": "Portuguese",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-25T00:00:00.000Z",
+ "updated": "2026-10-26T00:00:00.000Z",
  "belowNote": "Liga 3's top clubs come up, one through a play-off",
  "leagues": [
   {
@@ -69,15 +69,15 @@
     {
      "pos": 2,
      "team": "Benfica",
-     "p": 8,
-     "w": 6,
+     "p": 9,
+     "w": 7,
      "d": 1,
      "l": 1,
-     "gf": 24,
-     "ga": 7,
-     "pts": 19,
+     "gf": 26,
+     "ga": 8,
+     "pts": 22,
      "tid": 211,
-     "form": "WWWLW"
+     "form": "WWLWW"
     },
     {
      "pos": 3,
@@ -95,15 +95,15 @@
     {
      "pos": 4,
      "team": "Santa Clara",
-     "p": 8,
+     "p": 9,
      "w": 5,
      "d": 3,
-     "l": 0,
-     "gf": 12,
-     "ga": 4,
+     "l": 1,
+     "gf": 13,
+     "ga": 6,
      "pts": 18,
      "tid": 227,
-     "form": "DWWDW"
+     "form": "WWDWL"
     },
     {
      "pos": 5,
@@ -288,7 +288,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "liga-portugal-2",
@@ -562,7 +562,7 @@
      "form": "LLLLD"
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   }
  ]
 }
