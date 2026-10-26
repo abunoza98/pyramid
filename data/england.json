@@ -4,7 +4,7 @@
  "adjective": "English",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-25T00:00:00.000Z",
+ "updated": "2026-10-26T00:00:00.000Z",
  "belowNote": "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
  "leagues": [
   {
@@ -296,7 +296,7 @@
      "form": "LLLLD"
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "championship",
@@ -644,7 +644,7 @@
      "form": "DLLLD"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "league-one",
@@ -988,7 +988,7 @@
      "form": "LLWLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "league-two",
@@ -1022,13 +1022,13 @@
     {
      "pos": 1,
      "team": "Salford City",
-     "p": 12,
-     "w": 8,
+     "p": 13,
+     "w": 9,
      "d": 1,
      "l": 3,
-     "gf": 19,
-     "ga": 12,
-     "pts": 25,
+     "gf": 23,
+     "ga": 14,
+     "pts": 28,
      "tid": 1844,
      "form": "WWWWW"
     },
@@ -1087,15 +1087,15 @@
     {
      "pos": 6,
      "team": "Walsall",
-     "p": 11,
+     "p": 12,
      "w": 4,
      "d": 7,
-     "l": 0,
-     "gf": 16,
-     "ga": 7,
+     "l": 1,
+     "gf": 18,
+     "ga": 11,
      "pts": 19,
      "tid": 1342,
-     "form": "WDDDW"
+     "form": "DDDWL"
     },
     {
      "pos": 7,
@@ -1332,7 +1332,7 @@
      "form": "LDLLD"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "national-league",
@@ -1685,7 +1685,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "national-league-north-south",
@@ -1727,7 +1727,7 @@
    "groups": [
     {
      "name": "North",
-     "updated": "2026-10-24T00:00:00.000Z",
+     "updated": "2026-10-26T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2045,7 +2045,7 @@
     },
     {
      "name": "South",
-     "updated": "2026-10-24T00:00:00.000Z",
+     "updated": "2026-10-26T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2362,7 +2362,7 @@
      ]
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   }
  ]
 }
