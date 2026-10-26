@@ -46,6 +46,19 @@
       },
       {
        "pos": 2,
+       "team": "Vélez Sarsfield",
+       "p": 14,
+       "w": 7,
+       "d": 6,
+       "l": 1,
+       "gf": 23,
+       "ga": 13,
+       "pts": 27,
+       "tid": 438,
+       "form": "WDLWW"
+      },
+      {
+       "pos": 3,
        "team": "Boca Juniors",
        "p": 14,
        "w": 7,
@@ -58,7 +71,7 @@
        "form": "WWDWW"
       },
       {
-       "pos": 3,
+       "pos": 4,
        "team": "Defensa Y Justicia",
        "p": 14,
        "w": 8,
@@ -71,7 +84,7 @@
        "form": "DWWLW"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Lanús",
        "p": 14,
        "w": 7,
@@ -82,19 +95,6 @@
        "pts": 24,
        "tid": 446,
        "form": "WDWWD"
-      },
-      {
-       "pos": 5,
-       "team": "Vélez Sarsfield",
-       "p": 13,
-       "w": 6,
-       "d": 6,
-       "l": 1,
-       "gf": 18,
-       "ga": 13,
-       "pts": 24,
-       "tid": 438,
-       "form": "DWDLW"
       },
       {
        "pos": 6,
@@ -203,15 +203,15 @@
       {
        "pos": 14,
        "team": "Central Córdoba",
-       "p": 13,
+       "p": 14,
        "w": 2,
        "d": 4,
-       "l": 7,
+       "l": 8,
        "gf": 11,
-       "ga": 18,
+       "ga": 23,
        "pts": 10,
        "tid": 1065,
-       "form": "LDDDL"
+       "form": "DDDLL"
       },
       {
        "pos": 15,
@@ -299,6 +299,19 @@
       },
       {
        "pos": 6,
+       "team": "Barracas Central",
+       "p": 14,
+       "w": 6,
+       "d": 4,
+       "l": 4,
+       "gf": 13,
+       "ga": 11,
+       "pts": 22,
+       "tid": 2432,
+       "form": "LWWDW"
+      },
+      {
+       "pos": 7,
        "team": "Sarmiento",
        "p": 14,
        "w": 6,
@@ -309,19 +322,6 @@
        "pts": 21,
        "tid": 474,
        "form": "LWDDL"
-      },
-      {
-       "pos": 7,
-       "team": "Barracas Central",
-       "p": 13,
-       "w": 5,
-       "d": 4,
-       "l": 4,
-       "gf": 11,
-       "ga": 10,
-       "pts": 19,
-       "tid": 2432,
-       "form": "DLWWD"
       },
       {
        "pos": 8,
@@ -417,15 +417,15 @@
       {
        "pos": 15,
        "team": "Estudiantes (Río Cuarto)",
-       "p": 13,
+       "p": 14,
        "w": 2,
        "d": 3,
-       "l": 8,
-       "gf": 8,
-       "ga": 17,
+       "l": 9,
+       "gf": 9,
+       "ga": 19,
        "pts": 9,
        "tid": 2424,
-       "form": "LLLLW"
+       "form": "LLLWL"
       }
      ]
     }
