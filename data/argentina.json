@@ -4,7 +4,7 @@
  "adjective": "Argentine",
  "season": "2026",
  "mode": "live",
- "updated": "2026-10-25T00:00:00.000Z",
+ "updated": "2026-10-26T00:00:00.000Z",
  "belowNote": "Promoted clubs from Primera D come up",
  "leagues": [
   {
@@ -29,7 +29,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-26T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -230,7 +230,7 @@
     },
     {
      "name": "Group B",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-26T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -430,7 +430,7 @@
      ]
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "primera-nacional",
@@ -482,15 +482,15 @@
       {
        "pos": 2,
        "team": "Godoy Cruz",
-       "p": 34,
-       "w": 17,
+       "p": 35,
+       "w": 18,
        "d": 9,
        "l": 8,
-       "gf": 48,
+       "gf": 51,
        "ga": 32,
-       "pts": 60,
+       "pts": 63,
        "tid": 439,
-       "form": "WDWDW"
+       "form": "DWDWW"
       },
       {
        "pos": 3,
@@ -612,15 +612,15 @@
       {
        "pos": 12,
        "team": "Atlético Mitre",
-       "p": 34,
+       "p": 35,
        "w": 8,
        "d": 15,
-       "l": 11,
+       "l": 12,
        "gf": 31,
-       "ga": 39,
+       "ga": 42,
        "pts": 39,
        "tid": 466,
-       "form": "LLWDW"
+       "form": "LWDWL"
       },
       {
        "pos": 13,
@@ -637,6 +637,19 @@
       },
       {
        "pos": 14,
+       "team": "Central Norte",
+       "p": 35,
+       "w": 7,
+       "d": 17,
+       "l": 11,
+       "gf": 23,
+       "ga": 31,
+       "pts": 38,
+       "tid": 1951,
+       "form": "DDDWD"
+      },
+      {
+       "pos": 15,
        "team": "All Boys",
        "p": 35,
        "w": 7,
@@ -649,7 +662,7 @@
        "form": "DLDDW"
       },
       {
-       "pos": 15,
+       "pos": 16,
        "team": "San Telmo",
        "p": 35,
        "w": 9,
@@ -662,30 +675,17 @@
        "form": "WWLDL"
       },
       {
-       "pos": 16,
-       "team": "Central Norte",
-       "p": 34,
-       "w": 7,
-       "d": 16,
-       "l": 11,
-       "gf": 23,
-       "ga": 31,
-       "pts": 37,
-       "tid": 1951,
-       "form": "LDDDW"
-      },
-      {
        "pos": 17,
        "team": "Acassuso",
-       "p": 34,
+       "p": 35,
        "w": 8,
-       "d": 9,
+       "d": 10,
        "l": 17,
        "gf": 25,
        "ga": 35,
-       "pts": 33,
+       "pts": 34,
        "tid": 2425,
-       "form": "WWLWD"
+       "form": "WLWDD"
       },
       {
        "pos": 18,
@@ -760,32 +760,45 @@
       },
       {
        "pos": 5,
-       "team": "Gimnasia Y Tiro",
-       "p": 34,
-       "w": 14,
-       "d": 10,
-       "l": 10,
-       "gf": 37,
-       "ga": 31,
-       "pts": 52,
-       "tid": 1928,
-       "form": "LWLDW"
+       "team": "Midland",
+       "p": 35,
+       "w": 15,
+       "d": 9,
+       "l": 11,
+       "gf": 43,
+       "ga": 29,
+       "pts": 54,
+       "tid": 1963,
+       "form": "LDWLW"
       },
       {
        "pos": 6,
-       "team": "Midland",
-       "p": 34,
+       "team": "Gimnasia Y Tiro",
+       "p": 35,
        "w": 14,
-       "d": 9,
+       "d": 10,
        "l": 11,
-       "gf": 40,
-       "ga": 29,
-       "pts": 51,
-       "tid": 1963,
+       "gf": 37,
+       "ga": 34,
+       "pts": 52,
+       "tid": 1928,
        "form": "WLDWL"
       },
       {
        "pos": 7,
+       "team": "Deportivo Maipu",
+       "p": 35,
+       "w": 14,
+       "d": 9,
+       "l": 12,
+       "gf": 43,
+       "ga": 34,
+       "pts": 51,
+       "tid": 1954,
+       "form": "WWDLW"
+      },
+      {
+       "pos": 8,
        "team": "Colegiales",
        "p": 35,
        "w": 14,
@@ -796,19 +809,6 @@
        "pts": 51,
        "tid": 8377,
        "form": "WWDWD"
-      },
-      {
-       "pos": 8,
-       "team": "Deportivo Maipu",
-       "p": 34,
-       "w": 13,
-       "d": 9,
-       "l": 12,
-       "gf": 40,
-       "ga": 33,
-       "pts": 48,
-       "tid": 1954,
-       "form": "DWWDL"
       },
       {
        "pos": 9,
@@ -930,15 +930,15 @@
       {
        "pos": 18,
        "team": "Güemes",
-       "p": 34,
+       "p": 35,
        "w": 6,
        "d": 8,
-       "l": 20,
-       "gf": 25,
-       "ga": 57,
+       "l": 21,
+       "gf": 26,
+       "ga": 60,
        "pts": 26,
        "tid": 3969,
-       "form": "LLLLW"
+       "form": "LLLWL"
       }
      ]
     }
