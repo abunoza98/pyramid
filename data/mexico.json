@@ -28,18 +28,31 @@
     {
      "pos": 1,
      "team": "América",
-     "p": 12,
+     "p": 13,
      "w": 8,
      "d": 3,
-     "l": 1,
-     "gf": 32,
-     "ga": 16,
+     "l": 2,
+     "gf": 33,
+     "ga": 18,
      "pts": 27,
      "tid": 2287,
-     "form": "DWDWW"
+     "form": "WDWWL"
     },
     {
      "pos": 2,
+     "team": "Cruz Azul",
+     "p": 14,
+     "w": 8,
+     "d": 2,
+     "l": 4,
+     "gf": 32,
+     "ga": 23,
+     "pts": 26,
+     "tid": 2295,
+     "form": "DDWWW"
+    },
+    {
+     "pos": 3,
      "team": "Guadalajara",
      "p": 14,
      "w": 7,
@@ -52,7 +65,7 @@
      "form": "LDDWW"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Atlas",
      "p": 14,
      "w": 7,
@@ -65,7 +78,7 @@
      "form": "WDWLW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Toluca",
      "p": 14,
      "w": 6,
@@ -76,19 +89,6 @@
      "pts": 23,
      "tid": 2281,
      "form": "DLDDD"
-    },
-    {
-     "pos": 5,
-     "team": "Cruz Azul",
-     "p": 13,
-     "w": 7,
-     "d": 2,
-     "l": 4,
-     "gf": 29,
-     "ga": 22,
-     "pts": 23,
-     "tid": 2295,
-     "form": "LDDWW"
     },
     {
      "pos": 6,
@@ -119,15 +119,15 @@
     {
      "pos": 8,
      "team": "Querétaro",
-     "p": 12,
+     "p": 13,
      "w": 6,
      "d": 2,
-     "l": 4,
-     "gf": 16,
-     "ga": 15,
+     "l": 5,
+     "gf": 17,
+     "ga": 18,
      "pts": 20,
      "tid": 2290,
-     "form": "DWWLL"
+     "form": "WWLLL"
     },
     {
      "pos": 9,
@@ -183,6 +183,19 @@
     },
     {
      "pos": 13,
+     "team": "Pachuca",
+     "p": 14,
+     "w": 4,
+     "d": 4,
+     "l": 6,
+     "gf": 22,
+     "ga": 19,
+     "pts": 16,
+     "tid": 2292,
+     "form": "LDLLW"
+    },
+    {
+     "pos": 14,
      "team": "Puebla",
      "p": 14,
      "w": 4,
@@ -195,7 +208,7 @@
      "form": "LDDLL"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Tigres UANL",
      "p": 14,
      "w": 3,
@@ -208,7 +221,7 @@
      "form": "WWDLD"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Atlante",
      "p": 14,
      "w": 3,
@@ -219,19 +232,6 @@
      "pts": 14,
      "tid": 2312,
      "form": "WLLWL"
-    },
-    {
-     "pos": 16,
-     "team": "Pachuca",
-     "p": 13,
-     "w": 3,
-     "d": 4,
-     "l": 6,
-     "gf": 20,
-     "ga": 18,
-     "pts": 13,
-     "tid": 2292,
-     "form": "DLDLL"
     },
     {
      "pos": 17,
