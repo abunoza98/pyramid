@@ -4,7 +4,7 @@
  "adjective": "Turkish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-25T00:00:00.000Z",
+ "updated": "2026-10-26T00:00:00.000Z",
  "belowNote": "Regional amateur league champions come up",
  "leagues": [
   {
@@ -62,6 +62,19 @@
     },
     {
      "pos": 2,
+     "team": "Trabzonspor",
+     "p": 9,
+     "w": 6,
+     "d": 1,
+     "l": 2,
+     "gf": 22,
+     "ga": 8,
+     "pts": 19,
+     "tid": 998,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 3,
      "team": "Galatasaray",
      "p": 8,
      "w": 6,
@@ -74,7 +87,20 @@
      "form": "WWLWW"
     },
     {
-     "pos": 3,
+     "pos": 4,
+     "team": "Beşiktaş",
+     "p": 9,
+     "w": 6,
+     "d": 0,
+     "l": 3,
+     "gf": 18,
+     "ga": 10,
+     "pts": 18,
+     "tid": 549,
+     "form": "WLWLW"
+    },
+    {
+     "pos": 5,
      "team": "Fenerbahçe",
      "p": 8,
      "w": 5,
@@ -87,20 +113,7 @@
      "form": "LDWWW"
     },
     {
-     "pos": 4,
-     "team": "Trabzonspor",
-     "p": 8,
-     "w": 5,
-     "d": 1,
-     "l": 2,
-     "gf": 18,
-     "ga": 5,
-     "pts": 16,
-     "tid": 998,
-     "form": "WLWWW"
-    },
-    {
-     "pos": 5,
+     "pos": 6,
      "team": "Kasımpaşa",
      "p": 9,
      "w": 4,
@@ -111,19 +124,6 @@
      "pts": 16,
      "tid": 1004,
      "form": "WDLWW"
-    },
-    {
-     "pos": 6,
-     "team": "Beşiktaş",
-     "p": 8,
-     "w": 5,
-     "d": 0,
-     "l": 3,
-     "gf": 16,
-     "ga": 10,
-     "pts": 15,
-     "tid": 549,
-     "form": "WWLWL"
     },
     {
      "pos": 7,
@@ -193,28 +193,28 @@
     {
      "pos": 12,
      "team": "Başakşehir",
-     "p": 8,
+     "p": 9,
      "w": 3,
      "d": 2,
-     "l": 3,
+     "l": 4,
      "gf": 12,
-     "ga": 12,
+     "ga": 14,
      "pts": 11,
      "tid": 564,
-     "form": "LLWDW"
+     "form": "LWDWL"
     },
     {
      "pos": 13,
      "team": "Rizespor",
-     "p": 8,
+     "p": 9,
      "w": 3,
      "d": 1,
-     "l": 4,
-     "gf": 8,
-     "ga": 11,
+     "l": 5,
+     "gf": 11,
+     "ga": 15,
      "pts": 10,
      "tid": 1007,
-     "form": "LWDLL"
+     "form": "WDLLL"
     },
     {
      "pos": 14,
@@ -282,7 +282,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "1-lig",
@@ -578,7 +578,7 @@
      "form": "LLLL"
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "2-lig",
@@ -620,7 +620,7 @@
    "groups": [
     {
      "name": "White Group",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-26T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -863,7 +863,7 @@
     },
     {
      "name": "Red Group",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-26T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1093,7 +1093,7 @@
      ]
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "3-lig",
@@ -1109,7 +1109,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-26T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1349,7 +1349,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-26T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1589,7 +1589,7 @@
     },
     {
      "name": "Group 3",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-26T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1828,7 +1828,7 @@
      ]
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   }
  ]
 }
