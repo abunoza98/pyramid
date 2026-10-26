@@ -530,6 +530,7 @@
    "notes": [
     "Atlético Saltillo: 1 point deducted.",
     "Real Refineros: 1 point deducted.",
+    "Real Apodaca: 1 point deducted.",
     "Ciervos: 1 point deducted."
    ],
    "rows": [
@@ -653,15 +654,15 @@
     {
      "pos": 5,
      "team": "Halcones Negros",
-     "p": 8,
+     "p": 9,
      "w": 4,
      "d": 1,
-     "l": 3,
-     "gf": 20,
-     "ga": 12,
+     "l": 4,
+     "gf": 21,
+     "ga": 14,
      "pts": 14,
      "tid": 28305,
-     "form": "LWWWL"
+     "form": "WWWLL"
     },
     {
      "pos": 6,
@@ -679,28 +680,28 @@
     {
      "pos": 6,
      "team": "Guerreros del Pacifico",
-     "p": 8,
+     "p": 9,
      "w": 3,
      "d": 1,
-     "l": 4,
-     "gf": 12,
-     "ga": 14,
-     "pts": 13,
+     "l": 5,
+     "gf": 15,
+     "ga": 17,
+     "pts": 14,
      "tid": 28304,
-     "form": "WDLLW"
+     "form": "DLLWL"
     },
     {
      "pos": 7,
      "team": "Guerreros",
-     "p": 7,
-     "w": 2,
+     "p": 8,
+     "w": 3,
      "d": 2,
      "l": 3,
-     "gf": 10,
-     "ga": 12,
-     "pts": 9,
+     "gf": 12,
+     "ga": 13,
+     "pts": 12,
      "tid": 26426,
-     "form": "WLWDD"
+     "form": "LWDDW"
     },
     {
      "pos": 7,
@@ -746,15 +747,16 @@
     {
      "pos": 9,
      "team": "Real Apodaca",
-     "p": 8,
-     "w": 1,
+     "p": 9,
+     "w": 2,
      "d": 1,
      "l": 6,
-     "gf": 7,
-     "ga": 16,
-     "pts": 4,
+     "gf": 10,
+     "ga": 19,
+     "pts": 6,
+     "ded": 1,
      "tid": 22047,
-     "form": "WLLLL"
+     "form": "LLLLW"
     },
     {
      "pos": 9,
@@ -797,7 +799,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   }
  ]
 }
