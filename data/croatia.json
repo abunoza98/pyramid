@@ -4,7 +4,7 @@
  "adjective": "Croatian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-25T00:00:00.000Z",
+ "updated": "2026-10-26T00:00:00.000Z",
  "belowNote": "Treća NL champions come up",
  "leagues": [
   {
@@ -181,7 +181,7 @@
      "form": "DWLDD"
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "prva-nl",
@@ -256,19 +256,32 @@
     },
     {
      "pos": 4,
-     "team": "Jadran LP",
-     "p": 9,
-     "w": 4,
-     "d": 4,
-     "l": 1,
-     "gf": 17,
-     "ga": 12,
-     "pts": 16,
-     "tid": 5708,
-     "form": "WWWDD"
+     "team": "Mladost Ždralovi",
+     "p": 10,
+     "w": 5,
+     "d": 2,
+     "l": 3,
+     "gf": 10,
+     "ga": 10,
+     "pts": 17,
+     "tid": 8593,
+     "form": "LLWLW"
     },
     {
      "pos": 5,
+     "team": "Jadran LP",
+     "p": 10,
+     "w": 4,
+     "d": 4,
+     "l": 2,
+     "gf": 17,
+     "ga": 13,
+     "pts": 16,
+     "tid": 5708,
+     "form": "WWDDL"
+    },
+    {
+     "pos": 6,
      "team": "Cibalia",
      "p": 10,
      "w": 4,
@@ -281,7 +294,7 @@
      "form": "WWLLW"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Orijent 1919",
      "p": 10,
      "w": 4,
@@ -294,7 +307,7 @@
      "form": "WLWDW"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Opatija",
      "p": 10,
      "w": 4,
@@ -305,19 +318,6 @@
      "pts": 14,
      "tid": 6246,
      "form": "LWDWW"
-    },
-    {
-     "pos": 8,
-     "team": "Mladost Ždralovi",
-     "p": 9,
-     "w": 4,
-     "d": 2,
-     "l": 3,
-     "gf": 9,
-     "ga": 10,
-     "pts": 14,
-     "tid": 8593,
-     "form": "WLLWL"
     },
     {
      "pos": 9,
@@ -424,7 +424,7 @@
      "form": "WWLLD"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "druga-nl",
@@ -658,7 +658,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   }
  ]
 }
