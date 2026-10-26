@@ -53,6 +53,19 @@
     },
     {
      "pos": 3,
+     "team": "Atlas",
+     "p": 14,
+     "w": 7,
+     "d": 3,
+     "l": 4,
+     "gf": 25,
+     "ga": 26,
+     "pts": 24,
+     "tid": 2283,
+     "form": "WDWLW"
+    },
+    {
+     "pos": 4,
      "team": "Toluca",
      "p": 14,
      "w": 6,
@@ -65,7 +78,7 @@
      "form": "DLDDD"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Cruz Azul",
      "p": 13,
      "w": 7,
@@ -78,7 +91,7 @@
      "form": "LDDWW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "León",
      "p": 14,
      "w": 6,
@@ -89,19 +102,6 @@
      "pts": 22,
      "tid": 2289,
      "form": "WDLWD"
-    },
-    {
-     "pos": 6,
-     "team": "Atlas",
-     "p": 13,
-     "w": 6,
-     "d": 3,
-     "l": 4,
-     "gf": 21,
-     "ga": 23,
-     "pts": 21,
-     "tid": 2283,
-     "form": "DWDWL"
     },
     {
      "pos": 7,
@@ -184,15 +184,15 @@
     {
      "pos": 13,
      "team": "Puebla",
-     "p": 13,
+     "p": 14,
      "w": 4,
      "d": 4,
-     "l": 5,
-     "gf": 13,
-     "ga": 17,
+     "l": 6,
+     "gf": 16,
+     "ga": 21,
      "pts": 16,
      "tid": 2291,
-     "form": "DLDDL"
+     "form": "LDDLL"
     },
     {
      "pos": 14,
@@ -307,6 +307,19 @@
     },
     {
      "pos": 3,
+     "team": "Monarcas",
+     "p": 14,
+     "w": 8,
+     "d": 2,
+     "l": 4,
+     "gf": 25,
+     "ga": 16,
+     "pts": 26,
+     "tid": 2284,
+     "form": "LDDLW"
+    },
+    {
+     "pos": 4,
      "team": "Piratas",
      "p": 14,
      "w": 7,
@@ -319,7 +332,7 @@
      "form": "LWLWW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Venados FC",
      "p": 14,
      "w": 7,
@@ -330,19 +343,6 @@
      "pts": 24,
      "tid": 2311,
      "form": "WWDDW"
-    },
-    {
-     "pos": 5,
-     "team": "Monarcas",
-     "p": 13,
-     "w": 7,
-     "d": 2,
-     "l": 4,
-     "gf": 23,
-     "ga": 15,
-     "pts": 23,
-     "tid": 2284,
-     "form": "WLDDL"
     },
     {
      "pos": 6,
@@ -412,15 +412,15 @@
     {
      "pos": 11,
      "team": "Tapatío",
-     "p": 13,
+     "p": 14,
      "w": 5,
      "d": 2,
-     "l": 6,
-     "gf": 23,
-     "ga": 25,
+     "l": 7,
+     "gf": 24,
+     "ga": 27,
      "pts": 17,
      "tid": 14278,
-     "form": "WLLWL"
+     "form": "LLWLL"
     },
     {
      "pos": 12,
