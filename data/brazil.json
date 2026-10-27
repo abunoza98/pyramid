@@ -4,7 +4,7 @@
  "adjective": "Brazilian",
  "season": "2026",
  "mode": "live",
- "updated": "2026-10-25T00:00:00.000Z",
+ "updated": "2026-10-27T00:00:00.000Z",
  "belowNote": "Clubs qualify for Série D through their state championships",
  "leagues": [
   {
@@ -302,7 +302,7 @@
      "form": "DLLLW"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "serie-b",
@@ -492,15 +492,15 @@
     {
      "pos": 13,
      "team": "Cuiabá",
-     "p": 34,
+     "p": 35,
      "w": 11,
      "d": 14,
-     "l": 9,
+     "l": 10,
      "gf": 32,
-     "ga": 27,
+     "ga": 28,
      "pts": 47,
      "tid": 1193,
-     "form": "LWDLL"
+     "form": "WDLLL"
     },
     {
      "pos": 14,
@@ -570,15 +570,15 @@
     {
      "pos": 19,
      "team": "América Mineiro",
-     "p": 34,
-     "w": 5,
+     "p": 35,
+     "w": 6,
      "d": 5,
      "l": 24,
-     "gf": 22,
+     "gf": 23,
      "ga": 54,
-     "pts": 20,
+     "pts": 23,
      "tid": 125,
-     "form": "LLLLW"
+     "form": "LLLWW"
     },
     {
      "pos": 20,
@@ -594,7 +594,7 @@
      "form": "LLLDD"
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-27T00:00:00.000Z"
   },
   {
    "id": "serie-c",
@@ -616,7 +616,7 @@
    "groups": [
     {
      "name": "First stage",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-26T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -882,7 +882,7 @@
     },
     {
      "name": "Second stage - Group A",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-26T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -940,7 +940,7 @@
     },
     {
      "name": "Second stage - Group B",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-26T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -997,7 +997,7 @@
      ]
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "serie-d",
