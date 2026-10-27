@@ -4,7 +4,7 @@
  "adjective": "Scottish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-25T00:00:00.000Z",
+ "updated": "2026-10-27T00:00:00.000Z",
  "belowNote": "The Highland/Lowland League play-off winner can come up",
  "leagues": [
   {
@@ -189,7 +189,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "scottish-championship",
@@ -242,15 +242,15 @@
     {
      "pos": 2,
      "team": "Stenhousemuir",
-     "p": 11,
+     "p": 12,
      "w": 7,
      "d": 2,
-     "l": 2,
+     "l": 3,
      "gf": 13,
-     "ga": 8,
+     "ga": 9,
      "pts": 23,
      "tid": 6784,
-     "form": "WWLDL"
+     "form": "WLDLL"
     },
     {
      "pos": 3,
@@ -267,6 +267,19 @@
     },
     {
      "pos": 4,
+     "team": "Dunfermline",
+     "p": 12,
+     "w": 5,
+     "d": 6,
+     "l": 1,
+     "gf": 10,
+     "ga": 6,
+     "pts": 21,
+     "tid": 1388,
+     "form": "DDDWW"
+    },
+    {
+     "pos": 5,
      "team": "Inverness Caledonian Thistle",
      "p": 12,
      "w": 5,
@@ -277,19 +290,6 @@
      "pts": 19,
      "tid": 903,
      "form": "WWLWW"
-    },
-    {
-     "pos": 5,
-     "team": "Dunfermline",
-     "p": 11,
-     "w": 4,
-     "d": 6,
-     "l": 1,
-     "gf": 9,
-     "ga": 6,
-     "pts": 18,
-     "tid": 1388,
-     "form": "WDDDW"
     },
     {
      "pos": 6,
@@ -357,7 +357,7 @@
      "form": "LLWLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-27T00:00:00.000Z"
   },
   {
    "id": "scottish-league-one",
@@ -397,28 +397,28 @@
     {
      "pos": 1,
      "team": "Ross County",
-     "p": 11,
+     "p": 12,
      "w": 10,
-     "d": 1,
+     "d": 2,
      "l": 0,
-     "gf": 42,
-     "ga": 6,
-     "pts": 31,
+     "gf": 43,
+     "ga": 7,
+     "pts": 32,
      "tid": 902,
-     "form": "WWWWW"
+     "form": "WWWWD"
     },
     {
      "pos": 2,
      "team": "Hamilton Academical",
-     "p": 11,
+     "p": 12,
      "w": 10,
-     "d": 1,
+     "d": 2,
      "l": 0,
-     "gf": 25,
-     "ga": 4,
-     "pts": 31,
+     "gf": 26,
+     "ga": 5,
+     "pts": 32,
      "tid": 248,
-     "form": "WWWWW"
+     "form": "WWWWD"
     },
     {
      "pos": 3,
@@ -525,7 +525,7 @@
      "form": "LLDL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-27T00:00:00.000Z"
   },
   {
    "id": "scottish-league-two",
