@@ -4,7 +4,7 @@
  "adjective": "Italian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-26T00:00:00.000Z",
+ "updated": "2026-10-27T00:00:00.000Z",
  "belowNote": "Serie D group winners come up",
  "leagues": [
   {
@@ -302,7 +302,7 @@
      "form": "LLLWL"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-27T00:00:00.000Z"
   },
   {
    "id": "serie-b",
@@ -1184,7 +1184,7 @@
     },
     {
      "name": "Girone C",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-27T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1266,19 +1266,32 @@
       },
       {
        "pos": 7,
-       "team": "Scafatese",
-       "p": 10,
-       "w": 4,
-       "d": 5,
-       "l": 1,
-       "gf": 16,
-       "ga": 13,
+       "team": "Inter Milan U23",
+       "p": 11,
+       "w": 5,
+       "d": 2,
+       "l": 4,
+       "gf": 21,
+       "ga": 19,
        "pts": 17,
-       "tid": 24701,
-       "form": "DWWDW"
+       "tid": 26355,
+       "form": "LWLDW"
       },
       {
        "pos": 8,
+       "team": "Scafatese",
+       "p": 11,
+       "w": 4,
+       "d": 5,
+       "l": 2,
+       "gf": 17,
+       "ga": 15,
+       "pts": 17,
+       "tid": 24701,
+       "form": "WWDWL"
+      },
+      {
+       "pos": 9,
        "team": "Casertana",
        "p": 11,
        "w": 4,
@@ -1291,7 +1304,7 @@
        "form": "LLWDD"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Cavese",
        "p": 11,
        "w": 4,
@@ -1304,7 +1317,7 @@
        "form": "WWDWL"
       },
       {
-       "pos": 10,
+       "pos": 11,
        "team": "Picerno",
        "p": 11,
        "w": 5,
@@ -1315,19 +1328,6 @@
        "pts": 15,
        "tid": 1587,
        "form": "WLLLW"
-      },
-      {
-       "pos": 11,
-       "team": "Inter Milan U23",
-       "p": 10,
-       "w": 4,
-       "d": 2,
-       "l": 4,
-       "gf": 19,
-       "ga": 18,
-       "pts": 14,
-       "tid": 26355,
-       "form": "WLWLD"
       },
       {
        "pos": 12,
@@ -1450,7 +1450,7 @@
      ]
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-27T00:00:00.000Z"
   }
  ]
 }
