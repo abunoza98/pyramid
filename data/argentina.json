@@ -1199,6 +1199,19 @@
     },
     {
      "pos": 18,
+     "team": "Defensores Unidos",
+     "p": 41,
+     "w": 10,
+     "d": 15,
+     "l": 16,
+     "gf": 34,
+     "ga": 40,
+     "pts": 45,
+     "tid": 1945,
+     "form": "WDLDW"
+    },
+    {
+     "pos": 19,
      "team": "Liniers",
      "p": 41,
      "w": 10,
@@ -1211,30 +1224,17 @@
      "form": "LWDDL"
     },
     {
-     "pos": 19,
+     "pos": 20,
      "team": "Brown de Adrogué",
-     "p": 40,
+     "p": 41,
      "w": 9,
      "d": 16,
-     "l": 15,
+     "l": 16,
      "gf": 25,
-     "ga": 37,
+     "ga": 38,
      "pts": 43,
      "tid": 468,
-     "form": "DWDWD"
-    },
-    {
-     "pos": 20,
-     "team": "Defensores Unidos",
-     "p": 40,
-     "w": 9,
-     "d": 15,
-     "l": 16,
-     "gf": 33,
-     "ga": 40,
-     "pts": 42,
-     "tid": 1945,
-     "form": "LWDLD"
+     "form": "WDWDL"
     },
     {
      "pos": 21,

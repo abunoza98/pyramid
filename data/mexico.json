@@ -488,7 +488,7 @@
      "form": "WDLLL"
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-26T00:00:00.000Z"
   },
   {
    "id": "liga-premier",
@@ -575,16 +575,16 @@
     },
     {
      "pos": 2,
-     "team": "Artesanos Metepec",
+     "team": "Acambaro",
      "p": 9,
      "w": 6,
-     "d": 2,
-     "l": 1,
-     "gf": 17,
-     "ga": 7,
+     "d": 1,
+     "l": 2,
+     "gf": 29,
+     "ga": 10,
      "pts": 21,
-     "tid": 22049,
-     "form": "WWDDL"
+     "tid": 22051,
+     "form": "LLWWW"
     },
     {
      "pos": 3,
@@ -601,16 +601,16 @@
     },
     {
      "pos": 3,
-     "team": "Acambaro",
+     "team": "Artesanos Metepec",
      "p": 9,
      "w": 6,
-     "d": 1,
-     "l": 2,
-     "gf": 29,
-     "ga": 10,
-     "pts": 20,
-     "tid": 22051,
-     "form": "LLWWW"
+     "d": 2,
+     "l": 1,
+     "gf": 17,
+     "ga": 7,
+     "pts": 21,
+     "tid": 22049,
+     "form": "WWDDL"
     },
     {
      "pos": 4,
