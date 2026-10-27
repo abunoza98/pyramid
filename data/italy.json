@@ -43,6 +43,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Lazio",
+     "p": 9,
+     "w": 8,
+     "d": 1,
+     "l": 0,
+     "gf": 22,
+     "ga": 7,
+     "pts": 25,
+     "tid": 487,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
      "team": "Inter Milan",
      "p": 8,
      "w": 7,
@@ -53,19 +66,6 @@
      "pts": 22,
      "tid": 505,
      "form": "WDWWW"
-    },
-    {
-     "pos": 2,
-     "team": "Lazio",
-     "p": 8,
-     "w": 7,
-     "d": 1,
-     "l": 0,
-     "gf": 16,
-     "ga": 5,
-     "pts": 22,
-     "tid": 487,
-     "form": "DWWWW"
     },
     {
      "pos": 3,
@@ -213,15 +213,15 @@
     {
      "pos": 14,
      "team": "Sassuolo",
-     "p": 8,
+     "p": 9,
      "w": 2,
      "d": 2,
-     "l": 4,
-     "gf": 12,
-     "ga": 16,
+     "l": 5,
+     "gf": 14,
+     "ga": 22,
      "pts": 8,
      "tid": 488,
-     "form": "WLDLL"
+     "form": "LDLLL"
     },
     {
      "pos": 15,
@@ -397,15 +397,15 @@
     {
      "pos": 5,
      "team": "Benevento",
-     "p": 8,
+     "p": 9,
      "w": 4,
-     "d": 2,
+     "d": 3,
      "l": 2,
-     "gf": 13,
-     "ga": 7,
-     "pts": 14,
+     "gf": 14,
+     "ga": 8,
+     "pts": 15,
      "tid": 506,
-     "form": "WWWDW"
+     "form": "WWDWD"
     },
     {
      "pos": 6,
@@ -593,18 +593,18 @@
     {
      "pos": 20,
      "team": "Catanzaro",
-     "p": 8,
+     "p": 9,
      "w": 1,
-     "d": 1,
+     "d": 2,
      "l": 6,
-     "gf": 9,
-     "ga": 20,
-     "pts": 4,
+     "gf": 10,
+     "ga": 21,
+     "pts": 5,
      "tid": 1687,
-     "form": "WLLDL"
+     "form": "LLDLD"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-27T00:00:00.000Z"
   },
   {
    "id": "serie-c",

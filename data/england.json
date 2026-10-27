@@ -4,7 +4,7 @@
  "adjective": "English",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-26T00:00:00.000Z",
+ "updated": "2026-10-27T00:00:00.000Z",
  "belowNote": "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
  "leagues": [
   {
@@ -988,7 +988,7 @@
      "form": "LLWLL"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-27T00:00:00.000Z"
   },
   {
    "id": "league-two",
@@ -1332,7 +1332,7 @@
      "form": "LDLLD"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-27T00:00:00.000Z"
   },
   {
    "id": "national-league",
@@ -1685,7 +1685,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-27T00:00:00.000Z"
   },
   {
    "id": "national-league-north-south",
@@ -1727,7 +1727,7 @@
    "groups": [
     {
      "name": "North",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-27T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2045,7 +2045,7 @@
     },
     {
      "name": "South",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-27T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2123,7 +2123,7 @@
        "ga": 14,
        "pts": 21,
        "tid": 4678,
-       "form": "DWWW"
+       "form": "WDWWW"
       },
       {
        "pos": 7,
@@ -2201,7 +2201,7 @@
        "ga": 17,
        "pts": 18,
        "tid": 4687,
-       "form": "WLDL"
+       "form": "WWLDL"
       },
       {
        "pos": 13,
@@ -2362,7 +2362,7 @@
      ]
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-27T00:00:00.000Z"
   }
  ]
 }
