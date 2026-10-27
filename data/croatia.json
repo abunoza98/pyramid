@@ -4,7 +4,7 @@
  "adjective": "Croatian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-26T00:00:00.000Z",
+ "updated": "2026-10-27T00:00:00.000Z",
  "belowNote": "Treća NL champions come up",
  "leagues": [
   {
@@ -66,15 +66,15 @@
     {
      "pos": 2,
      "team": "Dinamo Zagreb",
-     "p": 9,
-     "w": 6,
+     "p": 10,
+     "w": 7,
      "d": 1,
      "l": 2,
-     "gf": 23,
-     "ga": 12,
-     "pts": 19,
+     "gf": 25,
+     "ga": 13,
+     "pts": 22,
      "tid": 620,
-     "form": "WLWLW"
+     "form": "LWLWW"
     },
     {
      "pos": 3,
@@ -91,19 +91,6 @@
     },
     {
      "pos": 4,
-     "team": "Rijeka",
-     "p": 9,
-     "w": 5,
-     "d": 2,
-     "l": 2,
-     "gf": 16,
-     "ga": 12,
-     "pts": 17,
-     "tid": 561,
-     "form": "WDWLW"
-    },
-    {
-     "pos": 5,
      "team": "Osijek",
      "p": 11,
      "w": 5,
@@ -114,6 +101,19 @@
      "pts": 17,
      "tid": 616,
      "form": "WDLDL"
+    },
+    {
+     "pos": 5,
+     "team": "Rijeka",
+     "p": 10,
+     "w": 5,
+     "d": 2,
+     "l": 3,
+     "gf": 17,
+     "ga": 14,
+     "pts": 17,
+     "tid": 561,
+     "form": "DWLWL"
     },
     {
      "pos": 6,
@@ -181,7 +181,7 @@
      "form": "DWLDD"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-27T00:00:00.000Z"
   },
   {
    "id": "prva-nl",
