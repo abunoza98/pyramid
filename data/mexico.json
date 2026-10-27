@@ -614,16 +614,16 @@
     },
     {
      "pos": 4,
-     "team": "Vaqueros Reynosa",
+     "team": "FC Santiago",
      "p": 9,
      "w": 5,
      "d": 1,
      "l": 3,
-     "gf": 15,
-     "ga": 14,
-     "pts": 16,
-     "tid": 28308,
-     "form": "WWWLL"
+     "gf": 20,
+     "ga": 7,
+     "pts": 17,
+     "tid": 22055,
+     "form": "LDWWW"
     },
     {
      "pos": 4,
@@ -640,16 +640,16 @@
     },
     {
      "pos": 5,
-     "team": "Correcaminos UAT II",
+     "team": "Vaqueros Reynosa",
      "p": 9,
-     "w": 4,
-     "d": 2,
+     "w": 5,
+     "d": 1,
      "l": 3,
-     "gf": 12,
-     "ga": 11,
-     "pts": 15,
-     "tid": 17782,
-     "form": "WWWWL"
+     "gf": 15,
+     "ga": 14,
+     "pts": 16,
+     "tid": 28308,
+     "form": "WWWLL"
     },
     {
      "pos": 5,
@@ -666,16 +666,16 @@
     },
     {
      "pos": 6,
-     "team": "FC Santiago",
-     "p": 8,
+     "team": "Correcaminos UAT II",
+     "p": 9,
      "w": 4,
-     "d": 1,
+     "d": 2,
      "l": 3,
-     "gf": 14,
-     "ga": 7,
-     "pts": 14,
-     "tid": 22055,
-     "form": "WLDWW"
+     "gf": 12,
+     "ga": 11,
+     "pts": 15,
+     "tid": 17782,
+     "form": "WWWWL"
     },
     {
      "pos": 6,
@@ -733,16 +733,16 @@
     {
      "pos": 8,
      "team": "Real Refineros",
-     "p": 8,
+     "p": 9,
      "w": 3,
      "d": 1,
-     "l": 4,
+     "l": 5,
      "gf": 14,
-     "ga": 16,
+     "ga": 22,
      "pts": 9,
      "ded": 1,
      "tid": 28307,
-     "form": "WLLLW"
+     "form": "LLLWL"
     },
     {
      "pos": 9,
