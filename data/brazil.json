@@ -43,6 +43,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Flamengo",
+     "p": 32,
+     "w": 21,
+     "d": 7,
+     "l": 4,
+     "gf": 64,
+     "ga": 27,
+     "pts": 70,
+     "tid": 127,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 2,
      "team": "Palmeiras",
      "p": 32,
      "w": 20,
@@ -53,19 +66,6 @@
      "pts": 69,
      "tid": 121,
      "form": "DWWWW"
-    },
-    {
-     "pos": 2,
-     "team": "Flamengo",
-     "p": 31,
-     "w": 20,
-     "d": 7,
-     "l": 4,
-     "gf": 61,
-     "ga": 25,
-     "pts": 67,
-     "tid": 127,
-     "form": "WWDWW"
     },
     {
      "pos": 3,
@@ -109,15 +109,15 @@
     {
      "pos": 6,
      "team": "Atlético Mineiro",
-     "p": 31,
+     "p": 32,
      "w": 14,
      "d": 8,
-     "l": 9,
-     "gf": 42,
-     "ga": 35,
+     "l": 10,
+     "gf": 44,
+     "ga": 38,
      "pts": 50,
      "tid": 1062,
-     "form": "DWDWW"
+     "form": "WDWWL"
     },
     {
      "pos": 7,
@@ -187,15 +187,15 @@
     {
      "pos": 12,
      "team": "Coritiba",
-     "p": 31,
+     "p": 32,
      "w": 10,
      "d": 9,
-     "l": 12,
+     "l": 13,
      "gf": 38,
-     "ga": 49,
+     "ga": 50,
      "pts": 39,
      "tid": 147,
-     "form": "DLLDL"
+     "form": "LLDLL"
     },
     {
      "pos": 13,
@@ -251,6 +251,19 @@
     },
     {
      "pos": 17,
+     "team": "Grêmio",
+     "p": 32,
+     "w": 8,
+     "d": 10,
+     "l": 14,
+     "gf": 35,
+     "ga": 44,
+     "pts": 34,
+     "tid": 130,
+     "form": "DDDLW"
+    },
+    {
+     "pos": 18,
      "team": "Corinthians",
      "p": 32,
      "w": 8,
@@ -261,19 +274,6 @@
      "pts": 33,
      "tid": 131,
      "form": "LLLDL"
-    },
-    {
-     "pos": 18,
-     "team": "Grêmio",
-     "p": 31,
-     "w": 7,
-     "d": 10,
-     "l": 14,
-     "gf": 34,
-     "ga": 44,
-     "pts": 31,
-     "tid": 130,
-     "form": "LDDDL"
     },
     {
      "pos": 19,
