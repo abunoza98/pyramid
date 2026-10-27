@@ -485,6 +485,19 @@
     },
     {
      "pos": 13,
+     "team": "Torreense",
+     "p": 8,
+     "w": 2,
+     "d": 3,
+     "l": 3,
+     "gf": 8,
+     "ga": 10,
+     "pts": 9,
+     "tid": 4799,
+     "form": "LWDLW"
+    },
+    {
+     "pos": 14,
      "team": "Chaves",
      "p": 8,
      "w": 2,
@@ -497,7 +510,7 @@
      "form": "LWLDW"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "FC Porto B",
      "p": 8,
      "w": 2,
@@ -510,7 +523,7 @@
      "form": "LLDWD"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Felgueiras 1932",
      "p": 8,
      "w": 1,
@@ -523,30 +536,17 @@
      "form": "WLLLD"
     },
     {
-     "pos": 16,
-     "team": "Torreense",
-     "p": 7,
-     "w": 1,
-     "d": 3,
-     "l": 3,
-     "gf": 7,
-     "ga": 10,
-     "pts": 6,
-     "tid": 4799,
-     "form": "DLWDL"
-    },
-    {
      "pos": 17,
      "team": "Amarante",
-     "p": 7,
+     "p": 8,
      "w": 1,
      "d": 2,
-     "l": 4,
+     "l": 5,
      "gf": 6,
-     "ga": 10,
+     "ga": 11,
      "pts": 5,
      "tid": 4725,
-     "form": "DWLDL"
+     "form": "WLDLL"
     },
     {
      "pos": 18,

@@ -4,7 +4,7 @@
  "adjective": "Argentine",
  "season": "2026",
  "mode": "live",
- "updated": "2026-10-26T00:00:00.000Z",
+ "updated": "2026-10-27T00:00:00.000Z",
  "belowNote": "Promoted clubs from Primera D come up",
  "leagues": [
   {
@@ -29,7 +29,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-27T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -150,29 +150,29 @@
       },
       {
        "pos": 10,
-       "team": "Estudiantes",
-       "p": 13,
-       "w": 4,
+       "team": "Unión",
+       "p": 14,
+       "w": 5,
        "d": 2,
        "l": 7,
-       "gf": 16,
-       "ga": 15,
-       "pts": 14,
-       "tid": 450,
-       "form": "WLWDL"
+       "gf": 21,
+       "ga": 23,
+       "pts": 17,
+       "tid": 441,
+       "form": "LLLDW"
       },
       {
        "pos": 11,
-       "team": "Unión",
-       "p": 13,
+       "team": "Estudiantes",
+       "p": 14,
        "w": 4,
        "d": 2,
-       "l": 7,
-       "gf": 18,
-       "ga": 22,
+       "l": 8,
+       "gf": 17,
+       "ga": 18,
        "pts": 14,
-       "tid": 441,
-       "form": "LLLLD"
+       "tid": 450,
+       "form": "LWDLL"
       },
       {
        "pos": 12,
@@ -230,7 +230,7 @@
     },
     {
      "name": "Group B",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-27T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -430,7 +430,7 @@
      ]
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-27T00:00:00.000Z"
   },
   {
    "id": "primera-nacional",
