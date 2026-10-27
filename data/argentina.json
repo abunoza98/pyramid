@@ -34,15 +34,15 @@
       {
        "pos": 1,
        "team": "Instituto",
-       "p": 13,
-       "w": 9,
+       "p": 14,
+       "w": 10,
        "d": 2,
        "l": 2,
-       "gf": 20,
+       "gf": 21,
        "ga": 10,
-       "pts": 29,
+       "pts": 32,
        "tid": 478,
-       "form": "WWWDW"
+       "form": "WWDWW"
       },
       {
        "pos": 2,
@@ -190,15 +190,15 @@
       {
        "pos": 13,
        "team": "Deportivo Riestra",
-       "p": 13,
+       "p": 14,
        "w": 2,
        "d": 6,
-       "l": 5,
+       "l": 6,
        "gf": 10,
-       "ga": 13,
+       "ga": 14,
        "pts": 12,
        "tid": 476,
-       "form": "LDDLD"
+       "form": "DDLDL"
       },
       {
        "pos": 14,
