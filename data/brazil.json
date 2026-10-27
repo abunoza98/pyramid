@@ -348,6 +348,19 @@
     },
     {
      "pos": 2,
+     "team": "Juventude",
+     "p": 35,
+     "w": 18,
+     "d": 10,
+     "l": 7,
+     "gf": 45,
+     "ga": 23,
+     "pts": 64,
+     "tid": 152,
+     "form": "WWDDW"
+    },
+    {
+     "pos": 3,
      "team": "Vila Nova",
      "p": 35,
      "w": 18,
@@ -358,19 +371,6 @@
      "pts": 62,
      "tid": 142,
      "form": "WDWDL"
-    },
-    {
-     "pos": 3,
-     "team": "Juventude",
-     "p": 34,
-     "w": 17,
-     "d": 10,
-     "l": 7,
-     "gf": 41,
-     "ga": 23,
-     "pts": 61,
-     "tid": 152,
-     "form": "WWWDD"
     },
     {
      "pos": 4,
@@ -517,19 +517,6 @@
     },
     {
      "pos": 15,
-     "team": "Náutico",
-     "p": 34,
-     "w": 11,
-     "d": 10,
-     "l": 13,
-     "gf": 39,
-     "ga": 42,
-     "pts": 43,
-     "tid": 755,
-     "form": "WDLLD"
-    },
-    {
-     "pos": 16,
      "team": "Ceará",
      "p": 34,
      "w": 11,
@@ -540,6 +527,19 @@
      "pts": 43,
      "tid": 129,
      "form": "DWWLD"
+    },
+    {
+     "pos": 16,
+     "team": "Náutico",
+     "p": 35,
+     "w": 11,
+     "d": 10,
+     "l": 14,
+     "gf": 39,
+     "ga": 46,
+     "pts": 43,
+     "tid": 755,
+     "form": "DLLDL"
     },
     {
      "pos": 17,
