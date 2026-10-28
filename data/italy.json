@@ -4,7 +4,7 @@
  "adjective": "Italian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-27T00:00:00.000Z",
+ "updated": "2026-10-28T00:00:00.000Z",
  "belowNote": "Serie D group winners come up",
  "leagues": [
   {
@@ -302,7 +302,7 @@
      "form": "LLLWL"
     }
    ],
-   "updated": "2026-10-27T00:00:00.000Z"
+   "updated": "2026-10-28T00:00:00.000Z"
   },
   {
    "id": "serie-b",
@@ -604,7 +604,7 @@
      "form": "LLDLD"
     }
    ],
-   "updated": "2026-10-27T00:00:00.000Z"
+   "updated": "2026-10-28T00:00:00.000Z"
   },
   {
    "id": "serie-c",
@@ -652,7 +652,7 @@
    "groups": [
     {
      "name": "Girone A",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-28T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -918,7 +918,7 @@
     },
     {
      "name": "Girone B",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-28T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1052,6 +1052,19 @@
       },
       {
        "pos": 11,
+       "team": "Atalanta U23",
+       "p": 11,
+       "w": 5,
+       "d": 0,
+       "l": 6,
+       "gf": 13,
+       "ga": 16,
+       "pts": 15,
+       "tid": 22104,
+       "form": "LLWLW"
+      },
+      {
+       "pos": 12,
        "team": "Campobasso",
        "p": 11,
        "w": 4,
@@ -1064,7 +1077,7 @@
        "form": "WDLLW"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "Latina",
        "p": 11,
        "w": 3,
@@ -1077,7 +1090,7 @@
        "form": "DDWWD"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Pineto",
        "p": 11,
        "w": 3,
@@ -1090,7 +1103,7 @@
        "form": "LLDWW"
       },
       {
-       "pos": 14,
+       "pos": 15,
        "team": "Forlì",
        "p": 11,
        "w": 2,
@@ -1101,19 +1114,6 @@
        "pts": 12,
        "tid": 1688,
        "form": "DLDLD"
-      },
-      {
-       "pos": 15,
-       "team": "Atalanta U23",
-       "p": 10,
-       "w": 4,
-       "d": 0,
-       "l": 6,
-       "gf": 11,
-       "ga": 15,
-       "pts": 12,
-       "tid": 22104,
-       "form": "LLLWL"
       },
       {
        "pos": 16,
@@ -1170,21 +1170,21 @@
       {
        "pos": 20,
        "team": "Vis Pesaro",
-       "p": 10,
+       "p": 11,
        "w": 1,
        "d": 1,
-       "l": 8,
-       "gf": 10,
-       "ga": 24,
+       "l": 9,
+       "gf": 11,
+       "ga": 26,
        "pts": 4,
        "tid": 1708,
-       "form": "LWLLL"
+       "form": "WLLLL"
       }
      ]
     },
     {
      "name": "Girone C",
-     "updated": "2026-10-27T00:00:00.000Z",
+     "updated": "2026-10-28T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1450,7 +1450,7 @@
      ]
     }
    ],
-   "updated": "2026-10-27T00:00:00.000Z"
+   "updated": "2026-10-28T00:00:00.000Z"
   }
  ]
 }
