@@ -4,7 +4,7 @@
  "adjective": "Argentine",
  "season": "2026",
  "mode": "live",
- "updated": "2026-10-27T00:00:00.000Z",
+ "updated": "2026-10-28T00:00:00.000Z",
  "belowNote": "Promoted clubs from Primera D come up",
  "leagues": [
   {
@@ -29,7 +29,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-10-27T00:00:00.000Z",
+     "updated": "2026-10-28T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -230,7 +230,7 @@
     },
     {
      "name": "Group B",
-     "updated": "2026-10-27T00:00:00.000Z",
+     "updated": "2026-10-28T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -248,15 +248,15 @@
       {
        "pos": 2,
        "team": "Argentinos Juniors",
-       "p": 13,
-       "w": 7,
+       "p": 14,
+       "w": 8,
        "d": 4,
        "l": 2,
-       "gf": 17,
+       "gf": 18,
        "ga": 11,
-       "pts": 25,
+       "pts": 28,
        "tid": 458,
-       "form": "DLWDW"
+       "form": "LWDWW"
       },
       {
        "pos": 3,
@@ -339,15 +339,15 @@
       {
        "pos": 9,
        "team": "Independiente Rivadavia",
-       "p": 13,
+       "p": 14,
        "w": 5,
        "d": 4,
-       "l": 4,
+       "l": 5,
        "gf": 17,
-       "ga": 21,
+       "ga": 22,
        "pts": 19,
        "tid": 473,
-       "form": "WWDLD"
+       "form": "WDLDL"
       },
       {
        "pos": 10,
@@ -430,7 +430,7 @@
      ]
     }
    ],
-   "updated": "2026-10-27T00:00:00.000Z"
+   "updated": "2026-10-28T00:00:00.000Z"
   },
   {
    "id": "primera-nacional",
@@ -464,7 +464,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-27T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -704,7 +704,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-27T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -943,7 +943,7 @@
      ]
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-27T00:00:00.000Z"
   },
   {
    "id": "primera-b-metropolitana",
@@ -1263,7 +1263,7 @@
      "form": "LLDDL"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-27T00:00:00.000Z"
   },
   {
    "id": "primera-c",
@@ -1296,7 +1296,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-27T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1484,7 +1484,7 @@
     },
     {
      "name": "Group B",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-27T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1671,7 +1671,7 @@
      ]
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-27T00:00:00.000Z"
   }
  ]
 }
