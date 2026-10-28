@@ -4,7 +4,7 @@
  "adjective": "Scottish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-27T00:00:00.000Z",
+ "updated": "2026-10-28T00:00:00.000Z",
  "belowNote": "The Highland/Lowland League play-off winner can come up",
  "leagues": [
   {
@@ -35,15 +35,15 @@
     {
      "pos": 1,
      "team": "Celtic",
-     "p": 10,
+     "p": 11,
      "w": 9,
-     "d": 0,
+     "d": 1,
      "l": 1,
-     "gf": 25,
-     "ga": 6,
-     "pts": 27,
+     "gf": 27,
+     "ga": 8,
+     "pts": 28,
      "tid": 247,
-     "form": "WLWWW"
+     "form": "LWWWD"
     },
     {
      "pos": 2,
@@ -73,123 +73,123 @@
     },
     {
      "pos": 4,
-     "team": "Dundee United",
-     "p": 10,
-     "w": 4,
-     "d": 3,
-     "l": 3,
-     "gf": 14,
-     "ga": 14,
-     "pts": 15,
-     "tid": 1386,
-     "form": "DWWDW"
+     "team": "Dundee",
+     "p": 11,
+     "w": 5,
+     "d": 2,
+     "l": 4,
+     "gf": 17,
+     "ga": 13,
+     "pts": 17,
+     "tid": 253,
+     "form": "WWDLW"
     },
     {
      "pos": 5,
-     "team": "Dundee",
-     "p": 10,
+     "team": "Dundee United",
+     "p": 11,
      "w": 4,
-     "d": 2,
-     "l": 4,
-     "gf": 14,
-     "ga": 12,
-     "pts": 14,
-     "tid": 253,
-     "form": "LWWDL"
+     "d": 4,
+     "l": 3,
+     "gf": 16,
+     "ga": 16,
+     "pts": 16,
+     "tid": 1386,
+     "form": "WWDWD"
     },
     {
      "pos": 6,
-     "team": "St Mirren",
-     "p": 10,
+     "team": "Falkirk",
+     "p": 11,
      "w": 4,
-     "d": 1,
-     "l": 5,
-     "gf": 11,
-     "ga": 18,
-     "pts": 13,
-     "tid": 251,
-     "form": "LLLLW"
+     "d": 3,
+     "l": 4,
+     "gf": 13,
+     "ga": 12,
+     "pts": 15,
+     "tid": 1389,
+     "form": "DLWWW"
     },
     {
      "pos": 7,
-     "team": "Falkirk",
-     "p": 10,
-     "w": 3,
-     "d": 3,
-     "l": 4,
+     "team": "St Mirren",
+     "p": 11,
+     "w": 4,
+     "d": 2,
+     "l": 5,
      "gf": 12,
-     "ga": 12,
-     "pts": 12,
-     "tid": 1389,
-     "form": "WDLWW"
+     "ga": 19,
+     "pts": 14,
+     "tid": 251,
+     "form": "LLLWD"
     },
     {
      "pos": 8,
      "team": "St Johnstone",
-     "p": 10,
+     "p": 11,
      "w": 3,
-     "d": 3,
+     "d": 4,
      "l": 4,
-     "gf": 11,
-     "ga": 15,
-     "pts": 12,
+     "gf": 13,
+     "ga": 17,
+     "pts": 13,
      "tid": 258,
-     "form": "LDWDL"
+     "form": "DWDLD"
     },
     {
      "pos": 9,
      "team": "Aberdeen",
-     "p": 10,
+     "p": 11,
      "w": 3,
      "d": 2,
-     "l": 5,
+     "l": 6,
      "gf": 12,
-     "ga": 13,
+     "ga": 14,
      "pts": 11,
      "tid": 252,
-     "form": "WDLWL"
+     "form": "DLWLL"
     },
     {
      "pos": 10,
      "team": "Motherwell",
-     "p": 10,
+     "p": 11,
      "w": 2,
-     "d": 2,
+     "d": 3,
      "l": 6,
-     "gf": 11,
-     "ga": 18,
-     "pts": 8,
+     "gf": 13,
+     "ga": 20,
+     "pts": 9,
      "tid": 256,
-     "form": "LLLLL"
+     "form": "LLLLD"
     },
     {
      "pos": 11,
-     "team": "Kilmarnock",
-     "p": 10,
+     "team": "Hibernian",
+     "p": 11,
      "w": 2,
      "d": 2,
-     "l": 6,
-     "gf": 10,
-     "ga": 23,
+     "l": 7,
+     "gf": 11,
+     "ga": 17,
      "pts": 8,
-     "tid": 250,
-     "form": "WDLWL"
+     "tid": 249,
+     "form": "DLLLD"
     },
     {
      "pos": 12,
-     "team": "Hibernian",
-     "p": 10,
+     "team": "Kilmarnock",
+     "p": 11,
      "w": 2,
-     "d": 1,
+     "d": 2,
      "l": 7,
-     "gf": 10,
-     "ga": 16,
-     "pts": 7,
-     "tid": 249,
-     "form": "LDLLL"
+     "gf": 11,
+     "ga": 26,
+     "pts": 8,
+     "tid": 250,
+     "form": "DLWLL"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-28T00:00:00.000Z"
   },
   {
    "id": "scottish-championship",
@@ -357,7 +357,7 @@
      "form": "LLWLL"
     }
    ],
-   "updated": "2026-10-27T00:00:00.000Z"
+   "updated": "2026-10-28T00:00:00.000Z"
   },
   {
    "id": "scottish-league-one",
@@ -525,7 +525,7 @@
      "form": "LLDL"
     }
    ],
-   "updated": "2026-10-27T00:00:00.000Z"
+   "updated": "2026-10-28T00:00:00.000Z"
   },
   {
    "id": "scottish-league-two",

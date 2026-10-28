@@ -448,6 +448,19 @@
     },
     {
      "pos": 9,
+     "team": "Hellas Verona",
+     "p": 9,
+     "w": 3,
+     "d": 3,
+     "l": 3,
+     "gf": 16,
+     "ga": 13,
+     "pts": 12,
+     "tid": 504,
+     "form": "WLDDW"
+    },
+    {
+     "pos": 10,
      "team": "Avellino",
      "p": 9,
      "w": 3,
@@ -460,7 +473,7 @@
      "form": "LWDLD"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Cesena",
      "p": 9,
      "w": 2,
@@ -473,7 +486,7 @@
      "form": "DLDLW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Virtus Entella",
      "p": 9,
      "w": 2,
@@ -486,33 +499,33 @@
      "form": "DDWLD"
     },
     {
-     "pos": 12,
-     "team": "Arezzo",
-     "p": 8,
+     "pos": 13,
+     "team": "Carrarese",
+     "p": 9,
      "w": 3,
      "d": 1,
-     "l": 4,
-     "gf": 8,
-     "ga": 17,
+     "l": 5,
+     "gf": 9,
+     "ga": 10,
      "pts": 10,
-     "tid": 876,
-     "form": "WLDWL"
-    },
-    {
-     "pos": 13,
-     "team": "Hellas Verona",
-     "p": 8,
-     "w": 2,
-     "d": 3,
-     "l": 3,
-     "gf": 15,
-     "ga": 13,
-     "pts": 9,
-     "tid": 504,
-     "form": "LWLDD"
+     "tid": 1581,
+     "form": "LWWLW"
     },
     {
      "pos": 14,
+     "team": "Arezzo",
+     "p": 9,
+     "w": 3,
+     "d": 1,
+     "l": 5,
+     "gf": 9,
+     "ga": 19,
+     "pts": 10,
+     "tid": 876,
+     "form": "LDWLL"
+    },
+    {
+     "pos": 15,
      "team": "Cremonese",
      "p": 9,
      "w": 2,
@@ -525,7 +538,7 @@
      "form": "DDLLW"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Vicenza",
      "p": 9,
      "w": 2,
@@ -538,21 +551,21 @@
      "form": "LLDWL"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Juve Stabia",
-     "p": 8,
+     "p": 9,
      "w": 3,
      "d": 3,
-     "l": 2,
+     "l": 3,
      "gf": 9,
-     "ga": 8,
+     "ga": 9,
      "pts": 8,
      "ded": 4,
      "tid": 863,
-     "form": "DDDWW"
+     "form": "DDWWL"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Empoli",
      "p": 9,
      "w": 2,
@@ -563,19 +576,6 @@
      "pts": 7,
      "tid": 511,
      "form": "LLDLL"
-    },
-    {
-     "pos": 18,
-     "team": "Carrarese",
-     "p": 8,
-     "w": 2,
-     "d": 1,
-     "l": 5,
-     "gf": 7,
-     "ga": 9,
-     "pts": 7,
-     "tid": 1581,
-     "form": "LLWWL"
     },
     {
      "pos": 19,

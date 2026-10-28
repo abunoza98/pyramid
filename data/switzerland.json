@@ -4,7 +4,7 @@
  "adjective": "Swiss",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-27T00:00:00.000Z",
+ "updated": "2026-10-28T00:00:00.000Z",
  "belowNote": "The top 2. Liga Interregional clubs come up",
  "leagues": [
   {
@@ -434,15 +434,15 @@
     {
      "pos": 5,
      "team": "Cham",
-     "p": 12,
+     "p": 13,
      "w": 7,
-     "d": 2,
+     "d": 3,
      "l": 3,
-     "gf": 21,
-     "ga": 16,
-     "pts": 23,
+     "gf": 23,
+     "ga": 18,
+     "pts": 24,
      "tid": 6621,
-     "form": "WWLWD"
+     "form": "WLWDD"
     },
     {
      "pos": 6,
@@ -603,18 +603,18 @@
     {
      "pos": 18,
      "team": "Luzern II",
-     "p": 12,
+     "p": 13,
      "w": 2,
-     "d": 1,
+     "d": 2,
      "l": 9,
-     "gf": 16,
-     "ga": 29,
-     "pts": 7,
+     "gf": 18,
+     "ga": 31,
+     "pts": 8,
      "tid": 12706,
-     "form": "WLLLL"
+     "form": "LLLLD"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-28T00:00:00.000Z"
   },
   {
    "id": "1-liga",
