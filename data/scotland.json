@@ -48,28 +48,28 @@
     {
      "pos": 2,
      "team": "Rangers",
-     "p": 10,
+     "p": 11,
      "w": 7,
-     "d": 2,
+     "d": 3,
      "l": 1,
-     "gf": 17,
-     "ga": 7,
-     "pts": 23,
+     "gf": 19,
+     "ga": 9,
+     "pts": 24,
      "tid": 257,
-     "form": "WWWDW"
+     "form": "WWDWD"
     },
     {
      "pos": 3,
      "team": "Heart of Midlothian",
-     "p": 10,
+     "p": 11,
      "w": 6,
-     "d": 1,
+     "d": 2,
      "l": 3,
-     "gf": 22,
-     "ga": 15,
-     "pts": 19,
+     "gf": 24,
+     "ga": 17,
+     "pts": 20,
      "tid": 254,
-     "form": "LDWLW"
+     "form": "DWLWD"
     },
     {
      "pos": 4,

@@ -108,6 +108,19 @@
     },
     {
      "pos": 6,
+     "team": "Napoli",
+     "p": 9,
+     "w": 4,
+     "d": 2,
+     "l": 3,
+     "gf": 17,
+     "ga": 11,
+     "pts": 14,
+     "tid": 492,
+     "form": "DWLDW"
+    },
+    {
+     "pos": 7,
      "team": "Frosinone",
      "p": 8,
      "w": 4,
@@ -120,20 +133,20 @@
      "form": "DWLWD"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Juventus",
-     "p": 8,
+     "p": 9,
      "w": 4,
      "d": 2,
-     "l": 2,
+     "l": 3,
      "gf": 11,
-     "ga": 8,
+     "ga": 10,
      "pts": 14,
      "tid": 496,
-     "form": "LWDLW"
+     "form": "WDLWL"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Torino",
      "p": 9,
      "w": 4,
@@ -146,7 +159,7 @@
      "form": "DWWWL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Cagliari",
      "p": 9,
      "w": 4,
@@ -157,19 +170,6 @@
      "pts": 13,
      "tid": 490,
      "form": "WDLLL"
-    },
-    {
-     "pos": 10,
-     "team": "Napoli",
-     "p": 8,
-     "w": 3,
-     "d": 2,
-     "l": 3,
-     "gf": 13,
-     "ga": 10,
-     "pts": 11,
-     "tid": 492,
-     "form": "WDWLD"
     },
     {
      "pos": 11,
@@ -199,6 +199,19 @@
     },
     {
      "pos": 13,
+     "team": "Genoa",
+     "p": 9,
+     "w": 3,
+     "d": 1,
+     "l": 5,
+     "gf": 8,
+     "ga": 13,
+     "pts": 10,
+     "tid": 495,
+     "form": "LWLWW"
+    },
+    {
+     "pos": 14,
      "team": "Lecce",
      "p": 8,
      "w": 3,
@@ -211,7 +224,7 @@
      "form": "WLLWL"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Sassuolo",
      "p": 9,
      "w": 2,
@@ -224,30 +237,17 @@
      "form": "LDLLL"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Monza",
-     "p": 8,
+     "p": 9,
      "w": 2,
      "d": 1,
-     "l": 5,
-     "gf": 15,
-     "ga": 18,
+     "l": 6,
+     "gf": 16,
+     "ga": 22,
      "pts": 7,
      "tid": 1579,
-     "form": "LWLWL"
-    },
-    {
-     "pos": 16,
-     "team": "Genoa",
-     "p": 8,
-     "w": 2,
-     "d": 1,
-     "l": 5,
-     "gf": 6,
-     "ga": 13,
-     "pts": 7,
-     "tid": 495,
-     "form": "DLWLW"
+     "form": "WLWLL"
     },
     {
      "pos": 17,

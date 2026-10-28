@@ -1388,15 +1388,15 @@
     {
      "pos": 2,
      "team": "Harrogate Town",
-     "p": 14,
+     "p": 15,
      "w": 10,
      "d": 1,
-     "l": 3,
+     "l": 4,
      "gf": 32,
-     "ga": 18,
+     "ga": 21,
      "pts": 31,
      "tid": 1842,
-     "form": "WWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 3,
@@ -1478,6 +1478,19 @@
     },
     {
      "pos": 9,
+     "team": "Carlisle United",
+     "p": 15,
+     "w": 6,
+     "d": 5,
+     "l": 4,
+     "gf": 28,
+     "ga": 21,
+     "pts": 23,
+     "tid": 1371,
+     "form": "WWDWW"
+    },
+    {
+     "pos": 10,
      "team": "FC Halifax Town",
      "p": 15,
      "w": 6,
@@ -1490,7 +1503,7 @@
      "form": "DWWDL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Kidderminster Harriers",
      "p": 15,
      "w": 5,
@@ -1503,7 +1516,20 @@
      "form": "LDDLD"
     },
     {
-     "pos": 11,
+     "pos": 12,
+     "team": "Sutton United",
+     "p": 15,
+     "w": 6,
+     "d": 3,
+     "l": 6,
+     "gf": 17,
+     "ga": 21,
+     "pts": 21,
+     "tid": 1835,
+     "form": "LDLLW"
+    },
+    {
+     "pos": 13,
      "team": "AFC Hornchurch",
      "p": 15,
      "w": 7,
@@ -1514,32 +1540,6 @@
      "pts": 21,
      "tid": 7690,
      "form": "WLWLL"
-    },
-    {
-     "pos": 12,
-     "team": "Carlisle United",
-     "p": 14,
-     "w": 5,
-     "d": 5,
-     "l": 4,
-     "gf": 25,
-     "ga": 21,
-     "pts": 20,
-     "tid": 1371,
-     "form": "LWWDW"
-    },
-    {
-     "pos": 13,
-     "team": "Aldershot Town",
-     "p": 14,
-     "w": 5,
-     "d": 3,
-     "l": 6,
-     "gf": 18,
-     "ga": 17,
-     "pts": 18,
-     "tid": 1818,
-     "form": "WLLLL"
     },
     {
      "pos": 14,
@@ -1556,32 +1556,45 @@
     },
     {
      "pos": 15,
-     "team": "Eastleigh",
-     "p": 14,
+     "team": "Forest Green Rovers",
+     "p": 13,
      "w": 5,
      "d": 3,
-     "l": 6,
-     "gf": 18,
+     "l": 5,
+     "gf": 21,
      "ga": 22,
      "pts": 18,
-     "tid": 1822,
-     "form": "LDLLW"
+     "tid": 1378,
+     "form": "LDDLW"
     },
     {
      "pos": 16,
-     "team": "Sutton United",
-     "p": 14,
+     "team": "Aldershot Town",
+     "p": 15,
      "w": 5,
      "d": 3,
-     "l": 6,
-     "gf": 15,
-     "ga": 21,
+     "l": 7,
+     "gf": 18,
+     "ga": 19,
      "pts": 18,
-     "tid": 1835,
-     "form": "DLDLL"
+     "tid": 1818,
+     "form": "LLLLL"
     },
     {
      "pos": 17,
+     "team": "Eastleigh",
+     "p": 15,
+     "w": 5,
+     "d": 3,
+     "l": 7,
+     "gf": 18,
+     "ga": 24,
+     "pts": 18,
+     "tid": 1822,
+     "form": "DLLWL"
+    },
+    {
+     "pos": 18,
      "team": "Tamworth",
      "p": 14,
      "w": 5,
@@ -1592,19 +1605,6 @@
      "pts": 17,
      "tid": 7752,
      "form": "LWWLW"
-    },
-    {
-     "pos": 18,
-     "team": "Forest Green Rovers",
-     "p": 12,
-     "w": 4,
-     "d": 3,
-     "l": 5,
-     "gf": 19,
-     "ga": 22,
-     "pts": 15,
-     "tid": 1378,
-     "form": "DLDDL"
     },
     {
      "pos": 19,
