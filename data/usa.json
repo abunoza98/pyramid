@@ -4,7 +4,7 @@
  "adjective": "American",
  "season": "2026",
  "mode": "live",
- "updated": "2026-10-26T00:00:00.000Z",
+ "updated": "2026-10-28T00:00:00.000Z",
  "belowNote": "There's no promotion or relegation between US leagues; these are the professional divisions from the top",
  "system": "US soccer league system",
  "systemNote": "The US system doesn't use promotion and relegation between these leagues; play-off places are marked on each table.",
@@ -37,7 +37,7 @@
    "groups": [
     {
      "name": "Western Conference",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-28T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -238,7 +238,7 @@
     },
     {
      "name": "Eastern Conference",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-28T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -256,28 +256,28 @@
       {
        "pos": 2,
        "team": "New England Revolution",
-       "p": 31,
-       "w": 17,
+       "p": 32,
+       "w": 18,
        "d": 4,
        "l": 10,
-       "gf": 51,
-       "ga": 42,
-       "pts": 55,
+       "gf": 54,
+       "ga": 44,
+       "pts": 58,
        "tid": 1609,
-       "form": "LLWWW"
+       "form": "LWWWW"
       },
       {
        "pos": 3,
        "team": "Inter Miami",
-       "p": 31,
+       "p": 32,
        "w": 15,
-       "d": 10,
+       "d": 11,
        "l": 6,
-       "gf": 73,
-       "ga": 53,
-       "pts": 55,
+       "gf": 75,
+       "ga": 55,
+       "pts": 56,
        "tid": 9568,
-       "form": "LWWWL"
+       "form": "WWWLD"
       },
       {
        "pos": 4,
@@ -295,15 +295,15 @@
       {
        "pos": 5,
        "team": "Charlotte FC",
-       "p": 31,
-       "w": 13,
+       "p": 32,
+       "w": 14,
        "d": 8,
        "l": 10,
-       "gf": 55,
+       "gf": 59,
        "ga": 48,
-       "pts": 47,
+       "pts": 50,
        "tid": 18310,
-       "form": "LWLDL"
+       "form": "WLDLW"
       },
       {
        "pos": 6,
@@ -320,6 +320,19 @@
       },
       {
        "pos": 7,
+       "team": "FC Cincinnati",
+       "p": 32,
+       "w": 11,
+       "d": 10,
+       "l": 11,
+       "gf": 66,
+       "ga": 73,
+       "pts": 43,
+       "tid": 2242,
+       "form": "LLWWD"
+      },
+      {
+       "pos": 8,
        "team": "Orlando City SC",
        "p": 31,
        "w": 12,
@@ -332,33 +345,33 @@
        "form": "LWDWD"
       },
       {
-       "pos": 8,
-       "team": "FC Cincinnati",
-       "p": 31,
-       "w": 11,
-       "d": 9,
-       "l": 11,
-       "gf": 64,
-       "ga": 71,
-       "pts": 42,
-       "tid": 2242,
-       "form": "WLLWW"
-      },
-      {
        "pos": 9,
        "team": "New York Red Bulls",
-       "p": 31,
+       "p": 32,
        "w": 11,
        "d": 6,
-       "l": 14,
-       "gf": 41,
-       "ga": 56,
+       "l": 15,
+       "gf": 43,
+       "ga": 59,
        "pts": 39,
        "tid": 1602,
-       "form": "LWLLW"
+       "form": "WLLWL"
       },
       {
        "pos": 10,
+       "team": "Toronto FC",
+       "p": 32,
+       "w": 9,
+       "d": 12,
+       "l": 11,
+       "gf": 50,
+       "ga": 60,
+       "pts": 39,
+       "tid": 1601,
+       "form": "WDWLW"
+      },
+      {
+       "pos": 11,
        "team": "Columbus Crew",
        "p": 31,
        "w": 11,
@@ -371,74 +384,61 @@
        "form": "WLWWW"
       },
       {
-       "pos": 11,
-       "team": "Toronto FC",
-       "p": 31,
-       "w": 8,
-       "d": 12,
-       "l": 11,
-       "gf": 48,
-       "ga": 59,
-       "pts": 36,
-       "tid": 1601,
-       "form": "LWDWL"
-      },
-      {
        "pos": 12,
        "team": "New York City FC",
-       "p": 31,
-       "w": 8,
+       "p": 32,
+       "w": 9,
        "d": 11,
        "l": 12,
-       "gf": 45,
-       "ga": 43,
-       "pts": 35,
+       "gf": 47,
+       "ga": 44,
+       "pts": 38,
        "tid": 1604,
-       "form": "DLLDD"
+       "form": "LLDDW"
       },
       {
        "pos": 13,
        "team": "D.C. United",
-       "p": 31,
+       "p": 32,
        "w": 7,
        "d": 12,
-       "l": 12,
-       "gf": 38,
-       "ga": 55,
+       "l": 13,
+       "gf": 39,
+       "ga": 57,
        "pts": 33,
        "tid": 1615,
-       "form": "LWLLL"
+       "form": "WLLLL"
       },
       {
        "pos": 14,
        "team": "Atlanta United",
-       "p": 31,
+       "p": 32,
        "w": 8,
        "d": 6,
-       "l": 17,
-       "gf": 39,
-       "ga": 54,
+       "l": 18,
+       "gf": 40,
+       "ga": 56,
        "pts": 30,
        "tid": 1608,
-       "form": "DLWLL"
+       "form": "LWLLL"
       },
       {
        "pos": 15,
        "team": "CF Montréal",
-       "p": 31,
+       "p": 32,
        "w": 6,
        "d": 7,
-       "l": 18,
+       "l": 19,
        "gf": 36,
-       "ga": 62,
+       "ga": 66,
        "pts": 25,
        "tid": 1614,
-       "form": "WLLDL"
+       "form": "LLDLL"
       }
      ]
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-28T00:00:00.000Z"
   },
   {
    "id": "usl-championship",
@@ -460,7 +460,7 @@
    "groups": [
     {
      "name": "Eastern Conference",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-27T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -635,7 +635,7 @@
     },
     {
      "name": "Western Conference",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-27T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -796,7 +796,7 @@
      ]
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-27T00:00:00.000Z"
   },
   {
    "id": "usl-league-one",
@@ -1037,7 +1037,7 @@
      "form": "WLLWL"
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-28T00:00:00.000Z"
   }
  ]
 }
