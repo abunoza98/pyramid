@@ -1,0 +1,37 @@
+name: Rebuild pages
+
+# When a code change (or a hand-kept data file) is merged, rebuild every page straight away, so pull requests only
+# need to carry the source change and never clash with the hourly jobs' rebuilt pages. No football-data API calls.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "assets/**"
+      - "scripts/**"
+      - "data/manual/**"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+# Same group as the tables and fixtures jobs, so they never run (and push) at the same time.
+concurrency:
+  group: update-standings
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - name: Rebuild pages
+        run: node scripts/build.mjs > /dev/null
+
+      - name: Commit if anything changed
+        run: bash scripts/push.sh "Rebuild pages"
