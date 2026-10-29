@@ -1,6 +1,7 @@
 // Football Pyramids: cup draws kept by hand, for the gap between a draw being made and API-Football adding the ties
-// (often a day or more). Listed in data/manual/draws.json; each round is added to the cup's fixtures file until the
-// API has a round of the same name, then it simply stops being used (it can be deleted from the file any time after).
+// (often a day or more, and sometimes a few ties at a time). Listed in data/manual/draws.json; each tie is added to
+// the cup's fixtures file until the API's round of the same name has it, then it simply stops being used (the entry
+// can be deleted from the file any time after).
 //
 //   {
 //     "england/efl-cup": {
@@ -45,15 +46,17 @@ function winnerOf(f) {
   return null;
 }
 
-// A saved fixtures file (country, league, season, groups[0].rounds) -> the same with any hand-kept draw rounds the
-// API hasn't got yet. Rounds added this way have every fixture marked draw: 1, so running this again replaces them
-// (picking up a "winnerOf" tie that has since been played) rather than adding them twice.
+// A saved fixtures file (country, league, season, groups[0].rounds) -> the same with the hand-kept ties the API
+// hasn't got yet. The API often adds a round's ties a few at a time (a tie waiting on a replayed or rearranged game
+// comes last), so this works tie by tie: a hand-kept tie is used until the API's round of the same name has either
+// of its clubs. Ties added this way are marked draw: 1, so running this again replaces them (picking up a
+// "winnerOf" tie that has since been played) rather than adding them twice.
 export function withDraws(fx, draws) {
   const entry = fx && draws && draws[`${fx.country}/${fx.league}`];
   if (!entry || !fx.groups || !fx.groups[0] || (entry.season && entry.season !== fx.season)) return fx;
   const g = fx.groups[0];
-  const own = (r) => r.fixtures.length && r.fixtures.every((f) => f.draw);
-  const rounds = g.rounds.filter((r) => !own(r));
+  // The API's own rounds and ties, without any hand-kept ones from an earlier run.
+  const rounds = g.rounds.map((r) => ({ ...r, fixtures: r.fixtures.filter((f) => !f.draw) })).filter((r) => r.fixtures.length);
   const teams = new Map(), byId = new Map();
   for (const r of rounds) for (const f of r.fixtures) {
     byId.set(f.id, f);
@@ -70,23 +73,27 @@ export function withDraws(fx, draws) {
     const t = teams.get(Number(x));
     return t ? { ...t } : null;
   };
-  let added = 0;
+  // Every club a side could be (a "winnerOf" side: either club in that tie).
+  const idsOf = (s) => (s.id != null ? [s.id] : []).concat(s.from || []);
   (entry.rounds || []).forEach((dr, ri) => {
-    if (rounds.some((r) => r.key === dr.round)) return;   // the API has this round now
+    const api = rounds.find((r) => r.key === dr.round);
+    const inApi = new Set();
+    if (api) for (const f of api.fixtures) for (const t of [f.h, f.a]) if (t && t.id != null) inApi.add(t.id);
     const ts = Math.floor(Date.parse(`${dr.around}T12:00:00Z`) / 1000) || 0;
     const fixtures = [];
     (dr.ties || []).forEach((t, ti) => {
       const h = side(t.h), a = side(t.a);
       if (!h || !a) return;   // a club we can't name: leave the tie out rather than guess
+      if ([...idsOf(h), ...idsOf(a)].some((id) => inApi.has(id))) return;   // the API has this tie now
       fixtures.push({ id: -(1000 * (ri + 1) + ti + 1), ts, st: "TBD", h, a, nodate: true, ...(dr.when ? { when: dr.when } : {}), draw: 1 });
     });
     if (!fixtures.length) return;
-    rounds.push({ key: dr.round, label: dr.round, mid: ts, fixtures });
-    added++;
+    if (api) api.fixtures = api.fixtures.concat(fixtures).sort((x, y) => x.ts - y.ts || x.id - y.id);
+    else rounds.push({ key: dr.round, label: dr.round, mid: ts, fixtures });
   });
-  if (!added && rounds.length === g.rounds.length) return fx;
   rounds.sort((a, b) => a.mid - b.mid);
-  return { ...fx, groups: [{ ...g, rounds }, ...fx.groups.slice(1)] };
+  const out = { ...fx, groups: [{ ...g, rounds }, ...fx.groups.slice(1)] };
+  return JSON.stringify(out) === JSON.stringify(fx) ? fx : out;
 }
 
 // Adds the draws to the saved fixture files. Returns the files changed.

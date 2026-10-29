@@ -1166,9 +1166,14 @@
       keep.sort(function (x, y) { return rank(x.t) - rank(y.t) || x.i - y.i; });
       cols[k].ties = keep.map(function (x) { return x.t; });
     }
-    return '<div class="bracket" role="list">' + cols.map(function (c) {
+    // A round only partly in: a "to be confirmed" slot for each tie still to come, so every column still lines up
+    // with the one before (the ties feeding them were sorted to the end above).
+    var tbc = '<div class="tie tie-tbc"><span class="tie-note">Tie to be confirmed</span></div>';
+    return '<div class="bracket" role="list">' + cols.map(function (c, ci) {
+      var want = ci > 0 && cols[ci - 1].ties.length % 2 === 0 ? cols[ci - 1].ties.length / 2 : 0;
+      var pad = want > c.ties.length ? new Array(want - c.ties.length + 1).join(tbc) : "";
       return '<div class="br-col" role="listitem"><h3 class="br-h">' + esc(c.label) + '</h3><div class="br-ties">' +
-        c.ties.map(function (t) { return tieHTML(t, tz, now, links); }).join("") + "</div></div>";
+        c.ties.map(function (t) { return tieHTML(t, tz, now, links); }).join("") + pad + "</div></div>";
     }).join("") + "</div>";
   }
 
@@ -1308,11 +1313,17 @@
     }) : [];
     // The bracket starts at the earliest round of 64 or fewer (32 ties) after which every round halves cleanly
     // (no byes), so each tie feeds the next; earlier rounds are under Fixtures and results.
+    // The newest round may be only partly in (the API adds a tie waiting on a rearranged game last): it can have
+    // fewer ties than half the round before, and the bracket keeps a slot for each one still to come.
     var startAt = -1, counts = rounds.map(function (r) { return tiesOf(r).length; });
     for (var i = 0; i < rounds.length && startAt < 0; i++) {
       if ([32, 16, 8, 4, 2, 1].indexOf(counts[i]) < 0) continue;   // a full round of 64, 32, 16...
       var clean = true;
-      for (var j = i + 1; j < rounds.length; j++) if (counts[j] * 2 !== counts[j - 1]) { clean = false; break; }
+      for (var j = i + 1; j < rounds.length; j++) {
+        var last = j === rounds.length - 1;
+        if (counts[j] * 2 === counts[j - 1] || (last && counts[j] >= 1 && counts[j] * 2 < counts[j - 1])) continue;
+        clean = false; break;
+      }
       if (clean) startAt = i;
     }
     var bracketRounds = startAt > -1 ? rounds.slice(startAt) : [];

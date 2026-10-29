@@ -1390,3 +1390,6 @@ span.season-step { visibility: hidden; padding: 0; border: 0; }
 /* The picker loops round (assets/app.js repeats the countries either side): a wider space after the last country,
    so the end of the previous lap doesn't peek in at the left edge beside England. */
 .xp-tabs .xp-last { margin-right: 40px; }
+/* Bracket: a slot for a tie the API hasn't added yet. */
+.tie-tbc { min-height: 58px; align-content: center; justify-items: center; border-style: dashed; background: transparent; }
+.tie-tbc .tie-note { margin: 0; font-size: 12px; }
