@@ -42,15 +42,15 @@
       {
        "pos": 1,
        "team": "Vancouver Whitecaps",
-       "p": 31,
-       "w": 16,
+       "p": 32,
+       "w": 17,
        "d": 7,
        "l": 8,
-       "gf": 63,
-       "ga": 32,
-       "pts": 55,
+       "gf": 67,
+       "ga": 33,
+       "pts": 58,
        "tid": 1603,
-       "form": "LDDWL"
+       "form": "DDWLW"
       },
       {
        "pos": 2,
@@ -80,29 +80,29 @@
       },
       {
        "pos": 4,
-       "team": "San Jose Earthquakes",
-       "p": 31,
-       "w": 13,
+       "team": "Houston Dynamo",
+       "p": 32,
+       "w": 14,
        "d": 9,
        "l": 9,
-       "gf": 52,
-       "ga": 45,
-       "pts": 48,
-       "tid": 1596,
-       "form": "WDDDL"
+       "gf": 42,
+       "ga": 39,
+       "pts": 51,
+       "tid": 1600,
+       "form": "DDDDW"
       },
       {
        "pos": 5,
-       "team": "Houston Dynamo",
-       "p": 31,
+       "team": "San Jose Earthquakes",
+       "p": 32,
        "w": 13,
-       "d": 9,
+       "d": 10,
        "l": 9,
-       "gf": 41,
-       "ga": 39,
-       "pts": 48,
-       "tid": 1600,
-       "form": "LDDDD"
+       "gf": 54,
+       "ga": 47,
+       "pts": 49,
+       "tid": 1596,
+       "form": "DDDLD"
       },
       {
        "pos": 6,
@@ -119,19 +119,32 @@
       },
       {
        "pos": 7,
-       "team": "Seattle Sounders",
-       "p": 31,
-       "w": 11,
-       "d": 10,
-       "l": 10,
-       "gf": 41,
-       "ga": 39,
+       "team": "Colorado Rapids",
+       "p": 32,
+       "w": 12,
+       "d": 7,
+       "l": 13,
+       "gf": 44,
+       "ga": 43,
        "pts": 43,
-       "tid": 1595,
-       "form": "WWLDD"
+       "tid": 1610,
+       "form": "DDDWD"
       },
       {
        "pos": 8,
+       "team": "Seattle Sounders",
+       "p": 32,
+       "w": 11,
+       "d": 10,
+       "l": 11,
+       "gf": 41,
+       "ga": 40,
+       "pts": 43,
+       "tid": 1595,
+       "form": "WLDDL"
+      },
+      {
+       "pos": 9,
        "team": "Real Salt Lake",
        "p": 32,
        "w": 12,
@@ -142,19 +155,6 @@
        "pts": 42,
        "tid": 1606,
        "form": "LDWWW"
-      },
-      {
-       "pos": 9,
-       "team": "Colorado Rapids",
-       "p": 31,
-       "w": 12,
-       "d": 6,
-       "l": 13,
-       "gf": 42,
-       "ga": 41,
-       "pts": 42,
-       "tid": 1610,
-       "form": "LDDDW"
       },
       {
        "pos": 10,
@@ -198,15 +198,15 @@
       {
        "pos": 13,
        "team": "San Diego FC",
-       "p": 31,
+       "p": 32,
        "w": 8,
        "d": 11,
-       "l": 12,
-       "gf": 55,
-       "ga": 58,
+       "l": 13,
+       "gf": 56,
+       "ga": 62,
        "pts": 35,
        "tid": 25484,
-       "form": "DLDDD"
+       "form": "LDDDL"
       },
       {
        "pos": 14,
