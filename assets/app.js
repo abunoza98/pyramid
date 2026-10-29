@@ -258,6 +258,7 @@
     var wheel = document.querySelector("#main-content .xp-tabs"), wheelX = wheel ? wheel.scrollLeft : 0;
     var games = document.querySelector("#main-content .strip-list"), gamesX = games ? games.scrollLeft : 0;
     $("main-content").innerHTML = html;
+    queueSpy();
     if (wheel && document.querySelector("#main-content .xp-tabs")) {
       var row2 = document.querySelector("#main-content .xp-tabs");
       loopWheel(row2);
@@ -318,6 +319,41 @@
   setBarHeight();
   window.addEventListener("resize", setBarHeight);
 
+  /* ---------- Country pages: the divisions row marks the division on screen ---------- */
+  var spyQueued = false;
+  function tierSpy() {
+    spyQueued = false;
+    var nav = document.querySelector(".tier-jump");
+    if (!nav) { document.documentElement.style.removeProperty("--jump-h"); document.documentElement.style.removeProperty("--jump-full"); return; }
+    var bar = document.querySelector(".bar"), barH = bar ? bar.offsetHeight : 0;
+    // Only once the row is stuck do the table headings need to sit below it.
+    var stuck = nav.getBoundingClientRect().top <= barH + 1;
+    document.documentElement.style.setProperty("--jump-h", (stuck ? nav.offsetHeight : 0) + "px");
+    document.documentElement.style.setProperty("--jump-full", nav.offsetHeight + "px");
+    // Full division names where they fit on one row, the short ones ("PL", "CH", "L1"…) where they don't.
+    if (nav.getAttribute("data-w") !== String(nav.clientWidth)) {
+      nav.setAttribute("data-w", String(nav.clientWidth));
+      nav.classList.add("tj-wide");
+      if (nav.scrollWidth > nav.clientWidth + 1) nav.classList.remove("tj-wide");
+    }
+    var line = barH + nav.offsetHeight + 24, cur = null;
+    document.querySelectorAll("section.tier").forEach(function (sec) { if (sec.getBoundingClientRect().top <= line) cur = sec.id; });
+    nav.querySelectorAll("a[data-jump]").forEach(function (a) {
+      var on = a.getAttribute("data-jump") === cur;
+      if (on && !a.classList.contains("on")) {
+        // Keep the marked division in view along the row.
+        var l = a.offsetLeft - nav.offsetLeft, r = l + a.offsetWidth;
+        if (l < nav.scrollLeft || r > nav.scrollLeft + nav.clientWidth) nav.scrollLeft = Math.max(0, l - 16);
+      }
+      a.classList.toggle("on", on);
+      if (on) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
+    });
+  }
+  function queueSpy() { if (!spyQueued) { spyQueued = true; requestAnimationFrame(tierSpy); } }
+  window.addEventListener("scroll", queueSpy, { passive: true });
+  window.addEventListener("resize", queueSpy);
+  queueSpy();
+
   document.documentElement.classList.add("js");
   var tabState = {};
   function applyTabs() {
@@ -362,6 +398,8 @@
       var oldNote = br.previousElementSibling;
       if (oldNote && oldNote.classList && oldNote.classList.contains("br-progress")) oldNote.remove();
       if (!br.offsetWidth || !br.offsetHeight) return;
+      // On a narrow screen the bracket scrolls sideways: open it on the latest rounds (where the cup is now), once.
+      if (!br.hasAttribute("data-scrolled") && br.scrollWidth > br.clientWidth + 2) { br.scrollLeft = br.scrollWidth; br.setAttribute("data-scrolled", ""); }
       var cols = Array.prototype.slice.call(br.children).filter(function (x) { return x.classList && x.classList.contains("br-col"); });
       if (cols.length < 2) return;
       br.style.position = "relative";
@@ -597,7 +635,8 @@
     if (!MINE.every(function (c) { return official[c]; })) return;
     var withLive = MINE.map(function (c) { return FP.applyLive(official[c], live); });
     var html;
-    if (PAGE === "country") html = FP.countryMain(withLive[0], { seasons: seasons, fixtures: FIXLINKS, cups: CUPS, marks: MARKS, nav: NAV, racesHref: body.getAttribute("data-races") || "" });
+    if (PAGE === "country") html = FP.countryMain(withLive[0], { seasons: seasons, fixtures: FIXLINKS, cups: CUPS, marks: MARKS, nav: NAV, racesHref: body.getAttribute("data-races") || "",
+      results: Number(body.getAttribute("data-results")) || 0 });
     else if (PAGE === "cup") {
       if (!compFx) return;
       html = FP.cupMain({ name: compFx.name, country: COUNTRY }, compFx, { tz: fxState.tz, live: live, seasons: seasons, fxRound: fxState.round, myClub: myClub,
@@ -611,7 +650,8 @@
         clubPaths: CLUBPATHS, root: BASE, suffix: SUFFIX });
     } else {
       var eu = MINE.indexOf("europe") > -1 ? withLive[MINE.indexOf("europe")] : null;
-      html = FP.homeMain(withLive.filter(function (c) { return c.country !== "europe"; }), BASE, SUFFIX, OTHERS, { live: live, fixtures: FIXLINKS, europe: eu, cups: CUPSMAP, clubPaths: CLUBPATHS, movers: MOVERS });
+      var RESULTS = Number(body.getAttribute("data-results")) || 0;
+      html = FP.homeMain(withLive.filter(function (c) { return c.country !== "europe"; }), BASE, SUFFIX, OTHERS, { live: live, fixtures: FIXLINKS, europe: eu, cups: CUPSMAP, clubPaths: CLUBPATHS, movers: MOVERS, results: RESULTS });
     }
     redraw(html);
     applyTabs();

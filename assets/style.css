@@ -302,8 +302,7 @@ a.pyr-row:hover .pyr-label span { text-decoration: underline; text-underline-off
 }
 
 /* ---------- Tier sections ---------- */
-.tier { margin-top: 52px; scroll-margin-top: 84px; }
-@media (max-width: 699px) { .tier { scroll-margin-top: 124px; } }
+.tier { margin-top: 52px; scroll-margin-top: calc(var(--bar-h, 84px) + var(--jump-full, 0px) + 12px); }
 .tier-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px; }
 .tier-num { margin: 0; flex: 1 1 100%; font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
 .tier h2 {
@@ -674,8 +673,8 @@ body.no-ads main { justify-self: center !important; }
 }
 .xp-tabs .xp-tab { scroll-snap-align: start; }
 .xp-group {
-  flex: none; align-self: stretch; display: flex; align-items: center; margin-left: 10px; padding: 0 2px 0 12px;
-  border-left: 1px solid var(--rule); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  flex: none; align-self: stretch; display: flex; align-items: center; margin-left: 14px; padding: 0 2px 0 4px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--muted); white-space: nowrap;
 }
 .xp-arrow {
@@ -1047,7 +1046,7 @@ tbody tr.is-this .c-club { font-weight: 700; }
 /* Column headings stay in view under the header while a long table scrolls */
 @supports (overflow: clip) {
   .table-wrap { overflow: clip; }
-  thead th { position: sticky; top: var(--bar-h, 0px); z-index: 2; background: var(--sheet); }
+  thead th { position: sticky; top: calc(var(--bar-h, 0px) + var(--jump-h, 0px)); z-index: 2; background: var(--sheet); }
 }
 
 /* Table / Form switch */
@@ -1076,6 +1075,9 @@ tbody tr.is-this .c-club { font-weight: 700; }
 .cr-dot { width: 12px; height: 12px; margin: -6px 0 0 -6px; }
 .cr-dot.won { background: #E8B931; border-color: #B8860B; box-shadow: 0 0 0 3px rgba(232, 185, 49, 0.35); }
 .cr-dot.now:not(.won) { background: var(--accent); }
+/* Drawn in a round not played yet: a hollow ring on a dashed line, so it doesn't read as an early exit. */
+.cr-dot.next:not(.won) { background: var(--sheet); border-style: dashed; }
+.cr-line line.cr-next { stroke-dasharray: 4 4; }
 .cr-h > a { margin-left: auto; color: var(--accent); font-weight: 600; font-size: 14px; text-decoration: none; white-space: nowrap; }
 .cr-h > a:hover { text-decoration: underline; }
 .cr-won { margin-left: 6px; padding: 0 5px; border-radius: 4px; font: 600 11px/16px var(--mono); color: #5C4200; background: #E8B931; }
@@ -1305,3 +1307,86 @@ a.qtag.q-ac:hover { background: var(--accent-soft); }
   .cmp-table th, .cmp-table td { padding: 8px; }
   .cmp-sum .cmp-table tbody th { width: 30%; }
 }
+
+/* Club page: the summary under the name, in one block (position and form, what's at stake, context and home ground,
+   honours, pyramid links), instead of a stack of separate lines and boxes. Built by scripts/club-header.mjs. */
+.cl-sum { margin: 14px 0 0; padding: 14px 16px; background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; display: grid; gap: 8px; }
+.cl-sum > * { margin: 0; }
+.cl-sum .lede { margin: 0; max-width: none; font-size: 15px; }
+.cl-sum .cl-stake { font-size: 14px; color: var(--ink); }
+.cl-sum .cl-stake strong { font-weight: 600; color: var(--muted); }
+.cl-sum .cl-context { margin: 0; font-size: 14px; }
+.cl-context > span + span::before { content: " · "; color: var(--muted); }
+.cl-sum .cl-honours { margin: 0; }
+.cl-sum .cl-routes { margin: 0; padding-top: 8px; border-top: 1px solid var(--rule); font-size: 14px; }
+.cl-sec .cl-tz { margin: 0 0 10px; font-size: 13px; }
+@media (max-width: 599px) { .cl-sum { padding: 12px 14px; } .cl-sum .lede { font-size: 15px; } }
+.cl-pens { display: block; font-size: 11px; font-weight: 500; color: var(--muted); text-align: right; white-space: nowrap; }
+/* Brackets on a phone: long names wrap instead of being cut off, so the league tag (the point of a cup bracket)
+   always shows. */
+@media (max-width: 599px) {
+  .bracket .tie-name { white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere; line-height: 1.3; }
+  .bracket .tie-name .tag { white-space: nowrap; }
+  .br-col { flex-basis: 190px; }
+}
+/* Historical seasons: one row, "← 2016–17   2017–18 SEASONS ▾   2018–19 →"; the full list drops down from the middle. */
+.season-row { display: flex; align-items: center; justify-content: flex-start; gap: 10px; margin: 14px 0 0; flex-wrap: nowrap; }
+.season-row .seasons { margin: 0; position: relative; }
+.season-row .seasons ul {
+  position: absolute; z-index: 30; top: calc(100% + 8px); left: 0; width: min(520px, calc(100vw - 32px)); margin: 0; padding: 10px;
+  background: var(--sheet); border: 1px solid var(--rule-strong); border-radius: 10px; box-shadow: 0 10px 28px rgba(14, 20, 28, 0.16);
+}
+.season-step {
+  display: inline-flex; align-items: center; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--rule-strong);
+  background: var(--sheet); color: var(--ink); font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums; text-decoration: none; white-space: nowrap;
+}
+a.season-step:hover { border-color: var(--accent); color: var(--accent); }
+span.season-step { visibility: hidden; padding: 0; border: 0; }
+.season-row .season-step.next { order: 3; }
+.season-row .seasons { order: 2; }
+.season-row .season-step.prev { order: 1; }
+@media (max-width: 599px) {
+  .season-row { gap: 6px; }
+  .season-step { padding: 5px 8px; font-size: 11px; }
+  .season-row .seasons ul { left: 50%; transform: translateX(-50%); }
+}
+.h1-season { white-space: nowrap; }
+/* Country pages: the divisions row, stuck under the header while the tables scroll. The division on screen is
+   marked (assets/app.js); on a wide screen it shows full names, on a phone the short ones. */
+.tier-jump {
+  position: sticky; top: var(--bar-h, 0px); z-index: 15; display: flex; gap: 4px; margin: 26px 0 0; padding: 8px 0;
+  overflow-x: auto; scrollbar-width: none; background: var(--paper); border-bottom: 1px solid var(--rule);
+}
+.tier-jump::-webkit-scrollbar { display: none; }
+.tier-jump a {
+  flex: none; padding: 6px 10px; border-radius: 999px; border: 1px solid transparent; color: var(--muted); text-decoration: none;
+  font-family: var(--mono); font-size: 11.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap;
+}
+.tier-jump a:hover { color: var(--ink); border-color: var(--rule-strong); }
+.tier-jump a.on { background: var(--ink); color: var(--paper); }
+.tier-jump .tj-long { display: none; }
+.tier-jump.tj-wide .tj-long { display: inline; }
+.tier-jump.tj-wide .tj-short { display: none; }
+.tier-jump + .tier { margin-top: 28px; }
+/* Comparison: head to head */
+.h2h-list { list-style: none; margin: 0; padding: 0; border: 1px solid var(--rule); border-radius: 10px; background: var(--sheet); }
+.h2h-list li { display: grid; grid-template-columns: 7.5em minmax(0, 1fr); gap: 4px 12px; padding: 10px 14px; border-bottom: 1px solid var(--rule); font-size: 14px; }
+.h2h-list li:last-child { border-bottom: 0; }
+.h2h-when { font-family: var(--mono); font-size: 12px; color: var(--muted); padding-top: 2px; }
+.h2h-what b { font-family: var(--mono); font-weight: 600; }
+.h2h-what small { display: block; margin-top: 2px; font-size: 12px; color: var(--muted); }
+.h2h-next { margin: 0 0 10px; font-size: 14px; }
+.h2h-next strong { color: var(--muted); font-weight: 600; }
+@media (max-width: 599px) { .h2h-list li { grid-template-columns: 1fr; } }
+/* Home on a phone: the pyramid (the point of the site) closer to the top. The headline is smaller, the intro is
+   its first sentence, and the search box needs no explanation under it. */
+@media (max-width: 599px) {
+  .hero h1 { font-size: 2.35rem; }
+  .hero .lede { font-size: 15px; margin-top: 10px; }
+  .hero .lede-more, .hero-find-hint { display: none; }
+  .hero-find { margin-top: 16px; }
+}
+/* The picker loops round (assets/app.js repeats the countries either side): a wider space after the last country,
+   so the end of the previous lap doesn't peek in at the left edge beside England. */
+.xp-tabs .xp-last { margin-right: 40px; }

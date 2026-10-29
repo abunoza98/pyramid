@@ -16,6 +16,7 @@ import { api } from "./update-standings.mjs";
 import { seasonFor, seasonLabel } from "./season.mjs";
 import { build } from "./build.mjs";
 import { roundLabel, europeRounds, toRounds, cupRounds, cupStage } from "./rounds.mjs";
+import { loadDraws, withDraws } from "./draws.mjs";
 export { roundLabel, europeRounds, toRounds };
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -72,6 +73,7 @@ async function main() {
   };
 
   let saved = 0, failed = 0;
+  const draws = await loadDraws(outRoot);   // cup draws kept by hand until the API has them (data/manual/draws.json)
   for (const c of [...COUNTRIES, EUROPE]) {
     const year = seasonFor(c);
     NAME_COUNTRY = c;
@@ -124,10 +126,11 @@ async function main() {
           groups.push({ name: part.name, rounds: toRounds(list) });
         }
         if (!groups.length) continue;
-        const out = {
+        let out = {
           country: c.country, countryName: c.name, league: cfg.id, name: cfg.name, tier: cfg.tier, ...(cfg.cup ? { cup: true } : {}),
           season: seasonLabel(used, cfg.calendar ? { calendar: true } : c), updated: now.toISOString(), groups
         };
+        if (cfg.cup) out = withDraws(out, draws);
         const text = JSON.stringify(out);
         const same = prev && JSON.stringify({ ...prev, updated: null }) === JSON.stringify({ ...out, updated: null });
         if (same) continue;

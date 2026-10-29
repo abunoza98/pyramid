@@ -9,8 +9,9 @@ const pow2 = (n) => n > 0 && (n & (n - 1)) === 0;
 
 // rounds: [{ label, fixtures }] in playing order (as update-fixtures saves them).
 // Returns { rounds: [labels], dist: [rounds from the final, per round, or null], final: bool, winner, clubs }
-// clubs: { id: [name, roundIndex, result, opponent, score] } where result is "W" (won the cup), "L" (knocked out
-// in that round) or "" (still in, or the tie isn't decided yet).
+// clubs: { id: [name, roundIndex, result, opponent, score, through] } where result is "W" (won the cup), "L" (knocked
+// out in that round) or "" (still in, or the tie isn't decided yet); through is 1 when the club won that round's tie,
+// so it is into the next round even before the next round is drawn.
 export function summarise(rounds, labelDist = {}) {
   const labels = rounds.map((r) => r.label);
   const ties = rounds.map((r) => FP.tiesOf(r));
@@ -47,7 +48,7 @@ export function summarise(rounds, labelDist = {}) {
     }
     // A club's furthest round wins; within a round keep the deciding result.
     const prev = clubs[tm.id];
-    if (!prev || prev[1] <= i) clubs[tm.id] = [tm.n, i, res, them.n || "", score];
+    if (!prev || prev[1] <= i) clubs[tm.id] = [tm.n, i, res, them.n || "", score, t.winner === k && res !== "W" ? 1 : 0];
   })));
   const w = final ? last[0].teams[last[0].winner] : null;
   return { rounds: labels, dist, final, winner: w ? { id: w.id, n: w.n } : null, clubs };

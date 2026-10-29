@@ -18,6 +18,7 @@ import { zoneAt, applyPlayoffRules, labelCupPlaces } from "./zones.mjs";
 import { regroupEurope } from "./rounds.mjs";
 import { seasonFor, seasonLabel, seasonSlug } from "./season.mjs";
 import { summarise, learnLabels } from "./cupruns.mjs";
+import { applyDraws } from "./draws.mjs";
 export { applyPlayoffRules, labelCupPlaces };
 import { contactPage, privacyPage } from "./pages.mjs";
 import { loadManual } from "./manual-comps.mjs";
@@ -331,6 +332,9 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     const live = Number(String(c.season).slice(0, 4));
     if (history[c.country]) history[c.country] = history[c.country].filter((h) => h.year < live);
   }
+  // Cup draws kept by hand (data/manual/draws.json) go into the saved fixture files first, so the pages and the
+  // browser's own redraws (which fetch those files) both show them. Only the site's own data, never a preview copy.
+  if (!preview && root === outDir) await applyDraws(root);
   const fixtures = await loadFixtures(root);
   // Hand-kept competitions (the Australian Championship): the newest edition joins the fixtures, so its games
   // show on club pages like any cup's.
@@ -559,6 +563,34 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     movers.push({ country: c.country, name: c.name, featured: !!c.featured, top: now1[0].l.name, second: now2[0].l.name, last: last.season, up, down });
   }
 
+  // The newest result each country's tables are known to include, for the line under each page's intro ("Latest
+  // result in these tables: Wed 28 Oct") in place of the API's own update stamp. Per league, the tables' games played
+  // are checked against the finished league games in its fixture file: all there, or a few short while the table
+  // catches up (then only the results before the first missing one count). Far apart (a league played in stages,
+  // whose table counts one stage) can't be checked this way and is left out. 0: no date; the pages keep "as of".
+  function resultsThrough(c) {
+    const DONE = new Set(["FT", "AET", "PEN", "AWD", "WO"]), KO = /final|play-?off|eliminat|knock-?out|quarter|semi|qualif/i;
+    let latest = 0;
+    for (const lg of c.leagues || []) {
+      const fx = fixtures[`${c.country}/${lg.id}`];
+      if (!fx || fx.cup || fx.season !== c.season) continue;
+      const played = FP.groupsOf(lg).reduce((n, g) => n + g.rows.reduce((m, r) => m + (Number(r.p) || 0), 0), 0);
+      const ts = [];
+      for (const g of fx.groups) for (const r of g.rounds) {
+        if (KO.test(r.key || r.label || "")) continue;
+        for (const f of r.fixtures) if (DONE.has(f.st)) ts.push(f.ts);
+      }
+      if (!ts.length) continue;
+      ts.sort((a, b) => a - b);
+      const short = ts.length - Math.floor(played / 2);
+      if (short <= 0) latest = Math.max(latest, ts[ts.length - 1]);
+      else if (short <= 6 && ts.length > short) latest = Math.max(latest, ts[ts.length - short - 1]);
+    }
+    return latest;
+  }
+  const resultsOf = Object.fromEntries(countries.map((c) => [c.country, resultsThrough(c)]));
+  const resultsHome = Math.max(0, ...countries.filter((c) => c.featured).map((c) => resultsOf[c.country] || 0));
+
   // Home
   await write("index.html", shell({
     title: "Football Pyramids: league tables from the top flight down",
@@ -566,14 +598,15 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     canonical: SITE + "/", base: "", suffix, page: "home", stamps, countries,
     jsonld: { "@context": "https://schema.org", "@type": "WebSite", name: "Football Pyramids", url: SITE + "/" },
     attrs: { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/${suffix}#fixtures` } : {}) },
-      ...(europe ? { europe: "1", clubpaths: pathsFor(europe.leagues[0]) } : {}), cupsmap: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])), movers },
+      ...(europe ? { europe: "1", clubpaths: pathsFor(europe.leagues[0]) } : {}), cupsmap: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])), movers, ...(resultsHome ? { results: String(resultsHome) } : {}) },
     main: FP.homeMain(countries.filter((c) => c.featured), "", suffix, countries.filter((c) => !c.featured).map(FP.summary),
       { fixtures: { ...fxLinks(true), ...(europe ? { "europe/champions-league": `europe/champions-league/${suffix}#fixtures` } : {}) }, europe,
-        cups: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])), clubPaths: europe ? pathsFor(europe.leagues[0]) : null, movers })
+        cups: Object.fromEntries(countries.map((c) => [c.country, cupCards(c, `${c.country}/`)])), clubPaths: europe ? pathsFor(europe.leagues[0]) : null, movers, results: resultsHome })
   }));
 
   // Country pages
   for (const c of countries) {
+    const results = resultsOf[c.country] || 0;
     const { first, last } = tierNames(c);
     const nowMarks = await seasonMarks(c, c.leagues, Number(String(c.season).slice(0, 4)), "", { champions: true });
     await write(`${c.country}/index.html`, shell({
@@ -581,8 +614,8 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       description: `Every ${c.adjective} league table from ${first} down to ${last} on one page, with ${c.closed ? "play-off" : "promotion, relegation and play-off"} places marked.`,
       canonical: `${SITE}/${c.country}/`, base: "../", suffix, page: "country", country: c.country,
       stamps: { [c.country]: c.updated }, countries, seasons: seasonList(c, history[c.country], "", suffix, null),
-      attrs: { fixtures: fxLinks(false), cups: cupCards(c, ""), races: c.closed ? "" : `races/${suffix}`, ...(nowMarks ? { marks: nowMarks } : {}), ...(navFor(c, cupCards(c, "")) ? { nav: navFor(c, cupCards(c, "")) } : {}) },
-      main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null), fixtures: fxLinks(false), cups: cupCards(c, ""), marks: nowMarks, nav: navFor(c, cupCards(c, "")), racesHref: c.closed ? "" : `races/${suffix}` })
+      attrs: { fixtures: fxLinks(false), cups: cupCards(c, ""), races: c.closed ? "" : `races/${suffix}`, ...(nowMarks ? { marks: nowMarks } : {}), ...(navFor(c, cupCards(c, "")) ? { nav: navFor(c, cupCards(c, "")) } : {}), ...(results ? { results: String(results) } : {}) },
+      main: FP.countryMain(c, { seasons: seasonList(c, history[c.country], "", suffix, null), fixtures: fxLinks(false), cups: cupCards(c, ""), marks: nowMarks, nav: navFor(c, cupCards(c, "")), racesHref: c.closed ? "" : `races/${suffix}`, results })
     }));
     // Promotion and relegation races: each league's zones and the clubs just outside them, from the current tables.
     // Not for a league system without promotion and relegation (the USA).
@@ -591,7 +624,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       description: `Who's in the promotion, play-off and relegation places in every ${c.adjective} league covered here, who's just outside, and the points gap at each line.`,
       canonical: `${SITE}/${c.country}/races/`, base: "../../", suffix, page: "races", country: c.country, stamps: { [c.country]: c.updated }, countries,
       jsonld: crumbs([["Football Pyramids", SITE + "/"], [c.name, `${SITE}/${c.country}/`], ["Promotion and relegation races", `${SITE}/${c.country}/races/`]]),
-      main: FP.racesMain(c, { root: "../../", suffix, tableHref: `../${suffix}` })
+      main: FP.racesMain(c, { root: "../../", suffix, tableHref: `../${suffix}`, results })
     }));
     if (!c.closed) racesUrls.push(`/${c.country}/races/`);
     // Cup pages
@@ -783,6 +816,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       const list = [...past, ...(now ? [now] : [])];
       if (list.length) cupSeasons[`${c.country}/${cup.id}`] = { name: cup.name, href: fx ? `${base}${c.country}/${cup.id}/${suffix}` : null, list };
     }
+    const NEXT_ROUND = ["Final", "Semi-finals", "Quarter-finals", "Last 16", "Last 32", "Last 64"];
     const cupRunsOf = (c, name, tid) => {
       const out = [], sl = FP.slug(name);
       for (const cup of (COUNTRIES.find((x) => x.country === c.country) || {}).cups || []) {
@@ -792,8 +826,15 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         cs.list.forEach((s, i) => {
           const hit = (tid && s.clubs[tid]) || Object.values(s.clubs).find((x) => FP.slug(x[0]) === sl);
           if (!hit) return;
-          const [, ri, res, opp, score] = hit;
-          runs.push({ i, d: res === "W" ? -1 : s.dist[ri] == null ? 9 : s.dist[ri], round: s.rounds[ri], res, opp, score, now: !!s.now });
+          const [, ri, res, opp, score, through] = hit;
+          let d = res === "W" ? -1 : s.dist[ri] == null ? 9 : s.dist[ri], round = s.rounds[ri];
+          // Won this season's latest tie and the next round isn't in our data yet (not drawn, or not out from the
+          // API yet): the club has still reached that round. (Fleetwood beat Arsenal in the last 16: quarter-finals.)
+          const ahead = !!(s.now && through && ri === s.rounds.length - 1 && d > 0 && d < 9);
+          if (ahead) { d -= 1; round = NEXT_ROUND[d] || "the next round"; }
+          // Drawn in a round not played yet: the run so far is just the draw.
+          const next = !!(s.now && !res && !score && !through);
+          runs.push({ i, d, round, res, opp, score, now: !!s.now, ...(ahead || (through && s.now) ? { through: 1 } : {}), ...(next ? { next: 1 } : {}) });
         });
         // All-time titles: the honours list up to its season, plus wins in our data after it.
         const ct = cupTitles[`${c.country}/${cup.id}`];
@@ -1012,18 +1053,63 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       const slots = [...(history[c.country] || [])].reverse().map((h) => ({ season: h.season, year: h.year, sizes: sizesOf(h.leagues) }))
         .concat([{ season: c.season, year: Number(String(c.season).slice(0, 4)), sizes: sizesOf(c.leagues), now: 1 }]);
       clubsHere.sort((a, b) => a.n.localeCompare(b.n));
-      await write(`data/journeys/${c.country}.json`, JSON.stringify({
+      // Head to head, for the comparison page: every game this season between two of the country's clubs (league,
+      // cups and Europe, played or to come), and from the cup seasons we hold, each tie in which one knocked the other
+      // out (or beat it in the final). Earlier league meetings aren't stored on the site, so they aren't claimed.
+      const here = new Set(clubsHere.map((x) => x.s));
+      const slugOf = (id, name) => {
+        const k = id != null ? index.get(id) : null;
+        if (k && k.c.country === c.country) return k.slug;
+        const sl = name ? FP.slug(name) : "";
+        return here.has(sl) ? sl : null;
+      };
+      const meetList = [];
+      for (const [key, fx] of Object.entries(fixtures)) {
+        const [cc] = key.split("/");
+        if (cc !== c.country && cc !== "europe") continue;
+        for (const g of fx.groups) for (const r of g.rounds) for (const f of r.fixtures) {
+          const h = slugOf(f.h.id, f.h.n), a = slugOf(f.a.id, f.a.n);
+          if (!h || !a || h === a) continue;
+          meetList.push([h, a, f.ts, f.st, f.hg ?? null, f.ag ?? null, fx.name, fx.cup || cc === "europe" ? r.label : "", f.pen || 0, f.when || ""]);
+        }
+      }
+      meetList.sort((x, y) => x[2] - y[2]);
+      const meetCups = [], seenTie = new Set();
+      for (const cup of (COUNTRIES.find((x) => x.country === c.country) || {}).cups || []) {
+        const cs = cupSeasons[`${c.country}/${cup.id}`];
+        if (!cs) continue;
+        for (const sn of cs.list) {
+          if (sn.now) continue;   // this season's ties are in the list above
+          for (const [id, e] of Object.entries(sn.clubs || {})) {
+            const [name, ri, res, opp, score] = e;
+            if (res !== "L" && res !== "W") continue;
+            const me = slugOf(Number(id), name), them = slugOf(null, opp);
+            if (!me || !them || me === them) continue;
+            const tie = [sn.season, cs.name, ri, [me, them].sort().join("|")].join("/");
+            if (seenTie.has(tie)) continue;
+            seenTie.add(tie);
+            // Always from the winner's side: "<winner> beat <loser> <score>".
+            const flip = (x) => String(x || "").replace(/(\d+)–(\d+)/g, "$2–$1");
+            meetCups.push(res === "W" ? [me, them, sn.season, cs.name, sn.rounds[ri], score || ""] : [them, me, sn.season, cs.name, sn.rounds[ri], flip(score)]);
+          }
+        }
+      }
+      meetCups.sort((x, y) => String(y[2]).localeCompare(String(x[2])));
+      const firstCup = Object.keys(cupSeasons).filter((k) => k.startsWith(c.country + "/")).map((k) => cupSeasons[k].list[0]?.season).filter(Boolean).sort()[0] || null;
+      const journeysJSON = JSON.stringify({
         country: c.country, name: c.name, adjective: c.adjective, system: c.system || null, season: c.season,
         ladder: laddersOf(c), slots, clubs: clubsHere,
-        leagueHref: Object.fromEntries(c.leagues.map((l) => [l.name, `${c.country}/#${l.id}`]))
-      }));
+        leagueHref: Object.fromEntries(c.leagues.map((l) => [l.name, `${c.country}/#${l.id}`])),
+        meet: { list: meetList, cups: meetCups, cupsFrom: firstCup }
+      });
+      await write(`data/journeys/${c.country}.json`, journeysJSON);
       const meta = { country: c.country, countryName: c.name, adjective: c.adjective, system: c.system || null, season: c.season,
         root: "../../", suffix, nav: navOf(c), league: null };
       await write(`compare/${c.country}/index.html`, shell({
         title: `Compare ${c.adjective} clubs: pyramid journey comparison | Football Pyramids`,
         description: `Compare any two clubs' journeys through the ${c.system || c.adjective + " football pyramid"}, season by season.`,
         canonical: `${SITE}/compare/${c.country}/`, base: "../../", suffix, page: "compare", country: c.country, stamps: {}, countries,
-        attrs: { journeys: `data/journeys/${c.country}.json?v=${createHash("sha1").update(JSON.stringify(clubsHere)).digest("hex").slice(0, 8)}` },
+        attrs: { journeys: `data/journeys/${c.country}.json?v=${createHash("sha1").update(journeysJSON).digest("hex").slice(0, 8)}` },
         main: FP.compareShell(meta)
       }));
     }
@@ -1144,11 +1230,11 @@ ${past.concat(euroPast, cupPastUrls).map((u) => `  <url><loc>${SITE}${u}</loc><c
     }
   }
   // Club-page extras added after the main pages are written: pyramid route links, cups in search, what's at stake,
-  // stadium and achievements, European runs, and the combined Runs chart. They run here, on every build, in this
+  // stadium and achievements, European runs, the combined Runs chart, and last the tidy club header. They run here, on every build, in this
   // order, so `node scripts/build.mjs` always produces the whole site (each step reads the pages just written, so
   // running the build again gives the same result). No football-data API calls.
   if (!preview) {
-    for (const step of ["add-club-routes", "add-cups-to-search", "add-club-stakes", "add-club-profile", "add-club-europe", "unify-club-runs"]) {
+    for (const step of ["add-club-routes", "add-cups-to-search", "add-club-stakes", "add-club-profile", "add-club-europe", "unify-club-runs", "club-header"]) {
       execFileSync(process.execPath, [path.join(ROOT, "scripts", `${step}.mjs`)], { cwd: outDir, stdio: ["ignore", "inherit", "inherit"] });
     }
   }
