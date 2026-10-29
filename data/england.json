@@ -2219,15 +2219,15 @@
       {
        "pos": 14,
        "team": "Weston-super-Mare",
-       "p": 12,
+       "p": 13,
        "w": 5,
        "d": 3,
-       "l": 4,
-       "gf": 20,
-       "ga": 17,
+       "l": 5,
+       "gf": 21,
+       "ga": 19,
        "pts": 18,
        "tid": 4687,
-       "form": "WWLDL"
+       "form": "WLDLL"
       },
       {
        "pos": 15,
@@ -2244,6 +2244,19 @@
       },
       {
        "pos": 16,
+       "team": "Farnborough",
+       "p": 13,
+       "w": 5,
+       "d": 2,
+       "l": 6,
+       "gf": 12,
+       "ga": 20,
+       "pts": 17,
+       "tid": 7715,
+       "form": "DLWLW"
+      },
+      {
+       "pos": 17,
        "team": "AFC Totton",
        "p": 14,
        "w": 5,
@@ -2256,7 +2269,7 @@
        "form": "LLLWW"
       },
       {
-       "pos": 17,
+       "pos": 18,
        "team": "Hemel Hempstead Town",
        "p": 14,
        "w": 3,
@@ -2269,7 +2282,7 @@
        "form": "WDLLD"
       },
       {
-       "pos": 18,
+       "pos": 19,
        "team": "Maidenhead United",
        "p": 14,
        "w": 3,
@@ -2280,19 +2293,6 @@
        "pts": 14,
        "tid": 1838,
        "form": "WLLLD"
-      },
-      {
-       "pos": 19,
-       "team": "Farnborough",
-       "p": 12,
-       "w": 4,
-       "d": 2,
-       "l": 6,
-       "gf": 10,
-       "ga": 19,
-       "pts": 14,
-       "tid": 7715,
-       "form": "LDLWL"
       },
       {
        "pos": 20,
