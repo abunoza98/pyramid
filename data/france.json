@@ -4,7 +4,7 @@
  "adjective": "French",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-26T00:00:00.000Z",
+ "updated": "2026-10-29T00:00:00.000Z",
  "belowNote": "Promoted clubs from National 1 come up",
  "leagues": [
   {
@@ -288,7 +288,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-28T00:00:00.000Z"
   },
   {
    "id": "ligue-2",
@@ -560,7 +560,7 @@
      "form": "LDLDL"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-29T00:00:00.000Z"
   },
   {
    "id": "ligue-3",
@@ -654,6 +654,19 @@
     },
     {
      "pos": 5,
+     "team": "Amiens",
+     "p": 11,
+     "w": 4,
+     "d": 5,
+     "l": 2,
+     "gf": 14,
+     "ga": 5,
+     "pts": 17,
+     "tid": 87,
+     "form": "WDWDD"
+    },
+    {
+     "pos": 6,
      "team": "Concarneau",
      "p": 10,
      "w": 4,
@@ -666,7 +679,7 @@
      "form": "WWDWD"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Le Puy",
      "p": 10,
      "w": 5,
@@ -677,19 +690,6 @@
      "pts": 16,
      "tid": 3069,
      "form": "LWLWW"
-    },
-    {
-     "pos": 7,
-     "team": "Amiens",
-     "p": 10,
-     "w": 4,
-     "d": 4,
-     "l": 2,
-     "gf": 13,
-     "ga": 4,
-     "pts": 16,
-     "tid": 87,
-     "form": "DWDWD"
     },
     {
      "pos": 8,
@@ -732,6 +732,19 @@
     },
     {
      "pos": 11,
+     "team": "Thionville",
+     "p": 11,
+     "w": 3,
+     "d": 4,
+     "l": 4,
+     "gf": 16,
+     "ga": 17,
+     "pts": 13,
+     "tid": 22039,
+     "form": "DLLLD"
+    },
+    {
+     "pos": 12,
      "team": "Quevilly-Rouen",
      "p": 10,
      "w": 3,
@@ -742,19 +755,6 @@
      "pts": 13,
      "tid": 431,
      "form": "WDDLW"
-    },
-    {
-     "pos": 12,
-     "team": "Thionville",
-     "p": 10,
-     "w": 3,
-     "d": 3,
-     "l": 4,
-     "gf": 15,
-     "ga": 16,
-     "pts": 12,
-     "tid": 22039,
-     "form": "LDLLL"
     },
     {
      "pos": 13,
@@ -835,7 +835,7 @@
      "form": "LDDLL"
     }
    ],
-   "updated": "2026-10-20T00:00:00.000Z"
+   "updated": "2026-10-29T00:00:00.000Z"
   }
  ]
 }
