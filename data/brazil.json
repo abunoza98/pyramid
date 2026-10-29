@@ -57,15 +57,15 @@
     {
      "pos": 2,
      "team": "Palmeiras",
-     "p": 32,
+     "p": 33,
      "w": 20,
-     "d": 9,
+     "d": 10,
      "l": 3,
      "gf": 56,
      "ga": 22,
-     "pts": 69,
+     "pts": 70,
      "tid": 121,
-     "form": "DWWWW"
+     "form": "WWWWD"
     },
     {
      "pos": 3,
@@ -96,18 +96,31 @@
     {
      "pos": 5,
      "team": "Fluminense",
-     "p": 32,
-     "w": 14,
+     "p": 33,
+     "w": 15,
      "d": 9,
      "l": 9,
-     "gf": 50,
-     "ga": 41,
-     "pts": 51,
+     "gf": 52,
+     "ga": 42,
+     "pts": 54,
      "tid": 124,
-     "form": "WWLLL"
+     "form": "WLLLW"
     },
     {
      "pos": 6,
+     "team": "Bahia",
+     "p": 33,
+     "w": 14,
+     "d": 11,
+     "l": 8,
+     "gf": 48,
+     "ga": 42,
+     "pts": 53,
+     "tid": 118,
+     "form": "LWLDW"
+    },
+    {
+     "pos": 7,
      "team": "Atlético Mineiro",
      "p": 32,
      "w": 14,
@@ -120,69 +133,56 @@
      "form": "WDWWL"
     },
     {
-     "pos": 7,
-     "team": "Bahia",
-     "p": 32,
-     "w": 13,
-     "d": 11,
-     "l": 8,
-     "gf": 45,
-     "ga": 40,
-     "pts": 50,
-     "tid": 118,
-     "form": "LLWLD"
-    },
-    {
      "pos": 8,
      "team": "Santos",
-     "p": 32,
+     "p": 33,
      "w": 12,
-     "d": 10,
+     "d": 11,
      "l": 10,
      "gf": 49,
      "ga": 47,
-     "pts": 46,
+     "pts": 47,
      "tid": 128,
-     "form": "WDLWD"
+     "form": "DLWDD"
     },
     {
      "pos": 9,
-     "team": "São Paulo",
-     "p": 32,
+     "team": "Red Bull Bragantino",
+     "p": 33,
      "w": 12,
-     "d": 7,
+     "d": 8,
      "l": 13,
-     "gf": 37,
-     "ga": 36,
-     "pts": 43,
-     "tid": 126,
-     "form": "LLWWD"
+     "gf": 42,
+     "ga": 38,
+     "pts": 44,
+     "tid": 794,
+     "form": "DWDLW"
     },
     {
      "pos": 10,
-     "team": "Red Bull Bragantino",
-     "p": 32,
-     "w": 11,
-     "d": 8,
-     "l": 13,
+     "team": "São Paulo",
+     "p": 33,
+     "w": 12,
+     "d": 7,
+     "l": 14,
      "gf": 39,
-     "ga": 38,
-     "pts": 41,
-     "tid": 794,
-     "form": "LDWDL"
+     "ga": 39,
+     "pts": 43,
+     "tid": 126,
+     "form": "LWWDL"
     },
     {
      "pos": 11,
      "team": "Botafogo",
-     "p": 32,
+     "p": 33,
      "w": 10,
      "d": 9,
-     "l": 13,
-     "gf": 44,
-     "ga": 51,
+     "l": 14,
+     "gf": 45,
+     "ga": 53,
      "pts": 39,
      "tid": 120,
-     "form": "LLDWL"
+     "form": "LDWLL"
     },
     {
      "pos": 12,
@@ -239,15 +239,15 @@
     {
      "pos": 16,
      "team": "Internacional",
-     "p": 32,
+     "p": 33,
      "w": 8,
      "d": 11,
-     "l": 13,
-     "gf": 36,
-     "ga": 40,
+     "l": 14,
+     "gf": 37,
+     "ga": 42,
      "pts": 35,
      "tid": 119,
-     "form": "LWDLW"
+     "form": "WDLWL"
     },
     {
      "pos": 17,
@@ -278,31 +278,31 @@
     {
      "pos": 19,
      "team": "Remo",
-     "p": 32,
-     "w": 5,
+     "p": 33,
+     "w": 6,
      "d": 11,
      "l": 16,
-     "gf": 34,
-     "ga": 50,
-     "pts": 26,
+     "gf": 36,
+     "ga": 51,
+     "pts": 29,
      "tid": 1198,
-     "form": "LDDDL"
+     "form": "DDDLW"
     },
     {
      "pos": 20,
      "team": "Chapecoense",
-     "p": 31,
+     "p": 32,
      "w": 4,
      "d": 9,
-     "l": 18,
+     "l": 19,
      "gf": 32,
-     "ga": 63,
+     "ga": 66,
      "pts": 21,
      "tid": 132,
-     "form": "DLLLW"
+     "form": "LLLWL"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-28T00:00:00.000Z"
   },
   {
    "id": "serie-b",
