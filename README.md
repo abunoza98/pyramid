@@ -16,11 +16,15 @@ footballpyramids.com: Europe's top five leagues on the home page, and a full pyr
 | `scripts/update-standings.mjs` | Pulls fresh tables from API-Football, writes the data files and rebuilds the pages. |
 | `scripts/build.mjs` | Rebuilds the pages, sitemap and robots.txt from the data files. |
 | `scripts/add-club-*.mjs`, `unify-club-runs.mjs`, `add-cups-to-search.mjs` | Club-page extras (pyramid route links, what's at stake, stadium and achievements, European runs, the combined Runs chart) and cups in search. `build.mjs` runs them at the end of every build; no API calls. |
+| `scripts/club-header.mjs` | Last step of every build: gathers the top of each club page into one summary and moves the time-zone switch to the Fixtures list. |
+| `data/manual/draws.json`, `scripts/draws.mjs` | Cup draws kept by hand until API-Football adds the ties (often a day or more after the draw). Each round is used until the API has a round of the same name. |
 | `.github/workflows/update-standings.yml` | Runs the updater on GitHub every hour through the day. |
+| `.github/workflows/rebuild-pages.yml` | Rebuilds every page when a code change is merged, so pull requests only carry source files. |
 | `test/api-football-sample.json` | A sample API response for testing without a key. |
 
 ## Changing something
 
+- **A cup draw is made but the site doesn't show it yet**: add the round to `data/manual/draws.json` (club IDs from the cup's fixture file; `{ "winnerOf": <fixture ID> }` for a tie still to be played). It shows straight away and drops out by itself once the API has the round.
 - **A zone or note is wrong** (say a league changes its play-off places): edit `scripts/leagues.mjs`, then run `node scripts/build.mjs`.
 - **A club name looks odd** after a live update: add it to `NAMES` in `scripts/leagues.mjs`.
 - **Adding a league or a tier:** add it to the country's `leagues` list in `scripts/leagues.mjs` with its API-Football ID, then run the updater.

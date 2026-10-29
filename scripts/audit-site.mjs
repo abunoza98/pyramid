@@ -77,6 +77,10 @@ async function idsOf(rel) {
     ids.add(id); counts.set(id, (counts.get(id) || 0) + 1);
   }
   for (const m of html.matchAll(/<a\b[^>]*\bname\s*=\s*["']([^"']+)["'][^>]*>/gi)) ids.add(decodeEntities(m[1]));
+  // Tabs opened from the address (assets/app.js): "#fixtures" opens a cup or competition page's Fixtures tab, and on
+  // pages with data-hashtabs (Australia's nav) "#<tab>" opens that tab. Neither is an element ID, but both work.
+  if (/data-tabs="(?:stage|cup)"/.test(html) && /data-tab="fx"/.test(html)) ids.add("fixtures");
+  if (/data-hashtabs/.test(html)) for (const m of html.matchAll(/\bdata-tab\s*=\s*["']([^"']+)["']/gi)) ids.add(decodeEntities(m[1]));
   const duplicates = [...counts.entries()].filter(([, n]) => n > 1).map(([id, n]) => ({ id, n }));
   const out = { ids, duplicates };
   idsCache.set(rel, out);

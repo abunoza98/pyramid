@@ -324,8 +324,13 @@ const seasonContextScript = `<script data-season-link-context>
 })();
 </script>`;
 
+// Historical season pages: one row for moving between seasons, "← 2016–17 · [2017–18 ▾] · 2018–19 →", where the middle
+// is the full season list. (It used to be the list and, under it, a second row of the same three seasons.)
 function addSeasonNavigation(html) {
+  // Undo an earlier run (either layout).
   html = html.replace(/<nav class="tf-tabs season-step-nav"[\s\S]*?<\/nav>/, "");
+  html = html.replace(/<div class="season-step-nav season-row">([\s\S]*?)<\/div><!--season-row-->/, (all, inner) =>
+    (inner.match(/<details class="seasons">[\s\S]*?<\/details>/) || [""])[0]);
   html = html.replace(/\n?<script data-season-link-context>[\s\S]*?<\/script>/, "");
 
   const details = html.match(/<details class="seasons">[\s\S]*?<\/details>/);
@@ -338,21 +343,22 @@ function addSeasonNavigation(html) {
     if (idx < 0 || idx >= items.length) return null;
     const href = items[idx].match(/href="([^"]+)"/);
     if (!href) return null;
-    return { href: href[1], label: stripTags(items[idx]) };
+    return { href: href[1], label: stripTags(items[idx]).replace(/\s*\(live\)$/, "") };
   };
   // The season list is newest to oldest: older goes left, newer goes right.
   const older = item(current + 1);
   const newer = item(current - 1);
-  const currentLabel = stripTags(items[current]);
   if (!older && !newer) return html;
+  // The list's own label: just the season (the heading already says which country).
+  const picker = details[0].replace(/<summary class="seasons-head">[\s\S]*?<span class="seasons-more">/,
+    `<summary class="seasons-head">${stripTags(items[current])}<span class="seasons-more">`);
+  const row = '<div class="season-step-nav season-row">' +
+    (older ? `<a class="season-step prev" href="${older.href}" aria-label="Previous season, ${older.label}">← ${older.label}</a>` : '<span class="season-step"></span>') +
+    picker +
+    (newer ? `<a class="season-step next" href="${newer.href}" aria-label="Next season, ${newer.label}">${newer.label} →</a>` : '<span class="season-step"></span>') +
+    "</div><!--season-row-->";
 
-  const nav = '<nav class="tf-tabs season-step-nav" aria-label="Browse adjacent seasons" style="margin:10px 0 14px">' +
-    (older ? `<a class="tf-tab" href="${older.href}">← ${older.label}</a>` : "") +
-    `<span class="tf-tab on" aria-current="page">${currentLabel}</span>` +
-    (newer ? `<a class="tf-tab" href="${newer.href}">${newer.label} →</a>` : "") +
-    "</nav>";
-
-  html = html.replace(details[0], details[0] + nav);
+  html = html.replace(details[0], row);
   return html.replace("</body>", seasonContextScript + "\n</body>");
 }
 

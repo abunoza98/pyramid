@@ -1,0 +1,19 @@
+{
+  "england/efl-cup": {
+    "season": "2026–27",
+    "rounds": [
+      {
+        "round": "Quarter-finals",
+        "when": "Week of 14 December",
+        "around": "2026-12-15",
+        "source": "EFL Cup quarter-final draw, 28 October 2026 (ESPN, Goal)",
+        "ties": [
+          { "h": 1336, "a": { "winnerOf": 1640385 } },
+          { "h": 50, "a": 1343 },
+          { "h": 52, "a": 746 },
+          { "h": 40, "a": 35 }
+        ]
+      }
+    ]
+  }
+}

@@ -62,6 +62,9 @@
         var historical = document.getElementById("journey");
         if (!historical || !historical.parentNode) return;
         historical.insertAdjacentHTML("beforebegin", sectionHTML);
+        // On a narrow screen the chart scrolls sideways: open it on the latest round, not round 1.
+        var sc = document.querySelector("#season-journey .sj-scroll");
+        if (sc && sc.scrollWidth > sc.clientWidth) sc.scrollLeft = sc.scrollWidth;
       }
       ensure();
 
@@ -85,8 +88,11 @@
     if (!groups.length) return null;
 
     var currentRows = rowsOf(league);
-    var clubRow = currentRows.filter(function (r) { return fold(r.team) === fold(clubName); })[0] || null;
+    var clubRows = currentRows.filter(function (r) { return fold(r.team) === fold(clubName); });
+    var clubRow = clubRows[0] || null;
     var clubId = clubRow && clubRow.tid != null ? Number(clubRow.tid) : null;
+    var DONE = { FT: 1, AET: 1, PEN: 1, AWD: 1, WO: 1 };
+    var OFF = { PST: 1, CANC: 1, ABD: 1, TBD: 1 };
 
     var isClub = function (t) {
       return !!t && ((clubId != null && t.id != null && Number(t.id) === clubId) || fold(t.n) === fold(clubName));
@@ -108,10 +114,47 @@
     if (!candidates.length) return null;
 
     var group = candidates[0].g;
-    var rounds = group.rounds || [];
+    // League rounds only: finals series and play-offs saved with the league (the state NPLs, the EFL play-offs) are not
+    // part of the table.
+    var KO = /final|play-?off|eliminat|knock-?out|quarter|semi|qualif/i;
+    var rounds = (group.rounds || []).filter(function (r) { return !KO.test(r.key || r.label || ""); });
+
+    // A league played in stages (Argentina's Apertura then Clausura, Brazil's first stage then second-stage groups)
+    // has a table per stage: follow the stage, and the table row, whose games match. Ties go to the later stage.
+    var stageOf = function (r) { return String(r.key || r.label || "").replace(/\s*-\s*\d+$/, "").trim().toLowerCase(); };
+    var clubGames = function (list) {
+      var n = 0;
+      list.forEach(function (r) { (r.fixtures || []).forEach(function (f) { if (DONE[f.st] && f.hg != null && (isClub(f.h) || isClub(f.a))) n++; }); });
+      return n;
+    };
+    var options = [rounds], stageNames = [];
+    rounds.forEach(function (r) { var st = stageOf(r); if (stageNames.indexOf(st) < 0) stageNames.push(st); });
+    if (stageNames.length > 1) stageNames.forEach(function (st) { options.push(rounds.filter(function (r) { return stageOf(r) === st; })); });
+    if (clubRows.length) {
+      var best = null;
+      options.forEach(function (opt, oi) {
+        var games = clubGames(opt);
+        clubRows.forEach(function (cr) {
+          var gap = cr.p != null ? Math.abs(Number(cr.p) - games) : 0;
+          if (!best || gap < best.gap || (gap === best.gap && oi > best.oi)) best = { gap: gap, oi: oi, row: cr, rounds: opt };
+        });
+      });
+      rounds = best.rounds;
+      clubRow = best.row;
+    }
+    // Rank the club among the clubs in its own table (its zone or group), where the league is split.
+    var tableRows = currentRows;
+    if (league && league.groups && league.groups.length && clubRow) {
+      var home = league.groups.filter(function (g) { return (g.rows || []).indexOf(clubRow) > -1; })[0];
+      if (home) tableRows = home.rows || [];
+    }
+    var inTable = {};
+    tableRows.forEach(function (r) { inTable[r.tid != null ? "i" + Number(r.tid) : "n" + fold(r.team)] = 1; inTable["n" + fold(r.team)] = 1; });
+    var split = tableRows !== currentRows || stageNames.length > 1;
+
     var team = {};
     var deductions = {};
-    currentRows.forEach(function (r) {
+    tableRows.forEach(function (r) {
       var k = r.tid != null ? "i" + Number(r.tid) : "n" + fold(r.team);
       deductions[k] = Number(r.ded) || 0;
     });
@@ -132,44 +175,103 @@
     }
     if (!targetKey || !team[targetKey]) return null;
 
-    var DONE = { FT: 1, AET: 1, PEN: 1, AWD: 1, WO: 1 };
-    var OFF = { PST: 1, CANC: 1, ABD: 1 };
+    var DAY = 86400, WINDOW = 4 * DAY;
     var points = [], prev = null;
 
+    // Every finished game, in kick-off order. A rearranged game counts from the day it is actually played, so a
+    // round with a game still to play no longer drops the whole round (it used to: League Two lost rounds 8 and 9).
+    var played = [];
+    rounds.forEach(function (r) { (r.fixtures || []).forEach(function (f) { if (DONE[f.st] && f.hg != null && f.ag != null) played.push(f); }); });
+    played.sort(function (a, b) { return a.ts - b.ts || a.id - b.id; });
+    var used = 0;
+
     function apply(f) {
-      if (!DONE[f.st] || f.hg == null || f.ag == null) return;
       var h = row(f.h), a = row(f.a), hg = Number(f.hg), ag = Number(f.ag);
       h.p++; a.p++; h.gf += hg; h.ga += ag; a.gf += ag; a.ga += hg;
       if (hg > ag) { h.w++; a.l++; h.pts += 3; }
       else if (hg < ag) { a.w++; h.l++; a.pts += 3; }
       else { h.d++; a.d++; h.pts++; a.pts++; }
     }
+    function upTo(ts) { while (used < played.length && played[used].ts <= ts) apply(played[used++]); }
     function ranking() {
-      return Object.keys(team).map(function (k) { return team[k]; }).sort(function (a, b) {
+      return Object.keys(team).map(function (k) { return team[k]; }).filter(function (t) {
+        return !split || t.key === targetKey || inTable[t.key] || inTable["n" + fold(t.name)];
+      }).sort(function (a, b) {
         return b.pts - a.pts || (b.gf - b.ga) - (a.gf - a.ga) || b.gf - a.gf || b.w - a.w || a.name.localeCompare(b.name);
       });
     }
-
-    rounds.forEach(function (r, ri) {
-      var fs = r.fixtures || [];
-      if (!fs.length) return;
-      var complete = fs.every(function (f) { return DONE[f.st] || OFF[f.st]; });
-      if (!complete) return;
-
-      fs.forEach(apply);
+    function mineIn(list) {
+      var mine = list.filter(function (f) { return DONE[f.st] && f.hg != null && (key(f.h) === targetKey || key(f.a) === targetKey); });
+      return mine.length ? mine.map(function (f) { return f.h.n + " " + f.hg + "–" + f.ag + " " + f.a.n; }).join(" · ") : "";
+    }
+    function push(label, short, list) {
       var ranked = ranking(), pos = ranked.findIndex(function (x) { return x.key === targetKey; }) + 1;
-      var me = team[targetKey], mine = fs.filter(function (f) { return DONE[f.st] && (key(f.h) === targetKey || key(f.a) === targetKey); });
-      var result = mine.length ? mine.map(function (f) {
-        return f.h.n + " " + f.hg + "–" + f.ag + " " + f.a.n;
-      }).join(" · ") : "No league match this round";
-      var label = r.label || ("Round " + (ri + 1));
+      var me = team[targetKey];
       points.push({
-        label: label, short: String(label).replace(/^Regular Season\s*-\s*/i, "").replace(/^Round\s+/i, ""),
-        pos: pos, of: ranked.length, pts: me.pts, gd: me.gf - me.ga, result: result,
-        move: prev == null ? 0 : prev - pos
+        label: label, short: short, pos: pos, of: ranked.length, pts: me.pts, gd: me.gf - me.ga,
+        result: mineIn(list) || "No league match this round", move: prev == null ? 0 : prev - pos
       });
       prev = pos;
-    });
+    }
+
+    // Checkpoints: the end of each round, taken from the games played on the round's own dates (within four days
+    // of its middle kick-off). Leagues whose "round" is the whole season (USL's group stage) use the club's own
+    // match days instead.
+    var spread = function (r) {
+      var ts = (r.fixtures || []).filter(function (f) { return !OFF[f.st]; }).map(function (f) { return f.ts; });
+      return ts.length ? Math.max.apply(null, ts) - Math.min.apply(null, ts) : 0;
+    };
+    var seasonLong = rounds.length <= 3 && rounds.some(function (r) { return spread(r) > 28 * DAY; });
+    if (seasonLong) {
+      played.filter(function (f) { return key(f.h) === targetKey || key(f.a) === targetKey; }).forEach(function (f) {
+        upTo(f.ts);
+        var d = new Date(f.ts * 1000), label = d.toLocaleDateString(undefined, { day: "numeric", month: "short" });
+        push(label, label, [f]);
+      });
+    } else {
+      for (var ri = 0; ri < rounds.length; ri++) {
+        var r = rounds[ri], fs = r.fixtures || [];
+        var live = fs.filter(function (f) { return !OFF[f.st]; });
+        if (!live.length) continue;
+        var ts = live.map(function (f) { return f.ts; }).sort(function (a, b) { return a - b; });
+        var mid = ts[Math.floor(ts.length / 2)];
+        var own = live.filter(function (f) { return Math.abs(f.ts - mid) <= WINDOW; });
+        if (!own.every(function (f) { return DONE[f.st]; })) break;   // this round is still being played
+        upTo(Math.max.apply(null, own.map(function (f) { return f.ts; })));
+        var label = r.label || ("Round " + (ri + 1));
+        push(label, String(label).replace(/^Regular Season\s*-\s*/i, "").replace(/^Round\s+/i, ""), fs);
+      }
+    }
+
+    // The last point always agrees with the table on the page: games played since the last full round (rearranged
+    // games, a round under way) are added as "Now", and the position comes from the official table where we have it.
+    var official = clubRow && clubRow.pos ? Number(clubRow.pos) : null;
+    if (points.length && used < played.length) {
+      var later = played.slice(used);
+      upTo(Infinity);
+      push("Now", "Now", later);
+      var last = points[points.length - 1];
+      if (!mineIn(later)) {
+        // Only other clubs' rearranged games since: worth a point only if they moved this club.
+        if (!last.move) points.pop();
+        else last.result = "Rearranged games for other clubs since the last full round";
+      }
+    }
+    // Only when the table row is for these same games. If the table counts a different set of games altogether (a
+    // league played in stages or zones, ranked here across the whole season) the chart would contradict the table,
+    // so it isn't shown. One game apart is just the tables and fixtures updating at different times.
+    if (clubRow && clubRow.p != null) {
+      var gap = Math.abs(Number(clubRow.p) - team[targetKey].p);
+      if (gap > 1) return null;
+      if (gap) official = null;
+    }
+    if (points.length && official) {
+      var end = points[points.length - 1], before = points.length > 1 ? points[points.length - 2].pos : null;
+      end.pos = official;
+      if (clubRow.pts != null) end.pts = Number(clubRow.pts);
+      if (clubRow.gf != null && clubRow.ga != null) end.gd = Number(clubRow.gf) - Number(clubRow.ga);
+      end.move = before == null ? 0 : before - official;
+    }
 
     if (points.length < 2) return null;
     return {
@@ -222,13 +324,13 @@
     var latest = pts[n - 1];
     var wide = Math.max(540, n * 42);
     var possessive = /s$/i.test(clubName) ? clubName + "’" : clubName + "’s";
-    var cap = "Position after each completed " + data.league + " round. Latest: " + ord(latest.pos) + " after " + latest.label + ".";
+    var cap = "Position after each " + data.league + " round. Latest: " + ord(latest.pos) + (latest.label === "Now" ? " in the current table" : " after " + latest.label) + ".";
 
     return '<section class="cl-sec sj-sec" id="season-journey"><div class="cl-sec-h"><h2>' + esc(possessive) + " " + esc(season) + ' league journey</h2></div>' +
       '<p class="lchart-cap">' + esc(cap) + '</p><div class="sj-scroll"><div class="sj-chart" style="width:' + wide + 'px">' +
       '<div class="sj-y">' + yLabels + '</div><div class="sj-plot"><svg viewBox="0 0 ' + W + " " + H + '" preserveAspectRatio="none" aria-hidden="true">' +
       zoneRects + grid + '<polyline class="sj-line" points="' + poly + '"/></svg>' + dots + '</div><div class="sj-x">' + xLabels + "</div></div></div>" +
-      '<p class="lchart-note">Tap or hover a point for the round result, points and movement. Positions are reconstructed from completed league results; tied teams use points, goal difference, goals scored and wins.</p></section>';
+      '<p class="lchart-note">Tap or hover a point for the round result, points and movement. Positions are worked out from the results; rearranged games count from the day they are played, and the latest point matches the table. Tied teams use points, goal difference, goals scored and wins.</p></section>';
   }
 
   function addSeasonJourneyStyles() {
@@ -238,7 +340,7 @@
     style.textContent =
       ".sj-sec{margin-top:28px}.sj-scroll{overflow-x:auto;overflow-y:visible;padding:4px 0 12px;-webkit-overflow-scrolling:touch}" +
       ".sj-chart{min-width:540px;display:grid;grid-template-columns:46px minmax(0,1fr);grid-template-rows:300px 30px;position:relative}" +
-      ".sj-y{grid-column:1;grid-row:1;position:relative;color:var(--muted);font:500 11px/1 var(--mono)}" +
+      ".sj-y{grid-column:1;grid-row:1;position:sticky;left:0;z-index:3;background:var(--paper);color:var(--muted);font:500 11px/1 var(--mono)}" +
       ".sj-y span{position:absolute;right:9px;transform:translateY(-50%);white-space:nowrap}" +
       ".sj-plot{grid-column:2;grid-row:1;position:relative;background:var(--sheet);border-left:1px solid var(--rule-strong);border-bottom:1px solid var(--rule)}" +
       ".sj-plot svg{display:block;width:100%;height:100%;overflow:visible}.sj-grid{stroke:var(--rule);stroke-width:1;vector-effect:non-scaling-stroke}" +

@@ -403,13 +403,18 @@
       "</div>";
   }
 
-  function stampHTML(mode, updated, liveCount) {
+  // results: the kick-off (unix seconds) of the newest result the tables are known to include, worked out by the
+  // build by checking the tables' games played against the finished fixtures; zone: the country's own time zone.
+  // With it the line says what a visitor wants to know ("Latest result in these tables: Sun 25 Oct").
+  function stampHTML(mode, updated, liveCount, results, zone) {
     if (liveCount) return '<p class="stamp live now" id="stamp"><span class="dot"></span><span>' + liveCount + " game" + (liveCount === 1 ? "" : "s") +
       " live · tables show scores as they stand</span></p>";
     if (mode === "final") return '<p class="stamp final" id="stamp"><span class="dot"></span><span>Final tables</span></p>';
     // The date is when the newest table last changed (in practice its latest matchday), not when the site last
     // checked: a quiet midweek keeps an older date even though the feed is working.
     var live = mode === "live";
+    if (live && results) return '<p class="stamp live" id="stamp"><span class="dot"></span><span>Latest result in these tables: ' +
+      esc(fmt(results, zone || "Europe/London", { weekday: "short", day: "numeric", month: "short" })) + " · checked through the day</span></p>";
     return '<p class="stamp' + (live ? " live" : "") + '" id="stamp"><span class="dot"></span><span>' +
       (live ? "Standings as of " : "Sample snapshot · standings as of ") + ukTime(updated) + (isDateOnly(updated) ? "" : " UK") +
       (live ? " · checked through the day" : "") + "</span></p>";
@@ -459,7 +464,7 @@
   /* ---------- Whole pages (the inside of <main>) ---------- */
   // "ENGLAND · 2026–27 ▾" that opens to a button per season. seasons: [{ label, href, current }]
   function seasonsHTML(c, seasons) {
-    var head = esc(c.name) + '<span class="sep" aria-hidden="true">·</span>' + esc(c.season);
+    var head = (c.name ? esc(c.name) + '<span class="sep" aria-hidden="true">·</span>' : "") + esc(c.season);
     if (!seasons || seasons.length < 2) return '<p class="seasons"><span class="seasons-head">' + head + "</span></p>";
     return '<details class="seasons"><summary class="seasons-head">' + head + '<span class="seasons-more">Seasons</span></summary>' +
       '<ul aria-label="Seasons">' + seasons.map(function (s) {
@@ -474,14 +479,14 @@
     var past = c.mode === "final";
     var html =
       '<section class="intro" aria-labelledby="intro-h">' +
-      '<h1 id="intro-h">The ' + (c.system ? esc(c.system) : esc(c.adjective) + " football pyramid") + "</h1>" +
+      '<h1 id="intro-h">The ' + (c.system ? esc(c.system) : esc(c.adjective) + " football pyramid") + (past ? '<span class="h1-season">, ' + esc(c.season) + "</span>" : "") + "</h1>" +
       seasonsHTML(c, opts.seasons) +
       (past
         ? '<p class="lede">Final tables for the top ' + n + (c.system ? " levels of the " + esc(c.system) : " tiers of " + esc(c.adjective) + " football") + " in " + esc(c.season) +
           ", from " + esc(c.leagues[0].name) + " down to " + esc(last.name) + ". " + (c.closed ? "Play-off places are marked from each league's records." : "Promotion, relegation and play-off places are marked where they apply, from each league's records.") + "</p>"
         : '<p class="lede">' + (c.system ? "The top " + n + " levels of the " + esc(c.system) : "Every league in the top " + n + " tiers of " + esc(c.adjective) + " football") + ", from " + esc(c.leagues[0].name) +
           " down to " + esc(last.name) + ". " + (c.systemNote ? esc(c.systemNote) : "Promotion, relegation and play-off places are marked on each table where they apply.") + "</p>") +
-      stampHTML(c.mode, c.updated, c.liveCount);
+      stampHTML(c.mode, c.updated, c.liveCount, opts.results, VENUE_TZ[c.country]);
     var nav = opts.nav;
     // With a two-level nav, the state competitions' cups (NPL finals) sit with their state's table, not on the overview.
     var stateCup = function (cup) { return nav && cup.group && navKeyOf(nav, cup.group); };
@@ -497,7 +502,17 @@
         (i === 1 ? INLINE_AD : "");
     });
     if (nav) return html + "</section>" + countryNavHTML(c, nav, overview, tiers, (opts.cups || []).filter(stateCup));
-    return html + overview + "</section>" + c.leagues.map(function (lg) { return tiers[lg.id]; }).join("");
+    return html + overview + "</section>" + jumpHTML(c.leagues) + c.leagues.map(function (lg) { return tiers[lg.id]; }).join("");
+  }
+
+  // A row of the country's divisions that stays under the header while the tables scroll: it says which division is
+  // on screen (assets/app.js marks it) and jumps to any other. Only where there are three or more.
+  function jumpHTML(leagues) {
+    if (!leagues || leagues.length < 3) return "";
+    return '<nav class="tier-jump" aria-label="Divisions">' + leagues.map(function (lg) {
+      return '<a href="#' + esc(lg.id) + '" data-jump="' + esc(lg.id) + '" title="' + esc(lg.name) + '"><span class="tj-short">' + esc(lg.short || lg.name) +
+        '</span><span class="tj-long">' + esc(lg.name) + "</span></a>";
+    }).join("") + "</nav>";
   }
 
   /* ---------- Two-level navigation (Australia) ----------
@@ -596,7 +611,7 @@
     return '<section class="intro" aria-labelledby="intro-h"><p class="eyebrow crumbs"><a href="' + esc(opts.tableHref || "../") + '">' + esc(c.name) + "</a> · " + esc(c.season) + "</p>" +
       '<h1 id="intro-h">' + esc(c.adjective) + " promotion and relegation races</h1>" +
       '<p class="lede">Every promotion, play-off and relegation place in the ' + esc(c.adjective) + " leagues covered here, with the clubs just outside them and the points between each side of the line.</p>" +
-      stampHTML(c.mode, c.updated, 0) + "</section>" +
+      stampHTML(c.mode, c.updated, 0, opts.results, VENUE_TZ[c.country]) + "</section>" +
       '<section class="comp" data-tabs="races"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Races">' +
       '<button type="button" role="tab" class="tf-tab on" data-tab="up" aria-selected="true">Promotion</button>' +
       '<button type="button" role="tab" class="tf-tab" data-tab="down" aria-selected="false">Relegation</button></div>' +
@@ -728,7 +743,7 @@
     var tabs = order.map(function (x, i) {
       var s = x.s;
       return (x.label ? '<span class="xp-group" aria-hidden="true">' + esc(x.label) + "</span>" : "") +
-        '<button type="button" role="tab" class="xp-tab' + (i === 0 ? " on" : "") + '" data-tab="' + s.country + '" aria-selected="' + (i === 0) + '">' +
+        '<button type="button" role="tab" class="xp-tab' + (i === 0 ? " on" : "") + (i === order.length - 1 ? " xp-last" : "") + '" data-tab="' + s.country + '" aria-selected="' + (i === 0) + '">' +
         flag(s.country) + "<span>" + esc(s.name) + "</span></button>";
     }).join("");
     var panels = all.map(function (s, i) {
@@ -795,8 +810,8 @@
       '<p class="eyebrow">Football Pyramids · ' + esc(countries[0].season) + "</p>" +
       '<h1 id="intro-h">Football league tables, from the top flight down.</h1>' +
       '<p class="lede">' + all.length + " countries, " + nLeagues + " leagues and " + nClubs.toLocaleString("en-GB") +
-      " clubs. Each country’s divisions sit together in league-system order, with promotion, relegation and play-off places shown where they apply. " +
-      "Fixtures, past seasons and live scores on match days.</p>" +
+      ' clubs.<span class="lede-more"> Each country’s divisions sit together in league-system order, with promotion, relegation and play-off places shown where they apply. ' +
+      "Fixtures, past seasons and live scores on match days.</span></p>" +
       // Club and league search, the quickest way in. assets/app.js wires it up and keeps it in place when the page redraws.
       '<div class="hero-find" id="hero-find-box"><label for="hero-find">Find a club or league</label>' +
         '<div class="hero-find-in"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/>' +
@@ -805,7 +820,8 @@
         'placeholder="Type a club or league name" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go">' +
         '<ul class="finder-list" id="hero-find-list" role="listbox" aria-label="Matching clubs or leagues" hidden></ul></div>' +
         '<p class="hero-find-hint" id="hero-find-hint">Search any club or league covered here. Club results open fixtures, results and its pyramid journey; league results jump straight to the table.</p></div>' +
-      stampHTML(live ? "live" : "snapshot", newest, countries.reduce(function (n, c) { return n + (c.liveCount || 0); }, 0)) +
+      // (opts.results: the newest result in any of the tables shown, worked out by the build.)
+      stampHTML(live ? "live" : "snapshot", newest, countries.reduce(function (n, c) { return n + (c.liveCount || 0); }, 0), opts.results, "Europe/London") +
       "</section>" +
       stripHTML(opts.live, opts.europe ? all.concat([summary(opts.europe)]) : all, base, suffix, names) +
       // England first (the default), Europe straight after the big five.
@@ -941,7 +957,7 @@
     var days = [], byDay = {}, off = [];
     games.forEach(function (f) {
       if (GONE[f.st] && !isLive(f) && f.st !== "ABD" && f.st !== "AWD") { off.push(f); return; }
-      var d = f.nodate ? "Date not confirmed" : fmt(f.ts, vz(f, tz), { weekday: "long", day: "numeric", month: "long" });
+      var d = f.nodate ? (f.when || "Date not confirmed") : fmt(f.ts, vz(f, tz), { weekday: "long", day: "numeric", month: "long" });
       if (!byDay[d]) { byDay[d] = []; days.push(d); }
       byDay[d].push(f);
     });
@@ -1043,14 +1059,15 @@
   function tiesOf(round) {
     var by = {}, order = [];
     round.fixtures.forEach(function (f) {
-      var k = [f.h.id, f.a.id].sort(function (x, y) { return x - y; }).join("-");
+      var k = [f.h.id != null ? f.h.id : f.h.n, f.a.id != null ? f.a.id : f.a.n].map(String).sort().join("-");
       if (!by[k]) { by[k] = []; order.push(k); }
       by[k].push(f);
     });
     return order.map(function (k) {
       var legs = by[k].sort(function (x, y) { return x.ts - y.ts; });
       var first = legs[0];
-      var teams = [{ id: first.h.id, n: first.h.n, t: first.h.t, tier: first.h.tier, agg: 0 }, { id: first.a.id, n: first.a.n, t: first.a.t, tier: first.a.tier, agg: 0 }];
+      var side = function (x) { var o = { id: x.id, n: x.n, t: x.t, tier: x.tier, agg: 0 }; if (x.from) o.from = x.from; return o; };
+      var teams = [side(first.h), side(first.a)];
       var played = false, done = legs.every(function (f) { return isDone(f) || f.st === "AWD" || f.st === "WO"; });
       var on = legs.some(isLive);
       // Best-of-three series (MLS playoffs, Round One): each game has a winner (on penalties if level), and the
@@ -1115,7 +1132,7 @@
       if (t.series && f.pen && (isDone(f) || f.st === "AWD")) notes.push(name + ": " + (f.pen[0] > f.pen[1] ? f.h.n : f.a.n) + " won " + Math.max(f.pen[0], f.pen[1]) + "–" + Math.min(f.pen[0], f.pen[1]) + " on penalties");
       if (isLive(f)) notes.push((name ? name + " " : "") + "live · " + clock(f, now));
       else if (GONE[f.st]) notes.push((name ? name + ": " : "") + GONE[f.st]);
-      else if (!shown(f)) notes.push((name ? name + " " : "") + (f.st === "TBD" ? fmt(f.ts, vz(f, tz), { weekday: "short", day: "numeric", month: "short" }) + ", time TBC"
+      else if (!shown(f)) notes.push((name ? name + " " : "") + (f.when ? f.when : f.st === "TBD" ? fmt(f.ts, vz(f, tz), { weekday: "short", day: "numeric", month: "short" }) + ", time TBC"
         : fmt(f.ts, vz(f, tz), { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", hour12: false })));
     });
     if (t.how === "pens") {
@@ -1134,7 +1151,12 @@
     var cols = rounds.map(function (r) { return { label: r.label, ties: tiesOf(r) }; });
     for (var k = cols.length - 2; k >= 0; k--) {
       var next = cols[k + 1].ties, pos = {};
-      next.forEach(function (t, i) { pos[t.teams[0].id] = i * 2; pos[t.teams[1].id] = i * 2 + 1; });
+      next.forEach(function (t, i) {
+        t.teams.forEach(function (tm, s) {
+          if (tm.id != null) pos[tm.id] = i * 2 + s;
+          (tm.from || []).forEach(function (id) { pos[id] = i * 2 + s; });   // "Everton or Newcastle": their tie feeds this slot
+        });
+      });
       var rank = function (t) {
         var a = pos[t.teams[0].id], b = pos[t.teams[1].id];
         var p = a != null ? a : b != null ? b : null;
@@ -1201,9 +1223,9 @@
     };
     var panel = function (k, html) { return '<div class="tf-panel' + (k === first ? " on" : "") + '" data-panel="' + k + '" role="tabpanel">' + html + "</div>"; };
     return '<section class="intro fx-intro" aria-labelledby="intro-h">' +
-      '<p class="eyebrow">' + esc(opts.eyebrow || "UEFA") + " · " + esc(fx ? fx.season : "") + "</p>" +
+      '<p class="eyebrow">' + esc(opts.eyebrow || "UEFA") + (opts.seasons ? "" : " · " + esc(fx ? fx.season : "")) + "</p>" +
       '<h1 id="intro-h"><span class="comp-dot c-' + esc(comp.id) + '" aria-hidden="true"></span>' + esc(comp.name) + "</h1>" +
-      (opts.seasons ? seasonsHTML({ name: comp.name, season: fx ? fx.season : "" }, opts.seasons) : "") +
+      (opts.seasons ? seasonsHTML({ name: "", season: fx ? fx.season : "" }, opts.seasons) : "") +
       '<p class="lede"><strong>' + esc(compStatus(comp, fx)) + "</strong> · " + (opts.lede ? esc(opts.lede) : comp.final ? (comp.groups ? "The group-stage tables" : "The league-phase table") + ", the full knockout bracket and every fixture and result, qualifying included."
         : "The league-phase table, the knockout bracket as each draw is made, and every fixture and result.") + "</p></section>" +
       '<section class="comp" data-tabs="stage"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Stages">' +
@@ -1300,9 +1322,10 @@
     };
     var panel = function (k, html) { return '<div class="tf-panel' + (k === first ? " on" : "") + '" data-panel="' + k + '" role="tabpanel">' + html + "</div>"; };
     return '<section class="intro fx-intro" aria-labelledby="intro-h">' +
-      '<p class="eyebrow">' + esc((fx && fx.countryName) || "") + " · Cup · " + esc(fx ? fx.season : "") + "</p>" +
+      // Country and season once: the eyebrow names the country, the season picker the season.
+      '<p class="eyebrow">' + esc((fx && fx.countryName) || "") + " · Cup" + (opts.seasons ? "" : " · " + esc(fx ? fx.season : "")) + "</p>" +
       '<h1 id="intro-h" class="cup-h">' + flag(country) + "<span>" + esc(cup.name) + "</span></h1>" +
-      (opts.seasons ? seasonsHTML({ name: cup.name, season: fx ? fx.season : "" }, opts.seasons) : "") +
+      (opts.seasons ? seasonsHTML({ name: "", season: fx ? fx.season : "" }, opts.seasons) : "") +
       (opts.note ? '<p class="cup-note">' + esc(opts.note) + "</p>" : "") +
       '<p class="lede"><strong>' + esc(cupStatus(fx)) + "</strong> · Every tie and result, round by round, with each club’s league next to its name, so the giant-killings stand out.</p></section>" +
       '<section class="comp" data-tabs="cup"><div class="tf-tabs comp-tabs" role="tablist" aria-label="Views">' +
@@ -1338,7 +1361,7 @@
       var z = el.getAttribute("data-z");
       el.textContent = fmt(Number(el.getAttribute("data-ts")), z && tz !== "local" ? z : tz, TFMT[el.getAttribute("data-f")]);
     });
-    var line = root.querySelector(".fx-links");
+    var line = root.querySelector(".fx-tz") || root.querySelector(".fx-links");
     if (line) line.innerHTML = tzLine(mode, country);
   }
 
@@ -1558,20 +1581,26 @@
         (f.opp.t && f.comp.kind !== "league" ? ' <i class="tag tier-' + (f.opp.tier || 0) + '">' + esc(f.opp.t) + "</i>" : "");
     };
     var compTag = function (f) { return '<span class="ctag ctag-' + f.comp.kind + '" title="' + esc(f.comp.name) + '">' + esc(f.comp.short) + "</span>"; };
+    // A hand-kept draw has no date yet, only its week ("Week of 14 December" -> "w/c 14 Dec").
+    var wk = function (f) { return String(f.when).replace(/^Week of\s+/i, "w/c ").replace(/(\d+)\s+([A-Za-z]{3})[a-z]*/, "$1 $2"); };
     var when = function (f, o) {
+      if (f.nodate && f.when) return f.when;
       return f.st === "TBD" ? fmt(f.ts, vz(f, tz), { weekday: "short", day: "numeric", month: "short" }) + ", TBC" : fmt(f.ts, vz(f, tz), o || { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", hour12: false });
     };
     var line = function (f, kind) {
       var right;
       if (kind === "result") {
         var g = mine(f), r = res(f);
-        right = '<span class="cl-res"><b class="wdl wdl-' + r + '">' + r + "</b><span class=\"cl-score\">" + g[0] + "–" + g[1] + (f.st === "AET" ? " aet" : f.pen ? " p" : "") + "</span></span>";
+        // A shoot-out: the score, then the shoot-out from this club's side ("1–1, 5–3 pens"), not a bare "p".
+        var sp = f.pen ? (f.home ? f.pen : [f.pen[1], f.pen[0]]) : null;
+        right = '<span class="cl-res"><b class="wdl wdl-' + r + '">' + r + "</b><span class=\"cl-score\">" + g[0] + "–" + g[1] +
+          (sp ? '<small class="cl-pens"> (' + sp[0] + "–" + sp[1] + " pens)</small>" : f.st === "AET" ? " aet" : "") + "</span></span>";
       } else if (kind === "live") {
         var lg2 = mine(f);
         right = '<span class="lv on">' + esc(clock(f, now)) + " " + lg2[0] + "–" + lg2[1] + "</span>";
       } else right = '<span class="cl-time">' + (f.st === "TBD" ? "TBC" : tt(f.ts, tz, "t", f.z)) + "</span>";
       // data-fid / data-home let assets/app.js lay live scores over the row without rebuilding the page.
-      return '<li class="cl-row" data-fid="' + f.id + '" data-home="' + (f.home ? 1 : 0) + '"><span class="cl-date">' + tt(f.ts, tz, "d", f.z) + "</span>" + compTag(f) +
+      return '<li class="cl-row" data-fid="' + f.id + '" data-home="' + (f.home ? 1 : 0) + '"><span class="cl-date">' + (f.nodate && f.when ? esc(wk(f)) : tt(f.ts, tz, "d", f.z)) + "</span>" + compTag(f) +
         '<span class="cl-ha">' + (f.home ? "H" : "A") + '</span><span class="cl-opp">' + opp(f) + "</span>" + right + "</li>";
     };
     var list = function (arr, kind, first) {
@@ -1588,7 +1617,7 @@
       (nx.round ? " · " + esc(nx.round) : "") + "</p>" +
       '<p class="nm-teams"><span>' + (nx.home ? esc(d.name) : opp(nx)) + "</span><b>" +
         (isLive(nx) ? nx.hg + "–" + nx.ag : "v") + "</b><span>" + (nx.home ? opp(nx) : esc(d.name)) + "</span></p>" +
-      '<p class="nm-when">' + (isLive(nx) ? esc(clock(nx, now)) : nx.st === "TBD" ? tt(nx.ts, tz, "d", nx.z) + ", time TBC" : tt(nx.ts, tz, "long", nx.z)) +
+      '<p class="nm-when">' + (isLive(nx) ? esc(clock(nx, now)) : nx.nodate && nx.when ? esc(nx.when) + ", date to be confirmed" : nx.st === "TBD" ? tt(nx.ts, tz, "d", nx.z) + ", time TBC" : tt(nx.ts, tz, "long", nx.z)) +
       (nx.v ? " · " + esc(nx.v) : "") + "</p></section>" : "";
 
     // Competitions: one tab per competition the club is in this season (league first, then Europe, then cups).
@@ -1650,6 +1679,19 @@
     var SHORT = ["Won", "Final", "Semis", "Quarters", "Last 16", "Last 32", "Last 64", "Earlier"];
     var levelOf = function (dd) { return dd < 0 ? 0 : Math.min(dd + 1, LEVELS.length - 1); };
     var cupList = d.cupRuns || [];
+    // Open on the cup the club is furthest into this season (Fleetwood: the EFL Cup quarter-finals, not an FA Cup
+    // first-round draw), then one it's still in, then the one with its most recent run.
+    var openCup = 0;
+    (function () {
+      var score = function (cr) {
+        var r = cr.runs[cr.runs.length - 1];
+        if (!r) return -1e9;
+        if (r.now && r.res !== "L") return (r.next ? 1e6 : 2e6) - r.d;
+        return r.i;
+      };
+      var top = -1e9;
+      cupList.forEach(function (cr, ci) { var v = score(cr); if (v > top) { top = v; openCup = ci; } });
+    })();
     var cupRuns = cupList.map(function (cr, ci) {
       var n = cr.seasons.length, cell = 1000 / n, X = function (i) { return (i + 0.5) * cell; };
       var H = LEVELS.length, Y = function (lv) { return (lv + 0.5) / H * 100; };
@@ -1661,14 +1703,16 @@
         // Join each run to the next, stepping over a single season the club wasn't in the cup (it went out before
         // the rounds we have, or didn't enter). A longer absence ends the line at the last run before it.
         if (b.i - a.i > 2) continue;
-        segs += '<line x1="' + X(a.i) + '" y1="' + Y(levelOf(a.d)) + '" x2="' + X(b.i) + '" y2="' + Y(levelOf(b.d)) + '" vector-effect="non-scaling-stroke"/>';
+        segs += '<line' + (b.next ? ' class="cr-next"' : "") + ' x1="' + X(a.i) + '" y1="' + Y(levelOf(a.d)) + '" x2="' + X(b.i) + '" y2="' + Y(levelOf(b.d)) + '" vector-effect="non-scaling-stroke"/>';
       }
       var dots = cr.runs.map(function (r) {
-        var at = X(r.i) / 1000, out = r.res === "L" ? "Out in the " + r.round.charAt(0).toLowerCase() + r.round.slice(1) : r.res === "W" ? "Won the " + cr.name : r.now ? "Still in: " + r.round : r.round;
-        var tie = r.opp ? (r.res === "W" ? "Beat " : r.res === "L" ? "Lost to " : "v ") + esc(r.opp) + (r.score ? " " + esc(r.score) : "") : "";
+        var lc = function (x) { return x.charAt(0).toLowerCase() + x.slice(1); };
+        var at = X(r.i) / 1000, out = r.res === "L" ? "Out in the " + lc(r.round) : r.res === "W" ? "Won the " + cr.name
+          : r.next ? "Still in: drawn in the " + lc(r.round) + ", not played yet" : r.now ? "Still in: " + lc(r.round) : r.round;
+        var tie = r.opp ? (r.res === "W" || r.through ? "Beat " : r.res === "L" ? "Lost to " : "v ") + esc(r.opp) + (r.score ? " " + esc(r.score) : "") : "";
         var tip = '<span class="ltip' + (at < 0.2 ? " l" : at > 0.8 ? " r" : "") + (levelOf(r.d) < 2 ? " below" : "") + '"><b>' + esc(cr.seasons[r.i]) + "</b>" + esc(out) +
           (tie ? "<i>" + tie + "</i>" : "") + "</span>";
-        return '<span class="ld cr-dot' + (r.res === "W" ? " won" : "") + (r.now ? " now" : "") + '" tabindex="0" style="left:' + (Math.round(at * 10000) / 100) + "%;top:" + Y(levelOf(r.d)) + '%" aria-label="' +
+        return '<span class="ld cr-dot' + (r.res === "W" ? " won" : "") + (r.now ? " now" : "") + (r.next ? " next" : "") + '" tabindex="0" style="left:' + (Math.round(at * 10000) / 100) + "%;top:" + Y(levelOf(r.d)) + '%" aria-label="' +
           esc(cr.seasons[r.i] + ": " + out) + '">' + tip + "</span>";
       }).join("");
       // Season labels thinned so they never overlap: at most 9 on a wide screen, 5 on a phone, newest always shown.
@@ -1692,7 +1736,8 @@
       else if (cr.titles === 0) allTime = fin.lost ? "Never won it; " + lostTxt + ". " : "Never won it or reached the final. ";
       var since = cr.seasons.length ? " since " + cr.seasons[0] : "";
       var shown = wins.length ? (wins.length === 1 ? "Won it in " + cr.seasons[wins[0].i] : "Won it " + wins.length + " times" + since + ": " + wins.map(function (w) { return cr.seasons[w.i]; }).join(", ")) + "."
-        : best ? "Best run" + since + ": " + LEVELS[levelOf(best.d)].toLowerCase().replace("earlier rounds", "the early rounds") + " (" + cr.seasons[best.i] + ")." : "";
+        : best ? "Best run" + since + ": " + LEVELS[levelOf(best.d)].toLowerCase().replace("earlier rounds", "the early rounds") + " (" + cr.seasons[best.i] +
+          (best.now && best.res !== "L" ? ", still in" : "") + ")." : "";
       // A club missing from the latest seasons: say so, so empty recent seasons don't read as missing data.
       var lastRun = cr.runs[cr.runs.length - 1];
       // Only finished seasons count: while this season's cup is still going, a club that isn't in it yet may just
@@ -1704,7 +1749,7 @@
       var cap = allTime + shown + absent;
       var head = cupList.length > 1 ? '<div class="cr-h"><p>' + esc(cap) + "</p>" + (cr.href ? '<a href="' + esc(cr.href) + '">' + esc(cr.name) + " this season →</a>" : "") + "</div>"
         : '<div class="cr-h"><h3>' + (cr.href ? '<a href="' + esc(cr.href) + '">' + esc(cr.name) + "</a>" : esc(cr.name)) + "</h3><p>" + esc(cap) + "</p></div>";
-      return '<div class="cr' + (cupList.length > 1 ? " tf-panel" + (ci === 0 ? " on" : "") : "") + '"' + (cupList.length > 1 ? ' data-panel="' + esc(cr.id) + '" role="tabpanel"' : "") + ">" + head +
+      return '<div class="cr' + (cupList.length > 1 ? " tf-panel" + (ci === openCup ? " on" : "") : "") + '"' + (cupList.length > 1 ? ' data-panel="' + esc(cr.id) + '" role="tabpanel"' : "") + ">" + head +
         '<div class="lchart cr-chart"><div class="lside">' + LEVELS.map(function (l, lv) { return '<span class="ls cr-l" style="top:' + (lv / H * 100) + "%;height:" + (100 / H) + '%" title="' + esc(l) + '"><b>' + esc(SHORT[lv]) + "</b></span>"; }).join("") +
         '</div><div class="lplot" style="height:' + (H * 24) + 'px">' +
         '<svg viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true">' +
@@ -1714,7 +1759,7 @@
     // More than one cup: a tab for each, one chart showing at a time.
     var cupTabs = cupList.length > 1 ? '<div class="tf-tabs cl-tabs" role="tablist" aria-label="Cups">' + cupList.map(function (cr, ci) {
       var won = cr.titles != null ? cr.titles : cr.runs.filter(function (r) { return r.res === "W"; }).length;
-      return '<button type="button" role="tab" class="tf-tab' + (ci === 0 ? " on" : "") + '" data-tab="' + esc(cr.id) + '" aria-selected="' + (ci === 0) + '">' + esc(cr.name) +
+      return '<button type="button" role="tab" class="tf-tab' + (ci === openCup ? " on" : "") + '" data-tab="' + esc(cr.id) + '" aria-selected="' + (ci === openCup) + '">' + esc(cr.name) +
         (won ? '<span class="cr-won" title="' + won + (won === 1 ? " title" : " titles") + ' in all">' + won + "×</span>" : "") + "</button>";
     }).join("") + "</div>" : "";
     var cupSection = cupRuns ? '<section class="cl-sec"' + (cupList.length > 1 ? ' data-tabs="cup-runs"' : "") + '><div class="cl-sec-h"><h2>Cup runs</h2></div>' + cupTabs + cupRuns + "</section>" : "";
@@ -1774,6 +1819,8 @@
       ((d.context || []).length ? '<p class="cl-context">' + d.context.map(function (c) {
         return '<span class="' + (c.dir ? "cx-" + c.dir : "") + '">' + (c.dir === "up" ? '<b aria-hidden="true">▲</b> ' : c.dir === "down" ? '<b aria-hidden="true">▼</b> ' : "") + esc(c.text) + "</span>";
       }).join('<i aria-hidden="true"> · </i>') + "</p>" : "") +
+      // (Kept as plain "fx-links": the build's later steps place their lines after it; scripts/club-header.mjs then
+      // moves it to the Fixtures list as "fx-tz".)
       '<p class="fx-links">' + tzLine(mode, d.country) + "</p></section>" +
       // The journey comes straight after the next match: it's what this site has that a scores site doesn't.
       nextHTML + journey +

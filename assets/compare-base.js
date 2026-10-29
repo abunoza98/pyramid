@@ -224,6 +224,39 @@
   function tierName(t) { var l = (D.ladder || []).filter(function (x) { return x.tier === t; })[0]; return l ? l.name : ""; }
   function short(name) { return String(name).replace(/ (Football Club|FC|AFC|CF|SC)$/, ""); }
 
+  // Head to head: this season's games between the two (played and to come) and every cup tie between them in the
+  // seasons we hold. Data: D.meet.list [home, away, ts, status, home goals, away goals, competition, round, pens, week]
+  // and D.meet.cups [winner, loser, season, cup, round, score from the winner's side].
+  var DONE_ST = { FT: 1, AET: 1, PEN: 1, AWD: 1, WO: 1 }, OFF_ST = { PST: 1, CANC: 1, ABD: 1 };
+  function h2hHTML(a, b) {
+    var m = D.meet;
+    if (!m) return "";
+    var pair = function (x, y) { return (x === a.s && y === b.s) || (x === b.s && y === a.s); };
+    var nameOf = function (sl) { return sl === a.s ? a.n : b.n; };
+    var games = (m.list || []).filter(function (g) { return pair(g[0], g[1]); });
+    var played = games.filter(function (g) { return DONE_ST[g[3]] && g[4] != null; });
+    var next = games.filter(function (g) { return !DONE_ST[g[3]] && !OFF_ST[g[3]]; })[0];
+    var cups = (m.cups || []).filter(function (t) { return pair(t[0], t[1]); });
+    var day = function (ts) { try { return new Date(ts * 1000).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }); } catch (e) { return ""; } };
+    var comp = function (g) { return g[6] + (g[7] ? ", " + g[7].toLowerCase() : ""); };
+    var items = [];
+    played.slice().reverse().forEach(function (g) {
+      var pens = g[8] ? " · " + nameOf(g[8][0] > g[8][1] ? g[0] : g[1]) + " won " + Math.max(g[8][0], g[8][1]) + "–" + Math.min(g[8][0], g[8][1]) + " on penalties" : g[3] === "AET" ? " · after extra time" : "";
+      items.push('<li><span class="h2h-when">' + esc(day(g[2])) + '</span><span class="h2h-what">' + esc(nameOf(g[0])) + " <b>" + g[4] + "–" + g[5] + "</b> " + esc(nameOf(g[1])) +
+        '<small>' + esc(comp(g) + pens) + "</small></span></li>");
+    });
+    cups.forEach(function (t) {
+      items.push('<li><span class="h2h-when">' + esc(t[2]) + '</span><span class="h2h-what">' + esc(nameOf(t[0])) + " beat " + esc(nameOf(t[1])) + (t[5] ? " <b>" + esc(t[5]) + "</b>" : "") +
+        '<small>' + esc(t[3] + (t[4] ? ", " + t[4].toLowerCase() : "")) + "</small></span></li>");
+    });
+    var nextHTML = next ? '<p class="h2h-next"><strong>Next:</strong> ' + esc(nameOf(next[0])) + " v " + esc(nameOf(next[1])) + " · " + esc(comp(next)) + " · " +
+      esc(next[9] || day(next[2])) + "</p>" : "";
+    var scope = "This season’s games, and cup ties" + (m.cupsFrom ? " since " + m.cupsFrom : "") + ". League meetings from earlier seasons aren’t stored here.";
+    var body = items.length ? '<ul class="h2h-list">' + items.join("") + "</ul>"
+      : '<p class="cmp-note">They haven’t met this season' + (m.cupsFrom ? ", or in a cup tie since " + esc(m.cupsFrom) : "") + ".</p>";
+    return '<section class="cl-sec cmp-h2h"><div class="cl-sec-h"><h2>Head to head</h2></div>' + nextHTML + body + '<p class="lchart-note">' + esc(scope) + "</p></section>";
+  }
+
   function render() {
     var a = A(), b = B();
     var title = $("cmp-title"), lede = $("cmp-lede");
@@ -325,7 +358,7 @@
     var openSeasons = $("cmp-seasons") && $("cmp-seasons").open;
     app.innerHTML = controls + '<div class="cmp-export" id="cmp-export-box" hidden></div>' +
       '<section class="cl-sec cmp-chart" id="journey"><div class="cl-sec-h"><h2>' + esc(a.n) + " vs " + esc(b.n) + "</h2></div>" + cap + note + plot.html + gapNote + seasons + "</section>" +
-      summary + sharedHTML +
+      summary + h2hHTML(a, b) + sharedHTML +
       '<p class="cmp-links"><a href="' + esc(BASE + a.p + SUFFIX) + '">' + esc(a.n) + ' club page →</a><a href="' + esc(BASE + b.p + SUFFIX) + '">' + esc(b.n) + " club page →</a></p>";
     if (openSeasons) $("cmp-seasons").open = true;
     current = { a: a, b: b, slots: slots, sa: sa, sb: sb, plotCfg: plotCfg, span: span };
