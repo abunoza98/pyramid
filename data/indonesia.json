@@ -4,7 +4,7 @@
  "adjective": "Indonesian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-27T00:00:00.000Z",
+ "updated": "2026-10-30T00:00:00.000Z",
  "belowNote": "Championship (second tier) clubs come up; API-Football doesn't have its tables yet",
  "leagues": [
   {
@@ -127,18 +127,32 @@
     {
      "pos": 8,
      "team": "Bhayangkara FC",
-     "p": 7,
+     "p": 8,
      "w": 2,
      "d": 5,
-     "l": 0,
+     "l": 1,
      "gf": 11,
-     "ga": 8,
+     "ga": 10,
      "pts": 11,
      "tid": 2443,
-     "form": "WDDWD"
+     "form": "DDWDL"
     },
     {
      "pos": 9,
+     "team": "Java United",
+     "p": 8,
+     "w": 3,
+     "d": 3,
+     "l": 2,
+     "gf": 12,
+     "ga": 10,
+     "pts": 10,
+     "ded": 2,
+     "tid": 22409,
+     "form": "WWDDW"
+    },
+    {
+     "pos": 10,
      "team": "Persik Kediri",
      "p": 7,
      "w": 3,
@@ -151,7 +165,7 @@
      "form": "DWLWL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Arema FC",
      "p": 7,
      "w": 2,
@@ -164,7 +178,7 @@
      "form": "DDLLW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Borneo FC",
      "p": 6,
      "w": 3,
@@ -177,7 +191,7 @@
      "form": "WLWLW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "PSM Makassar",
      "p": 7,
      "w": 2,
@@ -188,20 +202,6 @@
      "pts": 9,
      "tid": 2441,
      "form": "DLWWD"
-    },
-    {
-     "pos": 13,
-     "team": "Java United",
-     "p": 7,
-     "w": 2,
-     "d": 3,
-     "l": 2,
-     "gf": 10,
-     "ga": 10,
-     "pts": 7,
-     "ded": 2,
-     "tid": 22409,
-     "form": "LWWDD"
     },
     {
      "pos": 14,
@@ -270,7 +270,7 @@
      "form": "LLLLD"
     }
    ],
-   "updated": "2026-10-27T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   }
  ]
 }
