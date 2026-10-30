@@ -181,7 +181,7 @@
      "form": "DWLDD"
     }
    ],
-   "updated": "2026-10-29T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   },
   {
    "id": "prva-nl",
@@ -243,6 +243,19 @@
     },
     {
      "pos": 3,
+     "team": "Cibalia",
+     "p": 11,
+     "w": 5,
+     "d": 4,
+     "l": 2,
+     "gf": 12,
+     "ga": 10,
+     "pts": 19,
+     "tid": 1021,
+     "form": "WLLWW"
+    },
+    {
+     "pos": 4,
      "team": "Segesta Sisak",
      "p": 10,
      "w": 5,
@@ -255,7 +268,7 @@
      "form": "WDLWW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "BSK Bijelo Brdo",
      "p": 10,
      "w": 5,
@@ -268,7 +281,7 @@
      "form": "LWLDW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Jadran LP",
      "p": 10,
      "w": 4,
@@ -279,19 +292,6 @@
      "pts": 16,
      "tid": 5708,
      "form": "WWDDL"
-    },
-    {
-     "pos": 6,
-     "team": "Cibalia",
-     "p": 10,
-     "w": 4,
-     "d": 4,
-     "l": 2,
-     "gf": 10,
-     "ga": 10,
-     "pts": 16,
-     "tid": 1021,
-     "form": "WWLLW"
     },
     {
      "pos": 7,
@@ -308,19 +308,6 @@
     },
     {
      "pos": 8,
-     "team": "Karlovac 1919",
-     "p": 10,
-     "w": 4,
-     "d": 2,
-     "l": 4,
-     "gf": 12,
-     "ga": 14,
-     "pts": 14,
-     "tid": 15295,
-     "form": "LDWWL"
-    },
-    {
-     "pos": 9,
      "team": "Opatija",
      "p": 11,
      "w": 4,
@@ -331,6 +318,19 @@
      "pts": 14,
      "tid": 6246,
      "form": "WDWWL"
+    },
+    {
+     "pos": 9,
+     "team": "Karlovac 1919",
+     "p": 11,
+     "w": 4,
+     "d": 2,
+     "l": 5,
+     "gf": 12,
+     "ga": 16,
+     "pts": 14,
+     "tid": 15295,
+     "form": "DWWLL"
     },
     {
      "pos": 10,
