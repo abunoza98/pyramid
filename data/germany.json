@@ -101,6 +101,19 @@
     },
     {
      "pos": 5,
+     "team": "SV Elversberg",
+     "p": 8,
+     "w": 4,
+     "d": 1,
+     "l": 3,
+     "gf": 16,
+     "ga": 16,
+     "pts": 13,
+     "tid": 1660,
+     "form": "DLWLW"
+    },
+    {
+     "pos": 6,
      "team": "RB Leipzig",
      "p": 7,
      "w": 4,
@@ -113,7 +126,7 @@
      "form": "WLWLW"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Werder Bremen",
      "p": 7,
      "w": 3,
@@ -126,30 +139,17 @@
      "form": "DWDDW"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Mainz 05",
-     "p": 7,
+     "p": 8,
      "w": 3,
      "d": 1,
-     "l": 3,
-     "gf": 16,
-     "ga": 13,
+     "l": 4,
+     "gf": 17,
+     "ga": 17,
      "pts": 10,
      "tid": 164,
-     "form": "LWLWL"
-    },
-    {
-     "pos": 8,
-     "team": "SV Elversberg",
-     "p": 7,
-     "w": 3,
-     "d": 1,
-     "l": 3,
-     "gf": 12,
-     "ga": 15,
-     "pts": 10,
-     "tid": 1660,
-     "form": "LDLWL"
+     "form": "WLWLL"
     },
     {
      "pos": 9,

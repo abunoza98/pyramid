@@ -68,6 +68,19 @@
     },
     {
      "pos": 2,
+     "team": "Lille",
+     "p": 9,
+     "w": 5,
+     "d": 3,
+     "l": 1,
+     "gf": 12,
+     "ga": 6,
+     "pts": 18,
+     "tid": 79,
+     "form": "LWDDW"
+    },
+    {
+     "pos": 3,
      "team": "Rennes",
      "p": 9,
      "w": 5,
@@ -78,19 +91,6 @@
      "pts": 16,
      "tid": 94,
      "form": "LWLWL"
-    },
-    {
-     "pos": 3,
-     "team": "Lille",
-     "p": 8,
-     "w": 4,
-     "d": 3,
-     "l": 1,
-     "gf": 11,
-     "ga": 6,
-     "pts": 15,
-     "tid": 79,
-     "form": "WLWDD"
     },
     {
      "pos": 4,
@@ -147,15 +147,15 @@
     {
      "pos": 8,
      "team": "Lens",
-     "p": 8,
+     "p": 9,
      "w": 4,
      "d": 1,
-     "l": 3,
+     "l": 4,
      "gf": 16,
-     "ga": 12,
+     "ga": 13,
      "pts": 13,
      "tid": 116,
-     "form": "DLWWW"
+     "form": "LWWWL"
     },
     {
      "pos": 9,

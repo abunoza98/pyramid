@@ -4,7 +4,7 @@
  "adjective": "Belgian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-25T00:00:00.000Z",
+ "updated": "2026-10-30T00:00:00.000Z",
  "belowNote": "The top amateur clubs come up",
  "leagues": [
   {
@@ -56,6 +56,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Club Brugge",
+     "p": 10,
+     "w": 9,
+     "d": 0,
+     "l": 1,
+     "gf": 26,
+     "ga": 8,
+     "pts": 27,
+     "tid": 569,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
      "team": "Gent",
      "p": 9,
      "w": 8,
@@ -66,19 +79,6 @@
      "pts": 25,
      "tid": 631,
      "form": "WDWWW"
-    },
-    {
-     "pos": 2,
-     "team": "Club Brugge",
-     "p": 9,
-     "w": 8,
-     "d": 0,
-     "l": 1,
-     "gf": 22,
-     "ga": 6,
-     "pts": 24,
-     "tid": 569,
-     "form": "WWWWW"
     },
     {
      "pos": 3,
@@ -174,15 +174,15 @@
     {
      "pos": 10,
      "team": "Zulte Waregem",
-     "p": 9,
+     "p": 10,
      "w": 3,
      "d": 2,
-     "l": 4,
-     "gf": 10,
-     "ga": 12,
+     "l": 5,
+     "gf": 12,
+     "ga": 16,
      "pts": 11,
      "tid": 600,
-     "form": "WLLLL"
+     "form": "LLLLL"
     },
     {
      "pos": 11,
@@ -289,7 +289,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   },
   {
    "id": "challenger-pro-league",
@@ -409,6 +409,19 @@
     },
     {
      "pos": 7,
+     "team": "Gent II",
+     "p": 8,
+     "w": 3,
+     "d": 2,
+     "l": 3,
+     "gf": 11,
+     "ga": 13,
+     "pts": 11,
+     "tid": 19685,
+     "form": "LDWLW"
+    },
+    {
+     "pos": 8,
      "team": "Excelsior Virton",
      "p": 7,
      "w": 3,
@@ -421,7 +434,7 @@
      "form": "LWDLL"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Patro Eisden",
      "p": 8,
      "w": 3,
@@ -434,7 +447,7 @@
      "form": "LLLWW"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Club Brugge II",
      "p": 7,
      "w": 2,
@@ -445,19 +458,6 @@
      "pts": 9,
      "tid": 14130,
      "form": "LDDLD"
-    },
-    {
-     "pos": 10,
-     "team": "Lierse",
-     "p": 6,
-     "w": 2,
-     "d": 2,
-     "l": 2,
-     "gf": 7,
-     "ga": 8,
-     "pts": 8,
-     "tid": 6219,
-     "form": "WDDLW"
     },
     {
      "pos": 11,
@@ -474,42 +474,42 @@
     },
     {
      "pos": 12,
-     "team": "Gent II",
+     "team": "Lierse",
      "p": 7,
      "w": 2,
      "d": 2,
      "l": 3,
-     "gf": 9,
-     "ga": 13,
+     "gf": 7,
+     "ga": 10,
      "pts": 8,
-     "tid": 19685,
-     "form": "DLDWL"
+     "tid": 6219,
+     "form": "DDLWL"
     },
     {
      "pos": 13,
      "team": "Seraing United",
-     "p": 8,
-     "w": 1,
+     "p": 9,
+     "w": 2,
      "d": 2,
      "l": 5,
-     "gf": 11,
+     "gf": 12,
      "ga": 16,
-     "pts": 5,
+     "pts": 8,
      "tid": 10244,
-     "form": "LLDLW"
+     "form": "LDLWW"
     },
     {
      "pos": 14,
      "team": "Liège",
-     "p": 8,
+     "p": 9,
      "w": 1,
      "d": 2,
-     "l": 5,
+     "l": 6,
      "gf": 13,
-     "ga": 21,
+     "ga": 22,
      "pts": 5,
      "tid": 6220,
-     "form": "DDLLL"
+     "form": "DLLLL"
     },
     {
      "pos": 15,
@@ -525,7 +525,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   }
  ]
 }

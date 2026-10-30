@@ -4,7 +4,7 @@
  "adjective": "Dutch",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-25T00:00:00.000Z",
+ "updated": "2026-10-30T00:00:00.000Z",
  "belowNote": "The top Derde Divisie clubs come up",
  "leagues": [
   {
@@ -288,7 +288,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-29T00:00:00.000Z"
   },
   {
    "id": "eerste-divisie",
@@ -358,28 +358,28 @@
     {
      "pos": 4,
      "team": "Almere City",
-     "p": 12,
-     "w": 7,
+     "p": 13,
+     "w": 8,
      "d": 1,
      "l": 4,
-     "gf": 25,
-     "ga": 12,
-     "pts": 22,
+     "gf": 27,
+     "ga": 13,
+     "pts": 25,
      "tid": 419,
-     "form": "LWWLL"
+     "form": "WWLLW"
     },
     {
      "pos": 5,
      "team": "Roda JC",
-     "p": 12,
-     "w": 6,
+     "p": 13,
+     "w": 7,
      "d": 4,
      "l": 2,
-     "gf": 15,
-     "ga": 11,
-     "pts": 22,
+     "gf": 17,
+     "ga": 12,
+     "pts": 25,
      "tid": 414,
-     "form": "WLDWW"
+     "form": "LDWWW"
     },
     {
      "pos": 6,
@@ -397,31 +397,18 @@
     {
      "pos": 7,
      "team": "FC Volendam",
-     "p": 12,
+     "p": 13,
      "w": 6,
      "d": 1,
-     "l": 5,
-     "gf": 29,
-     "ga": 20,
+     "l": 6,
+     "gf": 30,
+     "ga": 22,
      "pts": 19,
      "tid": 416,
-     "form": "WLWDW"
+     "form": "LWDWL"
     },
     {
      "pos": 8,
-     "team": "Jong AZ",
-     "p": 12,
-     "w": 5,
-     "d": 2,
-     "l": 5,
-     "gf": 31,
-     "ga": 26,
-     "pts": 17,
-     "tid": 418,
-     "form": "DWLDW"
-    },
-    {
-     "pos": 9,
      "team": "Vitesse",
      "p": 12,
      "w": 5,
@@ -434,7 +421,7 @@
      "form": "LDLWL"
     },
     {
-     "pos": 10,
+     "pos": 9,
      "team": "MVV",
      "p": 12,
      "w": 5,
@@ -447,20 +434,20 @@
      "form": "WLLLD"
     },
     {
-     "pos": 11,
-     "team": "RKC Waalwijk",
-     "p": 12,
-     "w": 3,
-     "d": 7,
-     "l": 2,
-     "gf": 21,
-     "ga": 17,
-     "pts": 16,
-     "tid": 417,
-     "form": "LDLDD"
+     "pos": 10,
+     "team": "Jong AZ",
+     "p": 13,
+     "w": 5,
+     "d": 2,
+     "l": 6,
+     "gf": 32,
+     "ga": 28,
+     "pts": 17,
+     "tid": 418,
+     "form": "WLDWL"
     },
     {
-     "pos": 12,
+     "pos": 11,
      "team": "Jong PSV",
      "p": 12,
      "w": 4,
@@ -471,6 +458,19 @@
      "pts": 16,
      "tid": 411,
      "form": "DLDLW"
+    },
+    {
+     "pos": 12,
+     "team": "RKC Waalwijk",
+     "p": 13,
+     "w": 3,
+     "d": 7,
+     "l": 3,
+     "gf": 22,
+     "ga": 19,
+     "pts": 16,
+     "tid": 417,
+     "form": "DLDDL"
     },
     {
      "pos": 13,
@@ -487,6 +487,19 @@
     },
     {
      "pos": 14,
+     "team": "De Graafschap",
+     "p": 13,
+     "w": 4,
+     "d": 3,
+     "l": 6,
+     "gf": 17,
+     "ga": 27,
+     "pts": 15,
+     "tid": 199,
+     "form": "DWLDW"
+    },
+    {
+     "pos": 15,
      "team": "TOP Oss",
      "p": 12,
      "w": 4,
@@ -499,7 +512,7 @@
      "form": "LWWLD"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Jong Ajax",
      "p": 12,
      "w": 3,
@@ -512,30 +525,17 @@
      "form": "LDLWD"
     },
     {
-     "pos": 16,
-     "team": "De Graafschap",
-     "p": 12,
+     "pos": 17,
+     "team": "Helmond Sport",
+     "p": 13,
      "w": 3,
      "d": 3,
-     "l": 6,
-     "gf": 15,
-     "ga": 26,
-     "pts": 12,
-     "tid": 199,
-     "form": "WDWLD"
-    },
-    {
-     "pos": 17,
-     "team": "FC Eindhoven",
-     "p": 12,
-     "w": 3,
-     "d": 2,
      "l": 7,
-     "gf": 16,
-     "ga": 25,
-     "pts": 11,
-     "tid": 422,
-     "form": "LDLLL"
+     "gf": 23,
+     "ga": 28,
+     "pts": 12,
+     "tid": 424,
+     "form": "DLLLW"
     },
     {
      "pos": 18,
@@ -552,16 +552,16 @@
     },
     {
      "pos": 19,
-     "team": "Helmond Sport",
-     "p": 12,
-     "w": 2,
-     "d": 3,
-     "l": 7,
-     "gf": 20,
-     "ga": 26,
-     "pts": 9,
-     "tid": 424,
-     "form": "LDLLL"
+     "team": "FC Eindhoven",
+     "p": 13,
+     "w": 3,
+     "d": 2,
+     "l": 8,
+     "gf": 18,
+     "ga": 28,
+     "pts": 11,
+     "tid": 422,
+     "form": "DLLLL"
     },
     {
      "pos": 20,
@@ -577,7 +577,7 @@
      "form": "WLLLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   },
   {
    "id": "tweede-divisie",
@@ -836,7 +836,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-28T00:00:00.000Z"
   }
  ]
 }

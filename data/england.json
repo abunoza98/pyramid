@@ -4,7 +4,7 @@
  "adjective": "English",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-28T00:00:00.000Z",
+ "updated": "2026-10-30T00:00:00.000Z",
  "belowNote": "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
  "leagues": [
   {
@@ -296,7 +296,7 @@
      "form": "LLLLD"
     }
    ],
-   "updated": "2026-10-28T00:00:00.000Z"
+   "updated": "2026-10-29T00:00:00.000Z"
   },
   {
    "id": "championship",
@@ -450,6 +450,19 @@
     },
     {
      "pos": 10,
+     "team": "Sheffield United",
+     "p": 13,
+     "w": 5,
+     "d": 4,
+     "l": 4,
+     "gf": 17,
+     "ga": 15,
+     "pts": 19,
+     "tid": 62,
+     "form": "WLWDW"
+    },
+    {
+     "pos": 11,
      "team": "Blackburn Rovers",
      "p": 12,
      "w": 5,
@@ -462,7 +475,7 @@
      "form": "DWWLW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Portsmouth",
      "p": 12,
      "w": 5,
@@ -473,19 +486,6 @@
      "pts": 18,
      "tid": 1355,
      "form": "LWWDW"
-    },
-    {
-     "pos": 12,
-     "team": "Sheffield United",
-     "p": 12,
-     "w": 4,
-     "d": 4,
-     "l": 4,
-     "gf": 16,
-     "ga": 15,
-     "pts": 16,
-     "tid": 62,
-     "form": "LWLWD"
     },
     {
      "pos": 13,
@@ -542,15 +542,15 @@
     {
      "pos": 17,
      "team": "Wrexham",
-     "p": 12,
+     "p": 13,
      "w": 3,
      "d": 5,
-     "l": 4,
+     "l": 5,
      "gf": 15,
-     "ga": 18,
+     "ga": 19,
      "pts": 14,
      "tid": 1837,
-     "form": "WDLWL"
+     "form": "DLWLL"
     },
     {
      "pos": 18,
@@ -644,7 +644,7 @@
      "form": "DLLLD"
     }
    ],
-   "updated": "2026-10-28T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   },
   {
    "id": "league-one",
@@ -988,7 +988,7 @@
      "form": "LWLLL"
     }
    ],
-   "updated": "2026-10-28T00:00:00.000Z"
+   "updated": "2026-10-29T00:00:00.000Z"
   },
   {
    "id": "league-two",
@@ -1100,15 +1100,15 @@
     {
      "pos": 7,
      "team": "Chesterfield",
-     "p": 13,
+     "p": 14,
      "w": 5,
      "d": 4,
-     "l": 4,
-     "gf": 23,
-     "ga": 17,
+     "l": 5,
+     "gf": 24,
+     "ga": 21,
      "pts": 19,
      "tid": 1345,
-     "form": "WDLDW"
+     "form": "DLDWL"
     },
     {
      "pos": 8,
@@ -1138,6 +1138,19 @@
     },
     {
      "pos": 10,
+     "team": "Newport County",
+     "p": 14,
+     "w": 4,
+     "d": 6,
+     "l": 4,
+     "gf": 20,
+     "ga": 17,
+     "pts": 18,
+     "tid": 1367,
+     "form": "WDDLW"
+    },
+    {
+     "pos": 11,
      "team": "Shrewsbury Town",
      "p": 13,
      "w": 5,
@@ -1150,7 +1163,7 @@
      "form": "WLWWD"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Grimsby Town",
      "p": 13,
      "w": 4,
@@ -1163,7 +1176,7 @@
      "form": "LLLDW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Gillingham",
      "p": 13,
      "w": 4,
@@ -1176,7 +1189,7 @@
      "form": "DWLDL"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Tranmere Rovers",
      "p": 13,
      "w": 3,
@@ -1189,7 +1202,7 @@
      "form": "LDLWD"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Swindon Town",
      "p": 13,
      "w": 4,
@@ -1202,7 +1215,7 @@
      "form": "LLDWD"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Bristol Rovers",
      "p": 13,
      "w": 5,
@@ -1213,19 +1226,6 @@
      "pts": 16,
      "tid": 1334,
      "form": "LLLLD"
-    },
-    {
-     "pos": 16,
-     "team": "Newport County",
-     "p": 13,
-     "w": 3,
-     "d": 6,
-     "l": 4,
-     "gf": 16,
-     "ga": 16,
-     "pts": 15,
-     "tid": 1367,
-     "form": "DWDDL"
     },
     {
      "pos": 17,
@@ -1332,7 +1332,7 @@
      "form": "LDLLD"
     }
    ],
-   "updated": "2026-10-28T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   },
   {
    "id": "national-league",
@@ -1413,6 +1413,19 @@
     },
     {
      "pos": 4,
+     "team": "AFC Fylde",
+     "p": 16,
+     "w": 9,
+     "d": 2,
+     "l": 5,
+     "gf": 30,
+     "ga": 24,
+     "pts": 29,
+     "tid": 1839,
+     "form": "LWLWW"
+    },
+    {
+     "pos": 5,
      "team": "Yeovil Town",
      "p": 15,
      "w": 8,
@@ -1425,7 +1438,7 @@
      "form": "DWWLW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Worthing",
      "p": 15,
      "w": 8,
@@ -1438,7 +1451,7 @@
      "form": "DWWWD"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Altrincham",
      "p": 15,
      "w": 9,
@@ -1449,19 +1462,6 @@
      "pts": 28,
      "tid": 4700,
      "form": "WLWWD"
-    },
-    {
-     "pos": 7,
-     "team": "AFC Fylde",
-     "p": 15,
-     "w": 8,
-     "d": 2,
-     "l": 5,
-     "gf": 27,
-     "ga": 23,
-     "pts": 26,
-     "tid": 1839,
-     "form": "LLWLW"
     },
     {
      "pos": 8,
@@ -1531,15 +1531,15 @@
     {
      "pos": 13,
      "team": "AFC Hornchurch",
-     "p": 15,
+     "p": 16,
      "w": 7,
      "d": 0,
-     "l": 8,
-     "gf": 17,
-     "ga": 23,
+     "l": 9,
+     "gf": 18,
+     "ga": 26,
      "pts": 21,
      "tid": 7690,
-     "form": "WLWLL"
+     "form": "LWLLL"
     },
     {
      "pos": 14,
@@ -1685,7 +1685,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-28T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   },
   {
    "id": "national-league-north-south",
@@ -1727,7 +1727,7 @@
    "groups": [
     {
      "name": "North",
-     "updated": "2026-10-28T00:00:00.000Z",
+     "updated": "2026-10-29T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2045,7 +2045,7 @@
     },
     {
      "name": "South",
-     "updated": "2026-10-28T00:00:00.000Z",
+     "updated": "2026-10-29T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2362,7 +2362,7 @@
      ]
     }
    ],
-   "updated": "2026-10-28T00:00:00.000Z"
+   "updated": "2026-10-29T00:00:00.000Z"
   }
  ]
 }
