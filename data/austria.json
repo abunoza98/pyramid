@@ -669,18 +669,18 @@
        "ga": 14,
        "pts": 29,
        "tid": 21534,
-       "form": "WWWLW"
+       "form": "WWLWD"
       },
       {
        "pos": 2,
        "team": "LASK Juniors",
-       "p": 13,
+       "p": 14,
        "w": 8,
-       "d": 3,
+       "d": 4,
        "l": 2,
-       "gf": 39,
-       "ga": 11,
-       "pts": 27,
+       "gf": 42,
+       "ga": 14,
+       "pts": 28,
        "tid": 11225,
        "form": "WWWDW"
       },
@@ -726,15 +726,15 @@
       {
        "pos": 6,
        "team": "Kuchl",
-       "p": 13,
+       "p": 14,
        "w": 6,
        "d": 3,
-       "l": 4,
-       "gf": 24,
-       "ga": 23,
+       "l": 5,
+       "gf": 25,
+       "ga": 27,
        "pts": 21,
        "tid": 14714,
-       "form": "LWDWL"
+       "form": "WDWLL"
       },
       {
        "pos": 7,
@@ -747,7 +747,7 @@
        "ga": 21,
        "pts": 20,
        "tid": 4974,
-       "form": "LWLLW"
+       "form": "WLLWD"
       },
       {
        "pos": 8,
@@ -765,15 +765,15 @@
       {
        "pos": 9,
        "team": "Leonfelden",
-       "p": 13,
+       "p": 14,
        "w": 4,
-       "d": 5,
+       "d": 6,
        "l": 4,
-       "gf": 25,
-       "ga": 27,
-       "pts": 17,
+       "gf": 26,
+       "ga": 28,
+       "pts": 18,
        "tid": 27885,
-       "form": "LLWWD"
+       "form": "LWWDD"
       },
       {
        "pos": 10,
@@ -790,6 +790,32 @@
       },
       {
        "pos": 11,
+       "team": "Wohnbau Dietach",
+       "p": 14,
+       "w": 4,
+       "d": 3,
+       "l": 7,
+       "gf": 20,
+       "ga": 34,
+       "pts": 15,
+       "tid": 19193,
+       "form": "LLDLW"
+      },
+      {
+       "pos": 12,
+       "team": "Seekirchen",
+       "p": 14,
+       "w": 3,
+       "d": 5,
+       "l": 6,
+       "gf": 13,
+       "ga": 20,
+       "pts": 14,
+       "tid": 4958,
+       "form": "WDLDD"
+      },
+      {
+       "pos": 13,
        "team": "Ried II",
        "p": 13,
        "w": 4,
@@ -802,20 +828,7 @@
        "form": "LLDWL"
       },
       {
-       "pos": 12,
-       "team": "Seekirchen",
-       "p": 13,
-       "w": 3,
-       "d": 4,
-       "l": 6,
-       "gf": 12,
-       "ga": 19,
-       "pts": 13,
-       "tid": 4958,
-       "form": "DWDLD"
-      },
-      {
-       "pos": 13,
+       "pos": 14,
        "team": "UFC Hallein",
        "p": 13,
        "w": 3,
@@ -828,28 +841,15 @@
        "form": "DLWWL"
       },
       {
-       "pos": 14,
-       "team": "Wohnbau Dietach",
-       "p": 13,
-       "w": 3,
-       "d": 3,
-       "l": 7,
-       "gf": 16,
-       "ga": 33,
-       "pts": 12,
-       "tid": 19193,
-       "form": "LLLDL"
-      },
-      {
        "pos": 15,
        "team": "Pinzgau Saalfelden",
-       "p": 13,
+       "p": 14,
        "w": 1,
-       "d": 2,
+       "d": 3,
        "l": 10,
-       "gf": 14,
-       "ga": 32,
-       "pts": 5,
+       "gf": 17,
+       "ga": 35,
+       "pts": 6,
        "tid": 4980,
        "form": "DLLLL"
       }
@@ -1187,7 +1187,7 @@
        "ga": 22,
        "pts": 16,
        "tid": 4981,
-       "form": "LLWWL"
+       "form": "LWWLD"
       },
       {
        "pos": 10,
@@ -1252,7 +1252,7 @@
        "ga": 31,
        "pts": 10,
        "tid": 8256,
-       "form": "LLLLW"
+       "form": "LLLWD"
       },
       {
        "pos": 15,
