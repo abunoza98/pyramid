@@ -361,28 +361,28 @@
     {
      "pos": 12,
      "team": "Sesvete",
-     "p": 10,
+     "p": 11,
      "w": 3,
-     "d": 2,
+     "d": 3,
      "l": 5,
-     "gf": 10,
-     "ga": 10,
-     "pts": 11,
+     "gf": 12,
+     "ga": 12,
+     "pts": 12,
      "tid": 1479,
-     "form": "LLDLD"
+     "form": "LDLDD"
     },
     {
      "pos": 13,
      "team": "Dubrava Zagreb",
-     "p": 10,
+     "p": 11,
      "w": 3,
-     "d": 2,
+     "d": 3,
      "l": 5,
-     "gf": 11,
-     "ga": 13,
-     "pts": 11,
+     "gf": 13,
+     "ga": 15,
+     "pts": 12,
      "tid": 6255,
-     "form": "WLLWL"
+     "form": "LLWLD"
     },
     {
      "pos": 14,
