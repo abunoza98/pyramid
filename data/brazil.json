@@ -82,19 +82,6 @@
     },
     {
      "pos": 4,
-     "team": "Athletico Paranaense",
-     "p": 32,
-     "w": 15,
-     "d": 9,
-     "l": 8,
-     "gf": 50,
-     "ga": 38,
-     "pts": 54,
-     "tid": 134,
-     "form": "WDWLD"
-    },
-    {
-     "pos": 5,
      "team": "Fluminense",
      "p": 33,
      "w": 15,
@@ -105,6 +92,19 @@
      "pts": 54,
      "tid": 124,
      "form": "WLLLW"
+    },
+    {
+     "pos": 5,
+     "team": "Athletico Paranaense",
+     "p": 33,
+     "w": 15,
+     "d": 9,
+     "l": 9,
+     "gf": 50,
+     "ga": 40,
+     "pts": 54,
+     "tid": 134,
+     "form": "DWLDL"
     },
     {
      "pos": 6,
@@ -225,6 +225,19 @@
     },
     {
      "pos": 15,
+     "team": "Grêmio",
+     "p": 33,
+     "w": 9,
+     "d": 10,
+     "l": 14,
+     "gf": 37,
+     "ga": 44,
+     "pts": 37,
+     "tid": 130,
+     "form": "DDLWW"
+    },
+    {
+     "pos": 16,
      "team": "Mirassol",
      "p": 32,
      "w": 9,
@@ -237,7 +250,7 @@
      "form": "WDLWD"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Internacional",
      "p": 33,
      "w": 8,
@@ -248,19 +261,6 @@
      "pts": 35,
      "tid": 119,
      "form": "WDLWL"
-    },
-    {
-     "pos": 17,
-     "team": "Grêmio",
-     "p": 32,
-     "w": 8,
-     "d": 10,
-     "l": 14,
-     "gf": 35,
-     "ga": 44,
-     "pts": 34,
-     "tid": 130,
-     "form": "DDDLW"
     },
     {
      "pos": 18,
