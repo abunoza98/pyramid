@@ -4,7 +4,7 @@
  "adjective": "Swiss",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-28T00:00:00.000Z",
+ "updated": "2026-10-30T00:00:00.000Z",
  "belowNote": "The top 2. Liga Interregional clubs come up",
  "leagues": [
   {
@@ -224,28 +224,28 @@
     {
      "pos": 1,
      "team": "Stade Lausanne-Ouchy",
-     "p": 11,
-     "w": 7,
+     "p": 12,
+     "w": 8,
      "d": 4,
      "l": 0,
-     "gf": 20,
-     "ga": 3,
-     "pts": 25,
+     "gf": 23,
+     "ga": 5,
+     "pts": 28,
      "tid": 4269,
-     "form": "WWDWD"
+     "form": "WDWDW"
     },
     {
      "pos": 2,
      "team": "Yverdon Sport",
-     "p": 11,
+     "p": 12,
      "w": 6,
      "d": 4,
-     "l": 1,
-     "gf": 21,
-     "ga": 11,
+     "l": 2,
+     "gf": 23,
+     "ga": 14,
      "pts": 22,
      "tid": 6653,
-     "form": "WLDWW"
+     "form": "LDWWL"
     },
     {
      "pos": 3,
@@ -314,19 +314,6 @@
     },
     {
      "pos": 8,
-     "team": "Rapperswil-Jona",
-     "p": 11,
-     "w": 3,
-     "d": 2,
-     "l": 6,
-     "gf": 17,
-     "ga": 21,
-     "pts": 11,
-     "tid": 2185,
-     "form": "LWWLD"
-    },
-    {
-     "pos": 9,
      "team": "FC Wil",
      "p": 11,
      "w": 2,
@@ -339,20 +326,33 @@
      "form": "DLWDD"
     },
     {
+     "pos": 9,
+     "team": "Rapperswil-Jona",
+     "p": 12,
+     "w": 3,
+     "d": 2,
+     "l": 7,
+     "gf": 18,
+     "ga": 25,
+     "pts": 11,
+     "tid": 2185,
+     "form": "WWLDL"
+    },
+    {
      "pos": 10,
      "team": "Stade Nyonnais",
-     "p": 11,
-     "w": 1,
+     "p": 12,
+     "w": 2,
      "d": 2,
      "l": 8,
-     "gf": 8,
-     "ga": 28,
-     "pts": 5,
+     "gf": 12,
+     "ga": 29,
+     "pts": 8,
      "tid": 6646,
-     "form": "LLLWL"
+     "form": "LLWLW"
     }
    ],
-   "updated": "2026-10-27T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   },
   {
    "id": "promotion-league",
@@ -614,7 +614,7 @@
      "form": "LLLLD"
     }
    ],
-   "updated": "2026-10-28T00:00:00.000Z"
+   "updated": "2026-10-29T00:00:00.000Z"
   },
   {
    "id": "1-liga",

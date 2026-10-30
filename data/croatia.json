@@ -118,28 +118,28 @@
     {
      "pos": 6,
      "team": "Istra 1961",
-     "p": 11,
-     "w": 3,
+     "p": 12,
+     "w": 4,
      "d": 4,
      "l": 4,
-     "gf": 19,
+     "gf": 21,
      "ga": 18,
-     "pts": 13,
+     "pts": 16,
      "tid": 1016,
-     "form": "WLWLD"
+     "form": "LWLDW"
     },
     {
      "pos": 7,
      "team": "Slaven Belupo",
-     "p": 11,
+     "p": 12,
      "w": 4,
      "d": 1,
-     "l": 6,
+     "l": 7,
      "gf": 14,
-     "ga": 23,
+     "ga": 25,
      "pts": 13,
      "tid": 1018,
-     "form": "LDWLW"
+     "form": "DWLWL"
     },
     {
      "pos": 8,

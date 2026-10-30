@@ -4,7 +4,7 @@
  "adjective": "French",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-29T00:00:00.000Z",
+ "updated": "2026-10-30T00:00:00.000Z",
  "belowNote": "Promoted clubs from National 1 come up",
  "leagues": [
   {
@@ -56,28 +56,28 @@
     {
      "pos": 1,
      "team": "Paris Saint-Germain",
-     "p": 8,
-     "w": 5,
+     "p": 9,
+     "w": 6,
      "d": 2,
      "l": 1,
-     "gf": 16,
-     "ga": 9,
-     "pts": 17,
+     "gf": 21,
+     "ga": 10,
+     "pts": 20,
      "tid": 85,
      "form": "WWWWW"
     },
     {
      "pos": 2,
      "team": "Rennes",
-     "p": 8,
+     "p": 9,
      "w": 5,
      "d": 1,
-     "l": 2,
-     "gf": 18,
-     "ga": 14,
+     "l": 3,
+     "gf": 20,
+     "ga": 19,
      "pts": 16,
      "tid": 94,
-     "form": "WLWLW"
+     "form": "LWLWL"
     },
     {
      "pos": 3,
@@ -133,6 +133,19 @@
     },
     {
      "pos": 7,
+     "team": "Nice",
+     "p": 9,
+     "w": 4,
+     "d": 2,
+     "l": 3,
+     "gf": 13,
+     "ga": 12,
+     "pts": 14,
+     "tid": 84,
+     "form": "WWLWW"
+    },
+    {
+     "pos": 8,
      "team": "Lens",
      "p": 8,
      "w": 4,
@@ -145,7 +158,7 @@
      "form": "DLWWW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Marseille",
      "p": 8,
      "w": 4,
@@ -158,7 +171,7 @@
      "form": "LLWWW"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Lorient",
      "p": 8,
      "w": 3,
@@ -169,19 +182,6 @@
      "pts": 12,
      "tid": 97,
      "form": "DLWWD"
-    },
-    {
-     "pos": 10,
-     "team": "Nice",
-     "p": 8,
-     "w": 3,
-     "d": 2,
-     "l": 3,
-     "gf": 8,
-     "ga": 10,
-     "pts": 11,
-     "tid": 84,
-     "form": "LWWLW"
     },
     {
      "pos": 11,
@@ -277,18 +277,18 @@
     {
      "pos": 18,
      "team": "Le Havre",
-     "p": 8,
+     "p": 9,
      "w": 0,
      "d": 2,
-     "l": 6,
-     "gf": 8,
-     "ga": 15,
+     "l": 7,
+     "gf": 9,
+     "ga": 20,
      "pts": 2,
      "tid": 111,
-     "form": "DLLLL"
+     "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-28T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   },
   {
    "id": "ligue-2",
@@ -353,6 +353,19 @@
     },
     {
      "pos": 3,
+     "team": "Pau",
+     "p": 11,
+     "w": 6,
+     "d": 2,
+     "l": 3,
+     "gf": 16,
+     "ga": 11,
+     "pts": 20,
+     "tid": 1297,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 4,
      "team": "Nancy",
      "p": 10,
      "w": 6,
@@ -365,7 +378,7 @@
      "form": "LWWWW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Reims",
      "p": 10,
      "w": 4,
@@ -376,19 +389,6 @@
      "pts": 18,
      "tid": 93,
      "form": "WDDWD"
-    },
-    {
-     "pos": 5,
-     "team": "Pau",
-     "p": 10,
-     "w": 5,
-     "d": 2,
-     "l": 3,
-     "gf": 13,
-     "ga": 10,
-     "pts": 17,
-     "tid": 1297,
-     "form": "LWWWW"
     },
     {
      "pos": 6,
@@ -418,45 +418,58 @@
     },
     {
      "pos": 8,
-     "team": "Metz",
-     "p": 10,
-     "w": 3,
-     "d": 5,
-     "l": 2,
-     "gf": 16,
-     "ga": 14,
-     "pts": 14,
-     "tid": 112,
-     "form": "LDLWD"
+     "team": "Dijon",
+     "p": 11,
+     "w": 4,
+     "d": 3,
+     "l": 4,
+     "gf": 20,
+     "ga": 19,
+     "pts": 15,
+     "tid": 89,
+     "form": "WWLLW"
     },
     {
      "pos": 9,
-     "team": "Dijon",
-     "p": 10,
+     "team": "Metz",
+     "p": 11,
      "w": 3,
-     "d": 3,
-     "l": 4,
+     "d": 5,
+     "l": 3,
      "gf": 17,
-     "ga": 18,
-     "pts": 12,
-     "tid": 89,
-     "form": "WWWLL"
+     "ga": 17,
+     "pts": 14,
+     "tid": 112,
+     "form": "DLWDL"
     },
     {
      "pos": 10,
-     "team": "Dunkerque",
-     "p": 10,
-     "w": 3,
-     "d": 3,
-     "l": 4,
-     "gf": 14,
-     "ga": 16,
-     "pts": 12,
-     "tid": 1304,
-     "form": "WLLWD"
+     "team": "Rodez",
+     "p": 11,
+     "w": 4,
+     "d": 1,
+     "l": 6,
+     "gf": 17,
+     "ga": 22,
+     "pts": 13,
+     "tid": 1301,
+     "form": "LLLWW"
     },
     {
      "pos": 11,
+     "team": "Dunkerque",
+     "p": 11,
+     "w": 3,
+     "d": 3,
+     "l": 5,
+     "gf": 14,
+     "ga": 17,
+     "pts": 12,
+     "tid": 1304,
+     "form": "LLWDL"
+    },
+    {
+     "pos": 12,
      "team": "Guingamp",
      "p": 10,
      "w": 3,
@@ -469,7 +482,7 @@
      "form": "WLLLW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Sochaux",
      "p": 10,
      "w": 2,
@@ -482,85 +495,72 @@
      "form": "WDDLL"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Boulogne",
-     "p": 10,
+     "p": 11,
      "w": 1,
      "d": 7,
-     "l": 2,
+     "l": 3,
      "gf": 7,
-     "ga": 7,
+     "ga": 8,
      "pts": 10,
      "tid": 1299,
-     "form": "DLDWD"
-    },
-    {
-     "pos": 14,
-     "team": "Rodez",
-     "p": 10,
-     "w": 3,
-     "d": 1,
-     "l": 6,
-     "gf": 16,
-     "ga": 22,
-     "pts": 10,
-     "tid": 1301,
-     "form": "LLLLW"
+     "form": "LDWDL"
     },
     {
      "pos": 15,
      "team": "Nantes",
-     "p": 10,
+     "p": 11,
      "w": 2,
-     "d": 2,
+     "d": 3,
      "l": 6,
-     "gf": 11,
-     "ga": 17,
-     "pts": 8,
+     "gf": 12,
+     "ga": 18,
+     "pts": 9,
      "tid": 83,
-     "form": "LWDLL"
+     "form": "WDLLD"
     },
     {
      "pos": 16,
-     "team": "Grenoble",
-     "p": 10,
+     "team": "Laval",
+     "p": 11,
      "w": 2,
-     "d": 2,
+     "d": 3,
      "l": 6,
-     "gf": 9,
-     "ga": 17,
-     "pts": 8,
-     "tid": 101,
-     "form": "WDLLL"
+     "gf": 14,
+     "ga": 21,
+     "pts": 9,
+     "tid": 433,
+     "form": "DLDLW"
     },
     {
      "pos": 17,
      "team": "Clermont",
-     "p": 10,
+     "p": 11,
      "w": 0,
-     "d": 7,
+     "d": 8,
      "l": 3,
-     "gf": 9,
-     "ga": 14,
-     "pts": 7,
+     "gf": 10,
+     "ga": 15,
+     "pts": 8,
      "tid": 99,
-     "form": "DDLDL"
+     "form": "DLDLD"
     },
     {
      "pos": 18,
-     "team": "Laval",
-     "p": 10,
-     "w": 1,
-     "d": 3,
-     "l": 6,
-     "gf": 13,
-     "ga": 21,
-     "pts": 6,
-     "tid": 433,
-     "form": "LDLDL"
+     "team": "Grenoble",
+     "p": 11,
+     "w": 2,
+     "d": 2,
+     "l": 7,
+     "gf": 10,
+     "ga": 20,
+     "pts": 8,
+     "tid": 101,
+     "form": "DLLLL"
     }
    ],
-   "updated": "2026-10-29T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   },
   {
    "id": "ligue-3",

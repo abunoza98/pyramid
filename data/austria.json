@@ -4,7 +4,7 @@
  "adjective": "Austrian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-25T00:00:00.000Z",
+ "updated": "2026-10-30T00:00:00.000Z",
  "belowNote": "Landesliga champions come up",
  "leagues": [
   {
@@ -80,6 +80,19 @@
     },
     {
      "pos": 5,
+     "team": "TSV Hartberg",
+     "p": 11,
+     "w": 5,
+     "d": 2,
+     "l": 4,
+     "gf": 20,
+     "ga": 19,
+     "pts": 17,
+     "tid": 1072,
+     "form": "DWLWW"
+    },
+    {
+     "pos": 6,
      "team": "SV Ried",
      "p": 10,
      "w": 4,
@@ -90,19 +103,6 @@
      "pts": 15,
      "tid": 1028,
      "form": "DWWWD"
-    },
-    {
-     "pos": 6,
-     "team": "TSV Hartberg",
-     "p": 10,
-     "w": 4,
-     "d": 2,
-     "l": 4,
-     "gf": 16,
-     "ga": 19,
-     "pts": 14,
-     "tid": 1072,
-     "form": "DDWLW"
     },
     {
      "pos": 7,
@@ -120,15 +120,15 @@
     {
      "pos": 8,
      "team": "Grazer AK",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 4,
-     "l": 4,
+     "l": 5,
      "gf": 8,
-     "ga": 23,
+     "ga": 27,
      "pts": 10,
      "tid": 4256,
-     "form": "WDDLD"
+     "form": "DDLDL"
     },
     {
      "pos": 9,
@@ -183,7 +183,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   },
   {
    "id": "2-liga",
@@ -258,6 +258,19 @@
     },
     {
      "pos": 4,
+     "team": "Austria Salzburg",
+     "p": 11,
+     "w": 6,
+     "d": 1,
+     "l": 4,
+     "gf": 20,
+     "ga": 14,
+     "pts": 19,
+     "tid": 5000,
+     "form": "LWWLW"
+    },
+    {
+     "pos": 5,
      "team": "Admira Wacker",
      "p": 10,
      "w": 6,
@@ -270,30 +283,17 @@
      "form": "WLWWW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "SKU Amstetten",
-     "p": 10,
+     "p": 11,
      "w": 4,
      "d": 5,
-     "l": 1,
+     "l": 2,
      "gf": 18,
-     "ga": 14,
+     "ga": 17,
      "pts": 17,
      "tid": 1404,
-     "form": "WWDDW"
-    },
-    {
-     "pos": 6,
-     "team": "Austria Salzburg",
-     "p": 10,
-     "w": 5,
-     "d": 1,
-     "l": 4,
-     "gf": 17,
-     "ga": 14,
-     "pts": 16,
-     "tid": 5000,
-     "form": "DLWWL"
+     "form": "WDDWL"
     },
     {
      "pos": 7,
@@ -310,6 +310,19 @@
     },
     {
      "pos": 8,
+     "team": "SKN St. Pölten",
+     "p": 11,
+     "w": 4,
+     "d": 2,
+     "l": 5,
+     "gf": 10,
+     "ga": 11,
+     "pts": 14,
+     "tid": 1027,
+     "form": "WLDDW"
+    },
+    {
+     "pos": 9,
      "team": "FC Liefering",
      "p": 10,
      "w": 4,
@@ -322,7 +335,7 @@
      "form": "LLWLD"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Floridsdorfer AC",
      "p": 10,
      "w": 4,
@@ -335,7 +348,7 @@
      "form": "LWLLL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Voitsberg",
      "p": 10,
      "w": 3,
@@ -348,7 +361,7 @@
      "form": "DWLLW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Schwarz-Weiß Bregenz",
      "p": 10,
      "w": 3,
@@ -359,19 +372,6 @@
      "pts": 12,
      "tid": 8259,
      "form": "WLLDD"
-    },
-    {
-     "pos": 12,
-     "team": "SKN St. Pölten",
-     "p": 10,
-     "w": 3,
-     "d": 2,
-     "l": 5,
-     "gf": 8,
-     "ga": 10,
-     "pts": 11,
-     "tid": 1027,
-     "form": "WWLDD"
     },
     {
      "pos": 13,
@@ -389,15 +389,15 @@
     {
      "pos": 14,
      "team": "WSPG Wels",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 2,
-     "l": 6,
-     "gf": 13,
-     "ga": 25,
+     "l": 7,
+     "gf": 14,
+     "ga": 27,
      "pts": 8,
      "tid": 22213,
-     "form": "LLWDL"
+     "form": "LWDLL"
     },
     {
      "pos": 15,
@@ -426,7 +426,7 @@
      "form": "LLLDL"
     }
    ],
-   "updated": "2026-10-24T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   },
   {
    "id": "regionalliga",
@@ -442,7 +442,7 @@
    "groups": [
     {
      "name": "East",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-30T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -460,15 +460,15 @@
       {
        "pos": 2,
        "team": "Wiener SC",
-       "p": 13,
+       "p": 14,
        "w": 8,
-       "d": 2,
+       "d": 3,
        "l": 3,
-       "gf": 31,
-       "ga": 15,
-       "pts": 26,
+       "gf": 33,
+       "ga": 17,
+       "pts": 27,
        "tid": 4965,
-       "form": "WLDWW"
+       "form": "LDWWD"
       },
       {
        "pos": 3,
@@ -486,15 +486,15 @@
       {
        "pos": 4,
        "team": "Traiskirchen",
-       "p": 13,
+       "p": 14,
        "w": 7,
-       "d": 3,
+       "d": 4,
        "l": 3,
-       "gf": 28,
-       "ga": 23,
-       "pts": 24,
+       "gf": 30,
+       "ga": 25,
+       "pts": 25,
        "tid": 4961,
-       "form": "WLDWW"
+       "form": "LDWWD"
       },
       {
        "pos": 5,
@@ -656,18 +656,18 @@
     },
     {
      "name": "North",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-30T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
        "team": "Wallern / Marienkirchen",
-       "p": 13,
+       "p": 14,
        "w": 9,
-       "d": 1,
+       "d": 2,
        "l": 3,
        "gf": 35,
        "ga": 14,
-       "pts": 28,
+       "pts": 29,
        "tid": 21534,
        "form": "WWWLW"
       },
@@ -687,15 +687,15 @@
       {
        "pos": 3,
        "team": "Wals-Grünau",
-       "p": 13,
+       "p": 14,
        "w": 7,
        "d": 5,
-       "l": 1,
+       "l": 2,
        "gf": 25,
-       "ga": 14,
+       "ga": 15,
        "pts": 26,
        "tid": 8261,
-       "form": "DWDLW"
+       "form": "WDLWL"
       },
       {
        "pos": 4,
@@ -712,6 +712,19 @@
       },
       {
        "pos": 5,
+       "team": "Bad Schallerbach",
+       "p": 14,
+       "w": 6,
+       "d": 4,
+       "l": 4,
+       "gf": 25,
+       "ga": 17,
+       "pts": 22,
+       "tid": 8294,
+       "form": "WLDDW"
+      },
+      {
+       "pos": 6,
        "team": "Kuchl",
        "p": 13,
        "w": 6,
@@ -724,28 +737,15 @@
        "form": "LWDWL"
       },
       {
-       "pos": 6,
-       "team": "Bad Schallerbach",
-       "p": 13,
-       "w": 5,
-       "d": 4,
-       "l": 4,
-       "gf": 24,
-       "ga": 17,
-       "pts": 19,
-       "tid": 8294,
-       "form": "WWLDD"
-      },
-      {
        "pos": 7,
        "team": "Grödig",
-       "p": 13,
+       "p": 14,
        "w": 6,
-       "d": 1,
+       "d": 2,
        "l": 6,
        "gf": 21,
        "ga": 21,
-       "pts": 19,
+       "pts": 20,
        "tid": 4974,
        "form": "LWLLW"
       },
@@ -857,220 +857,220 @@
     },
     {
      "name": "South",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-30T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
        "team": "Velden",
-       "p": 13,
+       "p": 14,
        "w": 7,
-       "d": 5,
+       "d": 6,
        "l": 1,
-       "gf": 21,
-       "ga": 13,
-       "pts": 26,
+       "gf": 24,
+       "ga": 16,
+       "pts": 27,
        "tid": 21390,
        "form": "DWWDL"
       },
       {
        "pos": 2,
        "team": "Völkermarkt",
-       "p": 13,
-       "w": 7,
+       "p": 14,
+       "w": 8,
        "d": 2,
        "l": 4,
-       "gf": 25,
-       "ga": 13,
-       "pts": 23,
+       "gf": 28,
+       "ga": 14,
+       "pts": 26,
        "tid": 4987,
-       "form": "DWLWW"
+       "form": "WLWWW"
       },
       {
        "pos": 3,
-       "team": "Treibach",
-       "p": 13,
-       "w": 7,
+       "team": "Austria Klagenfurt",
+       "p": 14,
+       "w": 8,
        "d": 2,
        "l": 4,
        "gf": 25,
-       "ga": 17,
-       "pts": 23,
-       "tid": 4962,
-       "form": "WLWLW"
+       "ga": 19,
+       "pts": 26,
+       "tid": 1405,
+       "form": "LDLWW"
       },
       {
        "pos": 4,
-       "team": "Austria Klagenfurt",
-       "p": 13,
+       "team": "Treibach",
+       "p": 14,
        "w": 7,
        "d": 2,
-       "l": 4,
-       "gf": 22,
-       "ga": 18,
+       "l": 5,
+       "gf": 26,
+       "ga": 19,
        "pts": 23,
-       "tid": 1405,
-       "form": "LLDLW"
+       "tid": 4962,
+       "form": "LWLWL"
       },
       {
        "pos": 5,
        "team": "Deutschlandsberger SC",
-       "p": 12,
+       "p": 13,
        "w": 6,
-       "d": 4,
+       "d": 5,
        "l": 2,
-       "gf": 24,
-       "ga": 18,
-       "pts": 22,
+       "gf": 26,
+       "ga": 20,
+       "pts": 23,
        "tid": 4972,
-       "form": "WDDWL"
+       "form": "DDWLD"
       },
       {
        "pos": 6,
-       "team": "Kalsdorf",
-       "p": 12,
+       "team": "Weiz",
+       "p": 13,
        "w": 5,
-       "d": 4,
-       "l": 3,
-       "gf": 18,
-       "ga": 14,
-       "pts": 19,
-       "tid": 4946,
-       "form": "WLLDD"
+       "d": 6,
+       "l": 2,
+       "gf": 21,
+       "ga": 12,
+       "pts": 21,
+       "tid": 4996,
+       "form": "DWDLW"
       },
       {
        "pos": 7,
-       "team": "Weiz",
-       "p": 12,
-       "w": 4,
-       "d": 6,
-       "l": 2,
-       "gf": 16,
-       "ga": 12,
-       "pts": 18,
-       "tid": 4996,
-       "form": "DDWDL"
+       "team": "Kalsdorf",
+       "p": 13,
+       "w": 5,
+       "d": 4,
+       "l": 4,
+       "gf": 19,
+       "ga": 16,
+       "pts": 19,
+       "tid": 4946,
+       "form": "LLDDL"
       },
       {
        "pos": 8,
        "team": "SV Lafnitz",
-       "p": 12,
+       "p": 13,
        "w": 4,
-       "d": 6,
+       "d": 7,
        "l": 2,
-       "gf": 26,
-       "ga": 24,
-       "pts": 18,
+       "gf": 28,
+       "ga": 26,
+       "pts": 19,
        "tid": 1402,
-       "form": "DDDWD"
+       "form": "DDWDD"
       },
       {
        "pos": 9,
        "team": "Wolfsberger AC",
-       "p": 13,
+       "p": 14,
        "w": 5,
-       "d": 3,
+       "d": 4,
        "l": 5,
-       "gf": 22,
-       "ga": 21,
-       "pts": 18,
+       "gf": 25,
+       "ga": 24,
+       "pts": 19,
        "tid": 1025
       },
       {
        "pos": 10,
-       "team": "Tillmitsch",
-       "p": 12,
-       "w": 3,
-       "d": 5,
-       "l": 4,
-       "gf": 20,
-       "ga": 21,
-       "pts": 14,
-       "tid": 21533,
-       "form": "LDDLW"
+       "team": "Hartberg II",
+       "p": 13,
+       "w": 4,
+       "d": 4,
+       "l": 5,
+       "gf": 22,
+       "ga": 26,
+       "pts": 16,
+       "tid": 28052,
+       "form": "DDWWW"
       },
       {
        "pos": 11,
-       "team": "Hartberg II",
-       "p": 12,
+       "team": "Tillmitsch",
+       "p": 13,
        "w": 3,
-       "d": 4,
+       "d": 5,
        "l": 5,
        "gf": 20,
-       "ga": 25,
-       "pts": 13,
-       "tid": 28052,
-       "form": "WDDWW"
+       "ga": 26,
+       "pts": 14,
+       "tid": 21533,
+       "form": "DDLWL"
       },
       {
        "pos": 12,
-       "team": "Allerheiligen",
-       "p": 12,
-       "w": 3,
-       "d": 3,
-       "l": 6,
-       "gf": 23,
-       "ga": 24,
-       "pts": 12,
-       "tid": 4934,
-       "form": "LWLLL"
+       "team": "Gleisdorf 09",
+       "p": 13,
+       "w": 4,
+       "d": 2,
+       "l": 7,
+       "gf": 19,
+       "ga": 26,
+       "pts": 14,
+       "tid": 4940,
+       "form": "DWLWW"
       },
       {
        "pos": 13,
-       "team": "Gleisdorf 09",
-       "p": 12,
+       "team": "Allerheiligen",
+       "p": 13,
        "w": 3,
-       "d": 2,
+       "d": 3,
        "l": 7,
-       "gf": 17,
+       "gf": 23,
        "ga": 26,
-       "pts": 11,
-       "tid": 4940,
-       "form": "LDWLW"
+       "pts": 12,
+       "tid": 4934,
+       "form": "WLLLL"
       },
       {
        "pos": 14,
-       "team": "Wolfsberg",
-       "p": 13,
+       "team": "Donau Klagenfurt",
+       "p": 14,
        "w": 2,
        "d": 5,
-       "l": 6,
-       "gf": 11,
-       "ga": 28,
+       "l": 7,
+       "gf": 15,
+       "ga": 24,
        "pts": 11,
-       "tid": 4967,
-       "form": "WLLWD"
+       "tid": 21723,
+       "form": "LWDDW"
       },
       {
        "pos": 15,
-       "team": "Bleiburg",
-       "p": 13,
+       "team": "Wolfsberg",
+       "p": 14,
        "w": 2,
-       "d": 4,
+       "d": 5,
        "l": 7,
-       "gf": 16,
-       "ga": 22,
-       "pts": 10,
-       "tid": 8273,
-       "form": "LWDLL"
+       "gf": 12,
+       "ga": 31,
+       "pts": 11,
+       "tid": 4967,
+       "form": "LLWDL"
       },
       {
        "pos": 16,
-       "team": "Donau Klagenfurt",
-       "p": 13,
-       "w": 1,
-       "d": 5,
-       "l": 7,
-       "gf": 13,
-       "ga": 23,
-       "pts": 8,
-       "tid": 21723,
-       "form": "LLWDD"
+       "team": "Bleiburg",
+       "p": 14,
+       "w": 2,
+       "d": 4,
+       "l": 8,
+       "gf": 17,
+       "ga": 25,
+       "pts": 10,
+       "tid": 8273,
+       "form": "WDLLL"
       }
      ]
     },
     {
      "name": "West",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-30T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1178,6 +1178,19 @@
       },
       {
        "pos": 9,
+       "team": "SVG Reichenau",
+       "p": 14,
+       "w": 4,
+       "d": 4,
+       "l": 6,
+       "gf": 17,
+       "ga": 22,
+       "pts": 16,
+       "tid": 4981,
+       "form": "LLWWL"
+      },
+      {
+       "pos": 10,
        "team": "Fügen",
        "p": 13,
        "w": 5,
@@ -1190,7 +1203,7 @@
        "form": "WLLWL"
       },
       {
-       "pos": 10,
+       "pos": 11,
        "team": "Lauterach",
        "p": 13,
        "w": 4,
@@ -1201,19 +1214,6 @@
        "pts": 15,
        "tid": 8255,
        "form": "WLWWW"
-      },
-      {
-       "pos": 11,
-       "team": "SVG Reichenau",
-       "p": 13,
-       "w": 4,
-       "d": 3,
-       "l": 6,
-       "gf": 17,
-       "ga": 22,
-       "pts": 15,
-       "tid": 4981,
-       "form": "LLWWL"
       },
       {
        "pos": 12,
@@ -1244,13 +1244,13 @@
       {
        "pos": 14,
        "team": "Rheindorf Altach II",
-       "p": 13,
+       "p": 14,
        "w": 2,
-       "d": 3,
+       "d": 4,
        "l": 8,
        "gf": 17,
        "ga": 31,
-       "pts": 9,
+       "pts": 10,
        "tid": 8256,
        "form": "LLLLW"
       },
@@ -1283,7 +1283,7 @@
      ]
     }
    ],
-   "updated": "2026-10-25T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   }
  ]
 }
