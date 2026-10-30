@@ -465,15 +465,15 @@
     {
      "pos": 2,
      "team": "Dugo Selo",
-     "p": 10,
+     "p": 11,
      "w": 6,
-     "d": 1,
+     "d": 2,
      "l": 3,
      "gf": 16,
      "ga": 8,
-     "pts": 19,
+     "pts": 20,
      "tid": 8602,
-     "form": "WWWLW"
+     "form": "WWLWD"
     },
     {
      "pos": 3,
@@ -530,15 +530,15 @@
     {
      "pos": 7,
      "team": "Trnje",
-     "p": 10,
+     "p": 11,
      "w": 4,
-     "d": 2,
+     "d": 3,
      "l": 4,
      "gf": 16,
      "ga": 14,
-     "pts": 14,
+     "pts": 15,
      "tid": 8607,
-     "form": "LWLDL"
+     "form": "WLDLD"
     },
     {
      "pos": 8,
