@@ -358,6 +358,19 @@
     },
     {
      "pos": 7,
+     "team": "Alebrijes de Oaxaca",
+     "p": 15,
+     "w": 7,
+     "d": 1,
+     "l": 7,
+     "gf": 15,
+     "ga": 25,
+     "pts": 22,
+     "tid": 2300,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 8,
      "team": "Durango",
      "p": 14,
      "w": 6,
@@ -370,7 +383,7 @@
      "form": "WWDWL"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Tlaxcala",
      "p": 14,
      "w": 5,
@@ -383,30 +396,17 @@
      "form": "WDWDW"
     },
     {
-     "pos": 9,
-     "team": "Alebrijes de Oaxaca",
-     "p": 14,
-     "w": 6,
-     "d": 1,
-     "l": 7,
-     "gf": 14,
-     "ga": 25,
-     "pts": 19,
-     "tid": 2300,
-     "form": "LLWWW"
-    },
-    {
      "pos": 10,
      "team": "Mineros de Zacatecas",
-     "p": 14,
+     "p": 15,
      "w": 5,
      "d": 3,
-     "l": 6,
+     "l": 7,
      "gf": 26,
-     "ga": 25,
+     "ga": 26,
      "pts": 18,
      "tid": 2299,
-     "form": "WLDLL"
+     "form": "LDLLL"
     },
     {
      "pos": 11,
