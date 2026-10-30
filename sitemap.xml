@@ -7,7 +7,7 @@
   <url><loc>https://footballpyramids.com/france/</loc><lastmod>2026-10-29</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/</loc><lastmod>2026-10-29</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/belgium/</loc><lastmod>2026-10-25</lastmod><changefreq>hourly</changefreq></url>
-  <url><loc>https://footballpyramids.com/croatia/</loc><lastmod>2026-10-27</lastmod><changefreq>hourly</changefreq></url>
+  <url><loc>https://footballpyramids.com/croatia/</loc><lastmod>2026-10-30</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/netherlands/</loc><lastmod>2026-10-25</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/portugal/</loc><lastmod>2026-10-26</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/scotland/</loc><lastmod>2026-10-28</lastmod><changefreq>hourly</changefreq></url>
@@ -527,15 +527,15 @@
   <url><loc>https://footballpyramids.com/croatia/club/lokomotiva/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/rudes/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/gorica/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/croatia/club/mladost-zdralovi/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/croatia-zmijavci/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/segesta-sisak/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/bsk-bijelo-brdo/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/croatia/club/mladost-zdralovi/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/jadran-lp/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/cibalia/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/orijent-1919/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/croatia/club/opatija/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/karlovac-1919/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/croatia/club/opatija/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/kustosija/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/dinamo-zagreb-ii/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/sesvete/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
@@ -1541,9 +1541,9 @@
   <url><loc>https://footballpyramids.com/indonesia/club/dewa-united/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/indonesia/club/bali-united/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/indonesia/club/persib-bandung/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/indonesia/club/persebaya-surabaya/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/indonesia/club/madura-united/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/indonesia/club/persita/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/indonesia/club/persebaya-surabaya/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/indonesia/club/bhayangkara-fc/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/indonesia/club/java-united/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/indonesia/club/persik-kediri/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
@@ -2452,7 +2452,7 @@
   <url><loc>https://footballpyramids.com/france/races/</loc><lastmod>2026-10-29</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/races/</loc><lastmod>2026-10-29</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/belgium/races/</loc><lastmod>2026-10-25</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/croatia/races/</loc><lastmod>2026-10-27</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/croatia/races/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/netherlands/races/</loc><lastmod>2026-10-25</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/portugal/races/</loc><lastmod>2026-10-26</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/scotland/races/</loc><lastmod>2026-10-28</lastmod><changefreq>daily</changefreq></url>

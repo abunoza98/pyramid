@@ -87,6 +87,19 @@
     },
     {
      "pos": 5,
+     "team": "Persebaya Surabaya",
+     "p": 8,
+     "w": 3,
+     "d": 4,
+     "l": 1,
+     "gf": 10,
+     "ga": 7,
+     "pts": 13,
+     "tid": 2446,
+     "form": "WDLWD"
+    },
+    {
+     "pos": 6,
      "team": "Madura United",
      "p": 7,
      "w": 4,
@@ -99,7 +112,7 @@
      "form": "WLDWL"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Persita",
      "p": 6,
      "w": 3,
@@ -110,19 +123,6 @@
      "pts": 12,
      "tid": 4244,
      "form": "WDWWD"
-    },
-    {
-     "pos": 7,
-     "team": "Persebaya Surabaya",
-     "p": 7,
-     "w": 3,
-     "d": 3,
-     "l": 1,
-     "gf": 9,
-     "ga": 6,
-     "pts": 12,
-     "tid": 2446,
-     "form": "DWDLW"
     },
     {
      "pos": 8,
@@ -259,15 +259,15 @@
     {
      "pos": 18,
      "team": "Persijap",
-     "p": 7,
+     "p": 8,
      "w": 0,
-     "d": 1,
+     "d": 2,
      "l": 6,
-     "gf": 3,
-     "ga": 15,
-     "pts": 1,
+     "gf": 4,
+     "ga": 16,
+     "pts": 2,
      "tid": 11132,
-     "form": "LLLLD"
+     "form": "LLLDD"
     }
    ],
    "updated": "2026-10-30T00:00:00.000Z"

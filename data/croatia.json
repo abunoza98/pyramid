@@ -4,7 +4,7 @@
  "adjective": "Croatian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-27T00:00:00.000Z",
+ "updated": "2026-10-30T00:00:00.000Z",
  "belowNote": "Treća NL champions come up",
  "leagues": [
   {
@@ -181,7 +181,7 @@
      "form": "DWLDD"
     }
    ],
-   "updated": "2026-10-27T00:00:00.000Z"
+   "updated": "2026-10-29T00:00:00.000Z"
   },
   {
    "id": "prva-nl",
@@ -217,6 +217,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Mladost Ždralovi",
+     "p": 11,
+     "w": 6,
+     "d": 2,
+     "l": 3,
+     "gf": 13,
+     "ga": 10,
+     "pts": 20,
+     "tid": 8593,
+     "form": "LWLWW"
+    },
+    {
+     "pos": 2,
      "team": "Croatia Zmijavci",
      "p": 10,
      "w": 6,
@@ -229,7 +242,7 @@
      "form": "LWWWL"
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "Segesta Sisak",
      "p": 10,
      "w": 5,
@@ -242,7 +255,7 @@
      "form": "WDLWW"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "BSK Bijelo Brdo",
      "p": 10,
      "w": 5,
@@ -253,19 +266,6 @@
      "pts": 17,
      "tid": 1487,
      "form": "LWLDW"
-    },
-    {
-     "pos": 4,
-     "team": "Mladost Ždralovi",
-     "p": 10,
-     "w": 5,
-     "d": 2,
-     "l": 3,
-     "gf": 10,
-     "ga": 10,
-     "pts": 17,
-     "tid": 8593,
-     "form": "LLWLW"
     },
     {
      "pos": 5,
@@ -308,19 +308,6 @@
     },
     {
      "pos": 8,
-     "team": "Opatija",
-     "p": 10,
-     "w": 4,
-     "d": 2,
-     "l": 4,
-     "gf": 12,
-     "ga": 12,
-     "pts": 14,
-     "tid": 6246,
-     "form": "LWDWW"
-    },
-    {
-     "pos": 9,
      "team": "Karlovac 1919",
      "p": 10,
      "w": 4,
@@ -331,6 +318,19 @@
      "pts": 14,
      "tid": 15295,
      "form": "LDWWL"
+    },
+    {
+     "pos": 9,
+     "team": "Opatija",
+     "p": 11,
+     "w": 4,
+     "d": 2,
+     "l": 5,
+     "gf": 12,
+     "ga": 15,
+     "pts": 14,
+     "tid": 6246,
+     "form": "WDWWL"
     },
     {
      "pos": 10,
@@ -424,7 +424,7 @@
      "form": "WWLLD"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   },
   {
    "id": "druga-nl",
@@ -658,7 +658,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   }
  ]
 }
