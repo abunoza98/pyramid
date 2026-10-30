@@ -2423,7 +2423,7 @@
   <url><loc>https://footballpyramids.com/england/efl-cup/</loc><lastmod>2026-10-29</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/copa-del-rey/</loc><lastmod>2026-10-29</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/dfb-pokal/</loc><lastmod>2026-10-28</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/france/coupe-de-france/</loc><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/france/coupe-de-france/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/france/coupe-de-la-ligue/</loc><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/coppa-italia/</loc><lastmod>2026-10-22</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/belgium/belgian-cup/</loc><lastmod>2026-10-22</lastmod><changefreq>daily</changefreq></url>
@@ -2501,7 +2501,7 @@
   <url><loc>https://footballpyramids.com/turkey/super-lig/fixtures/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/1-lig/fixtures/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/2-lig/fixtures/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/turkey/3-lig/fixtures/</loc><lastmod>2026-10-25</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/turkey/3-lig/fixtures/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/switzerland/super-league/fixtures/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/switzerland/challenge-league/fixtures/</loc><lastmod>2026-10-25</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/switzerland/promotion-league/fixtures/</loc><lastmod>2026-10-28</lastmod><changefreq>daily</changefreq></url>
@@ -2906,6 +2906,7 @@
   <url><loc>https://footballpyramids.com/germany/dfb-pokal/2013-14/</loc><changefreq>yearly</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/dfb-pokal/2012-13/</loc><changefreq>yearly</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/dfb-pokal/2011-12/</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://footballpyramids.com/france/coupe-de-france/2025-26/</loc><changefreq>yearly</changefreq></url>
   <url><loc>https://footballpyramids.com/france/coupe-de-france/2024-25/</loc><changefreq>yearly</changefreq></url>
   <url><loc>https://footballpyramids.com/france/coupe-de-france/2023-24/</loc><changefreq>yearly</changefreq></url>
   <url><loc>https://footballpyramids.com/france/coupe-de-france/2022-23/</loc><changefreq>yearly</changefreq></url>
