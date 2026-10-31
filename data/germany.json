@@ -387,15 +387,15 @@
     {
      "pos": 6,
      "team": "1. FC Heidenheim",
-     "p": 9,
+     "p": 10,
      "w": 4,
      "d": 3,
-     "l": 2,
-     "gf": 16,
-     "ga": 16,
+     "l": 3,
+     "gf": 17,
+     "ga": 18,
      "pts": 15,
      "tid": 180,
-     "form": "WDDLD"
+     "form": "DDLDL"
     },
     {
      "pos": 7,
@@ -451,6 +451,19 @@
     },
     {
      "pos": 11,
+     "team": "Karlsruher SC",
+     "p": 10,
+     "w": 3,
+     "d": 2,
+     "l": 5,
+     "gf": 13,
+     "ga": 21,
+     "pts": 11,
+     "tid": 785,
+     "form": "LLWLW"
+    },
+    {
+     "pos": 12,
      "team": "Energie Cottbus",
      "p": 10,
      "w": 2,
@@ -463,7 +476,7 @@
      "form": "DLDDL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Eintracht Braunschweig",
      "p": 10,
      "w": 3,
@@ -476,7 +489,7 @@
      "form": "LWLWL"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Greuther Fürth",
      "p": 9,
      "w": 2,
@@ -489,7 +502,7 @@
      "form": "DDLWL"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Darmstadt 98",
      "p": 10,
      "w": 2,
@@ -502,7 +515,7 @@
      "form": "LWLDD"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Holstein Kiel",
      "p": 9,
      "w": 1,
@@ -515,7 +528,7 @@
      "form": "LDLDW"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Dynamo Dresden",
      "p": 9,
      "w": 2,
@@ -528,7 +541,7 @@
      "form": "DLDWL"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Hannover 96",
      "p": 9,
      "w": 2,
@@ -539,19 +552,6 @@
      "pts": 8,
      "tid": 166,
      "form": "LWLDL"
-    },
-    {
-     "pos": 18,
-     "team": "Karlsruher SC",
-     "p": 9,
-     "w": 2,
-     "d": 2,
-     "l": 5,
-     "gf": 11,
-     "ga": 20,
-     "pts": 8,
-     "tid": 785,
-     "form": "LLLWL"
     }
    ],
    "updated": "2026-10-31T00:00:00.000Z"

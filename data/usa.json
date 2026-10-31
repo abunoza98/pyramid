@@ -55,28 +55,28 @@
       {
        "pos": 2,
        "team": "FC Dallas",
-       "p": 32,
+       "p": 33,
        "w": 15,
-       "d": 9,
+       "d": 10,
        "l": 8,
-       "gf": 58,
-       "ga": 49,
-       "pts": 54,
+       "gf": 59,
+       "ga": 50,
+       "pts": 55,
        "tid": 1597,
-       "form": "LWDWL"
+       "form": "WDWLD"
       },
       {
        "pos": 3,
        "team": "St. Louis City",
-       "p": 32,
+       "p": 33,
        "w": 14,
        "d": 9,
-       "l": 9,
+       "l": 10,
        "gf": 58,
-       "ga": 47,
+       "ga": 48,
        "pts": 51,
        "tid": 20787,
-       "form": "WDLLL"
+       "form": "DLLLL"
       },
       {
        "pos": 4,
@@ -184,6 +184,19 @@
       },
       {
        "pos": 12,
+       "team": "San Diego FC",
+       "p": 33,
+       "w": 9,
+       "d": 11,
+       "l": 13,
+       "gf": 57,
+       "ga": 62,
+       "pts": 38,
+       "tid": 25484,
+       "form": "DDDLW"
+      },
+      {
+       "pos": 13,
        "team": "Minnesota United",
        "p": 32,
        "w": 9,
@@ -194,19 +207,6 @@
        "pts": 38,
        "tid": 1612,
        "form": "DDWDW"
-      },
-      {
-       "pos": 13,
-       "team": "San Diego FC",
-       "p": 32,
-       "w": 8,
-       "d": 11,
-       "l": 13,
-       "gf": 56,
-       "ga": 62,
-       "pts": 35,
-       "tid": 25484,
-       "form": "LDDDL"
       },
       {
        "pos": 14,
@@ -224,15 +224,15 @@
       {
        "pos": 15,
        "team": "Sporting Kansas City",
-       "p": 32,
+       "p": 33,
        "w": 6,
-       "d": 4,
+       "d": 5,
        "l": 22,
-       "gf": 38,
-       "ga": 80,
-       "pts": 22,
+       "gf": 39,
+       "ga": 81,
+       "pts": 23,
        "tid": 1611,
-       "form": "DLLLL"
+       "form": "LLLLD"
       }
      ]
     },

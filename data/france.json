@@ -237,16 +237,16 @@
     },
     {
      "pos": 15,
-     "team": "Le Mans",
-     "p": 8,
-     "w": 1,
-     "d": 4,
-     "l": 3,
-     "gf": 11,
+     "team": "Troyes",
+     "p": 9,
+     "w": 2,
+     "d": 2,
+     "l": 5,
+     "gf": 7,
      "ga": 16,
-     "pts": 7,
-     "tid": 1298,
-     "form": "DWLLD"
+     "pts": 8,
+     "tid": 110,
+     "form": "LLLDW"
     },
     {
      "pos": 16,
@@ -263,16 +263,16 @@
     },
     {
      "pos": 17,
-     "team": "Troyes",
-     "p": 8,
+     "team": "Le Mans",
+     "p": 9,
      "w": 1,
-     "d": 2,
-     "l": 5,
-     "gf": 5,
-     "ga": 16,
-     "pts": 5,
-     "tid": 110,
-     "form": "LLLLD"
+     "d": 4,
+     "l": 4,
+     "gf": 11,
+     "ga": 18,
+     "pts": 7,
+     "tid": 1298,
+     "form": "WLLDL"
     },
     {
      "pos": 18,

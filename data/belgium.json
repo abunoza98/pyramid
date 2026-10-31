@@ -69,6 +69,19 @@
     },
     {
      "pos": 2,
+     "team": "Union Saint-Gilloise",
+     "p": 10,
+     "w": 8,
+     "d": 2,
+     "l": 0,
+     "gf": 29,
+     "ga": 7,
+     "pts": 26,
+     "tid": 1393,
+     "form": "WWDWW"
+    },
+    {
+     "pos": 3,
      "team": "Gent",
      "p": 9,
      "w": 8,
@@ -79,19 +92,6 @@
      "pts": 25,
      "tid": 631,
      "form": "WDWWW"
-    },
-    {
-     "pos": 3,
-     "team": "Union Saint-Gilloise",
-     "p": 9,
-     "w": 7,
-     "d": 2,
-     "l": 0,
-     "gf": 27,
-     "ga": 6,
-     "pts": 23,
-     "tid": 1393,
-     "form": "WWWDW"
     },
     {
      "pos": 4,
@@ -109,15 +109,15 @@
     {
      "pos": 5,
      "team": "Anderlecht",
-     "p": 9,
-     "w": 5,
+     "p": 10,
+     "w": 6,
      "d": 1,
      "l": 3,
-     "gf": 9,
-     "ga": 10,
-     "pts": 16,
+     "gf": 13,
+     "ga": 11,
+     "pts": 19,
      "tid": 554,
-     "form": "DWWWL"
+     "form": "WWWLW"
     },
     {
      "pos": 6,
@@ -135,15 +135,15 @@
     {
      "pos": 7,
      "team": "Westerlo",
-     "p": 9,
+     "p": 10,
      "w": 4,
      "d": 2,
-     "l": 3,
-     "gf": 24,
-     "ga": 21,
+     "l": 4,
+     "gf": 25,
+     "ga": 25,
      "pts": 14,
      "tid": 261,
-     "form": "WWWWD"
+     "form": "WWWDL"
     },
     {
      "pos": 8,
@@ -200,15 +200,15 @@
     {
      "pos": 12,
      "team": "SK Beveren",
-     "p": 9,
+     "p": 10,
      "w": 3,
      "d": 1,
-     "l": 5,
-     "gf": 12,
-     "ga": 18,
+     "l": 6,
+     "gf": 13,
+     "ga": 20,
      "pts": 10,
      "tid": 738,
-     "form": "WWLLD"
+     "form": "WLLDL"
     },
     {
      "pos": 13,
@@ -370,6 +370,19 @@
     },
     {
      "pos": 4,
+     "team": "Sporting Hasselt",
+     "p": 8,
+     "w": 5,
+     "d": 0,
+     "l": 3,
+     "gf": 12,
+     "ga": 13,
+     "pts": 15,
+     "tid": 5931,
+     "form": "LWLWW"
+    },
+    {
+     "pos": 5,
      "team": "Lokeren-Temse",
      "p": 8,
      "w": 4,
@@ -382,7 +395,7 @@
      "form": "LWDWL"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Patro Eisden",
      "p": 9,
      "w": 4,
@@ -395,7 +408,7 @@
      "form": "LLWWW"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Francs Borains",
      "p": 7,
      "w": 4,
@@ -406,19 +419,6 @@
      "pts": 12,
      "tid": 5805,
      "form": "WWWLL"
-    },
-    {
-     "pos": 7,
-     "team": "Sporting Hasselt",
-     "p": 7,
-     "w": 4,
-     "d": 0,
-     "l": 3,
-     "gf": 8,
-     "ga": 10,
-     "pts": 12,
-     "tid": 5931,
-     "form": "LLWLW"
     },
     {
      "pos": 8,
@@ -449,15 +449,15 @@
     {
      "pos": 10,
      "team": "Club Brugge II",
-     "p": 7,
+     "p": 8,
      "w": 2,
      "d": 3,
-     "l": 2,
-     "gf": 11,
-     "ga": 13,
+     "l": 3,
+     "gf": 14,
+     "ga": 17,
      "pts": 9,
      "tid": 14130,
-     "form": "LDDLD"
+     "form": "DDLDL"
     },
     {
      "pos": 11,

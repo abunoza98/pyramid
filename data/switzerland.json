@@ -62,15 +62,15 @@
     {
      "pos": 3,
      "team": "FC Sion",
-     "p": 11,
+     "p": 12,
      "w": 7,
-     "d": 1,
+     "d": 2,
      "l": 3,
-     "gf": 24,
-     "ga": 17,
-     "pts": 22,
+     "gf": 25,
+     "ga": 18,
+     "pts": 23,
      "tid": 630,
-     "form": "WWDLW"
+     "form": "WDLWD"
     },
     {
      "pos": 4,
@@ -127,15 +127,15 @@
     {
      "pos": 8,
      "team": "FC Luzern",
-     "p": 11,
+     "p": 12,
      "w": 3,
-     "d": 3,
+     "d": 4,
      "l": 5,
-     "gf": 18,
-     "ga": 24,
-     "pts": 12,
+     "gf": 19,
+     "ga": 25,
+     "pts": 13,
      "tid": 644,
-     "form": "DLWLL"
+     "form": "LWLLD"
     },
     {
      "pos": 9,

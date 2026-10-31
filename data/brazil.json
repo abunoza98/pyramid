@@ -173,6 +173,19 @@
     },
     {
      "pos": 11,
+     "team": "Coritiba",
+     "p": 33,
+     "w": 11,
+     "d": 9,
+     "l": 13,
+     "gf": 40,
+     "ga": 50,
+     "pts": 42,
+     "tid": 147,
+     "form": "LDLLW"
+    },
+    {
+     "pos": 12,
      "team": "Botafogo",
      "p": 33,
      "w": 10,
@@ -183,19 +196,6 @@
      "pts": 39,
      "tid": 120,
      "form": "LDWLL"
-    },
-    {
-     "pos": 12,
-     "team": "Coritiba",
-     "p": 32,
-     "w": 10,
-     "d": 9,
-     "l": 13,
-     "gf": 38,
-     "ga": 50,
-     "pts": 39,
-     "tid": 147,
-     "form": "LLDLL"
     },
     {
      "pos": 13,
@@ -213,15 +213,15 @@
     {
      "pos": 14,
      "team": "Vitória",
-     "p": 32,
+     "p": 33,
      "w": 10,
      "d": 8,
-     "l": 14,
+     "l": 15,
      "gf": 35,
-     "ga": 46,
+     "ga": 48,
      "pts": 38,
      "tid": 136,
-     "form": "LWLDD"
+     "form": "WLDDL"
     },
     {
      "pos": 15,
@@ -335,6 +335,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Juventude",
+     "p": 36,
+     "w": 18,
+     "d": 11,
+     "l": 7,
+     "gf": 47,
+     "ga": 25,
+     "pts": 65,
+     "tid": 152,
+     "form": "WDDWD"
+    },
+    {
+     "pos": 2,
      "team": "Novorizontino",
      "p": 35,
      "w": 18,
@@ -347,30 +360,17 @@
      "form": "WWWDW"
     },
     {
-     "pos": 2,
-     "team": "Juventude",
-     "p": 35,
-     "w": 18,
-     "d": 10,
-     "l": 7,
-     "gf": 45,
-     "ga": 23,
-     "pts": 64,
-     "tid": 152,
-     "form": "WWDDW"
-    },
-    {
      "pos": 3,
      "team": "Vila Nova",
-     "p": 35,
+     "p": 36,
      "w": 18,
-     "d": 8,
+     "d": 9,
      "l": 9,
-     "gf": 50,
-     "ga": 36,
-     "pts": 62,
+     "gf": 52,
+     "ga": 38,
+     "pts": 63,
      "tid": 142,
-     "form": "WDWDL"
+     "form": "DWDLD"
     },
     {
      "pos": 4,
