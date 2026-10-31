@@ -329,6 +329,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Sporting CP B",
+     "p": 9,
+     "w": 7,
+     "d": 0,
+     "l": 2,
+     "gf": 15,
+     "ga": 7,
+     "pts": 21,
+     "tid": 761,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 2,
      "team": "Lusitânia Lourosa",
      "p": 8,
      "w": 5,
@@ -339,19 +352,6 @@
      "pts": 18,
      "tid": 6358,
      "form": "WWWDD"
-    },
-    {
-     "pos": 2,
-     "team": "Sporting CP B",
-     "p": 8,
-     "w": 6,
-     "d": 0,
-     "l": 2,
-     "gf": 13,
-     "ga": 6,
-     "pts": 18,
-     "tid": 761,
-     "form": "WWLWW"
     },
     {
      "pos": 3,
@@ -486,15 +486,15 @@
     {
      "pos": 13,
      "team": "Leixões",
-     "p": 8,
+     "p": 9,
      "w": 3,
      "d": 1,
-     "l": 4,
-     "gf": 9,
-     "ga": 12,
+     "l": 5,
+     "gf": 10,
+     "ga": 14,
      "pts": 10,
      "tid": 244,
-     "form": "WWDLL"
+     "form": "WDLLL"
     },
     {
      "pos": 14,

@@ -381,6 +381,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "FC Schaffhausen",
+     "p": 12,
+     "w": 9,
+     "d": 1,
+     "l": 2,
+     "gf": 30,
+     "ga": 13,
+     "pts": 28,
+     "tid": 2182,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
      "team": "Biel-Bienne",
      "p": 13,
      "w": 8,
@@ -393,7 +406,7 @@
      "form": "WWDDD"
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "Bulle",
      "p": 13,
      "w": 8,
@@ -406,20 +419,20 @@
      "form": "LWDWW"
     },
     {
-     "pos": 3,
-     "team": "FC Schaffhausen",
-     "p": 11,
+     "pos": 4,
+     "team": "Cham",
+     "p": 14,
      "w": 8,
-     "d": 1,
-     "l": 2,
-     "gf": 29,
-     "ga": 13,
-     "pts": 25,
-     "tid": 2182,
-     "form": "DWWWW"
+     "d": 3,
+     "l": 3,
+     "gf": 25,
+     "ga": 19,
+     "pts": 27,
+     "tid": 6621,
+     "form": "LWDDW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Paradiso",
      "p": 14,
      "w": 7,
@@ -432,33 +445,33 @@
      "form": "WDDWD"
     },
     {
-     "pos": 5,
-     "team": "Cham",
-     "p": 13,
-     "w": 7,
-     "d": 3,
-     "l": 3,
-     "gf": 23,
-     "ga": 18,
-     "pts": 24,
-     "tid": 6621,
-     "form": "WLWDD"
-    },
-    {
      "pos": 6,
      "team": "Grand-Saconnex",
-     "p": 13,
-     "w": 7,
+     "p": 14,
+     "w": 8,
      "d": 0,
      "l": 6,
-     "gf": 25,
-     "ga": 19,
-     "pts": 21,
+     "gf": 27,
+     "ga": 20,
+     "pts": 24,
      "tid": 17415,
-     "form": "WWLLL"
+     "form": "WLLLW"
     },
     {
      "pos": 7,
+     "team": "Breitenrain",
+     "p": 14,
+     "w": 6,
+     "d": 3,
+     "l": 5,
+     "gf": 21,
+     "ga": 20,
+     "pts": 21,
+     "tid": 10586,
+     "form": "WDWLW"
+    },
+    {
+     "pos": 8,
      "team": "Brühl",
      "p": 14,
      "w": 6,
@@ -471,30 +484,17 @@
      "form": "LWLWW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Basel II",
-     "p": 13,
+     "p": 14,
      "w": 6,
      "d": 1,
-     "l": 6,
+     "l": 7,
      "gf": 24,
-     "ga": 24,
+     "ga": 26,
      "pts": 19,
      "tid": 10585,
-     "form": "WWDWL"
-    },
-    {
-     "pos": 9,
-     "team": "Amical Saint-Prex",
-     "p": 13,
-     "w": 6,
-     "d": 1,
-     "l": 6,
-     "gf": 18,
-     "ga": 25,
-     "pts": 19,
-     "tid": 16316,
-     "form": "WLWLW"
+     "form": "WDWLL"
     },
     {
      "pos": 10,
@@ -511,6 +511,19 @@
     },
     {
      "pos": 11,
+     "team": "Amical Saint-Prex",
+     "p": 14,
+     "w": 6,
+     "d": 1,
+     "l": 7,
+     "gf": 18,
+     "ga": 26,
+     "pts": 19,
+     "tid": 16316,
+     "form": "LWLWL"
+    },
+    {
+     "pos": 12,
      "team": "Zürich II",
      "p": 13,
      "w": 5,
@@ -523,43 +536,30 @@
      "form": "LWDWL"
     },
     {
-     "pos": 12,
-     "team": "Breitenrain",
-     "p": 13,
-     "w": 5,
-     "d": 3,
-     "l": 5,
-     "gf": 19,
-     "ga": 20,
-     "pts": 18,
-     "tid": 10586,
-     "form": "DWDWL"
-    },
-    {
      "pos": 13,
      "team": "Kreuzlingen",
-     "p": 13,
+     "p": 14,
      "w": 4,
      "d": 3,
-     "l": 6,
-     "gf": 20,
-     "ga": 23,
+     "l": 7,
+     "gf": 22,
+     "ga": 26,
      "pts": 15,
      "tid": 14504,
-     "form": "DWWLL"
+     "form": "WWLLL"
     },
     {
      "pos": 14,
      "team": "Young Boys II",
-     "p": 13,
+     "p": 14,
      "w": 4,
      "d": 3,
-     "l": 6,
-     "gf": 28,
-     "ga": 34,
+     "l": 7,
+     "gf": 29,
+     "ga": 36,
      "pts": 15,
      "tid": 12698,
-     "form": "LLLDW"
+     "form": "LLDWL"
     },
     {
      "pos": 15,
@@ -576,6 +576,19 @@
     },
     {
      "pos": 16,
+     "team": "Luzern II",
+     "p": 14,
+     "w": 3,
+     "d": 2,
+     "l": 9,
+     "gf": 21,
+     "ga": 33,
+     "pts": 11,
+     "tid": 12706,
+     "form": "LLLDW"
+    },
+    {
+     "pos": 17,
      "team": "Bellinzona",
      "p": 13,
      "w": 2,
@@ -588,30 +601,17 @@
      "form": "DLLWD"
     },
     {
-     "pos": 17,
-     "team": "Bavois",
-     "p": 12,
-     "w": 2,
-     "d": 2,
-     "l": 8,
-     "gf": 11,
-     "ga": 17,
-     "pts": 8,
-     "tid": 6615,
-     "form": "LLLLL"
-    },
-    {
      "pos": 18,
-     "team": "Luzern II",
+     "team": "Bavois",
      "p": 13,
      "w": 2,
      "d": 2,
      "l": 9,
-     "gf": 18,
-     "ga": 31,
+     "gf": 12,
+     "ga": 19,
      "pts": 8,
-     "tid": 12706,
-     "form": "LLLLD"
+     "tid": 6615,
+     "form": "LLLLL"
     }
    ],
    "updated": "2026-10-31T00:00:00.000Z"
@@ -860,29 +860,29 @@
       },
       {
        "pos": 2,
-       "team": "Courtételle",
-       "p": 11,
+       "team": "Schötz",
+       "p": 12,
        "w": 7,
-       "d": 1,
+       "d": 2,
        "l": 3,
-       "gf": 23,
-       "ga": 12,
-       "pts": 22,
-       "tid": 17480,
-       "form": "WLWWW"
+       "gf": 31,
+       "ga": 19,
+       "pts": 23,
+       "tid": 12708,
+       "form": "WWWLW"
       },
       {
        "pos": 3,
-       "team": "Schötz",
-       "p": 11,
-       "w": 6,
+       "team": "Courtételle",
+       "p": 12,
+       "w": 7,
        "d": 2,
        "l": 3,
-       "gf": 28,
-       "ga": 17,
-       "pts": 20,
-       "tid": 12708,
-       "form": "WWWWL"
+       "gf": 26,
+       "ga": 15,
+       "pts": 23,
+       "tid": 17480,
+       "form": "LWWWD"
       },
       {
        "pos": 4,
@@ -900,28 +900,28 @@
       {
        "pos": 5,
        "team": "Solothurn",
-       "p": 11,
+       "p": 12,
        "w": 6,
        "d": 1,
-       "l": 4,
-       "gf": 28,
-       "ga": 21,
+       "l": 5,
+       "gf": 30,
+       "ga": 24,
        "pts": 19,
        "tid": 12709,
-       "form": "LWWWW"
+       "form": "WWWWL"
       },
       {
        "pos": 6,
        "team": "Delémont",
-       "p": 11,
+       "p": 12,
        "w": 5,
        "d": 3,
-       "l": 3,
-       "gf": 17,
-       "ga": 10,
+       "l": 4,
+       "gf": 18,
+       "ga": 12,
        "pts": 18,
        "tid": 12702,
-       "form": "LWLWD"
+       "form": "WLWDL"
       },
       {
        "pos": 7,
@@ -939,15 +939,15 @@
       {
        "pos": 8,
        "team": "Buochs",
-       "p": 11,
+       "p": 12,
        "w": 5,
-       "d": 1,
+       "d": 2,
        "l": 5,
-       "gf": 18,
-       "ga": 19,
-       "pts": 16,
+       "gf": 21,
+       "ga": 22,
+       "pts": 17,
        "tid": 12701,
-       "form": "WLLLW"
+       "form": "LLLWD"
       },
       {
        "pos": 9,
@@ -977,6 +977,19 @@
       },
       {
        "pos": 11,
+       "team": "FC Wohlen",
+       "p": 12,
+       "w": 4,
+       "d": 3,
+       "l": 5,
+       "gf": 14,
+       "ga": 18,
+       "pts": 15,
+       "tid": 2183,
+       "form": "WLDLW"
+      },
+      {
+       "pos": 12,
        "team": "Zug",
        "p": 11,
        "w": 4,
@@ -989,7 +1002,7 @@
        "form": "WLLWW"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "Bassecourt",
        "p": 11,
        "w": 4,
@@ -1002,7 +1015,7 @@
        "form": "WDLLW"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Thun II",
        "p": 11,
        "w": 3,
@@ -1013,19 +1026,6 @@
        "pts": 12,
        "tid": 16348,
        "form": "DLWLL"
-      },
-      {
-       "pos": 14,
-       "team": "FC Wohlen",
-       "p": 11,
-       "w": 3,
-       "d": 3,
-       "l": 5,
-       "gf": 12,
-       "ga": 17,
-       "pts": 12,
-       "tid": 2183,
-       "form": "DWLDL"
       },
       {
        "pos": 15,

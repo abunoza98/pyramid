@@ -771,6 +771,19 @@
     },
     {
      "pos": 15,
+     "team": "Würzburger Kickers",
+     "p": 12,
+     "w": 4,
+     "d": 2,
+     "l": 6,
+     "gf": 17,
+     "ga": 24,
+     "pts": 14,
+     "tid": 784,
+     "form": "LDWLW"
+    },
+    {
+     "pos": 16,
      "team": "Jahn Regensburg",
      "p": 12,
      "w": 3,
@@ -783,7 +796,7 @@
      "form": "WDDLW"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "SC Verl",
      "p": 12,
      "w": 3,
@@ -796,7 +809,7 @@
      "form": "DDLLL"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Sonnenhof Großaspach",
      "p": 11,
      "w": 3,
@@ -809,30 +822,17 @@
      "form": "LLDWL"
     },
     {
-     "pos": 18,
-     "team": "Würzburger Kickers",
-     "p": 11,
-     "w": 3,
-     "d": 2,
-     "l": 6,
-     "gf": 15,
-     "ga": 23,
-     "pts": 11,
-     "tid": 784,
-     "form": "LLDWL"
-    },
-    {
      "pos": 19,
      "team": "Fortuna Köln",
-     "p": 11,
+     "p": 12,
      "w": 2,
      "d": 4,
-     "l": 5,
-     "gf": 8,
-     "ga": 12,
+     "l": 6,
+     "gf": 9,
+     "ga": 14,
      "pts": 10,
      "tid": 1326,
-     "form": "WDLLL"
+     "form": "DLLLL"
     },
     {
      "pos": 20,

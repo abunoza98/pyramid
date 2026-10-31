@@ -1478,6 +1478,19 @@
     },
     {
      "pos": 9,
+     "team": "Barrow",
+     "p": 15,
+     "w": 7,
+     "d": 4,
+     "l": 4,
+     "gf": 26,
+     "ga": 19,
+     "pts": 25,
+     "tid": 1819,
+     "form": "WWWWD"
+    },
+    {
+     "pos": 10,
      "team": "FC Halifax Town",
      "p": 16,
      "w": 7,
@@ -1488,19 +1501,6 @@
      "pts": 24,
      "tid": 1841,
      "form": "WWDLW"
-    },
-    {
-     "pos": 10,
-     "team": "Barrow",
-     "p": 14,
-     "w": 7,
-     "d": 3,
-     "l": 4,
-     "gf": 25,
-     "ga": 18,
-     "pts": 24,
-     "tid": 1819,
-     "form": "WWWWW"
     },
     {
      "pos": 11,
@@ -1582,6 +1582,19 @@
     },
     {
      "pos": 17,
+     "team": "Eastleigh",
+     "p": 16,
+     "w": 5,
+     "d": 4,
+     "l": 7,
+     "gf": 19,
+     "ga": 25,
+     "pts": 19,
+     "tid": 1822,
+     "form": "LLWLD"
+    },
+    {
+     "pos": 18,
      "team": "Wealdstone",
      "p": 16,
      "w": 5,
@@ -1592,19 +1605,6 @@
      "pts": 18,
      "tid": 8663,
      "form": "LLWLW"
-    },
-    {
-     "pos": 18,
-     "team": "Eastleigh",
-     "p": 15,
-     "w": 5,
-     "d": 3,
-     "l": 7,
-     "gf": 18,
-     "ga": 24,
-     "pts": 18,
-     "tid": 1822,
-     "form": "DLLWL"
     },
     {
      "pos": 19,

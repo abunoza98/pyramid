@@ -220,28 +220,28 @@
     {
      "pos": 1,
      "team": "Blau-Weiß Linz",
-     "p": 10,
-     "w": 8,
+     "p": 11,
+     "w": 9,
      "d": 1,
      "l": 1,
-     "gf": 26,
+     "gf": 32,
      "ga": 6,
-     "pts": 25,
+     "pts": 28,
      "tid": 1394,
-     "form": "WWDWW"
+     "form": "WDWWW"
     },
     {
      "pos": 2,
      "team": "First Vienna",
-     "p": 10,
+     "p": 11,
      "w": 8,
      "d": 1,
-     "l": 1,
+     "l": 2,
      "gf": 21,
-     "ga": 9,
+     "ga": 15,
      "pts": 25,
      "tid": 4990,
-     "form": "WWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 3,
@@ -1114,12 +1114,12 @@
       {
        "pos": 4,
        "team": "Kitzbühel",
-       "p": 13,
+       "p": 14,
        "w": 8,
        "d": 1,
-       "l": 4,
+       "l": 5,
        "gf": 29,
-       "ga": 19,
+       "ga": 21,
        "pts": 25,
        "tid": 4947,
        "form": "WWLDW"
@@ -1152,6 +1152,19 @@
       },
       {
        "pos": 7,
+       "team": "SK St. Johann",
+       "p": 14,
+       "w": 6,
+       "d": 3,
+       "l": 5,
+       "gf": 23,
+       "ga": 19,
+       "pts": 21,
+       "tid": 27905,
+       "form": "DWLLL"
+      },
+      {
+       "pos": 8,
        "team": "Swarovski Tirol II",
        "p": 14,
        "w": 6,
@@ -1164,7 +1177,7 @@
        "form": "WWLDL"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Fügen",
        "p": 14,
        "w": 6,
@@ -1175,19 +1188,6 @@
        "pts": 19,
        "tid": 8335,
        "form": "WLLWL"
-      },
-      {
-       "pos": 9,
-       "team": "SK St. Johann",
-       "p": 13,
-       "w": 5,
-       "d": 3,
-       "l": 5,
-       "gf": 21,
-       "ga": 19,
-       "pts": 18,
-       "tid": 27905,
-       "form": "DWLLL"
       },
       {
        "pos": 10,

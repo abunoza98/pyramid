@@ -4,7 +4,7 @@
  "adjective": "Belgian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-30T00:00:00.000Z",
+ "updated": "2026-10-31T00:00:00.000Z",
  "belowNote": "The top amateur clubs come up",
  "leagues": [
   {
@@ -122,15 +122,15 @@
     {
      "pos": 6,
      "team": "Genk",
-     "p": 9,
+     "p": 10,
      "w": 4,
      "d": 3,
-     "l": 2,
+     "l": 3,
      "gf": 18,
-     "ga": 13,
+     "ga": 14,
      "pts": 15,
      "tid": 742,
-     "form": "DDLWW"
+     "form": "DLWWL"
     },
     {
      "pos": 7,
@@ -212,6 +212,19 @@
     },
     {
      "pos": 13,
+     "team": "KV Mechelen",
+     "p": 9,
+     "w": 2,
+     "d": 3,
+     "l": 4,
+     "gf": 10,
+     "ga": 17,
+     "pts": 9,
+     "tid": 266,
+     "form": "LLDWW"
+    },
+    {
+     "pos": 14,
      "team": "Sint-Truiden",
      "p": 9,
      "w": 2,
@@ -224,7 +237,7 @@
      "form": "WLLLL"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "La Louvière",
      "p": 9,
      "w": 2,
@@ -235,19 +248,6 @@
      "pts": 7,
      "tid": 5902,
      "form": "LWLLW"
-    },
-    {
-     "pos": 15,
-     "team": "KV Mechelen",
-     "p": 8,
-     "w": 1,
-     "d": 3,
-     "l": 4,
-     "gf": 9,
-     "ga": 17,
-     "pts": 6,
-     "tid": 266,
-     "form": "DLLDW"
     },
     {
      "pos": 16,
@@ -289,7 +289,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "challenger-pro-league",
@@ -332,13 +332,13 @@
     {
      "pos": 1,
      "team": "Beerschot VA",
-     "p": 8,
-     "w": 7,
+     "p": 9,
+     "w": 8,
      "d": 0,
      "l": 1,
-     "gf": 20,
+     "gf": 23,
      "ga": 7,
-     "pts": 21,
+     "pts": 24,
      "tid": 263,
      "form": "WWWWW"
     },
@@ -371,31 +371,44 @@
     {
      "pos": 4,
      "team": "Lokeren-Temse",
-     "p": 7,
+     "p": 8,
      "w": 4,
      "d": 1,
-     "l": 2,
-     "gf": 15,
-     "ga": 11,
+     "l": 3,
+     "gf": 16,
+     "ga": 14,
      "pts": 13,
      "tid": 14128,
-     "form": "LLWDW"
+     "form": "LWDWL"
     },
     {
      "pos": 5,
-     "team": "Francs Borains",
-     "p": 6,
+     "team": "Patro Eisden",
+     "p": 9,
      "w": 4,
      "d": 0,
-     "l": 2,
-     "gf": 9,
-     "ga": 7,
+     "l": 5,
+     "gf": 14,
+     "ga": 15,
      "pts": 12,
-     "tid": 5805,
-     "form": "LWWWL"
+     "tid": 6222,
+     "form": "LLWWW"
     },
     {
      "pos": 6,
+     "team": "Francs Borains",
+     "p": 7,
+     "w": 4,
+     "d": 0,
+     "l": 3,
+     "gf": 9,
+     "ga": 10,
+     "pts": 12,
+     "tid": 5805,
+     "form": "WWWLL"
+    },
+    {
+     "pos": 7,
      "team": "Sporting Hasselt",
      "p": 7,
      "w": 4,
@@ -408,7 +421,7 @@
      "form": "LLWLW"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Gent II",
      "p": 8,
      "w": 3,
@@ -421,7 +434,7 @@
      "form": "LDWLW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Excelsior Virton",
      "p": 7,
      "w": 3,
@@ -432,19 +445,6 @@
      "pts": 10,
      "tid": 4715,
      "form": "LWDLL"
-    },
-    {
-     "pos": 9,
-     "team": "Patro Eisden",
-     "p": 8,
-     "w": 3,
-     "d": 0,
-     "l": 5,
-     "gf": 11,
-     "ga": 14,
-     "pts": 9,
-     "tid": 6222,
-     "form": "LLLWW"
     },
     {
      "pos": 10,
@@ -525,7 +525,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   }
  ]
 }
