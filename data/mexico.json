@@ -614,16 +614,16 @@
     },
     {
      "pos": 4,
-     "team": "FC Santiago",
-     "p": 9,
+     "team": "Correcaminos UAT II",
+     "p": 10,
      "w": 5,
-     "d": 1,
+     "d": 2,
      "l": 3,
-     "gf": 20,
-     "ga": 7,
-     "pts": 17,
-     "tid": 22055,
-     "form": "LDWWW"
+     "gf": 16,
+     "ga": 12,
+     "pts": 18,
+     "tid": 17782,
+     "form": "WWWLW"
     },
     {
      "pos": 4,
@@ -640,16 +640,16 @@
     },
     {
      "pos": 5,
-     "team": "Vaqueros Reynosa",
+     "team": "FC Santiago",
      "p": 9,
      "w": 5,
      "d": 1,
      "l": 3,
-     "gf": 15,
-     "ga": 14,
-     "pts": 16,
-     "tid": 28308,
-     "form": "WWWLL"
+     "gf": 20,
+     "ga": 7,
+     "pts": 17,
+     "tid": 22055,
+     "form": "LDWWW"
     },
     {
      "pos": 5,
@@ -666,16 +666,16 @@
     },
     {
      "pos": 6,
-     "team": "Correcaminos UAT II",
+     "team": "Vaqueros Reynosa",
      "p": 9,
-     "w": 4,
-     "d": 2,
+     "w": 5,
+     "d": 1,
      "l": 3,
-     "gf": 12,
-     "ga": 11,
-     "pts": 15,
-     "tid": 17782,
-     "form": "WWWWL"
+     "gf": 15,
+     "ga": 14,
+     "pts": 16,
+     "tid": 28308,
+     "form": "WWWLL"
     },
     {
      "pos": 6,
@@ -706,15 +706,15 @@
     {
      "pos": 7,
      "team": "Calor de San Pedro",
-     "p": 9,
+     "p": 10,
      "w": 3,
      "d": 1,
-     "l": 5,
-     "gf": 18,
-     "ga": 23,
+     "l": 6,
+     "gf": 19,
+     "ga": 27,
      "pts": 12,
      "tid": 17804,
-     "form": "WWLLL"
+     "form": "WLLLL"
     },
     {
      "pos": 8,
