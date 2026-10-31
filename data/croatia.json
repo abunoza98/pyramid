@@ -4,7 +4,7 @@
  "adjective": "Croatian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-30T00:00:00.000Z",
+ "updated": "2026-10-31T00:00:00.000Z",
  "belowNote": "Treća NL champions come up",
  "leagues": [
   {
@@ -386,6 +386,19 @@
     },
     {
      "pos": 14,
+     "team": "Hrvace",
+     "p": 11,
+     "w": 3,
+     "d": 2,
+     "l": 6,
+     "gf": 11,
+     "ga": 15,
+     "pts": 11,
+     "tid": 6241,
+     "form": "WLLDW"
+    },
+    {
+     "pos": 15,
      "team": "Vukovar",
      "p": 10,
      "w": 3,
@@ -398,33 +411,20 @@
      "form": "LLWLL"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Dugopolje",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 4,
-     "l": 4,
+     "l": 5,
      "gf": 14,
-     "ga": 16,
+     "ga": 19,
      "pts": 10,
      "tid": 1471,
-     "form": "WLLDL"
-    },
-    {
-     "pos": 16,
-     "team": "Hrvace",
-     "p": 10,
-     "w": 2,
-     "d": 2,
-     "l": 6,
-     "gf": 8,
-     "ga": 15,
-     "pts": 8,
-     "tid": 6241,
-     "form": "WWLLD"
+     "form": "LLDLL"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "druga-nl",
@@ -658,7 +658,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   }
  ]
 }

@@ -4,7 +4,7 @@
  "adjective": "Portuguese",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-30T00:00:00.000Z",
+ "updated": "2026-10-31T00:00:00.000Z",
  "belowNote": "Liga 3's top clubs come up, one through a play-off",
  "leagues": [
   {
@@ -498,6 +498,19 @@
     },
     {
      "pos": 14,
+     "team": "Amarante",
+     "p": 9,
+     "w": 2,
+     "d": 2,
+     "l": 5,
+     "gf": 8,
+     "ga": 12,
+     "pts": 8,
+     "tid": 4725,
+     "form": "LDLLW"
+    },
+    {
+     "pos": 15,
      "team": "Chaves",
      "p": 8,
      "w": 2,
@@ -510,20 +523,20 @@
      "form": "LWLDW"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "FC Porto B",
-     "p": 8,
+     "p": 9,
      "w": 2,
      "d": 2,
-     "l": 4,
-     "gf": 7,
-     "ga": 15,
+     "l": 5,
+     "gf": 8,
+     "ga": 17,
      "pts": 8,
      "tid": 243,
-     "form": "LLDWD"
+     "form": "LDWDL"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Felgueiras 1932",
      "p": 8,
      "w": 1,
@@ -534,19 +547,6 @@
      "pts": 7,
      "tid": 4744,
      "form": "WLLLD"
-    },
-    {
-     "pos": 17,
-     "team": "Amarante",
-     "p": 8,
-     "w": 1,
-     "d": 2,
-     "l": 5,
-     "gf": 6,
-     "ga": 11,
-     "pts": 5,
-     "tid": 4725,
-     "form": "WLDLL"
     },
     {
      "pos": 18,
@@ -562,7 +562,7 @@
      "form": "LLLLD"
     }
    ],
-   "updated": "2026-10-29T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   }
  ]
 }
