@@ -1153,12 +1153,12 @@
       {
        "pos": 7,
        "team": "Swarovski Tirol II",
-       "p": 13,
+       "p": 14,
        "w": 6,
        "d": 2,
-       "l": 5,
+       "l": 6,
        "gf": 36,
-       "ga": 25,
+       "ga": 27,
        "pts": 20,
        "tid": 8344,
        "form": "WWLDL"
@@ -1178,6 +1178,32 @@
       },
       {
        "pos": 9,
+       "team": "Kufstein",
+       "p": 14,
+       "w": 4,
+       "d": 5,
+       "l": 5,
+       "gf": 21,
+       "ga": 18,
+       "pts": 17,
+       "tid": 4948,
+       "form": "LLWDW"
+      },
+      {
+       "pos": 10,
+       "team": "Lauterach",
+       "p": 14,
+       "w": 4,
+       "d": 4,
+       "l": 6,
+       "gf": 25,
+       "ga": 28,
+       "pts": 16,
+       "tid": 8255,
+       "form": "LWWWD"
+      },
+      {
+       "pos": 11,
        "team": "SVG Reichenau",
        "p": 14,
        "w": 4,
@@ -1190,7 +1216,7 @@
        "form": "LWWLD"
       },
       {
-       "pos": 10,
+       "pos": 12,
        "team": "Fügen",
        "p": 13,
        "w": 5,
@@ -1201,32 +1227,6 @@
        "pts": 16,
        "tid": 8335,
        "form": "WLLWL"
-      },
-      {
-       "pos": 11,
-       "team": "Lauterach",
-       "p": 13,
-       "w": 4,
-       "d": 3,
-       "l": 6,
-       "gf": 24,
-       "ga": 27,
-       "pts": 15,
-       "tid": 8255,
-       "form": "WLWWW"
-      },
-      {
-       "pos": 12,
-       "team": "Kufstein",
-       "p": 13,
-       "w": 3,
-       "d": 5,
-       "l": 5,
-       "gf": 19,
-       "ga": 18,
-       "pts": 14,
-       "tid": 4948,
-       "form": "LLWDW"
       },
       {
        "pos": 13,
@@ -1257,15 +1257,15 @@
       {
        "pos": 15,
        "team": "Lustenau",
-       "p": 13,
+       "p": 14,
        "w": 1,
-       "d": 4,
+       "d": 5,
        "l": 8,
-       "gf": 17,
-       "ga": 38,
-       "pts": 7,
+       "gf": 18,
+       "ga": 39,
+       "pts": 8,
        "tid": 8361,
-       "form": "DDLLL"
+       "form": "DLLLD"
       },
       {
        "pos": 16,

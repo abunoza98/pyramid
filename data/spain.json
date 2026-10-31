@@ -377,15 +377,15 @@
     {
      "pos": 4,
      "team": "Girona",
-     "p": 11,
+     "p": 12,
      "w": 6,
      "d": 3,
-     "l": 2,
+     "l": 3,
      "gf": 22,
-     "ga": 10,
+     "ga": 11,
      "pts": 21,
      "tid": 547,
-     "form": "WDDWW"
+     "form": "DDWWL"
     },
     {
      "pos": 5,
@@ -558,6 +558,19 @@
     },
     {
      "pos": 18,
+     "team": "Real Sociedad B",
+     "p": 12,
+     "w": 3,
+     "d": 2,
+     "l": 7,
+     "gf": 15,
+     "ga": 22,
+     "pts": 11,
+     "tid": 9585,
+     "form": "LLLLW"
+    },
+    {
+     "pos": 19,
      "team": "Cádiz",
      "p": 11,
      "w": 2,
@@ -570,7 +583,7 @@
      "form": "DWLLW"
     },
     {
-     "pos": 19,
+     "pos": 20,
      "team": "Andorra",
      "p": 11,
      "w": 3,
@@ -581,19 +594,6 @@
      "pts": 10,
      "tid": 8157,
      "form": "WDWLL"
-    },
-    {
-     "pos": 20,
-     "team": "Real Sociedad B",
-     "p": 11,
-     "w": 2,
-     "d": 2,
-     "l": 7,
-     "gf": 14,
-     "ga": 22,
-     "pts": 8,
-     "tid": 9585,
-     "form": "LLLLL"
     },
     {
      "pos": 21,

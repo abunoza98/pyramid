@@ -4,7 +4,7 @@
  "adjective": "Scottish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-30T00:00:00.000Z",
+ "updated": "2026-10-31T00:00:00.000Z",
  "belowNote": "The Highland/Lowland League play-off winner can come up",
  "leagues": [
   {
@@ -189,7 +189,7 @@
      "form": "DLWLL"
     }
    ],
-   "updated": "2026-10-29T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "scottish-championship",
@@ -229,18 +229,44 @@
     {
      "pos": 1,
      "team": "Partick Thistle",
-     "p": 12,
+     "p": 13,
      "w": 7,
      "d": 4,
-     "l": 1,
-     "gf": 15,
-     "ga": 4,
+     "l": 2,
+     "gf": 17,
+     "ga": 7,
      "pts": 25,
      "tid": 901,
-     "form": "WWWDW"
+     "form": "WWDWL"
     },
     {
      "pos": 2,
+     "team": "Raith Rovers",
+     "p": 13,
+     "w": 7,
+     "d": 3,
+     "l": 3,
+     "gf": 20,
+     "ga": 9,
+     "pts": 24,
+     "tid": 1385,
+     "form": "WWDLW"
+    },
+    {
+     "pos": 3,
+     "team": "Dunfermline",
+     "p": 13,
+     "w": 6,
+     "d": 6,
+     "l": 1,
+     "gf": 15,
+     "ga": 7,
+     "pts": 24,
+     "tid": 1388,
+     "form": "DDWWW"
+    },
+    {
+     "pos": 4,
      "team": "Stenhousemuir",
      "p": 13,
      "w": 7,
@@ -251,32 +277,6 @@
      "pts": 23,
      "tid": 6784,
      "form": "LDLLL"
-    },
-    {
-     "pos": 3,
-     "team": "Raith Rovers",
-     "p": 12,
-     "w": 6,
-     "d": 3,
-     "l": 3,
-     "gf": 16,
-     "ga": 9,
-     "pts": 21,
-     "tid": 1385,
-     "form": "LWWDL"
-    },
-    {
-     "pos": 4,
-     "team": "Dunfermline",
-     "p": 12,
-     "w": 5,
-     "d": 6,
-     "l": 1,
-     "gf": 10,
-     "ga": 6,
-     "pts": 21,
-     "tid": 1388,
-     "form": "DDDWW"
     },
     {
      "pos": 5,
@@ -294,70 +294,70 @@
     {
      "pos": 6,
      "team": "Inverness Caledonian Thistle",
-     "p": 12,
+     "p": 13,
      "w": 5,
      "d": 4,
-     "l": 3,
-     "gf": 16,
-     "ga": 11,
+     "l": 4,
+     "gf": 17,
+     "ga": 16,
      "pts": 19,
      "tid": 903,
-     "form": "WWLWW"
+     "form": "WLWWL"
     },
     {
      "pos": 7,
      "team": "Ayr United",
-     "p": 11,
-     "w": 3,
+     "p": 12,
+     "w": 4,
      "d": 3,
      "l": 5,
-     "gf": 10,
-     "ga": 12,
-     "pts": 12,
+     "gf": 13,
+     "ga": 14,
+     "pts": 15,
      "tid": 1387,
-     "form": "WLWDL"
+     "form": "LWDLW"
     },
     {
      "pos": 8,
      "team": "Arbroath",
-     "p": 12,
+     "p": 13,
      "w": 3,
      "d": 2,
-     "l": 7,
+     "l": 8,
      "gf": 7,
-     "ga": 18,
+     "ga": 22,
      "pts": 11,
      "tid": 4249,
-     "form": "WLLLL"
+     "form": "LLLLL"
     },
     {
      "pos": 9,
      "team": "Greenock Morton",
-     "p": 11,
-     "w": 2,
+     "p": 12,
+     "w": 3,
      "d": 1,
      "l": 8,
-     "gf": 9,
-     "ga": 18,
-     "pts": 7,
+     "gf": 12,
+     "ga": 20,
+     "pts": 10,
      "tid": 1383,
-     "form": "LLLWW"
+     "form": "LLWWW"
     },
     {
      "pos": 10,
      "team": "Queen's Park",
-     "p": 12,
+     "p": 13,
      "w": 2,
      "d": 1,
-     "l": 9,
-     "gf": 6,
-     "ga": 19,
+     "l": 10,
+     "gf": 8,
+     "ga": 22,
      "pts": 7,
      "tid": 6778,
-     "form": "LLWLL"
+     "form": "LWLLL"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "scottish-league-one",
@@ -525,7 +525,7 @@
      "form": "LLDL"
     }
    ],
-   "updated": "2026-10-29T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "scottish-league-two",
@@ -690,7 +690,7 @@
      "form": "WLLLL"
     }
    ],
-   "updated": "2026-10-20T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   }
  ]
 }
