@@ -146,6 +146,19 @@
     },
     {
      "pos": 8,
+     "team": "Moreirense",
+     "p": 10,
+     "w": 4,
+     "d": 2,
+     "l": 4,
+     "gf": 13,
+     "ga": 17,
+     "pts": 14,
+     "tid": 215,
+     "form": "WDLWW"
+    },
+    {
+     "pos": 9,
      "team": "Alverca",
      "p": 9,
      "w": 3,
@@ -158,7 +171,7 @@
      "form": "LWWWL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Braga",
      "p": 9,
      "w": 3,
@@ -169,19 +182,6 @@
      "pts": 11,
      "tid": 217,
      "form": "WDLLL"
-    },
-    {
-     "pos": 10,
-     "team": "Moreirense",
-     "p": 9,
-     "w": 3,
-     "d": 2,
-     "l": 4,
-     "gf": 11,
-     "ga": 16,
-     "pts": 11,
-     "tid": 215,
-     "form": "LWDLW"
     },
     {
      "pos": 11,
@@ -199,15 +199,15 @@
     {
      "pos": 12,
      "team": "Estrela da Amadora",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 4,
-     "l": 3,
-     "gf": 14,
-     "ga": 17,
+     "l": 4,
+     "gf": 15,
+     "ga": 19,
      "pts": 10,
      "tid": 15130,
-     "form": "WDLLL"
+     "form": "DLLLL"
     },
     {
      "pos": 13,
@@ -288,7 +288,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "liga-portugal-2",

@@ -53,15 +53,15 @@
     {
      "pos": 1,
      "team": "Hajduk Split",
-     "p": 11,
-     "w": 7,
+     "p": 12,
+     "w": 8,
      "d": 2,
      "l": 2,
-     "gf": 21,
+     "gf": 26,
      "ga": 11,
-     "pts": 23,
+     "pts": 26,
      "tid": 608,
-     "form": "WLWWD"
+     "form": "LWWDW"
     },
     {
      "pos": 2,
@@ -170,15 +170,15 @@
     {
      "pos": 10,
      "team": "Gorica",
-     "p": 11,
+     "p": 12,
      "w": 1,
      "d": 4,
-     "l": 6,
+     "l": 7,
      "gf": 7,
-     "ga": 15,
+     "ga": 20,
      "pts": 7,
      "tid": 1068,
-     "form": "DWLDD"
+     "form": "WLDDL"
     }
    ],
    "updated": "2026-10-31T00:00:00.000Z"

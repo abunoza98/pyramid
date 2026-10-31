@@ -624,6 +624,19 @@
      "rows": [
       {
        "pos": 1,
+       "team": "Muş Sport Klübü",
+       "p": 9,
+       "w": 7,
+       "d": 1,
+       "l": 1,
+       "gf": 29,
+       "ga": 13,
+       "pts": 22,
+       "tid": 6536,
+       "form": "WWWLW"
+      },
+      {
+       "pos": 2,
        "team": "Aliağa FAŞ",
        "p": 8,
        "w": 7,
@@ -636,7 +649,7 @@
        "form": "WWWWW"
       },
       {
-       "pos": 2,
+       "pos": 3,
        "team": "Elazığspor",
        "p": 8,
        "w": 6,
@@ -647,19 +660,6 @@
        "pts": 19,
        "tid": 3571,
        "form": "DLWWW"
-      },
-      {
-       "pos": 3,
-       "team": "Muş Sport Klübü",
-       "p": 8,
-       "w": 6,
-       "d": 1,
-       "l": 1,
-       "gf": 22,
-       "ga": 12,
-       "pts": 19,
-       "tid": 6536,
-       "form": "WWWWL"
       },
       {
        "pos": 4,
@@ -848,16 +848,16 @@
       {
        "pos": 18,
        "team": "Adana Demirspor",
-       "p": 8,
+       "p": 9,
        "w": 2,
        "d": 1,
-       "l": 5,
-       "gf": 6,
-       "ga": 12,
+       "l": 6,
+       "gf": 7,
+       "ga": 19,
        "pts": 0,
        "ded": 7,
        "tid": 3563,
-       "form": "LLWLL"
+       "form": "LWLLL"
       }
      ]
     },

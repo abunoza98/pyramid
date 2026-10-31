@@ -459,6 +459,19 @@
     },
     {
      "pos": 7,
+     "team": "Brühl",
+     "p": 14,
+     "w": 6,
+     "d": 2,
+     "l": 6,
+     "gf": 18,
+     "ga": 18,
+     "pts": 20,
+     "tid": 10587,
+     "form": "LWLWW"
+    },
+    {
+     "pos": 8,
      "team": "Basel II",
      "p": 13,
      "w": 6,
@@ -469,19 +482,6 @@
      "pts": 19,
      "tid": 10585,
      "form": "WWDWL"
-    },
-    {
-     "pos": 8,
-     "team": "YF Juventus",
-     "p": 13,
-     "w": 6,
-     "d": 1,
-     "l": 6,
-     "gf": 19,
-     "ga": 20,
-     "pts": 19,
-     "tid": 6652,
-     "form": "DLWLW"
     },
     {
      "pos": 9,
@@ -498,6 +498,19 @@
     },
     {
      "pos": 10,
+     "team": "YF Juventus",
+     "p": 14,
+     "w": 6,
+     "d": 1,
+     "l": 7,
+     "gf": 19,
+     "ga": 22,
+     "pts": 19,
+     "tid": 6652,
+     "form": "LWLWL"
+    },
+    {
+     "pos": 11,
      "team": "Zürich II",
      "p": 13,
      "w": 5,
@@ -510,7 +523,7 @@
      "form": "LWDWL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Breitenrain",
      "p": 13,
      "w": 5,
@@ -521,19 +534,6 @@
      "pts": 18,
      "tid": 10586,
      "form": "DWDWL"
-    },
-    {
-     "pos": 12,
-     "team": "Brühl",
-     "p": 13,
-     "w": 5,
-     "d": 2,
-     "l": 6,
-     "gf": 16,
-     "ga": 18,
-     "pts": 17,
-     "tid": 10587,
-     "form": "LLWLW"
     },
     {
      "pos": 13,
@@ -672,6 +672,19 @@
       },
       {
        "pos": 4,
+       "team": "Sion II",
+       "p": 12,
+       "w": 5,
+       "d": 4,
+       "l": 3,
+       "gf": 17,
+       "ga": 14,
+       "pts": 19,
+       "tid": 10590,
+       "form": "WDLLW"
+      },
+      {
+       "pos": 5,
        "team": "Lausanne-Sport II",
        "p": 11,
        "w": 4,
@@ -684,7 +697,7 @@
        "form": "DWDDL"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "Portalban / Gletterens",
        "p": 11,
        "w": 5,
@@ -697,30 +710,17 @@
        "form": "LDWWW"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Naters",
-       "p": 11,
+       "p": 12,
        "w": 5,
        "d": 2,
-       "l": 4,
-       "gf": 22,
-       "ga": 28,
+       "l": 5,
+       "gf": 23,
+       "ga": 31,
        "pts": 17,
        "tid": 12695,
-       "form": "WWLLW"
-      },
-      {
-       "pos": 7,
-       "team": "Sion II",
-       "p": 11,
-       "w": 4,
-       "d": 4,
-       "l": 3,
-       "gf": 14,
-       "ga": 13,
-       "pts": 16,
-       "tid": 10590,
-       "form": "LWDLL"
+       "form": "WLLWL"
       },
       {
        "pos": 8,
@@ -1074,58 +1074,71 @@
       },
       {
        "pos": 2,
-       "team": "Tuggen",
-       "p": 11,
+       "team": "Taverne",
+       "p": 12,
        "w": 7,
        "d": 3,
-       "l": 1,
-       "gf": 26,
-       "ga": 13,
+       "l": 2,
+       "gf": 29,
+       "ga": 15,
        "pts": 24,
-       "tid": 12720,
-       "form": "LDDDW"
+       "tid": 6648,
+       "form": "WWWDW"
       },
       {
        "pos": 3,
-       "team": "Taverne",
-       "p": 11,
-       "w": 6,
+       "team": "Tuggen",
+       "p": 12,
+       "w": 7,
        "d": 3,
        "l": 2,
        "gf": 27,
-       "ga": 14,
-       "pts": 21,
-       "tid": 6648,
-       "form": "WWWWD"
+       "ga": 15,
+       "pts": 24,
+       "tid": 12720,
+       "form": "DDDWL"
       },
       {
        "pos": 4,
        "team": "Baden",
-       "p": 11,
-       "w": 6,
+       "p": 12,
+       "w": 7,
        "d": 1,
        "l": 4,
-       "gf": 27,
-       "ga": 17,
-       "pts": 19,
+       "gf": 30,
+       "ga": 18,
+       "pts": 22,
        "tid": 12699,
-       "form": "WLLLW"
+       "form": "LLLWW"
       },
       {
        "pos": 5,
-       "team": "Thalwil",
-       "p": 11,
+       "team": "Kosova",
+       "p": 12,
        "w": 5,
-       "d": 4,
+       "d": 5,
        "l": 2,
-       "gf": 18,
-       "ga": 12,
-       "pts": 19,
-       "tid": 12719,
-       "form": "WDDLW"
+       "gf": 19,
+       "ga": 13,
+       "pts": 20,
+       "tid": 12716,
+       "form": "DWLDW"
       },
       {
        "pos": 6,
+       "team": "Thalwil",
+       "p": 12,
+       "w": 5,
+       "d": 4,
+       "l": 3,
+       "gf": 19,
+       "ga": 15,
+       "pts": 19,
+       "tid": 12719,
+       "form": "DDLWL"
+      },
+      {
+       "pos": 7,
        "team": "Collina d'Oro",
        "p": 11,
        "w": 5,
@@ -1138,46 +1151,46 @@
        "form": "WLWDW"
       },
       {
-       "pos": 7,
-       "team": "Kosova",
-       "p": 11,
-       "w": 4,
-       "d": 5,
-       "l": 2,
-       "gf": 16,
-       "ga": 13,
-       "pts": 17,
-       "tid": 12716,
-       "form": "WDWLD"
-      },
-      {
        "pos": 8,
        "team": "Dietikon",
-       "p": 11,
+       "p": 12,
        "w": 4,
-       "d": 2,
+       "d": 3,
        "l": 5,
-       "gf": 14,
-       "ga": 16,
-       "pts": 14,
+       "gf": 16,
+       "ga": 18,
+       "pts": 15,
        "tid": 12712,
-       "form": "LDLWL"
+       "form": "DLWLD"
       },
       {
        "pos": 9,
        "team": "Gossau",
-       "p": 11,
+       "p": 12,
        "w": 4,
        "d": 2,
-       "l": 5,
+       "l": 6,
        "gf": 16,
-       "ga": 21,
+       "ga": 24,
        "pts": 14,
        "tid": 12714,
-       "form": "WLWWL"
+       "form": "LWWLL"
       },
       {
        "pos": 10,
+       "team": "Freienbach",
+       "p": 12,
+       "w": 3,
+       "d": 4,
+       "l": 5,
+       "gf": 14,
+       "ga": 18,
+       "pts": 13,
+       "tid": 6625,
+       "form": "WDLLW"
+      },
+      {
+       "pos": 11,
        "team": "Wettswil-Bonstetten",
        "p": 11,
        "w": 3,
@@ -1190,7 +1203,7 @@
        "form": "LDLWW"
       },
       {
-       "pos": 11,
+       "pos": 12,
        "team": "Eschen / Mauren",
        "p": 11,
        "w": 3,
@@ -1203,7 +1216,7 @@
        "form": "LDDWL"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "Locarno",
        "p": 11,
        "w": 2,
@@ -1216,43 +1229,30 @@
        "form": "LWDWD"
       },
       {
-       "pos": 13,
-       "team": "Freienbach",
-       "p": 11,
-       "w": 2,
-       "d": 4,
-       "l": 5,
-       "gf": 12,
-       "ga": 17,
-       "pts": 10,
-       "tid": 6625,
-       "form": "LWDLL"
-      },
-      {
        "pos": 14,
-       "team": "Mendrisio",
-       "p": 11,
-       "w": 1,
-       "d": 6,
-       "l": 4,
-       "gf": 11,
-       "ga": 15,
-       "pts": 9,
-       "tid": 16354,
-       "form": "LDDLD"
+       "team": "Winterthur II",
+       "p": 12,
+       "w": 3,
+       "d": 1,
+       "l": 8,
+       "gf": 13,
+       "ga": 23,
+       "pts": 10,
+       "tid": 12721,
+       "form": "LLLLD"
       },
       {
        "pos": 15,
-       "team": "Winterthur II",
-       "p": 11,
-       "w": 3,
-       "d": 0,
-       "l": 8,
-       "gf": 11,
-       "ga": 21,
+       "team": "Mendrisio",
+       "p": 12,
+       "w": 1,
+       "d": 6,
+       "l": 5,
+       "gf": 12,
+       "ga": 17,
        "pts": 9,
-       "tid": 12721,
-       "form": "WLLLL"
+       "tid": 16354,
+       "form": "DDLDL"
       },
       {
        "pos": 16,
