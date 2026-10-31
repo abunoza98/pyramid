@@ -40,6 +40,19 @@
     },
     {
      "pos": 2,
+     "team": "Atlas",
+     "p": 15,
+     "w": 8,
+     "d": 3,
+     "l": 4,
+     "gf": 26,
+     "ga": 26,
+     "pts": 27,
+     "tid": 2283,
+     "form": "DWLWW"
+    },
+    {
+     "pos": 3,
      "team": "Cruz Azul",
      "p": 14,
      "w": 8,
@@ -52,7 +65,7 @@
      "form": "DDWWW"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Guadalajara",
      "p": 14,
      "w": 7,
@@ -63,19 +76,6 @@
      "pts": 26,
      "tid": 2278,
      "form": "LDDWW"
-    },
-    {
-     "pos": 4,
-     "team": "Atlas",
-     "p": 14,
-     "w": 7,
-     "d": 3,
-     "l": 4,
-     "gf": 25,
-     "ga": 26,
-     "pts": 24,
-     "tid": 2283,
-     "form": "WDWLW"
     },
     {
      "pos": 5,
@@ -132,15 +132,15 @@
     {
      "pos": 9,
      "team": "Querétaro",
-     "p": 13,
+     "p": 14,
      "w": 6,
      "d": 2,
-     "l": 5,
-     "gf": 17,
-     "ga": 18,
+     "l": 6,
+     "gf": 18,
+     "ga": 21,
      "pts": 20,
      "tid": 2290,
-     "form": "WWLLL"
+     "form": "WLLLL"
     },
     {
      "pos": 10,
@@ -158,15 +158,15 @@
     {
      "pos": 11,
      "team": "Atlético San Luis",
-     "p": 14,
+     "p": 15,
      "w": 5,
      "d": 4,
-     "l": 5,
+     "l": 6,
      "gf": 19,
-     "ga": 22,
+     "ga": 23,
      "pts": 19,
      "tid": 2314,
-     "form": "WLDWW"
+     "form": "LDWWL"
     },
     {
      "pos": 12,
@@ -249,15 +249,15 @@
     {
      "pos": 18,
      "team": "FC Juárez",
-     "p": 14,
-     "w": 1,
+     "p": 15,
+     "w": 2,
      "d": 2,
      "l": 11,
-     "gf": 9,
-     "ga": 33,
-     "pts": 5,
+     "gf": 12,
+     "ga": 34,
+     "pts": 8,
      "tid": 2298,
-     "form": "LDLLD"
+     "form": "DLLDW"
     }
    ],
    "updated": "2026-10-30T00:00:00.000Z"
@@ -320,6 +320,19 @@
     },
     {
      "pos": 4,
+     "team": "Venados FC",
+     "p": 15,
+     "w": 7,
+     "d": 4,
+     "l": 4,
+     "gf": 31,
+     "ga": 25,
+     "pts": 25,
+     "tid": 2311,
+     "form": "WDDWD"
+    },
+    {
+     "pos": 5,
      "team": "Piratas",
      "p": 14,
      "w": 7,
@@ -330,19 +343,6 @@
      "pts": 24,
      "tid": 27935,
      "form": "LWLWW"
-    },
-    {
-     "pos": 5,
-     "team": "Venados FC",
-     "p": 14,
-     "w": 7,
-     "d": 3,
-     "l": 4,
-     "gf": 31,
-     "ga": 25,
-     "pts": 24,
-     "tid": 2311,
-     "form": "WWDDW"
     },
     {
      "pos": 6,
@@ -425,15 +425,15 @@
     {
      "pos": 12,
      "team": "Correcaminos Uat",
-     "p": 14,
+     "p": 15,
      "w": 4,
-     "d": 4,
+     "d": 5,
      "l": 6,
      "gf": 21,
      "ga": 24,
-     "pts": 16,
+     "pts": 17,
      "tid": 2313,
-     "form": "WDLLL"
+     "form": "DLLLD"
     },
     {
      "pos": 13,

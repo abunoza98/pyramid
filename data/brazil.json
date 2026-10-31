@@ -239,18 +239,31 @@
     {
      "pos": 16,
      "team": "Mirassol",
-     "p": 32,
+     "p": 33,
      "w": 9,
      "d": 10,
-     "l": 13,
+     "l": 14,
      "gf": 37,
-     "ga": 45,
+     "ga": 47,
      "pts": 37,
      "tid": 7848,
-     "form": "WDLWD"
+     "form": "DLWDL"
     },
     {
      "pos": 17,
+     "team": "Corinthians",
+     "p": 33,
+     "w": 9,
+     "d": 9,
+     "l": 15,
+     "gf": 36,
+     "ga": 42,
+     "pts": 36,
+     "tid": 131,
+     "form": "LLDLW"
+    },
+    {
+     "pos": 18,
      "team": "Internacional",
      "p": 33,
      "w": 8,
@@ -261,19 +274,6 @@
      "pts": 35,
      "tid": 119,
      "form": "WDLWL"
-    },
-    {
-     "pos": 18,
-     "team": "Corinthians",
-     "p": 32,
-     "w": 8,
-     "d": 9,
-     "l": 15,
-     "gf": 34,
-     "ga": 42,
-     "pts": 33,
-     "tid": 131,
-     "form": "LLLDL"
     },
     {
      "pos": 19,
