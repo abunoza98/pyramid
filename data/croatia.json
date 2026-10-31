@@ -66,15 +66,15 @@
     {
      "pos": 2,
      "team": "Dinamo Zagreb",
-     "p": 10,
+     "p": 11,
      "w": 7,
      "d": 1,
-     "l": 2,
+     "l": 3,
      "gf": 25,
-     "ga": 13,
+     "ga": 14,
      "pts": 22,
      "tid": 620,
-     "form": "LWLWW"
+     "form": "WLWWL"
     },
     {
      "pos": 3,
@@ -143,6 +143,19 @@
     },
     {
      "pos": 8,
+     "team": "Rudeš",
+     "p": 12,
+     "w": 4,
+     "d": 1,
+     "l": 7,
+     "gf": 15,
+     "ga": 27,
+     "pts": 13,
+     "tid": 1019,
+     "form": "DWLWW"
+    },
+    {
+     "pos": 9,
      "team": "Lokomotiva",
      "p": 11,
      "w": 3,
@@ -153,19 +166,6 @@
      "pts": 11,
      "tid": 1017,
      "form": "DLLWD"
-    },
-    {
-     "pos": 9,
-     "team": "Rudeš",
-     "p": 11,
-     "w": 3,
-     "d": 1,
-     "l": 7,
-     "gf": 14,
-     "ga": 27,
-     "pts": 10,
-     "tid": 1019,
-     "form": "LDWLW"
     },
     {
      "pos": 10,

@@ -40,6 +40,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Olympiacos",
+     "p": 9,
+     "w": 7,
+     "d": 1,
+     "l": 1,
+     "gf": 15,
+     "ga": 4,
+     "pts": 22,
+     "tid": 553,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
      "team": "Panathinaikos",
      "p": 8,
      "w": 7,
@@ -50,19 +63,6 @@
      "pts": 21,
      "tid": 617,
      "form": "WWLWW"
-    },
-    {
-     "pos": 2,
-     "team": "Olympiacos",
-     "p": 8,
-     "w": 6,
-     "d": 1,
-     "l": 1,
-     "gf": 12,
-     "ga": 2,
-     "pts": 19,
-     "tid": 553,
-     "form": "LWWWW"
     },
     {
      "pos": 3,
@@ -119,15 +119,15 @@
     {
      "pos": 7,
      "team": "Kifisia",
-     "p": 8,
+     "p": 9,
      "w": 3,
      "d": 2,
-     "l": 3,
-     "gf": 10,
-     "ga": 11,
+     "l": 4,
+     "gf": 12,
+     "ga": 14,
      "pts": 11,
      "tid": 5050,
-     "form": "DWWLW"
+     "form": "WWLWL"
     },
     {
      "pos": 8,
@@ -222,7 +222,7 @@
      "form": "LLLDL"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "super-league-2",

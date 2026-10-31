@@ -1004,6 +1004,19 @@
     },
     {
      "pos": 3,
+     "team": "Sportivo Italiano",
+     "p": 42,
+     "w": 20,
+     "d": 12,
+     "l": 10,
+     "gf": 48,
+     "ga": 33,
+     "pts": 72,
+     "tid": 8388,
+     "form": "WWDLW"
+    },
+    {
+     "pos": 4,
      "team": "Talleres Remedios",
      "p": 41,
      "w": 20,
@@ -1016,30 +1029,17 @@
      "form": "WLDLW"
     },
     {
-     "pos": 4,
-     "team": "Sportivo Italiano",
-     "p": 41,
-     "w": 19,
-     "d": 12,
-     "l": 10,
-     "gf": 47,
-     "ga": 33,
-     "pts": 69,
-     "tid": 8388,
-     "form": "WWWDL"
-    },
-    {
      "pos": 5,
      "team": "Villa Dalmine",
-     "p": 41,
+     "p": 42,
      "w": 18,
      "d": 14,
-     "l": 9,
+     "l": 10,
      "gf": 40,
-     "ga": 27,
+     "ga": 28,
      "pts": 68,
      "tid": 481,
-     "form": "DLDLW"
+     "form": "LDLWL"
     },
     {
      "pos": 6,
