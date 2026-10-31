@@ -114,6 +114,19 @@
     },
     {
      "pos": 6,
+     "team": "Çorum FK",
+     "p": 10,
+     "w": 5,
+     "d": 1,
+     "l": 4,
+     "gf": 21,
+     "ga": 16,
+     "pts": 16,
+     "tid": 6343,
+     "form": "LWWLW"
+    },
+    {
+     "pos": 7,
      "team": "Kasımpaşa",
      "p": 9,
      "w": 4,
@@ -126,7 +139,7 @@
      "form": "WDLWW"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Kocaelispor",
      "p": 9,
      "w": 5,
@@ -139,30 +152,17 @@
      "form": "LWLLW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Erzurumspor FK",
-     "p": 9,
+     "p": 10,
      "w": 4,
      "d": 2,
-     "l": 3,
-     "gf": 8,
-     "ga": 12,
+     "l": 4,
+     "gf": 9,
+     "ga": 15,
      "pts": 14,
      "tid": 1009,
-     "form": "LWDWW"
-    },
-    {
-     "pos": 9,
-     "team": "Çorum FK",
-     "p": 9,
-     "w": 4,
-     "d": 1,
-     "l": 4,
-     "gf": 18,
-     "ga": 15,
-     "pts": 13,
-     "tid": 6343,
-     "form": "WLWWL"
+     "form": "WDWWL"
     },
     {
      "pos": 10,
@@ -282,7 +282,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "1-lig",
@@ -449,15 +449,15 @@
     {
      "pos": 11,
      "team": "Sarıyer",
-     "p": 12,
+     "p": 13,
      "w": 4,
      "d": 4,
-     "l": 4,
+     "l": 5,
      "gf": 14,
-     "ga": 17,
+     "ga": 18,
      "pts": 16,
      "tid": 3605,
-     "form": "WDLDL"
+     "form": "DLDLL"
     },
     {
      "pos": 12,
@@ -513,6 +513,20 @@
     },
     {
      "pos": 16,
+     "team": "Vanspor FK",
+     "p": 13,
+     "w": 4,
+     "d": 3,
+     "l": 6,
+     "gf": 14,
+     "ga": 22,
+     "pts": 13,
+     "ded": 2,
+     "tid": 6342,
+     "form": "LWLWW"
+    },
+    {
+     "pos": 17,
      "team": "Pendikspor",
      "p": 12,
      "w": 2,
@@ -525,7 +539,7 @@
      "form": "DLLLD"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Manisa FK",
      "p": 12,
      "w": 2,
@@ -536,20 +550,6 @@
      "pts": 10,
      "tid": 3597,
      "form": "LLDLL"
-    },
-    {
-     "pos": 18,
-     "team": "Vanspor FK",
-     "p": 12,
-     "w": 3,
-     "d": 3,
-     "l": 6,
-     "gf": 13,
-     "ga": 22,
-     "pts": 10,
-     "ded": 2,
-     "tid": 6342,
-     "form": "LLWLW"
     },
     {
      "pos": 19,
