@@ -468,15 +468,15 @@
     {
      "pos": 11,
      "team": "Córdoba",
-     "p": 11,
+     "p": 12,
      "w": 5,
-     "d": 0,
+     "d": 1,
      "l": 6,
-     "gf": 17,
-     "ga": 20,
-     "pts": 15,
+     "gf": 19,
+     "ga": 22,
+     "pts": 16,
      "tid": 713,
-     "form": "LWLWW"
+     "form": "WLWWD"
     },
     {
      "pos": 12,
@@ -519,6 +519,19 @@
     },
     {
      "pos": 15,
+     "team": "Celta Fortuna",
+     "p": 12,
+     "w": 3,
+     "d": 4,
+     "l": 5,
+     "gf": 18,
+     "ga": 23,
+     "pts": 13,
+     "tid": 9571,
+     "form": "LWDLD"
+    },
+    {
+     "pos": 16,
      "team": "Valladolid",
      "p": 11,
      "w": 3,
@@ -529,19 +542,6 @@
      "pts": 12,
      "tid": 720,
      "form": "WDWLL"
-    },
-    {
-     "pos": 16,
-     "team": "Celta Fortuna",
-     "p": 11,
-     "w": 3,
-     "d": 3,
-     "l": 5,
-     "gf": 16,
-     "ga": 21,
-     "pts": 12,
-     "tid": 9571,
-     "form": "DLWDL"
     },
     {
      "pos": 17,
@@ -1005,18 +1005,31 @@
       {
        "pos": 7,
        "team": "Cartagena",
-       "p": 9,
+       "p": 10,
        "w": 4,
        "d": 3,
-       "l": 2,
+       "l": 3,
        "gf": 14,
-       "ga": 9,
+       "ga": 11,
        "pts": 15,
        "tid": 5262,
-       "form": "WWDWL"
+       "form": "WDWLL"
       },
       {
        "pos": 8,
+       "team": "Real Madrid Castilla",
+       "p": 10,
+       "w": 4,
+       "d": 3,
+       "l": 3,
+       "gf": 13,
+       "ga": 11,
+       "pts": 15,
+       "tid": 9575,
+       "form": "WDWLW"
+      },
+      {
+       "pos": 9,
        "team": "Gimnàstic",
        "p": 9,
        "w": 4,
@@ -1029,7 +1042,7 @@
        "form": "LLDWW"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Algeciras",
        "p": 9,
        "w": 4,
@@ -1042,7 +1055,7 @@
        "form": "WWLWW"
       },
       {
-       "pos": 10,
+       "pos": 11,
        "team": "Hércules",
        "p": 9,
        "w": 4,
@@ -1055,7 +1068,7 @@
        "form": "WDWLL"
       },
       {
-       "pos": 11,
+       "pos": 12,
        "team": "Sant Andreu",
        "p": 10,
        "w": 3,
@@ -1068,7 +1081,7 @@
        "form": "DLDLW"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "Huesca",
        "p": 9,
        "w": 2,
@@ -1079,19 +1092,6 @@
        "pts": 12,
        "tid": 726,
        "form": "DWDDD"
-      },
-      {
-       "pos": 13,
-       "team": "Real Madrid Castilla",
-       "p": 9,
-       "w": 3,
-       "d": 3,
-       "l": 3,
-       "gf": 11,
-       "ga": 11,
-       "pts": 12,
-       "tid": 9575,
-       "form": "LWDWL"
       },
       {
        "pos": 14,

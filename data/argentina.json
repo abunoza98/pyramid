@@ -189,19 +189,32 @@
       },
       {
        "pos": 13,
-       "team": "Deportivo Riestra",
-       "p": 14,
-       "w": 2,
-       "d": 6,
-       "l": 6,
-       "gf": 10,
-       "ga": 14,
+       "team": "Talleres",
+       "p": 15,
+       "w": 3,
+       "d": 3,
+       "l": 9,
+       "gf": 16,
+       "ga": 22,
        "pts": 12,
-       "tid": 476,
-       "form": "DDLDL"
+       "tid": 456,
+       "form": "LDLLW"
       },
       {
        "pos": 14,
+       "team": "Deportivo Riestra",
+       "p": 15,
+       "w": 2,
+       "d": 6,
+       "l": 7,
+       "gf": 10,
+       "ga": 17,
+       "pts": 12,
+       "tid": 476,
+       "form": "DLDLL"
+      },
+      {
+       "pos": 15,
        "team": "Central Córdoba",
        "p": 14,
        "w": 2,
@@ -212,19 +225,6 @@
        "pts": 10,
        "tid": 1065,
        "form": "DDDLL"
-      },
-      {
-       "pos": 15,
-       "team": "Talleres",
-       "p": 14,
-       "w": 2,
-       "d": 3,
-       "l": 9,
-       "gf": 13,
-       "ga": 22,
-       "pts": 9,
-       "tid": 456,
-       "form": "LLDLL"
       }
      ]
     },
@@ -468,55 +468,55 @@
      "rows": [
       {
        "pos": 1,
-       "team": "Ferro Carril Oeste",
-       "p": 35,
+       "team": "Godoy Cruz",
+       "p": 36,
        "w": 19,
-       "d": 8,
+       "d": 9,
        "l": 8,
-       "gf": 38,
-       "ga": 31,
-       "pts": 65,
-       "tid": 470,
-       "form": "WLDWL"
+       "gf": 53,
+       "ga": 33,
+       "pts": 66,
+       "tid": 439,
+       "form": "WDWWW"
       },
       {
        "pos": 2,
-       "team": "Godoy Cruz",
-       "p": 35,
-       "w": 18,
+       "team": "Ferro Carril Oeste",
+       "p": 36,
+       "w": 19,
        "d": 9,
        "l": 8,
-       "gf": 51,
-       "ga": 32,
-       "pts": 63,
-       "tid": 439,
-       "form": "DWDWW"
+       "gf": 38,
+       "ga": 31,
+       "pts": 66,
+       "tid": 470,
+       "form": "LDWLD"
       },
       {
        "pos": 3,
        "team": "Deportivo Morón",
-       "p": 35,
-       "w": 17,
+       "p": 36,
+       "w": 18,
        "d": 7,
        "l": 11,
-       "gf": 51,
+       "gf": 53,
        "ga": 37,
-       "pts": 58,
+       "pts": 61,
        "tid": 469,
-       "form": "LWLLL"
+       "form": "WLLLW"
       },
       {
        "pos": 4,
        "team": "Deportivo Madryn",
-       "p": 35,
-       "w": 15,
+       "p": 36,
+       "w": 16,
        "d": 12,
        "l": 8,
-       "gf": 51,
+       "gf": 52,
        "ga": 31,
-       "pts": 57,
+       "pts": 60,
        "tid": 1929,
-       "form": "DWLDW"
+       "form": "WLDWW"
       },
       {
        "pos": 5,
@@ -534,28 +534,28 @@
       {
        "pos": 6,
        "team": "Almirante Brown",
-       "p": 35,
+       "p": 36,
        "w": 13,
        "d": 12,
-       "l": 10,
-       "gf": 29,
-       "ga": 24,
+       "l": 11,
+       "gf": 30,
+       "ga": 26,
        "pts": 51,
        "tid": 8375,
-       "form": "LLDDW"
+       "form": "LDDWL"
       },
       {
        "pos": 7,
        "team": "Ciudad de Bolívar",
-       "p": 35,
+       "p": 36,
        "w": 13,
        "d": 12,
-       "l": 10,
+       "l": 11,
        "gf": 30,
-       "ga": 31,
+       "ga": 33,
        "pts": 51,
        "tid": 16612,
-       "form": "WWWWL"
+       "form": "WWWLL"
       },
       {
        "pos": 8,
@@ -572,6 +572,19 @@
       },
       {
        "pos": 9,
+       "team": "Los Andes",
+       "p": 36,
+       "w": 9,
+       "d": 16,
+       "l": 11,
+       "gf": 27,
+       "ga": 26,
+       "pts": 43,
+       "tid": 483,
+       "form": "LLDDD"
+      },
+      {
+       "pos": 10,
        "team": "Chaco For Ever",
        "p": 35,
        "w": 11,
@@ -584,20 +597,33 @@
        "form": "LDWLW"
       },
       {
-       "pos": 10,
-       "team": "Los Andes",
-       "p": 35,
-       "w": 9,
-       "d": 15,
-       "l": 11,
-       "gf": 27,
-       "ga": 26,
-       "pts": 42,
-       "tid": 483,
-       "form": "WLLDD"
+       "pos": 11,
+       "team": "San Telmo",
+       "p": 36,
+       "w": 10,
+       "d": 11,
+       "l": 15,
+       "gf": 30,
+       "ga": 41,
+       "pts": 41,
+       "tid": 1932,
+       "form": "WLDLW"
       },
       {
-       "pos": 11,
+       "pos": 12,
+       "team": "Atlético Mitre",
+       "p": 36,
+       "w": 8,
+       "d": 16,
+       "l": 12,
+       "gf": 31,
+       "ga": 42,
+       "pts": 40,
+       "tid": 466,
+       "form": "WDWLD"
+      },
+      {
+       "pos": 13,
        "team": "Racing (Córdoba)",
        "p": 35,
        "w": 10,
@@ -610,7 +636,7 @@
        "form": "DDWLL"
       },
       {
-       "pos": 12,
+       "pos": 14,
        "team": "Defensores De Belgrano",
        "p": 35,
        "w": 8,
@@ -623,33 +649,20 @@
        "form": "LDLDD"
       },
       {
-       "pos": 13,
-       "team": "Atlético Mitre",
-       "p": 35,
-       "w": 8,
-       "d": 15,
-       "l": 12,
-       "gf": 31,
-       "ga": 42,
-       "pts": 39,
-       "tid": 466,
-       "form": "LWDWL"
-      },
-      {
-       "pos": 14,
+       "pos": 15,
        "team": "Central Norte",
-       "p": 35,
+       "p": 36,
        "w": 7,
        "d": 17,
-       "l": 11,
+       "l": 12,
        "gf": 23,
-       "ga": 31,
+       "ga": 32,
        "pts": 38,
        "tid": 1951,
-       "form": "DDDWD"
+       "form": "DDWDL"
       },
       {
-       "pos": 15,
+       "pos": 16,
        "team": "All Boys",
        "p": 35,
        "w": 7,
@@ -662,43 +675,30 @@
        "form": "DLDDW"
       },
       {
-       "pos": 16,
-       "team": "San Telmo",
-       "p": 35,
-       "w": 9,
-       "d": 11,
-       "l": 15,
-       "gf": 29,
-       "ga": 41,
-       "pts": 38,
-       "tid": 1932,
-       "form": "WWLDL"
-      },
-      {
        "pos": 17,
        "team": "Acassuso",
-       "p": 35,
+       "p": 36,
        "w": 8,
-       "d": 10,
+       "d": 11,
        "l": 17,
        "gf": 25,
        "ga": 35,
-       "pts": 34,
+       "pts": 35,
        "tid": 2425,
-       "form": "WLWDD"
+       "form": "LWDDD"
       },
       {
        "pos": 18,
        "team": "San Miguel",
-       "p": 35,
+       "p": 36,
        "w": 6,
        "d": 15,
-       "l": 14,
+       "l": 15,
        "gf": 27,
-       "ga": 41,
+       "ga": 42,
        "pts": 33,
        "tid": 8379,
-       "form": "LLDLD"
+       "form": "LDLDL"
       }
      ]
     },
@@ -709,70 +709,83 @@
       {
        "pos": 1,
        "team": "Tristan Suarez",
-       "p": 35,
+       "p": 36,
        "w": 16,
-       "d": 15,
+       "d": 16,
        "l": 4,
        "gf": 34,
        "ga": 16,
-       "pts": 63,
+       "pts": 64,
        "tid": 1965,
-       "form": "WDDWD"
+       "form": "DDWDD"
       },
       {
        "pos": 2,
        "team": "Atlanta",
-       "p": 35,
+       "p": 36,
        "w": 19,
-       "d": 4,
+       "d": 5,
        "l": 12,
        "gf": 42,
        "ga": 34,
-       "pts": 61,
+       "pts": 62,
        "tid": 1948,
-       "form": "WWWLW"
+       "form": "WWLWD"
       },
       {
        "pos": 3,
        "team": "Temperley",
-       "p": 35,
+       "p": 36,
        "w": 16,
-       "d": 12,
+       "d": 13,
        "l": 7,
-       "gf": 41,
-       "ga": 29,
-       "pts": 60,
+       "gf": 43,
+       "ga": 31,
+       "pts": 61,
        "tid": 454,
-       "form": "LWWDL"
+       "form": "WWDLD"
       },
       {
        "pos": 4,
        "team": "Gimnasia Jujuy",
-       "p": 35,
+       "p": 36,
        "w": 16,
        "d": 10,
-       "l": 9,
-       "gf": 52,
-       "ga": 44,
+       "l": 10,
+       "gf": 53,
+       "ga": 49,
        "pts": 58,
        "tid": 479,
-       "form": "DLDWL"
+       "form": "LDWLL"
       },
       {
        "pos": 5,
        "team": "Midland",
-       "p": 35,
+       "p": 36,
        "w": 15,
-       "d": 9,
+       "d": 10,
        "l": 11,
        "gf": 43,
        "ga": 29,
-       "pts": 54,
+       "pts": 55,
        "tid": 1963,
-       "form": "LDWLW"
+       "form": "DWLWD"
       },
       {
        "pos": 6,
+       "team": "Deportivo Maipu",
+       "p": 36,
+       "w": 14,
+       "d": 10,
+       "l": 12,
+       "gf": 43,
+       "ga": 34,
+       "pts": 52,
+       "tid": 1954,
+       "form": "WDLWD"
+      },
+      {
+       "pos": 7,
        "team": "Gimnasia Y Tiro",
        "p": 35,
        "w": 14,
@@ -785,20 +798,20 @@
        "form": "WLDWL"
       },
       {
-       "pos": 7,
-       "team": "Deportivo Maipu",
-       "p": 35,
-       "w": 14,
-       "d": 9,
-       "l": 12,
-       "gf": 43,
-       "ga": 34,
+       "pos": 8,
+       "team": "San Martín (San Juan)",
+       "p": 36,
+       "w": 13,
+       "d": 12,
+       "l": 11,
+       "gf": 42,
+       "ga": 36,
        "pts": 51,
-       "tid": 1954,
-       "form": "WWDLW"
+       "tid": 461,
+       "form": "LDDDW"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Colegiales",
        "p": 35,
        "w": 14,
@@ -809,19 +822,6 @@
        "pts": 51,
        "tid": 8377,
        "form": "WWDWD"
-      },
-      {
-       "pos": 9,
-       "team": "San Martín (San Juan)",
-       "p": 35,
-       "w": 12,
-       "d": 12,
-       "l": 11,
-       "gf": 37,
-       "ga": 35,
-       "pts": 48,
-       "tid": 461,
-       "form": "LLDDD"
       },
       {
        "pos": 10,
@@ -852,15 +852,15 @@
       {
        "pos": 12,
        "team": "Agropecuario",
-       "p": 35,
-       "w": 11,
+       "p": 36,
+       "w": 12,
        "d": 10,
        "l": 14,
-       "gf": 29,
-       "ga": 38,
-       "pts": 43,
+       "gf": 31,
+       "ga": 39,
+       "pts": 46,
        "tid": 462,
-       "form": "LDWLW"
+       "form": "DWLWW"
       },
       {
        "pos": 13,
@@ -878,15 +878,15 @@
       {
        "pos": 14,
        "team": "Almagro",
-       "p": 35,
+       "p": 36,
        "w": 11,
        "d": 9,
-       "l": 15,
-       "gf": 32,
-       "ga": 42,
+       "l": 16,
+       "gf": 33,
+       "ga": 44,
        "pts": 42,
        "tid": 482,
-       "form": "LWWLD"
+       "form": "WWLDL"
       },
       {
        "pos": 15,
@@ -930,15 +930,15 @@
       {
        "pos": 18,
        "team": "Güemes",
-       "p": 35,
+       "p": 36,
        "w": 6,
-       "d": 8,
+       "d": 9,
        "l": 21,
-       "gf": 26,
-       "ga": 60,
-       "pts": 26,
+       "gf": 28,
+       "ga": 62,
+       "pts": 27,
        "tid": 3969,
-       "form": "LLLWL"
+       "form": "LLWLD"
       }
      ]
     }
@@ -979,15 +979,15 @@
     {
      "pos": 1,
      "team": "Excursionistas",
-     "p": 41,
+     "p": 42,
      "w": 24,
      "d": 9,
-     "l": 8,
-     "gf": 68,
-     "ga": 31,
+     "l": 9,
+     "gf": 69,
+     "ga": 33,
      "pts": 81,
      "tid": 8385,
-     "form": "WLWDW"
+     "form": "LWDWL"
     },
     {
      "pos": 2,
@@ -1030,6 +1030,19 @@
     },
     {
      "pos": 5,
+     "team": "Deportivo Camioneros",
+     "p": 42,
+     "w": 19,
+     "d": 13,
+     "l": 10,
+     "gf": 50,
+     "ga": 35,
+     "pts": 70,
+     "tid": 3943,
+     "form": "LDWLW"
+    },
+    {
+     "pos": 6,
      "team": "Villa Dalmine",
      "p": 42,
      "w": 18,
@@ -1040,19 +1053,6 @@
      "pts": 68,
      "tid": 481,
      "form": "LDLWL"
-    },
-    {
-     "pos": 6,
-     "team": "Deportivo Camioneros",
-     "p": 41,
-     "w": 18,
-     "d": 13,
-     "l": 10,
-     "gf": 48,
-     "ga": 34,
-     "pts": 67,
-     "tid": 3943,
-     "form": "LLDWL"
     },
     {
      "pos": 7,
@@ -1070,15 +1070,15 @@
     {
      "pos": 8,
      "team": "Deportivo Armenio",
-     "p": 41,
+     "p": 42,
      "w": 17,
-     "d": 11,
+     "d": 12,
      "l": 13,
-     "gf": 42,
-     "ga": 39,
-     "pts": 62,
+     "gf": 43,
+     "ga": 40,
+     "pts": 63,
      "tid": 2427,
-     "form": "WWDDL"
+     "form": "WDDLD"
     },
     {
      "pos": 9,
@@ -1135,15 +1135,15 @@
     {
      "pos": 13,
      "team": "Flandria",
-     "p": 41,
+     "p": 42,
      "w": 13,
-     "d": 9,
+     "d": 10,
      "l": 19,
-     "gf": 39,
-     "ga": 49,
-     "pts": 48,
+     "gf": 40,
+     "ga": 50,
+     "pts": 49,
      "tid": 471,
-     "form": "LDWWW"
+     "form": "DWWWD"
     },
     {
      "pos": 14,

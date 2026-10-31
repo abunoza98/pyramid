@@ -55,15 +55,15 @@
     {
      "pos": 3,
      "team": "LASK",
-     "p": 10,
-     "w": 6,
+     "p": 11,
+     "w": 7,
      "d": 1,
      "l": 3,
-     "gf": 24,
-     "ga": 12,
-     "pts": 19,
+     "gf": 26,
+     "ga": 13,
+     "pts": 22,
      "tid": 1026,
-     "form": "LDLWL"
+     "form": "DLWLW"
     },
     {
      "pos": 4,
@@ -107,15 +107,15 @@
     {
      "pos": 7,
      "team": "WSG Tirol",
-     "p": 10,
+     "p": 11,
      "w": 3,
      "d": 3,
-     "l": 4,
-     "gf": 13,
-     "ga": 15,
+     "l": 5,
+     "gf": 14,
+     "ga": 17,
      "pts": 12,
      "tid": 1398,
-     "form": "DLLWD"
+     "form": "LLWDL"
     },
     {
      "pos": 8,
@@ -1122,7 +1122,7 @@
        "ga": 21,
        "pts": 25,
        "tid": 4947,
-       "form": "WWLDW"
+       "form": "WLDWL"
       },
       {
        "pos": 5,
@@ -1148,7 +1148,7 @@
        "ga": 25,
        "pts": 24,
        "tid": 8258,
-       "form": "LWWWW"
+       "form": "WWWWL"
       },
       {
        "pos": 7,
@@ -1161,7 +1161,7 @@
        "ga": 19,
        "pts": 21,
        "tid": 27905,
-       "form": "DWLLL"
+       "form": "WLLLW"
       },
       {
        "pos": 8,
@@ -1174,7 +1174,7 @@
        "ga": 27,
        "pts": 20,
        "tid": 8344,
-       "form": "WWLDL"
+       "form": "WLDLL"
       },
       {
        "pos": 9,
@@ -1187,7 +1187,7 @@
        "ga": 34,
        "pts": 19,
        "tid": 8335,
-       "form": "WLLWL"
+       "form": "LLWLW"
       },
       {
        "pos": 10,
@@ -1200,7 +1200,7 @@
        "ga": 18,
        "pts": 17,
        "tid": 4948,
-       "form": "LLWDW"
+       "form": "LWDWW"
       },
       {
        "pos": 11,

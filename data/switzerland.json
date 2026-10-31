@@ -634,28 +634,28 @@
       {
        "pos": 1,
        "team": "Azzurri Bienne",
-       "p": 11,
-       "w": 9,
+       "p": 12,
+       "w": 10,
        "d": 0,
        "l": 2,
-       "gf": 28,
+       "gf": 29,
        "ga": 12,
-       "pts": 27,
+       "pts": 30,
        "tid": 26346,
        "form": "WWWWW"
       },
       {
        "pos": 2,
        "team": "Prishtina Bern",
-       "p": 11,
-       "w": 8,
+       "p": 12,
+       "w": 9,
        "d": 2,
        "l": 1,
-       "gf": 31,
-       "ga": 9,
-       "pts": 26,
+       "gf": 36,
+       "ga": 10,
+       "pts": 29,
        "tid": 17484,
-       "form": "WLWWW"
+       "form": "LWWWW"
       },
       {
        "pos": 3,
@@ -699,15 +699,15 @@
       {
        "pos": 6,
        "team": "Lausanne-Sport II",
-       "p": 11,
+       "p": 12,
        "w": 4,
        "d": 5,
-       "l": 2,
+       "l": 3,
        "gf": 21,
-       "ga": 14,
+       "ga": 15,
        "pts": 17,
        "tid": 12693,
-       "form": "DWDDL"
+       "form": "WDDLL"
       },
       {
        "pos": 7,
@@ -790,15 +790,15 @@
       {
        "pos": 13,
        "team": "Meyrin",
-       "p": 11,
+       "p": 12,
        "w": 3,
        "d": 2,
-       "l": 6,
-       "gf": 17,
-       "ga": 15,
+       "l": 7,
+       "gf": 18,
+       "ga": 20,
        "pts": 11,
        "tid": 6630,
-       "form": "LLLDL"
+       "form": "LLDLL"
       },
       {
        "pos": 14,
@@ -1152,6 +1152,19 @@
       },
       {
        "pos": 8,
+       "team": "Wettswil-Bonstetten",
+       "p": 12,
+       "w": 4,
+       "d": 3,
+       "l": 5,
+       "gf": 18,
+       "ga": 17,
+       "pts": 15,
+       "tid": 6650,
+       "form": "DLWWW"
+      },
+      {
+       "pos": 9,
        "team": "Dietikon",
        "p": 12,
        "w": 4,
@@ -1164,7 +1177,7 @@
        "form": "DLWLD"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Gossau",
        "p": 12,
        "w": 4,
@@ -1177,7 +1190,7 @@
        "form": "LWWLL"
       },
       {
-       "pos": 10,
+       "pos": 11,
        "team": "Freienbach",
        "p": 12,
        "w": 3,
@@ -1190,30 +1203,17 @@
        "form": "WDLLW"
       },
       {
-       "pos": 11,
-       "team": "Wettswil-Bonstetten",
-       "p": 11,
-       "w": 3,
-       "d": 3,
-       "l": 5,
-       "gf": 14,
-       "ga": 16,
-       "pts": 12,
-       "tid": 6650,
-       "form": "LDLWW"
-      },
-      {
        "pos": 12,
        "team": "Eschen / Mauren",
-       "p": 11,
+       "p": 12,
        "w": 3,
        "d": 3,
-       "l": 5,
-       "gf": 18,
-       "ga": 22,
+       "l": 6,
+       "gf": 19,
+       "ga": 26,
        "pts": 12,
        "tid": 12713,
-       "form": "LDDWL"
+       "form": "DDWLL"
       },
       {
        "pos": 13,

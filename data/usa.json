@@ -308,18 +308,44 @@
       {
        "pos": 6,
        "team": "Philadelphia Union",
-       "p": 32,
+       "p": 33,
        "w": 13,
        "d": 8,
-       "l": 11,
+       "l": 12,
        "gf": 62,
-       "ga": 50,
+       "ga": 51,
        "pts": 47,
        "tid": 1599,
-       "form": "WWDLD"
+       "form": "WDLDL"
       },
       {
        "pos": 7,
+       "team": "FC Cincinnati",
+       "p": 33,
+       "w": 12,
+       "d": 10,
+       "l": 11,
+       "gf": 67,
+       "ga": 73,
+       "pts": 46,
+       "tid": 2242,
+       "form": "LWWDW"
+      },
+      {
+       "pos": 8,
+       "team": "Columbus Crew",
+       "p": 33,
+       "w": 13,
+       "d": 5,
+       "l": 15,
+       "gf": 55,
+       "ga": 49,
+       "pts": 44,
+       "tid": 1613,
+       "form": "WWWWW"
+      },
+      {
+       "pos": 9,
        "team": "Orlando City SC",
        "p": 33,
        "w": 12,
@@ -330,32 +356,6 @@
        "pts": 43,
        "tid": 1598,
        "form": "DWDDL"
-      },
-      {
-       "pos": 8,
-       "team": "FC Cincinnati",
-       "p": 32,
-       "w": 11,
-       "d": 10,
-       "l": 11,
-       "gf": 66,
-       "ga": 73,
-       "pts": 43,
-       "tid": 2242,
-       "form": "LLWWD"
-      },
-      {
-       "pos": 9,
-       "team": "Columbus Crew",
-       "p": 32,
-       "w": 12,
-       "d": 5,
-       "l": 15,
-       "gf": 52,
-       "ga": 49,
-       "pts": 41,
-       "tid": 1613,
-       "form": "LWWWW"
       },
       {
        "pos": 10,
@@ -372,6 +372,19 @@
       },
       {
        "pos": 11,
+       "team": "New York City FC",
+       "p": 33,
+       "w": 9,
+       "d": 12,
+       "l": 12,
+       "gf": 48,
+       "ga": 45,
+       "pts": 39,
+       "tid": 1604,
+       "form": "LDDWD"
+      },
+      {
+       "pos": 12,
        "team": "Toronto FC",
        "p": 32,
        "w": 9,
@@ -384,30 +397,17 @@
        "form": "WDWLW"
       },
       {
-       "pos": 12,
-       "team": "New York City FC",
-       "p": 32,
-       "w": 9,
-       "d": 11,
-       "l": 12,
-       "gf": 47,
-       "ga": 44,
-       "pts": 38,
-       "tid": 1604,
-       "form": "LLDDW"
-      },
-      {
        "pos": 13,
        "team": "D.C. United",
-       "p": 32,
+       "p": 33,
        "w": 7,
        "d": 12,
-       "l": 13,
+       "l": 14,
        "gf": 39,
-       "ga": 57,
+       "ga": 60,
        "pts": 33,
        "tid": 1615,
-       "form": "WLLLL"
+       "form": "LLLLL"
       },
       {
        "pos": 14,
@@ -425,15 +425,15 @@
       {
        "pos": 15,
        "team": "CF Montréal",
-       "p": 32,
+       "p": 33,
        "w": 6,
-       "d": 7,
+       "d": 8,
        "l": 19,
-       "gf": 36,
-       "ga": 66,
-       "pts": 25,
+       "gf": 37,
+       "ga": 67,
+       "pts": 26,
        "tid": 1614,
-       "form": "LLDLL"
+       "form": "LDLLD"
       }
      ]
     }

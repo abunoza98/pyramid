@@ -501,15 +501,15 @@
     {
      "pos": 13,
      "team": "Virtus Entella",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 4,
-     "l": 3,
+     "l": 4,
      "gf": 11,
-     "ga": 10,
+     "ga": 12,
      "pts": 10,
      "tid": 527,
-     "form": "DDWLD"
+     "form": "DWLDL"
     },
     {
      "pos": 14,
@@ -566,6 +566,19 @@
     },
     {
      "pos": 18,
+     "team": "Sampdoria",
+     "p": 10,
+     "w": 2,
+     "d": 2,
+     "l": 6,
+     "gf": 10,
+     "ga": 18,
+     "pts": 8,
+     "tid": 498,
+     "form": "LLDLW"
+    },
+    {
+     "pos": 19,
      "team": "Empoli",
      "p": 9,
      "w": 2,
@@ -578,7 +591,7 @@
      "form": "LLDLL"
     },
     {
-     "pos": 19,
+     "pos": 20,
      "team": "Catanzaro",
      "p": 10,
      "w": 1,
@@ -589,19 +602,6 @@
      "pts": 6,
      "tid": 1687,
      "form": "LDLDD"
-    },
-    {
-     "pos": 20,
-     "team": "Sampdoria",
-     "p": 9,
-     "w": 1,
-     "d": 2,
-     "l": 6,
-     "gf": 8,
-     "ga": 18,
-     "pts": 5,
-     "tid": 498,
-     "form": "WLLDL"
     }
    ],
    "updated": "2026-10-31T00:00:00.000Z"

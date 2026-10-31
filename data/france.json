@@ -328,15 +328,15 @@
     {
      "pos": 1,
      "team": "Saint-Étienne",
-     "p": 10,
+     "p": 11,
      "w": 8,
      "d": 1,
-     "l": 1,
+     "l": 2,
      "gf": 23,
-     "ga": 8,
+     "ga": 11,
      "pts": 25,
      "tid": 1063,
-     "form": "LDWWW"
+     "form": "DWWWL"
     },
     {
      "pos": 2,
@@ -431,6 +431,19 @@
     },
     {
      "pos": 9,
+     "team": "Guingamp",
+     "p": 11,
+     "w": 4,
+     "d": 2,
+     "l": 5,
+     "gf": 16,
+     "ga": 15,
+     "pts": 14,
+     "tid": 90,
+     "form": "LLLWW"
+    },
+    {
+     "pos": 10,
      "team": "Metz",
      "p": 11,
      "w": 3,
@@ -443,7 +456,7 @@
      "form": "DLWDL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Rodez",
      "p": 11,
      "w": 4,
@@ -456,7 +469,7 @@
      "form": "LLLWW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Dunkerque",
      "p": 11,
      "w": 3,
@@ -467,19 +480,6 @@
      "pts": 12,
      "tid": 1304,
      "form": "LLWDL"
-    },
-    {
-     "pos": 12,
-     "team": "Guingamp",
-     "p": 10,
-     "w": 3,
-     "d": 2,
-     "l": 5,
-     "gf": 13,
-     "ga": 15,
-     "pts": 11,
-     "tid": 90,
-     "form": "WLLLW"
     },
     {
      "pos": 13,
