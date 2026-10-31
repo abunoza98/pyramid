@@ -131,6 +131,19 @@
     },
     {
      "pos": 9,
+     "team": "Pumas UNAM",
+     "p": 15,
+     "w": 5,
+     "d": 5,
+     "l": 5,
+     "gf": 22,
+     "ga": 24,
+     "pts": 20,
+     "tid": 2286,
+     "form": "DWLDW"
+    },
+    {
+     "pos": 10,
      "team": "Querétaro",
      "p": 14,
      "w": 6,
@@ -143,7 +156,7 @@
      "form": "WLLLL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Santos Laguna",
      "p": 14,
      "w": 6,
@@ -156,7 +169,7 @@
      "form": "WWWWL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Atlético San Luis",
      "p": 15,
      "w": 5,
@@ -167,19 +180,6 @@
      "pts": 19,
      "tid": 2314,
      "form": "LDWWL"
-    },
-    {
-     "pos": 12,
-     "team": "Pumas UNAM",
-     "p": 14,
-     "w": 4,
-     "d": 5,
-     "l": 5,
-     "gf": 20,
-     "ga": 23,
-     "pts": 17,
-     "tid": 2286,
-     "form": "LDWLD"
     },
     {
      "pos": 13,
@@ -197,15 +197,15 @@
     {
      "pos": 14,
      "team": "Puebla",
-     "p": 14,
+     "p": 15,
      "w": 4,
      "d": 4,
-     "l": 6,
-     "gf": 16,
-     "ga": 21,
+     "l": 7,
+     "gf": 17,
+     "ga": 23,
      "pts": 16,
      "tid": 2291,
-     "form": "LDDLL"
+     "form": "DDLLL"
     },
     {
      "pos": 15,
@@ -282,15 +282,15 @@
     {
      "pos": 1,
      "team": "CA La Paz",
-     "p": 14,
-     "w": 8,
+     "p": 15,
+     "w": 9,
      "d": 3,
      "l": 3,
-     "gf": 33,
+     "gf": 36,
      "ga": 18,
-     "pts": 27,
+     "pts": 30,
      "tid": 19024,
-     "form": "WLWDW"
+     "form": "LWDWW"
     },
     {
      "pos": 2,
@@ -438,15 +438,15 @@
     {
      "pos": 13,
      "team": "Dorados",
-     "p": 14,
+     "p": 15,
      "w": 4,
      "d": 4,
-     "l": 6,
+     "l": 7,
      "gf": 23,
-     "ga": 29,
+     "ga": 32,
      "pts": 16,
      "tid": 2297,
-     "form": "LLLWL"
+     "form": "LLWLL"
     },
     {
      "pos": 14,
@@ -627,16 +627,16 @@
     },
     {
      "pos": 4,
-     "team": "Delfines Coatzacoalcos",
-     "p": 9,
+     "team": "Guerreros del Pacifico",
+     "p": 10,
      "w": 4,
-     "d": 3,
-     "l": 2,
-     "gf": 12,
-     "ga": 10,
-     "pts": 15,
-     "tid": 28303,
-     "form": "WDDWW"
+     "d": 1,
+     "l": 5,
+     "gf": 20,
+     "ga": 17,
+     "pts": 17,
+     "tid": 28304,
+     "form": "LLWLW"
     },
     {
      "pos": 5,
@@ -653,16 +653,16 @@
     },
     {
      "pos": 5,
-     "team": "Halcones Negros",
+     "team": "Delfines Coatzacoalcos",
      "p": 9,
      "w": 4,
-     "d": 1,
-     "l": 4,
-     "gf": 21,
-     "ga": 14,
-     "pts": 14,
-     "tid": 28305,
-     "form": "WWWLL"
+     "d": 3,
+     "l": 2,
+     "gf": 12,
+     "ga": 10,
+     "pts": 15,
+     "tid": 28303,
+     "form": "WDDWW"
     },
     {
      "pos": 6,
@@ -679,16 +679,16 @@
     },
     {
      "pos": 6,
-     "team": "Guerreros del Pacifico",
+     "team": "Halcones Negros",
      "p": 9,
-     "w": 3,
+     "w": 4,
      "d": 1,
-     "l": 5,
-     "gf": 15,
-     "ga": 17,
+     "l": 4,
+     "gf": 21,
+     "ga": 14,
      "pts": 14,
-     "tid": 28304,
-     "form": "DLLWL"
+     "tid": 28305,
+     "form": "WWWLL"
     },
     {
      "pos": 7,
@@ -775,12 +775,12 @@
     {
      "pos": 10,
      "team": "Héroes de Zaci",
-     "p": 8,
+     "p": 9,
      "w": 0,
      "d": 1,
-     "l": 7,
+     "l": 8,
      "gf": 3,
-     "ga": 23,
+     "ga": 28,
      "pts": 2,
      "tid": 26526,
      "form": "LLLLL"
