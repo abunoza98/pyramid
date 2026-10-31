@@ -949,15 +949,15 @@
       {
        "pos": 3,
        "team": "Grosseto",
-       "p": 11,
+       "p": 12,
        "w": 6,
-       "d": 4,
+       "d": 5,
        "l": 1,
-       "gf": 23,
-       "ga": 13,
-       "pts": 22,
+       "gf": 25,
+       "ga": 15,
+       "pts": 23,
        "tid": 9499,
-       "form": "WLWDW"
+       "form": "LWDWD"
       },
       {
        "pos": 4,
@@ -1001,18 +1001,44 @@
       {
        "pos": 7,
        "team": "Guidonia Montecelio",
-       "p": 11,
+       "p": 12,
        "w": 4,
-       "d": 4,
+       "d": 5,
        "l": 3,
-       "gf": 14,
-       "ga": 12,
-       "pts": 16,
+       "gf": 15,
+       "ga": 13,
+       "pts": 17,
        "tid": 882,
-       "form": "LWDWL"
+       "form": "WDWLD"
       },
       {
        "pos": 8,
+       "team": "Perugia",
+       "p": 12,
+       "w": 5,
+       "d": 2,
+       "l": 5,
+       "gf": 16,
+       "ga": 18,
+       "pts": 17,
+       "tid": 524,
+       "form": "WLWLD"
+      },
+      {
+       "pos": 9,
+       "team": "Vado",
+       "p": 12,
+       "w": 4,
+       "d": 4,
+       "l": 4,
+       "gf": 14,
+       "ga": 13,
+       "pts": 16,
+       "tid": 9442,
+       "form": "WWDWD"
+      },
+      {
+       "pos": 10,
        "team": "Livorno",
        "p": 11,
        "w": 4,
@@ -1023,32 +1049,6 @@
        "pts": 16,
        "tid": 868,
        "form": "WLDDL"
-      },
-      {
-       "pos": 9,
-       "team": "Perugia",
-       "p": 11,
-       "w": 5,
-       "d": 1,
-       "l": 5,
-       "gf": 15,
-       "ga": 17,
-       "pts": 16,
-       "tid": 524,
-       "form": "WWLWL"
-      },
-      {
-       "pos": 10,
-       "team": "Vado",
-       "p": 11,
-       "w": 4,
-       "d": 3,
-       "l": 4,
-       "gf": 12,
-       "ga": 11,
-       "pts": 15,
-       "tid": 9442,
-       "form": "DWWDW"
       },
       {
        "pos": 11,

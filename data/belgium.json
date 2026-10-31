@@ -161,15 +161,15 @@
     {
      "pos": 9,
      "team": "Standard Liège",
-     "p": 9,
+     "p": 10,
      "w": 3,
-     "d": 2,
+     "d": 3,
      "l": 4,
-     "gf": 14,
-     "ga": 15,
-     "pts": 11,
+     "gf": 15,
+     "ga": 16,
+     "pts": 12,
      "tid": 733,
-     "form": "WLLLL"
+     "form": "LLLLD"
     },
     {
      "pos": 10,
@@ -265,15 +265,15 @@
     {
      "pos": 17,
      "team": "Kortrijk",
-     "p": 8,
+     "p": 9,
      "w": 1,
-     "d": 0,
+     "d": 1,
      "l": 7,
-     "gf": 2,
-     "ga": 18,
-     "pts": 3,
+     "gf": 3,
+     "ga": 19,
+     "pts": 4,
      "tid": 734,
-     "form": "LLLWL"
+     "form": "LLWLD"
     },
     {
      "pos": 18,

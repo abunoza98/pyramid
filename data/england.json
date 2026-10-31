@@ -128,6 +128,19 @@
     },
     {
      "pos": 8,
+     "team": "Tottenham Hotspur",
+     "p": 9,
+     "w": 3,
+     "d": 3,
+     "l": 3,
+     "gf": 10,
+     "ga": 10,
+     "pts": 12,
+     "tid": 47,
+     "form": "LDWWW"
+    },
+    {
+     "pos": 9,
      "team": "Hull City",
      "p": 9,
      "w": 2,
@@ -140,7 +153,7 @@
      "form": "LDLDD"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Leeds United",
      "p": 9,
      "w": 2,
@@ -153,7 +166,7 @@
      "form": "DLDDL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Newcastle United",
      "p": 8,
      "w": 3,
@@ -166,7 +179,7 @@
      "form": "LWLLW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Aston Villa",
      "p": 8,
      "w": 3,
@@ -179,7 +192,7 @@
      "form": "LWDWW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Ipswich Town",
      "p": 9,
      "w": 3,
@@ -192,7 +205,7 @@
      "form": "LWLDD"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Everton",
      "p": 8,
      "w": 2,
@@ -203,19 +216,6 @@
      "pts": 10,
      "tid": 45,
      "form": "DWDLL"
-    },
-    {
-     "pos": 14,
-     "team": "Tottenham Hotspur",
-     "p": 8,
-     "w": 2,
-     "d": 3,
-     "l": 3,
-     "gf": 8,
-     "ga": 10,
-     "pts": 9,
-     "tid": 47,
-     "form": "DLDWW"
     },
     {
      "pos": 15,
@@ -259,15 +259,15 @@
     {
      "pos": 18,
      "team": "Crystal Palace",
-     "p": 8,
+     "p": 9,
      "w": 2,
      "d": 1,
-     "l": 5,
+     "l": 6,
      "gf": 9,
-     "ga": 19,
+     "ga": 21,
      "pts": 7,
      "tid": 52,
-     "form": "LDWLL"
+     "form": "DWLLL"
     },
     {
      "pos": 19,
@@ -1608,6 +1608,19 @@
     },
     {
      "pos": 19,
+     "team": "Boston United",
+     "p": 16,
+     "w": 5,
+     "d": 3,
+     "l": 8,
+     "gf": 21,
+     "ga": 29,
+     "pts": 18,
+     "tid": 8146,
+     "form": "LLLWW"
+    },
+    {
+     "pos": 20,
      "team": "Tamworth",
      "p": 15,
      "w": 5,
@@ -1618,19 +1631,6 @@
      "pts": 17,
      "tid": 7752,
      "form": "WWLWL"
-    },
-    {
-     "pos": 20,
-     "team": "Boston United",
-     "p": 15,
-     "w": 4,
-     "d": 3,
-     "l": 8,
-     "gf": 19,
-     "ga": 28,
-     "pts": 15,
-     "tid": 8146,
-     "form": "DLLLW"
     },
     {
      "pos": 21,
@@ -1661,15 +1661,15 @@
     {
      "pos": 23,
      "team": "Scunthorpe United",
-     "p": 14,
+     "p": 15,
      "w": 3,
      "d": 1,
-     "l": 10,
-     "gf": 18,
-     "ga": 28,
+     "l": 11,
+     "gf": 19,
+     "ga": 30,
      "pts": 10,
      "tid": 1340,
-     "form": "WLLLL"
+     "form": "LLLLL"
     },
     {
      "pos": 24,

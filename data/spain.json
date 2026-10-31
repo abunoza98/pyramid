@@ -83,15 +83,15 @@
     {
      "pos": 4,
      "team": "Real Betis",
-     "p": 10,
-     "w": 6,
+     "p": 11,
+     "w": 7,
      "d": 2,
      "l": 2,
-     "gf": 16,
-     "ga": 14,
-     "pts": 20,
+     "gf": 18,
+     "ga": 15,
+     "pts": 23,
      "tid": 543,
-     "form": "WDWLD"
+     "form": "DWLDW"
     },
     {
      "pos": 5,
@@ -291,15 +291,15 @@
     {
      "pos": 20,
      "team": "Málaga",
-     "p": 10,
+     "p": 11,
      "w": 0,
      "d": 5,
-     "l": 5,
-     "gf": 7,
-     "ga": 19,
+     "l": 6,
+     "gf": 8,
+     "ga": 21,
      "pts": 5,
      "tid": 535,
-     "form": "LLDLD"
+     "form": "LDLDL"
     }
    ],
    "updated": "2026-10-31T00:00:00.000Z"
@@ -738,6 +738,19 @@
       },
       {
        "pos": 7,
+       "team": "Avilés",
+       "p": 10,
+       "w": 4,
+       "d": 2,
+       "l": 4,
+       "gf": 18,
+       "ga": 13,
+       "pts": 14,
+       "tid": 9632,
+       "form": "LWWLW"
+      },
+      {
+       "pos": 8,
        "team": "Pontevedra",
        "p": 9,
        "w": 4,
@@ -750,7 +763,7 @@
        "form": "DLLWW"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Ponferradina",
        "p": 10,
        "w": 3,
@@ -763,7 +776,7 @@
        "form": "WLDDD"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Extremadura",
        "p": 9,
        "w": 4,
@@ -774,19 +787,6 @@
        "pts": 13,
        "tid": 24612,
        "form": "LWWDW"
-      },
-      {
-       "pos": 10,
-       "team": "Real Unión",
-       "p": 9,
-       "w": 3,
-       "d": 4,
-       "l": 2,
-       "gf": 19,
-       "ga": 14,
-       "pts": 13,
-       "tid": 9586,
-       "form": "LDDDW"
       },
       {
        "pos": 11,
@@ -803,6 +803,19 @@
       },
       {
        "pos": 12,
+       "team": "Real Unión",
+       "p": 10,
+       "w": 3,
+       "d": 4,
+       "l": 3,
+       "gf": 19,
+       "ga": 17,
+       "pts": 13,
+       "tid": 9586,
+       "form": "DDDWL"
+      },
+      {
+       "pos": 13,
        "team": "Zamora",
        "p": 9,
        "w": 3,
@@ -815,7 +828,7 @@
        "form": "WWDDL"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Cultural Leonesa",
        "p": 9,
        "w": 3,
@@ -826,19 +839,6 @@
        "pts": 12,
        "tid": 725,
        "form": "DLWDL"
-      },
-      {
-       "pos": 14,
-       "team": "Avilés",
-       "p": 9,
-       "w": 3,
-       "d": 2,
-       "l": 4,
-       "gf": 15,
-       "ga": 13,
-       "pts": 11,
-       "tid": 9632,
-       "form": "DLWWL"
       },
       {
        "pos": 15,

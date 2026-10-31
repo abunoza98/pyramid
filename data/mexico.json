@@ -4,7 +4,7 @@
  "adjective": "Mexican",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-30T00:00:00.000Z",
+ "updated": "2026-10-31T00:00:00.000Z",
  "belowNote": "Promotion between Liga Premier and the Liga de Expansión is suspended",
  "leagues": [
   {
@@ -260,7 +260,7 @@
      "form": "DLLDW"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "liga-de-expansion",
@@ -488,7 +488,7 @@
      "form": "WDLLL"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "liga-premier",
@@ -536,16 +536,16 @@
    "rows": [
     {
      "pos": 1,
-     "team": "La Tribu de Cd. Juarez",
-     "p": 9,
-     "w": 6,
-     "d": 0,
-     "l": 3,
-     "gf": 22,
-     "ga": 10,
-     "pts": 19,
-     "tid": 28306,
-     "form": "WLLWW"
+     "team": "Acatlan",
+     "p": 10,
+     "w": 7,
+     "d": 1,
+     "l": 2,
+     "gf": 24,
+     "ga": 17,
+     "pts": 22,
+     "tid": 24949,
+     "form": "WLWWW"
     },
     {
      "pos": 1,
@@ -562,16 +562,16 @@
     },
     {
      "pos": 2,
-     "team": "Mineros de Fresnillo",
+     "team": "La Tribu de Cd. Juarez",
      "p": 9,
-     "w": 5,
-     "d": 3,
-     "l": 1,
-     "gf": 16,
-     "ga": 5,
+     "w": 6,
+     "d": 0,
+     "l": 3,
+     "gf": 22,
+     "ga": 10,
      "pts": 19,
-     "tid": 15935,
-     "form": "LWWDW"
+     "tid": 28306,
+     "form": "WLLWW"
     },
     {
      "pos": 2,
@@ -588,16 +588,16 @@
     },
     {
      "pos": 3,
-     "team": "Acatlan",
+     "team": "Mineros de Fresnillo",
      "p": 9,
-     "w": 6,
-     "d": 1,
-     "l": 2,
-     "gf": 20,
-     "ga": 15,
+     "w": 5,
+     "d": 3,
+     "l": 1,
+     "gf": 16,
+     "ga": 5,
      "pts": 19,
-     "tid": 24949,
-     "form": "WWLWW"
+     "tid": 15935,
+     "form": "LWWDW"
     },
     {
      "pos": 3,
@@ -788,18 +788,18 @@
     {
      "pos": 10,
      "team": "Cañoneros Marina",
-     "p": 8,
+     "p": 9,
      "w": 0,
      "d": 0,
-     "l": 8,
-     "gf": 3,
-     "ga": 29,
+     "l": 9,
+     "gf": 5,
+     "ga": 33,
      "pts": 0,
      "tid": 15924,
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   }
  ]
 }

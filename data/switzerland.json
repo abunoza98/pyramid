@@ -459,6 +459,19 @@
     },
     {
      "pos": 7,
+     "team": "Zürich II",
+     "p": 14,
+     "w": 6,
+     "d": 3,
+     "l": 5,
+     "gf": 29,
+     "ga": 25,
+     "pts": 21,
+     "tid": 10591,
+     "form": "WDWLW"
+    },
+    {
+     "pos": 8,
      "team": "Breitenrain",
      "p": 14,
      "w": 6,
@@ -471,7 +484,7 @@
      "form": "WDWLW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Brühl",
      "p": 14,
      "w": 6,
@@ -484,7 +497,7 @@
      "form": "LWLWW"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Basel II",
      "p": 14,
      "w": 6,
@@ -497,7 +510,7 @@
      "form": "WDWLL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "YF Juventus",
      "p": 14,
      "w": 6,
@@ -510,7 +523,7 @@
      "form": "LWLWL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Amical Saint-Prex",
      "p": 14,
      "w": 6,
@@ -521,19 +534,6 @@
      "pts": 19,
      "tid": 16316,
      "form": "LWLWL"
-    },
-    {
-     "pos": 12,
-     "team": "Zürich II",
-     "p": 13,
-     "w": 5,
-     "d": 3,
-     "l": 5,
-     "gf": 23,
-     "ga": 24,
-     "pts": 18,
-     "tid": 10591,
-     "form": "LWDWL"
     },
     {
      "pos": 13,
@@ -564,15 +564,15 @@
     {
      "pos": 15,
      "team": "Lugano II",
-     "p": 13,
+     "p": 14,
      "w": 4,
      "d": 1,
-     "l": 8,
-     "gf": 20,
-     "ga": 27,
+     "l": 9,
+     "gf": 21,
+     "ga": 33,
      "pts": 13,
      "tid": 17441,
-     "form": "LLLWD"
+     "form": "LLWDL"
     },
     {
      "pos": 16,
@@ -848,15 +848,15 @@
       {
        "pos": 1,
        "team": "Langenthal",
-       "p": 11,
-       "w": 7,
+       "p": 12,
+       "w": 8,
        "d": 3,
        "l": 1,
-       "gf": 27,
-       "ga": 18,
-       "pts": 24,
+       "gf": 30,
+       "ga": 20,
+       "pts": 27,
        "tid": 12705,
-       "form": "WLWDD"
+       "form": "LWDDW"
       },
       {
        "pos": 2,
@@ -887,15 +887,15 @@
       {
        "pos": 4,
        "team": "Muttenz",
-       "p": 11,
+       "p": 12,
        "w": 6,
-       "d": 2,
+       "d": 3,
        "l": 3,
-       "gf": 22,
-       "ga": 16,
-       "pts": 20,
+       "gf": 25,
+       "ga": 19,
+       "pts": 21,
        "tid": 12707,
-       "form": "LWDWW"
+       "form": "WDWWD"
       },
       {
        "pos": 5,
@@ -926,15 +926,15 @@
       {
        "pos": 7,
        "team": "Concordia Basel",
-       "p": 11,
+       "p": 12,
        "w": 5,
        "d": 2,
-       "l": 4,
-       "gf": 21,
-       "ga": 15,
+       "l": 5,
+       "gf": 23,
+       "ga": 18,
        "pts": 17,
        "tid": 6622,
-       "form": "WWWWL"
+       "form": "WWWLL"
       },
       {
        "pos": 8,
@@ -964,6 +964,19 @@
       },
       {
        "pos": 10,
+       "team": "Thun II",
+       "p": 12,
+       "w": 4,
+       "d": 3,
+       "l": 5,
+       "gf": 29,
+       "ga": 29,
+       "pts": 15,
+       "tid": 16348,
+       "form": "LWLLW"
+      },
+      {
+       "pos": 11,
        "team": "Grasshopper II",
        "p": 11,
        "w": 5,
@@ -976,7 +989,7 @@
        "form": "LWWLL"
       },
       {
-       "pos": 11,
+       "pos": 12,
        "team": "FC Wohlen",
        "p": 12,
        "w": 4,
@@ -989,43 +1002,30 @@
        "form": "WLDLW"
       },
       {
-       "pos": 12,
-       "team": "Zug",
-       "p": 11,
-       "w": 4,
-       "d": 1,
-       "l": 6,
-       "gf": 17,
-       "ga": 25,
-       "pts": 13,
-       "tid": 12710,
-       "form": "WLLWW"
-      },
-      {
        "pos": 13,
        "team": "Bassecourt",
-       "p": 11,
+       "p": 12,
        "w": 4,
-       "d": 1,
+       "d": 2,
        "l": 6,
-       "gf": 13,
-       "ga": 21,
-       "pts": 13,
+       "gf": 16,
+       "ga": 24,
+       "pts": 14,
        "tid": 6614,
-       "form": "WDLLW"
+       "form": "DLLWD"
       },
       {
        "pos": 14,
-       "team": "Thun II",
-       "p": 11,
-       "w": 3,
-       "d": 3,
-       "l": 5,
-       "gf": 23,
-       "ga": 28,
-       "pts": 12,
-       "tid": 16348,
-       "form": "DLWLL"
+       "team": "Zug",
+       "p": 12,
+       "w": 4,
+       "d": 1,
+       "l": 7,
+       "gf": 18,
+       "ga": 31,
+       "pts": 13,
+       "tid": 12710,
+       "form": "LLWWL"
       },
       {
        "pos": 15,

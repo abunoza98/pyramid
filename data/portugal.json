@@ -355,6 +355,19 @@
     },
     {
      "pos": 3,
+     "team": "Benfica B",
+     "p": 9,
+     "w": 5,
+     "d": 2,
+     "l": 2,
+     "gf": 11,
+     "ga": 6,
+     "pts": 17,
+     "tid": 229,
+     "form": "LWWDW"
+    },
+    {
+     "pos": 4,
      "team": "Penafiel",
      "p": 8,
      "w": 5,
@@ -367,7 +380,7 @@
      "form": "WWWLW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Académica",
      "p": 8,
      "w": 5,
@@ -380,7 +393,7 @@
      "form": "LLLWW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Farense",
      "p": 8,
      "w": 4,
@@ -393,33 +406,33 @@
      "form": "LDWWL"
     },
     {
-     "pos": 6,
-     "team": "Benfica B",
-     "p": 8,
+     "pos": 7,
+     "team": "União de Leiria",
+     "p": 9,
      "w": 4,
      "d": 2,
-     "l": 2,
-     "gf": 8,
-     "ga": 5,
+     "l": 3,
+     "gf": 13,
+     "ga": 11,
      "pts": 14,
-     "tid": 229,
-     "form": "LLWWD"
-    },
-    {
-     "pos": 7,
-     "team": "AVS",
-     "p": 8,
-     "w": 3,
-     "d": 3,
-     "l": 2,
-     "gf": 10,
-     "ga": 8,
-     "pts": 12,
-     "tid": 21595,
-     "form": "WLDWW"
+     "tid": 4662,
+     "form": "WDLDW"
     },
     {
      "pos": 8,
+     "team": "AVS",
+     "p": 9,
+     "w": 3,
+     "d": 3,
+     "l": 3,
+     "gf": 11,
+     "ga": 10,
+     "pts": 12,
+     "tid": 21595,
+     "form": "LDWWL"
+    },
+    {
+     "pos": 9,
      "team": "Tondela",
      "p": 8,
      "w": 4,
@@ -432,7 +445,7 @@
      "form": "LWWWL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Portimonense",
      "p": 9,
      "w": 3,
@@ -443,19 +456,6 @@
      "pts": 11,
      "tid": 216,
      "form": "LLWLD"
-    },
-    {
-     "pos": 10,
-     "team": "União de Leiria",
-     "p": 8,
-     "w": 3,
-     "d": 2,
-     "l": 3,
-     "gf": 11,
-     "ga": 10,
-     "pts": 11,
-     "tid": 4662,
-     "form": "WWDLD"
     },
     {
      "pos": 11,
@@ -512,15 +512,15 @@
     {
      "pos": 15,
      "team": "Chaves",
-     "p": 8,
+     "p": 9,
      "w": 2,
      "d": 2,
-     "l": 4,
-     "gf": 8,
-     "ga": 15,
+     "l": 5,
+     "gf": 9,
+     "ga": 18,
      "pts": 8,
      "tid": 223,
-     "form": "LWLDW"
+     "form": "WLDWL"
     },
     {
      "pos": 16,

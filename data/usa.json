@@ -37,7 +37,7 @@
    "groups": [
     {
      "name": "Western Conference",
-     "updated": "2026-10-29T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -238,7 +238,7 @@
     },
     {
      "name": "Eastern Conference",
-     "updated": "2026-10-29T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -281,6 +281,19 @@
       },
       {
        "pos": 4,
+       "team": "Charlotte FC",
+       "p": 33,
+       "w": 15,
+       "d": 8,
+       "l": 10,
+       "gf": 63,
+       "ga": 48,
+       "pts": 53,
+       "tid": 18310,
+       "form": "LDLWW"
+      },
+      {
+       "pos": 5,
        "team": "Chicago Fire",
        "p": 32,
        "w": 15,
@@ -291,19 +304,6 @@
        "pts": 52,
        "tid": 1607,
        "form": "WLLWD"
-      },
-      {
-       "pos": 5,
-       "team": "Charlotte FC",
-       "p": 32,
-       "w": 14,
-       "d": 8,
-       "l": 10,
-       "gf": 59,
-       "ga": 48,
-       "pts": 50,
-       "tid": 18310,
-       "form": "WLDLW"
       },
       {
        "pos": 6,
@@ -321,15 +321,15 @@
       {
        "pos": 7,
        "team": "Orlando City SC",
-       "p": 32,
+       "p": 33,
        "w": 12,
        "d": 7,
-       "l": 13,
+       "l": 14,
        "gf": 62,
-       "ga": 74,
+       "ga": 78,
        "pts": 43,
        "tid": 1598,
-       "form": "WDWDD"
+       "form": "DWDDL"
       },
       {
        "pos": 8,
@@ -438,7 +438,7 @@
      ]
     }
    ],
-   "updated": "2026-10-29T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "usl-championship",

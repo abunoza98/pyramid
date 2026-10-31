@@ -50,28 +50,28 @@
     {
      "pos": 1,
      "team": "Bayern Munich",
-     "p": 7,
+     "p": 8,
      "w": 5,
-     "d": 2,
+     "d": 3,
      "l": 0,
-     "gf": 25,
-     "ga": 6,
-     "pts": 17,
+     "gf": 27,
+     "ga": 8,
+     "pts": 18,
      "tid": 157,
-     "form": "WWDWW"
+     "form": "WDWWD"
     },
     {
      "pos": 2,
      "team": "Borussia Dortmund",
-     "p": 7,
+     "p": 8,
      "w": 5,
-     "d": 2,
+     "d": 3,
      "l": 0,
-     "gf": 12,
-     "ga": 4,
-     "pts": 17,
+     "gf": 14,
+     "ga": 6,
+     "pts": 18,
      "tid": 165,
-     "form": "WWDDW"
+     "form": "WDDWD"
     },
     {
      "pos": 3,
