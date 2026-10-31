@@ -36,18 +36,31 @@
     {
      "pos": 1,
      "team": "Persija",
-     "p": 7,
+     "p": 8,
      "w": 6,
      "d": 0,
-     "l": 1,
-     "gf": 17,
-     "ga": 6,
+     "l": 2,
+     "gf": 18,
+     "ga": 8,
      "pts": 18,
      "tid": 10134,
-     "form": "WWLWW"
+     "form": "WLWWL"
     },
     {
      "pos": 2,
+     "team": "Dewa United",
+     "p": 8,
+     "w": 5,
+     "d": 2,
+     "l": 1,
+     "gf": 14,
+     "ga": 11,
+     "pts": 17,
+     "tid": 17902,
+     "form": "WDWLW"
+    },
+    {
+     "pos": 3,
      "team": "Bali United",
      "p": 8,
      "w": 5,
@@ -60,7 +73,7 @@
      "form": "WLWDW"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Madura United",
      "p": 8,
      "w": 5,
@@ -73,7 +86,7 @@
      "form": "LDWLW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Persita",
      "p": 7,
      "w": 4,
@@ -84,19 +97,6 @@
      "pts": 15,
      "tid": 4244,
      "form": "DWWDW"
-    },
-    {
-     "pos": 5,
-     "team": "Dewa United",
-     "p": 7,
-     "w": 4,
-     "d": 2,
-     "l": 1,
-     "gf": 12,
-     "ga": 10,
-     "pts": 14,
-     "tid": 17902,
-     "form": "WWDWL"
     },
     {
      "pos": 6,

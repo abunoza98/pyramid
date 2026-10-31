@@ -4,7 +4,7 @@
  "adjective": "Austrian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-30T00:00:00.000Z",
+ "updated": "2026-10-31T00:00:00.000Z",
  "belowNote": "Landesliga champions come up",
  "leagues": [
   {
@@ -442,20 +442,20 @@
    "groups": [
     {
      "name": "East",
-     "updated": "2026-10-30T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
        "team": "Mannsdorf-Großenzersdorf",
-       "p": 13,
+       "p": 14,
        "w": 9,
-       "d": 1,
+       "d": 2,
        "l": 3,
-       "gf": 33,
-       "ga": 12,
-       "pts": 28,
+       "gf": 34,
+       "ga": 13,
+       "pts": 29,
        "tid": 4952,
-       "form": "LDWLW"
+       "form": "DWLWD"
       },
       {
        "pos": 2,
@@ -485,6 +485,19 @@
       },
       {
        "pos": 4,
+       "team": "Krems / Rehberg",
+       "p": 14,
+       "w": 8,
+       "d": 2,
+       "l": 4,
+       "gf": 27,
+       "ga": 19,
+       "pts": 26,
+       "tid": 25119,
+       "form": "WWWWW"
+      },
+      {
+       "pos": 5,
        "team": "Traiskirchen",
        "p": 14,
        "w": 7,
@@ -495,19 +508,6 @@
        "pts": 25,
        "tid": 4961,
        "form": "LDWWD"
-      },
-      {
-       "pos": 5,
-       "team": "Krems / Rehberg",
-       "p": 13,
-       "w": 7,
-       "d": 2,
-       "l": 4,
-       "gf": 24,
-       "ga": 19,
-       "pts": 23,
-       "tid": 25119,
-       "form": "WWWWW"
       },
       {
        "pos": 6,
@@ -538,15 +538,15 @@
       {
        "pos": 8,
        "team": "Scheiblingkirchen",
-       "p": 13,
+       "p": 14,
        "w": 5,
-       "d": 4,
+       "d": 5,
        "l": 4,
-       "gf": 20,
-       "ga": 26,
-       "pts": 19,
+       "gf": 21,
+       "ga": 27,
+       "pts": 20,
        "tid": 4982,
-       "form": "WWDLL"
+       "form": "WDLLD"
       },
       {
        "pos": 9,
@@ -642,21 +642,21 @@
       {
        "pos": 16,
        "team": "Wienerberg",
-       "p": 13,
+       "p": 14,
        "w": 0,
        "d": 1,
-       "l": 12,
+       "l": 13,
        "gf": 7,
-       "ga": 47,
+       "ga": 50,
        "pts": 1,
        "tid": 5008,
-       "form": "LLDLL"
+       "form": "LDLLL"
       }
      ]
     },
     {
      "name": "North",
-     "updated": "2026-10-30T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -857,7 +857,7 @@
     },
     {
      "name": "South",
-     "updated": "2026-10-30T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1070,7 +1070,7 @@
     },
     {
      "name": "West",
-     "updated": "2026-10-30T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1283,7 +1283,7 @@
      ]
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   }
  ]
 }

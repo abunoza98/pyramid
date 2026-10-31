@@ -141,15 +141,15 @@
     {
      "pos": 8,
      "team": "Kocaelispor",
-     "p": 9,
+     "p": 10,
      "w": 5,
-     "d": 0,
+     "d": 1,
      "l": 4,
      "gf": 11,
      "ga": 9,
-     "pts": 15,
+     "pts": 16,
      "tid": 7411,
-     "form": "LWLLW"
+     "form": "WLLWD"
     },
     {
      "pos": 9,
@@ -206,15 +206,15 @@
     {
      "pos": 13,
      "team": "Rizespor",
-     "p": 9,
+     "p": 10,
      "w": 3,
-     "d": 1,
+     "d": 2,
      "l": 5,
      "gf": 11,
      "ga": 15,
-     "pts": 10,
+     "pts": 11,
      "tid": 1007,
-     "form": "WDLLL"
+     "form": "DLLLD"
     },
     {
      "pos": 14,

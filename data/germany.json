@@ -4,7 +4,7 @@
  "adjective": "German",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-30T00:00:00.000Z",
+ "updated": "2026-10-31T00:00:00.000Z",
  "belowNote": "Regionalliga champions come up, some through a play-off",
  "leagues": [
   {
@@ -282,7 +282,7 @@
      "form": "LLLLW"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "2-bundesliga",
@@ -322,18 +322,31 @@
     {
      "pos": 1,
      "team": "Hertha BSC",
-     "p": 9,
-     "w": 8,
+     "p": 10,
+     "w": 9,
      "d": 1,
      "l": 0,
-     "gf": 20,
+     "gf": 23,
      "ga": 8,
-     "pts": 25,
+     "pts": 28,
      "tid": 159,
-     "form": "WWWDW"
+     "form": "WWDWW"
     },
     {
      "pos": 2,
+     "team": "VfL Wolfsburg",
+     "p": 10,
+     "w": 5,
+     "d": 4,
+     "l": 1,
+     "gf": 25,
+     "ga": 14,
+     "pts": 19,
+     "tid": 161,
+     "form": "WDWDW"
+    },
+    {
+     "pos": 3,
      "team": "1. FC Nürnberg",
      "p": 9,
      "w": 5,
@@ -346,43 +359,30 @@
      "form": "WWDDL"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "1. FC Kaiserslautern",
-     "p": 9,
+     "p": 10,
      "w": 5,
      "d": 3,
-     "l": 1,
+     "l": 2,
      "gf": 9,
-     "ga": 4,
+     "ga": 7,
      "pts": 18,
      "tid": 745,
-     "form": "LWDWW"
-    },
-    {
-     "pos": 4,
-     "team": "VfL Wolfsburg",
-     "p": 9,
-     "w": 4,
-     "d": 4,
-     "l": 1,
-     "gf": 23,
-     "ga": 14,
-     "pts": 16,
-     "tid": 161,
-     "form": "LWDWD"
+     "form": "WDWWL"
     },
     {
      "pos": 5,
      "team": "1. FC Magdeburg",
-     "p": 9,
+     "p": 10,
      "w": 5,
-     "d": 1,
+     "d": 2,
      "l": 3,
-     "gf": 20,
-     "ga": 12,
-     "pts": 16,
+     "gf": 21,
+     "ga": 13,
+     "pts": 17,
      "tid": 179,
-     "form": "WDWLW"
+     "form": "DWLWD"
     },
     {
      "pos": 6,
@@ -426,15 +426,15 @@
     {
      "pos": 9,
      "team": "VfL Osnabrück",
-     "p": 9,
+     "p": 10,
      "w": 3,
      "d": 2,
-     "l": 4,
+     "l": 5,
      "gf": 14,
-     "ga": 15,
+     "ga": 17,
      "pts": 11,
      "tid": 1324,
-     "form": "LDDLW"
+     "form": "DDLWL"
     },
     {
      "pos": 10,
@@ -490,6 +490,19 @@
     },
     {
      "pos": 14,
+     "team": "Darmstadt 98",
+     "p": 10,
+     "w": 2,
+     "d": 3,
+     "l": 5,
+     "gf": 9,
+     "ga": 19,
+     "pts": 9,
+     "tid": 181,
+     "form": "LWLDD"
+    },
+    {
+     "pos": 15,
      "team": "Holstein Kiel",
      "p": 9,
      "w": 1,
@@ -502,7 +515,7 @@
      "form": "LDLDW"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Dynamo Dresden",
      "p": 9,
      "w": 2,
@@ -515,7 +528,7 @@
      "form": "DLDWL"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Hannover 96",
      "p": 9,
      "w": 2,
@@ -528,7 +541,7 @@
      "form": "LWLDL"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Karlsruher SC",
      "p": 9,
      "w": 2,
@@ -539,22 +552,9 @@
      "pts": 8,
      "tid": 785,
      "form": "LLLWL"
-    },
-    {
-     "pos": 18,
-     "team": "Darmstadt 98",
-     "p": 9,
-     "w": 2,
-     "d": 2,
-     "l": 5,
-     "gf": 8,
-     "ga": 18,
-     "pts": 8,
-     "tid": 181,
-     "form": "WLWLD"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "3-liga",
@@ -848,7 +848,7 @@
      "form": "LLDDW"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   }
  ]
 }
