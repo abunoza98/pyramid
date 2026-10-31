@@ -4,7 +4,7 @@
  "adjective": "Portuguese",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-26T00:00:00.000Z",
+ "updated": "2026-10-30T00:00:00.000Z",
  "belowNote": "Liga 3's top clubs come up, one through a play-off",
  "leagues": [
   {
@@ -82,15 +82,15 @@
     {
      "pos": 3,
      "team": "Sporting CP",
-     "p": 9,
-     "w": 5,
+     "p": 10,
+     "w": 6,
      "d": 3,
      "l": 1,
-     "gf": 21,
+     "gf": 23,
      "ga": 11,
-     "pts": 18,
+     "pts": 21,
      "tid": 228,
-     "form": "WDDWL"
+     "form": "DDWLW"
     },
     {
      "pos": 4,
@@ -250,19 +250,6 @@
     },
     {
      "pos": 16,
-     "team": "Casa Pia",
-     "p": 9,
-     "w": 2,
-     "d": 1,
-     "l": 6,
-     "gf": 5,
-     "ga": 17,
-     "pts": 7,
-     "tid": 4716,
-     "form": "DLWLW"
-    },
-    {
-     "pos": 17,
      "team": "Rio Ave",
      "p": 9,
      "w": 2,
@@ -273,6 +260,19 @@
      "pts": 7,
      "tid": 226,
      "form": "LDLWL"
+    },
+    {
+     "pos": 17,
+     "team": "Casa Pia",
+     "p": 10,
+     "w": 2,
+     "d": 1,
+     "l": 7,
+     "gf": 5,
+     "ga": 19,
+     "pts": 7,
+     "tid": 4716,
+     "form": "LWLWL"
     },
     {
      "pos": 18,
@@ -288,7 +288,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   },
   {
    "id": "liga-portugal-2",
@@ -562,7 +562,7 @@
      "form": "LLLLD"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-29T00:00:00.000Z"
   }
  ]
 }
