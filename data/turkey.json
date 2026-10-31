@@ -4,7 +4,7 @@
  "adjective": "Turkish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-30T00:00:00.000Z",
+ "updated": "2026-10-31T00:00:00.000Z",
  "belowNote": "Regional amateur league champions come up",
  "leagues": [
   {
@@ -578,7 +578,7 @@
      "form": "LLLL"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "2-lig",
@@ -620,7 +620,7 @@
    "groups": [
     {
      "name": "White Group",
-     "updated": "2026-10-29T00:00:00.000Z",
+     "updated": "2026-10-30T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -863,7 +863,7 @@
     },
     {
      "name": "Red Group",
-     "updated": "2026-10-29T00:00:00.000Z",
+     "updated": "2026-10-30T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1093,7 +1093,7 @@
      ]
     }
    ],
-   "updated": "2026-10-29T00:00:00.000Z"
+   "updated": "2026-10-30T00:00:00.000Z"
   },
   {
    "id": "3-lig",
@@ -1109,20 +1109,20 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
        "team": "Fatsa Belediyespor",
-       "p": 8,
+       "p": 9,
        "w": 6,
-       "d": 2,
+       "d": 3,
        "l": 0,
-       "gf": 15,
-       "ga": 4,
-       "pts": 20,
+       "gf": 17,
+       "ga": 6,
+       "pts": 21,
        "tid": 7404,
-       "form": "WWWWW"
+       "form": "WWWWD"
       },
       {
        "pos": 2,
@@ -1243,6 +1243,19 @@
       },
       {
        "pos": 11,
+       "team": "Zonguldak Kömürspor",
+       "p": 9,
+       "w": 2,
+       "d": 4,
+       "l": 3,
+       "gf": 11,
+       "ga": 13,
+       "pts": 10,
+       "tid": 3611,
+       "form": "DWWDD"
+      },
+      {
+       "pos": 12,
        "team": "Beykoz Anadolu",
        "p": 8,
        "w": 2,
@@ -1253,19 +1266,6 @@
        "pts": 9,
        "tid": 3609,
        "form": "DWLDW"
-      },
-      {
-       "pos": 12,
-       "team": "Zonguldak Kömürspor",
-       "p": 8,
-       "w": 2,
-       "d": 3,
-       "l": 3,
-       "gf": 9,
-       "ga": 11,
-       "pts": 9,
-       "tid": 3611,
-       "form": "DDWWD"
       },
       {
        "pos": 13,
@@ -1349,7 +1349,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1496,6 +1496,19 @@
       },
       {
        "pos": 12,
+       "team": "Kepezspor",
+       "p": 9,
+       "w": 2,
+       "d": 2,
+       "l": 5,
+       "gf": 7,
+       "ga": 13,
+       "pts": 8,
+       "tid": 6529,
+       "form": "LLLWW"
+      },
+      {
+       "pos": 13,
        "team": "Söke 1970",
        "p": 8,
        "w": 1,
@@ -1508,20 +1521,20 @@
        "form": "DDLDL"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Uşak Spor",
-       "p": 8,
+       "p": 9,
        "w": 1,
        "d": 4,
-       "l": 3,
+       "l": 4,
        "gf": 9,
-       "ga": 11,
+       "ga": 13,
        "pts": 7,
        "tid": 3610,
-       "form": "WLLDD"
+       "form": "LLDDL"
       },
       {
-       "pos": 14,
+       "pos": 15,
        "team": "Bucaspor 1928",
        "p": 8,
        "w": 2,
@@ -1534,7 +1547,7 @@
        "form": "LLLWL"
       },
       {
-       "pos": 15,
+       "pos": 16,
        "team": "Denizli İYG",
        "p": 8,
        "w": 1,
@@ -1545,19 +1558,6 @@
        "pts": 6,
        "tid": 26470,
        "form": "DLLDW"
-      },
-      {
-       "pos": 16,
-       "team": "Kepezspor",
-       "p": 8,
-       "w": 1,
-       "d": 2,
-       "l": 5,
-       "gf": 5,
-       "ga": 13,
-       "pts": 5,
-       "tid": 6529,
-       "form": "DLLLW"
       },
       {
        "pos": 17,
@@ -1589,7 +1589,7 @@
     },
     {
      "name": "Group 3",
-     "updated": "2026-10-30T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1828,7 +1828,7 @@
      ]
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   }
  ]
 }

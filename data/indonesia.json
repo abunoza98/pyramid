@@ -4,7 +4,7 @@
  "adjective": "Indonesian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-30T00:00:00.000Z",
+ "updated": "2026-10-31T00:00:00.000Z",
  "belowNote": "Championship (second tier) clubs come up; API-Football doesn't have its tables yet",
  "leagues": [
   {
@@ -48,6 +48,45 @@
     },
     {
      "pos": 2,
+     "team": "Bali United",
+     "p": 8,
+     "w": 5,
+     "d": 1,
+     "l": 2,
+     "gf": 23,
+     "ga": 9,
+     "pts": 16,
+     "tid": 2448,
+     "form": "WLWDW"
+    },
+    {
+     "pos": 3,
+     "team": "Madura United",
+     "p": 8,
+     "w": 5,
+     "d": 1,
+     "l": 2,
+     "gf": 13,
+     "ga": 10,
+     "pts": 16,
+     "tid": 2444,
+     "form": "LDWLW"
+    },
+    {
+     "pos": 4,
+     "team": "Persita",
+     "p": 7,
+     "w": 4,
+     "d": 3,
+     "l": 0,
+     "gf": 17,
+     "ga": 10,
+     "pts": 15,
+     "tid": 4244,
+     "form": "DWWDW"
+    },
+    {
+     "pos": 5,
      "team": "Dewa United",
      "p": 7,
      "w": 4,
@@ -60,20 +99,7 @@
      "form": "WWDWL"
     },
     {
-     "pos": 3,
-     "team": "Bali United",
-     "p": 7,
-     "w": 4,
-     "d": 1,
-     "l": 2,
-     "gf": 20,
-     "ga": 8,
-     "pts": 13,
-     "tid": 2448,
-     "form": "LWLWD"
-    },
-    {
-     "pos": 4,
+     "pos": 6,
      "team": "Persib Bandung",
      "p": 7,
      "w": 4,
@@ -86,7 +112,7 @@
      "form": "WDWLW"
     },
     {
-     "pos": 5,
+     "pos": 7,
      "team": "Persebaya Surabaya",
      "p": 8,
      "w": 3,
@@ -97,32 +123,6 @@
      "pts": 13,
      "tid": 2446,
      "form": "WDLWD"
-    },
-    {
-     "pos": 6,
-     "team": "Madura United",
-     "p": 7,
-     "w": 4,
-     "d": 1,
-     "l": 2,
-     "gf": 12,
-     "ga": 10,
-     "pts": 13,
-     "tid": 2444,
-     "form": "WLDWL"
-    },
-    {
-     "pos": 7,
-     "team": "Persita",
-     "p": 6,
-     "w": 3,
-     "d": 3,
-     "l": 0,
-     "gf": 12,
-     "ga": 9,
-     "pts": 12,
-     "tid": 4244,
-     "form": "WDWWD"
     },
     {
      "pos": 8,
@@ -154,28 +154,28 @@
     {
      "pos": 10,
      "team": "Persik Kediri",
-     "p": 7,
+     "p": 8,
      "w": 3,
      "d": 1,
-     "l": 3,
-     "gf": 8,
-     "ga": 6,
+     "l": 4,
+     "gf": 9,
+     "ga": 11,
      "pts": 10,
      "tid": 4241,
-     "form": "DWLWL"
+     "form": "WLWLL"
     },
     {
      "pos": 11,
      "team": "Arema FC",
-     "p": 7,
+     "p": 8,
      "w": 2,
      "d": 3,
-     "l": 2,
-     "gf": 16,
-     "ga": 14,
+     "l": 3,
+     "gf": 17,
+     "ga": 17,
      "pts": 9,
      "tid": 2438,
-     "form": "DDLLW"
+     "form": "DLLWL"
     },
     {
      "pos": 12,
@@ -193,15 +193,15 @@
     {
      "pos": 13,
      "team": "PSM Makassar",
-     "p": 7,
+     "p": 8,
      "w": 2,
      "d": 3,
-     "l": 2,
+     "l": 3,
      "gf": 9,
-     "ga": 12,
+     "ga": 13,
      "pts": 9,
      "tid": 2441,
-     "form": "DLWWD"
+     "form": "LWWDL"
     },
     {
      "pos": 14,
@@ -270,7 +270,7 @@
      "form": "LLLDD"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   }
  ]
 }
