@@ -235,15 +235,15 @@
       {
        "pos": 1,
        "team": "Rosario Central",
-       "p": 14,
-       "w": 8,
+       "p": 15,
+       "w": 9,
        "d": 4,
        "l": 2,
-       "gf": 22,
-       "ga": 11,
-       "pts": 28,
+       "gf": 24,
+       "ga": 12,
+       "pts": 31,
        "tid": 437,
-       "form": "WDWWW"
+       "form": "DWWWW"
       },
       {
        "pos": 2,
@@ -313,15 +313,15 @@
       {
        "pos": 7,
        "team": "Sarmiento",
-       "p": 14,
+       "p": 15,
        "w": 6,
        "d": 3,
-       "l": 5,
-       "gf": 22,
-       "ga": 21,
+       "l": 6,
+       "gf": 23,
+       "ga": 23,
        "pts": 21,
        "tid": 474,
-       "form": "LWDDL"
+       "form": "WDDLL"
       },
       {
        "pos": 8,
@@ -377,6 +377,19 @@
       },
       {
        "pos": 12,
+       "team": "Racing Club",
+       "p": 15,
+       "w": 4,
+       "d": 3,
+       "l": 8,
+       "gf": 16,
+       "ga": 22,
+       "pts": 15,
+       "tid": 436,
+       "form": "WLDLW"
+      },
+      {
+       "pos": 13,
        "team": "Banfield",
        "p": 14,
        "w": 3,
@@ -389,30 +402,17 @@
        "form": "DDWLD"
       },
       {
-       "pos": 13,
-       "team": "Racing Club",
-       "p": 14,
-       "w": 3,
-       "d": 3,
-       "l": 8,
-       "gf": 14,
-       "ga": 21,
-       "pts": 12,
-       "tid": 436,
-       "form": "WWLDL"
-      },
-      {
        "pos": 14,
        "team": "Aldosivi",
-       "p": 14,
+       "p": 15,
        "w": 3,
        "d": 2,
-       "l": 9,
-       "gf": 15,
-       "ga": 22,
+       "l": 10,
+       "gf": 16,
+       "ga": 24,
        "pts": 11,
        "tid": 463,
-       "form": "WLLLW"
+       "form": "LLLWL"
       },
       {
        "pos": 15,

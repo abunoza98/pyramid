@@ -473,7 +473,7 @@
        "ga": 26,
        "pts": 61,
        "tid": 4021,
-       "form": "DLWWW"
+       "form": "LWWWL"
       },
       {
        "pos": 2,
@@ -486,7 +486,7 @@
        "ga": 35,
        "pts": 53,
        "tid": 3990,
-       "form": "WLDWW"
+       "form": "LDWWW"
       },
       {
        "pos": 3,
@@ -499,7 +499,7 @@
        "ga": 21,
        "pts": 51,
        "tid": 9043,
-       "form": "WWWLD"
+       "form": "WWLDL"
       },
       {
        "pos": 4,
@@ -538,7 +538,7 @@
        "ga": 33,
        "pts": 43,
        "tid": 3995,
-       "form": "DLDLW"
+       "form": "LDLWW"
       },
       {
        "pos": 7,
@@ -551,7 +551,7 @@
        "ga": 33,
        "pts": 42,
        "tid": 22855,
-       "form": "WLWDL"
+       "form": "LWDLL"
       },
       {
        "pos": 8,
@@ -564,7 +564,7 @@
        "ga": 49,
        "pts": 36,
        "tid": 9030,
-       "form": "WWWLL"
+       "form": "WWLLW"
       },
       {
        "pos": 9,
