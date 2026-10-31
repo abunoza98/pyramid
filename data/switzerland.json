@@ -4,7 +4,7 @@
  "adjective": "Swiss",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-30T00:00:00.000Z",
+ "updated": "2026-10-31T00:00:00.000Z",
  "belowNote": "The top 2. Liga Interregional clubs come up",
  "leagues": [
   {
@@ -190,7 +190,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-27T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "challenge-league",
@@ -352,7 +352,7 @@
      "form": "LLWLW"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "promotion-league",
@@ -382,15 +382,15 @@
     {
      "pos": 1,
      "team": "Biel-Bienne",
-     "p": 12,
+     "p": 13,
      "w": 8,
-     "d": 3,
+     "d": 4,
      "l": 1,
-     "gf": 27,
-     "ga": 14,
-     "pts": 27,
+     "gf": 28,
+     "ga": 15,
+     "pts": 28,
      "tid": 12700,
-     "form": "WWWDD"
+     "form": "WWDDD"
     },
     {
      "pos": 2,
@@ -421,15 +421,15 @@
     {
      "pos": 4,
      "team": "Paradiso",
-     "p": 13,
+     "p": 14,
      "w": 7,
-     "d": 3,
+     "d": 4,
      "l": 3,
-     "gf": 26,
-     "ga": 14,
-     "pts": 24,
+     "gf": 27,
+     "ga": 15,
+     "pts": 25,
      "tid": 12717,
-     "form": "WWDDW"
+     "form": "WDDWD"
     },
     {
      "pos": 5,
@@ -614,7 +614,7 @@
      "form": "LLLLD"
     }
    ],
-   "updated": "2026-10-29T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "1-liga",
@@ -629,7 +629,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -843,7 +843,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-10-26T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1057,7 +1057,7 @@
     },
     {
      "name": "Group 3",
-     "updated": "2026-10-25T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1270,7 +1270,7 @@
      ]
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   }
  ]
 }

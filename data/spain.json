@@ -4,7 +4,7 @@
  "adjective": "Spanish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-30T00:00:00.000Z",
+ "updated": "2026-10-31T00:00:00.000Z",
  "belowNote": "Promoted clubs from Segunda Federación come up",
  "leagues": [
   {
@@ -43,6 +43,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Atlético Madrid",
+     "p": 11,
+     "w": 9,
+     "d": 1,
+     "l": 1,
+     "gf": 22,
+     "ga": 8,
+     "pts": 28,
+     "tid": 530,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
      "team": "Barcelona",
      "p": 10,
      "w": 9,
@@ -53,19 +66,6 @@
      "pts": 27,
      "tid": 529,
      "form": "WWWWL"
-    },
-    {
-     "pos": 2,
-     "team": "Atlético Madrid",
-     "p": 10,
-     "w": 8,
-     "d": 1,
-     "l": 1,
-     "gf": 20,
-     "ga": 8,
-     "pts": 25,
-     "tid": 530,
-     "form": "WWWWW"
     },
     {
      "pos": 3,
@@ -225,19 +225,6 @@
     },
     {
      "pos": 15,
-     "team": "Levante",
-     "p": 10,
-     "w": 2,
-     "d": 4,
-     "l": 4,
-     "gf": 16,
-     "ga": 19,
-     "pts": 10,
-     "tid": 539,
-     "form": "LDDWL"
-    },
-    {
-     "pos": 16,
      "team": "Elche",
      "p": 10,
      "w": 2,
@@ -248,6 +235,19 @@
      "pts": 10,
      "tid": 797,
      "form": "LWDDW"
+    },
+    {
+     "pos": 16,
+     "team": "Levante",
+     "p": 11,
+     "w": 2,
+     "d": 4,
+     "l": 5,
+     "gf": 16,
+     "ga": 21,
+     "pts": 10,
+     "tid": 539,
+     "form": "DDWLL"
     },
     {
      "pos": 17,
@@ -302,7 +302,7 @@
      "form": "LLDLD"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "segunda",
@@ -622,7 +622,7 @@
      "form": "LLLLW"
     }
    ],
-   "updated": "2026-10-29T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "primera-federacion",
@@ -656,7 +656,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-10-29T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -922,7 +922,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-10-30T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1187,7 +1187,7 @@
      ]
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   }
  ]
 }

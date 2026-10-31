@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://footballpyramids.com/</loc><lastmod>2026-10-31</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/england/</loc><lastmod>2026-10-31</lastmod><changefreq>hourly</changefreq></url>
-  <url><loc>https://footballpyramids.com/spain/</loc><lastmod>2026-10-30</lastmod><changefreq>hourly</changefreq></url>
+  <url><loc>https://footballpyramids.com/spain/</loc><lastmod>2026-10-31</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/</loc><lastmod>2026-10-31</lastmod><changefreq>hourly</changefreq></url>
-  <url><loc>https://footballpyramids.com/france/</loc><lastmod>2026-10-30</lastmod><changefreq>hourly</changefreq></url>
+  <url><loc>https://footballpyramids.com/france/</loc><lastmod>2026-10-31</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/</loc><lastmod>2026-10-31</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/belgium/</loc><lastmod>2026-10-30</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/</loc><lastmod>2026-10-31</lastmod><changefreq>hourly</changefreq></url>
@@ -12,9 +12,9 @@
   <url><loc>https://footballpyramids.com/portugal/</loc><lastmod>2026-10-31</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/scotland/</loc><lastmod>2026-10-30</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/</loc><lastmod>2026-10-31</lastmod><changefreq>hourly</changefreq></url>
-  <url><loc>https://footballpyramids.com/switzerland/</loc><lastmod>2026-10-30</lastmod><changefreq>hourly</changefreq></url>
+  <url><loc>https://footballpyramids.com/switzerland/</loc><lastmod>2026-10-31</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/</loc><lastmod>2026-10-31</lastmod><changefreq>hourly</changefreq></url>
-  <url><loc>https://footballpyramids.com/greece/</loc><lastmod>2026-10-26</lastmod><changefreq>hourly</changefreq></url>
+  <url><loc>https://footballpyramids.com/greece/</loc><lastmod>2026-10-31</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/brazil/</loc><lastmod>2026-10-31</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/argentina/</loc><lastmod>2026-10-31</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/china/</loc><lastmod>2026-10-31</lastmod><changefreq>hourly</changefreq></url>
@@ -31,8 +31,8 @@
   <url><loc>https://footballpyramids.com/england/club/manchester-city/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/arsenal/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/brighton-hove-albion/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/england/club/liverpool/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/chelsea/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/england/club/liverpool/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/brentford/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/leeds-united/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/newcastle-united/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
@@ -192,8 +192,8 @@
   <url><loc>https://footballpyramids.com/england/club/hampton-richmond-borough/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/walton-hersham/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/slough-town/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/spain/club/barcelona/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/atletico-madrid/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/spain/club/barcelona/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/real-madrid/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/real-betis/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/real-sociedad/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
@@ -206,8 +206,8 @@
   <url><loc>https://footballpyramids.com/spain/club/espanyol/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/osasuna/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/racing-santander/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/spain/club/levante/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/elche/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/spain/club/levante/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/rayo-vallecano/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/getafe/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/valencia/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
@@ -310,24 +310,24 @@
   <url><loc>https://footballpyramids.com/germany/club/dynamo-dresden/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/club/hannover-96/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/club/karlsruher-sc/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/germany/club/msv-duisburg/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/club/viktoria-koln/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/germany/club/msv-duisburg/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/club/rot-weiss-essen/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/germany/club/wehen-wiesbaden/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/germany/club/fc-ingolstadt/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/club/1-fc-saarbrucken/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/club/alemannia-aachen/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/germany/club/fc-ingolstadt/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/club/waldhof-mannheim/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/club/tsg-hoffenheim-ii/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/germany/club/hansa-rostock/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/club/fortuna-dusseldorf/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/germany/club/wehen-wiesbaden/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/germany/club/hansa-rostock/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/club/sv-meppen/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/germany/club/preussen-munster/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/club/vfb-stuttgart-ii/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/germany/club/preussen-munster/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/germany/club/jahn-regensburg/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/club/sc-verl/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/club/sonnenhof-grossaspach/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/club/wurzburger-kickers/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/germany/club/jahn-regensburg/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/club/fortuna-koln/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/club/tsv-havelse/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/france/club/paris-saint-germain/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
@@ -370,19 +370,19 @@
   <url><loc>https://footballpyramids.com/france/club/rouen/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/france/club/versailles/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/france/club/caen/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/france/club/amiens/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/france/club/concarneau/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/france/club/le-puy/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/france/club/cannes/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/france/club/le-puy/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/france/club/concarneau/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/france/club/amiens/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/france/club/fleury/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/france/club/paris-13-atletico/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/france/club/bastia/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/france/club/thionville/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/france/club/quevilly-rouen/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/france/club/bastia/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/france/club/valenciennes/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/france/club/orleans/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/france/club/aubagne/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/france/club/valenciennes/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/france/club/villefranche/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/france/club/aubagne/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/france/club/bourg-peronnas/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/inter-milan/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/lazio/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
@@ -428,8 +428,8 @@
   <url><loc>https://footballpyramids.com/italy/club/trento/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/union-brescia/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/arzignano-valchiampo/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/italy/club/treviso/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/ospitaletto/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/italy/club/treviso/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/albinoleffe/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/pergolettese/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/alcione-milano/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
@@ -466,22 +466,22 @@
   <url><loc>https://footballpyramids.com/italy/club/vis-pesaro/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/potenza/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/bari/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/italy/club/audace-cerignola/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/sorrento/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/catania/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/monopoli/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/italy/club/audace-cerignola/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/italy/club/inter-milan-u23/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/scafatese/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/italy/club/inter-milan-u23/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/casertana/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/cavese/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/picerno/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/italy/club/altamura/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/salernitana/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/foggia/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/casarano/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/italy/club/altamura/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/italy/club/giugliano/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/barletta/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/savoia/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/italy/club/giugliano/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/cosenza/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/club/crotone/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/belgium/club/club-brugge/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
@@ -531,12 +531,12 @@
   <url><loc>https://footballpyramids.com/croatia/club/croatia-zmijavci/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/cibalia/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/segesta-sisak/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/croatia/club/bsk-bijelo-brdo/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/croatia/club/jadran-lp/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/orijent-1919/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/croatia/club/jadran-lp/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/croatia/club/bsk-bijelo-brdo/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/croatia/club/kustosija/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/opatija/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/karlovac-1919/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/croatia/club/kustosija/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/dinamo-zagreb-ii/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/sesvete/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/dubrava-zagreb/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
@@ -641,11 +641,11 @@
   <url><loc>https://footballpyramids.com/portugal/club/benfica-b/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/portugal/club/avs/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/portugal/club/tondela/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/portugal/club/vizela/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/portugal/club/uniao-de-leiria/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/portugal/club/leixoes/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/portugal/club/portimonense/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/portugal/club/uniao-de-leiria/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/portugal/club/vizela/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/portugal/club/torreense/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/portugal/club/leixoes/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/portugal/club/amarante/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/portugal/club/chaves/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/portugal/club/fc-porto-b/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
@@ -724,10 +724,10 @@
   <url><loc>https://footballpyramids.com/turkey/club/sariyer/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/esenler-erokspor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/bandirmaspor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/turkey/club/pendikspor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/umraniyespor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/sivasspor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/vanspor-fk/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/turkey/club/pendikspor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/manisa-fk/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/istanbulspor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/boluspor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
@@ -772,14 +772,14 @@
   <url><loc>https://footballpyramids.com/turkey/club/galata/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/karadeniz-eregli-bsk/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/karabuk-idman-yurdu/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/turkey/club/amasyaspor-1968/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/kartal-bulvarspor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/orduspor-1967/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/turkey/club/amasyaspor-1968/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/turkey/club/duzcespor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/turkey/club/zonguldak-komurspor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/turkey/club/beykoz-anadolu/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/turkey/club/tokat-bld-plevnespor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/inkilapspor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/turkey/club/duzcespor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/turkey/club/beykoz-anadolu/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/turkey/club/zonguldak-komurspor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/turkey/club/tokat-bld-plevnespor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/golcukspor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/silivrispor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/yalova-yesilovaspor/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
@@ -941,14 +941,14 @@
   <url><loc>https://footballpyramids.com/austria/club/oberwart/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/krems-rehberg/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/traiskirchen/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/austria/club/wiener-viktoria/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/fach-donaufeld/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/austria/club/wiener-viktoria/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/scheiblingkirchen/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/parndorf/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/austria/club/leobendorf/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/austria/club/mattersburg-sv-2020/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/donau/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/austria/club/leobendorf/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/gloggnitz/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/austria/club/mattersburg-sv-2020/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/favoritner-ac/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/sv-horn/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/wienerberg/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
@@ -963,8 +963,8 @@
   <url><loc>https://footballpyramids.com/austria/club/leonfelden/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/tsv-st-johann/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/wohnbau-dietach/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/austria/club/seekirchen/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/ried-ii/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/austria/club/seekirchen/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/ufc-hallein/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/pinzgau-saalfelden/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/velden/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
@@ -982,9 +982,9 @@
   <url><loc>https://footballpyramids.com/austria/club/donau-klagenfurt/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/wolfsberg/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/bleiburg/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/austria/club/imst/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/schwaz/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/hohenems/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/austria/club/imst/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/kitzbuhel/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/dornbirn/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/club/rothis/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
@@ -1015,16 +1015,16 @@
   <url><loc>https://footballpyramids.com/greece/club/marko/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/greece/club/kallithea/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/greece/club/panserraikos/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/greece/club/niki-volos/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/greece/club/panionios/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/greece/club/larisa/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/greece/club/niki-volos/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/greece/club/panthrakikos/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/greece/club/anagennisi-karditsas/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/greece/club/ellas-syros/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/greece/club/panthrakikos/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/greece/club/asteras-tripolis-ii/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/greece/club/nestos-chrisoupolis/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/greece/club/apollon-pontou/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/greece/club/pyrgos-1968/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/greece/club/nestos-chrisoupolis/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/greece/club/paok-ii/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/greece/club/olympiacos-b/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/greece/club/zakynthos/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
@@ -2447,9 +2447,9 @@
   <url><loc>https://footballpyramids.com/usa/us-open-cup/</loc><lastmod>2026-10-23</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/mls-cup-playoffs/</loc><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/races/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/spain/races/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/spain/races/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/races/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/france/races/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/france/races/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/races/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/belgium/races/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/races/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
@@ -2457,9 +2457,9 @@
   <url><loc>https://footballpyramids.com/portugal/races/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/scotland/races/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/races/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/switzerland/races/</loc><lastmod>2026-10-30</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/switzerland/races/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/races/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/greece/races/</loc><lastmod>2026-10-26</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/greece/races/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/brazil/races/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/argentina/races/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/china/races/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>

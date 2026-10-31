@@ -183,7 +183,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "2-liga",
@@ -426,7 +426,7 @@
      "form": "LLLDL"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "regionalliga",
@@ -511,6 +511,19 @@
       },
       {
        "pos": 6,
+       "team": "Fach-Donaufeld",
+       "p": 14,
+       "w": 6,
+       "d": 3,
+       "l": 5,
+       "gf": 19,
+       "ga": 19,
+       "pts": 21,
+       "tid": 8366,
+       "form": "WLWLD"
+      },
+      {
+       "pos": 7,
        "team": "Wiener Viktoria",
        "p": 13,
        "w": 6,
@@ -521,19 +534,6 @@
        "pts": 20,
        "tid": 4966,
        "form": "WDLWL"
-      },
-      {
-       "pos": 7,
-       "team": "Fach-Donaufeld",
-       "p": 13,
-       "w": 6,
-       "d": 2,
-       "l": 5,
-       "gf": 17,
-       "ga": 17,
-       "pts": 20,
-       "tid": 8366,
-       "form": "WWLWL"
       },
       {
        "pos": 8,
@@ -551,31 +551,57 @@
       {
        "pos": 9,
        "team": "Parndorf",
-       "p": 13,
+       "p": 14,
        "w": 5,
-       "d": 3,
+       "d": 4,
        "l": 5,
-       "gf": 21,
-       "ga": 16,
-       "pts": 18,
+       "gf": 23,
+       "ga": 18,
+       "pts": 19,
        "tid": 4955,
-       "form": "WLDLW"
+       "form": "LDLWD"
       },
       {
        "pos": 10,
-       "team": "Leobendorf",
-       "p": 13,
-       "w": 5,
-       "d": 3,
-       "l": 5,
-       "gf": 18,
-       "ga": 16,
+       "team": "Donau",
+       "p": 14,
+       "w": 4,
+       "d": 6,
+       "l": 4,
+       "gf": 28,
+       "ga": 23,
        "pts": 18,
-       "tid": 4951,
-       "form": "LLWWD"
+       "tid": 8365,
+       "form": "DDLWW"
       },
       {
        "pos": 11,
+       "team": "Leobendorf",
+       "p": 14,
+       "w": 5,
+       "d": 3,
+       "l": 6,
+       "gf": 19,
+       "ga": 19,
+       "pts": 18,
+       "tid": 4951,
+       "form": "LWWDL"
+      },
+      {
+       "pos": 12,
+       "team": "Gloggnitz",
+       "p": 14,
+       "w": 4,
+       "d": 5,
+       "l": 5,
+       "gf": 17,
+       "ga": 21,
+       "pts": 17,
+       "tid": 4941,
+       "form": "WDDDW"
+      },
+      {
+       "pos": 13,
        "team": "Mattersburg SV 2020",
        "p": 13,
        "w": 5,
@@ -588,43 +614,17 @@
        "form": "LWLWL"
       },
       {
-       "pos": 12,
-       "team": "Donau",
-       "p": 13,
-       "w": 3,
-       "d": 6,
-       "l": 4,
-       "gf": 25,
-       "ga": 22,
-       "pts": 15,
-       "tid": 8365,
-       "form": "LDDLW"
-      },
-      {
-       "pos": 13,
-       "team": "Gloggnitz",
-       "p": 13,
-       "w": 3,
-       "d": 5,
-       "l": 5,
-       "gf": 14,
-       "ga": 21,
-       "pts": 14,
-       "tid": 4941,
-       "form": "LWDDD"
-      },
-      {
        "pos": 14,
        "team": "Favoritner AC",
-       "p": 13,
+       "p": 14,
        "w": 4,
        "d": 1,
-       "l": 8,
+       "l": 9,
        "gf": 9,
-       "ga": 18,
+       "ga": 21,
        "pts": 13,
        "tid": 8367,
-       "form": "LDWLL"
+       "form": "DWLLL"
       },
       {
        "pos": 15,
@@ -803,6 +803,19 @@
       },
       {
        "pos": 12,
+       "team": "Ried II",
+       "p": 14,
+       "w": 4,
+       "d": 3,
+       "l": 7,
+       "gf": 15,
+       "ga": 29,
+       "pts": 15,
+       "tid": 8250,
+       "form": "LDWLD"
+      },
+      {
+       "pos": 13,
        "team": "Seekirchen",
        "p": 14,
        "w": 3,
@@ -815,30 +828,17 @@
        "form": "WDLDD"
       },
       {
-       "pos": 13,
-       "team": "Ried II",
-       "p": 13,
-       "w": 4,
-       "d": 2,
-       "l": 7,
-       "gf": 15,
-       "ga": 29,
-       "pts": 14,
-       "tid": 8250,
-       "form": "LLDWL"
-      },
-      {
        "pos": 14,
        "team": "UFC Hallein",
-       "p": 13,
+       "p": 14,
        "w": 3,
-       "d": 3,
+       "d": 4,
        "l": 7,
        "gf": 13,
        "ga": 26,
-       "pts": 12,
+       "pts": 13,
        "tid": 19315,
-       "form": "DLWWL"
+       "form": "LWWLD"
       },
       {
        "pos": 15,
@@ -1074,6 +1074,32 @@
      "rows": [
       {
        "pos": 1,
+       "team": "Schwaz",
+       "p": 14,
+       "w": 11,
+       "d": 1,
+       "l": 2,
+       "gf": 39,
+       "ga": 22,
+       "pts": 34,
+       "tid": 4957,
+       "form": "WWWWW"
+      },
+      {
+       "pos": 2,
+       "team": "Hohenems",
+       "p": 14,
+       "w": 11,
+       "d": 0,
+       "l": 3,
+       "gf": 37,
+       "ga": 17,
+       "pts": 33,
+       "tid": 4945,
+       "form": "WLLWW"
+      },
+      {
+       "pos": 3,
        "team": "Imst",
        "p": 13,
        "w": 10,
@@ -1084,32 +1110,6 @@
        "pts": 31,
        "tid": 14709,
        "form": "WWWWW"
-      },
-      {
-       "pos": 2,
-       "team": "Schwaz",
-       "p": 13,
-       "w": 10,
-       "d": 1,
-       "l": 2,
-       "gf": 35,
-       "ga": 22,
-       "pts": 31,
-       "tid": 4957,
-       "form": "WWWWW"
-      },
-      {
-       "pos": 3,
-       "team": "Hohenems",
-       "p": 13,
-       "w": 10,
-       "d": 0,
-       "l": 3,
-       "gf": 33,
-       "ga": 16,
-       "pts": 30,
-       "tid": 4945,
-       "form": "WWLLW"
       },
       {
        "pos": 4,
@@ -1231,15 +1231,15 @@
       {
        "pos": 13,
        "team": "Lochau",
-       "p": 13,
+       "p": 14,
        "w": 3,
        "d": 2,
-       "l": 8,
+       "l": 9,
        "gf": 16,
-       "ga": 31,
+       "ga": 35,
        "pts": 11,
        "tid": 8359,
-       "form": "LDWLL"
+       "form": "DWLLL"
       },
       {
        "pos": 14,
@@ -1270,12 +1270,12 @@
       {
        "pos": 16,
        "team": "Wolfurt",
-       "p": 13,
+       "p": 14,
        "w": 1,
        "d": 1,
-       "l": 11,
-       "gf": 18,
-       "ga": 41,
+       "l": 12,
+       "gf": 19,
+       "ga": 45,
        "pts": 4,
        "tid": 4968,
        "form": "LLLLL"

@@ -604,7 +604,7 @@
      "form": "LLDLD"
     }
    ],
-   "updated": "2026-10-29T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   },
   {
    "id": "serie-c",
@@ -652,7 +652,7 @@
    "groups": [
     {
      "name": "Girone A",
-     "updated": "2026-10-30T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -670,15 +670,15 @@
       {
        "pos": 2,
        "team": "Trento",
-       "p": 11,
+       "p": 12,
        "w": 6,
-       "d": 5,
+       "d": 6,
        "l": 0,
        "gf": 17,
        "ga": 6,
-       "pts": 23,
+       "pts": 24,
        "tid": 17147,
-       "form": "DDWWW"
+       "form": "DWWWD"
       },
       {
        "pos": 3,
@@ -708,6 +708,19 @@
       },
       {
        "pos": 5,
+       "team": "Ospitaletto",
+       "p": 12,
+       "w": 5,
+       "d": 4,
+       "l": 3,
+       "gf": 18,
+       "ga": 11,
+       "pts": 19,
+       "tid": 24696,
+       "form": "DWLLD"
+      },
+      {
+       "pos": 6,
        "team": "Treviso",
        "p": 11,
        "w": 5,
@@ -718,19 +731,6 @@
        "pts": 19,
        "tid": 22319,
        "form": "WDLWW"
-      },
-      {
-       "pos": 6,
-       "team": "Ospitaletto",
-       "p": 11,
-       "w": 5,
-       "d": 3,
-       "l": 3,
-       "gf": 18,
-       "ga": 11,
-       "pts": 18,
-       "tid": 24696,
-       "form": "WDWLL"
       },
       {
        "pos": 7,
@@ -918,7 +918,7 @@
     },
     {
      "name": "Girone B",
-     "updated": "2026-10-30T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1184,7 +1184,7 @@
     },
     {
      "name": "Girone C",
-     "updated": "2026-10-29T00:00:00.000Z",
+     "updated": "2026-10-31T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1202,44 +1202,57 @@
       {
        "pos": 2,
        "team": "Bari",
-       "p": 11,
+       "p": 12,
        "w": 6,
-       "d": 3,
+       "d": 4,
        "l": 2,
-       "gf": 14,
-       "ga": 7,
-       "pts": 21,
+       "gf": 15,
+       "ga": 8,
+       "pts": 22,
        "tid": 508,
-       "form": "WLWDD"
+       "form": "LWDDD"
       },
       {
        "pos": 3,
-       "team": "Sorrento",
-       "p": 11,
+       "team": "Audace Cerignola",
+       "p": 12,
        "w": 6,
        "d": 2,
-       "l": 3,
-       "gf": 15,
+       "l": 4,
+       "gf": 19,
        "ga": 11,
        "pts": 20,
-       "tid": 9537,
-       "form": "LWLDD"
+       "tid": 9539,
+       "form": "DWWLW"
       },
       {
        "pos": 4,
-       "team": "Catania",
-       "p": 11,
+       "team": "Sorrento",
+       "p": 12,
        "w": 6,
-       "d": 1,
+       "d": 2,
        "l": 4,
-       "gf": 24,
-       "ga": 12,
-       "pts": 19,
-       "tid": 1580,
-       "form": "WWWLW"
+       "gf": 16,
+       "ga": 13,
+       "pts": 20,
+       "tid": 9537,
+       "form": "WLDDL"
       },
       {
        "pos": 5,
+       "team": "Catania",
+       "p": 12,
+       "w": 6,
+       "d": 1,
+       "l": 5,
+       "gf": 24,
+       "ga": 13,
+       "pts": 19,
+       "tid": 1580,
+       "form": "WWLWL"
+      },
+      {
+       "pos": 6,
        "team": "Monopoli",
        "p": 11,
        "w": 5,
@@ -1252,20 +1265,20 @@
        "form": "WDLWW"
       },
       {
-       "pos": 6,
-       "team": "Audace Cerignola",
-       "p": 11,
-       "w": 5,
-       "d": 2,
-       "l": 4,
+       "pos": 7,
+       "team": "Scafatese",
+       "p": 12,
+       "w": 4,
+       "d": 6,
+       "l": 2,
        "gf": 18,
-       "ga": 11,
-       "pts": 17,
-       "tid": 9539,
-       "form": "LDWWL"
+       "ga": 16,
+       "pts": 18,
+       "tid": 24701,
+       "form": "WDWLD"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Inter Milan U23",
        "p": 11,
        "w": 5,
@@ -1278,30 +1291,17 @@
        "form": "LWLDW"
       },
       {
-       "pos": 8,
-       "team": "Scafatese",
-       "p": 11,
-       "w": 4,
-       "d": 5,
-       "l": 2,
-       "gf": 17,
-       "ga": 15,
-       "pts": 17,
-       "tid": 24701,
-       "form": "WWDWL"
-      },
-      {
        "pos": 9,
        "team": "Casertana",
-       "p": 11,
+       "p": 12,
        "w": 4,
        "d": 5,
-       "l": 2,
+       "l": 3,
        "gf": 16,
-       "ga": 14,
+       "ga": 15,
        "pts": 17,
        "tid": 885,
-       "form": "LLWDD"
+       "form": "LWDDL"
       },
       {
        "pos": 10,
@@ -1331,6 +1331,19 @@
       },
       {
        "pos": 12,
+       "team": "Altamura",
+       "p": 12,
+       "w": 4,
+       "d": 3,
+       "l": 5,
+       "gf": 11,
+       "ga": 17,
+       "pts": 15,
+       "tid": 9549,
+       "form": "DLWDW"
+      },
+      {
+       "pos": 13,
        "team": "Salernitana",
        "p": 11,
        "w": 3,
@@ -1343,7 +1356,7 @@
        "form": "LWDDL"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Foggia",
        "p": 11,
        "w": 4,
@@ -1356,7 +1369,7 @@
        "form": "WWLLW"
       },
       {
-       "pos": 14,
+       "pos": 15,
        "team": "Casarano",
        "p": 11,
        "w": 4,
@@ -1369,20 +1382,20 @@
        "form": "LLDLW"
       },
       {
-       "pos": 15,
-       "team": "Altamura",
-       "p": 11,
-       "w": 3,
-       "d": 3,
-       "l": 5,
-       "gf": 9,
-       "ga": 16,
-       "pts": 12,
-       "tid": 9549,
-       "form": "LDLWD"
+       "pos": 16,
+       "team": "Giugliano",
+       "p": 12,
+       "w": 4,
+       "d": 1,
+       "l": 7,
+       "gf": 16,
+       "ga": 29,
+       "pts": 13,
+       "tid": 9556,
+       "form": "LLWLW"
       },
       {
-       "pos": 16,
+       "pos": 17,
        "team": "Barletta",
        "p": 11,
        "w": 2,
@@ -1395,7 +1408,7 @@
        "form": "LLDWL"
       },
       {
-       "pos": 17,
+       "pos": 18,
        "team": "Savoia",
        "p": 11,
        "w": 2,
@@ -1406,19 +1419,6 @@
        "pts": 11,
        "tid": 9564,
        "form": "LDWLD"
-      },
-      {
-       "pos": 18,
-       "team": "Giugliano",
-       "p": 11,
-       "w": 3,
-       "d": 1,
-       "l": 7,
-       "gf": 15,
-       "ga": 29,
-       "pts": 10,
-       "tid": 9556,
-       "form": "WLLWL"
       },
       {
        "pos": 19,
@@ -1450,7 +1450,7 @@
      ]
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   }
  ]
 }

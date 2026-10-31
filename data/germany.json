@@ -589,29 +589,29 @@
    "rows": [
     {
      "pos": 1,
-     "team": "MSV Duisburg",
-     "p": 11,
+     "team": "Viktoria Köln",
+     "p": 12,
      "w": 8,
-     "d": 1,
+     "d": 2,
      "l": 2,
-     "gf": 28,
-     "ga": 14,
-     "pts": 25,
-     "tid": 187,
-     "form": "WWWDL"
+     "gf": 31,
+     "ga": 15,
+     "pts": 26,
+     "tid": 1620,
+     "form": "WDDWW"
     },
     {
      "pos": 2,
-     "team": "Viktoria Köln",
-     "p": 11,
-     "w": 7,
+     "team": "MSV Duisburg",
+     "p": 12,
+     "w": 8,
      "d": 2,
      "l": 2,
-     "gf": 30,
-     "ga": 15,
-     "pts": 23,
-     "tid": 1620,
-     "form": "WWDDW"
+     "gf": 31,
+     "ga": 17,
+     "pts": 26,
+     "tid": 187,
+     "form": "WWDLD"
     },
     {
      "pos": 3,
@@ -628,6 +628,32 @@
     },
     {
      "pos": 4,
+     "team": "Wehen Wiesbaden",
+     "p": 12,
+     "w": 5,
+     "d": 3,
+     "l": 4,
+     "gf": 23,
+     "ga": 17,
+     "pts": 18,
+     "tid": 1319,
+     "form": "WWDWW"
+    },
+    {
+     "pos": 5,
+     "team": "FC Ingolstadt",
+     "p": 12,
+     "w": 5,
+     "d": 3,
+     "l": 4,
+     "gf": 16,
+     "ga": 17,
+     "pts": 18,
+     "tid": 184,
+     "form": "LWWWD"
+    },
+    {
+     "pos": 6,
      "team": "1. FC Saarbrücken",
      "p": 11,
      "w": 5,
@@ -640,7 +666,7 @@
      "form": "WDLWL"
     },
     {
-     "pos": 5,
+     "pos": 7,
      "team": "Alemannia Aachen",
      "p": 11,
      "w": 5,
@@ -653,20 +679,7 @@
      "form": "WLLWW"
     },
     {
-     "pos": 6,
-     "team": "FC Ingolstadt",
-     "p": 11,
-     "w": 5,
-     "d": 2,
-     "l": 4,
-     "gf": 15,
-     "ga": 16,
-     "pts": 17,
-     "tid": 184,
-     "form": "LLWWW"
-    },
-    {
-     "pos": 7,
+     "pos": 8,
      "team": "Waldhof Mannheim",
      "p": 11,
      "w": 5,
@@ -679,30 +692,17 @@
      "form": "WWLLW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "TSG Hoffenheim II",
-     "p": 11,
+     "p": 12,
      "w": 5,
      "d": 1,
-     "l": 5,
+     "l": 6,
      "gf": 21,
-     "ga": 19,
-     "pts": 16,
-     "tid": 9364,
-     "form": "WLLWL"
-    },
-    {
-     "pos": 9,
-     "team": "Hansa Rostock",
-     "p": 11,
-     "w": 4,
-     "d": 4,
-     "l": 3,
-     "gf": 18,
      "ga": 20,
      "pts": 16,
-     "tid": 1321,
-     "form": "DWLLD"
+     "tid": 9364,
+     "form": "LLWLL"
     },
     {
      "pos": 10,
@@ -719,16 +719,16 @@
     },
     {
      "pos": 11,
-     "team": "Wehen Wiesbaden",
-     "p": 11,
+     "team": "Hansa Rostock",
+     "p": 12,
      "w": 4,
-     "d": 3,
+     "d": 4,
      "l": 4,
      "gf": 19,
-     "ga": 16,
-     "pts": 15,
-     "tid": 1319,
-     "form": "LWWDW"
+     "ga": 22,
+     "pts": 16,
+     "tid": 1321,
+     "form": "WLLDL"
     },
     {
      "pos": 12,
@@ -745,6 +745,19 @@
     },
     {
      "pos": 13,
+     "team": "VfB Stuttgart II",
+     "p": 12,
+     "w": 4,
+     "d": 3,
+     "l": 5,
+     "gf": 21,
+     "ga": 23,
+     "pts": 15,
+     "tid": 12867,
+     "form": "DWWLD"
+    },
+    {
+     "pos": 14,
      "team": "Preußen Münster",
      "p": 11,
      "w": 4,
@@ -757,33 +770,33 @@
      "form": "LDLLW"
     },
     {
-     "pos": 14,
-     "team": "VfB Stuttgart II",
-     "p": 11,
-     "w": 4,
-     "d": 2,
-     "l": 5,
-     "gf": 18,
-     "ga": 20,
-     "pts": 14,
-     "tid": 12867,
-     "form": "DDWWL"
-    },
-    {
      "pos": 15,
-     "team": "SC Verl",
-     "p": 11,
+     "team": "Jahn Regensburg",
+     "p": 12,
      "w": 3,
-     "d": 3,
+     "d": 4,
      "l": 5,
-     "gf": 16,
-     "ga": 22,
-     "pts": 12,
-     "tid": 4265,
-     "form": "WDDLL"
+     "gf": 22,
+     "ga": 21,
+     "pts": 13,
+     "tid": 177,
+     "form": "WDDLW"
     },
     {
      "pos": 16,
+     "team": "SC Verl",
+     "p": 12,
+     "w": 3,
+     "d": 3,
+     "l": 6,
+     "gf": 17,
+     "ga": 26,
+     "pts": 12,
+     "tid": 4265,
+     "form": "DDLLL"
+    },
+    {
+     "pos": 17,
      "team": "Sonnenhof Großaspach",
      "p": 11,
      "w": 3,
@@ -796,7 +809,7 @@
      "form": "LLDWL"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Würzburger Kickers",
      "p": 11,
      "w": 3,
@@ -807,19 +820,6 @@
      "pts": 11,
      "tid": 784,
      "form": "LLDWL"
-    },
-    {
-     "pos": 18,
-     "team": "Jahn Regensburg",
-     "p": 11,
-     "w": 2,
-     "d": 4,
-     "l": 5,
-     "gf": 20,
-     "ga": 20,
-     "pts": 10,
-     "tid": 177,
-     "form": "DWDDL"
     },
     {
      "pos": 19,
@@ -837,15 +837,15 @@
     {
      "pos": 20,
      "team": "TSV Havelse",
-     "p": 11,
+     "p": 12,
      "w": 2,
-     "d": 3,
+     "d": 4,
      "l": 6,
-     "gf": 16,
-     "ga": 25,
-     "pts": 9,
+     "gf": 17,
+     "ga": 26,
+     "pts": 10,
      "tid": 9342,
-     "form": "LLDDW"
+     "form": "LDDWD"
     }
    ],
    "updated": "2026-10-31T00:00:00.000Z"
