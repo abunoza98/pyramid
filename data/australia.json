@@ -42,15 +42,15 @@
     {
      "pos": 1,
      "team": "Wellington Phoenix",
-     "p": 2,
-     "w": 2,
+     "p": 3,
+     "w": 3,
      "d": 0,
      "l": 0,
-     "gf": 4,
+     "gf": 7,
      "ga": 1,
-     "pts": 6,
+     "pts": 9,
      "tid": 942,
-     "form": "WW"
+     "form": "WWW"
     },
     {
      "pos": 2,
@@ -120,15 +120,15 @@
     {
      "pos": 7,
      "team": "Newcastle Jets",
-     "p": 2,
+     "p": 3,
      "w": 0,
      "d": 2,
-     "l": 0,
+     "l": 1,
      "gf": 3,
-     "ga": 3,
+     "ga": 6,
      "pts": 2,
      "tid": 946,
-     "form": "DD"
+     "form": "DDL"
     },
     {
      "pos": 8,
