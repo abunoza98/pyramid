@@ -345,15 +345,15 @@
     {
      "pos": 1,
      "team": "Palermo",
-     "p": 9,
-     "w": 7,
+     "p": 10,
+     "w": 8,
      "d": 2,
      "l": 0,
-     "gf": 21,
-     "ga": 11,
-     "pts": 23,
+     "gf": 24,
+     "ga": 12,
+     "pts": 26,
      "tid": 522,
-     "form": "WWWWD"
+     "form": "WWWDW"
     },
     {
      "pos": 2,
@@ -554,15 +554,15 @@
     {
      "pos": 17,
      "team": "Vicenza",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 3,
-     "l": 4,
-     "gf": 12,
-     "ga": 17,
+     "l": 5,
+     "gf": 13,
+     "ga": 20,
      "pts": 9,
      "tid": 1584,
-     "form": "LLDWL"
+     "form": "LDWLL"
     },
     {
      "pos": 18,

@@ -338,15 +338,15 @@
     {
      "pos": 1,
      "team": "Castellón",
-     "p": 11,
+     "p": 12,
      "w": 8,
-     "d": 2,
+     "d": 3,
      "l": 1,
-     "gf": 22,
-     "ga": 4,
-     "pts": 26,
+     "gf": 23,
+     "ga": 5,
+     "pts": 27,
      "tid": 5254,
-     "form": "WDLWW"
+     "form": "DLWWD"
     },
     {
      "pos": 2,
@@ -416,15 +416,15 @@
     {
      "pos": 7,
      "team": "Burgos",
-     "p": 11,
+     "p": 12,
      "w": 6,
-     "d": 2,
+     "d": 3,
      "l": 3,
-     "gf": 16,
-     "ga": 12,
-     "pts": 20,
+     "gf": 17,
+     "ga": 13,
+     "pts": 21,
      "tid": 9580,
-     "form": "WLLWW"
+     "form": "LLWWD"
     },
     {
      "pos": 8,
@@ -712,6 +712,19 @@
       },
       {
        "pos": 5,
+       "team": "Extremadura",
+       "p": 10,
+       "w": 5,
+       "d": 1,
+       "l": 4,
+       "gf": 19,
+       "ga": 10,
+       "pts": 16,
+       "tid": 24612,
+       "form": "WWDWW"
+      },
+      {
+       "pos": 6,
        "team": "Bilbao Athletic",
        "p": 10,
        "w": 4,
@@ -724,7 +737,7 @@
        "form": "LDLLW"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Pontevedra",
        "p": 10,
        "w": 4,
@@ -737,7 +750,7 @@
        "form": "LLWWD"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Cacereño",
        "p": 10,
        "w": 4,
@@ -750,7 +763,7 @@
        "form": "LDLWL"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Avilés",
        "p": 10,
        "w": 4,
@@ -763,7 +776,7 @@
        "form": "LWWLW"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Ponferradina",
        "p": 10,
        "w": 3,
@@ -774,19 +787,6 @@
        "pts": 14,
        "tid": 4907,
        "form": "WLDDD"
-      },
-      {
-       "pos": 10,
-       "team": "Extremadura",
-       "p": 9,
-       "w": 4,
-       "d": 1,
-       "l": 4,
-       "gf": 16,
-       "ga": 10,
-       "pts": 13,
-       "tid": 24612,
-       "form": "LWWDW"
       },
       {
        "pos": 11,
@@ -869,15 +869,15 @@
       {
        "pos": 17,
        "team": "Unionistas",
-       "p": 9,
+       "p": 10,
        "w": 3,
        "d": 1,
-       "l": 5,
+       "l": 6,
        "gf": 12,
-       "ga": 15,
+       "ga": 18,
        "pts": 10,
        "tid": 5281,
-       "form": "LWDLW"
+       "form": "WDLWL"
       },
       {
        "pos": 18,
@@ -991,6 +991,19 @@
       },
       {
        "pos": 6,
+       "team": "Hércules",
+       "p": 10,
+       "w": 5,
+       "d": 1,
+       "l": 4,
+       "gf": 10,
+       "ga": 11,
+       "pts": 16,
+       "tid": 4666,
+       "form": "DWLLW"
+      },
+      {
+       "pos": 7,
        "team": "Alcorcón",
        "p": 10,
        "w": 3,
@@ -1003,7 +1016,7 @@
        "form": "WLDDD"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Cartagena",
        "p": 10,
        "w": 4,
@@ -1016,7 +1029,7 @@
        "form": "WDWLL"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Real Madrid Castilla",
        "p": 10,
        "w": 4,
@@ -1029,7 +1042,7 @@
        "form": "WDWLW"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Gimnàstic",
        "p": 9,
        "w": 4,
@@ -1042,7 +1055,7 @@
        "form": "LLDWW"
       },
       {
-       "pos": 10,
+       "pos": 11,
        "team": "Algeciras",
        "p": 9,
        "w": 4,
@@ -1053,19 +1066,6 @@
        "pts": 13,
        "tid": 9597,
        "form": "WWLWW"
-      },
-      {
-       "pos": 11,
-       "team": "Hércules",
-       "p": 9,
-       "w": 4,
-       "d": 1,
-       "l": 4,
-       "gf": 8,
-       "ga": 11,
-       "pts": 13,
-       "tid": 4666,
-       "form": "WDWLL"
       },
       {
        "pos": 12,
@@ -1135,15 +1135,15 @@
       {
        "pos": 17,
        "team": "Rayo Majadahonda",
-       "p": 9,
+       "p": 10,
        "w": 2,
        "d": 1,
-       "l": 6,
+       "l": 7,
        "gf": 7,
-       "ga": 10,
+       "ga": 12,
        "pts": 7,
        "tid": 861,
-       "form": "LLLLW"
+       "form": "LLLWL"
       },
       {
        "pos": 18,

@@ -358,15 +358,15 @@
     {
      "pos": 3,
      "team": "AS Eupen",
-     "p": 7,
+     "p": 8,
      "w": 5,
      "d": 0,
-     "l": 2,
-     "gf": 14,
-     "ga": 7,
+     "l": 3,
+     "gf": 15,
+     "ga": 9,
      "pts": 15,
      "tid": 739,
-     "form": "WWWWL"
+     "form": "WWWLL"
     },
     {
      "pos": 4,
@@ -383,6 +383,19 @@
     },
     {
      "pos": 5,
+     "team": "Excelsior Virton",
+     "p": 8,
+     "w": 4,
+     "d": 1,
+     "l": 3,
+     "gf": 14,
+     "ga": 10,
+     "pts": 13,
+     "tid": 4715,
+     "form": "WDLLW"
+    },
+    {
+     "pos": 6,
      "team": "Lokeren-Temse",
      "p": 8,
      "w": 4,
@@ -395,7 +408,7 @@
      "form": "LWDWL"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Patro Eisden",
      "p": 9,
      "w": 4,
@@ -408,7 +421,7 @@
      "form": "LLWWW"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Francs Borains",
      "p": 7,
      "w": 4,
@@ -421,7 +434,7 @@
      "form": "WWWLL"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Gent II",
      "p": 8,
      "w": 3,
@@ -432,19 +445,6 @@
      "pts": 11,
      "tid": 19685,
      "form": "LDWLW"
-    },
-    {
-     "pos": 9,
-     "team": "Excelsior Virton",
-     "p": 7,
-     "w": 3,
-     "d": 1,
-     "l": 3,
-     "gf": 12,
-     "ga": 9,
-     "pts": 10,
-     "tid": 4715,
-     "form": "LWDLL"
     },
     {
      "pos": 10,

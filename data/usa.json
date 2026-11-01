@@ -37,7 +37,7 @@
    "groups": [
     {
      "name": "Western Conference",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -238,7 +238,7 @@
     },
     {
      "name": "Eastern Conference",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -438,7 +438,7 @@
      ]
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "usl-championship",
@@ -687,7 +687,7 @@
        "ga": 39,
        "pts": 48,
        "tid": 20808,
-       "form": "WWDWD"
+       "form": "WDWDL"
       },
       {
        "pos": 5,
@@ -700,7 +700,7 @@
        "ga": 38,
        "pts": 47,
        "tid": 3992,
-       "form": "DDDWW"
+       "form": "DDWWW"
       },
       {
        "pos": 6,
@@ -1037,7 +1037,7 @@
      "form": "WLLWL"
     }
    ],
-   "updated": "2026-10-30T00:00:00.000Z"
+   "updated": "2026-10-31T00:00:00.000Z"
   }
  ]
 }

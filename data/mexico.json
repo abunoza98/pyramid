@@ -295,15 +295,15 @@
     {
      "pos": 2,
      "team": "Leones Negros UDG",
-     "p": 14,
-     "w": 8,
+     "p": 15,
+     "w": 9,
      "d": 3,
      "l": 3,
-     "gf": 31,
-     "ga": 19,
-     "pts": 27,
+     "gf": 34,
+     "ga": 20,
+     "pts": 30,
      "tid": 2307,
-     "form": "WWDLW"
+     "form": "WDLWW"
     },
     {
      "pos": 3,
@@ -477,15 +477,15 @@
     {
      "pos": 16,
      "team": "Tepatitlán",
-     "p": 14,
+     "p": 15,
      "w": 2,
      "d": 1,
-     "l": 11,
-     "gf": 10,
-     "ga": 41,
+     "l": 12,
+     "gf": 11,
+     "ga": 44,
      "pts": 7,
      "tid": 14279,
-     "form": "WDLLL"
+     "form": "DLLLL"
     }
    ],
    "updated": "2026-11-01T00:00:00.000Z"
