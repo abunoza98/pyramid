@@ -224,6 +224,19 @@
     },
     {
      "pos": 14,
+     "team": "PEC Zwolle",
+     "p": 11,
+     "w": 3,
+     "d": 2,
+     "l": 6,
+     "gf": 12,
+     "ga": 23,
+     "pts": 11,
+     "tid": 193,
+     "form": "LLWDW"
+    },
+    {
+     "pos": 15,
      "team": "Sparta Rotterdam",
      "p": 10,
      "w": 2,
@@ -234,19 +247,6 @@
      "pts": 9,
      "tid": 426,
      "form": "LLDWL"
-    },
-    {
-     "pos": 15,
-     "team": "PEC Zwolle",
-     "p": 10,
-     "w": 2,
-     "d": 2,
-     "l": 6,
-     "gf": 11,
-     "ga": 23,
-     "pts": 8,
-     "tid": 193,
-     "form": "LLLWD"
     },
     {
      "pos": 16,
@@ -264,15 +264,15 @@
     {
      "pos": 17,
      "team": "ADO Den Haag",
-     "p": 10,
+     "p": 11,
      "w": 1,
      "d": 3,
-     "l": 6,
+     "l": 7,
      "gf": 13,
-     "ga": 23,
+     "ga": 24,
      "pts": 6,
      "tid": 198,
-     "form": "LDDWL"
+     "form": "DDWLL"
     },
     {
      "pos": 18,

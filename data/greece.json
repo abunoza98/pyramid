@@ -4,7 +4,7 @@
  "adjective": "Greek",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-31T00:00:00.000Z",
+ "updated": "2026-11-01T00:00:00.000Z",
  "belowNote": "Gamma Ethniki group winners come up",
  "leagues": [
   {
@@ -252,18 +252,31 @@
     {
      "pos": 2,
      "team": "Kallithea",
-     "p": 8,
+     "p": 9,
      "w": 5,
      "d": 2,
-     "l": 1,
+     "l": 2,
      "gf": 10,
-     "ga": 5,
+     "ga": 6,
      "pts": 17,
      "tid": 2095,
-     "form": "WWWDD"
+     "form": "WWDDL"
     },
     {
      "pos": 3,
+     "team": "Larisa",
+     "p": 9,
+     "w": 4,
+     "d": 4,
+     "l": 1,
+     "gf": 12,
+     "ga": 6,
+     "pts": 16,
+     "tid": 953,
+     "form": "DLDDW"
+    },
+    {
+     "pos": 4,
      "team": "Panserraikos",
      "p": 8,
      "w": 4,
@@ -276,7 +289,7 @@
      "form": "WDWDW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Niki Volos",
      "p": 9,
      "w": 4,
@@ -289,7 +302,7 @@
      "form": "DWDWW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Panionios",
      "p": 8,
      "w": 4,
@@ -302,20 +315,20 @@
      "form": "WLWDL"
     },
     {
-     "pos": 6,
-     "team": "Larisa",
-     "p": 8,
+     "pos": 7,
+     "team": "Ellas Syros",
+     "p": 9,
      "w": 3,
      "d": 4,
-     "l": 1,
-     "gf": 10,
-     "ga": 5,
+     "l": 2,
+     "gf": 12,
+     "ga": 7,
      "pts": 13,
-     "tid": 953,
-     "form": "WDLDD"
+     "tid": 22244,
+     "form": "DLDLW"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Panthrakikos",
      "p": 9,
      "w": 3,
@@ -328,7 +341,7 @@
      "form": "DLDDW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Anagennisi Karditsas",
      "p": 9,
      "w": 3,
@@ -339,19 +352,6 @@
      "pts": 11,
      "tid": 2094,
      "form": "LWWWL"
-    },
-    {
-     "pos": 9,
-     "team": "Ellas Syros",
-     "p": 8,
-     "w": 2,
-     "d": 4,
-     "l": 2,
-     "gf": 11,
-     "ga": 7,
-     "pts": 10,
-     "tid": 22244,
-     "form": "DDLDL"
     },
     {
      "pos": 10,
@@ -421,15 +421,15 @@
     {
      "pos": 15,
      "team": "Olympiacos B",
-     "p": 8,
+     "p": 9,
      "w": 1,
      "d": 3,
-     "l": 4,
-     "gf": 10,
-     "ga": 16,
+     "l": 5,
+     "gf": 11,
+     "ga": 18,
      "pts": 6,
      "tid": 18017,
-     "form": "LDLDL"
+     "form": "DLDLL"
     },
     {
      "pos": 16,
@@ -445,7 +445,7 @@
      "form": "LDLDL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   }
  ]
 }

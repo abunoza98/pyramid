@@ -206,15 +206,15 @@
     {
      "pos": 14,
      "team": "Garudayaksa",
-     "p": 7,
-     "w": 1,
+     "p": 8,
+     "w": 2,
      "d": 2,
      "l": 4,
-     "gf": 7,
-     "ga": 14,
-     "pts": 5,
+     "gf": 10,
+     "ga": 15,
+     "pts": 8,
      "tid": 26645,
-     "form": "DLWLL"
+     "form": "LWLLW"
     },
     {
      "pos": 15,
@@ -232,15 +232,15 @@
     {
      "pos": 16,
      "team": "PSS Sleman",
-     "p": 7,
+     "p": 8,
      "w": 1,
      "d": 1,
-     "l": 5,
-     "gf": 10,
-     "ga": 13,
+     "l": 6,
+     "gf": 11,
+     "ga": 16,
      "pts": 4,
      "tid": 3882,
-     "form": "LWDLL"
+     "form": "WDLLL"
     },
     {
      "pos": 17,

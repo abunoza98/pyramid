@@ -4,7 +4,7 @@
  "adjective": "Portuguese",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-31T00:00:00.000Z",
+ "updated": "2026-11-01T00:00:00.000Z",
  "belowNote": "Liga 3's top clubs come up, one through a play-off",
  "leagues": [
   {
@@ -382,15 +382,15 @@
     {
      "pos": 5,
      "team": "Académica",
-     "p": 8,
+     "p": 9,
      "w": 5,
      "d": 0,
-     "l": 3,
-     "gf": 14,
-     "ga": 10,
+     "l": 4,
+     "gf": 15,
+     "ga": 12,
      "pts": 15,
      "tid": 239,
-     "form": "LLLWW"
+     "form": "LLWWL"
     },
     {
      "pos": 6,
@@ -420,6 +420,19 @@
     },
     {
      "pos": 8,
+     "team": "Vizela",
+     "p": 9,
+     "w": 4,
+     "d": 2,
+     "l": 3,
+     "gf": 10,
+     "ga": 9,
+     "pts": 14,
+     "tid": 810,
+     "form": "WDLLW"
+    },
+    {
+     "pos": 9,
      "team": "AVS",
      "p": 9,
      "w": 3,
@@ -432,7 +445,7 @@
      "form": "LDWWL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Tondela",
      "p": 8,
      "w": 4,
@@ -445,7 +458,7 @@
      "form": "LWWWL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Portimonense",
      "p": 9,
      "w": 3,
@@ -456,19 +469,6 @@
      "pts": 11,
      "tid": 216,
      "form": "LLWLD"
-    },
-    {
-     "pos": 11,
-     "team": "Vizela",
-     "p": 8,
-     "w": 3,
-     "d": 2,
-     "l": 3,
-     "gf": 8,
-     "ga": 8,
-     "pts": 11,
-     "tid": 810,
-     "form": "WWDLL"
     },
     {
      "pos": 12,
@@ -562,7 +562,7 @@
      "form": "LLLLD"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   }
  ]
 }
