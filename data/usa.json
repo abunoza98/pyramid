@@ -4,7 +4,7 @@
  "adjective": "American",
  "season": "2026",
  "mode": "live",
- "updated": "2026-10-31T00:00:00.000Z",
+ "updated": "2026-11-01T00:00:00.000Z",
  "belowNote": "There's no promotion or relegation between US leagues; these are the professional divisions from the top",
  "system": "US soccer league system",
  "systemNote": "The US system doesn't use promotion and relegation between these leagues; play-off places are marked on each table.",
@@ -67,6 +67,19 @@
       },
       {
        "pos": 3,
+       "team": "San Jose Earthquakes",
+       "p": 33,
+       "w": 14,
+       "d": 10,
+       "l": 9,
+       "gf": 56,
+       "ga": 48,
+       "pts": 52,
+       "tid": 1596,
+       "form": "DDLDW"
+      },
+      {
+       "pos": 4,
        "team": "St. Louis City",
        "p": 33,
        "w": 14,
@@ -79,7 +92,7 @@
        "form": "DLLLL"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Houston Dynamo",
        "p": 32,
        "w": 14,
@@ -90,19 +103,6 @@
        "pts": 51,
        "tid": 1600,
        "form": "DDDDW"
-      },
-      {
-       "pos": 5,
-       "team": "San Jose Earthquakes",
-       "p": 32,
-       "w": 13,
-       "d": 10,
-       "l": 9,
-       "gf": 54,
-       "ga": 47,
-       "pts": 49,
-       "tid": 1596,
-       "form": "DDDLD"
       },
       {
        "pos": 6,
@@ -119,6 +119,19 @@
       },
       {
        "pos": 7,
+       "team": "LA Galaxy",
+       "p": 33,
+       "w": 11,
+       "d": 11,
+       "l": 11,
+       "gf": 49,
+       "ga": 55,
+       "pts": 44,
+       "tid": 1605,
+       "form": "LWDDW"
+      },
+      {
+       "pos": 8,
        "team": "Colorado Rapids",
        "p": 32,
        "w": 12,
@@ -131,7 +144,7 @@
        "form": "DDDWD"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Seattle Sounders",
        "p": 32,
        "w": 11,
@@ -144,30 +157,17 @@
        "form": "WLDDL"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Real Salt Lake",
-       "p": 32,
+       "p": 33,
        "w": 12,
        "d": 6,
-       "l": 14,
-       "gf": 50,
-       "ga": 49,
+       "l": 15,
+       "gf": 51,
+       "ga": 51,
        "pts": 42,
        "tid": 1606,
-       "form": "LDWWW"
-      },
-      {
-       "pos": 10,
-       "team": "LA Galaxy",
-       "p": 32,
-       "w": 10,
-       "d": 11,
-       "l": 11,
-       "gf": 45,
-       "ga": 54,
-       "pts": 41,
-       "tid": 1605,
-       "form": "WLWDD"
+       "form": "DWWWL"
       },
       {
        "pos": 11,
@@ -211,15 +211,15 @@
       {
        "pos": 14,
        "team": "Austin FC",
-       "p": 32,
+       "p": 33,
        "w": 8,
        "d": 10,
-       "l": 14,
-       "gf": 41,
-       "ga": 59,
+       "l": 15,
+       "gf": 42,
+       "ga": 63,
        "pts": 34,
        "tid": 16489,
-       "form": "LLLWL"
+       "form": "LLWLL"
       },
       {
        "pos": 15,
@@ -460,7 +460,7 @@
    "groups": [
     {
      "name": "Eastern Conference",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -635,7 +635,7 @@
     },
     {
      "name": "Western Conference",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -796,7 +796,7 @@
      ]
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "usl-league-one",

@@ -4,7 +4,7 @@
  "adjective": "Turkish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-31T00:00:00.000Z",
+ "updated": "2026-11-01T00:00:00.000Z",
  "belowNote": "Regional amateur league champions come up",
  "leagues": [
   {
@@ -1109,7 +1109,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1349,7 +1349,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1589,7 +1589,7 @@
     },
     {
      "name": "Group 3",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1698,15 +1698,15 @@
       {
        "pos": 9,
        "team": "Yeni Mersin Idmanyurdu",
-       "p": 8,
+       "p": 9,
        "w": 4,
-       "d": 0,
+       "d": 1,
        "l": 4,
        "gf": 10,
        "ga": 10,
-       "pts": 12,
+       "pts": 13,
        "tid": 6546,
-       "form": "WLLWW"
+       "form": "LLWWD"
       },
       {
        "pos": 10,
@@ -1801,6 +1801,19 @@
       },
       {
        "pos": 17,
+       "team": "Yeni Malatyaspor",
+       "p": 9,
+       "w": 0,
+       "d": 1,
+       "l": 8,
+       "gf": 0,
+       "ga": 24,
+       "pts": 1,
+       "tid": 999,
+       "form": "LLLLD"
+      },
+      {
+       "pos": 18,
        "team": "Adanaspor",
        "p": 9,
        "w": 0,
@@ -1811,24 +1824,11 @@
        "pts": 1,
        "tid": 3564,
        "form": "LLLLD"
-      },
-      {
-       "pos": 18,
-       "team": "Yeni Malatyaspor",
-       "p": 8,
-       "w": 0,
-       "d": 0,
-       "l": 8,
-       "gf": 0,
-       "ga": 24,
-       "pts": 0,
-       "tid": 999,
-       "form": "LLLLL"
       }
      ]
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   }
  ]
 }
