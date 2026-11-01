@@ -4,7 +4,7 @@
  "adjective": "Mexican",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-31T00:00:00.000Z",
+ "updated": "2026-11-01T00:00:00.000Z",
  "belowNote": "Promotion between Liga Premier and the Liga de Expansión is suspended",
  "leagues": [
   {
@@ -260,7 +260,7 @@
      "form": "DLLDW"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "liga-de-expansion",
@@ -488,7 +488,7 @@
      "form": "WDLLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "liga-premier",
@@ -543,7 +543,7 @@
      "l": 2,
      "gf": 24,
      "ga": 17,
-     "pts": 22,
+     "pts": 23,
      "tid": 24949,
      "form": "WLWWW"
     },
@@ -799,7 +799,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   }
  ]
 }
