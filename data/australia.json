@@ -132,6 +132,32 @@
     },
     {
      "pos": 8,
+     "team": "Melbourne Victory",
+     "p": 3,
+     "w": 0,
+     "d": 2,
+     "l": 1,
+     "gf": 3,
+     "ga": 4,
+     "pts": 2,
+     "tid": 944,
+     "form": "LDD"
+    },
+    {
+     "pos": 9,
+     "team": "Central Coast Mariners",
+     "p": 3,
+     "w": 0,
+     "d": 2,
+     "l": 1,
+     "gf": 3,
+     "ga": 5,
+     "pts": 2,
+     "tid": 941,
+     "form": "DLD"
+    },
+    {
+     "pos": 10,
      "team": "Newcastle Jets",
      "p": 3,
      "w": 0,
@@ -142,32 +168,6 @@
      "pts": 2,
      "tid": 946,
      "form": "DDL"
-    },
-    {
-     "pos": 9,
-     "team": "Melbourne Victory",
-     "p": 2,
-     "w": 0,
-     "d": 1,
-     "l": 1,
-     "gf": 2,
-     "ga": 3,
-     "pts": 1,
-     "tid": 944,
-     "form": "LD"
-    },
-    {
-     "pos": 10,
-     "team": "Central Coast Mariners",
-     "p": 2,
-     "w": 0,
-     "d": 1,
-     "l": 1,
-     "gf": 2,
-     "ga": 4,
-     "pts": 1,
-     "tid": 941,
-     "form": "DL"
     },
     {
      "pos": 11,
