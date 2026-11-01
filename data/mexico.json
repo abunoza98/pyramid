@@ -157,6 +157,19 @@
     },
     {
      "pos": 11,
+     "team": "Pachuca",
+     "p": 15,
+     "w": 5,
+     "d": 4,
+     "l": 6,
+     "gf": 25,
+     "ga": 19,
+     "pts": 19,
+     "tid": 2292,
+     "form": "DLLWW"
+    },
+    {
+     "pos": 12,
      "team": "Santos Laguna",
      "p": 14,
      "w": 6,
@@ -169,7 +182,7 @@
      "form": "WWWWL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Atlético San Luis",
      "p": 15,
      "w": 5,
@@ -180,19 +193,6 @@
      "pts": 19,
      "tid": 2314,
      "form": "LDWWL"
-    },
-    {
-     "pos": 13,
-     "team": "Pachuca",
-     "p": 14,
-     "w": 4,
-     "d": 4,
-     "l": 6,
-     "gf": 22,
-     "ga": 19,
-     "pts": 16,
-     "tid": 2292,
-     "form": "LDLLW"
     },
     {
      "pos": 14,
@@ -210,15 +210,15 @@
     {
      "pos": 15,
      "team": "Tigres UANL",
-     "p": 14,
+     "p": 15,
      "w": 3,
      "d": 6,
-     "l": 5,
+     "l": 6,
      "gf": 15,
-     "ga": 19,
+     "ga": 22,
      "pts": 15,
      "tid": 2279,
-     "form": "WWDLD"
+     "form": "WDLDL"
     },
     {
      "pos": 16,
@@ -549,16 +549,16 @@
     },
     {
      "pos": 1,
-     "team": "Artesanos Metepec",
+     "team": "Dragones de Oaxaca",
      "p": 10,
      "w": 7,
      "d": 2,
      "l": 1,
-     "gf": 21,
-     "ga": 7,
-     "pts": 24,
-     "tid": 22049,
-     "form": "WDDLW"
+     "gf": 27,
+     "ga": 8,
+     "pts": 25,
+     "tid": 26393,
+     "form": "WWDWW"
     },
     {
      "pos": 2,
@@ -575,29 +575,29 @@
     },
     {
      "pos": 2,
-     "team": "Dragones de Oaxaca",
-     "p": 9,
-     "w": 6,
+     "team": "Artesanos Metepec",
+     "p": 10,
+     "w": 7,
      "d": 2,
      "l": 1,
-     "gf": 25,
-     "ga": 8,
-     "pts": 22,
-     "tid": 26393,
-     "form": "LWWDW"
+     "gf": 21,
+     "ga": 7,
+     "pts": 24,
+     "tid": 22049,
+     "form": "WDDLW"
     },
     {
      "pos": 3,
-     "team": "Mineros de Fresnillo",
-     "p": 9,
-     "w": 5,
-     "d": 3,
-     "l": 1,
-     "gf": 16,
-     "ga": 5,
+     "team": "La Tribu de Cd. Juarez",
+     "p": 10,
+     "w": 6,
+     "d": 0,
+     "l": 4,
+     "gf": 23,
+     "ga": 13,
      "pts": 19,
-     "tid": 15935,
-     "form": "LWWDW"
+     "tid": 28306,
+     "form": "LLWWL"
     },
     {
      "pos": 3,
@@ -614,16 +614,16 @@
     },
     {
      "pos": 4,
-     "team": "La Tribu de Cd. Juarez",
+     "team": "Mineros de Fresnillo",
      "p": 10,
-     "w": 6,
-     "d": 0,
-     "l": 4,
-     "gf": 23,
-     "ga": 13,
+     "w": 5,
+     "d": 3,
+     "l": 2,
+     "gf": 16,
+     "ga": 7,
      "pts": 19,
-     "tid": 28306,
-     "form": "LLWWL"
+     "tid": 15935,
+     "form": "WWDWL"
     },
     {
      "pos": 4,

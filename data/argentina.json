@@ -34,15 +34,15 @@
       {
        "pos": 1,
        "team": "Instituto",
-       "p": 14,
+       "p": 15,
        "w": 10,
-       "d": 2,
+       "d": 3,
        "l": 2,
-       "gf": 21,
-       "ga": 10,
-       "pts": 32,
+       "gf": 24,
+       "ga": 13,
+       "pts": 33,
        "tid": 478,
-       "form": "WWDWW"
+       "form": "WDWWD"
       },
       {
        "pos": 2,
@@ -164,15 +164,15 @@
       {
        "pos": 11,
        "team": "Estudiantes",
-       "p": 14,
+       "p": 15,
        "w": 4,
-       "d": 2,
+       "d": 3,
        "l": 8,
-       "gf": 17,
-       "ga": 18,
-       "pts": 14,
+       "gf": 20,
+       "ga": 21,
+       "pts": 15,
        "tid": 450,
-       "form": "LWDLL"
+       "form": "WDLLD"
       },
       {
        "pos": 12,
