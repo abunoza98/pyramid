@@ -133,15 +133,15 @@
       {
        "pos": 8,
        "team": "Colorado Rapids",
-       "p": 32,
+       "p": 33,
        "w": 12,
        "d": 7,
-       "l": 13,
-       "gf": 44,
-       "ga": 43,
+       "l": 14,
+       "gf": 46,
+       "ga": 47,
        "pts": 43,
        "tid": 1610,
-       "form": "DDDWD"
+       "form": "DDWDL"
       },
       {
        "pos": 9,
@@ -281,6 +281,19 @@
       },
       {
        "pos": 4,
+       "team": "Chicago Fire",
+       "p": 33,
+       "w": 16,
+       "d": 7,
+       "l": 10,
+       "gf": 61,
+       "ga": 50,
+       "pts": 55,
+       "tid": 1607,
+       "form": "LLWDW"
+      },
+      {
+       "pos": 5,
        "team": "Charlotte FC",
        "p": 33,
        "w": 15,
@@ -291,19 +304,6 @@
        "pts": 53,
        "tid": 18310,
        "form": "LDLWW"
-      },
-      {
-       "pos": 5,
-       "team": "Chicago Fire",
-       "p": 32,
-       "w": 15,
-       "d": 7,
-       "l": 10,
-       "gf": 57,
-       "ga": 48,
-       "pts": 52,
-       "tid": 1607,
-       "form": "WLLWD"
       },
       {
        "pos": 6,

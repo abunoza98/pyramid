@@ -521,15 +521,15 @@
       {
        "pos": 5,
        "team": "Colón",
-       "p": 35,
-       "w": 15,
+       "p": 36,
+       "w": 16,
        "d": 12,
        "l": 8,
-       "gf": 43,
+       "gf": 45,
        "ga": 27,
-       "pts": 57,
+       "pts": 60,
        "tid": 448,
-       "form": "DWDDW"
+       "form": "WDDWW"
       },
       {
        "pos": 6,
@@ -638,15 +638,15 @@
       {
        "pos": 14,
        "team": "Defensores De Belgrano",
-       "p": 35,
+       "p": 36,
        "w": 8,
        "d": 15,
-       "l": 12,
+       "l": 13,
        "gf": 25,
-       "ga": 32,
+       "ga": 34,
        "pts": 39,
        "tid": 1067,
-       "form": "LDLDD"
+       "form": "DLDDL"
       },
       {
        "pos": 15,
