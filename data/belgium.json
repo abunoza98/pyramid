@@ -212,6 +212,19 @@
     },
     {
      "pos": 13,
+     "team": "OH Leuven",
+     "p": 10,
+     "w": 2,
+     "d": 3,
+     "l": 5,
+     "gf": 10,
+     "ga": 17,
+     "pts": 9,
+     "tid": 260,
+     "form": "DWDDW"
+    },
+    {
+     "pos": 14,
      "team": "KV Mechelen",
      "p": 9,
      "w": 2,
@@ -224,20 +237,20 @@
      "form": "LLDWW"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Sint-Truiden",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 2,
-     "l": 5,
-     "gf": 17,
-     "ga": 19,
+     "l": 6,
+     "gf": 18,
+     "ga": 21,
      "pts": 8,
      "tid": 735,
-     "form": "WLLLL"
+     "form": "LLLLL"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "La Louvière",
      "p": 9,
      "w": 2,
@@ -248,19 +261,6 @@
      "pts": 7,
      "tid": 5902,
      "form": "LWLLW"
-    },
-    {
-     "pos": 16,
-     "team": "OH Leuven",
-     "p": 9,
-     "w": 1,
-     "d": 3,
-     "l": 5,
-     "gf": 8,
-     "ga": 16,
-     "pts": 6,
-     "tid": 260,
-     "form": "LDWDD"
     },
     {
      "pos": 17,
@@ -525,7 +525,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   }
  ]
 }

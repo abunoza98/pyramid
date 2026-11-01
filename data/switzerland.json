@@ -952,18 +952,31 @@
       {
        "pos": 9,
        "team": "Muri-Gümligen",
-       "p": 11,
+       "p": 12,
        "w": 5,
-       "d": 1,
+       "d": 2,
        "l": 5,
        "gf": 12,
        "ga": 15,
-       "pts": 16,
+       "pts": 17,
        "tid": 19608,
-       "form": "LLLLW"
+       "form": "LLLWD"
       },
       {
        "pos": 10,
+       "team": "Grasshopper II",
+       "p": 12,
+       "w": 5,
+       "d": 1,
+       "l": 6,
+       "gf": 18,
+       "ga": 21,
+       "pts": 16,
+       "tid": 12704,
+       "form": "WWLLD"
+      },
+      {
+       "pos": 11,
        "team": "Thun II",
        "p": 12,
        "w": 4,
@@ -974,19 +987,6 @@
        "pts": 15,
        "tid": 16348,
        "form": "LWLLW"
-      },
-      {
-       "pos": 11,
-       "team": "Grasshopper II",
-       "p": 11,
-       "w": 5,
-       "d": 0,
-       "l": 6,
-       "gf": 17,
-       "ga": 20,
-       "pts": 15,
-       "tid": 12704,
-       "form": "LWWLL"
       },
       {
        "pos": 12,
@@ -1030,28 +1030,28 @@
       {
        "pos": 15,
        "team": "Black Stars",
-       "p": 11,
+       "p": 12,
        "w": 1,
-       "d": 6,
+       "d": 7,
        "l": 4,
        "gf": 12,
        "ga": 17,
-       "pts": 9,
+       "pts": 10,
        "tid": 6617,
-       "form": "LDDLL"
+       "form": "DDLLD"
       },
       {
        "pos": 16,
        "team": "Münsingen",
-       "p": 11,
+       "p": 12,
        "w": 0,
-       "d": 2,
+       "d": 3,
        "l": 9,
-       "gf": 8,
-       "ga": 27,
-       "pts": 2,
+       "gf": 9,
+       "ga": 28,
+       "pts": 3,
        "tid": 10589,
-       "form": "LLLLL"
+       "form": "LLLLD"
       }
      ]
     },
@@ -1062,13 +1062,13 @@
       {
        "pos": 1,
        "team": "St. Gallen II",
-       "p": 11,
-       "w": 8,
+       "p": 12,
+       "w": 9,
        "d": 1,
        "l": 2,
-       "gf": 24,
+       "gf": 25,
        "ga": 18,
-       "pts": 25,
+       "pts": 28,
        "tid": 12718,
        "form": "WWWWW"
       },
@@ -1257,15 +1257,15 @@
       {
        "pos": 16,
        "team": "Widnau",
-       "p": 11,
+       "p": 12,
        "w": 1,
        "d": 3,
-       "l": 7,
+       "l": 8,
        "gf": 8,
-       "ga": 27,
+       "ga": 28,
        "pts": 6,
        "tid": 16377,
-       "form": "LLLDL"
+       "form": "LLDLL"
       }
      ]
     }

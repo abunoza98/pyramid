@@ -147,15 +147,15 @@
     {
      "pos": 8,
      "team": "Groningen",
-     "p": 10,
+     "p": 11,
      "w": 4,
      "d": 3,
-     "l": 3,
-     "gf": 24,
-     "ga": 21,
+     "l": 4,
+     "gf": 26,
+     "ga": 24,
      "pts": 15,
      "tid": 202,
-     "form": "DWWLD"
+     "form": "WWLDL"
     },
     {
      "pos": 9,
@@ -185,6 +185,19 @@
     },
     {
      "pos": 11,
+     "team": "Sparta Rotterdam",
+     "p": 11,
+     "w": 3,
+     "d": 3,
+     "l": 5,
+     "gf": 20,
+     "ga": 26,
+     "pts": 12,
+     "tid": 426,
+     "form": "LDWLW"
+    },
+    {
+     "pos": 12,
      "team": "Utrecht",
      "p": 11,
      "w": 3,
@@ -197,7 +210,7 @@
      "form": "LWWDL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "NEC Nijmegen",
      "p": 11,
      "w": 2,
@@ -210,7 +223,7 @@
      "form": "DDDDL"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "PEC Zwolle",
      "p": 11,
      "w": 3,
@@ -223,7 +236,7 @@
      "form": "LLWDW"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Excelsior",
      "p": 11,
      "w": 3,
@@ -234,19 +247,6 @@
      "pts": 11,
      "tid": 196,
      "form": "DLLLL"
-    },
-    {
-     "pos": 15,
-     "team": "Sparta Rotterdam",
-     "p": 10,
-     "w": 2,
-     "d": 3,
-     "l": 5,
-     "gf": 17,
-     "ga": 24,
-     "pts": 9,
-     "tid": 426,
-     "form": "LLDWL"
     },
     {
      "pos": 16,
@@ -344,19 +344,6 @@
     },
     {
      "pos": 3,
-     "team": "Emmen",
-     "p": 12,
-     "w": 8,
-     "d": 1,
-     "l": 3,
-     "gf": 26,
-     "ga": 19,
-     "pts": 25,
-     "tid": 208,
-     "form": "WDWWW"
-    },
-    {
-     "pos": 4,
      "team": "Almere City",
      "p": 13,
      "w": 8,
@@ -369,7 +356,7 @@
      "form": "WWLLW"
     },
     {
-     "pos": 5,
+     "pos": 4,
      "team": "Roda JC",
      "p": 13,
      "w": 7,
@@ -380,6 +367,19 @@
      "pts": 25,
      "tid": 414,
      "form": "LDWWW"
+    },
+    {
+     "pos": 5,
+     "team": "Emmen",
+     "p": 13,
+     "w": 8,
+     "d": 1,
+     "l": 4,
+     "gf": 26,
+     "ga": 24,
+     "pts": 25,
+     "tid": 208,
+     "form": "DWWWL"
     },
     {
      "pos": 6,
@@ -409,6 +409,19 @@
     },
     {
      "pos": 8,
+     "team": "FC Den Bosch",
+     "p": 13,
+     "w": 5,
+     "d": 3,
+     "l": 5,
+     "gf": 23,
+     "ga": 21,
+     "pts": 18,
+     "tid": 421,
+     "form": "DWWDW"
+    },
+    {
+     "pos": 9,
      "team": "Vitesse",
      "p": 12,
      "w": 5,
@@ -421,7 +434,7 @@
      "form": "LDLWL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Jong AZ",
      "p": 13,
      "w": 5,
@@ -434,7 +447,7 @@
      "form": "WLDWL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "MVV",
      "p": 13,
      "w": 5,
@@ -447,7 +460,7 @@
      "form": "LLLDL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Jong PSV",
      "p": 12,
      "w": 4,
@@ -460,7 +473,7 @@
      "form": "DLDLW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "RKC Waalwijk",
      "p": 13,
      "w": 3,
@@ -471,19 +484,6 @@
      "pts": 16,
      "tid": 417,
      "form": "DLDDL"
-    },
-    {
-     "pos": 13,
-     "team": "FC Den Bosch",
-     "p": 12,
-     "w": 4,
-     "d": 3,
-     "l": 5,
-     "gf": 18,
-     "ga": 21,
-     "pts": 15,
-     "tid": 421,
-     "form": "LDWWD"
     },
     {
      "pos": 14,

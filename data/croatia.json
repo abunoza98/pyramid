@@ -79,18 +79,31 @@
     {
      "pos": 3,
      "team": "Varaždin",
+     "p": 12,
+     "w": 5,
+     "d": 4,
+     "l": 3,
+     "gf": 16,
+     "ga": 11,
+     "pts": 19,
+     "tid": 1483,
+     "form": "DWLLD"
+    },
+    {
+     "pos": 4,
+     "team": "Rijeka",
      "p": 11,
      "w": 5,
      "d": 3,
      "l": 3,
-     "gf": 15,
-     "ga": 10,
+     "gf": 18,
+     "ga": 15,
      "pts": 18,
-     "tid": 1483,
-     "form": "DDWLL"
+     "tid": 561,
+     "form": "WLWLD"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Osijek",
      "p": 11,
      "w": 5,
@@ -101,19 +114,6 @@
      "pts": 17,
      "tid": 616,
      "form": "WDLDL"
-    },
-    {
-     "pos": 5,
-     "team": "Rijeka",
-     "p": 10,
-     "w": 5,
-     "d": 2,
-     "l": 3,
-     "gf": 17,
-     "ga": 14,
-     "pts": 17,
-     "tid": 561,
-     "form": "DWLWL"
     },
     {
      "pos": 6,
@@ -181,7 +181,7 @@
      "form": "WLDDL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "prva-nl",

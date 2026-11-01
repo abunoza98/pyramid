@@ -1121,6 +1121,19 @@
       },
       {
        "pos": 16,
+       "team": "Águilas",
+       "p": 10,
+       "w": 1,
+       "d": 5,
+       "l": 4,
+       "gf": 9,
+       "ga": 15,
+       "pts": 8,
+       "tid": 9823,
+       "form": "LDLDD"
+      },
+      {
+       "pos": 17,
        "team": "Rayo Majadahonda",
        "p": 9,
        "w": 2,
@@ -1133,20 +1146,20 @@
        "form": "LLLLW"
       },
       {
-       "pos": 17,
-       "team": "Águilas",
-       "p": 9,
+       "pos": 18,
+       "team": "Juventud Torremolinos",
+       "p": 10,
        "w": 1,
        "d": 4,
-       "l": 4,
-       "gf": 9,
-       "ga": 15,
+       "l": 5,
+       "gf": 11,
+       "ga": 20,
        "pts": 7,
-       "tid": 9823,
-       "form": "LLDLD"
+       "tid": 15359,
+       "form": "LDDWD"
       },
       {
-       "pos": 18,
+       "pos": 19,
        "team": "Europa",
        "p": 10,
        "w": 2,
@@ -1157,19 +1170,6 @@
        "pts": 7,
        "tid": 593,
        "form": "LWLLL"
-      },
-      {
-       "pos": 19,
-       "team": "Juventud Torremolinos",
-       "p": 9,
-       "w": 1,
-       "d": 3,
-       "l": 5,
-       "gf": 11,
-       "ga": 20,
-       "pts": 6,
-       "tid": 15359,
-       "form": "LLDDW"
       },
       {
        "pos": 20,

@@ -80,15 +80,15 @@
     {
      "pos": 4,
      "team": "Aris",
-     "p": 8,
+     "p": 9,
      "w": 5,
      "d": 1,
-     "l": 2,
+     "l": 3,
      "gf": 13,
-     "ga": 14,
+     "ga": 17,
      "pts": 16,
      "tid": 1123,
-     "form": "LDWWW"
+     "form": "DWWWL"
     },
     {
      "pos": 5,
@@ -184,15 +184,15 @@
     {
      "pos": 12,
      "team": "Levadiakos",
-     "p": 8,
-     "w": 0,
+     "p": 9,
+     "w": 1,
      "d": 3,
      "l": 5,
-     "gf": 0,
+     "gf": 3,
      "ga": 11,
-     "pts": 3,
+     "pts": 6,
      "tid": 957,
-     "form": "DLLDD"
+     "form": "LLDDW"
     },
     {
      "pos": 13,

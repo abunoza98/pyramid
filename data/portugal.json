@@ -94,6 +94,19 @@
     },
     {
      "pos": 4,
+     "team": "Arouca",
+     "p": 10,
+     "w": 6,
+     "d": 2,
+     "l": 2,
+     "gf": 13,
+     "ga": 7,
+     "pts": 20,
+     "tid": 240,
+     "form": "LDWWW"
+    },
+    {
+     "pos": 5,
      "team": "Santa Clara",
      "p": 9,
      "w": 5,
@@ -104,19 +117,6 @@
      "pts": 18,
      "tid": 227,
      "form": "WWDWL"
-    },
-    {
-     "pos": 5,
-     "team": "Arouca",
-     "p": 9,
-     "w": 5,
-     "d": 2,
-     "l": 2,
-     "gf": 12,
-     "ga": 7,
-     "pts": 17,
-     "tid": 240,
-     "form": "DLDWW"
     },
     {
      "pos": 6,
@@ -238,15 +238,15 @@
     {
      "pos": 15,
      "team": "Nacional",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 1,
-     "l": 6,
+     "l": 7,
      "gf": 10,
-     "ga": 18,
+     "ga": 19,
      "pts": 7,
      "tid": 225,
-     "form": "LLLLW"
+     "form": "LLLWL"
     },
     {
      "pos": 16,
@@ -288,7 +288,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "liga-portugal-2",
@@ -394,6 +394,19 @@
     },
     {
      "pos": 6,
+     "team": "Tondela",
+     "p": 9,
+     "w": 5,
+     "d": 0,
+     "l": 4,
+     "gf": 12,
+     "ga": 10,
+     "pts": 15,
+     "tid": 218,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 7,
      "team": "Farense",
      "p": 8,
      "w": 4,
@@ -406,7 +419,7 @@
      "form": "LDWWL"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "União de Leiria",
      "p": 9,
      "w": 4,
@@ -419,7 +432,7 @@
      "form": "WDLDW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Vizela",
      "p": 9,
      "w": 4,
@@ -432,7 +445,7 @@
      "form": "WDLLW"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "AVS",
      "p": 9,
      "w": 3,
@@ -443,19 +456,6 @@
      "pts": 12,
      "tid": 21595,
      "form": "LDWWL"
-    },
-    {
-     "pos": 10,
-     "team": "Tondela",
-     "p": 8,
-     "w": 4,
-     "d": 0,
-     "l": 4,
-     "gf": 9,
-     "ga": 8,
-     "pts": 12,
-     "tid": 218,
-     "form": "LWWWL"
     },
     {
      "pos": 11,
@@ -538,15 +538,15 @@
     {
      "pos": 17,
      "team": "Felgueiras 1932",
-     "p": 8,
+     "p": 9,
      "w": 1,
      "d": 4,
-     "l": 3,
-     "gf": 7,
-     "ga": 9,
+     "l": 4,
+     "gf": 9,
+     "ga": 12,
      "pts": 7,
      "tid": 4744,
-     "form": "WLLLD"
+     "form": "LLLDL"
     },
     {
      "pos": 18,
