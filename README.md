@@ -75,6 +75,10 @@ Every club page's journey section has a **Compare with another club** button. It
 
 `COUNTRY ▾ · LEAGUE ▾ · SEASON` at the top of every club page comes from `FP.clubCrumbs`, fed by the build from the site's own country and league lists, so it works the same for every country. The country menu opens any country's pyramid; the league menu jumps to any table in the club's country.
 
+## Search engines
+
+Club pages for clubs that aren't in a covered league this season (the "Not in the … leagues covered here this season" pages) carry `noindex, follow` and are left out of `sitemap.xml`. They're mostly a line of history with no fixtures or results, so they stay up for visitors (search and links reach them) without being offered to Google as thin pages. Pass `noindex: true` to `shell()` in `build.mjs` for any other page that should get the same treatment; the sitemap skips it automatically when it's added to `unlistedUrls`.
+
 ## Live scores
 
 `worker/live.js` is a separate Cloudflare Worker (footballpyramids-live, on its workers.dev address). Every minute it checks today's fixtures for every league on the site (it reads `data/live-leagues.json`, which `build.mjs` writes) and, only while a game is on, asks API-Football for live scores. It saves them in a KV namespace and serves them at `/live.json`. The country and home pages read that every 30 seconds during games, lay the scores over the official tables and re-sort them ("as it stands"). Each fixture remembers how many games each club had played before kick-off, so a result is never counted twice once the official table catches up. Set `LIVE_URL` to `""` in `leagues.mjs` to switch it off.

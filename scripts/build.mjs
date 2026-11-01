@@ -73,7 +73,9 @@ function redirectPage(to, canonical, name) {
 `;
 }
 
-function shell({ title, description, canonical, base, suffix, page, country, stamps, main, countries, seasons, attrs = {}, jsonld = null }) {
+// noindex: the page stays up and linked for visitors, but search engines are asked not to list it (see the club pages
+// for clubs not in a covered league this season).
+function shell({ title, description, canonical, base, suffix, page, country, stamps, main, countries, seasons, attrs = {}, jsonld = null, noindex = false }) {
   const snapshot = countries.some((c) => c.mode !== "live");
   const home = base || "./";
   const homeHref = suffix ? base + suffix : home;
@@ -98,7 +100,7 @@ function shell({ title, description, canonical, base, suffix, page, country, sta
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
-<link rel="canonical" href="${canonical}">
+${noindex ? '<meta name="robots" content="noindex, follow">\n' : ""}<link rel="canonical" href="${canonical}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
@@ -296,7 +298,7 @@ export function markOutcomes(season, next) {
 
 function tierNames(c) {
   const first = c.leagues[0].name, last = c.leagues[c.leagues.length - 1].name;
-  return { first, last };
+  return { first, last, single: first === last };
 }
 
 // The "who qualifies" and format notes under a hand-kept competition (the Australian Championship).
@@ -607,11 +609,11 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
   // Country pages
   for (const c of countries) {
     const results = resultsOf[c.country] || 0;
-    const { first, last } = tierNames(c);
+    const { first, last, single } = tierNames(c);
     const nowMarks = await seasonMarks(c, c.leagues, Number(String(c.season).slice(0, 4)), "", { champions: true });
     await write(`${c.country}/index.html`, shell({
-      title: `${c.system ? c.system.charAt(0).toUpperCase() + c.system.slice(1) : c.adjective + " football pyramid"}: ${first} to ${last} tables | Football Pyramids`,
-      description: `Every ${c.adjective} league table from ${first} down to ${last} on one page, with ${c.closed ? "play-off" : "promotion, relegation and play-off"} places marked.`,
+      title: `${c.system ? c.system.charAt(0).toUpperCase() + c.system.slice(1) : c.adjective + " football pyramid"}: ${single ? `${first} table` : `${first} to ${last} tables`} | Football Pyramids`,
+      description: `${single ? `The ${c.adjective} ${first} table` : `Every ${c.adjective} league table from ${first} down to ${last} on one page`}, with ${c.closed ? "play-off" : "promotion, relegation and play-off"} places marked.`,
       canonical: `${SITE}/${c.country}/`, base: "../", suffix, page: "country", country: c.country,
       stamps: { [c.country]: c.updated }, countries, seasons: seasonList(c, history[c.country], "", suffix, null),
       attrs: { fixtures: fxLinks(false), cups: cupCards(c, ""), races: c.closed ? "" : `races/${suffix}`, ...(nowMarks ? { marks: nowMarks } : {}), ...(navFor(c, cupCards(c, "")) ? { nav: navFor(c, cupCards(c, "")) } : {}), ...(results ? { results: String(results) } : {}) },
@@ -710,8 +712,8 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       const n = tierNames(h);
       const seasons = seasonList(c, history[c.country], "../", suffix, h.year);
       await write(`${c.country}/${slug(h.year, c.country)}/index.html`, shell({
-        title: `${c.system ? c.system.charAt(0).toUpperCase() + c.system.slice(1) : c.adjective + " football pyramid"} ${h.season}: ${n.first} to ${n.last} final tables | Football Pyramids`,
-        description: `Final ${h.season} tables for ${c.adjective} football, from ${n.first} down to ${n.last}, with promotion and relegation marked.`,
+        title: `${c.system ? c.system.charAt(0).toUpperCase() + c.system.slice(1) : c.adjective + " football pyramid"} ${h.season}: ${n.single ? `${n.first} final table` : `${n.first} to ${n.last} final tables`} | Football Pyramids`,
+        description: `${n.single ? `The final ${h.season} ${c.adjective} ${n.first} table` : `Final ${h.season} tables for ${c.adjective} football, from ${n.first} down to ${n.last}`}, with promotion and relegation marked.`,
         canonical: `${SITE}/${c.country}/${slug(h.year, c.country)}/`, base: "../../", suffix, page: "history", country: c.country,
         jsonld: crumbs([["Football Pyramids", SITE + "/"], [c.name, `${SITE}/${c.country}/`], [h.season, `${SITE}/${c.country}/${slug(h.year, c.country)}/`]]),
         stamps: {}, countries, main: FP.countryMain(Object.assign(h, { system: c.system, closed: c.closed }), { seasons, clubPaths: pathByName[c.country], root: "../../", suffix, cups: pastCupCards(c, h.year, "../"), marks: pastMarks, nav: navFor(c, pastCupCards(c, h.year, "../")) })
@@ -762,6 +764,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
 
   // Club pages: one per club in the current tables, from data the site already has (no extra API requests).
   const clubUrls = [];
+  const unlistedUrls = new Set();   // pages built with noindex: kept out of the sitemap
   const pastFinder = [];   // clubs only in past seasons, for the club finder
   {
     // Every fixture each club has, across its league, cups and Europe.
@@ -1024,6 +1027,8 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
       clubUrls.push(`/${k.path}`);
     }
     // Clubs only in past seasons: their journey through the pyramid and when they were last seen.
+    // These pages are mostly a line or two of history with no fixtures or results, so they're kept for visitors
+    // (search and links still reach them) but marked noindex and left out of the sitemap.
     for (const k of pastOnly) {
       const journey = moves(pastSeasons(k.c, k.name));
       if (!journey.length) continue;
@@ -1037,9 +1042,10 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
         canonical: `${SITE}/${k.path}`, base, suffix, page: "club", country: k.c.country, stamps: {}, countries,
         jsonld: [crumbs([["Football Pyramids", SITE + "/"], [k.c.name, `${SITE}/${k.c.country}/`], [k.name, `${SITE}/${k.path}`]]),
           { "@context": "https://schema.org", "@type": "SportsTeam", name: k.name, sport: "Soccer", url: `${SITE}/${k.path}` }],
-        main: FP.clubMain(data, { tz: "venue" })
+        main: FP.clubMain(data, { tz: "venue" }), noindex: true
       }));
       clubUrls.push(`/${k.path}`);
+      unlistedUrls.add(`/${k.path}`);
       addJourney(k.c, k.name, k.slug, k.path, journey);
       pastFinder.push({ team: k.name, country: k.c.country, countryName: k.c.name, league: last.league, tier: last.tier, past: last.season, path: k.path });
     }
@@ -1210,7 +1216,7 @@ export async function build({ root = ROOT, outDir = ROOT, preview = false } = {}
     await write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(([u, d]) => dated(u, d, "hourly")).join("\n")}
-${clubUrls.map((u) => dated(u, clubDate(u), "daily")).join("\n")}
+${clubUrls.filter((u) => !unlistedUrls.has(u)).map((u) => dated(u, clubDate(u), "daily")).join("\n")}
 ${cupUrls.map((u) => dated(u, fxDate(u.slice(1, -1)), "daily")).join("\n")}
 ${racesUrls.map((u) => dated(u, countryDate[u.split("/")[1]], "daily")).join("\n")}
 ${fxPages.map((k) => dated(`/${k}/fixtures/`, fxDate(k), "daily")).join("\n")}
