@@ -1353,6 +1353,32 @@
      "rows": [
       {
        "pos": 1,
+       "team": "Nilüfer Belediye",
+       "p": 9,
+       "w": 6,
+       "d": 3,
+       "l": 0,
+       "gf": 19,
+       "ga": 4,
+       "pts": 21,
+       "tid": 24602,
+       "form": "WWDDW"
+      },
+      {
+       "pos": 2,
+       "team": "Eskişehirspor",
+       "p": 9,
+       "w": 5,
+       "d": 3,
+       "l": 1,
+       "gf": 28,
+       "ga": 10,
+       "pts": 18,
+       "tid": 3572,
+       "form": "WDWDW"
+      },
+      {
+       "pos": 3,
        "team": "Anadolu Üniversitesi",
        "p": 9,
        "w": 5,
@@ -1365,20 +1391,7 @@
        "form": "WLDWW"
       },
       {
-       "pos": 2,
-       "team": "Nilüfer Belediye",
-       "p": 8,
-       "w": 5,
-       "d": 3,
-       "l": 0,
-       "gf": 12,
-       "ga": 3,
-       "pts": 18,
-       "tid": 24602,
-       "form": "DWWDD"
-      },
-      {
-       "pos": 3,
+       "pos": 4,
        "team": "Ayvalikgucu",
        "p": 9,
        "w": 5,
@@ -1391,7 +1404,7 @@
        "form": "DWDDW"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Balıkesirspor",
        "p": 9,
        "w": 5,
@@ -1404,7 +1417,7 @@
        "form": "LWDWD"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "Etimesgut SK",
        "p": 9,
        "w": 5,
@@ -1417,7 +1430,7 @@
        "form": "WDDWL"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Bigaspor",
        "p": 9,
        "w": 5,
@@ -1430,7 +1443,7 @@
        "form": "WWWLW"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Bursa Yıldırımspor",
        "p": 9,
        "w": 4,
@@ -1441,19 +1454,6 @@
        "pts": 17,
        "tid": 6517,
        "form": "WWDDD"
-      },
-      {
-       "pos": 8,
-       "team": "Eskişehirspor",
-       "p": 8,
-       "w": 4,
-       "d": 3,
-       "l": 1,
-       "gf": 23,
-       "ga": 10,
-       "pts": 15,
-       "tid": 3572,
-       "form": "WWDWD"
       },
       {
        "pos": 9,
@@ -1471,15 +1471,15 @@
       {
        "pos": 10,
        "team": "Gaziemirspor",
-       "p": 8,
+       "p": 9,
        "w": 3,
        "d": 1,
-       "l": 4,
+       "l": 5,
        "gf": 10,
-       "ga": 11,
+       "ga": 16,
        "pts": 10,
        "tid": 28388,
-       "form": "WLWLD"
+       "form": "LWLDL"
       },
       {
        "pos": 11,
@@ -1509,19 +1509,6 @@
       },
       {
        "pos": 13,
-       "team": "Söke 1970",
-       "p": 8,
-       "w": 1,
-       "d": 4,
-       "l": 3,
-       "gf": 11,
-       "ga": 12,
-       "pts": 7,
-       "tid": 19303,
-       "form": "DDLDL"
-      },
-      {
-       "pos": 14,
        "team": "Uşak Spor",
        "p": 9,
        "w": 1,
@@ -1532,6 +1519,19 @@
        "pts": 7,
        "tid": 3610,
        "form": "LLDDL"
+      },
+      {
+       "pos": 14,
+       "team": "Söke 1970",
+       "p": 9,
+       "w": 1,
+       "d": 4,
+       "l": 4,
+       "gf": 12,
+       "ga": 19,
+       "pts": 7,
+       "tid": 19303,
+       "form": "DLDLL"
       },
       {
        "pos": 15,

@@ -4,7 +4,7 @@
  "adjective": "French",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-31T00:00:00.000Z",
+ "updated": "2026-11-01T00:00:00.000Z",
  "belowNote": "Promoted clubs from National 1 come up",
  "leagues": [
   {
@@ -198,19 +198,32 @@
     },
     {
      "pos": 12,
-     "team": "Auxerre",
-     "p": 8,
+     "team": "Strasbourg",
+     "p": 9,
      "w": 3,
      "d": 1,
-     "l": 4,
-     "gf": 12,
-     "ga": 18,
+     "l": 5,
+     "gf": 17,
+     "ga": 19,
      "pts": 10,
-     "tid": 108,
-     "form": "WWLWD"
+     "tid": 95,
+     "form": "LLLLW"
     },
     {
      "pos": 13,
+     "team": "Auxerre",
+     "p": 9,
+     "w": 3,
+     "d": 1,
+     "l": 5,
+     "gf": 13,
+     "ga": 23,
+     "pts": 10,
+     "tid": 108,
+     "form": "WLWDL"
+    },
+    {
+     "pos": 14,
      "team": "Brest",
      "p": 8,
      "w": 2,
@@ -223,7 +236,7 @@
      "form": "LLWDL"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Angers",
      "p": 8,
      "w": 2,
@@ -236,7 +249,7 @@
      "form": "DWLLD"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Troyes",
      "p": 9,
      "w": 2,
@@ -247,19 +260,6 @@
      "pts": 8,
      "tid": 110,
      "form": "LLLDW"
-    },
-    {
-     "pos": 16,
-     "team": "Strasbourg",
-     "p": 8,
-     "w": 2,
-     "d": 1,
-     "l": 5,
-     "gf": 12,
-     "ga": 18,
-     "pts": 7,
-     "tid": 95,
-     "form": "DLLLL"
     },
     {
      "pos": 17,
@@ -288,7 +288,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "ligue-2",

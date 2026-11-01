@@ -109,15 +109,15 @@
     {
      "pos": 6,
      "team": "Sevilla",
-     "p": 10,
+     "p": 11,
      "w": 5,
      "d": 2,
-     "l": 3,
-     "gf": 16,
-     "ga": 16,
+     "l": 4,
+     "gf": 17,
+     "ga": 19,
      "pts": 17,
      "tid": 536,
-     "form": "WLDLW"
+     "form": "LDLWL"
     },
     {
      "pos": 7,
@@ -186,6 +186,19 @@
     },
     {
      "pos": 12,
+     "team": "Getafe",
+     "p": 11,
+     "w": 3,
+     "d": 3,
+     "l": 5,
+     "gf": 8,
+     "ga": 16,
+     "pts": 12,
+     "tid": 546,
+     "form": "WLDLW"
+    },
+    {
+     "pos": 13,
      "team": "Deportivo La Coruña",
      "p": 10,
      "w": 2,
@@ -198,7 +211,7 @@
      "form": "LDLDL"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Espanyol",
      "p": 11,
      "w": 3,
@@ -211,7 +224,7 @@
      "form": "LDLLW"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Osasuna",
      "p": 10,
      "w": 3,
@@ -224,7 +237,7 @@
      "form": "LDLWL"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Racing Santander",
      "p": 10,
      "w": 3,
@@ -237,7 +250,7 @@
      "form": "LLDLW"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Elche",
      "p": 10,
      "w": 2,
@@ -250,7 +263,7 @@
      "form": "LWDDW"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Levante",
      "p": 11,
      "w": 2,
@@ -261,19 +274,6 @@
      "pts": 10,
      "tid": 539,
      "form": "DDWLL"
-    },
-    {
-     "pos": 18,
-     "team": "Getafe",
-     "p": 10,
-     "w": 2,
-     "d": 3,
-     "l": 5,
-     "gf": 5,
-     "ga": 15,
-     "pts": 9,
-     "tid": 546,
-     "form": "LWLDL"
     },
     {
      "pos": 19,
@@ -376,6 +376,19 @@
     },
     {
      "pos": 4,
+     "team": "Granada",
+     "p": 12,
+     "w": 7,
+     "d": 2,
+     "l": 3,
+     "gf": 20,
+     "ga": 14,
+     "pts": 23,
+     "tid": 715,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 5,
      "team": "Girona",
      "p": 12,
      "w": 6,
@@ -386,19 +399,6 @@
      "pts": 21,
      "tid": 547,
      "form": "DDWWL"
-    },
-    {
-     "pos": 5,
-     "team": "Granada",
-     "p": 11,
-     "w": 6,
-     "d": 2,
-     "l": 3,
-     "gf": 18,
-     "ga": 14,
-     "pts": 20,
-     "tid": 715,
-     "form": "LWWWW"
     },
     {
      "pos": 6,
@@ -494,15 +494,15 @@
     {
      "pos": 13,
      "team": "Eldense",
-     "p": 11,
+     "p": 12,
      "w": 4,
      "d": 2,
-     "l": 5,
+     "l": 6,
      "gf": 13,
-     "ga": 15,
+     "ga": 17,
      "pts": 14,
      "tid": 9692,
-     "form": "LWWWL"
+     "form": "WWWLL"
     },
     {
      "pos": 14,
