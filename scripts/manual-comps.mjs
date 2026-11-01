@@ -40,7 +40,8 @@ function build(cfg, def, ed, clubs) {
     const f = { id: -(year * 1000 + i + 1), ts, st: done ? (m.pen ? "PEN" : m.aet ? "AET" : "FT") : m.at ? "NS" : "TBD", h: tag(m.h), a: tag(m.a) };
     if (done) { f.hg = m.s[0]; f.ag = m.s[1]; f.p1 = ts; f.p2 = ts + 3600; }
     if (m.pen) f.pen = m.pen;
-    if (m.so) f.so = m.so;
+    // The shootout winner: given (so), or from the shootout score (pen), so a group-stage bonus point is never missed.
+    if (m.so) f.so = m.so; else if (m.pen && m.pen[0] !== m.pen[1]) f.so = m.pen[0] > m.pen[1] ? "h" : "a";
     if (m.v) f.v = m.v;
     if (m.nodate) f.nodate = true;
     const z = venueZone(cfg, f, (clubs[m.h] || {}).state);
