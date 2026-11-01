@@ -15,7 +15,8 @@ function emailLine(email) {
 
 // countries: [{ name, first, last, tiers, since }] in site order. europe: competition names, or [].
 export function contactPage({ contact, snapshot, countries, europe = [] }) {
-  const coverage = countries.map((c) => `<li><strong>${esc(c.name)}:</strong> ${c.tiers} tier${c.tiers === 1 ? "" : "s"}, ${esc(c.first)} down to ${esc(c.last)}` +
+  const coverage = countries.map((c) => `<li><strong>${esc(c.name)}:</strong> ${c.tiers} tier${c.tiers === 1 ? "" : "s"}, ` +
+    (c.tiers === 1 || c.first === c.last ? esc(c.first) : `${esc(c.first)} down to ${esc(c.last)}`) +
     (c.since ? `. Final tables back to ${esc(c.since)}.` : ".") + "</li>").join("\n  ");
   return `<article class="prose" aria-labelledby="page-h">
 <p class="eyebrow">About</p>
@@ -34,7 +35,7 @@ ${snapshot
   ? "<p>For now the tables are a sample snapshot gathered by hand, and each table shows the date it is from. Once the live data feed is switched on, they will update through the day as results come in.</p>"
   : `<p>Tables, fixtures and results come from a commercial football data provider.</p>
 <ul>
-  <li><strong>Standings</strong> are checked hourly through the afternoon and evening (UK time) and once in the morning. Each table says which date it is as of: the last time it changed, so a table can show an older date after a quiet week without anything being wrong.</li>
+  <li><strong>Standings</strong> are checked every hour, around the clock, so leagues in the Americas, Asia and Australia stay as current as Europe's. Each table says which date it is as of: the last time it changed, so a table can show an older date after a quiet week without anything being wrong.</li>
   <li><strong>Fixtures and kick-off times</strong> are checked every two hours. Postponed, cancelled and "time to be confirmed" games are marked as such, and a moved kick-off shows its old time for three weeks.</li>
   <li><strong>Live scores</strong> update about every minute while games are on, and the tables show how they stand until the official tables catch up.</li>
 </ul>`}

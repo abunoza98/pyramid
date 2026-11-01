@@ -477,11 +477,18 @@
     var last = c.leagues[c.leagues.length - 1];
     var n = ["", "one", "two", "three", "four", "five", "six"][c.leagues.length];
     var past = c.mode === "final";
+    // A country covered to one tier only (Indonesia) gets its own wording, not "the top one tiers, from X down to X".
+    var single = c.leagues.length === 1;
+    var topOf = "the top " + (c.system ? "level of the " + esc(c.system) : "tier of " + esc(c.adjective) + " football");
     var html =
       '<section class="intro" aria-labelledby="intro-h">' +
       '<h1 id="intro-h">The ' + (c.system ? esc(c.system) : esc(c.adjective) + " football pyramid") + (past ? '<span class="h1-season">, ' + esc(c.season) + "</span>" : "") + "</h1>" +
       seasonsHTML(c, opts.seasons) +
-      (past
+      (single
+        ? '<p class="lede">' + (past ? "The final " + esc(c.season) + " table for " + esc(c.leagues[0].name) : esc(c.leagues[0].name)) + ", " + topOf + ". " +
+          (past ? (c.closed ? "Play-off places are marked from the league's records." : "Promotion, relegation and play-off places are marked where they apply, from the league's records.")
+            : (c.systemNote ? esc(c.systemNote) : "Promotion, relegation and play-off places are marked on the table where they apply.")) + "</p>"
+        : past
         ? '<p class="lede">Final tables for the top ' + n + (c.system ? " levels of the " + esc(c.system) : " tiers of " + esc(c.adjective) + " football") + " in " + esc(c.season) +
           ", from " + esc(c.leagues[0].name) + " down to " + esc(last.name) + ". " + (c.closed ? "Play-off places are marked from each league's records." : "Promotion, relegation and play-off places are marked where they apply, from each league's records.") + "</p>"
         : '<p class="lede">' + (c.system ? "The top " + n + " levels of the " + esc(c.system) : "Every league in the top " + n + " tiers of " + esc(c.adjective) + " football") + ", from " + esc(c.leagues[0].name) +
