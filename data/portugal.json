@@ -343,15 +343,15 @@
     {
      "pos": 2,
      "team": "Lusitânia Lourosa",
-     "p": 8,
+     "p": 9,
      "w": 5,
-     "d": 3,
+     "d": 4,
      "l": 0,
-     "gf": 14,
-     "ga": 7,
-     "pts": 18,
+     "gf": 15,
+     "ga": 8,
+     "pts": 19,
      "tid": 6358,
-     "form": "WWWDD"
+     "form": "WWDDD"
     },
     {
      "pos": 3,
@@ -381,6 +381,19 @@
     },
     {
      "pos": 5,
+     "team": "Farense",
+     "p": 9,
+     "w": 4,
+     "d": 3,
+     "l": 2,
+     "gf": 15,
+     "ga": 11,
+     "pts": 15,
+     "tid": 231,
+     "form": "DWWLD"
+    },
+    {
+     "pos": 6,
      "team": "Académica",
      "p": 9,
      "w": 5,
@@ -393,7 +406,7 @@
      "form": "LLWWL"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Tondela",
      "p": 9,
      "w": 5,
@@ -406,33 +419,7 @@
      "form": "WWWLW"
     },
     {
-     "pos": 7,
-     "team": "Farense",
-     "p": 8,
-     "w": 4,
-     "d": 2,
-     "l": 2,
-     "gf": 14,
-     "ga": 10,
-     "pts": 14,
-     "tid": 231,
-     "form": "LDWWL"
-    },
-    {
      "pos": 8,
-     "team": "União de Leiria",
-     "p": 9,
-     "w": 4,
-     "d": 2,
-     "l": 3,
-     "gf": 13,
-     "ga": 11,
-     "pts": 14,
-     "tid": 4662,
-     "form": "WDLDW"
-    },
-    {
-     "pos": 9,
      "team": "Vizela",
      "p": 9,
      "w": 4,
@@ -443,6 +430,19 @@
      "pts": 14,
      "tid": 810,
      "form": "WDLLW"
+    },
+    {
+     "pos": 9,
+     "team": "União de Leiria",
+     "p": 9,
+     "w": 4,
+     "d": 2,
+     "l": 3,
+     "gf": 13,
+     "ga": 11,
+     "pts": 14,
+     "tid": 4662,
+     "form": "WDLDW"
     },
     {
      "pos": 10,

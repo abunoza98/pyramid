@@ -616,15 +616,15 @@
     {
      "pos": 3,
      "team": "Rot-Weiss Essen",
-     "p": 11,
-     "w": 6,
+     "p": 12,
+     "w": 7,
      "d": 3,
      "l": 2,
-     "gf": 19,
+     "gf": 20,
      "ga": 13,
-     "pts": 21,
+     "pts": 24,
      "tid": 1621,
-     "form": "DDWLW"
+     "form": "DWLWW"
     },
     {
      "pos": 4,
@@ -811,15 +811,15 @@
     {
      "pos": 18,
      "team": "Sonnenhof Großaspach",
-     "p": 11,
+     "p": 12,
      "w": 3,
      "d": 3,
-     "l": 5,
+     "l": 6,
      "gf": 13,
-     "ga": 25,
+     "ga": 26,
      "pts": 12,
      "tid": 1317,
-     "form": "LLDWL"
+     "form": "LDWLL"
     },
     {
      "pos": 19,

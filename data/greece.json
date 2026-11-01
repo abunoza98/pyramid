@@ -92,6 +92,19 @@
     },
     {
      "pos": 5,
+     "team": "OFI Crete",
+     "p": 9,
+     "w": 5,
+     "d": 1,
+     "l": 3,
+     "gf": 14,
+     "ga": 12,
+     "pts": 16,
+     "tid": 1124,
+     "form": "DLLWW"
+    },
+    {
+     "pos": 6,
      "team": "PAOK",
      "p": 8,
      "w": 5,
@@ -102,19 +115,6 @@
      "pts": 15,
      "tid": 619,
      "form": "WWLWL"
-    },
-    {
-     "pos": 6,
-     "team": "OFI Crete",
-     "p": 8,
-     "w": 4,
-     "d": 1,
-     "l": 3,
-     "gf": 13,
-     "ga": 12,
-     "pts": 13,
-     "tid": 1124,
-     "form": "WDLLW"
     },
     {
      "pos": 7,
@@ -158,12 +158,12 @@
     {
      "pos": 10,
      "team": "Panetolikos",
-     "p": 8,
+     "p": 9,
      "w": 3,
      "d": 0,
-     "l": 5,
+     "l": 6,
      "gf": 8,
-     "ga": 16,
+     "ga": 17,
      "pts": 9,
      "tid": 949,
      "form": "LLLLL"

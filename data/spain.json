@@ -70,15 +70,15 @@
     {
      "pos": 3,
      "team": "Real Madrid",
-     "p": 10,
-     "w": 8,
+     "p": 11,
+     "w": 9,
      "d": 0,
      "l": 2,
-     "gf": 25,
+     "gf": 28,
      "ga": 10,
-     "pts": 24,
+     "pts": 27,
      "tid": 541,
-     "form": "WLWWW"
+     "form": "LWWWW"
     },
     {
      "pos": 4,
@@ -239,15 +239,15 @@
     {
      "pos": 16,
      "team": "Racing Santander",
-     "p": 10,
+     "p": 11,
      "w": 3,
      "d": 2,
-     "l": 5,
+     "l": 6,
      "gf": 15,
-     "ga": 26,
+     "ga": 29,
      "pts": 11,
      "tid": 4665,
-     "form": "LLDLW"
+     "form": "LDLWL"
     },
     {
      "pos": 17,
@@ -830,15 +830,15 @@
       {
        "pos": 14,
        "team": "Cultural Leonesa",
-       "p": 9,
+       "p": 10,
        "w": 3,
        "d": 3,
-       "l": 3,
+       "l": 4,
        "gf": 10,
-       "ga": 9,
+       "ga": 10,
        "pts": 12,
        "tid": 725,
-       "form": "DLWDL"
+       "form": "LWDLL"
       },
       {
        "pos": 15,
@@ -869,15 +869,15 @@
       {
        "pos": 17,
        "team": "Coria",
-       "p": 9,
+       "p": 10,
        "w": 2,
        "d": 3,
-       "l": 4,
+       "l": 5,
        "gf": 12,
-       "ga": 16,
+       "ga": 17,
        "pts": 9,
        "tid": 9827,
-       "form": "DLLWD"
+       "form": "LLWDL"
       },
       {
        "pos": 18,
@@ -895,28 +895,28 @@
       {
        "pos": 19,
        "team": "UD Ourense",
-       "p": 9,
-       "w": 1,
+       "p": 10,
+       "w": 2,
        "d": 2,
        "l": 6,
-       "gf": 3,
+       "gf": 4,
        "ga": 15,
-       "pts": 5,
+       "pts": 8,
        "tid": 9617,
-       "form": "DDWLL"
+       "form": "DWLLW"
       },
       {
        "pos": 20,
        "team": "Arenas",
-       "p": 9,
-       "w": 1,
+       "p": 10,
+       "w": 2,
        "d": 2,
        "l": 6,
-       "gf": 7,
+       "gf": 8,
        "ga": 22,
-       "pts": 5,
+       "pts": 8,
        "tid": 9578,
-       "form": "LDLLW"
+       "form": "DLLWW"
       }
      ]
     },

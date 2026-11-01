@@ -422,6 +422,19 @@
     },
     {
      "pos": 7,
+     "team": "Hellas Verona",
+     "p": 10,
+     "w": 4,
+     "d": 3,
+     "l": 3,
+     "gf": 19,
+     "ga": 13,
+     "pts": 15,
+     "tid": 504,
+     "form": "LDDWW"
+    },
+    {
+     "pos": 8,
      "team": "Pisa",
      "p": 10,
      "w": 4,
@@ -434,7 +447,7 @@
      "form": "WWDDL"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Padova",
      "p": 10,
      "w": 4,
@@ -447,7 +460,7 @@
      "form": "LLWWD"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Südtirol",
      "p": 10,
      "w": 3,
@@ -458,19 +471,6 @@
      "pts": 14,
      "tid": 1578,
      "form": "DLDLD"
-    },
-    {
-     "pos": 10,
-     "team": "Hellas Verona",
-     "p": 9,
-     "w": 3,
-     "d": 3,
-     "l": 3,
-     "gf": 16,
-     "ga": 13,
-     "pts": 12,
-     "tid": 504,
-     "form": "WLDDW"
     },
     {
      "pos": 11,
@@ -527,15 +527,15 @@
     {
      "pos": 15,
      "team": "Carrarese",
-     "p": 9,
+     "p": 10,
      "w": 3,
      "d": 1,
-     "l": 5,
+     "l": 6,
      "gf": 9,
-     "ga": 10,
+     "ga": 13,
      "pts": 10,
      "tid": 1581,
-     "form": "LWWLW"
+     "form": "WWLWL"
     },
     {
      "pos": 16,

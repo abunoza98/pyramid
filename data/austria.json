@@ -28,6 +28,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Rapid Wien",
+     "p": 11,
+     "w": 10,
+     "d": 0,
+     "l": 1,
+     "gf": 33,
+     "ga": 9,
+     "pts": 30,
+     "tid": 781,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
      "team": "Red Bull Salzburg",
      "p": 11,
      "w": 8,
@@ -38,19 +51,6 @@
      "pts": 27,
      "tid": 571,
      "form": "WDWWW"
-    },
-    {
-     "pos": 2,
-     "team": "Rapid Wien",
-     "p": 10,
-     "w": 9,
-     "d": 0,
-     "l": 1,
-     "gf": 31,
-     "ga": 9,
-     "pts": 27,
-     "tid": 781,
-     "form": "WWWWW"
     },
     {
      "pos": 3,
@@ -159,15 +159,15 @@
     {
      "pos": 11,
      "team": "Austria Wien",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 1,
-     "l": 7,
+     "l": 8,
      "gf": 10,
-     "ga": 20,
+     "ga": 22,
      "pts": 7,
      "tid": 601,
-     "form": "WDLLL"
+     "form": "DLLLL"
     },
     {
      "pos": 12,
