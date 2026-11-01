@@ -562,16 +562,16 @@
     },
     {
      "pos": 2,
-     "team": "La Tribu de Cd. Juarez",
-     "p": 9,
+     "team": "FC Santiago",
+     "p": 10,
      "w": 6,
-     "d": 0,
+     "d": 1,
      "l": 3,
-     "gf": 22,
-     "ga": 10,
-     "pts": 19,
-     "tid": 28306,
-     "form": "WLLWW"
+     "gf": 23,
+     "ga": 7,
+     "pts": 20,
+     "tid": 22055,
+     "form": "DWWWW"
     },
     {
      "pos": 2,
@@ -588,16 +588,16 @@
     },
     {
      "pos": 3,
-     "team": "Mineros de Fresnillo",
+     "team": "La Tribu de Cd. Juarez",
      "p": 9,
-     "w": 5,
-     "d": 3,
-     "l": 1,
-     "gf": 16,
-     "ga": 5,
+     "w": 6,
+     "d": 0,
+     "l": 3,
+     "gf": 22,
+     "ga": 10,
      "pts": 19,
-     "tid": 15935,
-     "form": "LWWDW"
+     "tid": 28306,
+     "form": "WLLWW"
     },
     {
      "pos": 3,
@@ -614,16 +614,16 @@
     },
     {
      "pos": 4,
-     "team": "Correcaminos UAT II",
-     "p": 10,
+     "team": "Mineros de Fresnillo",
+     "p": 9,
      "w": 5,
-     "d": 2,
-     "l": 3,
+     "d": 3,
+     "l": 1,
      "gf": 16,
-     "ga": 12,
-     "pts": 18,
-     "tid": 17782,
-     "form": "WWWLW"
+     "ga": 5,
+     "pts": 19,
+     "tid": 15935,
+     "form": "LWWDW"
     },
     {
      "pos": 4,
@@ -640,16 +640,16 @@
     },
     {
      "pos": 5,
-     "team": "FC Santiago",
-     "p": 9,
+     "team": "Correcaminos UAT II",
+     "p": 10,
      "w": 5,
-     "d": 1,
+     "d": 2,
      "l": 3,
-     "gf": 20,
-     "ga": 7,
-     "pts": 17,
-     "tid": 22055,
-     "form": "LDWWW"
+     "gf": 16,
+     "ga": 12,
+     "pts": 18,
+     "tid": 17782,
+     "form": "WWWLW"
     },
     {
      "pos": 5,
@@ -761,16 +761,16 @@
     {
      "pos": 9,
      "team": "Ciervos",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 0,
-     "l": 7,
+     "l": 8,
      "gf": 11,
-     "ga": 30,
+     "ga": 33,
      "pts": 5,
      "ded": 1,
      "tid": 15925,
-     "form": "WLLWL"
+     "form": "LLWLL"
     },
     {
      "pos": 10,

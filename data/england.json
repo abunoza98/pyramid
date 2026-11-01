@@ -141,6 +141,19 @@
     },
     {
      "pos": 9,
+     "team": "Aston Villa",
+     "p": 9,
+     "w": 3,
+     "d": 3,
+     "l": 3,
+     "gf": 10,
+     "ga": 13,
+     "pts": 12,
+     "tid": 66,
+     "form": "WDWWD"
+    },
+    {
+     "pos": 10,
      "team": "Hull City",
      "p": 9,
      "w": 2,
@@ -153,7 +166,7 @@
      "form": "LDLDD"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Leeds United",
      "p": 9,
      "w": 2,
@@ -166,7 +179,7 @@
      "form": "DLDDL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Newcastle United",
      "p": 8,
      "w": 3,
@@ -177,19 +190,6 @@
      "pts": 11,
      "tid": 34,
      "form": "LWLLW"
-    },
-    {
-     "pos": 12,
-     "team": "Aston Villa",
-     "p": 8,
-     "w": 3,
-     "d": 2,
-     "l": 3,
-     "gf": 9,
-     "ga": 12,
-     "pts": 11,
-     "tid": 66,
-     "form": "LWDWW"
     },
     {
      "pos": 13,
@@ -219,6 +219,19 @@
     },
     {
      "pos": 15,
+     "team": "Fulham",
+     "p": 9,
+     "w": 2,
+     "d": 3,
+     "l": 4,
+     "gf": 9,
+     "ga": 11,
+     "pts": 9,
+     "tid": 36,
+     "form": "DLWWD"
+    },
+    {
+     "pos": 16,
      "team": "Coventry City",
      "p": 9,
      "w": 3,
@@ -229,19 +242,6 @@
      "pts": 9,
      "tid": 1346,
      "form": "WWLLW"
-    },
-    {
-     "pos": 16,
-     "team": "Fulham",
-     "p": 8,
-     "w": 2,
-     "d": 2,
-     "l": 4,
-     "gf": 8,
-     "ga": 10,
-     "pts": 8,
-     "tid": 36,
-     "form": "DDLWW"
     },
     {
      "pos": 17,

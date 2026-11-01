@@ -43,6 +43,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Barcelona",
+     "p": 11,
+     "w": 10,
+     "d": 0,
+     "l": 1,
+     "gf": 46,
+     "ga": 12,
+     "pts": 30,
+     "tid": 529,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 2,
      "team": "Atlético Madrid",
      "p": 11,
      "w": 9,
@@ -53,19 +66,6 @@
      "pts": 28,
      "tid": 530,
      "form": "WWWWW"
-    },
-    {
-     "pos": 2,
-     "team": "Barcelona",
-     "p": 10,
-     "w": 9,
-     "d": 0,
-     "l": 1,
-     "gf": 40,
-     "ga": 11,
-     "pts": 27,
-     "tid": 529,
-     "form": "WWWWL"
     },
     {
      "pos": 3,
@@ -121,19 +121,6 @@
     },
     {
      "pos": 7,
-     "team": "Alavés",
-     "p": 10,
-     "w": 3,
-     "d": 3,
-     "l": 4,
-     "gf": 14,
-     "ga": 11,
-     "pts": 12,
-     "tid": 542,
-     "form": "LDLLD"
-    },
-    {
-     "pos": 8,
      "team": "Athletic Bilbao",
      "p": 9,
      "w": 3,
@@ -146,7 +133,7 @@
      "form": "DDDLW"
     },
     {
-     "pos": 9,
+     "pos": 8,
      "team": "Villarreal",
      "p": 11,
      "w": 3,
@@ -159,7 +146,7 @@
      "form": "WLDWL"
     },
     {
-     "pos": 10,
+     "pos": 9,
      "team": "Celta Vigo",
      "p": 11,
      "w": 2,
@@ -170,6 +157,19 @@
      "pts": 12,
      "tid": 538,
      "form": "WDWDL"
+    },
+    {
+     "pos": 10,
+     "team": "Alavés",
+     "p": 11,
+     "w": 3,
+     "d": 3,
+     "l": 5,
+     "gf": 15,
+     "ga": 17,
+     "pts": 12,
+     "tid": 542,
+     "form": "DLLDL"
     },
     {
      "pos": 11,
@@ -455,15 +455,15 @@
     {
      "pos": 10,
      "team": "Sabadell",
-     "p": 11,
+     "p": 12,
      "w": 4,
      "d": 5,
-     "l": 2,
-     "gf": 11,
-     "ga": 9,
+     "l": 3,
+     "gf": 12,
+     "ga": 11,
      "pts": 17,
      "tid": 9593,
-     "form": "DDWLD"
+     "form": "DWLDL"
     },
     {
      "pos": 11,
@@ -597,6 +597,19 @@
     },
     {
      "pos": 21,
+     "team": "Albacete",
+     "p": 12,
+     "w": 2,
+     "d": 1,
+     "l": 9,
+     "gf": 10,
+     "ga": 23,
+     "pts": 7,
+     "tid": 722,
+     "form": "LLLWW"
+    },
+    {
+     "pos": 22,
      "team": "Ceuta",
      "p": 11,
      "w": 1,
@@ -607,19 +620,6 @@
      "pts": 5,
      "tid": 10139,
      "form": "WDLLL"
-    },
-    {
-     "pos": 22,
-     "team": "Albacete",
-     "p": 11,
-     "w": 1,
-     "d": 1,
-     "l": 9,
-     "gf": 8,
-     "ga": 22,
-     "pts": 4,
-     "tid": 722,
-     "form": "LLLLW"
     }
    ],
    "updated": "2026-10-31T00:00:00.000Z"
@@ -927,28 +927,28 @@
       {
        "pos": 1,
        "team": "Villarreal B",
-       "p": 9,
+       "p": 10,
        "w": 6,
-       "d": 2,
+       "d": 3,
        "l": 1,
-       "gf": 21,
-       "ga": 10,
-       "pts": 20,
+       "gf": 23,
+       "ga": 12,
+       "pts": 21,
        "tid": 9595,
-       "form": "WLDWW"
+       "form": "LDWWD"
       },
       {
        "pos": 2,
        "team": "Zaragoza",
-       "p": 9,
+       "p": 10,
        "w": 6,
-       "d": 2,
+       "d": 3,
        "l": 1,
-       "gf": 17,
-       "ga": 10,
-       "pts": 20,
+       "gf": 19,
+       "ga": 12,
+       "pts": 21,
        "tid": 732,
-       "form": "WWDDW"
+       "form": "WDDWD"
       },
       {
        "pos": 3,
