@@ -389,6 +389,19 @@
     },
     {
      "pos": 5,
+     "team": "Sporting Gijón",
+     "p": 12,
+     "w": 7,
+     "d": 1,
+     "l": 4,
+     "gf": 13,
+     "ga": 13,
+     "pts": 22,
+     "tid": 731,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 6,
      "team": "Girona",
      "p": 12,
      "w": 6,
@@ -401,7 +414,7 @@
      "form": "DDWWL"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Burgos",
      "p": 11,
      "w": 6,
@@ -414,7 +427,7 @@
      "form": "WLLWW"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Mallorca",
      "p": 11,
      "w": 5,
@@ -425,19 +438,6 @@
      "pts": 19,
      "tid": 798,
      "form": "LDWDD"
-    },
-    {
-     "pos": 8,
-     "team": "Sporting Gijón",
-     "p": 11,
-     "w": 6,
-     "d": 1,
-     "l": 4,
-     "gf": 11,
-     "ga": 13,
-     "pts": 19,
-     "tid": 731,
-     "form": "LWWWL"
     },
     {
      "pos": 9,
@@ -611,15 +611,15 @@
     {
      "pos": 22,
      "team": "Ceuta",
-     "p": 11,
+     "p": 12,
      "w": 1,
      "d": 2,
-     "l": 8,
+     "l": 9,
      "gf": 10,
-     "ga": 25,
+     "ga": 27,
      "pts": 5,
      "tid": 10139,
-     "form": "WDLLL"
+     "form": "DLLLL"
     }
    ],
    "updated": "2026-11-01T00:00:00.000Z"
@@ -816,19 +816,6 @@
       },
       {
        "pos": 13,
-       "team": "Zamora",
-       "p": 9,
-       "w": 3,
-       "d": 3,
-       "l": 3,
-       "gf": 10,
-       "ga": 9,
-       "pts": 12,
-       "tid": 9418,
-       "form": "WWDDL"
-      },
-      {
-       "pos": 14,
        "team": "Cultural Leonesa",
        "p": 10,
        "w": 3,
@@ -839,6 +826,19 @@
        "pts": 12,
        "tid": 725,
        "form": "LWDLL"
+      },
+      {
+       "pos": 14,
+       "team": "Zamora",
+       "p": 10,
+       "w": 3,
+       "d": 3,
+       "l": 4,
+       "gf": 11,
+       "ga": 12,
+       "pts": 12,
+       "tid": 9418,
+       "form": "WDDLL"
       },
       {
        "pos": 15,
@@ -855,6 +855,19 @@
       },
       {
        "pos": 16,
+       "team": "Deportivo Fabril",
+       "p": 10,
+       "w": 3,
+       "d": 2,
+       "l": 5,
+       "gf": 11,
+       "ga": 17,
+       "pts": 11,
+       "tid": 9610,
+       "form": "LLLLW"
+      },
+      {
+       "pos": 17,
        "team": "Unionistas",
        "p": 9,
        "w": 3,
@@ -867,7 +880,7 @@
        "form": "LWDLW"
       },
       {
-       "pos": 17,
+       "pos": 18,
        "team": "Coria",
        "p": 10,
        "w": 2,
@@ -878,19 +891,6 @@
        "pts": 9,
        "tid": 9827,
        "form": "LLWDL"
-      },
-      {
-       "pos": 18,
-       "team": "Deportivo Fabril",
-       "p": 9,
-       "w": 2,
-       "d": 2,
-       "l": 5,
-       "gf": 8,
-       "ga": 16,
-       "pts": 8,
-       "tid": 9610,
-       "form": "WLLLL"
       },
       {
        "pos": 19,

@@ -83,15 +83,15 @@
     {
      "pos": 3,
      "team": "Gent",
-     "p": 9,
+     "p": 10,
      "w": 8,
      "d": 1,
-     "l": 0,
+     "l": 1,
      "gf": 19,
-     "ga": 4,
+     "ga": 6,
      "pts": 25,
      "tid": 631,
-     "form": "WDWWW"
+     "form": "DWWWL"
     },
     {
      "pos": 4,
@@ -134,6 +134,19 @@
     },
     {
      "pos": 7,
+     "team": "Lommel United",
+     "p": 10,
+     "w": 4,
+     "d": 3,
+     "l": 3,
+     "gf": 13,
+     "ga": 11,
+     "pts": 15,
+     "tid": 259,
+     "form": "LDWDW"
+    },
+    {
+     "pos": 8,
      "team": "Westerlo",
      "p": 10,
      "w": 4,
@@ -144,19 +157,6 @@
      "pts": 14,
      "tid": 261,
      "form": "WWWDL"
-    },
-    {
-     "pos": 8,
-     "team": "Lommel United",
-     "p": 9,
-     "w": 3,
-     "d": 3,
-     "l": 3,
-     "gf": 11,
-     "ga": 11,
-     "pts": 12,
-     "tid": 259,
-     "form": "LLDWD"
     },
     {
      "pos": 9,

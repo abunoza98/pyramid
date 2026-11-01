@@ -37,6 +37,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Arsenal",
+     "p": 9,
+     "w": 8,
+     "d": 0,
+     "l": 1,
+     "gf": 14,
+     "ga": 5,
+     "pts": 24,
+     "tid": 42,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 2,
      "team": "Manchester City",
      "p": 9,
      "w": 7,
@@ -47,19 +60,6 @@
      "pts": 21,
      "tid": 50,
      "form": "WWWLL"
-    },
-    {
-     "pos": 2,
-     "team": "Arsenal",
-     "p": 8,
-     "w": 7,
-     "d": 0,
-     "l": 1,
-     "gf": 13,
-     "ga": 5,
-     "pts": 21,
-     "tid": 42,
-     "form": "WLWWW"
     },
     {
      "pos": 3,
@@ -90,15 +90,15 @@
     {
      "pos": 5,
      "team": "Liverpool",
-     "p": 8,
+     "p": 9,
      "w": 4,
      "d": 3,
-     "l": 1,
+     "l": 2,
      "gf": 11,
-     "ga": 8,
+     "ga": 9,
      "pts": 15,
      "tid": 40,
-     "form": "DWLWW"
+     "form": "WLWWL"
     },
     {
      "pos": 6,
@@ -296,7 +296,7 @@
      "form": "LLLDL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "championship",

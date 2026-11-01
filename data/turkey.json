@@ -89,18 +89,31 @@
     {
      "pos": 4,
      "team": "Beşiktaş",
-     "p": 9,
+     "p": 10,
      "w": 6,
-     "d": 0,
+     "d": 1,
      "l": 3,
-     "gf": 18,
-     "ga": 10,
-     "pts": 18,
+     "gf": 20,
+     "ga": 12,
+     "pts": 19,
      "tid": 549,
-     "form": "WLWLW"
+     "form": "LWLWD"
     },
     {
      "pos": 5,
+     "team": "Kasımpaşa",
+     "p": 10,
+     "w": 4,
+     "d": 5,
+     "l": 1,
+     "gf": 15,
+     "ga": 11,
+     "pts": 17,
+     "tid": 1004,
+     "form": "DLWWD"
+    },
+    {
+     "pos": 6,
      "team": "Fenerbahçe",
      "p": 10,
      "w": 5,
@@ -113,7 +126,7 @@
      "form": "WWWLL"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Çorum FK",
      "p": 10,
      "w": 5,
@@ -124,19 +137,6 @@
      "pts": 16,
      "tid": 6343,
      "form": "LWWLW"
-    },
-    {
-     "pos": 7,
-     "team": "Kasımpaşa",
-     "p": 9,
-     "w": 4,
-     "d": 4,
-     "l": 1,
-     "gf": 13,
-     "ga": 9,
-     "pts": 16,
-     "tid": 1004,
-     "form": "WDLWW"
     },
     {
      "pos": 8,

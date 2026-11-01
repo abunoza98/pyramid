@@ -140,6 +140,19 @@
     },
     {
      "pos": 8,
+     "team": "Eintracht Frankfurt",
+     "p": 8,
+     "w": 3,
+     "d": 2,
+     "l": 3,
+     "gf": 13,
+     "ga": 18,
+     "pts": 11,
+     "tid": 169,
+     "form": "DLWLW"
+    },
+    {
+     "pos": 9,
      "team": "Mainz 05",
      "p": 8,
      "w": 3,
@@ -152,7 +165,7 @@
      "form": "WLWLL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "FC Augsburg",
      "p": 8,
      "w": 2,
@@ -165,7 +178,7 @@
      "form": "LDLDL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "VfB Stuttgart",
      "p": 8,
      "w": 3,
@@ -178,7 +191,7 @@
      "form": "LWLLW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "TSG Hoffenheim",
      "p": 8,
      "w": 3,
@@ -191,7 +204,7 @@
      "form": "LLWWL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "1. FC Köln",
      "p": 8,
      "w": 2,
@@ -204,7 +217,7 @@
      "form": "LWLDD"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "SC Paderborn",
      "p": 8,
      "w": 2,
@@ -217,30 +230,17 @@
      "form": "WLDWD"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Hamburger SV",
-     "p": 7,
+     "p": 8,
      "w": 3,
      "d": 0,
-     "l": 4,
-     "gf": 6,
-     "ga": 16,
+     "l": 5,
+     "gf": 7,
+     "ga": 19,
      "pts": 9,
      "tid": 175,
-     "form": "LWWWL"
-    },
-    {
-     "pos": 15,
-     "team": "Eintracht Frankfurt",
-     "p": 7,
-     "w": 2,
-     "d": 2,
-     "l": 3,
-     "gf": 10,
-     "ga": 17,
-     "pts": 8,
-     "tid": 169,
-     "form": "WDLWL"
+     "form": "WWWLL"
     },
     {
      "pos": 16,

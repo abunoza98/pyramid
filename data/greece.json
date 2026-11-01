@@ -66,6 +66,19 @@
     },
     {
      "pos": 3,
+     "team": "PAOK",
+     "p": 9,
+     "w": 6,
+     "d": 0,
+     "l": 3,
+     "gf": 18,
+     "ga": 12,
+     "pts": 18,
+     "tid": 619,
+     "form": "WLWLW"
+    },
+    {
+     "pos": 4,
      "team": "AEK Athens",
      "p": 7,
      "w": 5,
@@ -78,7 +91,7 @@
      "form": "WDWWW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Aris",
      "p": 9,
      "w": 5,
@@ -91,7 +104,7 @@
      "form": "DWWWL"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "OFI Crete",
      "p": 9,
      "w": 5,
@@ -102,19 +115,6 @@
      "pts": 16,
      "tid": 1124,
      "form": "DLLWW"
-    },
-    {
-     "pos": 6,
-     "team": "PAOK",
-     "p": 8,
-     "w": 5,
-     "d": 0,
-     "l": 3,
-     "gf": 16,
-     "ga": 11,
-     "pts": 15,
-     "tid": 619,
-     "form": "WWLWL"
     },
     {
      "pos": 7,
@@ -170,19 +170,6 @@
     },
     {
      "pos": 11,
-     "team": "Asteras Tripolis",
-     "p": 8,
-     "w": 1,
-     "d": 3,
-     "l": 4,
-     "gf": 7,
-     "ga": 15,
-     "pts": 6,
-     "tid": 955,
-     "form": "DDWLD"
-    },
-    {
-     "pos": 12,
      "team": "Levadiakos",
      "p": 9,
      "w": 1,
@@ -193,6 +180,19 @@
      "pts": 6,
      "tid": 957,
      "form": "LLDDW"
+    },
+    {
+     "pos": 12,
+     "team": "Asteras Tripolis",
+     "p": 9,
+     "w": 1,
+     "d": 3,
+     "l": 5,
+     "gf": 8,
+     "ga": 17,
+     "pts": 6,
+     "tid": 955,
+     "form": "DWLDL"
     },
     {
      "pos": 13,
