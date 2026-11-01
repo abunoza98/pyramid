@@ -120,6 +120,19 @@
     },
     {
      "pos": 6,
+     "team": "Marseille",
+     "p": 9,
+     "w": 5,
+     "d": 0,
+     "l": 4,
+     "gf": 20,
+     "ga": 13,
+     "pts": 15,
+     "tid": 81,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 7,
      "team": "Monaco",
      "p": 9,
      "w": 4,
@@ -132,7 +145,7 @@
      "form": "WDLDL"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Nice",
      "p": 9,
      "w": 4,
@@ -145,7 +158,7 @@
      "form": "WWLWW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Lens",
      "p": 9,
      "w": 4,
@@ -156,19 +169,6 @@
      "pts": 13,
      "tid": 116,
      "form": "LWWWL"
-    },
-    {
-     "pos": 9,
-     "team": "Marseille",
-     "p": 8,
-     "w": 4,
-     "d": 0,
-     "l": 4,
-     "gf": 18,
-     "ga": 13,
-     "pts": 12,
-     "tid": 81,
-     "form": "LLWWW"
     },
     {
      "pos": 10,
@@ -186,15 +186,15 @@
     {
      "pos": 11,
      "team": "Toulouse",
-     "p": 8,
+     "p": 9,
      "w": 2,
      "d": 4,
-     "l": 2,
+     "l": 3,
      "gf": 12,
-     "ga": 11,
+     "ga": 13,
      "pts": 10,
      "tid": 96,
-     "form": "DWDWD"
+     "form": "WDWDL"
     },
     {
      "pos": 12,

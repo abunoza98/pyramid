@@ -121,19 +121,32 @@
     },
     {
      "pos": 7,
-     "team": "Napoli",
-     "p": 9,
-     "w": 4,
+     "team": "Juventus",
+     "p": 10,
+     "w": 5,
      "d": 2,
      "l": 3,
-     "gf": 17,
-     "ga": 11,
-     "pts": 14,
-     "tid": 492,
-     "form": "DWLDW"
+     "gf": 13,
+     "ga": 10,
+     "pts": 17,
+     "tid": 496,
+     "form": "DLWLW"
     },
     {
      "pos": 8,
+     "team": "Napoli",
+     "p": 10,
+     "w": 4,
+     "d": 2,
+     "l": 4,
+     "gf": 17,
+     "ga": 13,
+     "pts": 14,
+     "tid": 492,
+     "form": "WLDWL"
+    },
+    {
+     "pos": 9,
      "team": "Bologna",
      "p": 10,
      "w": 4,
@@ -144,19 +157,6 @@
      "pts": 14,
      "tid": 500,
      "form": "WLWWW"
-    },
-    {
-     "pos": 9,
-     "team": "Juventus",
-     "p": 9,
-     "w": 4,
-     "d": 2,
-     "l": 3,
-     "gf": 11,
-     "ga": 10,
-     "pts": 14,
-     "tid": 496,
-     "form": "WDLWL"
     },
     {
      "pos": 10,
