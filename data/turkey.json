@@ -1353,6 +1353,19 @@
      "rows": [
       {
        "pos": 1,
+       "team": "Anadolu Üniversitesi",
+       "p": 9,
+       "w": 5,
+       "d": 3,
+       "l": 1,
+       "gf": 17,
+       "ga": 6,
+       "pts": 18,
+       "tid": 21997,
+       "form": "WLDWW"
+      },
+      {
+       "pos": 2,
        "team": "Nilüfer Belediye",
        "p": 8,
        "w": 5,
@@ -1365,7 +1378,7 @@
        "form": "DWWDD"
       },
       {
-       "pos": 2,
+       "pos": 3,
        "team": "Etimesgut SK",
        "p": 8,
        "w": 5,
@@ -1378,7 +1391,7 @@
        "form": "WWDDW"
       },
       {
-       "pos": 3,
+       "pos": 4,
        "team": "Balıkesirspor",
        "p": 8,
        "w": 5,
@@ -1391,7 +1404,7 @@
        "form": "LLWDW"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Bursa Yıldırımspor",
        "p": 8,
        "w": 4,
@@ -1404,7 +1417,7 @@
        "form": "DWWDD"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "Eskişehirspor",
        "p": 8,
        "w": 4,
@@ -1415,19 +1428,6 @@
        "pts": 15,
        "tid": 3572,
        "form": "WWDWD"
-      },
-      {
-       "pos": 6,
-       "team": "Anadolu Üniversitesi",
-       "p": 8,
-       "w": 4,
-       "d": 3,
-       "l": 1,
-       "gf": 12,
-       "ga": 5,
-       "pts": 15,
-       "tid": 21997,
-       "form": "DWLDW"
       },
       {
        "pos": 7,
@@ -1561,19 +1561,6 @@
       },
       {
        "pos": 17,
-       "team": "Alanya 1221 FK",
-       "p": 8,
-       "w": 1,
-       "d": 1,
-       "l": 6,
-       "gf": 4,
-       "ga": 17,
-       "pts": 4,
-       "tid": 15361,
-       "form": "LDLWL"
-      },
-      {
-       "pos": 18,
        "team": "Akşehirspor",
        "p": 9,
        "w": 1,
@@ -1584,6 +1571,19 @@
        "pts": 4,
        "tid": 6508,
        "form": "LLLLD"
+      },
+      {
+       "pos": 18,
+       "team": "Alanya 1221 FK",
+       "p": 9,
+       "w": 1,
+       "d": 1,
+       "l": 7,
+       "gf": 5,
+       "ga": 22,
+       "pts": 4,
+       "tid": 15361,
+       "form": "DLWLL"
       }
      ]
     },
