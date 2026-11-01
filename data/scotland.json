@@ -4,7 +4,7 @@
  "adjective": "Scottish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-31T00:00:00.000Z",
+ "updated": "2026-11-01T00:00:00.000Z",
  "belowNote": "The Highland/Lowland League play-off winner can come up",
  "leagues": [
   {
@@ -35,15 +35,15 @@
     {
      "pos": 1,
      "team": "Celtic",
-     "p": 11,
+     "p": 12,
      "w": 9,
      "d": 1,
-     "l": 1,
+     "l": 2,
      "gf": 27,
-     "ga": 8,
+     "ga": 10,
      "pts": 28,
      "tid": 247,
-     "form": "LWWWD"
+     "form": "WWWDL"
     },
     {
      "pos": 2,
@@ -73,6 +73,19 @@
     },
     {
      "pos": 4,
+     "team": "Falkirk",
+     "p": 12,
+     "w": 5,
+     "d": 3,
+     "l": 4,
+     "gf": 15,
+     "ga": 12,
+     "pts": 18,
+     "tid": 1389,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 5,
      "team": "Dundee",
      "p": 11,
      "w": 5,
@@ -85,7 +98,7 @@
      "form": "WWDLW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Dundee United",
      "p": 11,
      "w": 4,
@@ -96,19 +109,6 @@
      "pts": 16,
      "tid": 1386,
      "form": "WWDWD"
-    },
-    {
-     "pos": 6,
-     "team": "Falkirk",
-     "p": 11,
-     "w": 4,
-     "d": 3,
-     "l": 4,
-     "gf": 13,
-     "ga": 12,
-     "pts": 15,
-     "tid": 1389,
-     "form": "DLWWW"
     },
     {
      "pos": 7,
@@ -189,7 +189,7 @@
      "form": "DLLLD"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "scottish-championship",

@@ -4,7 +4,7 @@
  "adjective": "English",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-31T00:00:00.000Z",
+ "updated": "2026-11-01T00:00:00.000Z",
  "belowNote": "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
  "leagues": [
   {
@@ -782,15 +782,15 @@
     {
      "pos": 9,
      "team": "Sheffield Wednesday",
-     "p": 12,
+     "p": 13,
      "w": 5,
-     "d": 4,
+     "d": 5,
      "l": 3,
-     "gf": 21,
-     "ga": 13,
-     "pts": 19,
+     "gf": 22,
+     "ga": 14,
+     "pts": 20,
      "tid": 74,
-     "form": "DWLLD"
+     "form": "WLLDD"
     },
     {
      "pos": 10,
@@ -911,6 +911,19 @@
     },
     {
      "pos": 19,
+     "team": "Blackpool",
+     "p": 12,
+     "w": 3,
+     "d": 3,
+     "l": 6,
+     "gf": 17,
+     "ga": 21,
+     "pts": 12,
+     "tid": 1356,
+     "form": "LLWLD"
+    },
+    {
+     "pos": 20,
      "team": "Doncaster Rovers",
      "p": 13,
      "w": 3,
@@ -921,19 +934,6 @@
      "pts": 12,
      "tid": 1354,
      "form": "LLWLL"
-    },
-    {
-     "pos": 20,
-     "team": "Blackpool",
-     "p": 11,
-     "w": 3,
-     "d": 2,
-     "l": 6,
-     "gf": 16,
-     "ga": 20,
-     "pts": 11,
-     "tid": 1356,
-     "form": "LLLWL"
     },
     {
      "pos": 21,
@@ -988,7 +988,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "league-two",

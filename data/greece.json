@@ -222,7 +222,7 @@
      "form": "LLLDL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "super-league-2",
@@ -251,6 +251,19 @@
     },
     {
      "pos": 2,
+     "team": "Panionios",
+     "p": 9,
+     "w": 5,
+     "d": 2,
+     "l": 2,
+     "gf": 13,
+     "ga": 7,
+     "pts": 17,
+     "tid": 622,
+     "form": "LWDLW"
+    },
+    {
+     "pos": 3,
      "team": "Kallithea",
      "p": 9,
      "w": 5,
@@ -263,7 +276,7 @@
      "form": "WWDDL"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Larisa",
      "p": 9,
      "w": 4,
@@ -274,19 +287,6 @@
      "pts": 16,
      "tid": 953,
      "form": "DLDDW"
-    },
-    {
-     "pos": 4,
-     "team": "Panserraikos",
-     "p": 8,
-     "w": 4,
-     "d": 2,
-     "l": 2,
-     "gf": 12,
-     "ga": 8,
-     "pts": 14,
-     "tid": 2099,
-     "form": "WDWDW"
     },
     {
      "pos": 5,
@@ -303,16 +303,16 @@
     },
     {
      "pos": 6,
-     "team": "Panionios",
-     "p": 8,
+     "team": "Panserraikos",
+     "p": 9,
      "w": 4,
      "d": 2,
-     "l": 2,
-     "gf": 8,
-     "ga": 7,
+     "l": 3,
+     "gf": 12,
+     "ga": 13,
      "pts": 14,
-     "tid": 622,
-     "form": "WLWDL"
+     "tid": 2099,
+     "form": "DWDWL"
     },
     {
      "pos": 7,
@@ -356,18 +356,44 @@
     {
      "pos": 10,
      "team": "Asteras Tripolis II",
-     "p": 8,
+     "p": 9,
      "w": 2,
-     "d": 3,
+     "d": 4,
      "l": 3,
-     "gf": 7,
-     "ga": 9,
-     "pts": 9,
+     "gf": 8,
+     "ga": 10,
+     "pts": 10,
      "tid": 25017,
-     "form": "LWDDD"
+     "form": "WDDDD"
     },
     {
      "pos": 11,
+     "team": "Pyrgos 1968",
+     "p": 9,
+     "w": 2,
+     "d": 3,
+     "l": 4,
+     "gf": 6,
+     "ga": 10,
+     "pts": 9,
+     "tid": 26587,
+     "form": "WLLWD"
+    },
+    {
+     "pos": 12,
+     "team": "PAOK II",
+     "p": 9,
+     "w": 2,
+     "d": 3,
+     "l": 4,
+     "gf": 6,
+     "ga": 11,
+     "pts": 9,
+     "tid": 18018,
+     "form": "DLWLD"
+    },
+    {
+     "pos": 13,
      "team": "Apollon Pontou",
      "p": 8,
      "w": 2,
@@ -380,20 +406,7 @@
      "form": "WDWLL"
     },
     {
-     "pos": 12,
-     "team": "Pyrgos 1968",
-     "p": 8,
-     "w": 2,
-     "d": 2,
-     "l": 4,
-     "gf": 5,
-     "ga": 9,
-     "pts": 8,
-     "tid": 26587,
-     "form": "DWLLW"
-    },
-    {
-     "pos": 13,
+     "pos": 14,
      "team": "Nestos Chrisoupolis",
      "p": 9,
      "w": 2,
@@ -404,19 +417,6 @@
      "pts": 8,
      "tid": 12367,
      "form": "LLDWL"
-    },
-    {
-     "pos": 14,
-     "team": "PAOK II",
-     "p": 8,
-     "w": 2,
-     "d": 2,
-     "l": 4,
-     "gf": 5,
-     "ga": 10,
-     "pts": 8,
-     "tid": 18018,
-     "form": "LDLWL"
     },
     {
      "pos": 15,
@@ -434,15 +434,15 @@
     {
      "pos": 16,
      "team": "Zakynthos",
-     "p": 8,
+     "p": 9,
      "w": 0,
-     "d": 3,
+     "d": 4,
      "l": 5,
-     "gf": 6,
-     "ga": 15,
-     "pts": 3,
+     "gf": 7,
+     "ga": 16,
+     "pts": 4,
      "tid": 6326,
-     "form": "LDLDL"
+     "form": "DLDLD"
     }
    ],
    "updated": "2026-11-01T00:00:00.000Z"

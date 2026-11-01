@@ -95,15 +95,15 @@
     {
      "pos": 4,
      "team": "Twente",
-     "p": 10,
-     "w": 6,
+     "p": 11,
+     "w": 7,
      "d": 2,
      "l": 2,
-     "gf": 19,
+     "gf": 28,
      "ga": 10,
-     "pts": 20,
+     "pts": 23,
      "tid": 415,
-     "form": "WWDLW"
+     "form": "WDLWW"
     },
     {
      "pos": 5,
@@ -186,31 +186,18 @@
     {
      "pos": 11,
      "team": "Utrecht",
-     "p": 10,
+     "p": 11,
      "w": 3,
      "d": 3,
-     "l": 4,
-     "gf": 17,
-     "ga": 27,
+     "l": 5,
+     "gf": 19,
+     "ga": 31,
      "pts": 12,
      "tid": 207,
-     "form": "WLWWD"
+     "form": "LWWDL"
     },
     {
      "pos": 12,
-     "team": "Excelsior",
-     "p": 10,
-     "w": 3,
-     "d": 2,
-     "l": 5,
-     "gf": 16,
-     "ga": 19,
-     "pts": 11,
-     "tid": 196,
-     "form": "LDLLL"
-    },
-    {
-     "pos": 13,
      "team": "NEC Nijmegen",
      "p": 11,
      "w": 2,
@@ -223,7 +210,7 @@
      "form": "DDDDL"
     },
     {
-     "pos": 14,
+     "pos": 13,
      "team": "PEC Zwolle",
      "p": 11,
      "w": 3,
@@ -234,6 +221,19 @@
      "pts": 11,
      "tid": 193,
      "form": "LLWDW"
+    },
+    {
+     "pos": 14,
+     "team": "Excelsior",
+     "p": 11,
+     "w": 3,
+     "d": 2,
+     "l": 6,
+     "gf": 16,
+     "ga": 28,
+     "pts": 11,
+     "tid": 196,
+     "form": "DLLLL"
     },
     {
      "pos": 15,
@@ -251,15 +251,15 @@
     {
      "pos": 16,
      "team": "Telstar",
-     "p": 10,
-     "w": 1,
+     "p": 11,
+     "w": 2,
      "d": 3,
      "l": 6,
-     "gf": 12,
-     "ga": 21,
-     "pts": 6,
+     "gf": 16,
+     "ga": 23,
+     "pts": 9,
      "tid": 427,
-     "form": "DLDLL"
+     "form": "LDLLW"
     },
     {
      "pos": 17,
@@ -577,7 +577,7 @@
      "form": "WLLLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "tweede-divisie",

@@ -49,15 +49,15 @@
     {
      "pos": 2,
      "team": "BSC Young Boys",
-     "p": 11,
+     "p": 12,
      "w": 7,
      "d": 4,
-     "l": 0,
-     "gf": 35,
-     "ga": 18,
+     "l": 1,
+     "gf": 38,
+     "ga": 23,
      "pts": 25,
      "tid": 565,
-     "form": "DDWWW"
+     "form": "DWWWL"
     },
     {
      "pos": 3,
@@ -74,6 +74,19 @@
     },
     {
      "pos": 4,
+     "team": "FC Zürich",
+     "p": 12,
+     "w": 6,
+     "d": 2,
+     "l": 4,
+     "gf": 25,
+     "ga": 26,
+     "pts": 20,
+     "tid": 783,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 5,
      "team": "FC St. Gallen",
      "p": 12,
      "w": 6,
@@ -84,19 +97,6 @@
      "pts": 19,
      "tid": 1011,
      "form": "LWWLW"
-    },
-    {
-     "pos": 5,
-     "team": "FC Zürich",
-     "p": 11,
-     "w": 5,
-     "d": 2,
-     "l": 4,
-     "gf": 20,
-     "ga": 23,
-     "pts": 17,
-     "tid": 783,
-     "form": "DWDWW"
     },
     {
      "pos": 6,

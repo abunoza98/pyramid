@@ -4,7 +4,7 @@
  "adjective": "Austrian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-31T00:00:00.000Z",
+ "updated": "2026-11-01T00:00:00.000Z",
  "belowNote": "Landesliga champions come up",
  "leagues": [
   {
@@ -28,6 +28,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Red Bull Salzburg",
+     "p": 11,
+     "w": 8,
+     "d": 3,
+     "l": 0,
+     "gf": 29,
+     "ga": 6,
+     "pts": 27,
+     "tid": 571,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 2,
      "team": "Rapid Wien",
      "p": 10,
      "w": 9,
@@ -38,19 +51,6 @@
      "pts": 27,
      "tid": 781,
      "form": "WWWWW"
-    },
-    {
-     "pos": 2,
-     "team": "Red Bull Salzburg",
-     "p": 10,
-     "w": 7,
-     "d": 3,
-     "l": 0,
-     "gf": 24,
-     "ga": 5,
-     "pts": 24,
-     "tid": 571,
-     "form": "DWDWW"
     },
     {
      "pos": 3,
@@ -68,15 +68,15 @@
     {
      "pos": 4,
      "team": "Sturm Graz",
-     "p": 10,
+     "p": 11,
      "w": 5,
-     "d": 3,
+     "d": 4,
      "l": 2,
-     "gf": 18,
-     "ga": 12,
-     "pts": 18,
+     "gf": 19,
+     "ga": 13,
+     "pts": 19,
      "tid": 637,
-     "form": "WLWWD"
+     "form": "LWWDD"
     },
     {
      "pos": 5,
@@ -146,15 +146,15 @@
     {
      "pos": 10,
      "team": "Austria Lustenau",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 2,
-     "l": 6,
-     "gf": 12,
-     "ga": 24,
+     "l": 7,
+     "gf": 13,
+     "ga": 29,
      "pts": 8,
      "tid": 1399,
-     "form": "LWLLL"
+     "form": "WLLLL"
     },
     {
      "pos": 11,
@@ -172,18 +172,18 @@
     {
      "pos": 12,
      "team": "Wolfsberger AC",
-     "p": 10,
+     "p": 11,
      "w": 1,
-     "d": 2,
+     "d": 3,
      "l": 7,
-     "gf": 7,
-     "ga": 19,
-     "pts": 5,
+     "gf": 8,
+     "ga": 20,
+     "pts": 6,
      "tid": 1025,
-     "form": "LLLLL"
+     "form": "LLLLD"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "2-liga",
@@ -442,7 +442,7 @@
    "groups": [
     {
      "name": "East",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -656,7 +656,7 @@
     },
     {
      "name": "North",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -857,7 +857,7 @@
     },
     {
      "name": "South",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1070,7 +1070,7 @@
     },
     {
      "name": "West",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1283,7 +1283,7 @@
      ]
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   }
  ]
 }
