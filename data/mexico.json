@@ -27,6 +27,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "América",
+     "p": 15,
+     "w": 8,
+     "d": 5,
+     "l": 2,
+     "gf": 36,
+     "ga": 21,
+     "pts": 29,
+     "tid": 2287,
+     "form": "WWLDD"
+    },
+    {
+     "pos": 2,
      "team": "Guadalajara",
      "p": 15,
      "w": 8,
@@ -37,19 +50,6 @@
      "pts": 29,
      "tid": 2278,
      "form": "DDWWW"
-    },
-    {
-     "pos": 2,
-     "team": "América",
-     "p": 14,
-     "w": 8,
-     "d": 4,
-     "l": 2,
-     "gf": 34,
-     "ga": 19,
-     "pts": 28,
-     "tid": 2287,
-     "form": "DWWLD"
     },
     {
      "pos": 3,
@@ -80,15 +80,15 @@
     {
      "pos": 5,
      "team": "Toluca",
-     "p": 14,
+     "p": 15,
      "w": 6,
-     "d": 5,
+     "d": 6,
      "l": 3,
-     "gf": 29,
-     "ga": 19,
-     "pts": 23,
+     "gf": 31,
+     "ga": 21,
+     "pts": 24,
      "tid": 2281,
-     "form": "DLDDD"
+     "form": "LDDDD"
     },
     {
      "pos": 6,
