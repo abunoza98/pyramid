@@ -4,7 +4,7 @@
  "adjective": "Spanish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-31T00:00:00.000Z",
+ "updated": "2026-11-01T00:00:00.000Z",
  "belowNote": "Promoted clubs from Segunda Federación come up",
  "leagues": [
   {
@@ -302,7 +302,7 @@
      "form": "LDLDL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "segunda",
@@ -622,7 +622,7 @@
      "form": "WDLLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "primera-federacion",
@@ -656,7 +656,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -725,6 +725,19 @@
       },
       {
        "pos": 6,
+       "team": "Pontevedra",
+       "p": 10,
+       "w": 4,
+       "d": 3,
+       "l": 3,
+       "gf": 12,
+       "ga": 11,
+       "pts": 15,
+       "tid": 9407,
+       "form": "LLWWD"
+      },
+      {
+       "pos": 7,
        "team": "Cacereño",
        "p": 10,
        "w": 4,
@@ -737,7 +750,7 @@
        "form": "LDLWL"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Avilés",
        "p": 10,
        "w": 4,
@@ -748,19 +761,6 @@
        "pts": 14,
        "tid": 9632,
        "form": "LWWLW"
-      },
-      {
-       "pos": 8,
-       "team": "Pontevedra",
-       "p": 9,
-       "w": 4,
-       "d": 2,
-       "l": 3,
-       "gf": 12,
-       "ga": 11,
-       "pts": 14,
-       "tid": 9407,
-       "form": "DLLWW"
       },
       {
        "pos": 9,
@@ -843,15 +843,15 @@
       {
        "pos": 15,
        "team": "Barakaldo",
-       "p": 9,
+       "p": 10,
        "w": 2,
-       "d": 4,
+       "d": 5,
        "l": 3,
        "gf": 8,
        "ga": 10,
-       "pts": 10,
+       "pts": 11,
        "tid": 5251,
-       "form": "DDLWD"
+       "form": "DLWDD"
       },
       {
        "pos": 16,
@@ -922,7 +922,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -952,6 +952,19 @@
       },
       {
        "pos": 3,
+       "team": "Murcia",
+       "p": 10,
+       "w": 6,
+       "d": 1,
+       "l": 3,
+       "gf": 12,
+       "ga": 8,
+       "pts": 19,
+       "tid": 5275,
+       "form": "LWDLW"
+      },
+      {
+       "pos": 4,
        "team": "Ibiza",
        "p": 10,
        "w": 5,
@@ -964,7 +977,7 @@
        "form": "WDWDW"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Jaén",
        "p": 9,
        "w": 4,
@@ -975,19 +988,6 @@
        "pts": 16,
        "tid": 5274,
        "form": "LDDWD"
-      },
-      {
-       "pos": 5,
-       "team": "Murcia",
-       "p": 9,
-       "w": 5,
-       "d": 1,
-       "l": 3,
-       "gf": 11,
-       "ga": 8,
-       "pts": 16,
-       "tid": 5275,
-       "form": "WLWDL"
       },
       {
        "pos": 6,
@@ -1109,15 +1109,15 @@
       {
        "pos": 15,
        "team": "Antequera",
-       "p": 9,
+       "p": 10,
        "w": 2,
        "d": 5,
-       "l": 2,
+       "l": 3,
        "gf": 14,
-       "ga": 13,
+       "ga": 14,
        "pts": 11,
        "tid": 9742,
-       "form": "WDDLD"
+       "form": "DDLDL"
       },
       {
        "pos": 16,
@@ -1187,7 +1187,7 @@
      ]
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   }
  ]
 }

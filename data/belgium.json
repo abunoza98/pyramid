@@ -4,7 +4,7 @@
  "adjective": "Belgian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-31T00:00:00.000Z",
+ "updated": "2026-11-01T00:00:00.000Z",
  "belowNote": "The top amateur clubs come up",
  "leagues": [
   {
@@ -187,15 +187,15 @@
     {
      "pos": 11,
      "team": "Antwerp",
-     "p": 9,
+     "p": 10,
      "w": 3,
      "d": 1,
-     "l": 5,
-     "gf": 15,
-     "ga": 20,
+     "l": 6,
+     "gf": 16,
+     "ga": 22,
      "pts": 10,
      "tid": 740,
-     "form": "LLLLW"
+     "form": "LLLWL"
     },
     {
      "pos": 12,
@@ -264,6 +264,19 @@
     },
     {
      "pos": 17,
+     "team": "Cercle Brugge",
+     "p": 10,
+     "w": 1,
+     "d": 3,
+     "l": 6,
+     "gf": 13,
+     "ga": 22,
+     "pts": 6,
+     "tid": 741,
+     "form": "DLLLW"
+    },
+    {
+     "pos": 18,
      "team": "Kortrijk",
      "p": 9,
      "w": 1,
@@ -274,22 +287,9 @@
      "pts": 4,
      "tid": 734,
      "form": "LLWLD"
-    },
-    {
-     "pos": 18,
-     "team": "Cercle Brugge",
-     "p": 9,
-     "w": 0,
-     "d": 3,
-     "l": 6,
-     "gf": 11,
-     "ga": 21,
-     "pts": 3,
-     "tid": 741,
-     "form": "LDLLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "challenger-pro-league",

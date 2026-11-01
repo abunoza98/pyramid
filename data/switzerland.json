@@ -4,7 +4,7 @@
  "adjective": "Swiss",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-31T00:00:00.000Z",
+ "updated": "2026-11-01T00:00:00.000Z",
  "belowNote": "The top 2. Liga Interregional clubs come up",
  "leagues": [
   {
@@ -190,7 +190,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "challenge-league",
@@ -236,6 +236,19 @@
     },
     {
      "pos": 2,
+     "team": "FC Winterthur",
+     "p": 12,
+     "w": 7,
+     "d": 3,
+     "l": 2,
+     "gf": 26,
+     "ga": 11,
+     "pts": 24,
+     "tid": 2180,
+     "form": "WWLWW"
+    },
+    {
+     "pos": 3,
      "team": "Yverdon Sport",
      "p": 12,
      "w": 6,
@@ -246,19 +259,6 @@
      "pts": 22,
      "tid": 6653,
      "form": "LDWWL"
-    },
-    {
-     "pos": 3,
-     "team": "FC Winterthur",
-     "p": 11,
-     "w": 6,
-     "d": 3,
-     "l": 2,
-     "gf": 23,
-     "ga": 11,
-     "pts": 21,
-     "tid": 2180,
-     "form": "WWWLW"
     },
     {
      "pos": 4,
@@ -314,19 +314,6 @@
     },
     {
      "pos": 8,
-     "team": "FC Wil",
-     "p": 11,
-     "w": 2,
-     "d": 5,
-     "l": 4,
-     "gf": 18,
-     "ga": 24,
-     "pts": 11,
-     "tid": 2179,
-     "form": "DLWDD"
-    },
-    {
-     "pos": 9,
      "team": "Rapperswil-Jona",
      "p": 12,
      "w": 3,
@@ -337,6 +324,19 @@
      "pts": 11,
      "tid": 2185,
      "form": "WWLDL"
+    },
+    {
+     "pos": 9,
+     "team": "FC Wil",
+     "p": 12,
+     "w": 2,
+     "d": 5,
+     "l": 5,
+     "gf": 18,
+     "ga": 27,
+     "pts": 11,
+     "tid": 2179,
+     "form": "LWDDL"
     },
     {
      "pos": 10,
@@ -352,7 +352,7 @@
      "form": "LLWLW"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "promotion-league",
@@ -614,7 +614,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "1-liga",
@@ -629,7 +629,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -843,7 +843,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1057,7 +1057,7 @@
     },
     {
      "name": "Group 3",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1270,7 +1270,7 @@
      ]
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   }
  ]
 }
