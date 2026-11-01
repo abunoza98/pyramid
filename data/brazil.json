@@ -557,28 +557,28 @@
     {
      "pos": 18,
      "team": "Londrina",
-     "p": 35,
+     "p": 36,
      "w": 8,
      "d": 8,
-     "l": 19,
-     "gf": 44,
-     "ga": 51,
+     "l": 20,
+     "gf": 45,
+     "ga": 54,
      "pts": 32,
      "tid": 148,
-     "form": "LLDWL"
+     "form": "LDWLL"
     },
     {
      "pos": 19,
      "team": "América Mineiro",
-     "p": 35,
-     "w": 6,
+     "p": 36,
+     "w": 7,
      "d": 5,
      "l": 24,
-     "gf": 23,
-     "ga": 54,
-     "pts": 23,
+     "gf": 26,
+     "ga": 55,
+     "pts": 26,
      "tid": 125,
-     "form": "LLLWW"
+     "form": "LLWWW"
     },
     {
      "pos": 20,

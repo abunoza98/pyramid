@@ -423,15 +423,15 @@
     {
      "pos": 9,
      "team": "Bodrum FK",
-     "p": 12,
+     "p": 13,
      "w": 4,
-     "d": 5,
+     "d": 6,
      "l": 3,
-     "gf": 15,
-     "ga": 11,
-     "pts": 17,
+     "gf": 16,
+     "ga": 12,
+     "pts": 18,
      "tid": 3583,
-     "form": "DLWWW"
+     "form": "LWWWD"
     },
     {
      "pos": 10,
@@ -487,6 +487,19 @@
     },
     {
      "pos": 14,
+     "team": "Ümraniyespor",
+     "p": 12,
+     "w": 3,
+     "d": 5,
+     "l": 4,
+     "gf": 14,
+     "ga": 11,
+     "pts": 14,
+     "tid": 3577,
+     "form": "DWWD"
+    },
+    {
+     "pos": 15,
      "team": "Pendikspor",
      "p": 13,
      "w": 3,
@@ -497,19 +510,6 @@
      "pts": 14,
      "tid": 3601,
      "form": "LLLDW"
-    },
-    {
-     "pos": 15,
-     "team": "Ümraniyespor",
-     "p": 11,
-     "w": 3,
-     "d": 4,
-     "l": 4,
-     "gf": 13,
-     "ga": 10,
-     "pts": 13,
-     "tid": 3577,
-     "form": "WDWW"
     },
     {
      "pos": 16,

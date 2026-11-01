@@ -641,6 +641,19 @@
     },
     {
      "pos": 5,
+     "team": "Alemannia Aachen",
+     "p": 12,
+     "w": 6,
+     "d": 2,
+     "l": 4,
+     "gf": 19,
+     "ga": 18,
+     "pts": 20,
+     "tid": 4259,
+     "form": "LLWWW"
+    },
+    {
+     "pos": 6,
      "team": "Wehen Wiesbaden",
      "p": 12,
      "w": 5,
@@ -653,7 +666,7 @@
      "form": "WWDWW"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "FC Ingolstadt",
      "p": 12,
      "w": 5,
@@ -664,19 +677,6 @@
      "pts": 18,
      "tid": 184,
      "form": "LWWWD"
-    },
-    {
-     "pos": 7,
-     "team": "Alemannia Aachen",
-     "p": 11,
-     "w": 5,
-     "d": 2,
-     "l": 4,
-     "gf": 17,
-     "ga": 17,
-     "pts": 17,
-     "tid": 4259,
-     "form": "WLLWW"
     },
     {
      "pos": 8,
@@ -759,15 +759,15 @@
     {
      "pos": 14,
      "team": "Preußen Münster",
-     "p": 11,
+     "p": 12,
      "w": 4,
      "d": 3,
-     "l": 4,
-     "gf": 19,
-     "ga": 21,
+     "l": 5,
+     "gf": 20,
+     "ga": 23,
      "pts": 15,
      "tid": 1313,
-     "form": "LDLLW"
+     "form": "DLLWL"
     },
     {
      "pos": 15,

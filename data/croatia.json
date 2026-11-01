@@ -78,6 +78,19 @@
     },
     {
      "pos": 3,
+     "team": "Osijek",
+     "p": 12,
+     "w": 6,
+     "d": 2,
+     "l": 4,
+     "gf": 22,
+     "ga": 17,
+     "pts": 20,
+     "tid": 616,
+     "form": "DLDLW"
+    },
+    {
+     "pos": 4,
      "team": "Varaždin",
      "p": 12,
      "w": 5,
@@ -90,7 +103,7 @@
      "form": "DWLLD"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Rijeka",
      "p": 11,
      "w": 5,
@@ -101,19 +114,6 @@
      "pts": 18,
      "tid": 561,
      "form": "WLWLD"
-    },
-    {
-     "pos": 5,
-     "team": "Osijek",
-     "p": 11,
-     "w": 5,
-     "d": 2,
-     "l": 4,
-     "gf": 19,
-     "ga": 16,
-     "pts": 17,
-     "tid": 616,
-     "form": "WDLDL"
     },
     {
      "pos": 6,
@@ -157,15 +157,15 @@
     {
      "pos": 9,
      "team": "Lokomotiva",
-     "p": 11,
+     "p": 12,
      "w": 3,
      "d": 2,
-     "l": 6,
-     "gf": 13,
-     "ga": 17,
+     "l": 7,
+     "gf": 14,
+     "ga": 20,
      "pts": 11,
      "tid": 1017,
-     "form": "DLLWD"
+     "form": "LLWDL"
     },
     {
      "pos": 10,

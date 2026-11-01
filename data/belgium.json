@@ -96,15 +96,15 @@
     {
      "pos": 4,
      "team": "Charleroi",
-     "p": 9,
-     "w": 7,
+     "p": 10,
+     "w": 8,
      "d": 0,
      "l": 2,
-     "gf": 16,
-     "ga": 10,
-     "pts": 21,
+     "gf": 21,
+     "ga": 12,
+     "pts": 24,
      "tid": 736,
-     "form": "LWWWL"
+     "form": "WWWLW"
     },
     {
      "pos": 5,
@@ -252,15 +252,15 @@
     {
      "pos": 16,
      "team": "La Louvière",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 1,
-     "l": 6,
-     "gf": 11,
-     "ga": 18,
+     "l": 7,
+     "gf": 13,
+     "ga": 23,
      "pts": 7,
      "tid": 5902,
-     "form": "LWLLW"
+     "form": "WLLWL"
     },
     {
      "pos": 17,
