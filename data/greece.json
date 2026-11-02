@@ -132,28 +132,28 @@
     {
      "pos": 8,
      "team": "Kalamata",
-     "p": 8,
+     "p": 9,
      "w": 3,
-     "d": 1,
+     "d": 2,
      "l": 4,
-     "gf": 13,
-     "ga": 17,
-     "pts": 10,
+     "gf": 14,
+     "ga": 18,
+     "pts": 11,
      "tid": 5046,
-     "form": "WLWWL"
+     "form": "LWWLD"
     },
     {
      "pos": 9,
      "team": "Iraklis 1908",
-     "p": 8,
+     "p": 9,
      "w": 2,
-     "d": 3,
+     "d": 4,
      "l": 3,
-     "gf": 9,
-     "ga": 11,
-     "pts": 9,
+     "gf": 10,
+     "ga": 12,
+     "pts": 10,
      "tid": 17991,
-     "form": "DDWLL"
+     "form": "DWLLD"
     },
     {
      "pos": 10,

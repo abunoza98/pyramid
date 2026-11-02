@@ -332,15 +332,15 @@
     {
      "pos": 2,
      "team": "Kayserispor",
-     "p": 12,
-     "w": 8,
+     "p": 13,
+     "w": 9,
      "d": 3,
      "l": 1,
-     "gf": 26,
+     "gf": 32,
      "ga": 9,
-     "pts": 27,
+     "pts": 30,
      "tid": 1001,
-     "form": "WWWDD"
+     "form": "WWDDW"
     },
     {
      "pos": 3,
@@ -409,19 +409,6 @@
     },
     {
      "pos": 8,
-     "team": "Muğlaspor",
-     "p": 12,
-     "w": 4,
-     "d": 6,
-     "l": 2,
-     "gf": 18,
-     "ga": 14,
-     "pts": 18,
-     "tid": 7414,
-     "form": "DDLWW"
-    },
-    {
-     "pos": 9,
      "team": "Bodrum FK",
      "p": 13,
      "w": 4,
@@ -432,6 +419,19 @@
      "pts": 18,
      "tid": 3583,
      "form": "LWWWD"
+    },
+    {
+     "pos": 9,
+     "team": "Muğlaspor",
+     "p": 13,
+     "w": 4,
+     "d": 6,
+     "l": 3,
+     "gf": 18,
+     "ga": 20,
+     "pts": 18,
+     "tid": 7414,
+     "form": "DLWWL"
     },
     {
      "pos": 10,

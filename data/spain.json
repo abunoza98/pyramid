@@ -442,15 +442,15 @@
     {
      "pos": 9,
      "team": "Oviedo",
-     "p": 11,
+     "p": 12,
      "w": 5,
      "d": 3,
-     "l": 3,
-     "gf": 15,
-     "ga": 12,
+     "l": 4,
+     "gf": 17,
+     "ga": 15,
      "pts": 18,
      "tid": 718,
-     "form": "WLWWD"
+     "form": "LWWDL"
     },
     {
      "pos": 10,
@@ -467,6 +467,19 @@
     },
     {
      "pos": 11,
+     "team": "Las Palmas",
+     "p": 12,
+     "w": 5,
+     "d": 2,
+     "l": 5,
+     "gf": 17,
+     "ga": 21,
+     "pts": 17,
+     "tid": 534,
+     "form": "DLLWW"
+    },
+    {
+     "pos": 12,
      "team": "Córdoba",
      "p": 12,
      "w": 5,
@@ -479,7 +492,7 @@
      "form": "WLWWD"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Tenerife",
      "p": 11,
      "w": 3,
@@ -492,7 +505,7 @@
      "form": "LDDD"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Eldense",
      "p": 12,
      "w": 4,
@@ -503,19 +516,6 @@
      "pts": 14,
      "tid": 9692,
      "form": "WWWLL"
-    },
-    {
-     "pos": 14,
-     "team": "Las Palmas",
-     "p": 11,
-     "w": 4,
-     "d": 2,
-     "l": 5,
-     "gf": 14,
-     "ga": 19,
-     "pts": 14,
-     "tid": 534,
-     "form": "LDLLW"
     },
     {
      "pos": 15,
@@ -952,6 +952,19 @@
       },
       {
        "pos": 3,
+       "team": "Jaén",
+       "p": 10,
+       "w": 5,
+       "d": 4,
+       "l": 1,
+       "gf": 16,
+       "ga": 11,
+       "pts": 19,
+       "tid": 5274,
+       "form": "DDWDW"
+      },
+      {
+       "pos": 4,
        "team": "Murcia",
        "p": 10,
        "w": 6,
@@ -964,7 +977,7 @@
        "form": "LWDLW"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Ibiza",
        "p": 10,
        "w": 5,
@@ -975,19 +988,6 @@
        "pts": 17,
        "tid": 9390,
        "form": "WDWDW"
-      },
-      {
-       "pos": 5,
-       "team": "Jaén",
-       "p": 9,
-       "w": 4,
-       "d": 4,
-       "l": 1,
-       "gf": 13,
-       "ga": 9,
-       "pts": 16,
-       "tid": 5274,
-       "form": "LDDWD"
       },
       {
        "pos": 6,
@@ -1057,15 +1057,15 @@
       {
        "pos": 11,
        "team": "Algeciras",
-       "p": 9,
+       "p": 10,
        "w": 4,
        "d": 1,
-       "l": 4,
-       "gf": 13,
-       "ga": 13,
+       "l": 5,
+       "gf": 15,
+       "ga": 16,
        "pts": 13,
        "tid": 9597,
-       "form": "WWLWW"
+       "form": "WLWWL"
       },
       {
        "pos": 12,
