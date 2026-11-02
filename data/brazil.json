@@ -388,15 +388,15 @@
     {
      "pos": 5,
      "team": "Fortaleza",
-     "p": 35,
+     "p": 36,
      "w": 16,
-     "d": 13,
+     "d": 14,
      "l": 6,
      "gf": 43,
      "ga": 31,
-     "pts": 61,
+     "pts": 62,
      "tid": 154,
-     "form": "DWDWD"
+     "form": "WDWDD"
     },
     {
      "pos": 6,
@@ -427,15 +427,15 @@
     {
      "pos": 8,
      "team": "Atlético Goianiense",
-     "p": 35,
+     "p": 36,
      "w": 14,
-     "d": 12,
+     "d": 13,
      "l": 9,
      "gf": 42,
      "ga": 33,
-     "pts": 54,
+     "pts": 55,
      "tid": 144,
-     "form": "WLDDL"
+     "form": "LDDLD"
     },
     {
      "pos": 9,

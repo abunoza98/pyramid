@@ -4,7 +4,7 @@
  "adjective": "Portuguese",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-02T00:00:00.000Z",
  "belowNote": "Liga 3's top clubs come up, one through a play-off",
  "leagues": [
   {
@@ -288,7 +288,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "liga-portugal-2",
@@ -342,6 +342,19 @@
     },
     {
      "pos": 2,
+     "team": "Penafiel",
+     "p": 9,
+     "w": 6,
+     "d": 1,
+     "l": 2,
+     "gf": 19,
+     "ga": 8,
+     "pts": 19,
+     "tid": 235,
+     "form": "WWLWW"
+    },
+    {
+     "pos": 3,
      "team": "Lusitânia Lourosa",
      "p": 9,
      "w": 5,
@@ -354,7 +367,7 @@
      "form": "WWDDD"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Benfica B",
      "p": 9,
      "w": 5,
@@ -365,19 +378,6 @@
      "pts": 17,
      "tid": 229,
      "form": "LWWDW"
-    },
-    {
-     "pos": 4,
-     "team": "Penafiel",
-     "p": 8,
-     "w": 5,
-     "d": 1,
-     "l": 2,
-     "gf": 18,
-     "ga": 8,
-     "pts": 16,
-     "tid": 235,
-     "form": "WWWLW"
     },
     {
      "pos": 5,
@@ -551,18 +551,18 @@
     {
      "pos": 18,
      "team": "Feirense",
-     "p": 8,
+     "p": 9,
      "w": 0,
      "d": 2,
-     "l": 6,
+     "l": 7,
      "gf": 2,
-     "ga": 10,
+     "ga": 11,
      "pts": 2,
      "tid": 213,
-     "form": "LLLLD"
+     "form": "LLLDL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   }
  ]
 }

@@ -4,7 +4,7 @@
  "adjective": "Italian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-02T00:00:00.000Z",
  "belowNote": "Serie D group winners come up",
  "leagues": [
   {
@@ -225,19 +225,32 @@
     },
     {
      "pos": 15,
-     "team": "Sassuolo",
-     "p": 9,
+     "team": "Fiorentina",
+     "p": 10,
      "w": 2,
      "d": 2,
-     "l": 5,
-     "gf": 14,
-     "ga": 22,
+     "l": 6,
+     "gf": 15,
+     "ga": 23,
      "pts": 8,
-     "tid": 488,
-     "form": "LDLLL"
+     "tid": 502,
+     "form": "LLLDW"
     },
     {
      "pos": 16,
+     "team": "Sassuolo",
+     "p": 10,
+     "w": 2,
+     "d": 2,
+     "l": 6,
+     "gf": 16,
+     "ga": 26,
+     "pts": 8,
+     "tid": 488,
+     "form": "DLLLL"
+    },
+    {
+     "pos": 17,
      "team": "Monza",
      "p": 10,
      "w": 2,
@@ -248,19 +261,6 @@
      "pts": 7,
      "tid": 1579,
      "form": "LWLLL"
-    },
-    {
-     "pos": 17,
-     "team": "Fiorentina",
-     "p": 9,
-     "w": 1,
-     "d": 2,
-     "l": 6,
-     "gf": 11,
-     "ga": 21,
-     "pts": 5,
-     "tid": 502,
-     "form": "DLLLD"
     },
     {
      "pos": 18,
@@ -302,7 +302,7 @@
      "form": "LWLLL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "serie-b",
@@ -652,7 +652,7 @@
    "groups": [
     {
      "name": "Girone A",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1184,7 +1184,7 @@
     },
     {
      "name": "Girone C",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1450,7 +1450,7 @@
      ]
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   }
  ]
 }
