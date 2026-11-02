@@ -464,7 +464,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -704,7 +704,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -786,19 +786,32 @@
       },
       {
        "pos": 7,
-       "team": "Gimnasia Y Tiro",
-       "p": 35,
+       "team": "Colegiales",
+       "p": 36,
        "w": 14,
        "d": 10,
-       "l": 11,
-       "gf": 37,
-       "ga": 34,
+       "l": 12,
+       "gf": 36,
+       "ga": 32,
        "pts": 52,
-       "tid": 1928,
-       "form": "WLDWL"
+       "tid": 8377,
+       "form": "WDWDD"
       },
       {
        "pos": 8,
+       "team": "Gimnasia Y Tiro",
+       "p": 36,
+       "w": 14,
+       "d": 10,
+       "l": 12,
+       "gf": 37,
+       "ga": 35,
+       "pts": 52,
+       "tid": 1928,
+       "form": "LDWLL"
+      },
+      {
+       "pos": 9,
        "team": "San Martín (San Juan)",
        "p": 36,
        "w": 13,
@@ -811,30 +824,17 @@
        "form": "LDDDW"
       },
       {
-       "pos": 9,
-       "team": "Colegiales",
-       "p": 35,
-       "w": 14,
-       "d": 9,
-       "l": 12,
-       "gf": 36,
-       "ga": 32,
-       "pts": 51,
-       "tid": 8377,
-       "form": "WWDWD"
-      },
-      {
        "pos": 10,
        "team": "San Martín (Tucumán)",
-       "p": 35,
+       "p": 36,
        "w": 11,
-       "d": 13,
+       "d": 14,
        "l": 11,
        "gf": 39,
        "ga": 37,
-       "pts": 46,
+       "pts": 47,
        "tid": 485,
-       "form": "DWLWL"
+       "form": "WLWLD"
       },
       {
        "pos": 11,
@@ -865,15 +865,15 @@
       {
        "pos": 13,
        "team": "Quilmes",
-       "p": 35,
-       "w": 11,
+       "p": 36,
+       "w": 12,
        "d": 9,
        "l": 15,
-       "gf": 32,
+       "gf": 33,
        "ga": 30,
-       "pts": 42,
+       "pts": 45,
        "tid": 480,
-       "form": "WDLLW"
+       "form": "DLLWW"
       },
       {
        "pos": 14,
@@ -943,7 +943,7 @@
      ]
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "primera-b-metropolitana",
@@ -1296,7 +1296,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1484,7 +1484,7 @@
     },
     {
      "name": "Group B",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1671,7 +1671,7 @@
      ]
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   }
  ]
 }

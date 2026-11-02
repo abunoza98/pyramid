@@ -4,7 +4,7 @@
  "adjective": "Greek",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-02T00:00:00.000Z",
  "belowNote": "Gamma Ethniki group winners come up",
  "leagues": [
   {
@@ -222,7 +222,7 @@
      "form": "LLLDL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "super-league-2",
@@ -239,15 +239,15 @@
     {
      "pos": 1,
      "team": "Marko",
-     "p": 8,
-     "w": 7,
+     "p": 9,
+     "w": 8,
      "d": 1,
      "l": 0,
-     "gf": 16,
+     "gf": 18,
      "ga": 5,
-     "pts": 22,
+     "pts": 25,
      "tid": 12403,
-     "form": "WWWDW"
+     "form": "WWDWW"
     },
     {
      "pos": 2,
@@ -394,19 +394,6 @@
     },
     {
      "pos": 13,
-     "team": "Apollon Pontou",
-     "p": 8,
-     "w": 2,
-     "d": 2,
-     "l": 4,
-     "gf": 6,
-     "ga": 9,
-     "pts": 8,
-     "tid": 2102,
-     "form": "WDWLL"
-    },
-    {
-     "pos": 14,
      "team": "Nestos Chrisoupolis",
      "p": 9,
      "w": 2,
@@ -417,6 +404,19 @@
      "pts": 8,
      "tid": 12367,
      "form": "LLDWL"
+    },
+    {
+     "pos": 14,
+     "team": "Apollon Pontou",
+     "p": 9,
+     "w": 2,
+     "d": 2,
+     "l": 5,
+     "gf": 6,
+     "ga": 11,
+     "pts": 8,
+     "tid": 2102,
+     "form": "DWLLL"
     },
     {
      "pos": 15,
@@ -445,7 +445,7 @@
      "form": "DLDLD"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   }
  ]
 }
