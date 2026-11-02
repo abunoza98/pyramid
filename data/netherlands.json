@@ -4,7 +4,7 @@
  "adjective": "Dutch",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-02T00:00:00.000Z",
  "belowNote": "The top Derde Divisie clubs come up",
  "leagues": [
   {
@@ -319,15 +319,15 @@
     {
      "pos": 1,
      "team": "Heracles",
-     "p": 12,
-     "w": 9,
+     "p": 13,
+     "w": 10,
      "d": 2,
      "l": 1,
-     "gf": 37,
+     "gf": 39,
      "ga": 14,
-     "pts": 29,
+     "pts": 32,
      "tid": 206,
-     "form": "WDWWD"
+     "form": "DWWDW"
     },
     {
      "pos": 2,
@@ -384,15 +384,15 @@
     {
      "pos": 6,
      "team": "NAC Breda",
-     "p": 12,
-     "w": 6,
+     "p": 13,
+     "w": 7,
      "d": 3,
      "l": 3,
-     "gf": 23,
+     "gf": 25,
      "ga": 20,
-     "pts": 21,
+     "pts": 24,
      "tid": 203,
-     "form": "WDWWD"
+     "form": "DWWDW"
     },
     {
      "pos": 7,
@@ -423,15 +423,15 @@
     {
      "pos": 9,
      "team": "Vitesse",
-     "p": 12,
+     "p": 13,
      "w": 5,
-     "d": 2,
+     "d": 3,
      "l": 5,
-     "gf": 16,
-     "ga": 17,
-     "pts": 17,
+     "gf": 17,
+     "ga": 18,
+     "pts": 18,
      "tid": 200,
-     "form": "LDLWL"
+     "form": "DLWLD"
     },
     {
      "pos": 10,
@@ -461,19 +461,6 @@
     },
     {
      "pos": 12,
-     "team": "Jong PSV",
-     "p": 12,
-     "w": 4,
-     "d": 4,
-     "l": 4,
-     "gf": 17,
-     "ga": 19,
-     "pts": 16,
-     "tid": 411,
-     "form": "DLDLW"
-    },
-    {
-     "pos": 13,
      "team": "RKC Waalwijk",
      "p": 13,
      "w": 3,
@@ -484,6 +471,19 @@
      "pts": 16,
      "tid": 417,
      "form": "DLDDL"
+    },
+    {
+     "pos": 13,
+     "team": "Jong PSV",
+     "p": 13,
+     "w": 4,
+     "d": 4,
+     "l": 5,
+     "gf": 17,
+     "ga": 21,
+     "pts": 16,
+     "tid": 411,
+     "form": "LDLWL"
     },
     {
      "pos": 14,
@@ -501,28 +501,28 @@
     {
      "pos": 15,
      "team": "TOP Oss",
-     "p": 12,
+     "p": 13,
      "w": 4,
      "d": 1,
-     "l": 7,
+     "l": 8,
      "gf": 19,
-     "ga": 20,
+     "ga": 22,
      "pts": 13,
      "tid": 423,
-     "form": "LWWLD"
+     "form": "WWLDL"
     },
     {
      "pos": 16,
      "team": "Jong Ajax",
-     "p": 12,
+     "p": 13,
      "w": 3,
-     "d": 3,
+     "d": 4,
      "l": 6,
-     "gf": 18,
-     "ga": 29,
-     "pts": 12,
+     "gf": 19,
+     "ga": 30,
+     "pts": 13,
      "tid": 425,
-     "form": "LDLWD"
+     "form": "DLWDD"
     },
     {
      "pos": 17,
@@ -539,19 +539,6 @@
     },
     {
      "pos": 18,
-     "team": "FC Dordrecht",
-     "p": 12,
-     "w": 3,
-     "d": 2,
-     "l": 7,
-     "gf": 16,
-     "ga": 31,
-     "pts": 11,
-     "tid": 409,
-     "form": "WDLWL"
-    },
-    {
-     "pos": 19,
      "team": "FC Eindhoven",
      "p": 13,
      "w": 3,
@@ -564,20 +551,33 @@
      "form": "DLLLL"
     },
     {
+     "pos": 19,
+     "team": "FC Dordrecht",
+     "p": 13,
+     "w": 3,
+     "d": 2,
+     "l": 8,
+     "gf": 18,
+     "ga": 34,
+     "pts": 11,
+     "tid": 409,
+     "form": "DLWLL"
+    },
+    {
      "pos": 20,
      "team": "Jong Utrecht",
-     "p": 12,
-     "w": 2,
+     "p": 13,
+     "w": 3,
      "d": 1,
      "l": 9,
-     "gf": 19,
-     "ga": 31,
-     "pts": 7,
+     "gf": 22,
+     "ga": 33,
+     "pts": 10,
      "tid": 428,
-     "form": "WLLLL"
+     "form": "LLLLW"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "tweede-divisie",

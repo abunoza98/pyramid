@@ -786,19 +786,6 @@
       },
       {
        "pos": 11,
-       "team": "Desenzano",
-       "p": 11,
-       "w": 3,
-       "d": 4,
-       "l": 4,
-       "gf": 10,
-       "ga": 13,
-       "pts": 13,
-       "tid": 17816,
-       "form": "DWWLL"
-      },
-      {
-       "pos": 12,
        "team": "Lumezzane",
        "p": 12,
        "w": 3,
@@ -811,20 +798,46 @@
        "form": "WDLLD"
       },
       {
-       "pos": 13,
-       "team": "Pro Vercelli",
-       "p": 11,
+       "pos": 12,
+       "team": "Desenzano",
+       "p": 12,
        "w": 3,
-       "d": 3,
+       "d": 4,
        "l": 5,
        "gf": 10,
-       "ga": 19,
-       "pts": 12,
-       "tid": 526,
-       "form": "DWLLW"
+       "ga": 14,
+       "pts": 13,
+       "tid": 17816,
+       "form": "WWLLL"
+      },
+      {
+       "pos": 13,
+       "team": "Novara",
+       "p": 12,
+       "w": 3,
+       "d": 4,
+       "l": 5,
+       "gf": 11,
+       "ga": 16,
+       "pts": 13,
+       "tid": 513,
+       "form": "WLDLW"
       },
       {
        "pos": 14,
+       "team": "Pro Vercelli",
+       "p": 12,
+       "w": 3,
+       "d": 4,
+       "l": 5,
+       "gf": 11,
+       "ga": 20,
+       "pts": 13,
+       "tid": 526,
+       "form": "WLLWD"
+      },
+      {
+       "pos": 15,
        "team": "Carpi",
        "p": 12,
        "w": 3,
@@ -837,7 +850,7 @@
        "form": "LLWWL"
       },
       {
-       "pos": 15,
+       "pos": 16,
        "team": "Giana Erminio",
        "p": 12,
        "w": 2,
@@ -850,30 +863,17 @@
        "form": "DDWWL"
       },
       {
-       "pos": 16,
-       "team": "Novara",
-       "p": 11,
-       "w": 2,
-       "d": 4,
-       "l": 5,
-       "gf": 10,
-       "ga": 16,
-       "pts": 10,
-       "tid": 513,
-       "form": "LWLDL"
-      },
-      {
        "pos": 17,
        "team": "Juventus Next Gen",
-       "p": 11,
+       "p": 12,
        "w": 2,
-       "d": 4,
+       "d": 5,
        "l": 5,
-       "gf": 11,
-       "ga": 18,
-       "pts": 10,
+       "gf": 12,
+       "ga": 19,
+       "pts": 11,
        "tid": 1715,
-       "form": "DLDWL"
+       "form": "LDWLD"
       },
       {
        "pos": 18,
