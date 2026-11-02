@@ -94,15 +94,15 @@
       {
        "pos": 5,
        "team": "Houston Dynamo",
-       "p": 32,
+       "p": 33,
        "w": 14,
        "d": 9,
-       "l": 9,
-       "gf": 42,
-       "ga": 39,
+       "l": 10,
+       "gf": 43,
+       "ga": 42,
        "pts": 51,
        "tid": 1600,
-       "form": "DDDDW"
+       "form": "DDDWL"
       },
       {
        "pos": 6,
@@ -132,6 +132,19 @@
       },
       {
        "pos": 8,
+       "team": "Portland Timbers",
+       "p": 33,
+       "w": 12,
+       "d": 7,
+       "l": 14,
+       "gf": 60,
+       "ga": 61,
+       "pts": 43,
+       "tid": 1617,
+       "form": "LDWWW"
+      },
+      {
+       "pos": 9,
        "team": "Colorado Rapids",
        "p": 33,
        "w": 12,
@@ -144,7 +157,7 @@
        "form": "DDWDL"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Seattle Sounders",
        "p": 33,
        "w": 11,
@@ -157,7 +170,7 @@
        "form": "LDDLL"
       },
       {
-       "pos": 10,
+       "pos": 11,
        "team": "Real Salt Lake",
        "p": 33,
        "w": 12,
@@ -170,7 +183,7 @@
        "form": "DWWWL"
       },
       {
-       "pos": 11,
+       "pos": 12,
        "team": "Minnesota United",
        "p": 33,
        "w": 10,
@@ -181,19 +194,6 @@
        "pts": 41,
        "tid": 1612,
        "form": "DWDWW"
-      },
-      {
-       "pos": 12,
-       "team": "Portland Timbers",
-       "p": 32,
-       "w": 11,
-       "d": 7,
-       "l": 14,
-       "gf": 57,
-       "ga": 60,
-       "pts": 40,
-       "tid": 1617,
-       "form": "DLDWW"
       },
       {
        "pos": 13,
