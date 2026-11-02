@@ -243,15 +243,15 @@
       {
        "pos": 1,
        "team": "Nashville SC",
-       "p": 32,
-       "w": 21,
+       "p": 33,
+       "w": 22,
        "d": 8,
        "l": 3,
-       "gf": 66,
-       "ga": 23,
-       "pts": 71,
+       "gf": 69,
+       "ga": 25,
+       "pts": 74,
        "tid": 9569,
-       "form": "WWDWD"
+       "form": "WDWDW"
       },
       {
        "pos": 2,
@@ -360,15 +360,15 @@
       {
        "pos": 10,
        "team": "New York Red Bulls",
-       "p": 32,
+       "p": 33,
        "w": 11,
        "d": 6,
-       "l": 15,
-       "gf": 43,
-       "ga": 59,
+       "l": 16,
+       "gf": 45,
+       "ga": 62,
        "pts": 39,
        "tid": 1602,
-       "form": "WLLWL"
+       "form": "LLWLL"
       },
       {
        "pos": 11,

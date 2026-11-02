@@ -118,6 +118,19 @@
     },
     {
      "pos": 8,
+     "team": "Santos Laguna",
+     "p": 15,
+     "w": 7,
+     "d": 1,
+     "l": 7,
+     "gf": 21,
+     "ga": 20,
+     "pts": 22,
+     "tid": 2285,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 9,
      "team": "Monterrey",
      "p": 14,
      "w": 6,
@@ -130,7 +143,7 @@
      "form": "DWWLD"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Pumas UNAM",
      "p": 15,
      "w": 5,
@@ -143,7 +156,7 @@
      "form": "DWLDW"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Querétaro",
      "p": 14,
      "w": 6,
@@ -156,7 +169,7 @@
      "form": "WLLLL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Pachuca",
      "p": 15,
      "w": 5,
@@ -167,19 +180,6 @@
      "pts": 19,
      "tid": 2292,
      "form": "DLLWW"
-    },
-    {
-     "pos": 12,
-     "team": "Santos Laguna",
-     "p": 14,
-     "w": 6,
-     "d": 1,
-     "l": 7,
-     "gf": 20,
-     "ga": 20,
-     "pts": 19,
-     "tid": 2285,
-     "form": "WWWWL"
     },
     {
      "pos": 13,
@@ -236,15 +236,15 @@
     {
      "pos": 17,
      "team": "Necaxa",
-     "p": 14,
+     "p": 15,
      "w": 2,
      "d": 4,
-     "l": 8,
+     "l": 9,
      "gf": 16,
-     "ga": 27,
+     "ga": 28,
      "pts": 10,
      "tid": 2288,
-     "form": "LDLLD"
+     "form": "DLLDL"
     },
     {
      "pos": 18,
