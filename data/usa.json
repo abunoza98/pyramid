@@ -107,15 +107,15 @@
       {
        "pos": 6,
        "team": "Los Angeles FC",
-       "p": 32,
+       "p": 33,
        "w": 12,
        "d": 11,
-       "l": 9,
-       "gf": 50,
-       "ga": 35,
+       "l": 10,
+       "gf": 51,
+       "ga": 38,
        "pts": 47,
        "tid": 1616,
-       "form": "LDWDD"
+       "form": "DWDDL"
       },
       {
        "pos": 7,
@@ -171,6 +171,19 @@
       },
       {
        "pos": 11,
+       "team": "Minnesota United",
+       "p": 33,
+       "w": 10,
+       "d": 11,
+       "l": 12,
+       "gf": 53,
+       "ga": 57,
+       "pts": 41,
+       "tid": 1612,
+       "form": "DWDWW"
+      },
+      {
+       "pos": 12,
        "team": "Portland Timbers",
        "p": 32,
        "w": 11,
@@ -183,7 +196,7 @@
        "form": "DLDWW"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "San Diego FC",
        "p": 33,
        "w": 9,
@@ -194,19 +207,6 @@
        "pts": 38,
        "tid": 25484,
        "form": "DDDLW"
-      },
-      {
-       "pos": 13,
-       "team": "Minnesota United",
-       "p": 32,
-       "w": 9,
-       "d": 11,
-       "l": 12,
-       "gf": 50,
-       "ga": 56,
-       "pts": 38,
-       "tid": 1612,
-       "form": "DDWDW"
       },
       {
        "pos": 14,
@@ -255,29 +255,29 @@
       },
       {
        "pos": 2,
-       "team": "New England Revolution",
-       "p": 32,
-       "w": 18,
-       "d": 4,
-       "l": 10,
-       "gf": 54,
-       "ga": 44,
-       "pts": 58,
-       "tid": 1609,
-       "form": "LWWWW"
+       "team": "Inter Miami",
+       "p": 33,
+       "w": 16,
+       "d": 11,
+       "l": 6,
+       "gf": 77,
+       "ga": 56,
+       "pts": 59,
+       "tid": 9568,
+       "form": "WWLDW"
       },
       {
        "pos": 3,
-       "team": "Inter Miami",
-       "p": 32,
-       "w": 15,
-       "d": 11,
-       "l": 6,
-       "gf": 75,
-       "ga": 55,
-       "pts": 56,
-       "tid": 9568,
-       "form": "WWWLD"
+       "team": "New England Revolution",
+       "p": 33,
+       "w": 18,
+       "d": 4,
+       "l": 11,
+       "gf": 55,
+       "ga": 46,
+       "pts": 58,
+       "tid": 1609,
+       "form": "WWWWL"
       },
       {
        "pos": 4,
@@ -648,7 +648,7 @@
        "ga": 34,
        "pts": 52,
        "tid": 4003,
-       "form": "LWWLW"
+       "form": "WWLWW"
       },
       {
        "pos": 2,
@@ -739,7 +739,7 @@
        "ga": 46,
        "pts": 40,
        "tid": 4009,
-       "form": "LLWWD"
+       "form": "LWWDL"
       },
       {
        "pos": 9,

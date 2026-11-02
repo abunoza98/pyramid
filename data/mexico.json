@@ -53,6 +53,19 @@
     },
     {
      "pos": 3,
+     "team": "Cruz Azul",
+     "p": 15,
+     "w": 9,
+     "d": 2,
+     "l": 4,
+     "gf": 34,
+     "ga": 24,
+     "pts": 29,
+     "tid": 2295,
+     "form": "DWWWW"
+    },
+    {
+     "pos": 4,
      "team": "Atlas",
      "p": 15,
      "w": 8,
@@ -63,19 +76,6 @@
      "pts": 27,
      "tid": 2283,
      "form": "DWLWW"
-    },
-    {
-     "pos": 4,
-     "team": "Cruz Azul",
-     "p": 14,
-     "w": 8,
-     "d": 2,
-     "l": 4,
-     "gf": 32,
-     "ga": 23,
-     "pts": 26,
-     "tid": 2295,
-     "form": "DDWWW"
     },
     {
      "pos": 5,
@@ -106,15 +106,15 @@
     {
      "pos": 7,
      "team": "León",
-     "p": 14,
+     "p": 15,
      "w": 6,
      "d": 4,
-     "l": 4,
-     "gf": 21,
-     "ga": 18,
+     "l": 5,
+     "gf": 22,
+     "ga": 20,
      "pts": 22,
      "tid": 2289,
-     "form": "WDLWD"
+     "form": "DLWDL"
     },
     {
      "pos": 8,
