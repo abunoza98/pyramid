@@ -193,15 +193,15 @@
     {
      "pos": 12,
      "team": "Alanyaspor",
-     "p": 9,
+     "p": 10,
      "w": 3,
      "d": 3,
-     "l": 3,
+     "l": 4,
      "gf": 9,
-     "ga": 11,
+     "ga": 16,
      "pts": 12,
      "tid": 996,
-     "form": "DWDLL"
+     "form": "WDLLL"
     },
     {
      "pos": 13,
@@ -218,6 +218,19 @@
     },
     {
      "pos": 14,
+     "team": "Gençlerbirliği",
+     "p": 10,
+     "w": 3,
+     "d": 2,
+     "l": 5,
+     "gf": 12,
+     "ga": 18,
+     "pts": 11,
+     "tid": 997,
+     "form": "LDLLW"
+    },
+    {
+     "pos": 15,
      "team": "Konyaspor",
      "p": 10,
      "w": 2,
@@ -230,7 +243,7 @@
      "form": "DDLWL"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Gaziantep FK",
      "p": 10,
      "w": 2,
@@ -241,19 +254,6 @@
      "pts": 8,
      "tid": 3573,
      "form": "LLLLL"
-    },
-    {
-     "pos": 16,
-     "team": "Gençlerbirliği",
-     "p": 9,
-     "w": 2,
-     "d": 2,
-     "l": 5,
-     "gf": 7,
-     "ga": 18,
-     "pts": 8,
-     "tid": 997,
-     "form": "LLDLL"
     },
     {
      "pos": 17,
@@ -282,7 +282,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "1-lig",
@@ -578,7 +578,7 @@
      "form": "LLLW"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "2-lig",
@@ -1109,7 +1109,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,

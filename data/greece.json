@@ -197,29 +197,29 @@
     {
      "pos": 13,
      "team": "Atromitos",
-     "p": 7,
-     "w": 0,
+     "p": 8,
+     "w": 1,
      "d": 2,
      "l": 5,
-     "gf": 6,
+     "gf": 9,
      "ga": 12,
-     "pts": 2,
+     "pts": 5,
      "tid": 12260,
-     "form": "DDLLL"
+     "form": "DLLLW"
     },
     {
      "pos": 14,
      "team": "Volos",
-     "p": 8,
+     "p": 9,
      "w": 0,
      "d": 3,
-     "l": 5,
+     "l": 6,
      "gf": 6,
-     "ga": 13,
+     "ga": 16,
      "pts": 0,
      "ded": 3,
      "tid": 2110,
-     "form": "LLLDL"
+     "form": "LLDLL"
     }
    ],
    "updated": "2026-11-02T00:00:00.000Z"

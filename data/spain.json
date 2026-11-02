@@ -4,7 +4,7 @@
  "adjective": "Spanish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-02T00:00:00.000Z",
  "belowNote": "Promoted clubs from Segunda Federación come up",
  "leagues": [
   {
@@ -489,7 +489,7 @@
      "ga": 15,
      "pts": 14,
      "tid": 719,
-     "form": "DLDDD"
+     "form": "LDDD"
     },
     {
      "pos": 13,
@@ -593,7 +593,7 @@
      "ga": 20,
      "pts": 10,
      "tid": 8157,
-     "form": "WDWLL"
+     "form": "DWLL"
     },
     {
      "pos": 21,
@@ -622,7 +622,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "primera-federacion",
@@ -922,7 +922,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1187,7 +1187,7 @@
      ]
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   }
  ]
 }

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://footballpyramids.com/</loc><lastmod>2026-11-02</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/england/</loc><lastmod>2026-11-01</lastmod><changefreq>hourly</changefreq></url>
-  <url><loc>https://footballpyramids.com/spain/</loc><lastmod>2026-11-01</lastmod><changefreq>hourly</changefreq></url>
+  <url><loc>https://footballpyramids.com/spain/</loc><lastmod>2026-11-02</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/</loc><lastmod>2026-11-01</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/france/</loc><lastmod>2026-11-01</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/</loc><lastmod>2026-11-01</lastmod><changefreq>hourly</changefreq></url>
@@ -706,9 +706,9 @@
   <url><loc>https://footballpyramids.com/turkey/club/erzurumspor-fk/</loc><lastmod>2026-11-02</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/alanyaspor/</loc><lastmod>2026-11-02</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/rizespor/</loc><lastmod>2026-11-02</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/turkey/club/genclerbirligi/</loc><lastmod>2026-11-02</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/konyaspor/</loc><lastmod>2026-11-02</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/gaziantep-fk/</loc><lastmod>2026-11-02</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/turkey/club/genclerbirligi/</loc><lastmod>2026-11-02</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/samsunspor/</loc><lastmod>2026-11-02</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/eyupspor/</loc><lastmod>2026-11-02</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/turkey/club/bursaspor/</loc><lastmod>2026-11-02</lastmod><changefreq>daily</changefreq></url>
@@ -1709,7 +1709,7 @@
   <url><loc>https://footballpyramids.com/usa/us-open-cup/</loc><lastmod>2026-10-23</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/mls-cup-playoffs/</loc><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/races/</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/spain/races/</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/spain/races/</loc><lastmod>2026-11-02</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/races/</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/france/races/</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/races/</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq></url>
