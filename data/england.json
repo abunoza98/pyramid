@@ -4,7 +4,7 @@
  "adjective": "English",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-02T00:00:00.000Z",
  "belowNote": "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
  "leagues": [
   {
@@ -296,7 +296,7 @@
      "form": "LLLDL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "championship",
@@ -644,7 +644,7 @@
      "form": "LLLDL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "league-one",
@@ -2045,7 +2045,7 @@
     },
     {
      "name": "South",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2101,6 +2101,19 @@
       },
       {
        "pos": 5,
+       "team": "Farnham Town",
+       "p": 15,
+       "w": 8,
+       "d": 2,
+       "l": 5,
+       "gf": 29,
+       "ga": 19,
+       "pts": 26,
+       "tid": 8783,
+       "form": "LWWLW"
+      },
+      {
+       "pos": 6,
        "team": "Billericay Town",
        "p": 13,
        "w": 7,
@@ -2113,7 +2126,7 @@
        "form": "WWWDW"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Tonbridge Angels",
        "p": 15,
        "w": 7,
@@ -2126,7 +2139,7 @@
        "form": "WWDWL"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Dorking Wanderers",
        "p": 14,
        "w": 6,
@@ -2139,7 +2152,7 @@
        "form": "WDWDW"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Dagenham & Redbridge",
        "p": 15,
        "w": 7,
@@ -2150,19 +2163,6 @@
        "pts": 24,
        "tid": 1821,
        "form": "DLWLD"
-      },
-      {
-       "pos": 9,
-       "team": "Farnham Town",
-       "p": 14,
-       "w": 7,
-       "d": 2,
-       "l": 5,
-       "gf": 27,
-       "ga": 19,
-       "pts": 23,
-       "tid": 8783,
-       "form": "DLWWL"
       },
       {
        "pos": 10,
@@ -2193,15 +2193,15 @@
       {
        "pos": 12,
        "team": "Chelmsford City",
-       "p": 13,
+       "p": 14,
        "w": 4,
        "d": 9,
-       "l": 0,
+       "l": 1,
        "gf": 21,
-       "ga": 12,
+       "ga": 14,
        "pts": 21,
        "tid": 4689,
-       "form": "DWDWW"
+       "form": "WDWWL"
       },
       {
        "pos": 13,
@@ -2362,7 +2362,7 @@
      ]
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   }
  ]
 }

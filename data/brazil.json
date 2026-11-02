@@ -302,7 +302,7 @@
      "form": "LLLWL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "serie-b",
@@ -504,6 +504,19 @@
     },
     {
      "pos": 14,
+     "team": "Athletic Club",
+     "p": 36,
+     "w": 11,
+     "d": 14,
+     "l": 11,
+     "gf": 42,
+     "ga": 41,
+     "pts": 47,
+     "tid": 13975,
+     "form": "LDDLW"
+    },
+    {
+     "pos": 15,
      "team": "Náutico",
      "p": 36,
      "w": 12,
@@ -516,30 +529,17 @@
      "form": "LLDLW"
     },
     {
-     "pos": 15,
-     "team": "Athletic Club",
-     "p": 35,
-     "w": 10,
-     "d": 14,
-     "l": 11,
-     "gf": 40,
-     "ga": 40,
-     "pts": 44,
-     "tid": 13975,
-     "form": "LLDDL"
-    },
-    {
      "pos": 16,
      "team": "Ceará",
-     "p": 35,
+     "p": 36,
      "w": 11,
      "d": 10,
-     "l": 14,
-     "gf": 37,
-     "ga": 44,
+     "l": 15,
+     "gf": 38,
+     "ga": 46,
      "pts": 43,
      "tid": 129,
-     "form": "WWLDL"
+     "form": "WLDLL"
     },
     {
      "pos": 17,

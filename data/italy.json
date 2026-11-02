@@ -200,15 +200,15 @@
     {
      "pos": 13,
      "team": "Atalanta",
-     "p": 9,
+     "p": 10,
      "w": 3,
      "d": 2,
-     "l": 4,
+     "l": 5,
      "gf": 16,
-     "ga": 17,
+     "ga": 20,
      "pts": 11,
      "tid": 499,
-     "form": "LWLDD"
+     "form": "WLDDL"
     },
     {
      "pos": 14,
@@ -225,6 +225,19 @@
     },
     {
      "pos": 15,
+     "team": "Parma",
+     "p": 10,
+     "w": 2,
+     "d": 2,
+     "l": 6,
+     "gf": 8,
+     "ga": 15,
+     "pts": 8,
+     "tid": 523,
+     "form": "LLLDW"
+    },
+    {
+     "pos": 16,
      "team": "Fiorentina",
      "p": 10,
      "w": 2,
@@ -237,7 +250,7 @@
      "form": "LLLDW"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Sassuolo",
      "p": 10,
      "w": 2,
@@ -250,7 +263,7 @@
      "form": "DLLLL"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Monza",
      "p": 10,
      "w": 2,
@@ -261,19 +274,6 @@
      "pts": 7,
      "tid": 1579,
      "form": "LWLLL"
-    },
-    {
-     "pos": 18,
-     "team": "Parma",
-     "p": 9,
-     "w": 1,
-     "d": 2,
-     "l": 6,
-     "gf": 5,
-     "ga": 15,
-     "pts": 5,
-     "tid": 523,
-     "form": "WLLLD"
     },
     {
      "pos": 19,
@@ -1344,6 +1344,32 @@
       },
       {
        "pos": 13,
+       "team": "Foggia",
+       "p": 12,
+       "w": 4,
+       "d": 3,
+       "l": 5,
+       "gf": 13,
+       "ga": 15,
+       "pts": 15,
+       "tid": 521,
+       "form": "WLLWD"
+      },
+      {
+       "pos": 14,
+       "team": "Casarano",
+       "p": 12,
+       "w": 4,
+       "d": 3,
+       "l": 5,
+       "gf": 15,
+       "ga": 20,
+       "pts": 15,
+       "tid": 9542,
+       "form": "LDLWD"
+      },
+      {
+       "pos": 15,
        "team": "Altamura",
        "p": 12,
        "w": 4,
@@ -1354,32 +1380,6 @@
        "pts": 15,
        "tid": 9549,
        "form": "DLWDW"
-      },
-      {
-       "pos": 14,
-       "team": "Foggia",
-       "p": 11,
-       "w": 4,
-       "d": 2,
-       "l": 5,
-       "gf": 11,
-       "ga": 13,
-       "pts": 14,
-       "tid": 521,
-       "form": "WWLLW"
-      },
-      {
-       "pos": 15,
-       "team": "Casarano",
-       "p": 11,
-       "w": 4,
-       "d": 2,
-       "l": 5,
-       "gf": 13,
-       "ga": 18,
-       "pts": 14,
-       "tid": 9542,
-       "form": "LLDLW"
       },
       {
        "pos": 16,

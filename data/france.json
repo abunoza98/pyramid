@@ -4,7 +4,7 @@
  "adjective": "French",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-02T00:00:00.000Z",
  "belowNote": "Promoted clubs from National 1 come up",
  "leagues": [
   {
@@ -172,19 +172,32 @@
     },
     {
      "pos": 10,
-     "team": "Lorient",
-     "p": 8,
+     "team": "Brest",
+     "p": 9,
      "w": 3,
      "d": 3,
-     "l": 2,
-     "gf": 7,
-     "ga": 6,
+     "l": 3,
+     "gf": 16,
+     "ga": 12,
      "pts": 12,
-     "tid": 97,
-     "form": "DLWWD"
+     "tid": 106,
+     "form": "LWDLW"
     },
     {
      "pos": 11,
+     "team": "Lorient",
+     "p": 9,
+     "w": 3,
+     "d": 3,
+     "l": 3,
+     "gf": 7,
+     "ga": 8,
+     "pts": 12,
+     "tid": 97,
+     "form": "LWWDL"
+    },
+    {
+     "pos": 12,
      "team": "Toulouse",
      "p": 9,
      "w": 2,
@@ -197,7 +210,7 @@
      "form": "WDWDL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Strasbourg",
      "p": 9,
      "w": 3,
@@ -210,7 +223,7 @@
      "form": "LLLLW"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Auxerre",
      "p": 9,
      "w": 3,
@@ -221,19 +234,6 @@
      "pts": 10,
      "tid": 108,
      "form": "WLWDL"
-    },
-    {
-     "pos": 14,
-     "team": "Brest",
-     "p": 8,
-     "w": 2,
-     "d": 3,
-     "l": 3,
-     "gf": 14,
-     "ga": 12,
-     "pts": 9,
-     "tid": 106,
-     "form": "LLWDL"
     },
     {
      "pos": 15,
@@ -288,7 +288,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "ligue-2",
@@ -353,6 +353,32 @@
     },
     {
      "pos": 3,
+     "team": "Nancy",
+     "p": 11,
+     "w": 7,
+     "d": 1,
+     "l": 3,
+     "gf": 16,
+     "ga": 9,
+     "pts": 22,
+     "tid": 102,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 4,
+     "team": "Reims",
+     "p": 11,
+     "w": 5,
+     "d": 6,
+     "l": 0,
+     "gf": 22,
+     "ga": 12,
+     "pts": 21,
+     "tid": 93,
+     "form": "DDWDW"
+    },
+    {
+     "pos": 5,
      "team": "Pau",
      "p": 11,
      "w": 6,
@@ -365,43 +391,17 @@
      "form": "WWWWW"
     },
     {
-     "pos": 4,
-     "team": "Nancy",
-     "p": 10,
-     "w": 6,
-     "d": 1,
-     "l": 3,
-     "gf": 12,
-     "ga": 8,
-     "pts": 19,
-     "tid": 102,
-     "form": "LWWWW"
-    },
-    {
-     "pos": 5,
-     "team": "Reims",
-     "p": 10,
-     "w": 4,
-     "d": 6,
-     "l": 0,
-     "gf": 20,
-     "ga": 12,
-     "pts": 18,
-     "tid": 93,
-     "form": "WDDWD"
-    },
-    {
      "pos": 6,
      "team": "Red Star",
-     "p": 10,
+     "p": 11,
      "w": 5,
      "d": 2,
-     "l": 3,
-     "gf": 13,
-     "ga": 12,
+     "l": 4,
+     "gf": 14,
+     "ga": 16,
      "pts": 17,
      "tid": 104,
-     "form": "WWWLL"
+     "form": "WWLLL"
     },
     {
      "pos": 7,
@@ -484,15 +484,15 @@
     {
      "pos": 13,
      "team": "Sochaux",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 5,
-     "l": 3,
+     "l": 4,
      "gf": 8,
-     "ga": 12,
+     "ga": 14,
      "pts": 11,
      "tid": 115,
-     "form": "WDDLL"
+     "form": "DDLLL"
     },
     {
      "pos": 14,
@@ -560,7 +560,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "ligue-3",
