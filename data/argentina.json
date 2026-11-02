@@ -560,15 +560,15 @@
       {
        "pos": 8,
        "team": "CA Estudiantes",
-       "p": 35,
+       "p": 36,
        "w": 13,
        "d": 10,
-       "l": 12,
+       "l": 13,
        "gf": 35,
-       "ga": 34,
+       "ga": 35,
        "pts": 49,
        "tid": 1936,
-       "form": "WLWLD"
+       "form": "LWLDL"
       },
       {
        "pos": 9,
@@ -598,6 +598,19 @@
       },
       {
        "pos": 11,
+       "team": "All Boys",
+       "p": 36,
+       "w": 8,
+       "d": 17,
+       "l": 11,
+       "gf": 22,
+       "ga": 30,
+       "pts": 41,
+       "tid": 464,
+       "form": "LDDWW"
+      },
+      {
+       "pos": 12,
        "team": "San Telmo",
        "p": 36,
        "w": 10,
@@ -610,7 +623,7 @@
        "form": "WLDLW"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "Atlético Mitre",
        "p": 36,
        "w": 8,
@@ -623,7 +636,7 @@
        "form": "WDWLD"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Racing (Córdoba)",
        "p": 36,
        "w": 10,
@@ -636,7 +649,7 @@
        "form": "DWLLL"
       },
       {
-       "pos": 14,
+       "pos": 15,
        "team": "Defensores De Belgrano",
        "p": 36,
        "w": 8,
@@ -649,7 +662,7 @@
        "form": "DLDDL"
       },
       {
-       "pos": 15,
+       "pos": 16,
        "team": "Central Norte",
        "p": 36,
        "w": 7,
@@ -660,19 +673,6 @@
        "pts": 38,
        "tid": 1951,
        "form": "DDWDL"
-      },
-      {
-       "pos": 16,
-       "team": "All Boys",
-       "p": 35,
-       "w": 7,
-       "d": 17,
-       "l": 11,
-       "gf": 21,
-       "ga": 30,
-       "pts": 38,
-       "tid": 464,
-       "form": "DLDDW"
       },
       {
        "pos": 17,
@@ -1263,7 +1263,7 @@
      "form": "LLDDL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "primera-c",
@@ -1296,7 +1296,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1484,7 +1484,7 @@
     },
     {
      "name": "Group B",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1671,7 +1671,7 @@
      ]
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   }
  ]
 }
