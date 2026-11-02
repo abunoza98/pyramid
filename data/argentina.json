@@ -4,7 +4,7 @@
  "adjective": "Argentine",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-02T00:00:00.000Z",
  "belowNote": "Promoted clubs from Primera D come up",
  "leagues": [
   {
@@ -29,7 +29,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -99,15 +99,15 @@
       {
        "pos": 6,
        "team": "Newell's Old Boys",
-       "p": 14,
+       "p": 15,
        "w": 5,
-       "d": 6,
+       "d": 7,
        "l": 3,
-       "gf": 13,
-       "ga": 10,
-       "pts": 21,
+       "gf": 14,
+       "ga": 11,
+       "pts": 22,
        "tid": 457,
-       "form": "WDLWD"
+       "form": "DLWDD"
       },
       {
        "pos": 7,
@@ -151,15 +151,15 @@
       {
        "pos": 10,
        "team": "Unión",
-       "p": 14,
+       "p": 15,
        "w": 5,
-       "d": 2,
+       "d": 3,
        "l": 7,
-       "gf": 21,
-       "ga": 23,
-       "pts": 17,
+       "gf": 22,
+       "ga": 24,
+       "pts": 18,
        "tid": 441,
-       "form": "LLLDW"
+       "form": "LLDWD"
       },
       {
        "pos": 11,
@@ -230,7 +230,7 @@
     },
     {
      "name": "Group B",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -287,28 +287,28 @@
       {
        "pos": 5,
        "team": "Belgrano",
-       "p": 14,
+       "p": 15,
        "w": 6,
-       "d": 4,
+       "d": 5,
        "l": 4,
-       "gf": 14,
-       "ga": 11,
-       "pts": 22,
+       "gf": 16,
+       "ga": 13,
+       "pts": 23,
        "tid": 440,
-       "form": "WWWLL"
+       "form": "WWLLD"
       },
       {
        "pos": 6,
        "team": "Barracas Central",
-       "p": 14,
+       "p": 15,
        "w": 6,
-       "d": 4,
+       "d": 5,
        "l": 4,
-       "gf": 13,
-       "ga": 11,
-       "pts": 22,
+       "gf": 15,
+       "ga": 13,
+       "pts": 23,
        "tid": 2432,
-       "form": "LWWDW"
+       "form": "WWDWD"
       },
       {
        "pos": 7,
@@ -430,7 +430,7 @@
      ]
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "primera-nacional",
@@ -464,7 +464,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -704,7 +704,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-01T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -943,7 +943,7 @@
      ]
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   },
   {
    "id": "primera-b-metropolitana",

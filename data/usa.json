@@ -4,7 +4,7 @@
  "adjective": "American",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-02T00:00:00.000Z",
  "belowNote": "There's no promotion or relegation between US leagues; these are the professional divisions from the top",
  "system": "US soccer league system",
  "systemNote": "The US system doesn't use promotion and relegation between these leagues; play-off places are marked on each table.",
@@ -42,15 +42,15 @@
       {
        "pos": 1,
        "team": "Vancouver Whitecaps",
-       "p": 32,
-       "w": 17,
+       "p": 33,
+       "w": 18,
        "d": 7,
        "l": 8,
-       "gf": 67,
-       "ga": 33,
-       "pts": 58,
+       "gf": 72,
+       "ga": 34,
+       "pts": 61,
        "tid": 1603,
-       "form": "DDWLW"
+       "form": "DWLWW"
       },
       {
        "pos": 2,
@@ -146,15 +146,15 @@
       {
        "pos": 9,
        "team": "Seattle Sounders",
-       "p": 32,
+       "p": 33,
        "w": 11,
        "d": 10,
-       "l": 11,
-       "gf": 41,
-       "ga": 40,
+       "l": 12,
+       "gf": 42,
+       "ga": 45,
        "pts": 43,
        "tid": 1595,
-       "form": "WLDDL"
+       "form": "LDDLL"
       },
       {
        "pos": 10,
@@ -386,18 +386,31 @@
       {
        "pos": 12,
        "team": "Toronto FC",
-       "p": 32,
+       "p": 33,
        "w": 9,
        "d": 12,
-       "l": 11,
-       "gf": 50,
-       "ga": 60,
+       "l": 12,
+       "gf": 51,
+       "ga": 63,
        "pts": 39,
        "tid": 1601,
-       "form": "WDWLW"
+       "form": "DWLWL"
       },
       {
        "pos": 13,
+       "team": "Atlanta United",
+       "p": 33,
+       "w": 9,
+       "d": 6,
+       "l": 18,
+       "gf": 43,
+       "ga": 57,
+       "pts": 33,
+       "tid": 1608,
+       "form": "WLLLW"
+      },
+      {
+       "pos": 14,
        "team": "D.C. United",
        "p": 33,
        "w": 7,
@@ -408,19 +421,6 @@
        "pts": 33,
        "tid": 1615,
        "form": "LLLLL"
-      },
-      {
-       "pos": 14,
-       "team": "Atlanta United",
-       "p": 32,
-       "w": 8,
-       "d": 6,
-       "l": 18,
-       "gf": 40,
-       "ga": 56,
-       "pts": 30,
-       "tid": 1608,
-       "form": "LWLLL"
       },
       {
        "pos": 15,
@@ -460,7 +460,7 @@
    "groups": [
     {
      "name": "Eastern Conference",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -635,7 +635,7 @@
     },
     {
      "name": "Western Conference",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -796,7 +796,7 @@
      ]
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "usl-league-one",
@@ -1037,7 +1037,7 @@
      "form": "WLLWL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-01T00:00:00.000Z"
   }
  ]
 }

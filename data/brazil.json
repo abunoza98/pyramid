@@ -4,7 +4,7 @@
  "adjective": "Brazilian",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-02T00:00:00.000Z",
  "belowNote": "Clubs qualify for Série D through their state championships",
  "leagues": [
   {
@@ -335,6 +335,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Novorizontino",
+     "p": 36,
+     "w": 19,
+     "d": 10,
+     "l": 7,
+     "gf": 64,
+     "ga": 31,
+     "pts": 67,
+     "tid": 7834,
+     "form": "WWDWW"
+    },
+    {
+     "pos": 2,
      "team": "Juventude",
      "p": 36,
      "w": 18,
@@ -345,19 +358,6 @@
      "pts": 65,
      "tid": 152,
      "form": "WDDWD"
-    },
-    {
-     "pos": 2,
-     "team": "Novorizontino",
-     "p": 35,
-     "w": 18,
-     "d": 10,
-     "l": 7,
-     "gf": 62,
-     "ga": 30,
-     "pts": 64,
-     "tid": 7834,
-     "form": "WWWDW"
     },
     {
      "pos": 3,
@@ -452,29 +452,29 @@
     },
     {
      "pos": 10,
-     "team": "Operário-PR",
-     "p": 35,
+     "team": "São Bernardo",
+     "p": 36,
      "w": 14,
-     "d": 9,
+     "d": 10,
      "l": 12,
-     "gf": 45,
-     "ga": 46,
-     "pts": 51,
-     "tid": 1223,
-     "form": "LLLLW"
+     "gf": 51,
+     "ga": 40,
+     "pts": 52,
+     "tid": 7865,
+     "form": "LDLWW"
     },
     {
      "pos": 11,
-     "team": "São Bernardo",
-     "p": 35,
-     "w": 13,
-     "d": 10,
-     "l": 12,
-     "gf": 49,
-     "ga": 39,
-     "pts": 49,
-     "tid": 7865,
-     "form": "WLDLW"
+     "team": "Operário-PR",
+     "p": 36,
+     "w": 14,
+     "d": 9,
+     "l": 13,
+     "gf": 46,
+     "ga": 48,
+     "pts": 51,
+     "tid": 1223,
+     "form": "LLLWL"
     },
     {
      "pos": 12,
@@ -492,15 +492,15 @@
     {
      "pos": 13,
      "team": "Cuiabá",
-     "p": 35,
+     "p": 36,
      "w": 11,
      "d": 14,
-     "l": 10,
-     "gf": 32,
-     "ga": 28,
+     "l": 11,
+     "gf": 33,
+     "ga": 30,
      "pts": 47,
      "tid": 1193,
-     "form": "WDLLL"
+     "form": "DLLLL"
     },
     {
      "pos": 14,
@@ -594,7 +594,7 @@
      "form": "LLDDL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "serie-c",

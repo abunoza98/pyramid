@@ -96,15 +96,15 @@
     {
      "pos": 5,
      "team": "Real Sociedad",
-     "p": 10,
+     "p": 11,
      "w": 6,
      "d": 1,
-     "l": 3,
-     "gf": 19,
-     "ga": 18,
+     "l": 4,
+     "gf": 20,
+     "ga": 20,
      "pts": 19,
      "tid": 548,
-     "form": "LWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 6,
@@ -122,15 +122,15 @@
     {
      "pos": 7,
      "team": "Athletic Bilbao",
-     "p": 9,
-     "w": 3,
+     "p": 10,
+     "w": 4,
      "d": 3,
      "l": 3,
-     "gf": 12,
-     "ga": 9,
-     "pts": 12,
+     "gf": 14,
+     "ga": 10,
+     "pts": 15,
      "tid": 531,
-     "form": "DDDLW"
+     "form": "DDLWW"
     },
     {
      "pos": 8,
