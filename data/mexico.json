@@ -4,7 +4,7 @@
  "adjective": "Mexican",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-02T00:00:00.000Z",
  "belowNote": "Promotion between Liga Premier and the Liga de Expansión is suspended",
  "leagues": [
   {
@@ -260,7 +260,7 @@
      "form": "DLLDW"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "liga-de-expansion",
@@ -602,15 +602,15 @@
     {
      "pos": 3,
      "team": "Acambaro",
-     "p": 9,
-     "w": 6,
+     "p": 10,
+     "w": 7,
      "d": 1,
      "l": 2,
-     "gf": 29,
-     "ga": 10,
-     "pts": 21,
+     "gf": 31,
+     "ga": 12,
+     "pts": 23,
      "tid": 22051,
-     "form": "LLWWW"
+     "form": "LWWWW"
     },
     {
      "pos": 4,
@@ -667,15 +667,15 @@
     {
      "pos": 6,
      "team": "Vaqueros Reynosa",
-     "p": 9,
+     "p": 10,
      "w": 5,
      "d": 1,
-     "l": 3,
-     "gf": 15,
-     "ga": 14,
-     "pts": 16,
+     "l": 4,
+     "gf": 17,
+     "ga": 16,
+     "pts": 17,
      "tid": 28308,
-     "form": "WWWLL"
+     "form": "WWLLL"
     },
     {
      "pos": 6,
@@ -799,7 +799,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   }
  ]
 }
