@@ -4,7 +4,7 @@
  "adjective": "Mexican",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-02T00:00:00.000Z",
+ "updated": "2026-11-03T00:00:00.000Z",
  "belowNote": "Promotion between Liga Premier and the Liga de Expansión is suspended",
  "leagues": [
   {
@@ -528,8 +528,8 @@
     }
    ],
    "notes": [
-    "Real Refineros: 1 point deducted.",
     "Atlético Saltillo: 1 point deducted.",
+    "Real Refineros: 1 point deducted.",
     "Real Apodaca: 1 point deducted.",
     "Ciervos: 1 point deducted."
    ],
@@ -705,17 +705,16 @@
     },
     {
      "pos": 7,
-     "team": "Real Refineros",
+     "team": "Calor de San Pedro",
      "p": 10,
-     "w": 4,
+     "w": 3,
      "d": 1,
-     "l": 5,
-     "gf": 17,
-     "ga": 24,
-     "pts": 12,
-     "ded": 1,
-     "tid": 28307,
-     "form": "LLWLW"
+     "l": 6,
+     "gf": 19,
+     "ga": 27,
+     "pts": 13,
+     "tid": 17804,
+     "form": "WLLLL"
     },
     {
      "pos": 8,
@@ -733,16 +732,17 @@
     },
     {
      "pos": 8,
-     "team": "Calor de San Pedro",
+     "team": "Real Refineros",
      "p": 10,
-     "w": 3,
+     "w": 4,
      "d": 1,
-     "l": 6,
-     "gf": 19,
-     "ga": 27,
+     "l": 5,
+     "gf": 17,
+     "ga": 24,
      "pts": 12,
-     "tid": 17804,
-     "form": "WLLLL"
+     "ded": 1,
+     "tid": 28307,
+     "form": "LLWLW"
     },
     {
      "pos": 9,
@@ -799,7 +799,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-02T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   }
  ]
 }
