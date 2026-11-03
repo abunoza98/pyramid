@@ -384,6 +384,33 @@
     },
     {
      "pos": 5,
+     "team": "West Bromwich Albion",
+     "p": 14,
+     "w": 7,
+     "d": 4,
+     "l": 3,
+     "gf": 20,
+     "ga": 15,
+     "pts": 25,
+     "tid": 60,
+     "form": "WWDWD"
+    },
+    {
+     "pos": 6,
+     "team": "Southampton",
+     "p": 14,
+     "w": 8,
+     "d": 4,
+     "l": 2,
+     "gf": 29,
+     "ga": 14,
+     "pts": 24,
+     "ded": 4,
+     "tid": 41,
+     "form": "WDWWD"
+    },
+    {
+     "pos": 7,
      "team": "Wolverhampton Wanderers",
      "p": 13,
      "w": 7,
@@ -394,33 +421,6 @@
      "pts": 24,
      "tid": 39,
      "form": "LWDWW"
-    },
-    {
-     "pos": 6,
-     "team": "West Bromwich Albion",
-     "p": 13,
-     "w": 7,
-     "d": 3,
-     "l": 3,
-     "gf": 19,
-     "ga": 14,
-     "pts": 24,
-     "tid": 60,
-     "form": "LWWDW"
-    },
-    {
-     "pos": 7,
-     "team": "Southampton",
-     "p": 13,
-     "w": 8,
-     "d": 3,
-     "l": 2,
-     "gf": 28,
-     "ga": 13,
-     "pts": 23,
-     "ded": 4,
-     "tid": 41,
-     "form": "WWDWW"
     },
     {
      "pos": 8,
@@ -1242,6 +1242,19 @@
     },
     {
      "pos": 18,
+     "team": "Oldham Athletic",
+     "p": 14,
+     "w": 4,
+     "d": 3,
+     "l": 7,
+     "gf": 15,
+     "ga": 19,
+     "pts": 15,
+     "tid": 1349,
+     "form": "WLDLW"
+    },
+    {
+     "pos": 19,
      "team": "Port Vale",
      "p": 12,
      "w": 4,
@@ -1254,7 +1267,7 @@
      "form": "WWDLW"
     },
     {
-     "pos": 19,
+     "pos": 20,
      "team": "Rochdale",
      "p": 14,
      "w": 4,
@@ -1267,30 +1280,17 @@
      "form": "DLDLL"
     },
     {
-     "pos": 20,
-     "team": "Northampton Town",
-     "p": 12,
-     "w": 3,
-     "d": 5,
-     "l": 4,
-     "gf": 9,
-     "ga": 9,
-     "pts": 14,
-     "tid": 1337,
-     "form": "DWLWD"
-    },
-    {
      "pos": 21,
-     "team": "Oldham Athletic",
+     "team": "Northampton Town",
      "p": 13,
      "w": 3,
-     "d": 3,
-     "l": 7,
-     "gf": 14,
-     "ga": 19,
-     "pts": 12,
-     "tid": 1349,
-     "form": "DWLDL"
+     "d": 5,
+     "l": 5,
+     "gf": 9,
+     "ga": 10,
+     "pts": 14,
+     "tid": 1337,
+     "form": "WLWDL"
     },
     {
      "pos": 22,
