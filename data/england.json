@@ -4,7 +4,7 @@
  "adjective": "English",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-02T00:00:00.000Z",
+ "updated": "2026-11-03T00:00:00.000Z",
  "belowNote": "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
  "leagues": [
   {
@@ -345,19 +345,45 @@
     },
     {
      "pos": 2,
-     "team": "Swansea City",
-     "p": 13,
-     "w": 8,
-     "d": 2,
-     "l": 3,
-     "gf": 20,
+     "team": "Birmingham City",
+     "p": 14,
+     "w": 7,
+     "d": 5,
+     "l": 2,
+     "gf": 26,
      "ga": 13,
      "pts": 26,
-     "tid": 76,
-     "form": "WWLLW"
+     "tid": 54,
+     "form": "WWLWW"
     },
     {
      "pos": 3,
+     "team": "Stoke City",
+     "p": 14,
+     "w": 8,
+     "d": 2,
+     "l": 4,
+     "gf": 22,
+     "ga": 17,
+     "pts": 26,
+     "tid": 75,
+     "form": "LWDWW"
+    },
+    {
+     "pos": 4,
+     "team": "Swansea City",
+     "p": 14,
+     "w": 8,
+     "d": 2,
+     "l": 4,
+     "gf": 21,
+     "ga": 16,
+     "pts": 26,
+     "tid": 76,
+     "form": "WLLWL"
+    },
+    {
+     "pos": 5,
      "team": "Wolverhampton Wanderers",
      "p": 13,
      "w": 7,
@@ -370,7 +396,7 @@
      "form": "LWDWW"
     },
     {
-     "pos": 4,
+     "pos": 6,
      "team": "West Bromwich Albion",
      "p": 13,
      "w": 7,
@@ -383,7 +409,7 @@
      "form": "LWWDW"
     },
     {
-     "pos": 5,
+     "pos": 7,
      "team": "Southampton",
      "p": 13,
      "w": 8,
@@ -395,32 +421,6 @@
      "ded": 4,
      "tid": 41,
      "form": "WWDWW"
-    },
-    {
-     "pos": 6,
-     "team": "Birmingham City",
-     "p": 13,
-     "w": 6,
-     "d": 5,
-     "l": 2,
-     "gf": 23,
-     "ga": 13,
-     "pts": 23,
-     "tid": 54,
-     "form": "WWWLW"
-    },
-    {
-     "pos": 7,
-     "team": "Stoke City",
-     "p": 13,
-     "w": 7,
-     "d": 2,
-     "l": 4,
-     "gf": 20,
-     "ga": 16,
-     "pts": 23,
-     "tid": 75,
-     "form": "WLWDW"
     },
     {
      "pos": 8,
@@ -437,71 +437,84 @@
     },
     {
      "pos": 9,
-     "team": "Queens Park Rangers",
-     "p": 13,
-     "w": 5,
-     "d": 5,
-     "l": 3,
-     "gf": 21,
-     "ga": 16,
-     "pts": 20,
-     "tid": 72,
-     "form": "DWLWL"
+     "team": "Sheffield United",
+     "p": 14,
+     "w": 6,
+     "d": 4,
+     "l": 4,
+     "gf": 20,
+     "ga": 17,
+     "pts": 22,
+     "tid": 62,
+     "form": "LWDWW"
     },
     {
      "pos": 10,
-     "team": "Sheffield United",
-     "p": 13,
-     "w": 5,
+     "team": "Portsmouth",
+     "p": 14,
+     "w": 6,
      "d": 4,
      "l": 4,
-     "gf": 17,
-     "ga": 15,
-     "pts": 19,
-     "tid": 62,
-     "form": "WLWDW"
+     "gf": 19,
+     "ga": 16,
+     "pts": 22,
+     "tid": 1355,
+     "form": "WDWDW"
     },
     {
      "pos": 11,
-     "team": "Portsmouth",
-     "p": 13,
+     "team": "Queens Park Rangers",
+     "p": 14,
      "w": 5,
-     "d": 4,
-     "l": 4,
-     "gf": 16,
-     "ga": 15,
-     "pts": 19,
-     "tid": 1355,
-     "form": "WWDWD"
+     "d": 6,
+     "l": 3,
+     "gf": 22,
+     "ga": 17,
+     "pts": 21,
+     "tid": 72,
+     "form": "WLWLD"
     },
     {
      "pos": 12,
-     "team": "Millwall",
-     "p": 13,
-     "w": 5,
-     "d": 3,
-     "l": 5,
-     "gf": 23,
-     "ga": 21,
+     "team": "Norwich City",
+     "p": 14,
+     "w": 6,
+     "d": 0,
+     "l": 8,
+     "gf": 27,
+     "ga": 24,
      "pts": 18,
-     "tid": 58,
-     "form": "WLDLW"
+     "tid": 71,
+     "form": "LLWWW"
     },
     {
      "pos": 13,
-     "team": "Blackburn Rovers",
-     "p": 13,
+     "team": "Millwall",
+     "p": 14,
      "w": 5,
      "d": 3,
-     "l": 5,
-     "gf": 19,
-     "ga": 20,
+     "l": 6,
+     "gf": 23,
+     "ga": 24,
      "pts": 18,
-     "tid": 67,
-     "form": "WWLWL"
+     "tid": 58,
+     "form": "LDLWL"
     },
     {
      "pos": 14,
+     "team": "Blackburn Rovers",
+     "p": 14,
+     "w": 5,
+     "d": 3,
+     "l": 6,
+     "gf": 20,
+     "ga": 22,
+     "pts": 18,
+     "tid": 67,
+     "form": "WLWLL"
+    },
+    {
+     "pos": 15,
      "team": "Bristol City",
      "p": 13,
      "w": 5,
@@ -514,33 +527,33 @@
      "form": "DLLDW"
     },
     {
-     "pos": 15,
-     "team": "Norwich City",
-     "p": 13,
-     "w": 5,
-     "d": 0,
-     "l": 8,
-     "gf": 23,
-     "ga": 24,
-     "pts": 15,
-     "tid": 71,
-     "form": "LLLWW"
-    },
-    {
      "pos": 16,
-     "team": "Lincoln City",
-     "p": 13,
-     "w": 4,
-     "d": 3,
-     "l": 6,
-     "gf": 14,
-     "ga": 23,
-     "pts": 15,
-     "tid": 1379,
-     "form": "LLDWL"
+     "team": "Bolton Wanderers",
+     "p": 14,
+     "w": 5,
+     "d": 2,
+     "l": 7,
+     "gf": 19,
+     "ga": 26,
+     "pts": 17,
+     "tid": 68,
+     "form": "WDLLW"
     },
     {
      "pos": 17,
+     "team": "Lincoln City",
+     "p": 14,
+     "w": 4,
+     "d": 3,
+     "l": 7,
+     "gf": 14,
+     "ga": 24,
+     "pts": 15,
+     "tid": 1379,
+     "form": "LDWLL"
+    },
+    {
+     "pos": 18,
      "team": "Cardiff City",
      "p": 13,
      "w": 3,
@@ -553,7 +566,7 @@
      "form": "LWDWL"
     },
     {
-     "pos": 18,
+     "pos": 19,
      "team": "Wrexham",
      "p": 13,
      "w": 3,
@@ -566,85 +579,72 @@
      "form": "DLWLL"
     },
     {
-     "pos": 19,
-     "team": "Bolton Wanderers",
-     "p": 13,
+     "pos": 20,
+     "team": "Watford",
+     "p": 14,
      "w": 4,
      "d": 2,
-     "l": 7,
-     "gf": 18,
-     "ga": 26,
+     "l": 8,
+     "gf": 13,
+     "ga": 23,
      "pts": 14,
-     "tid": 68,
-     "form": "LWDLL"
-    },
-    {
-     "pos": 20,
-     "team": "Charlton Athletic",
-     "p": 13,
-     "w": 3,
-     "d": 5,
-     "l": 5,
-     "gf": 11,
-     "ga": 21,
-     "pts": 14,
-     "tid": 1335,
-     "form": "DDLLL"
+     "tid": 38,
+     "form": "LWLLW"
     },
     {
      "pos": 21,
-     "team": "Watford",
-     "p": 13,
+     "team": "Charlton Athletic",
+     "p": 14,
      "w": 3,
-     "d": 2,
-     "l": 8,
-     "gf": 12,
-     "ga": 23,
-     "pts": 11,
-     "tid": 38,
-     "form": "LLWLL"
+     "d": 5,
+     "l": 6,
+     "gf": 11,
+     "ga": 22,
+     "pts": 14,
+     "tid": 1335,
+     "form": "DLLLL"
     },
     {
      "pos": 22,
      "team": "Burnley",
-     "p": 13,
+     "p": 14,
      "w": 1,
-     "d": 6,
+     "d": 7,
      "l": 6,
-     "gf": 17,
-     "ga": 25,
-     "pts": 9,
+     "gf": 18,
+     "ga": 26,
+     "pts": 10,
      "tid": 44,
-     "form": "WDLLD"
+     "form": "DLLDD"
     },
     {
      "pos": 23,
      "team": "Derby County",
-     "p": 13,
+     "p": 14,
      "w": 1,
      "d": 4,
-     "l": 8,
+     "l": 9,
      "gf": 11,
-     "ga": 25,
+     "ga": 29,
      "pts": 7,
      "tid": 69,
-     "form": "DLLDL"
+     "form": "LLDLL"
     },
     {
      "pos": 24,
      "team": "Preston North End",
-     "p": 13,
+     "p": 14,
      "w": 1,
      "d": 2,
-     "l": 10,
-     "gf": 10,
-     "ga": 27,
+     "l": 11,
+     "gf": 12,
+     "ga": 30,
      "pts": 5,
      "tid": 59,
-     "form": "LLLDL"
+     "form": "LLDLL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   },
   {
    "id": "league-one",
@@ -678,15 +678,15 @@
     {
      "pos": 1,
      "team": "Huddersfield Town",
-     "p": 13,
+     "p": 14,
      "w": 8,
-     "d": 4,
+     "d": 5,
      "l": 1,
-     "gf": 27,
-     "ga": 11,
-     "pts": 28,
+     "gf": 28,
+     "ga": 12,
+     "pts": 29,
      "tid": 37,
-     "form": "DWWWW"
+     "form": "WWWWD"
     },
     {
      "pos": 2,
@@ -703,6 +703,19 @@
     },
     {
      "pos": 3,
+     "team": "Luton Town",
+     "p": 14,
+     "w": 7,
+     "d": 3,
+     "l": 4,
+     "gf": 27,
+     "ga": 21,
+     "pts": 24,
+     "tid": 1359,
+     "form": "WWWWD"
+    },
+    {
+     "pos": 4,
      "team": "Oxford United",
      "p": 12,
      "w": 6,
@@ -713,19 +726,6 @@
      "pts": 23,
      "tid": 1338,
      "form": "DWDWD"
-    },
-    {
-     "pos": 4,
-     "team": "Luton Town",
-     "p": 13,
-     "w": 7,
-     "d": 2,
-     "l": 4,
-     "gf": 26,
-     "ga": 20,
-     "pts": 23,
-     "tid": 1359,
-     "form": "LWWWW"
     },
     {
      "pos": 5,
@@ -807,6 +807,19 @@
     },
     {
      "pos": 11,
+     "team": "Mansfield Town",
+     "p": 13,
+     "w": 5,
+     "d": 4,
+     "l": 4,
+     "gf": 20,
+     "ga": 18,
+     "pts": 19,
+     "tid": 1374,
+     "form": "DWWLD"
+    },
+    {
+     "pos": 12,
      "team": "Milton Keynes Dons",
      "p": 13,
      "w": 4,
@@ -817,19 +830,6 @@
      "pts": 18,
      "tid": 1348,
      "form": "WLWWW"
-    },
-    {
-     "pos": 12,
-     "team": "Mansfield Town",
-     "p": 12,
-     "w": 5,
-     "d": 3,
-     "l": 4,
-     "gf": 20,
-     "ga": 18,
-     "pts": 18,
-     "tid": 1374,
-     "form": "WDWWL"
     },
     {
      "pos": 13,
@@ -938,15 +938,15 @@
     {
      "pos": 21,
      "team": "Wigan Athletic",
-     "p": 13,
+     "p": 14,
      "w": 3,
-     "d": 1,
+     "d": 2,
      "l": 9,
      "gf": 11,
      "ga": 22,
-     "pts": 10,
+     "pts": 11,
      "tid": 61,
-     "form": "WLLLW"
+     "form": "LLLWD"
     },
     {
      "pos": 22,
@@ -988,7 +988,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   },
   {
    "id": "league-two",
@@ -1332,7 +1332,7 @@
      "form": "DLLDW"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   },
   {
    "id": "national-league",
@@ -1685,7 +1685,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   },
   {
    "id": "national-league-north-south",
@@ -1727,7 +1727,7 @@
    "groups": [
     {
      "name": "North",
-     "updated": "2026-10-31T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2045,10 +2045,23 @@
     },
     {
      "name": "South",
-     "updated": "2026-11-02T00:00:00.000Z",
+     "updated": "2026-11-03T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
+       "team": "Ebbsfleet United",
+       "p": 14,
+       "w": 9,
+       "d": 4,
+       "l": 1,
+       "gf": 35,
+       "ga": 10,
+       "pts": 31,
+       "tid": 1840,
+       "form": "DWWLW"
+      },
+      {
+       "pos": 2,
        "team": "Truro City",
        "p": 14,
        "w": 9,
@@ -2061,7 +2074,7 @@
        "form": "DWWWW"
       },
       {
-       "pos": 2,
+       "pos": 3,
        "team": "Maidstone United",
        "p": 15,
        "w": 9,
@@ -2072,19 +2085,6 @@
        "pts": 29,
        "tid": 1825,
        "form": "WWDLW"
-      },
-      {
-       "pos": 3,
-       "team": "Ebbsfleet United",
-       "p": 13,
-       "w": 8,
-       "d": 4,
-       "l": 1,
-       "gf": 29,
-       "ga": 10,
-       "pts": 28,
-       "tid": 1840,
-       "form": "WDWWL"
       },
       {
        "pos": 4,
@@ -2101,6 +2101,19 @@
       },
       {
        "pos": 5,
+       "team": "Dorking Wanderers",
+       "p": 15,
+       "w": 7,
+       "d": 6,
+       "l": 2,
+       "gf": 34,
+       "ga": 23,
+       "pts": 27,
+       "tid": 8659,
+       "form": "DWDWW"
+      },
+      {
+       "pos": 6,
        "team": "Farnham Town",
        "p": 15,
        "w": 8,
@@ -2113,7 +2126,7 @@
        "form": "LWWLW"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Billericay Town",
        "p": 13,
        "w": 7,
@@ -2126,7 +2139,7 @@
        "form": "WWWDW"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Tonbridge Angels",
        "p": 15,
        "w": 7,
@@ -2137,19 +2150,6 @@
        "pts": 24,
        "tid": 8662,
        "form": "WWDWL"
-      },
-      {
-       "pos": 8,
-       "team": "Dorking Wanderers",
-       "p": 14,
-       "w": 6,
-       "d": 6,
-       "l": 2,
-       "gf": 31,
-       "ga": 21,
-       "pts": 24,
-       "tid": 8659,
-       "form": "WDWDW"
       },
       {
        "pos": 9,
@@ -2245,15 +2245,15 @@
       {
        "pos": 16,
        "team": "Farnborough",
-       "p": 14,
+       "p": 15,
        "w": 5,
        "d": 2,
-       "l": 7,
+       "l": 8,
        "gf": 12,
-       "ga": 25,
+       "ga": 31,
        "pts": 17,
        "tid": 7715,
-       "form": "LWLWL"
+       "form": "WLWLL"
       },
       {
        "pos": 17,
@@ -2323,15 +2323,15 @@
       {
        "pos": 22,
        "team": "Hampton & Richmond Borough",
-       "p": 14,
+       "p": 15,
        "w": 2,
        "d": 3,
-       "l": 9,
-       "gf": 16,
-       "ga": 33,
+       "l": 10,
+       "gf": 18,
+       "ga": 36,
        "pts": 9,
        "tid": 4680,
-       "form": "LLLDL"
+       "form": "LLDLL"
       },
       {
        "pos": 23,
@@ -2362,7 +2362,7 @@
      ]
     }
    ],
-   "updated": "2026-11-02T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   }
  ]
 }
