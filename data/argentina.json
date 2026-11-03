@@ -248,15 +248,15 @@
       {
        "pos": 2,
        "team": "Argentinos Juniors",
-       "p": 14,
-       "w": 8,
+       "p": 15,
+       "w": 9,
        "d": 4,
        "l": 2,
-       "gf": 18,
-       "ga": 11,
-       "pts": 28,
+       "gf": 20,
+       "ga": 12,
+       "pts": 31,
        "tid": 458,
-       "form": "LWDWW"
+       "form": "WDWWW"
       },
       {
        "pos": 3,
@@ -312,6 +312,19 @@
       },
       {
        "pos": 7,
+       "team": "Independiente Rivadavia",
+       "p": 15,
+       "w": 6,
+       "d": 4,
+       "l": 5,
+       "gf": 20,
+       "ga": 23,
+       "pts": 22,
+       "tid": 473,
+       "form": "DLDLW"
+      },
+      {
+       "pos": 8,
        "team": "Sarmiento",
        "p": 15,
        "w": 6,
@@ -324,7 +337,7 @@
        "form": "WDDLL"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Huracán",
        "p": 15,
        "w": 5,
@@ -337,30 +350,17 @@
        "form": "WLLLL"
       },
       {
-       "pos": 9,
-       "team": "Independiente Rivadavia",
-       "p": 14,
-       "w": 5,
-       "d": 4,
-       "l": 5,
-       "gf": 17,
-       "ga": 22,
-       "pts": 19,
-       "tid": 473,
-       "form": "WDLDL"
-      },
-      {
        "pos": 10,
        "team": "Atlético Tucumán",
-       "p": 14,
+       "p": 15,
        "w": 4,
        "d": 5,
-       "l": 5,
-       "gf": 13,
-       "ga": 13,
+       "l": 6,
+       "gf": 14,
+       "ga": 15,
        "pts": 17,
        "tid": 455,
-       "form": "LLDLW"
+       "form": "LDLWL"
       },
       {
        "pos": 11,
@@ -391,15 +391,15 @@
       {
        "pos": 13,
        "team": "Banfield",
-       "p": 14,
+       "p": 15,
        "w": 3,
        "d": 5,
-       "l": 6,
-       "gf": 15,
-       "ga": 20,
+       "l": 7,
+       "gf": 16,
+       "ga": 23,
        "pts": 14,
        "tid": 449,
-       "form": "DDWLD"
+       "form": "DWLDL"
       },
       {
        "pos": 14,
