@@ -4,7 +4,7 @@
  "adjective": "European",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-10-27T00:00:00.000Z",
+ "updated": "2026-11-03T00:00:00.000Z",
  "leagues": [
   {
    "id": "champions-league",
@@ -90,6 +90,19 @@
     },
     {
      "pos": 5,
+     "team": "Sporting CP",
+     "p": 4,
+     "w": 3,
+     "d": 0,
+     "l": 1,
+     "gf": 8,
+     "ga": 4,
+     "pts": 9,
+     "tid": 228,
+     "form": "WWLW"
+    },
+    {
+     "pos": 6,
      "team": "Real Betis",
      "p": 3,
      "w": 3,
@@ -100,19 +113,6 @@
      "pts": 9,
      "tid": 543,
      "form": "WWW"
-    },
-    {
-     "pos": 6,
-     "team": "VfB Stuttgart",
-     "p": 3,
-     "w": 2,
-     "d": 1,
-     "l": 0,
-     "gf": 7,
-     "ga": 2,
-     "pts": 7,
-     "tid": 172,
-     "form": "WWD"
     },
     {
      "pos": 7,
@@ -129,6 +129,19 @@
     },
     {
      "pos": 8,
+     "team": "VfB Stuttgart",
+     "p": 4,
+     "w": 2,
+     "d": 1,
+     "l": 1,
+     "gf": 7,
+     "ga": 4,
+     "pts": 7,
+     "tid": 172,
+     "form": "WWDL"
+    },
+    {
+     "pos": 9,
      "team": "Barcelona",
      "p": 3,
      "w": 2,
@@ -141,7 +154,7 @@
      "form": "WWL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Como",
      "p": 3,
      "w": 2,
@@ -154,7 +167,7 @@
      "form": "WLW"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Manchester City",
      "p": 3,
      "w": 2,
@@ -167,7 +180,7 @@
      "form": "WLW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Club Brugge",
      "p": 3,
      "w": 2,
@@ -178,19 +191,6 @@
      "pts": 6,
      "tid": 569,
      "form": "LWW"
-    },
-    {
-     "pos": 12,
-     "team": "Sporting CP",
-     "p": 3,
-     "w": 2,
-     "d": 0,
-     "l": 1,
-     "gf": 7,
-     "ga": 4,
-     "pts": 6,
-     "tid": 228,
-     "form": "WWL"
     },
     {
      "pos": 13,
@@ -207,6 +207,19 @@
     },
     {
      "pos": 14,
+     "team": "Galatasaray",
+     "p": 4,
+     "w": 2,
+     "d": 0,
+     "l": 2,
+     "gf": 8,
+     "ga": 9,
+     "pts": 6,
+     "tid": 645,
+     "form": "LLWW"
+    },
+    {
+     "pos": 15,
      "team": "Bayern Munich",
      "p": 3,
      "w": 1,
@@ -219,7 +232,7 @@
      "form": "WDD"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Roma",
      "p": 3,
      "w": 1,
@@ -232,7 +245,7 @@
      "form": "DLW"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Atlético Madrid",
      "p": 3,
      "w": 1,
@@ -245,20 +258,20 @@
      "form": "LWD"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Shakhtar Donetsk",
-     "p": 3,
+     "p": 4,
      "w": 1,
      "d": 1,
-     "l": 1,
+     "l": 2,
      "gf": 4,
-     "ga": 3,
+     "ga": 4,
      "pts": 4,
      "tid": 550,
-     "form": "DWL"
+     "form": "DWLL"
     },
     {
-     "pos": 18,
+     "pos": 19,
      "team": "PSV Eindhoven",
      "p": 3,
      "w": 1,
@@ -271,7 +284,7 @@
      "form": "DLW"
     },
     {
-     "pos": 19,
+     "pos": 20,
      "team": "Villarreal",
      "p": 3,
      "w": 1,
@@ -284,7 +297,7 @@
      "form": "LWL"
     },
     {
-     "pos": 20,
+     "pos": 21,
      "team": "Inter Milan",
      "p": 3,
      "w": 1,
@@ -297,7 +310,7 @@
      "form": "LLW"
     },
     {
-     "pos": 21,
+     "pos": 22,
      "team": "Manchester United",
      "p": 3,
      "w": 1,
@@ -310,7 +323,7 @@
      "form": "WLL"
     },
     {
-     "pos": 22,
+     "pos": 23,
      "team": "Napoli",
      "p": 3,
      "w": 1,
@@ -320,19 +333,6 @@
      "ga": 7,
      "pts": 3,
      "tid": 492,
-     "form": "LLW"
-    },
-    {
-     "pos": 23,
-     "team": "Galatasaray",
-     "p": 3,
-     "w": 1,
-     "d": 0,
-     "l": 2,
-     "gf": 6,
-     "ga": 9,
-     "pts": 3,
-     "tid": 645,
      "form": "LLW"
     },
     {
@@ -505,7 +505,7 @@
      "form": "DWLLL"
     }
    ],
-   "updated": "2026-10-27T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   },
   {
    "id": "europa-league",
