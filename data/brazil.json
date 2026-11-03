@@ -4,7 +4,7 @@
  "adjective": "Brazilian",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-02T00:00:00.000Z",
+ "updated": "2026-11-03T00:00:00.000Z",
  "belowNote": "Clubs qualify for Série D through their state championships",
  "leagues": [
   {
@@ -134,29 +134,29 @@
     },
     {
      "pos": 8,
-     "team": "Santos",
-     "p": 33,
-     "w": 12,
-     "d": 11,
-     "l": 10,
-     "gf": 49,
-     "ga": 47,
+     "team": "Red Bull Bragantino",
+     "p": 34,
+     "w": 13,
+     "d": 8,
+     "l": 13,
+     "gf": 44,
+     "ga": 39,
      "pts": 47,
-     "tid": 128,
-     "form": "DLWDD"
+     "tid": 794,
+     "form": "WDLWW"
     },
     {
      "pos": 9,
-     "team": "Red Bull Bragantino",
-     "p": 33,
+     "team": "Santos",
+     "p": 34,
      "w": 12,
-     "d": 8,
-     "l": 13,
-     "gf": 42,
-     "ga": 38,
-     "pts": 44,
-     "tid": 794,
-     "form": "DWDLW"
+     "d": 11,
+     "l": 11,
+     "gf": 50,
+     "ga": 49,
+     "pts": 47,
+     "tid": 128,
+     "form": "LWDDL"
     },
     {
      "pos": 10,
@@ -401,18 +401,31 @@
     {
      "pos": 6,
      "team": "CRB",
-     "p": 35,
+     "p": 36,
      "w": 16,
      "d": 7,
-     "l": 12,
-     "gf": 53,
-     "ga": 49,
+     "l": 13,
+     "gf": 54,
+     "ga": 51,
      "pts": 55,
      "tid": 146,
-     "form": "LWDLW"
+     "form": "WDLWL"
     },
     {
      "pos": 7,
+     "team": "Goiás",
+     "p": 36,
+     "w": 16,
+     "d": 7,
+     "l": 13,
+     "gf": 38,
+     "ga": 41,
+     "pts": 55,
+     "tid": 151,
+     "form": "WWDWW"
+    },
+    {
+     "pos": 8,
      "team": "Sport Recife",
      "p": 36,
      "w": 14,
@@ -425,7 +438,7 @@
      "form": "WDLWD"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Atlético Goianiense",
      "p": 36,
      "w": 14,
@@ -436,19 +449,6 @@
      "pts": 55,
      "tid": 144,
      "form": "LDDLD"
-    },
-    {
-     "pos": 9,
-     "team": "Goiás",
-     "p": 35,
-     "w": 15,
-     "d": 7,
-     "l": 13,
-     "gf": 36,
-     "ga": 40,
-     "pts": 52,
-     "tid": 151,
-     "form": "LWWDW"
     },
     {
      "pos": 10,
@@ -594,7 +594,7 @@
      "form": "LLDDL"
     }
    ],
-   "updated": "2026-11-02T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   },
   {
    "id": "serie-c",

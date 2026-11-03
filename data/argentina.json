@@ -45,6 +45,19 @@
        "form": "WDWWD"
       },
       {
+       "pos": 1,
+       "team": "Instituto",
+       "p": 15,
+       "w": 10,
+       "d": 3,
+       "l": 2,
+       "gf": 24,
+       "ga": 13,
+       "pts": 33,
+       "tid": 478,
+       "form": "WDWWD"
+      },
+      {
        "pos": 2,
        "team": "Boca Juniors",
        "p": 15,
@@ -56,6 +69,32 @@
        "pts": 30,
        "tid": 451,
        "form": "WDWWW"
+      },
+      {
+       "pos": 2,
+       "team": "Boca Juniors",
+       "p": 15,
+       "w": 8,
+       "d": 6,
+       "l": 1,
+       "gf": 23,
+       "ga": 14,
+       "pts": 30,
+       "tid": 451,
+       "form": "WDWWW"
+      },
+      {
+       "pos": 3,
+       "team": "Vélez Sarsfield",
+       "p": 15,
+       "w": 7,
+       "d": 7,
+       "l": 1,
+       "gf": 25,
+       "ga": 15,
+       "pts": 28,
+       "tid": 438,
+       "form": "DLWWD"
       },
       {
        "pos": 3,
@@ -84,6 +123,19 @@
        "form": "WWLWD"
       },
       {
+       "pos": 4,
+       "team": "Defensa Y Justicia",
+       "p": 15,
+       "w": 8,
+       "d": 4,
+       "l": 3,
+       "gf": 21,
+       "ga": 14,
+       "pts": 28,
+       "tid": 442,
+       "form": "WWLWD"
+      },
+      {
        "pos": 5,
        "team": "Lanús",
        "p": 15,
@@ -95,6 +147,32 @@
        "pts": 25,
        "tid": 446,
        "form": "DWWDD"
+      },
+      {
+       "pos": 5,
+       "team": "Lanús",
+       "p": 15,
+       "w": 7,
+       "d": 4,
+       "l": 4,
+       "gf": 18,
+       "ga": 11,
+       "pts": 25,
+       "tid": 446,
+       "form": "DWWDD"
+      },
+      {
+       "pos": 6,
+       "team": "Newell's Old Boys",
+       "p": 15,
+       "w": 5,
+       "d": 7,
+       "l": 3,
+       "gf": 14,
+       "ga": 11,
+       "pts": 22,
+       "tid": 457,
+       "form": "DLWDD"
       },
       {
        "pos": 6,
@@ -123,6 +201,19 @@
        "form": "LWLLD"
       },
       {
+       "pos": 7,
+       "team": "Gimnasia (Mendoza)",
+       "p": 15,
+       "w": 6,
+       "d": 3,
+       "l": 6,
+       "gf": 17,
+       "ga": 16,
+       "pts": 21,
+       "tid": 1066,
+       "form": "LWLLD"
+      },
+      {
        "pos": 8,
        "team": "Independiente",
        "p": 15,
@@ -134,6 +225,32 @@
        "pts": 20,
        "tid": 453,
        "form": "LDDLD"
+      },
+      {
+       "pos": 8,
+       "team": "Independiente",
+       "p": 15,
+       "w": 5,
+       "d": 5,
+       "l": 5,
+       "gf": 13,
+       "ga": 15,
+       "pts": 20,
+       "tid": 453,
+       "form": "LDDLD"
+      },
+      {
+       "pos": 9,
+       "team": "San Lorenzo",
+       "p": 15,
+       "w": 5,
+       "d": 4,
+       "l": 6,
+       "gf": 9,
+       "ga": 14,
+       "pts": 19,
+       "tid": 460,
+       "form": "LWWDD"
       },
       {
        "pos": 9,
@@ -162,6 +279,19 @@
        "form": "LLDWD"
       },
       {
+       "pos": 10,
+       "team": "Unión",
+       "p": 15,
+       "w": 5,
+       "d": 3,
+       "l": 7,
+       "gf": 22,
+       "ga": 24,
+       "pts": 18,
+       "tid": 441,
+       "form": "LLDWD"
+      },
+      {
        "pos": 11,
        "team": "Platense",
        "p": 15,
@@ -173,6 +303,32 @@
        "pts": 17,
        "tid": 1064,
        "form": "DDLWW"
+      },
+      {
+       "pos": 11,
+       "team": "Platense",
+       "p": 15,
+       "w": 4,
+       "d": 5,
+       "l": 6,
+       "gf": 16,
+       "ga": 20,
+       "pts": 17,
+       "tid": 1064,
+       "form": "DDLWW"
+      },
+      {
+       "pos": 12,
+       "team": "Estudiantes",
+       "p": 15,
+       "w": 4,
+       "d": 3,
+       "l": 8,
+       "gf": 20,
+       "ga": 21,
+       "pts": 15,
+       "tid": 450,
+       "form": "WDLLD"
       },
       {
        "pos": 12,
@@ -201,6 +357,19 @@
        "form": "LDLLW"
       },
       {
+       "pos": 13,
+       "team": "Talleres",
+       "p": 15,
+       "w": 3,
+       "d": 3,
+       "l": 9,
+       "gf": 16,
+       "ga": 22,
+       "pts": 12,
+       "tid": 456,
+       "form": "LDLLW"
+      },
+      {
        "pos": 14,
        "team": "Deportivo Riestra",
        "p": 15,
@@ -212,6 +381,32 @@
        "pts": 12,
        "tid": 476,
        "form": "DLDLL"
+      },
+      {
+       "pos": 14,
+       "team": "Deportivo Riestra",
+       "p": 15,
+       "w": 2,
+       "d": 6,
+       "l": 7,
+       "gf": 10,
+       "ga": 17,
+       "pts": 12,
+       "tid": 476,
+       "form": "DLDLL"
+      },
+      {
+       "pos": 15,
+       "team": "Central Córdoba",
+       "p": 15,
+       "w": 2,
+       "d": 4,
+       "l": 9,
+       "gf": 11,
+       "ga": 25,
+       "pts": 10,
+       "tid": 1065,
+       "form": "DDLLL"
       },
       {
        "pos": 15,
@@ -246,6 +441,19 @@
        "form": "DWWWW"
       },
       {
+       "pos": 1,
+       "team": "Rosario Central",
+       "p": 15,
+       "w": 9,
+       "d": 4,
+       "l": 2,
+       "gf": 24,
+       "ga": 12,
+       "pts": 31,
+       "tid": 437,
+       "form": "DWWWW"
+      },
+      {
        "pos": 2,
        "team": "Argentinos Juniors",
        "p": 15,
@@ -257,6 +465,32 @@
        "pts": 31,
        "tid": 458,
        "form": "WDWWW"
+      },
+      {
+       "pos": 2,
+       "team": "Argentinos Juniors",
+       "p": 15,
+       "w": 9,
+       "d": 4,
+       "l": 2,
+       "gf": 20,
+       "ga": 12,
+       "pts": 31,
+       "tid": 458,
+       "form": "WDWWW"
+      },
+      {
+       "pos": 3,
+       "team": "Gimnasia La Plata",
+       "p": 15,
+       "w": 8,
+       "d": 4,
+       "l": 3,
+       "gf": 23,
+       "ga": 19,
+       "pts": 28,
+       "tid": 434,
+       "form": "DDWWW"
       },
       {
        "pos": 3,
@@ -285,6 +519,19 @@
        "form": "WDWWL"
       },
       {
+       "pos": 4,
+       "team": "River Plate",
+       "p": 15,
+       "w": 7,
+       "d": 2,
+       "l": 6,
+       "gf": 19,
+       "ga": 14,
+       "pts": 23,
+       "tid": 435,
+       "form": "WDWWL"
+      },
+      {
        "pos": 5,
        "team": "Belgrano",
        "p": 15,
@@ -296,6 +543,32 @@
        "pts": 23,
        "tid": 440,
        "form": "WWLLD"
+      },
+      {
+       "pos": 5,
+       "team": "Belgrano",
+       "p": 15,
+       "w": 6,
+       "d": 5,
+       "l": 4,
+       "gf": 16,
+       "ga": 13,
+       "pts": 23,
+       "tid": 440,
+       "form": "WWLLD"
+      },
+      {
+       "pos": 6,
+       "team": "Barracas Central",
+       "p": 15,
+       "w": 6,
+       "d": 5,
+       "l": 4,
+       "gf": 15,
+       "ga": 13,
+       "pts": 23,
+       "tid": 2432,
+       "form": "WWDWD"
       },
       {
        "pos": 6,
@@ -324,6 +597,19 @@
        "form": "DLDLW"
       },
       {
+       "pos": 7,
+       "team": "Independiente Rivadavia",
+       "p": 15,
+       "w": 6,
+       "d": 4,
+       "l": 5,
+       "gf": 20,
+       "ga": 23,
+       "pts": 22,
+       "tid": 473,
+       "form": "DLDLW"
+      },
+      {
        "pos": 8,
        "team": "Sarmiento",
        "p": 15,
@@ -335,6 +621,32 @@
        "pts": 21,
        "tid": 474,
        "form": "WDDLL"
+      },
+      {
+       "pos": 8,
+       "team": "Sarmiento",
+       "p": 15,
+       "w": 6,
+       "d": 3,
+       "l": 6,
+       "gf": 23,
+       "ga": 23,
+       "pts": 21,
+       "tid": 474,
+       "form": "WDDLL"
+      },
+      {
+       "pos": 9,
+       "team": "Huracán",
+       "p": 15,
+       "w": 5,
+       "d": 4,
+       "l": 6,
+       "gf": 12,
+       "ga": 16,
+       "pts": 19,
+       "tid": 445,
+       "form": "WLLLL"
       },
       {
        "pos": 9,
@@ -363,6 +675,19 @@
        "form": "LDLWL"
       },
       {
+       "pos": 10,
+       "team": "Atlético Tucumán",
+       "p": 15,
+       "w": 4,
+       "d": 5,
+       "l": 6,
+       "gf": 14,
+       "ga": 15,
+       "pts": 17,
+       "tid": 455,
+       "form": "LDLWL"
+      },
+      {
        "pos": 11,
        "team": "Tigre",
        "p": 15,
@@ -374,6 +699,32 @@
        "pts": 16,
        "tid": 452,
        "form": "LLDLW"
+      },
+      {
+       "pos": 11,
+       "team": "Tigre",
+       "p": 15,
+       "w": 4,
+       "d": 4,
+       "l": 7,
+       "gf": 15,
+       "ga": 16,
+       "pts": 16,
+       "tid": 452,
+       "form": "LLDLW"
+      },
+      {
+       "pos": 12,
+       "team": "Racing Club",
+       "p": 15,
+       "w": 4,
+       "d": 3,
+       "l": 8,
+       "gf": 16,
+       "ga": 22,
+       "pts": 15,
+       "tid": 436,
+       "form": "WLDLW"
       },
       {
        "pos": 12,
@@ -402,6 +753,19 @@
        "form": "DWLDL"
       },
       {
+       "pos": 13,
+       "team": "Banfield",
+       "p": 15,
+       "w": 3,
+       "d": 5,
+       "l": 7,
+       "gf": 16,
+       "ga": 23,
+       "pts": 14,
+       "tid": 449,
+       "form": "DWLDL"
+      },
+      {
        "pos": 14,
        "team": "Aldosivi",
        "p": 15,
@@ -413,6 +777,32 @@
        "pts": 11,
        "tid": 463,
        "form": "LLLWL"
+      },
+      {
+       "pos": 14,
+       "team": "Aldosivi",
+       "p": 15,
+       "w": 3,
+       "d": 2,
+       "l": 10,
+       "gf": 16,
+       "ga": 24,
+       "pts": 11,
+       "tid": 463,
+       "form": "LLLWL"
+      },
+      {
+       "pos": 15,
+       "team": "Estudiantes (Río Cuarto)",
+       "p": 15,
+       "w": 2,
+       "d": 3,
+       "l": 10,
+       "gf": 10,
+       "ga": 21,
+       "pts": 9,
+       "tid": 2424,
+       "form": "LLWLL"
       },
       {
        "pos": 15,
