@@ -653,16 +653,16 @@
     },
     {
      "pos": 5,
-     "team": "Guerreros del Pacifico",
+     "team": "Halcones Negros",
      "p": 10,
-     "w": 4,
+     "w": 5,
      "d": 1,
-     "l": 5,
-     "gf": 20,
-     "ga": 17,
+     "l": 4,
+     "gf": 22,
+     "ga": 14,
      "pts": 17,
-     "tid": 28304,
-     "form": "LLWLW"
+     "tid": 28305,
+     "form": "WWLLW"
     },
     {
      "pos": 6,
@@ -679,16 +679,16 @@
     },
     {
      "pos": 6,
-     "team": "Halcones Negros",
-     "p": 9,
+     "team": "Guerreros del Pacifico",
+     "p": 10,
      "w": 4,
      "d": 1,
-     "l": 4,
-     "gf": 21,
-     "ga": 14,
-     "pts": 14,
-     "tid": 28305,
-     "form": "WWWLL"
+     "l": 5,
+     "gf": 20,
+     "ga": 17,
+     "pts": 17,
+     "tid": 28304,
+     "form": "LLWLW"
     },
     {
      "pos": 7,
@@ -747,16 +747,16 @@
     {
      "pos": 9,
      "team": "Real Apodaca",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 1,
-     "l": 6,
+     "l": 7,
      "gf": 10,
-     "ga": 19,
+     "ga": 20,
      "pts": 6,
      "ded": 1,
      "tid": 22047,
-     "form": "LLLLW"
+     "form": "LLLWL"
     },
     {
      "pos": 9,
