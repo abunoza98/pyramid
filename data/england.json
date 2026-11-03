@@ -115,6 +115,19 @@
     },
     {
      "pos": 7,
+     "team": "Everton",
+     "p": 9,
+     "w": 3,
+     "d": 4,
+     "l": 2,
+     "gf": 9,
+     "ga": 9,
+     "pts": 13,
+     "tid": 45,
+     "form": "WDLLW"
+    },
+    {
+     "pos": 8,
      "team": "AFC Bournemouth",
      "p": 9,
      "w": 3,
@@ -127,7 +140,7 @@
      "form": "LLWWW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Tottenham Hotspur",
      "p": 9,
      "w": 3,
@@ -140,7 +153,7 @@
      "form": "LDWWW"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Aston Villa",
      "p": 9,
      "w": 3,
@@ -153,7 +166,7 @@
      "form": "WDWWD"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Hull City",
      "p": 9,
      "w": 2,
@@ -166,7 +179,7 @@
      "form": "LDLDD"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Leeds United",
      "p": 9,
      "w": 2,
@@ -179,20 +192,20 @@
      "form": "DLDDL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Newcastle United",
-     "p": 8,
+     "p": 9,
      "w": 3,
      "d": 2,
-     "l": 3,
+     "l": 4,
      "gf": 12,
-     "ga": 14,
+     "ga": 15,
      "pts": 11,
      "tid": 34,
-     "form": "LWLLW"
+     "form": "WLLWL"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Ipswich Town",
      "p": 9,
      "w": 3,
@@ -203,19 +216,6 @@
      "pts": 11,
      "tid": 57,
      "form": "LWLDD"
-    },
-    {
-     "pos": 14,
-     "team": "Everton",
-     "p": 8,
-     "w": 2,
-     "d": 4,
-     "l": 2,
-     "gf": 8,
-     "ga": 9,
-     "pts": 10,
-     "tid": 45,
-     "form": "DWDLL"
     },
     {
      "pos": 15,

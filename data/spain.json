@@ -134,6 +134,19 @@
     },
     {
      "pos": 8,
+     "team": "Deportivo La Coruña",
+     "p": 11,
+     "w": 3,
+     "d": 5,
+     "l": 3,
+     "gf": 15,
+     "ga": 14,
+     "pts": 14,
+     "tid": 544,
+     "form": "DLDLW"
+    },
+    {
+     "pos": 9,
      "team": "Villarreal",
      "p": 11,
      "w": 3,
@@ -146,7 +159,7 @@
      "form": "WLDWL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Celta Vigo",
      "p": 11,
      "w": 2,
@@ -159,7 +172,7 @@
      "form": "WDWDL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Alavés",
      "p": 11,
      "w": 3,
@@ -172,7 +185,7 @@
      "form": "DLLDL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Rayo Vallecano",
      "p": 10,
      "w": 3,
@@ -185,7 +198,7 @@
      "form": "WDDLW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Getafe",
      "p": 11,
      "w": 3,
@@ -196,19 +209,6 @@
      "pts": 12,
      "tid": 546,
      "form": "WLDLW"
-    },
-    {
-     "pos": 13,
-     "team": "Deportivo La Coruña",
-     "p": 10,
-     "w": 2,
-     "d": 5,
-     "l": 3,
-     "gf": 13,
-     "ga": 13,
-     "pts": 11,
-     "tid": 544,
-     "form": "LDLDL"
     },
     {
      "pos": 14,
@@ -226,15 +226,15 @@
     {
      "pos": 15,
      "team": "Osasuna",
-     "p": 10,
+     "p": 11,
      "w": 3,
      "d": 2,
-     "l": 5,
-     "gf": 10,
-     "ga": 20,
+     "l": 6,
+     "gf": 11,
+     "ga": 22,
      "pts": 11,
      "tid": 727,
-     "form": "LDLWL"
+     "form": "DLWLL"
     },
     {
      "pos": 16,
@@ -389,6 +389,19 @@
     },
     {
      "pos": 5,
+     "team": "Mallorca",
+     "p": 12,
+     "w": 6,
+     "d": 4,
+     "l": 2,
+     "gf": 15,
+     "ga": 7,
+     "pts": 22,
+     "tid": 798,
+     "form": "DWDDW"
+    },
+    {
+     "pos": 6,
      "team": "Sporting Gijón",
      "p": 12,
      "w": 7,
@@ -401,7 +414,7 @@
      "form": "WWWLW"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Girona",
      "p": 12,
      "w": 6,
@@ -414,7 +427,7 @@
      "form": "DDWWL"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Burgos",
      "p": 12,
      "w": 6,
@@ -425,19 +438,6 @@
      "pts": 21,
      "tid": 9580,
      "form": "LLWWD"
-    },
-    {
-     "pos": 8,
-     "team": "Mallorca",
-     "p": 11,
-     "w": 5,
-     "d": 4,
-     "l": 2,
-     "gf": 13,
-     "ga": 6,
-     "pts": 19,
-     "tid": 798,
-     "form": "LDWDD"
     },
     {
      "pos": 9,
@@ -572,15 +572,15 @@
     {
      "pos": 19,
      "team": "Cádiz",
-     "p": 11,
+     "p": 12,
      "w": 2,
      "d": 4,
-     "l": 5,
-     "gf": 14,
-     "ga": 14,
+     "l": 6,
+     "gf": 15,
+     "ga": 16,
      "pts": 10,
      "tid": 724,
-     "form": "DWLLW"
+     "form": "WLLWL"
     },
     {
      "pos": 20,

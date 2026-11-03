@@ -4,7 +4,7 @@
  "adjective": "Argentine",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-02T00:00:00.000Z",
+ "updated": "2026-11-03T00:00:00.000Z",
  "belowNote": "Promoted clubs from Primera D come up",
  "leagues": [
   {
@@ -29,7 +29,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-11-02T00:00:00.000Z",
+     "updated": "2026-11-03T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -73,15 +73,15 @@
       {
        "pos": 4,
        "team": "Defensa Y Justicia",
-       "p": 14,
+       "p": 15,
        "w": 8,
-       "d": 3,
+       "d": 4,
        "l": 3,
-       "gf": 20,
-       "ga": 13,
-       "pts": 27,
+       "gf": 21,
+       "ga": 14,
+       "pts": 28,
        "tid": 442,
-       "form": "DWWLW"
+       "form": "WWLWD"
       },
       {
        "pos": 5,
@@ -125,15 +125,15 @@
       {
        "pos": 8,
        "team": "Independiente",
-       "p": 14,
+       "p": 15,
        "w": 5,
-       "d": 4,
+       "d": 5,
        "l": 5,
-       "gf": 12,
-       "ga": 14,
-       "pts": 19,
+       "gf": 13,
+       "ga": 15,
+       "pts": 20,
        "tid": 453,
-       "form": "WLDDL"
+       "form": "LDDLD"
       },
       {
        "pos": 9,
@@ -163,6 +163,19 @@
       },
       {
        "pos": 11,
+       "team": "Platense",
+       "p": 15,
+       "w": 4,
+       "d": 5,
+       "l": 6,
+       "gf": 16,
+       "ga": 20,
+       "pts": 17,
+       "tid": 1064,
+       "form": "DDLWW"
+      },
+      {
+       "pos": 12,
        "team": "Estudiantes",
        "p": 15,
        "w": 4,
@@ -173,19 +186,6 @@
        "pts": 15,
        "tid": 450,
        "form": "WDLLD"
-      },
-      {
-       "pos": 12,
-       "team": "Platense",
-       "p": 14,
-       "w": 3,
-       "d": 5,
-       "l": 6,
-       "gf": 14,
-       "ga": 20,
-       "pts": 14,
-       "tid": 1064,
-       "form": "LDDLW"
       },
       {
        "pos": 13,
@@ -216,21 +216,21 @@
       {
        "pos": 15,
        "team": "Central Córdoba",
-       "p": 14,
+       "p": 15,
        "w": 2,
        "d": 4,
-       "l": 8,
+       "l": 9,
        "gf": 11,
-       "ga": 23,
+       "ga": 25,
        "pts": 10,
        "tid": 1065,
-       "form": "DDDLL"
+       "form": "DDLLL"
       }
      ]
     },
     {
      "name": "Group B",
-     "updated": "2026-11-02T00:00:00.000Z",
+     "updated": "2026-11-03T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -430,7 +430,7 @@
      ]
     }
    ],
-   "updated": "2026-11-02T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   },
   {
    "id": "primera-nacional",

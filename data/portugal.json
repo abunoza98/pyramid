@@ -69,15 +69,15 @@
     {
      "pos": 2,
      "team": "Benfica",
-     "p": 9,
-     "w": 7,
+     "p": 10,
+     "w": 8,
      "d": 1,
      "l": 1,
-     "gf": 26,
+     "gf": 27,
      "ga": 8,
-     "pts": 22,
+     "pts": 25,
      "tid": 211,
-     "form": "WWLWW"
+     "form": "WLWWW"
     },
     {
      "pos": 3,
@@ -134,15 +134,15 @@
     {
      "pos": 7,
      "team": "Gil Vicente",
-     "p": 9,
+     "p": 10,
      "w": 4,
-     "d": 2,
+     "d": 3,
      "l": 3,
      "gf": 8,
      "ga": 7,
-     "pts": 14,
+     "pts": 15,
      "tid": 762,
-     "form": "LDWWL"
+     "form": "DWWLD"
     },
     {
      "pos": 8,
@@ -173,15 +173,15 @@
     {
      "pos": 10,
      "team": "Alverca",
-     "p": 9,
+     "p": 10,
      "w": 3,
      "d": 2,
-     "l": 4,
+     "l": 5,
      "gf": 13,
-     "ga": 13,
+     "ga": 14,
      "pts": 11,
      "tid": 4724,
-     "form": "LWWWL"
+     "form": "WWWLL"
     },
     {
      "pos": 11,
@@ -212,15 +212,15 @@
     {
      "pos": 13,
      "team": "Vitória de Guimarães",
-     "p": 9,
+     "p": 10,
      "w": 2,
-     "d": 2,
+     "d": 3,
      "l": 5,
      "gf": 10,
      "ga": 10,
-     "pts": 8,
+     "pts": 9,
      "tid": 224,
-     "form": "DLDLW"
+     "form": "LDLWD"
     },
     {
      "pos": 14,
