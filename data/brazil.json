@@ -4,7 +4,7 @@
  "adjective": "Brazilian",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-03T00:00:00.000Z",
+ "updated": "2026-11-04T00:00:00.000Z",
  "belowNote": "Clubs qualify for Série D through their state championships",
  "leagues": [
   {
@@ -174,15 +174,15 @@
     {
      "pos": 11,
      "team": "Coritiba",
-     "p": 33,
+     "p": 34,
      "w": 11,
      "d": 9,
-     "l": 13,
+     "l": 14,
      "gf": 40,
-     "ga": 50,
+     "ga": 51,
      "pts": 42,
      "tid": 147,
-     "form": "LDLLW"
+     "form": "DLLWL"
     },
     {
      "pos": 12,
@@ -238,6 +238,19 @@
     },
     {
      "pos": 16,
+     "team": "Internacional",
+     "p": 34,
+     "w": 9,
+     "d": 11,
+     "l": 14,
+     "gf": 38,
+     "ga": 42,
+     "pts": 38,
+     "tid": 119,
+     "form": "DLWLW"
+    },
+    {
+     "pos": 17,
      "team": "Grêmio",
      "p": 33,
      "w": 9,
@@ -250,7 +263,7 @@
      "form": "DDLWW"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Corinthians",
      "p": 33,
      "w": 9,
@@ -261,19 +274,6 @@
      "pts": 36,
      "tid": 131,
      "form": "LLDLW"
-    },
-    {
-     "pos": 18,
-     "team": "Internacional",
-     "p": 33,
-     "w": 8,
-     "d": 11,
-     "l": 14,
-     "gf": 37,
-     "ga": 42,
-     "pts": 35,
-     "tid": 119,
-     "form": "WDLWL"
     },
     {
      "pos": 19,
@@ -594,7 +594,7 @@
      "form": "LLDDL"
     }
    ],
-   "updated": "2026-11-03T00:00:00.000Z"
+   "updated": "2026-11-04T00:00:00.000Z"
   },
   {
    "id": "serie-c",
