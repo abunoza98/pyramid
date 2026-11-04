@@ -4,7 +4,7 @@
  "adjective": "Belgian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-04T00:00:00.000Z",
  "belowNote": "The top amateur clubs come up",
  "leagues": [
   {
@@ -173,6 +173,19 @@
     },
     {
      "pos": 10,
+     "team": "KV Mechelen",
+     "p": 10,
+     "w": 3,
+     "d": 3,
+     "l": 4,
+     "gf": 13,
+     "ga": 18,
+     "pts": 12,
+     "tid": 266,
+     "form": "LDWWW"
+    },
+    {
+     "pos": 11,
      "team": "Zulte Waregem",
      "p": 10,
      "w": 3,
@@ -185,7 +198,7 @@
      "form": "LLLLL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Antwerp",
      "p": 10,
      "w": 3,
@@ -198,7 +211,7 @@
      "form": "LLLWL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "SK Beveren",
      "p": 10,
      "w": 3,
@@ -211,7 +224,7 @@
      "form": "WLLDL"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "OH Leuven",
      "p": 10,
      "w": 2,
@@ -222,19 +235,6 @@
      "pts": 9,
      "tid": 260,
      "form": "DWDDW"
-    },
-    {
-     "pos": 14,
-     "team": "KV Mechelen",
-     "p": 9,
-     "w": 2,
-     "d": 3,
-     "l": 4,
-     "gf": 10,
-     "ga": 17,
-     "pts": 9,
-     "tid": 266,
-     "form": "LLDWW"
     },
     {
      "pos": 15,
@@ -278,18 +278,18 @@
     {
      "pos": 18,
      "team": "Kortrijk",
-     "p": 9,
+     "p": 10,
      "w": 1,
      "d": 1,
-     "l": 7,
-     "gf": 3,
-     "ga": 19,
+     "l": 8,
+     "gf": 4,
+     "ga": 22,
      "pts": 4,
      "tid": 734,
-     "form": "LLWLD"
+     "form": "LWLDL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-04T00:00:00.000Z"
   },
   {
    "id": "challenger-pro-league",
@@ -345,15 +345,15 @@
     {
      "pos": 2,
      "team": "Dender",
-     "p": 8,
+     "p": 9,
      "w": 6,
      "d": 1,
-     "l": 1,
+     "l": 2,
      "gf": 12,
-     "ga": 3,
+     "ga": 4,
      "pts": 19,
      "tid": 6215,
-     "form": "WWWWD"
+     "form": "WWWDL"
     },
     {
      "pos": 3,
@@ -370,6 +370,19 @@
     },
     {
      "pos": 4,
+     "team": "Francs Borains",
+     "p": 8,
+     "w": 5,
+     "d": 0,
+     "l": 3,
+     "gf": 10,
+     "ga": 10,
+     "pts": 15,
+     "tid": 5805,
+     "form": "WWLLW"
+    },
+    {
+     "pos": 5,
      "team": "Sporting Hasselt",
      "p": 8,
      "w": 5,
@@ -382,7 +395,7 @@
      "form": "LWLWW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Excelsior Virton",
      "p": 8,
      "w": 4,
@@ -395,7 +408,7 @@
      "form": "WDLLW"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Lokeren-Temse",
      "p": 8,
      "w": 4,
@@ -408,7 +421,7 @@
      "form": "LWDWL"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Patro Eisden",
      "p": 9,
      "w": 4,
@@ -419,19 +432,6 @@
      "pts": 12,
      "tid": 6222,
      "form": "LLWWW"
-    },
-    {
-     "pos": 8,
-     "team": "Francs Borains",
-     "p": 7,
-     "w": 4,
-     "d": 0,
-     "l": 3,
-     "gf": 9,
-     "ga": 10,
-     "pts": 12,
-     "tid": 5805,
-     "form": "WWWLL"
     },
     {
      "pos": 9,
@@ -474,19 +474,6 @@
     },
     {
      "pos": 12,
-     "team": "Lierse",
-     "p": 7,
-     "w": 2,
-     "d": 2,
-     "l": 3,
-     "gf": 7,
-     "ga": 10,
-     "pts": 8,
-     "tid": 6219,
-     "form": "DDLWL"
-    },
-    {
-     "pos": 13,
      "team": "Seraing United",
      "p": 9,
      "w": 2,
@@ -497,6 +484,19 @@
      "pts": 8,
      "tid": 10244,
      "form": "LDLWW"
+    },
+    {
+     "pos": 13,
+     "team": "Lierse",
+     "p": 8,
+     "w": 2,
+     "d": 2,
+     "l": 4,
+     "gf": 7,
+     "ga": 11,
+     "pts": 8,
+     "tid": 6219,
+     "form": "DLWLL"
     },
     {
      "pos": 14,
@@ -514,18 +514,18 @@
     {
      "pos": 15,
      "team": "Anderlecht II",
-     "p": 7,
-     "w": 0,
+     "p": 8,
+     "w": 1,
      "d": 1,
      "l": 6,
-     "gf": 7,
+     "gf": 8,
      "ga": 17,
-     "pts": 1,
+     "pts": 4,
      "tid": 19046,
-     "form": "LDLLL"
+     "form": "DLLLW"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-04T00:00:00.000Z"
   }
  ]
 }

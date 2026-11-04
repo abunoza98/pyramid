@@ -4,7 +4,7 @@
  "adjective": "English",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-03T00:00:00.000Z",
+ "updated": "2026-11-04T00:00:00.000Z",
  "belowNote": "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
  "leagues": [
   {
@@ -296,7 +296,7 @@
      "form": "LLLDL"
     }
    ],
-   "updated": "2026-11-02T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   },
   {
    "id": "championship",
@@ -333,18 +333,31 @@
     {
      "pos": 1,
      "team": "Middlesbrough",
-     "p": 13,
+     "p": 14,
      "w": 8,
      "d": 4,
-     "l": 1,
+     "l": 2,
      "gf": 30,
-     "ga": 17,
+     "ga": 19,
      "pts": 28,
      "tid": 70,
-     "form": "WWDWW"
+     "form": "WDWWL"
     },
     {
      "pos": 2,
+     "team": "Wolverhampton Wanderers",
+     "p": 14,
+     "w": 8,
+     "d": 3,
+     "l": 3,
+     "gf": 25,
+     "ga": 17,
+     "pts": 27,
+     "tid": 39,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 3,
      "team": "Birmingham City",
      "p": 14,
      "w": 7,
@@ -357,7 +370,7 @@
      "form": "WWLWW"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Stoke City",
      "p": 14,
      "w": 8,
@@ -370,7 +383,7 @@
      "form": "LWDWW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Swansea City",
      "p": 14,
      "w": 8,
@@ -383,7 +396,7 @@
      "form": "WLLWL"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "West Bromwich Albion",
      "p": 14,
      "w": 7,
@@ -396,7 +409,7 @@
      "form": "WWDWD"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Southampton",
      "p": 14,
      "w": 8,
@@ -410,30 +423,17 @@
      "form": "WDWWD"
     },
     {
-     "pos": 7,
-     "team": "Wolverhampton Wanderers",
-     "p": 13,
-     "w": 7,
-     "d": 3,
-     "l": 3,
-     "gf": 23,
-     "ga": 16,
-     "pts": 24,
-     "tid": 39,
-     "form": "LWDWW"
-    },
-    {
      "pos": 8,
      "team": "West Ham United",
-     "p": 13,
+     "p": 14,
      "w": 6,
-     "d": 4,
+     "d": 5,
      "l": 3,
-     "gf": 33,
-     "ga": 18,
-     "pts": 22,
+     "gf": 36,
+     "ga": 21,
+     "pts": 23,
      "tid": 48,
-     "form": "DWWLL"
+     "form": "WWLLD"
     },
     {
      "pos": 9,
@@ -516,18 +516,31 @@
     {
      "pos": 15,
      "team": "Bristol City",
-     "p": 13,
+     "p": 14,
      "w": 5,
      "d": 3,
-     "l": 5,
-     "gf": 15,
-     "ga": 17,
+     "l": 6,
+     "gf": 16,
+     "ga": 19,
      "pts": 18,
      "tid": 56,
-     "form": "DLLDW"
+     "form": "LLDWL"
     },
     {
      "pos": 16,
+     "team": "Wrexham",
+     "p": 14,
+     "w": 4,
+     "d": 5,
+     "l": 5,
+     "gf": 17,
+     "ga": 19,
+     "pts": 17,
+     "tid": 1837,
+     "form": "LWLLW"
+    },
+    {
+     "pos": 17,
      "team": "Bolton Wanderers",
      "p": 14,
      "w": 5,
@@ -540,7 +553,20 @@
      "form": "WDLLW"
     },
     {
-     "pos": 17,
+     "pos": 18,
+     "team": "Cardiff City",
+     "p": 14,
+     "w": 3,
+     "d": 6,
+     "l": 5,
+     "gf": 22,
+     "ga": 23,
+     "pts": 15,
+     "tid": 43,
+     "form": "WDWLD"
+    },
+    {
+     "pos": 19,
      "team": "Lincoln City",
      "p": 14,
      "w": 4,
@@ -551,32 +577,6 @@
      "pts": 15,
      "tid": 1379,
      "form": "LDWLL"
-    },
-    {
-     "pos": 18,
-     "team": "Cardiff City",
-     "p": 13,
-     "w": 3,
-     "d": 5,
-     "l": 5,
-     "gf": 19,
-     "ga": 20,
-     "pts": 14,
-     "tid": 43,
-     "form": "LWDWL"
-    },
-    {
-     "pos": 19,
-     "team": "Wrexham",
-     "p": 13,
-     "w": 3,
-     "d": 5,
-     "l": 5,
-     "gf": 15,
-     "ga": 19,
-     "pts": 14,
-     "tid": 1837,
-     "form": "DLWLL"
     },
     {
      "pos": 20,
@@ -644,7 +644,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-11-03T00:00:00.000Z"
+   "updated": "2026-11-04T00:00:00.000Z"
   },
   {
    "id": "league-one",
@@ -703,6 +703,19 @@
     },
     {
      "pos": 3,
+     "team": "Oxford United",
+     "p": 13,
+     "w": 7,
+     "d": 5,
+     "l": 1,
+     "gf": 22,
+     "ga": 11,
+     "pts": 26,
+     "tid": 1338,
+     "form": "WDWDW"
+    },
+    {
+     "pos": 4,
      "team": "Luton Town",
      "p": 14,
      "w": 7,
@@ -713,19 +726,6 @@
      "pts": 24,
      "tid": 1359,
      "form": "WWWWD"
-    },
-    {
-     "pos": 4,
-     "team": "Oxford United",
-     "p": 12,
-     "w": 6,
-     "d": 5,
-     "l": 1,
-     "gf": 20,
-     "ga": 11,
-     "pts": 23,
-     "tid": 1338,
-     "form": "DWDWD"
     },
     {
      "pos": 5,
@@ -743,15 +743,15 @@
     {
      "pos": 6,
      "team": "Reading",
-     "p": 13,
+     "p": 14,
      "w": 6,
      "d": 4,
-     "l": 3,
+     "l": 4,
      "gf": 25,
-     "ga": 13,
+     "ga": 15,
      "pts": 22,
      "tid": 53,
-     "form": "WLWWD"
+     "form": "LWWDL"
     },
     {
      "pos": 7,
@@ -988,7 +988,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-11-03T00:00:00.000Z"
+   "updated": "2026-11-04T00:00:00.000Z"
   },
   {
    "id": "league-two",
@@ -1685,7 +1685,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-02T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   },
   {
    "id": "national-league-north-south",
@@ -1727,7 +1727,7 @@
    "groups": [
     {
      "name": "North",
-     "updated": "2026-11-02T00:00:00.000Z",
+     "updated": "2026-11-03T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
