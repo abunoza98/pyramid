@@ -539,6 +539,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Olympiacos",
+     "p": 4,
+     "w": 3,
+     "d": 1,
+     "l": 0,
+     "gf": 4,
+     "ga": 1,
+     "pts": 10,
+     "tid": 553,
+     "form": "WWWD"
+    },
+    {
+     "pos": 2,
      "team": "Benfica",
      "p": 3,
      "w": 3,
@@ -551,7 +564,7 @@
      "form": "WWW"
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "Bayer Leverkusen",
      "p": 3,
      "w": 3,
@@ -564,7 +577,7 @@
      "form": "WWW"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "AFC Bournemouth",
      "p": 3,
      "w": 3,
@@ -577,7 +590,7 @@
      "form": "WWW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Ferencváros",
      "p": 3,
      "w": 3,
@@ -587,19 +600,6 @@
      "ga": 3,
      "pts": 9,
      "tid": 651,
-     "form": "WWW"
-    },
-    {
-     "pos": 5,
-     "team": "Olympiacos",
-     "p": 3,
-     "w": 3,
-     "d": 0,
-     "l": 0,
-     "gf": 4,
-     "ga": 1,
-     "pts": 9,
-     "tid": 553,
      "form": "WWW"
     },
     {
@@ -682,6 +682,19 @@
     },
     {
      "pos": 12,
+     "team": "Rennes",
+     "p": 4,
+     "w": 1,
+     "d": 3,
+     "l": 0,
+     "gf": 4,
+     "ga": 3,
+     "pts": 6,
+     "tid": 94,
+     "form": "DWDD"
+    },
+    {
+     "pos": 13,
      "team": "Lyon",
      "p": 3,
      "w": 2,
@@ -692,19 +705,6 @@
      "pts": 6,
      "tid": 80,
      "form": "WWL"
-    },
-    {
-     "pos": 13,
-     "team": "Rennes",
-     "p": 3,
-     "w": 1,
-     "d": 2,
-     "l": 0,
-     "gf": 4,
-     "ga": 3,
-     "pts": 5,
-     "tid": 94,
-     "form": "DWD"
     },
     {
      "pos": 14,
@@ -1006,7 +1006,7 @@
      "form": "LLL"
     }
    ],
-   "updated": "2026-11-03T00:00:00.000Z"
+   "updated": "2026-11-04T00:00:00.000Z"
   },
   {
    "id": "conference-league",
