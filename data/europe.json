@@ -4,7 +4,7 @@
  "adjective": "European",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-03T00:00:00.000Z",
+ "updated": "2026-11-04T00:00:00.000Z",
  "leagues": [
   {
    "id": "champions-league",
@@ -229,7 +229,7 @@
      "ga": 9,
      "pts": 6,
      "tid": 1026,
-     "form": "WLLWW"
+     "form": "LLWW"
     },
     {
      "pos": 16,
@@ -333,7 +333,7 @@
      "ga": 9,
      "pts": 4,
      "tid": 327,
-     "form": "WLWLD"
+     "form": "LWLD"
     },
     {
      "pos": 24,
@@ -359,7 +359,7 @@
      "ga": 6,
      "pts": 3,
      "tid": 13976,
-     "form": "LWLWL"
+     "form": "LWL"
     },
     {
      "pos": 26,
@@ -385,7 +385,7 @@
      "ga": 8,
      "pts": 3,
      "tid": 575,
-     "form": "DWWLL"
+     "form": "WLL"
     },
     {
      "pos": 28,
@@ -437,7 +437,7 @@
      "ga": 9,
      "pts": 2,
      "tid": 611,
-     "form": "DWDLD"
+     "form": "DLD"
     },
     {
      "pos": 32,
@@ -463,7 +463,7 @@
      "ga": 9,
      "pts": 1,
      "tid": 759,
-     "form": "DWLDL"
+     "form": "LDL"
     },
     {
      "pos": 34,
@@ -502,10 +502,10 @@
      "ga": 17,
      "pts": 0,
      "tid": 656,
-     "form": "WLLLL"
+     "form": "LLLL"
     }
    ],
-   "updated": "2026-11-03T00:00:00.000Z"
+   "updated": "2026-11-04T00:00:00.000Z"
   },
   {
    "id": "europa-league",
@@ -1006,7 +1006,7 @@
      "form": "LLL"
     }
    ],
-   "updated": "2026-10-26T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   },
   {
    "id": "conference-league",
