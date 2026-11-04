@@ -4,7 +4,7 @@
  "adjective": "Turkish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-02T00:00:00.000Z",
+ "updated": "2026-11-04T00:00:00.000Z",
  "belowNote": "Regional amateur league champions come up",
  "leagues": [
   {
@@ -282,7 +282,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-02T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   },
   {
    "id": "1-lig",
@@ -578,7 +578,7 @@
      "form": "LLLW"
     }
    ],
-   "updated": "2026-11-02T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   },
   {
    "id": "2-lig",
@@ -620,7 +620,7 @@
    "groups": [
     {
      "name": "White Group",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-04T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -767,6 +767,19 @@
       },
       {
        "pos": 12,
+       "team": "Sebat Gençlikspor",
+       "p": 9,
+       "w": 2,
+       "d": 3,
+       "l": 4,
+       "gf": 14,
+       "ga": 15,
+       "pts": 9,
+       "tid": 22010,
+       "form": "DLWWD"
+      },
+      {
+       "pos": 13,
        "team": "Ankaraspor",
        "p": 9,
        "w": 3,
@@ -779,30 +792,17 @@
        "form": "WLLWL"
       },
       {
-       "pos": 13,
-       "team": "Sebat Gençlikspor",
-       "p": 8,
-       "w": 2,
-       "d": 2,
-       "l": 4,
-       "gf": 14,
-       "ga": 15,
-       "pts": 8,
-       "tid": 22010,
-       "form": "LDLWW"
-      },
-      {
        "pos": 14,
        "team": "Somaspor",
-       "p": 8,
+       "p": 9,
        "w": 2,
-       "d": 1,
+       "d": 2,
        "l": 5,
        "gf": 10,
        "ga": 18,
-       "pts": 7,
+       "pts": 8,
        "tid": 6538,
-       "form": "WLLLL"
+       "form": "LLLLD"
       },
       {
        "pos": 15,
@@ -863,7 +863,7 @@
     },
     {
      "name": "Red Group",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-04T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1093,7 +1093,7 @@
      ]
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-04T00:00:00.000Z"
   },
   {
    "id": "3-lig",
