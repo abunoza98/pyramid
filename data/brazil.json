@@ -186,6 +186,19 @@
     },
     {
      "pos": 12,
+     "team": "Mirassol",
+     "p": 34,
+     "w": 10,
+     "d": 10,
+     "l": 14,
+     "gf": 39,
+     "ga": 48,
+     "pts": 40,
+     "tid": 7848,
+     "form": "LWDLW"
+    },
+    {
+     "pos": 13,
      "team": "Botafogo",
      "p": 33,
      "w": 10,
@@ -198,7 +211,7 @@
      "form": "LDWLL"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Vasco da Gama",
      "p": 32,
      "w": 10,
@@ -211,7 +224,7 @@
      "form": "WDLWL"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Vitória",
      "p": 33,
      "w": 10,
@@ -224,7 +237,7 @@
      "form": "WLDDL"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Grêmio",
      "p": 33,
      "w": 9,
@@ -235,19 +248,6 @@
      "pts": 37,
      "tid": 130,
      "form": "DDLWW"
-    },
-    {
-     "pos": 16,
-     "team": "Mirassol",
-     "p": 33,
-     "w": 9,
-     "d": 10,
-     "l": 14,
-     "gf": 37,
-     "ga": 47,
-     "pts": 37,
-     "tid": 7848,
-     "form": "DLWDL"
     },
     {
      "pos": 17,
@@ -291,18 +291,18 @@
     {
      "pos": 20,
      "team": "Chapecoense",
-     "p": 32,
+     "p": 33,
      "w": 4,
      "d": 9,
-     "l": 19,
-     "gf": 32,
-     "ga": 66,
+     "l": 20,
+     "gf": 33,
+     "ga": 68,
      "pts": 21,
      "tid": 132,
-     "form": "LLLWL"
+     "form": "LLWLL"
     }
    ],
-   "updated": "2026-11-02T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   },
   {
    "id": "serie-b",
