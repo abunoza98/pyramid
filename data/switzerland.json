@@ -4,7 +4,7 @@
  "adjective": "Swiss",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-04T00:00:00.000Z",
  "belowNote": "The top 2. Liga Interregional clubs come up",
  "leagues": [
   {
@@ -190,7 +190,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   },
   {
    "id": "challenge-league",
@@ -352,7 +352,7 @@
      "form": "LLWLW"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   },
   {
    "id": "promotion-league",
@@ -381,6 +381,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "FC Schaffhausen",
+     "p": 13,
+     "w": 10,
+     "d": 1,
+     "l": 2,
+     "gf": 33,
+     "ga": 15,
+     "pts": 31,
+     "tid": 2182,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
      "team": "Bulle",
      "p": 14,
      "w": 9,
@@ -393,30 +406,17 @@
      "form": "WDWWW"
     },
     {
-     "pos": 2,
-     "team": "FC Schaffhausen",
-     "p": 12,
-     "w": 9,
-     "d": 1,
-     "l": 2,
-     "gf": 30,
-     "ga": 13,
-     "pts": 28,
-     "tid": 2182,
-     "form": "WWWWW"
-    },
-    {
      "pos": 3,
      "team": "Biel-Bienne",
-     "p": 13,
+     "p": 14,
      "w": 8,
      "d": 4,
-     "l": 1,
-     "gf": 28,
-     "ga": 15,
+     "l": 2,
+     "gf": 30,
+     "ga": 18,
      "pts": 28,
      "tid": 12700,
-     "form": "WWDDD"
+     "form": "WDDDL"
     },
     {
      "pos": 4,
@@ -614,7 +614,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-04T00:00:00.000Z"
   },
   {
    "id": "1-liga",
@@ -629,7 +629,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -843,7 +843,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1057,7 +1057,7 @@
     },
     {
      "name": "Group 3",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1270,7 +1270,7 @@
      ]
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-02T00:00:00.000Z"
   }
  ]
 }

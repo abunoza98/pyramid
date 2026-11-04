@@ -169,18 +169,31 @@
     {
      "pos": 11,
      "team": "Real Betis",
-     "p": 3,
+     "p": 4,
      "w": 3,
      "d": 0,
-     "l": 0,
-     "gf": 7,
-     "ga": 4,
+     "l": 1,
+     "gf": 8,
+     "ga": 6,
      "pts": 9,
      "tid": 543,
-     "form": "WWW"
+     "form": "WWWL"
     },
     {
      "pos": 12,
+     "team": "Borussia Dortmund",
+     "p": 4,
+     "w": 3,
+     "d": 0,
+     "l": 1,
+     "gf": 7,
+     "ga": 5,
+     "pts": 9,
+     "tid": 165,
+     "form": "WLWW"
+    },
+    {
+     "pos": 13,
      "team": "Bayern Munich",
      "p": 4,
      "w": 2,
@@ -193,7 +206,7 @@
      "form": "WDDW"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "VfB Stuttgart",
      "p": 4,
      "w": 2,
@@ -206,7 +219,7 @@
      "form": "WWDL"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Inter Milan",
      "p": 4,
      "w": 2,
@@ -219,7 +232,7 @@
      "form": "LLWW"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "LASK",
      "p": 4,
      "w": 2,
@@ -230,19 +243,6 @@
      "pts": 6,
      "tid": 1026,
      "form": "LLWW"
-    },
-    {
-     "pos": 16,
-     "team": "Borussia Dortmund",
-     "p": 3,
-     "w": 2,
-     "d": 0,
-     "l": 1,
-     "gf": 5,
-     "ga": 4,
-     "pts": 6,
-     "tid": 165,
-     "form": "WLW"
     },
     {
      "pos": 17,
