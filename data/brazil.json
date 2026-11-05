@@ -122,15 +122,15 @@
     {
      "pos": 7,
      "team": "Atlético Mineiro",
-     "p": 33,
+     "p": 34,
      "w": 14,
      "d": 8,
-     "l": 11,
+     "l": 12,
      "gf": 44,
-     "ga": 39,
+     "ga": 40,
      "pts": 50,
      "tid": 1062,
-     "form": "DWWLL"
+     "form": "WWLLL"
     },
     {
      "pos": 8,
@@ -161,18 +161,31 @@
     {
      "pos": 10,
      "team": "São Paulo",
-     "p": 33,
+     "p": 34,
      "w": 12,
-     "d": 7,
+     "d": 8,
      "l": 14,
      "gf": 39,
      "ga": 39,
-     "pts": 43,
+     "pts": 44,
      "tid": 126,
-     "form": "LWWDL"
+     "form": "WWDLD"
     },
     {
      "pos": 11,
+     "team": "Botafogo",
+     "p": 34,
+     "w": 11,
+     "d": 9,
+     "l": 14,
+     "gf": 46,
+     "ga": 53,
+     "pts": 42,
+     "tid": 120,
+     "form": "DWLLW"
+    },
+    {
+     "pos": 12,
      "team": "Coritiba",
      "p": 34,
      "w": 11,
@@ -185,7 +198,7 @@
      "form": "DLLWL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Vasco da Gama",
      "p": 33,
      "w": 11,
@@ -198,7 +211,7 @@
      "form": "DLWLW"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Mirassol",
      "p": 34,
      "w": 10,
@@ -209,19 +222,6 @@
      "pts": 40,
      "tid": 7848,
      "form": "LWDLW"
-    },
-    {
-     "pos": 14,
-     "team": "Botafogo",
-     "p": 33,
-     "w": 10,
-     "d": 9,
-     "l": 14,
-     "gf": 45,
-     "ga": 53,
-     "pts": 39,
-     "tid": 120,
-     "form": "LDWLL"
     },
     {
      "pos": 15,
@@ -251,6 +251,19 @@
     },
     {
      "pos": 17,
+     "team": "Corinthians",
+     "p": 34,
+     "w": 9,
+     "d": 10,
+     "l": 15,
+     "gf": 36,
+     "ga": 42,
+     "pts": 37,
+     "tid": 131,
+     "form": "LDLWD"
+    },
+    {
+     "pos": 18,
      "team": "Grêmio",
      "p": 34,
      "w": 9,
@@ -261,19 +274,6 @@
      "pts": 37,
      "tid": 130,
      "form": "DLWWL"
-    },
-    {
-     "pos": 18,
-     "team": "Corinthians",
-     "p": 33,
-     "w": 9,
-     "d": 9,
-     "l": 15,
-     "gf": 36,
-     "ga": 42,
-     "pts": 36,
-     "tid": 131,
-     "form": "LLDLW"
     },
     {
      "pos": 19,
