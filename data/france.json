@@ -4,7 +4,7 @@
  "adjective": "French",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-02T00:00:00.000Z",
+ "updated": "2026-11-05T00:00:00.000Z",
  "belowNote": "Promoted clubs from National 1 come up",
  "leagues": [
   {
@@ -288,7 +288,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-02T00:00:00.000Z"
+   "updated": "2026-11-04T00:00:00.000Z"
   },
   {
    "id": "ligue-2",
@@ -560,7 +560,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-02T00:00:00.000Z"
+   "updated": "2026-11-04T00:00:00.000Z"
   },
   {
    "id": "ligue-3",
@@ -772,28 +772,28 @@
     {
      "pos": 14,
      "team": "Orléans",
-     "p": 11,
+     "p": 12,
      "w": 2,
-     "d": 4,
+     "d": 5,
      "l": 5,
-     "gf": 10,
-     "ga": 15,
-     "pts": 10,
+     "gf": 12,
+     "ga": 17,
+     "pts": 11,
      "tid": 103,
-     "form": "LDDLD"
+     "form": "DDLDD"
     },
     {
      "pos": 15,
      "team": "Valenciennes",
-     "p": 11,
+     "p": 12,
      "w": 2,
-     "d": 3,
+     "d": 4,
      "l": 6,
-     "gf": 11,
-     "ga": 17,
-     "pts": 9,
+     "gf": 13,
+     "ga": 19,
+     "pts": 10,
      "tid": 105,
-     "form": "LWLDL"
+     "form": "WLDLD"
     },
     {
      "pos": 16,
@@ -835,7 +835,7 @@
      "form": "DDLLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-05T00:00:00.000Z"
   }
  ]
 }
