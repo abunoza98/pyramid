@@ -4,7 +4,7 @@
  "adjective": "Argentine",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-03T00:00:00.000Z",
+ "updated": "2026-11-05T00:00:00.000Z",
  "belowNote": "Promoted clubs from Primera D come up",
  "leagues": [
   {
@@ -29,7 +29,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-11-03T00:00:00.000Z",
+     "updated": "2026-11-05T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -230,7 +230,7 @@
     },
     {
      "name": "Group B",
-     "updated": "2026-11-03T00:00:00.000Z",
+     "updated": "2026-11-05T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -274,15 +274,15 @@
       {
        "pos": 4,
        "team": "River Plate",
-       "p": 15,
-       "w": 7,
+       "p": 16,
+       "w": 8,
        "d": 2,
        "l": 6,
-       "gf": 19,
+       "gf": 21,
        "ga": 14,
-       "pts": 23,
+       "pts": 26,
        "tid": 435,
-       "form": "WDWWL"
+       "form": "DWWLW"
       },
       {
        "pos": 5,
@@ -404,15 +404,15 @@
       {
        "pos": 14,
        "team": "Aldosivi",
-       "p": 15,
+       "p": 16,
        "w": 3,
        "d": 2,
-       "l": 10,
+       "l": 11,
        "gf": 16,
-       "ga": 24,
+       "ga": 26,
        "pts": 11,
        "tid": 463,
-       "form": "LLLWL"
+       "form": "LLWLL"
       },
       {
        "pos": 15,
@@ -430,7 +430,7 @@
      ]
     }
    ],
-   "updated": "2026-11-03T00:00:00.000Z"
+   "updated": "2026-11-05T00:00:00.000Z"
   },
   {
    "id": "primera-nacional",
@@ -464,7 +464,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-02T00:00:00.000Z",
+     "updated": "2026-11-04T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -704,7 +704,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-02T00:00:00.000Z",
+     "updated": "2026-11-04T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -943,7 +943,7 @@
      ]
     }
    ],
-   "updated": "2026-11-02T00:00:00.000Z"
+   "updated": "2026-11-04T00:00:00.000Z"
   },
   {
    "id": "primera-b-metropolitana",
@@ -1263,7 +1263,7 @@
      "form": "LDDLL"
     }
    ],
-   "updated": "2026-11-02T00:00:00.000Z"
+   "updated": "2026-11-04T00:00:00.000Z"
   },
   {
    "id": "primera-c",
@@ -1296,7 +1296,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-11-02T00:00:00.000Z",
+     "updated": "2026-11-04T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1484,7 +1484,7 @@
     },
     {
      "name": "Group B",
-     "updated": "2026-11-02T00:00:00.000Z",
+     "updated": "2026-11-04T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1671,7 +1671,7 @@
      ]
     }
    ],
-   "updated": "2026-11-02T00:00:00.000Z"
+   "updated": "2026-11-04T00:00:00.000Z"
   }
  ]
 }
