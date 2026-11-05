@@ -539,6 +539,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Benfica",
+     "p": 4,
+     "w": 4,
+     "d": 0,
+     "l": 0,
+     "gf": 13,
+     "ga": 3,
+     "pts": 12,
+     "tid": 211,
+     "form": "WWWW"
+    },
+    {
+     "pos": 2,
      "team": "AFC Bournemouth",
      "p": 4,
      "w": 4,
@@ -551,7 +564,7 @@
      "form": "WWWW"
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "Ferencváros",
      "p": 4,
      "w": 4,
@@ -564,7 +577,33 @@
      "form": "WWWW"
     },
     {
-     "pos": 3,
+     "pos": 4,
+     "team": "Union Saint-Gilloise",
+     "p": 4,
+     "w": 3,
+     "d": 1,
+     "l": 0,
+     "gf": 10,
+     "ga": 2,
+     "pts": 10,
+     "tid": 1393,
+     "form": "WDWW"
+    },
+    {
+     "pos": 5,
+     "team": "Juventus",
+     "p": 4,
+     "w": 3,
+     "d": 1,
+     "l": 0,
+     "gf": 11,
+     "ga": 4,
+     "pts": 10,
+     "tid": 496,
+     "form": "WWDW"
+    },
+    {
+     "pos": 6,
      "team": "Olympiacos",
      "p": 4,
      "w": 3,
@@ -577,82 +616,43 @@
      "form": "WWWD"
     },
     {
-     "pos": 4,
-     "team": "Benfica",
-     "p": 3,
-     "w": 3,
-     "d": 0,
-     "l": 0,
-     "gf": 10,
-     "ga": 2,
-     "pts": 9,
-     "tid": 211,
-     "form": "WWW"
-    },
-    {
-     "pos": 5,
+     "pos": 7,
      "team": "Bayer Leverkusen",
-     "p": 3,
+     "p": 4,
      "w": 3,
      "d": 0,
-     "l": 0,
-     "gf": 8,
-     "ga": 0,
-     "pts": 9,
-     "tid": 168,
-     "form": "WWW"
-    },
-    {
-     "pos": 6,
-     "team": "Union Saint-Gilloise",
-     "p": 3,
-     "w": 2,
-     "d": 1,
-     "l": 0,
+     "l": 1,
      "gf": 8,
      "ga": 1,
-     "pts": 7,
-     "tid": 1393,
-     "form": "WDW"
-    },
-    {
-     "pos": 7,
-     "team": "Juventus",
-     "p": 3,
-     "w": 2,
-     "d": 1,
-     "l": 0,
-     "gf": 9,
-     "ga": 3,
-     "pts": 7,
-     "tid": 496,
-     "form": "WWD"
+     "pts": 9,
+     "tid": 168,
+     "form": "WWWL"
     },
     {
      "pos": 8,
      "team": "Beşiktaş",
-     "p": 3,
+     "p": 4,
      "w": 2,
      "d": 1,
-     "l": 0,
-     "gf": 9,
-     "ga": 5,
+     "l": 1,
+     "gf": 11,
+     "ga": 8,
      "pts": 7,
      "tid": 549,
-     "form": "WWD"
+     "form": "WWDL"
     },
     {
      "pos": 9,
-     "team": "Sunderland",
-     "p": 3,
+     "team": "Dinamo Zagreb",
+     "p": 4,
      "w": 2,
      "d": 1,
-     "l": 0,
-     "gf": 4,
-     "ga": 2,
+     "l": 1,
+     "gf": 5,
+     "ga": 4,
      "pts": 7,
-     "tid": 746,
-     "form": "WWD"
+     "tid": 620,
+     "form": "DWLW"
     },
     {
      "pos": 10,
@@ -669,6 +669,19 @@
     },
     {
      "pos": 11,
+     "team": "Sunderland",
+     "p": 4,
+     "w": 2,
+     "d": 1,
+     "l": 1,
+     "gf": 4,
+     "ga": 4,
+     "pts": 7,
+     "tid": 746,
+     "form": "WWDL"
+    },
+    {
+     "pos": 12,
      "team": "NEC Nijmegen",
      "p": 4,
      "w": 2,
@@ -681,7 +694,7 @@
      "form": "LDWW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Lyon",
      "p": 4,
      "w": 2,
@@ -694,20 +707,20 @@
      "form": "WWLD"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "AZ Alkmaar",
-     "p": 3,
+     "p": 4,
      "w": 2,
      "d": 0,
-     "l": 1,
-     "gf": 6,
-     "ga": 2,
+     "l": 2,
+     "gf": 7,
+     "ga": 4,
      "pts": 6,
      "tid": 201,
-     "form": "LWW"
+     "form": "LWWL"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Anderlecht",
      "p": 4,
      "w": 2,
@@ -720,7 +733,20 @@
      "form": "LLWW"
     },
     {
-     "pos": 15,
+     "pos": 16,
+     "team": "OFI Crete",
+     "p": 4,
+     "w": 2,
+     "d": 0,
+     "l": 2,
+     "gf": 5,
+     "ga": 4,
+     "pts": 6,
+     "tid": 1124,
+     "form": "WLLW"
+    },
+    {
+     "pos": 17,
      "team": "Rennes",
      "p": 4,
      "w": 1,
@@ -733,7 +759,7 @@
      "form": "DWDD"
     },
     {
-     "pos": 16,
+     "pos": 18,
      "team": "Omonia Nicosia",
      "p": 4,
      "w": 2,
@@ -746,7 +772,20 @@
      "form": "WWLL"
     },
     {
-     "pos": 17,
+     "pos": 19,
+     "team": "Torreense",
+     "p": 4,
+     "w": 2,
+     "d": 0,
+     "l": 2,
+     "gf": 7,
+     "ga": 9,
+     "pts": 6,
+     "tid": 4799,
+     "form": "WLLW"
+    },
+    {
+     "pos": 20,
      "team": "Real Sociedad",
      "p": 4,
      "w": 1,
@@ -759,7 +798,7 @@
      "form": "LDWD"
     },
     {
-     "pos": 18,
+     "pos": 21,
      "team": "Crystal Palace",
      "p": 4,
      "w": 1,
@@ -772,7 +811,7 @@
      "form": "WLDD"
     },
     {
-     "pos": 19,
+     "pos": 22,
      "team": "Sparta Prague",
      "p": 4,
      "w": 1,
@@ -785,7 +824,7 @@
      "form": "WDLL"
     },
     {
-     "pos": 20,
+     "pos": 23,
      "team": "TSG Hoffenheim",
      "p": 4,
      "w": 1,
@@ -798,33 +837,33 @@
      "form": "LLWD"
     },
     {
-     "pos": 21,
-     "team": "Dinamo Zagreb",
-     "p": 3,
-     "w": 1,
-     "d": 1,
-     "l": 1,
-     "gf": 3,
-     "ga": 4,
-     "pts": 4,
-     "tid": 620,
-     "form": "DWL"
-    },
-    {
-     "pos": 22,
+     "pos": 24,
      "team": "Sturm Graz",
-     "p": 3,
+     "p": 4,
      "w": 1,
      "d": 1,
-     "l": 1,
-     "gf": 1,
-     "ga": 3,
+     "l": 2,
+     "gf": 3,
+     "ga": 6,
      "pts": 4,
      "tid": 637,
-     "form": "DLW"
+     "form": "DLWL"
     },
     {
-     "pos": 23,
+     "pos": 25,
+     "team": "Celje",
+     "p": 4,
+     "w": 1,
+     "d": 1,
+     "l": 2,
+     "gf": 5,
+     "ga": 9,
+     "pts": 4,
+     "tid": 4360,
+     "form": "LLDW"
+    },
+    {
+     "pos": 26,
      "team": "Red Bull Salzburg",
      "p": 4,
      "w": 1,
@@ -837,33 +876,20 @@
      "form": "WLDL"
     },
     {
-     "pos": 24,
+     "pos": 27,
      "team": "Celta Vigo",
-     "p": 3,
+     "p": 4,
      "w": 1,
      "d": 0,
-     "l": 2,
-     "gf": 3,
-     "ga": 4,
+     "l": 3,
+     "gf": 4,
+     "ga": 6,
      "pts": 3,
      "tid": 538,
-     "form": "LLW"
+     "form": "LLWL"
     },
     {
-     "pos": 25,
-     "team": "OFI Crete",
-     "p": 3,
-     "w": 1,
-     "d": 0,
-     "l": 2,
-     "gf": 3,
-     "ga": 4,
-     "pts": 3,
-     "tid": 1124,
-     "form": "WLL"
-    },
-    {
-     "pos": 26,
+     "pos": 28,
      "team": "AC Milan",
      "p": 4,
      "w": 1,
@@ -876,20 +902,7 @@
      "form": "LWLL"
     },
     {
-     "pos": 27,
-     "team": "Torreense",
-     "p": 3,
-     "w": 1,
-     "d": 0,
-     "l": 2,
-     "gf": 4,
-     "ga": 7,
-     "pts": 3,
-     "tid": 4799,
-     "form": "WLL"
-    },
-    {
-     "pos": 28,
+     "pos": 29,
      "team": "Jagiellonia Białystok",
      "p": 4,
      "w": 1,
@@ -902,7 +915,7 @@
      "form": "LWLL"
     },
     {
-     "pos": 29,
+     "pos": 30,
      "team": "Viktoria Plzeň",
      "p": 4,
      "w": 1,
@@ -915,33 +928,46 @@
      "form": "LLLW"
     },
     {
-     "pos": 30,
-     "team": "Celje",
-     "p": 3,
-     "w": 0,
-     "d": 1,
-     "l": 2,
-     "gf": 2,
-     "ga": 7,
-     "pts": 1,
-     "tid": 4360,
-     "form": "LLD"
-    },
-    {
      "pos": 31,
-     "team": "Hapoel Beer Sheva",
-     "p": 3,
-     "w": 0,
-     "d": 1,
-     "l": 2,
-     "gf": 1,
+     "team": "Marseille",
+     "p": 4,
+     "w": 1,
+     "d": 0,
+     "l": 3,
+     "gf": 2,
      "ga": 6,
-     "pts": 1,
-     "tid": 563,
-     "form": "DLL"
+     "pts": 3,
+     "tid": 81,
+     "form": "LLLW"
     },
     {
      "pos": 32,
+     "team": "Celtic",
+     "p": 4,
+     "w": 1,
+     "d": 0,
+     "l": 3,
+     "gf": 6,
+     "ga": 11,
+     "pts": 3,
+     "tid": 247,
+     "form": "LLLW"
+    },
+    {
+     "pos": 33,
+     "team": "Hapoel Beer Sheva",
+     "p": 4,
+     "w": 0,
+     "d": 1,
+     "l": 3,
+     "gf": 1,
+     "ga": 8,
+     "pts": 1,
+     "tid": 563,
+     "form": "DLLL"
+    },
+    {
+     "pos": 34,
      "team": "Lillestrøm",
      "p": 4,
      "w": 0,
@@ -954,56 +980,30 @@
      "form": "LDLL"
     },
     {
-     "pos": 33,
+     "pos": 35,
      "team": "Lech Poznań",
-     "p": 3,
+     "p": 4,
      "w": 0,
      "d": 1,
-     "l": 2,
-     "gf": 1,
-     "ga": 9,
+     "l": 3,
+     "gf": 2,
+     "ga": 12,
      "pts": 1,
      "tid": 347,
-     "form": "LLD"
-    },
-    {
-     "pos": 34,
-     "team": "Marseille",
-     "p": 3,
-     "w": 0,
-     "d": 0,
-     "l": 3,
-     "gf": 1,
-     "ga": 6,
-     "pts": 0,
-     "tid": 81,
-     "form": "LLL"
-    },
-    {
-     "pos": 35,
-     "team": "Celtic",
-     "p": 3,
-     "w": 0,
-     "d": 0,
-     "l": 3,
-     "gf": 3,
-     "ga": 9,
-     "pts": 0,
-     "tid": 247,
-     "form": "LLL"
+     "form": "LLDL"
     },
     {
      "pos": 36,
      "team": "Ararat-Armenia",
-     "p": 3,
+     "p": 4,
      "w": 0,
      "d": 0,
-     "l": 3,
-     "gf": 2,
-     "ga": 11,
+     "l": 4,
+     "gf": 4,
+     "ga": 14,
      "pts": 0,
      "tid": 3683,
-     "form": "LLL"
+     "form": "LLLL"
     }
    ],
    "updated": "2026-11-05T00:00:00.000Z"
@@ -1040,6 +1040,110 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Lugano",
+     "p": 3,
+     "w": 3,
+     "d": 0,
+     "l": 0,
+     "gf": 11,
+     "ga": 4,
+     "pts": 9,
+     "tid": 606,
+     "form": "WWW"
+    },
+    {
+     "pos": 2,
+     "team": "Panathinaikos",
+     "p": 3,
+     "w": 3,
+     "d": 0,
+     "l": 0,
+     "gf": 9,
+     "ga": 3,
+     "pts": 9,
+     "tid": 617,
+     "form": "WWW"
+    },
+    {
+     "pos": 3,
+     "team": "Twente",
+     "p": 3,
+     "w": 3,
+     "d": 0,
+     "l": 0,
+     "gf": 8,
+     "ga": 2,
+     "pts": 9,
+     "tid": 415,
+     "form": "WWW"
+    },
+    {
+     "pos": 4,
+     "team": "Monaco",
+     "p": 3,
+     "w": 3,
+     "d": 0,
+     "l": 0,
+     "gf": 7,
+     "ga": 1,
+     "pts": 9,
+     "tid": 91,
+     "form": "WWW"
+    },
+    {
+     "pos": 5,
+     "team": "Brighton & Hove Albion",
+     "p": 3,
+     "w": 2,
+     "d": 1,
+     "l": 0,
+     "gf": 5,
+     "ga": 0,
+     "pts": 7,
+     "tid": 51,
+     "form": "WDW"
+    },
+    {
+     "pos": 6,
+     "team": "Brann",
+     "p": 3,
+     "w": 2,
+     "d": 1,
+     "l": 0,
+     "gf": 7,
+     "ga": 3,
+     "pts": 7,
+     "tid": 319,
+     "form": "WWD"
+    },
+    {
+     "pos": 7,
+     "team": "FC Copenhagen",
+     "p": 3,
+     "w": 2,
+     "d": 1,
+     "l": 0,
+     "gf": 7,
+     "ga": 3,
+     "pts": 7,
+     "tid": 400,
+     "form": "WDW"
+    },
+    {
+     "pos": 8,
+     "team": "Universitatea Craiova",
+     "p": 3,
+     "w": 2,
+     "d": 1,
+     "l": 0,
+     "gf": 6,
+     "ga": 2,
+     "pts": 7,
+     "tid": 632,
+     "form": "DWW"
+    },
+    {
+     "pos": 9,
      "team": "Mjällby",
      "p": 3,
      "w": 2,
@@ -1052,7 +1156,20 @@
      "form": "WDW"
     },
     {
-     "pos": 2,
+     "pos": 10,
+     "team": "Sint-Truiden",
+     "p": 3,
+     "w": 2,
+     "d": 1,
+     "l": 0,
+     "gf": 4,
+     "ga": 1,
+     "pts": 7,
+     "tid": 735,
+     "form": "WWD"
+    },
+    {
+     "pos": 11,
      "team": "Ajax",
      "p": 3,
      "w": 2,
@@ -1065,72 +1182,7 @@
      "form": "LWW"
     },
     {
-     "pos": 3,
-     "team": "Panathinaikos",
-     "p": 2,
-     "w": 2,
-     "d": 0,
-     "l": 0,
-     "gf": 7,
-     "ga": 2,
-     "pts": 6,
-     "tid": 617,
-     "form": "WW"
-    },
-    {
-     "pos": 4,
-     "team": "Lugano",
-     "p": 2,
-     "w": 2,
-     "d": 0,
-     "l": 0,
-     "gf": 8,
-     "ga": 4,
-     "pts": 6,
-     "tid": 606,
-     "form": "WW"
-    },
-    {
-     "pos": 5,
-     "team": "Brann",
-     "p": 2,
-     "w": 2,
-     "d": 0,
-     "l": 0,
-     "gf": 6,
-     "ga": 2,
-     "pts": 6,
-     "tid": 319,
-     "form": "WW"
-    },
-    {
-     "pos": 6,
-     "team": "Twente",
-     "p": 2,
-     "w": 2,
-     "d": 0,
-     "l": 0,
-     "gf": 5,
-     "ga": 1,
-     "pts": 6,
-     "tid": 415,
-     "form": "WW"
-    },
-    {
-     "pos": 7,
-     "team": "Monaco",
-     "p": 2,
-     "w": 2,
-     "d": 0,
-     "l": 0,
-     "gf": 5,
-     "ga": 1,
-     "pts": 6,
-     "tid": 91,
-     "form": "WW"
-    },
-    {
-     "pos": 8,
+     "pos": 12,
      "team": "Trabzonspor",
      "p": 3,
      "w": 2,
@@ -1143,20 +1195,7 @@
      "form": "WWL"
     },
     {
-     "pos": 9,
-     "team": "Sint-Truiden",
-     "p": 2,
-     "w": 2,
-     "d": 0,
-     "l": 0,
-     "gf": 3,
-     "ga": 0,
-     "pts": 6,
-     "tid": 735,
-     "form": "WW"
-    },
-    {
-     "pos": 10,
+     "pos": 13,
      "team": "Hajduk Split",
      "p": 3,
      "w": 2,
@@ -1169,7 +1208,7 @@
      "form": "WWL"
     },
     {
-     "pos": 11,
+     "pos": 14,
      "team": "SC Freiburg",
      "p": 3,
      "w": 2,
@@ -1180,45 +1219,6 @@
      "pts": 6,
      "tid": 160,
      "form": "WLW"
-    },
-    {
-     "pos": 12,
-     "team": "Brighton & Hove Albion",
-     "p": 2,
-     "w": 1,
-     "d": 1,
-     "l": 0,
-     "gf": 4,
-     "ga": 0,
-     "pts": 4,
-     "tid": 51,
-     "form": "WD"
-    },
-    {
-     "pos": 13,
-     "team": "FC Copenhagen",
-     "p": 2,
-     "w": 1,
-     "d": 1,
-     "l": 0,
-     "gf": 5,
-     "ga": 2,
-     "pts": 4,
-     "tid": 400,
-     "form": "WD"
-    },
-    {
-     "pos": 14,
-     "team": "Universitatea Craiova",
-     "p": 2,
-     "w": 1,
-     "d": 1,
-     "l": 0,
-     "gf": 4,
-     "ga": 2,
-     "pts": 4,
-     "tid": 632,
-     "form": "DW"
     },
     {
      "pos": 15,
@@ -1274,6 +1274,19 @@
     },
     {
      "pos": 19,
+     "team": "Riga FC",
+     "p": 3,
+     "w": 0,
+     "d": 3,
+     "l": 0,
+     "gf": 3,
+     "ga": 3,
+     "pts": 3,
+     "tid": 10124,
+     "form": "DDD"
+    },
+    {
+     "pos": 20,
      "team": "Thun",
      "p": 3,
      "w": 1,
@@ -1286,7 +1299,7 @@
      "form": "LLW"
     },
     {
-     "pos": 20,
+     "pos": 21,
      "team": "Borac Banja Luka",
      "p": 3,
      "w": 1,
@@ -1299,7 +1312,7 @@
      "form": "LWL"
     },
     {
-     "pos": 21,
+     "pos": 22,
      "team": "Lincoln Red Imps",
      "p": 3,
      "w": 1,
@@ -1312,46 +1325,20 @@
      "form": "LLW"
     },
     {
-     "pos": 22,
-     "team": "Nordsjælland",
-     "p": 2,
-     "w": 0,
-     "d": 2,
-     "l": 0,
-     "gf": 3,
-     "ga": 3,
-     "pts": 2,
-     "tid": 398,
-     "form": "DD"
-    },
-    {
      "pos": 23,
-     "team": "Egnatia Rrogozhinë",
-     "p": 2,
+     "team": "Jablonec",
+     "p": 3,
      "w": 0,
      "d": 2,
-     "l": 0,
-     "gf": 2,
-     "ga": 2,
+     "l": 1,
+     "gf": 3,
+     "ga": 4,
      "pts": 2,
-     "tid": 3327,
-     "form": "DD"
+     "tid": 1122,
+     "form": "LDD"
     },
     {
      "pos": 24,
-     "team": "Riga FC",
-     "p": 2,
-     "w": 0,
-     "d": 2,
-     "l": 0,
-     "gf": 2,
-     "ga": 2,
-     "pts": 2,
-     "tid": 10124,
-     "form": "DD"
-    },
-    {
-     "pos": 25,
      "team": "AGF",
      "p": 3,
      "w": 0,
@@ -1364,7 +1351,33 @@
      "form": "LDD"
     },
     {
+     "pos": 25,
+     "team": "Nordsjælland",
+     "p": 3,
+     "w": 0,
+     "d": 2,
+     "l": 1,
+     "gf": 3,
+     "ga": 5,
+     "pts": 2,
+     "tid": 398,
+     "form": "DDL"
+    },
+    {
      "pos": 26,
+     "team": "Egnatia Rrogozhinë",
+     "p": 3,
+     "w": 0,
+     "d": 2,
+     "l": 1,
+     "gf": 2,
+     "ga": 4,
+     "pts": 2,
+     "tid": 3327,
+     "form": "DDL"
+    },
+    {
+     "pos": 27,
      "team": "Kairat Almaty",
      "p": 3,
      "w": 0,
@@ -1377,69 +1390,56 @@
      "form": "DLD"
     },
     {
-     "pos": 27,
+     "pos": 28,
      "team": "CSKA Sofia",
-     "p": 2,
+     "p": 3,
      "w": 0,
      "d": 1,
-     "l": 1,
-     "gf": 3,
-     "ga": 4,
+     "l": 2,
+     "gf": 4,
+     "ga": 6,
      "pts": 1,
      "tid": 853,
-     "form": "LD"
-    },
-    {
-     "pos": 28,
-     "team": "Jablonec",
-     "p": 2,
-     "w": 0,
-     "d": 1,
-     "l": 1,
-     "gf": 2,
-     "ga": 3,
-     "pts": 1,
-     "tid": 1122,
-     "form": "LD"
+     "form": "LDL"
     },
     {
      "pos": 29,
-     "team": "Pafos",
-     "p": 2,
+     "team": "FC Iberia 1999",
+     "p": 3,
      "w": 0,
      "d": 1,
-     "l": 1,
+     "l": 2,
      "gf": 2,
-     "ga": 4,
+     "ga": 5,
      "pts": 1,
-     "tid": 3403,
-     "form": "LD"
+     "tid": 3502,
+     "form": "LDL"
     },
     {
      "pos": 30,
-     "team": "FC Iberia 1999",
-     "p": 2,
+     "team": "Pafos",
+     "p": 3,
      "w": 0,
      "d": 1,
-     "l": 1,
-     "gf": 1,
-     "ga": 3,
+     "l": 2,
+     "gf": 3,
+     "ga": 7,
      "pts": 1,
-     "tid": 3502,
-     "form": "LD"
+     "tid": 3403,
+     "form": "LDL"
     },
     {
      "pos": 31,
      "team": "Getafe",
-     "p": 2,
+     "p": 3,
      "w": 0,
      "d": 1,
-     "l": 1,
+     "l": 2,
      "gf": 3,
-     "ga": 6,
+     "ga": 7,
      "pts": 1,
      "tid": 546,
-     "form": "DL"
+     "form": "DLL"
     },
     {
      "pos": 32,
@@ -1496,15 +1496,15 @@
     {
      "pos": 36,
      "team": "Kauno Žalgiris",
-     "p": 2,
+     "p": 3,
      "w": 0,
      "d": 0,
-     "l": 2,
+     "l": 3,
      "gf": 1,
-     "ga": 8,
+     "ga": 11,
      "pts": 0,
      "tid": 3872,
-     "form": "LL"
+     "form": "LLL"
     }
    ],
    "updated": "2026-11-05T00:00:00.000Z"
