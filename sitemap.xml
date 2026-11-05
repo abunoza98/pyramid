@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://footballpyramids.com/</loc><lastmod>2026-11-04</lastmod><changefreq>hourly</changefreq></url>
+  <url><loc>https://footballpyramids.com/</loc><lastmod>2026-11-05</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/england/</loc><lastmod>2026-11-04</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/</loc><lastmod>2026-11-02</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/</loc><lastmod>2026-11-01</lastmod><changefreq>hourly</changefreq></url>
@@ -15,7 +15,7 @@
   <url><loc>https://footballpyramids.com/switzerland/</loc><lastmod>2026-11-04</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/</loc><lastmod>2026-11-01</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/greece/</loc><lastmod>2026-11-02</lastmod><changefreq>hourly</changefreq></url>
-  <url><loc>https://footballpyramids.com/brazil/</loc><lastmod>2026-11-04</lastmod><changefreq>hourly</changefreq></url>
+  <url><loc>https://footballpyramids.com/brazil/</loc><lastmod>2026-11-05</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/argentina/</loc><lastmod>2026-11-03</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/china/</loc><lastmod>2026-10-31</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/australia/</loc><lastmod>2026-11-01</lastmod><changefreq>hourly</changefreq></url>
@@ -1039,9 +1039,9 @@
   <url><loc>https://footballpyramids.com/brazil/club/santos/</loc><lastmod>2026-11-05</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/brazil/club/sao-paulo/</loc><lastmod>2026-11-05</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/brazil/club/coritiba/</loc><lastmod>2026-11-05</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/brazil/club/vasco-da-gama/</loc><lastmod>2026-11-05</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/brazil/club/mirassol/</loc><lastmod>2026-11-05</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/brazil/club/botafogo/</loc><lastmod>2026-11-05</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/brazil/club/vasco-da-gama/</loc><lastmod>2026-11-05</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/brazil/club/vitoria/</loc><lastmod>2026-11-05</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/brazil/club/internacional/</loc><lastmod>2026-11-05</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/brazil/club/gremio/</loc><lastmod>2026-11-05</lastmod><changefreq>daily</changefreq></url>
@@ -1722,7 +1722,7 @@
   <url><loc>https://footballpyramids.com/switzerland/races/</loc><lastmod>2026-11-04</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/austria/races/</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/greece/races/</loc><lastmod>2026-11-02</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/brazil/races/</loc><lastmod>2026-11-04</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/brazil/races/</loc><lastmod>2026-11-05</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/argentina/races/</loc><lastmod>2026-11-03</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/china/races/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/australia/races/</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq></url>

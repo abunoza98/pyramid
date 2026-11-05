@@ -4,7 +4,7 @@
  "adjective": "Brazilian",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-04T00:00:00.000Z",
+ "updated": "2026-11-05T00:00:00.000Z",
  "belowNote": "Clubs qualify for Série D through their state championships",
  "leagues": [
   {
@@ -44,15 +44,15 @@
     {
      "pos": 1,
      "team": "Flamengo",
-     "p": 33,
-     "w": 22,
+     "p": 34,
+     "w": 23,
      "d": 7,
      "l": 4,
-     "gf": 68,
-     "ga": 28,
-     "pts": 73,
+     "gf": 71,
+     "ga": 29,
+     "pts": 76,
      "tid": 127,
-     "form": "DWWWW"
+     "form": "WWWWW"
     },
     {
      "pos": 2,
@@ -96,15 +96,15 @@
     {
      "pos": 5,
      "team": "Athletico Paranaense",
-     "p": 33,
+     "p": 34,
      "w": 15,
      "d": 9,
-     "l": 9,
-     "gf": 50,
-     "ga": 40,
+     "l": 10,
+     "gf": 51,
+     "ga": 43,
      "pts": 54,
      "tid": 134,
-     "form": "DWLDL"
+     "form": "WLDLL"
     },
     {
      "pos": 6,
@@ -186,6 +186,19 @@
     },
     {
      "pos": 12,
+     "team": "Vasco da Gama",
+     "p": 33,
+     "w": 11,
+     "d": 8,
+     "l": 14,
+     "gf": 43,
+     "ga": 50,
+     "pts": 41,
+     "tid": 133,
+     "form": "DLWLW"
+    },
+    {
+     "pos": 13,
      "team": "Mirassol",
      "p": 34,
      "w": 10,
@@ -198,7 +211,7 @@
      "form": "LWDLW"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Botafogo",
      "p": 33,
      "w": 10,
@@ -209,19 +222,6 @@
      "pts": 39,
      "tid": 120,
      "form": "LDWLL"
-    },
-    {
-     "pos": 14,
-     "team": "Vasco da Gama",
-     "p": 32,
-     "w": 10,
-     "d": 8,
-     "l": 14,
-     "gf": 40,
-     "ga": 49,
-     "pts": 38,
-     "tid": 133,
-     "form": "WDLWL"
     },
     {
      "pos": 15,
@@ -252,15 +252,15 @@
     {
      "pos": 17,
      "team": "Grêmio",
-     "p": 33,
+     "p": 34,
      "w": 9,
      "d": 10,
-     "l": 14,
-     "gf": 37,
-     "ga": 44,
+     "l": 15,
+     "gf": 38,
+     "ga": 47,
      "pts": 37,
      "tid": 130,
-     "form": "DDLWW"
+     "form": "DLWWL"
     },
     {
      "pos": 18,
@@ -302,7 +302,7 @@
      "form": "LLWLL"
     }
    ],
-   "updated": "2026-11-03T00:00:00.000Z"
+   "updated": "2026-11-04T00:00:00.000Z"
   },
   {
    "id": "serie-b",
@@ -594,7 +594,7 @@
      "form": "LLDDL"
     }
    ],
-   "updated": "2026-11-04T00:00:00.000Z"
+   "updated": "2026-11-05T00:00:00.000Z"
   },
   {
    "id": "serie-c",
