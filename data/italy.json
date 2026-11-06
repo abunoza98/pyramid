@@ -277,29 +277,29 @@
     },
     {
      "pos": 19,
-     "team": "Udinese",
-     "p": 10,
-     "w": 1,
-     "d": 2,
-     "l": 7,
-     "gf": 11,
-     "ga": 23,
-     "pts": 5,
-     "tid": 494,
-     "form": "LLLDL"
+     "team": "Venezia",
+     "p": 11,
+     "w": 2,
+     "d": 0,
+     "l": 9,
+     "gf": 8,
+     "ga": 21,
+     "pts": 6,
+     "tid": 517,
+     "form": "WLLLW"
     },
     {
      "pos": 20,
-     "team": "Venezia",
-     "p": 10,
+     "team": "Udinese",
+     "p": 11,
      "w": 1,
-     "d": 0,
-     "l": 9,
-     "gf": 6,
-     "ga": 20,
-     "pts": 3,
-     "tid": 517,
-     "form": "LWLLL"
+     "d": 2,
+     "l": 8,
+     "gf": 12,
+     "ga": 25,
+     "pts": 5,
+     "tid": 494,
+     "form": "LLDLL"
     }
    ],
    "updated": "2026-11-06T00:00:00.000Z"

@@ -109,15 +109,15 @@
     {
      "pos": 6,
      "team": "Sevilla",
-     "p": 11,
+     "p": 12,
      "w": 5,
-     "d": 2,
+     "d": 3,
      "l": 4,
      "gf": 17,
      "ga": 19,
-     "pts": 17,
+     "pts": 18,
      "tid": 536,
-     "form": "LDLWL"
+     "form": "DLWLD"
     },
     {
      "pos": 7,
@@ -147,6 +147,19 @@
     },
     {
      "pos": 9,
+     "team": "Alavés",
+     "p": 12,
+     "w": 3,
+     "d": 4,
+     "l": 5,
+     "gf": 15,
+     "ga": 17,
+     "pts": 13,
+     "tid": 542,
+     "form": "LLDLD"
+    },
+    {
+     "pos": 10,
      "team": "Villarreal",
      "p": 11,
      "w": 3,
@@ -159,7 +172,7 @@
      "form": "WLDWL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Celta Vigo",
      "p": 11,
      "w": 2,
@@ -170,19 +183,6 @@
      "pts": 12,
      "tid": 538,
      "form": "WDWDL"
-    },
-    {
-     "pos": 11,
-     "team": "Alavés",
-     "p": 11,
-     "w": 3,
-     "d": 3,
-     "l": 5,
-     "gf": 15,
-     "ga": 17,
-     "pts": 12,
-     "tid": 542,
-     "form": "DLLDL"
     },
     {
      "pos": 12,
@@ -686,6 +686,19 @@
       },
       {
        "pos": 3,
+       "team": "Avilés",
+       "p": 11,
+       "w": 5,
+       "d": 2,
+       "l": 4,
+       "gf": 23,
+       "ga": 15,
+       "pts": 17,
+       "tid": 9632,
+       "form": "WWLWW"
+      },
+      {
+       "pos": 4,
        "team": "Mirandés",
        "p": 10,
        "w": 5,
@@ -698,7 +711,7 @@
        "form": "LDLWW"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Racing Ferrol",
        "p": 10,
        "w": 5,
@@ -711,20 +724,20 @@
        "form": "WWWLD"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "Extremadura",
-       "p": 10,
+       "p": 11,
        "w": 5,
        "d": 1,
-       "l": 4,
-       "gf": 19,
-       "ga": 10,
+       "l": 5,
+       "gf": 21,
+       "ga": 15,
        "pts": 16,
        "tid": 24612,
-       "form": "WWDWW"
+       "form": "WDWWL"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Bilbao Athletic",
        "p": 10,
        "w": 4,
@@ -737,7 +750,7 @@
        "form": "LDLLW"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Pontevedra",
        "p": 10,
        "w": 4,
@@ -750,7 +763,7 @@
        "form": "LLWWD"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Cacereño",
        "p": 11,
        "w": 4,
@@ -761,19 +774,6 @@
        "pts": 15,
        "tid": 9384,
        "form": "DLWLL"
-      },
-      {
-       "pos": 9,
-       "team": "Avilés",
-       "p": 10,
-       "w": 4,
-       "d": 2,
-       "l": 4,
-       "gf": 18,
-       "ga": 13,
-       "pts": 14,
-       "tid": 9632,
-       "form": "LWWLW"
       },
       {
        "pos": 10,

@@ -172,6 +172,19 @@
     },
     {
      "pos": 10,
+     "team": "Toulouse",
+     "p": 10,
+     "w": 3,
+     "d": 4,
+     "l": 3,
+     "gf": 15,
+     "ga": 14,
+     "pts": 13,
+     "tid": 96,
+     "form": "DWDLW"
+    },
+    {
+     "pos": 11,
      "team": "Brest",
      "p": 9,
      "w": 3,
@@ -184,7 +197,7 @@
      "form": "LWDLW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Lorient",
      "p": 9,
      "w": 3,
@@ -197,30 +210,17 @@
      "form": "LWWDL"
     },
     {
-     "pos": 12,
-     "team": "Toulouse",
-     "p": 9,
-     "w": 2,
-     "d": 4,
-     "l": 3,
-     "gf": 12,
-     "ga": 13,
-     "pts": 10,
-     "tid": 96,
-     "form": "WDWDL"
-    },
-    {
      "pos": 13,
      "team": "Strasbourg",
-     "p": 9,
+     "p": 10,
      "w": 3,
      "d": 1,
-     "l": 5,
-     "gf": 17,
-     "ga": 19,
+     "l": 6,
+     "gf": 18,
+     "ga": 22,
      "pts": 10,
      "tid": 95,
-     "form": "LLLLW"
+     "form": "LLLWL"
     },
     {
      "pos": 14,

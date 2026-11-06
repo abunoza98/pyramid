@@ -140,6 +140,19 @@
     },
     {
      "pos": 8,
+     "team": "Hamburger SV",
+     "p": 9,
+     "w": 4,
+     "d": 0,
+     "l": 5,
+     "gf": 10,
+     "ga": 20,
+     "pts": 12,
+     "tid": 175,
+     "form": "WWLLW"
+    },
+    {
+     "pos": 9,
      "team": "Eintracht Frankfurt",
      "p": 8,
      "w": 3,
@@ -152,7 +165,7 @@
      "form": "DLWLW"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Mainz 05",
      "p": 8,
      "w": 3,
@@ -165,7 +178,7 @@
      "form": "WLWLL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "FC Augsburg",
      "p": 8,
      "w": 2,
@@ -178,7 +191,7 @@
      "form": "LDLDL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "VfB Stuttgart",
      "p": 8,
      "w": 3,
@@ -191,7 +204,7 @@
      "form": "LWLLW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "TSG Hoffenheim",
      "p": 8,
      "w": 3,
@@ -204,7 +217,7 @@
      "form": "LLWWL"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "1. FC Köln",
      "p": 8,
      "w": 2,
@@ -217,7 +230,7 @@
      "form": "LWLDD"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "SC Paderborn",
      "p": 8,
      "w": 2,
@@ -228,19 +241,6 @@
      "pts": 9,
      "tid": 185,
      "form": "WLDWD"
-    },
-    {
-     "pos": 15,
-     "team": "Hamburger SV",
-     "p": 8,
-     "w": 3,
-     "d": 0,
-     "l": 5,
-     "gf": 7,
-     "ga": 19,
-     "pts": 9,
-     "tid": 175,
-     "form": "WWWLL"
     },
     {
      "pos": 16,
@@ -271,15 +271,15 @@
     {
      "pos": 18,
      "team": "Borussia Mönchengladbach",
-     "p": 8,
+     "p": 9,
      "w": 1,
      "d": 1,
-     "l": 6,
-     "gf": 11,
-     "ga": 22,
+     "l": 7,
+     "gf": 12,
+     "ga": 25,
      "pts": 4,
      "tid": 163,
-     "form": "LLLWD"
+     "form": "LLWDL"
     }
    ],
    "updated": "2026-11-06T00:00:00.000Z"
