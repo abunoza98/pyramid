@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://footballpyramids.com/</loc><lastmod>2026-11-06</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/england/</loc><lastmod>2026-11-04</lastmod><changefreq>hourly</changefreq></url>
-  <url><loc>https://footballpyramids.com/spain/</loc><lastmod>2026-11-02</lastmod><changefreq>hourly</changefreq></url>
+  <url><loc>https://footballpyramids.com/spain/</loc><lastmod>2026-11-05</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/</loc><lastmod>2026-11-01</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/france/</loc><lastmod>2026-11-05</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/</loc><lastmod>2026-11-02</lastmod><changefreq>hourly</changefreq></url>
@@ -21,7 +21,7 @@
   <url><loc>https://footballpyramids.com/australia/</loc><lastmod>2026-11-01</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/indonesia/</loc><lastmod>2026-11-01</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/</loc><lastmod>2026-11-02</lastmod><changefreq>hourly</changefreq></url>
-  <url><loc>https://footballpyramids.com/mexico/</loc><lastmod>2026-11-03</lastmod><changefreq>hourly</changefreq></url>
+  <url><loc>https://footballpyramids.com/mexico/</loc><lastmod>2026-11-05</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/europe/</loc><lastmod>2026-11-05</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/europe/champions-league/</loc><lastmod>2026-11-05</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/europe/europa-league/</loc><lastmod>2026-11-06</lastmod><changefreq>hourly</changefreq></url>
@@ -229,9 +229,9 @@
   <url><loc>https://footballpyramids.com/spain/club/eldense/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/celta-fortuna/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/leganes/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/spain/club/andorra/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/real-sociedad-b/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/cadiz/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/spain/club/andorra/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/albacete/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/ceuta/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/club/lugo/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
@@ -1633,7 +1633,6 @@
   <url><loc>https://footballpyramids.com/mexico/club/atlas/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/mexico/club/toluca/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/mexico/club/tijuana/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/mexico/club/leon/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/mexico/club/santos-laguna/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/mexico/club/monterrey/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/mexico/club/pumas-unam/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
@@ -1709,7 +1708,7 @@
   <url><loc>https://footballpyramids.com/usa/us-open-cup/</loc><lastmod>2026-10-23</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/mls-cup-playoffs/</loc><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/races/</loc><lastmod>2026-11-04</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/spain/races/</loc><lastmod>2026-11-02</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/spain/races/</loc><lastmod>2026-11-05</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/races/</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/france/races/</loc><lastmod>2026-11-05</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/races/</loc><lastmod>2026-11-02</lastmod><changefreq>daily</changefreq></url>
@@ -1727,7 +1726,7 @@
   <url><loc>https://footballpyramids.com/china/races/</loc><lastmod>2026-10-31</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/australia/races/</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/indonesia/races/</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/mexico/races/</loc><lastmod>2026-11-03</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/mexico/races/</loc><lastmod>2026-11-05</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/premier-league/fixtures/</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/championship/fixtures/</loc><lastmod>2026-11-05</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/league-one/fixtures/</loc><lastmod>2026-11-04</lastmod><changefreq>daily</changefreq></url>
