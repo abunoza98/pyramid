@@ -4,7 +4,7 @@
  "adjective": "Turkish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-04T00:00:00.000Z",
+ "updated": "2026-11-06T00:00:00.000Z",
  "belowNote": "Regional amateur league champions come up",
  "leagues": [
   {
@@ -88,6 +88,19 @@
     },
     {
      "pos": 4,
+     "team": "Kasımpaşa",
+     "p": 11,
+     "w": 5,
+     "d": 5,
+     "l": 1,
+     "gf": 17,
+     "ga": 11,
+     "pts": 20,
+     "tid": 1004,
+     "form": "LWWDW"
+    },
+    {
+     "pos": 5,
      "team": "Beşiktaş",
      "p": 10,
      "w": 6,
@@ -98,19 +111,6 @@
      "pts": 19,
      "tid": 549,
      "form": "LWLWD"
-    },
-    {
-     "pos": 5,
-     "team": "Kasımpaşa",
-     "p": 10,
-     "w": 4,
-     "d": 5,
-     "l": 1,
-     "gf": 15,
-     "ga": 11,
-     "pts": 17,
-     "tid": 1004,
-     "form": "DLWWD"
     },
     {
      "pos": 6,
@@ -245,12 +245,12 @@
     {
      "pos": 16,
      "team": "Gaziantep FK",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 2,
-     "l": 6,
+     "l": 7,
      "gf": 9,
-     "ga": 17,
+     "ga": 19,
      "pts": 8,
      "tid": 3573,
      "form": "LLLLL"
@@ -282,7 +282,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-03T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "1-lig",
@@ -578,7 +578,7 @@
      "form": "LLLW"
     }
    ],
-   "updated": "2026-11-03T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "2-lig",
@@ -620,7 +620,7 @@
    "groups": [
     {
      "name": "White Group",
-     "updated": "2026-11-04T00:00:00.000Z",
+     "updated": "2026-11-05T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -863,7 +863,7 @@
     },
     {
      "name": "Red Group",
-     "updated": "2026-11-04T00:00:00.000Z",
+     "updated": "2026-11-05T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1093,7 +1093,7 @@
      ]
     }
    ],
-   "updated": "2026-11-04T00:00:00.000Z"
+   "updated": "2026-11-05T00:00:00.000Z"
   },
   {
    "id": "3-lig",

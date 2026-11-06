@@ -181,7 +181,7 @@
      "form": "WLDDL"
     }
    ],
-   "updated": "2026-11-05T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "prva-nl",
@@ -347,6 +347,19 @@
     },
     {
      "pos": 11,
+     "team": "Vukovar",
+     "p": 12,
+     "w": 4,
+     "d": 2,
+     "l": 6,
+     "gf": 20,
+     "ga": 23,
+     "pts": 14,
+     "tid": 5730,
+     "form": "WLLLW"
+    },
+    {
+     "pos": 12,
      "team": "Opatija",
      "p": 11,
      "w": 4,
@@ -359,20 +372,20 @@
      "form": "WDWWL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Karlovac 1919",
-     "p": 11,
+     "p": 12,
      "w": 4,
      "d": 2,
-     "l": 5,
-     "gf": 12,
-     "ga": 16,
+     "l": 6,
+     "gf": 13,
+     "ga": 20,
      "pts": 14,
      "tid": 15295,
-     "form": "DWWLL"
+     "form": "WWLLL"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Dubrava Zagreb",
      "p": 11,
      "w": 3,
@@ -385,7 +398,7 @@
      "form": "LLWLD"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Hrvace",
      "p": 11,
      "w": 3,
@@ -396,19 +409,6 @@
      "pts": 11,
      "tid": 6241,
      "form": "WLLDW"
-    },
-    {
-     "pos": 15,
-     "team": "Vukovar",
-     "p": 11,
-     "w": 3,
-     "d": 2,
-     "l": 6,
-     "gf": 16,
-     "ga": 22,
-     "pts": 11,
-     "tid": 5730,
-     "form": "LWLLL"
     },
     {
      "pos": 16,
