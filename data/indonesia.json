@@ -4,7 +4,7 @@
  "adjective": "Indonesian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-06T00:00:00.000Z",
  "belowNote": "Championship (second tier) clubs come up; API-Football doesn't have its tables yet",
  "leagues": [
   {
@@ -35,6 +35,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Dewa United",
+     "p": 9,
+     "w": 6,
+     "d": 2,
+     "l": 1,
+     "gf": 16,
+     "ga": 12,
+     "pts": 20,
+     "tid": 17902,
+     "form": "DWLWW"
+    },
+    {
+     "pos": 2,
      "team": "Persija",
      "p": 8,
      "w": 6,
@@ -45,19 +58,6 @@
      "pts": 18,
      "tid": 10134,
      "form": "WLWWL"
-    },
-    {
-     "pos": 2,
-     "team": "Dewa United",
-     "p": 8,
-     "w": 5,
-     "d": 2,
-     "l": 1,
-     "gf": 14,
-     "ga": 11,
-     "pts": 17,
-     "tid": 17902,
-     "form": "WDWLW"
     },
     {
      "pos": 3,
@@ -219,15 +219,15 @@
     {
      "pos": 15,
      "team": "PSIM Yogyakarta",
-     "p": 8,
+     "p": 9,
      "w": 1,
      "d": 2,
-     "l": 5,
-     "gf": 5,
-     "ga": 12,
+     "l": 6,
+     "gf": 6,
+     "ga": 14,
      "pts": 5,
      "tid": 4235,
-     "form": "LLLDW"
+     "form": "LLDWL"
     },
     {
      "pos": 16,
@@ -270,7 +270,7 @@
      "form": "LLLDD"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   }
  ]
 }

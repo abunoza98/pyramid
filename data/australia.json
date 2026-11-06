@@ -4,7 +4,7 @@
  "adjective": "Australian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-06T00:00:00.000Z",
  "belowNote": "Below the NPL, each state has its own divisions",
  "systemNote": "There's no promotion or relegation between the A-League and the state leagues. Within each state, clubs move between its NPL and its second division.",
  "leagues": [
@@ -54,6 +54,19 @@
     },
     {
      "pos": 2,
+     "team": "Sydney FC",
+     "p": 4,
+     "w": 2,
+     "d": 1,
+     "l": 1,
+     "gf": 7,
+     "ga": 4,
+     "pts": 7,
+     "tid": 943,
+     "form": "DWLW"
+    },
+    {
+     "pos": 3,
      "team": "Western Sydney Wanderers",
      "p": 3,
      "w": 1,
@@ -66,7 +79,7 @@
      "form": "DWD"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Macarthur FC",
      "p": 3,
      "w": 1,
@@ -79,7 +92,7 @@
      "form": "WDD"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Brisbane Roar",
      "p": 2,
      "w": 1,
@@ -90,19 +103,6 @@
      "pts": 4,
      "tid": 947,
      "form": "WD"
-    },
-    {
-     "pos": 5,
-     "team": "Sydney FC",
-     "p": 3,
-     "w": 1,
-     "d": 1,
-     "l": 1,
-     "gf": 3,
-     "ga": 3,
-     "pts": 4,
-     "tid": 943,
-     "form": "DWL"
     },
     {
      "pos": 6,
@@ -158,19 +158,6 @@
     },
     {
      "pos": 10,
-     "team": "Central Coast Mariners",
-     "p": 3,
-     "w": 0,
-     "d": 2,
-     "l": 1,
-     "gf": 3,
-     "ga": 5,
-     "pts": 2,
-     "tid": 941,
-     "form": "DLD"
-    },
-    {
-     "pos": 11,
      "team": "Newcastle Jets",
      "p": 3,
      "w": 0,
@@ -181,6 +168,19 @@
      "pts": 2,
      "tid": 946,
      "form": "DDL"
+    },
+    {
+     "pos": 11,
+     "team": "Central Coast Mariners",
+     "p": 4,
+     "w": 0,
+     "d": 2,
+     "l": 2,
+     "gf": 4,
+     "ga": 9,
+     "pts": 2,
+     "tid": 941,
+     "form": "DLDL"
     },
     {
      "pos": 12,
@@ -196,7 +196,7 @@
      "form": "LL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "npl",
