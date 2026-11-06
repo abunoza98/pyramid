@@ -4,7 +4,7 @@
  "adjective": "Brazilian",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-05T00:00:00.000Z",
+ "updated": "2026-11-06T00:00:00.000Z",
  "belowNote": "Clubs qualify for Série D through their state championships",
  "leagues": [
   {
@@ -57,15 +57,15 @@
     {
      "pos": 2,
      "team": "Palmeiras",
-     "p": 33,
-     "w": 20,
+     "p": 34,
+     "w": 21,
      "d": 10,
      "l": 3,
-     "gf": 56,
-     "ga": 22,
-     "pts": 70,
+     "gf": 62,
+     "ga": 23,
+     "pts": 73,
      "tid": 121,
-     "form": "WWWWD"
+     "form": "WWWDW"
     },
     {
      "pos": 3,
@@ -278,15 +278,15 @@
     {
      "pos": 19,
      "team": "Remo",
-     "p": 33,
+     "p": 34,
      "w": 6,
      "d": 11,
-     "l": 16,
-     "gf": 36,
-     "ga": 51,
+     "l": 17,
+     "gf": 37,
+     "ga": 57,
      "pts": 29,
      "tid": 1198,
-     "form": "DDDLW"
+     "form": "DDLWL"
     },
     {
      "pos": 20,
@@ -302,7 +302,7 @@
      "form": "LLWLL"
     }
    ],
-   "updated": "2026-11-04T00:00:00.000Z"
+   "updated": "2026-11-05T00:00:00.000Z"
   },
   {
    "id": "serie-b",
@@ -465,6 +465,19 @@
     },
     {
      "pos": 11,
+     "team": "Botafogo-SP",
+     "p": 37,
+     "w": 14,
+     "d": 9,
+     "l": 14,
+     "gf": 45,
+     "ga": 39,
+     "pts": 51,
+     "tid": 2618,
+     "form": "WWWDW"
+    },
+    {
+     "pos": 12,
      "team": "Operário-PR",
      "p": 36,
      "w": 14,
@@ -475,19 +488,6 @@
      "pts": 51,
      "tid": 1223,
      "form": "LLLWL"
-    },
-    {
-     "pos": 12,
-     "team": "Botafogo-SP",
-     "p": 36,
-     "w": 13,
-     "d": 9,
-     "l": 14,
-     "gf": 41,
-     "ga": 39,
-     "pts": 48,
-     "tid": 2618,
-     "form": "WWWWD"
     },
     {
      "pos": 13,
@@ -557,15 +557,15 @@
     {
      "pos": 18,
      "team": "Londrina",
-     "p": 36,
+     "p": 37,
      "w": 8,
      "d": 8,
-     "l": 20,
+     "l": 21,
      "gf": 45,
-     "ga": 54,
+     "ga": 58,
      "pts": 32,
      "tid": 148,
-     "form": "LDWLL"
+     "form": "DWLLL"
     },
     {
      "pos": 19,
@@ -594,7 +594,7 @@
      "form": "LLDDL"
     }
    ],
-   "updated": "2026-11-05T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "serie-c",

@@ -4,7 +4,7 @@
  "adjective": "Argentine",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-05T00:00:00.000Z",
+ "updated": "2026-11-06T00:00:00.000Z",
  "belowNote": "Promoted clubs from Primera D come up",
  "leagues": [
   {
@@ -29,7 +29,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-11-05T00:00:00.000Z",
+     "updated": "2026-11-06T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -230,7 +230,7 @@
     },
     {
      "name": "Group B",
-     "updated": "2026-11-05T00:00:00.000Z",
+     "updated": "2026-11-06T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -261,15 +261,15 @@
       {
        "pos": 3,
        "team": "Gimnasia La Plata",
-       "p": 15,
-       "w": 8,
+       "p": 16,
+       "w": 9,
        "d": 4,
        "l": 3,
-       "gf": 23,
-       "ga": 19,
-       "pts": 28,
+       "gf": 25,
+       "ga": 20,
+       "pts": 31,
        "tid": 434,
-       "form": "DDWWW"
+       "form": "DWWWW"
       },
       {
        "pos": 4,
@@ -287,15 +287,15 @@
       {
        "pos": 5,
        "team": "Belgrano",
-       "p": 15,
+       "p": 16,
        "w": 6,
        "d": 5,
-       "l": 4,
-       "gf": 16,
-       "ga": 13,
+       "l": 5,
+       "gf": 17,
+       "ga": 15,
        "pts": 23,
        "tid": 440,
-       "form": "WWLLD"
+       "form": "WLLDL"
       },
       {
        "pos": 6,
@@ -430,7 +430,7 @@
      ]
     }
    ],
-   "updated": "2026-11-05T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "primera-nacional",
