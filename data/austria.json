@@ -285,15 +285,15 @@
     {
      "pos": 6,
      "team": "Admira Wacker",
-     "p": 11,
+     "p": 12,
      "w": 6,
-     "d": 0,
+     "d": 1,
      "l": 5,
-     "gf": 13,
-     "ga": 11,
-     "pts": 18,
+     "gf": 15,
+     "ga": 13,
+     "pts": 19,
      "tid": 1023,
-     "form": "LWWWL"
+     "form": "WWWLD"
     },
     {
      "pos": 7,
@@ -323,6 +323,19 @@
     },
     {
      "pos": 9,
+     "team": "SKN St. Pölten",
+     "p": 12,
+     "w": 4,
+     "d": 3,
+     "l": 5,
+     "gf": 12,
+     "ga": 13,
+     "pts": 15,
+     "tid": 1027,
+     "form": "LDDWD"
+    },
+    {
+     "pos": 10,
      "team": "Schwarz-Weiß Bregenz",
      "p": 11,
      "w": 4,
@@ -335,7 +348,7 @@
      "form": "LLDDW"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Floridsdorfer AC",
      "p": 11,
      "w": 4,
@@ -346,19 +359,6 @@
      "pts": 14,
      "tid": 1395,
      "form": "WLLLD"
-    },
-    {
-     "pos": 11,
-     "team": "SKN St. Pölten",
-     "p": 11,
-     "w": 4,
-     "d": 2,
-     "l": 5,
-     "gf": 10,
-     "ga": 11,
-     "pts": 14,
-     "tid": 1027,
-     "form": "WLDDW"
     },
     {
      "pos": 12,
@@ -459,55 +459,55 @@
       },
       {
        "pos": 2,
-       "team": "Wiener SC",
-       "p": 14,
-       "w": 8,
+       "team": "Oberwart",
+       "p": 15,
+       "w": 9,
        "d": 3,
        "l": 3,
-       "gf": 33,
+       "gf": 32,
        "ga": 17,
-       "pts": 27,
-       "tid": 4965,
-       "form": "LDWWD"
+       "pts": 30,
+       "tid": 11200,
+       "form": "DDWDW"
       },
       {
        "pos": 3,
-       "team": "Oberwart",
-       "p": 14,
-       "w": 8,
-       "d": 3,
-       "l": 3,
-       "gf": 27,
-       "ga": 16,
-       "pts": 27,
-       "tid": 11200,
-       "form": "WDDWD"
-      },
-      {
-       "pos": 4,
        "team": "Krems / Rehberg",
-       "p": 14,
-       "w": 8,
+       "p": 15,
+       "w": 9,
        "d": 2,
        "l": 4,
-       "gf": 27,
+       "gf": 28,
        "ga": 19,
-       "pts": 26,
+       "pts": 29,
        "tid": 25119,
        "form": "WWWWW"
       },
       {
-       "pos": 5,
+       "pos": 4,
        "team": "Traiskirchen",
-       "p": 14,
-       "w": 7,
+       "p": 15,
+       "w": 8,
        "d": 4,
        "l": 3,
-       "gf": 30,
-       "ga": 25,
-       "pts": 25,
+       "gf": 32,
+       "ga": 26,
+       "pts": 28,
        "tid": 4961,
-       "form": "LDWWD"
+       "form": "DWWDW"
+      },
+      {
+       "pos": 5,
+       "team": "Wiener SC",
+       "p": 15,
+       "w": 8,
+       "d": 3,
+       "l": 4,
+       "gf": 34,
+       "ga": 22,
+       "pts": 27,
+       "tid": 4965,
+       "form": "DWWDL"
       },
       {
        "pos": 6,
@@ -525,15 +525,15 @@
       {
        "pos": 7,
        "team": "Wiener Viktoria",
-       "p": 14,
+       "p": 15,
        "w": 6,
        "d": 3,
-       "l": 5,
-       "gf": 17,
-       "ga": 14,
+       "l": 6,
+       "gf": 18,
+       "ga": 16,
        "pts": 21,
        "tid": 4966,
-       "form": "DLWLD"
+       "form": "LWLDL"
       },
       {
        "pos": 8,
@@ -550,6 +550,19 @@
       },
       {
        "pos": 9,
+       "team": "Mattersburg SV 2020",
+       "p": 15,
+       "w": 6,
+       "d": 2,
+       "l": 7,
+       "gf": 16,
+       "ga": 20,
+       "pts": 20,
+       "tid": 27886,
+       "form": "LWLDW"
+      },
+      {
+       "pos": 10,
        "team": "Scheiblingkirchen",
        "p": 14,
        "w": 5,
@@ -562,7 +575,7 @@
        "form": "WDLLD"
       },
       {
-       "pos": 10,
+       "pos": 11,
        "team": "Donau",
        "p": 14,
        "w": 4,
@@ -575,20 +588,20 @@
        "form": "DDLWW"
       },
       {
-       "pos": 11,
+       "pos": 12,
        "team": "Leobendorf",
-       "p": 14,
+       "p": 15,
        "w": 5,
        "d": 3,
-       "l": 6,
+       "l": 7,
        "gf": 19,
-       "ga": 19,
+       "ga": 20,
        "pts": 18,
        "tid": 4951,
-       "form": "LWWDL"
+       "form": "WWDLL"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "Gloggnitz",
        "p": 14,
        "w": 4,
@@ -601,30 +614,17 @@
        "form": "WDDDW"
       },
       {
-       "pos": 13,
-       "team": "Mattersburg SV 2020",
-       "p": 14,
-       "w": 5,
-       "d": 2,
-       "l": 7,
-       "gf": 15,
-       "ga": 20,
-       "pts": 17,
-       "tid": 27886,
-       "form": "WLWLD"
-      },
-      {
        "pos": 14,
        "team": "Favoritner AC",
-       "p": 14,
+       "p": 15,
        "w": 4,
        "d": 1,
-       "l": 9,
+       "l": 10,
        "gf": 9,
-       "ga": 21,
+       "ga": 22,
        "pts": 13,
        "tid": 8367,
-       "form": "DWLLL"
+       "form": "WLLLL"
       },
       {
        "pos": 15,

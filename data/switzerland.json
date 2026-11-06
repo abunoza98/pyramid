@@ -289,18 +289,31 @@
     {
      "pos": 6,
      "team": "FC Aarau",
-     "p": 12,
+     "p": 13,
      "w": 4,
      "d": 3,
-     "l": 5,
+     "l": 6,
      "gf": 19,
-     "ga": 21,
+     "ga": 24,
      "pts": 15,
      "tid": 2177,
-     "form": "DLLLW"
+     "form": "LLLWL"
     },
     {
      "pos": 7,
+     "team": "FC Wil",
+     "p": 13,
+     "w": 3,
+     "d": 5,
+     "l": 5,
+     "gf": 21,
+     "ga": 27,
+     "pts": 14,
+     "tid": 2179,
+     "form": "WDDLW"
+    },
+    {
+     "pos": 8,
      "team": "Étoile Carouge",
      "p": 12,
      "w": 3,
@@ -313,7 +326,7 @@
      "form": "LLLWD"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Rapperswil-Jona",
      "p": 13,
      "w": 3,
@@ -324,19 +337,6 @@
      "pts": 11,
      "tid": 2185,
      "form": "WLDLL"
-    },
-    {
-     "pos": 9,
-     "team": "FC Wil",
-     "p": 12,
-     "w": 2,
-     "d": 5,
-     "l": 5,
-     "gf": 18,
-     "ga": 27,
-     "pts": 11,
-     "tid": 2179,
-     "form": "LWDDL"
     },
     {
      "pos": 10,

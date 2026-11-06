@@ -4,7 +4,7 @@
  "adjective": "Belgian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-04T00:00:00.000Z",
+ "updated": "2026-11-06T00:00:00.000Z",
  "belowNote": "The top amateur clubs come up",
  "leagues": [
   {
@@ -134,6 +134,19 @@
     },
     {
      "pos": 7,
+     "team": "Standard Liège",
+     "p": 11,
+     "w": 4,
+     "d": 3,
+     "l": 4,
+     "gf": 18,
+     "ga": 16,
+     "pts": 15,
+     "tid": 733,
+     "form": "LLLDW"
+    },
+    {
+     "pos": 8,
      "team": "Lommel United",
      "p": 10,
      "w": 4,
@@ -146,7 +159,7 @@
      "form": "LDWDW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Westerlo",
      "p": 10,
      "w": 4,
@@ -157,19 +170,6 @@
      "pts": 14,
      "tid": 261,
      "form": "WWWDL"
-    },
-    {
-     "pos": 9,
-     "team": "Standard Liège",
-     "p": 10,
-     "w": 3,
-     "d": 3,
-     "l": 4,
-     "gf": 15,
-     "ga": 16,
-     "pts": 12,
-     "tid": 733,
-     "form": "LLLLD"
     },
     {
      "pos": 10,
@@ -213,15 +213,15 @@
     {
      "pos": 13,
      "team": "SK Beveren",
-     "p": 10,
+     "p": 11,
      "w": 3,
      "d": 1,
-     "l": 6,
+     "l": 7,
      "gf": 13,
-     "ga": 20,
+     "ga": 23,
      "pts": 10,
      "tid": 738,
-     "form": "WLLDL"
+     "form": "LLDLL"
     },
     {
      "pos": 14,
@@ -289,7 +289,7 @@
      "form": "LWLDL"
     }
    ],
-   "updated": "2026-11-04T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "challenger-pro-league",
@@ -370,6 +370,19 @@
     },
     {
      "pos": 4,
+     "team": "Patro Eisden",
+     "p": 10,
+     "w": 5,
+     "d": 0,
+     "l": 5,
+     "gf": 16,
+     "ga": 16,
+     "pts": 15,
+     "tid": 6222,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 5,
      "team": "Francs Borains",
      "p": 8,
      "w": 5,
@@ -382,20 +395,20 @@
      "form": "WWLLW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Sporting Hasselt",
-     "p": 8,
+     "p": 9,
      "w": 5,
      "d": 0,
-     "l": 3,
-     "gf": 12,
-     "ga": 13,
+     "l": 4,
+     "gf": 13,
+     "ga": 15,
      "pts": 15,
      "tid": 5931,
-     "form": "LWLWW"
+     "form": "WLWWL"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Excelsior Virton",
      "p": 8,
      "w": 4,
@@ -408,7 +421,7 @@
      "form": "WDLLW"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Lokeren-Temse",
      "p": 8,
      "w": 4,
@@ -421,33 +434,33 @@
      "form": "LWDWL"
     },
     {
-     "pos": 8,
-     "team": "Patro Eisden",
-     "p": 9,
-     "w": 4,
-     "d": 0,
-     "l": 5,
-     "gf": 14,
-     "ga": 15,
-     "pts": 12,
-     "tid": 6222,
-     "form": "LLWWW"
-    },
-    {
      "pos": 9,
      "team": "Gent II",
-     "p": 8,
+     "p": 9,
      "w": 3,
-     "d": 2,
+     "d": 3,
      "l": 3,
-     "gf": 11,
-     "ga": 13,
-     "pts": 11,
+     "gf": 12,
+     "ga": 14,
+     "pts": 12,
      "tid": 19685,
-     "form": "LDWLW"
+     "form": "DWLWD"
     },
     {
      "pos": 10,
+     "team": "Genk II",
+     "p": 10,
+     "w": 2,
+     "d": 4,
+     "l": 4,
+     "gf": 14,
+     "ga": 17,
+     "pts": 10,
+     "tid": 19045,
+     "form": "DLDDD"
+    },
+    {
+     "pos": 11,
      "team": "Club Brugge II",
      "p": 8,
      "w": 2,
@@ -458,19 +471,6 @@
      "pts": 9,
      "tid": 14130,
      "form": "DDLDL"
-    },
-    {
-     "pos": 11,
-     "team": "Genk II",
-     "p": 9,
-     "w": 2,
-     "d": 3,
-     "l": 4,
-     "gf": 13,
-     "ga": 16,
-     "pts": 9,
-     "tid": 19045,
-     "form": "LDLDD"
     },
     {
      "pos": 12,
@@ -525,7 +525,7 @@
      "form": "DLLLW"
     }
    ],
-   "updated": "2026-11-04T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   }
  ]
 }

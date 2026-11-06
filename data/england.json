@@ -4,7 +4,7 @@
  "adjective": "English",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-04T00:00:00.000Z",
+ "updated": "2026-11-06T00:00:00.000Z",
  "belowNote": "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
  "leagues": [
   {
@@ -296,7 +296,7 @@
      "form": "LLLDL"
     }
    ],
-   "updated": "2026-11-03T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "championship",
@@ -542,15 +542,15 @@
     {
      "pos": 17,
      "team": "Bolton Wanderers",
-     "p": 14,
+     "p": 15,
      "w": 5,
      "d": 2,
-     "l": 7,
-     "gf": 19,
-     "ga": 26,
+     "l": 8,
+     "gf": 20,
+     "ga": 29,
      "pts": 17,
      "tid": 68,
-     "form": "WDLLW"
+     "form": "DLLWL"
     },
     {
      "pos": 18,
@@ -620,15 +620,15 @@
     {
      "pos": 23,
      "team": "Derby County",
-     "p": 14,
-     "w": 1,
+     "p": 15,
+     "w": 2,
      "d": 4,
      "l": 9,
-     "gf": 11,
-     "ga": 29,
-     "pts": 7,
+     "gf": 14,
+     "ga": 30,
+     "pts": 10,
      "tid": 69,
-     "form": "LLDLL"
+     "form": "LDLLW"
     },
     {
      "pos": 24,
@@ -644,7 +644,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-11-04T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "league-one",
@@ -988,7 +988,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-11-04T00:00:00.000Z"
+   "updated": "2026-11-05T00:00:00.000Z"
   },
   {
    "id": "league-two",
@@ -1332,7 +1332,7 @@
      "form": "DLLDW"
     }
    ],
-   "updated": "2026-11-03T00:00:00.000Z"
+   "updated": "2026-11-05T00:00:00.000Z"
   },
   {
    "id": "national-league",
@@ -2045,7 +2045,7 @@
     },
     {
      "name": "South",
-     "updated": "2026-11-03T00:00:00.000Z",
+     "updated": "2026-11-05T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2362,7 +2362,7 @@
      ]
     }
    ],
-   "updated": "2026-11-03T00:00:00.000Z"
+   "updated": "2026-11-05T00:00:00.000Z"
   }
  ]
 }

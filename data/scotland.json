@@ -4,7 +4,7 @@
  "adjective": "Scottish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-06T00:00:00.000Z",
  "belowNote": "The Highland/Lowland League play-off winner can come up",
  "leagues": [
   {
@@ -189,7 +189,7 @@
      "form": "DLLLD"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   },
   {
    "id": "scottish-championship",
@@ -228,6 +228,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Raith Rovers",
+     "p": 14,
+     "w": 7,
+     "d": 4,
+     "l": 3,
+     "gf": 20,
+     "ga": 9,
+     "pts": 25,
+     "tid": 1385,
+     "form": "WDLWD"
+    },
+    {
+     "pos": 2,
      "team": "Partick Thistle",
      "p": 13,
      "w": 7,
@@ -240,30 +253,17 @@
      "form": "WWDWL"
     },
     {
-     "pos": 2,
-     "team": "Raith Rovers",
-     "p": 13,
-     "w": 7,
-     "d": 3,
-     "l": 3,
-     "gf": 20,
-     "ga": 9,
-     "pts": 24,
-     "tid": 1385,
-     "form": "WWDLW"
-    },
-    {
      "pos": 3,
      "team": "Dunfermline",
-     "p": 13,
+     "p": 14,
      "w": 6,
-     "d": 6,
+     "d": 7,
      "l": 1,
      "gf": 15,
      "ga": 7,
-     "pts": 24,
+     "pts": 25,
      "tid": 1388,
-     "form": "DDWWW"
+     "form": "DWWWD"
     },
     {
      "pos": 4,
@@ -357,7 +357,7 @@
      "form": "LWLLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "scottish-league-one",
@@ -525,7 +525,7 @@
      "form": "LDLW"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   },
   {
    "id": "scottish-league-two",
@@ -690,7 +690,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-03T00:00:00.000Z"
   }
  ]
 }
