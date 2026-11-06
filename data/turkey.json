@@ -319,15 +319,15 @@
     {
      "pos": 1,
      "team": "Bursaspor",
-     "p": 13,
+     "p": 14,
      "w": 10,
-     "d": 1,
+     "d": 2,
      "l": 2,
-     "gf": 29,
-     "ga": 11,
-     "pts": 31,
+     "gf": 30,
+     "ga": 12,
+     "pts": 32,
      "tid": 1003,
-     "form": "LWWWW"
+     "form": "WWWWD"
     },
     {
      "pos": 2,
@@ -345,15 +345,15 @@
     {
      "pos": 3,
      "team": "Iğdır FK",
-     "p": 13,
+     "p": 14,
      "w": 8,
-     "d": 3,
+     "d": 4,
      "l": 2,
-     "gf": 18,
-     "ga": 10,
-     "pts": 27,
+     "gf": 19,
+     "ga": 11,
+     "pts": 28,
      "tid": 17259,
-     "form": "WDWWD"
+     "form": "DWWDD"
     },
     {
      "pos": 4,
@@ -397,15 +397,15 @@
     {
      "pos": 7,
      "team": "Antalyaspor",
-     "p": 13,
+     "p": 14,
      "w": 6,
-     "d": 1,
+     "d": 2,
      "l": 6,
-     "gf": 19,
-     "ga": 20,
-     "pts": 19,
+     "gf": 20,
+     "ga": 21,
+     "pts": 20,
      "tid": 1005,
-     "form": "WLWLD"
+     "form": "LWLDD"
     },
     {
      "pos": 8,
@@ -435,6 +435,19 @@
     },
     {
      "pos": 10,
+     "team": "Sarıyer",
+     "p": 14,
+     "w": 4,
+     "d": 5,
+     "l": 5,
+     "gf": 15,
+     "ga": 19,
+     "pts": 17,
+     "tid": 3605,
+     "form": "LDLLD"
+    },
+    {
+     "pos": 11,
      "team": "Fatih Karagümrük",
      "p": 13,
      "w": 4,
@@ -445,19 +458,6 @@
      "pts": 16,
      "tid": 3589,
      "form": "DLLWL"
-    },
-    {
-     "pos": 11,
-     "team": "Sarıyer",
-     "p": 13,
-     "w": 4,
-     "d": 4,
-     "l": 5,
-     "gf": 14,
-     "ga": 18,
-     "pts": 16,
-     "tid": 3605,
-     "form": "DLDLL"
     },
     {
      "pos": 12,

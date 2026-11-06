@@ -4,7 +4,7 @@
  "adjective": "German",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-06T00:00:00.000Z",
  "belowNote": "Regionalliga champions come up, some through a play-off",
  "leagues": [
   {
@@ -282,7 +282,7 @@
      "form": "LLLWD"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "2-bundesliga",
@@ -426,18 +426,44 @@
     {
      "pos": 9,
      "team": "Greuther Fürth",
-     "p": 10,
+     "p": 11,
      "w": 3,
      "d": 3,
-     "l": 4,
+     "l": 5,
      "gf": 13,
-     "ga": 16,
+     "ga": 19,
      "pts": 12,
      "tid": 178,
-     "form": "DLWLW"
+     "form": "LWLWL"
     },
     {
      "pos": 10,
+     "team": "Energie Cottbus",
+     "p": 11,
+     "w": 2,
+     "d": 5,
+     "l": 4,
+     "gf": 18,
+     "ga": 20,
+     "pts": 11,
+     "tid": 1320,
+     "form": "LDDLD"
+    },
+    {
+     "pos": 11,
+     "team": "Eintracht Braunschweig",
+     "p": 11,
+     "w": 3,
+     "d": 2,
+     "l": 6,
+     "gf": 16,
+     "ga": 18,
+     "pts": 11,
+     "tid": 744,
+     "form": "WLWLD"
+    },
+    {
+     "pos": 12,
      "team": "VfL Osnabrück",
      "p": 10,
      "w": 3,
@@ -450,7 +476,7 @@
      "form": "DDLWL"
     },
     {
-     "pos": 11,
+     "pos": 13,
      "team": "VfL Bochum",
      "p": 10,
      "w": 3,
@@ -463,7 +489,20 @@
      "form": "LLLDW"
     },
     {
-     "pos": 12,
+     "pos": 14,
+     "team": "Dynamo Dresden",
+     "p": 11,
+     "w": 3,
+     "d": 2,
+     "l": 6,
+     "gf": 15,
+     "ga": 20,
+     "pts": 11,
+     "tid": 183,
+     "form": "DWLLW"
+    },
+    {
+     "pos": 15,
      "team": "Hannover 96",
      "p": 10,
      "w": 3,
@@ -476,7 +515,7 @@
      "form": "WLDLW"
     },
     {
-     "pos": 13,
+     "pos": 16,
      "team": "Karlsruher SC",
      "p": 10,
      "w": 3,
@@ -489,33 +528,7 @@
      "form": "LLWLW"
     },
     {
-     "pos": 14,
-     "team": "Energie Cottbus",
-     "p": 10,
-     "w": 2,
-     "d": 4,
-     "l": 4,
-     "gf": 18,
-     "ga": 20,
-     "pts": 10,
-     "tid": 1320,
-     "form": "DLDDL"
-    },
-    {
-     "pos": 15,
-     "team": "Eintracht Braunschweig",
-     "p": 10,
-     "w": 3,
-     "d": 1,
-     "l": 6,
-     "gf": 16,
-     "ga": 18,
-     "pts": 10,
-     "tid": 744,
-     "form": "LWLWL"
-    },
-    {
-     "pos": 16,
+     "pos": 17,
      "team": "Darmstadt 98",
      "p": 10,
      "w": 2,
@@ -528,7 +541,7 @@
      "form": "LWLDD"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Holstein Kiel",
      "p": 10,
      "w": 1,
@@ -539,22 +552,9 @@
      "pts": 8,
      "tid": 191,
      "form": "DLDWL"
-    },
-    {
-     "pos": 18,
-     "team": "Dynamo Dresden",
-     "p": 10,
-     "w": 2,
-     "d": 2,
-     "l": 6,
-     "gf": 12,
-     "ga": 20,
-     "pts": 8,
-     "tid": 183,
-     "form": "LDWLL"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "3-liga",
@@ -848,7 +848,7 @@
      "form": "LDDWD"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   }
  ]
 }

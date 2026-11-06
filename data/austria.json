@@ -4,7 +4,7 @@
  "adjective": "Austrian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-01T00:00:00.000Z",
+ "updated": "2026-11-06T00:00:00.000Z",
  "belowNote": "Landesliga champions come up",
  "leagues": [
   {
@@ -183,7 +183,7 @@
      "form": "LLLLD"
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "2-liga",
@@ -233,44 +233,57 @@
     {
      "pos": 2,
      "team": "First Vienna",
-     "p": 11,
+     "p": 12,
      "w": 8,
-     "d": 1,
+     "d": 2,
      "l": 2,
-     "gf": 21,
-     "ga": 15,
-     "pts": 25,
+     "gf": 22,
+     "ga": 16,
+     "pts": 26,
      "tid": 4990,
-     "form": "WWWWL"
+     "form": "WWWLD"
     },
     {
      "pos": 3,
      "team": "Austria Wien II",
-     "p": 11,
+     "p": 12,
      "w": 7,
-     "d": 1,
+     "d": 2,
      "l": 3,
-     "gf": 19,
-     "ga": 14,
-     "pts": 22,
+     "gf": 20,
+     "ga": 15,
+     "pts": 23,
      "tid": 2860,
-     "form": "WWDWW"
+     "form": "WDWWD"
     },
     {
      "pos": 4,
-     "team": "Austria Salzburg",
-     "p": 11,
+     "team": "FC Liefering",
+     "p": 12,
      "w": 6,
-     "d": 1,
+     "d": 2,
      "l": 4,
-     "gf": 20,
-     "ga": 14,
-     "pts": 19,
-     "tid": 5000,
-     "form": "LWWLW"
+     "gf": 26,
+     "ga": 24,
+     "pts": 20,
+     "tid": 1400,
+     "form": "WLDWW"
     },
     {
      "pos": 5,
+     "team": "Austria Salzburg",
+     "p": 12,
+     "w": 6,
+     "d": 1,
+     "l": 5,
+     "gf": 21,
+     "ga": 18,
+     "pts": 19,
+     "tid": 5000,
+     "form": "WWLWL"
+    },
+    {
+     "pos": 6,
      "team": "Admira Wacker",
      "p": 11,
      "w": 6,
@@ -283,33 +296,33 @@
      "form": "LWWWL"
     },
     {
-     "pos": 6,
-     "team": "SKU Amstetten",
-     "p": 11,
-     "w": 4,
-     "d": 5,
-     "l": 2,
-     "gf": 18,
-     "ga": 17,
-     "pts": 17,
-     "tid": 1404,
-     "form": "WDDWL"
-    },
-    {
      "pos": 7,
-     "team": "FC Liefering",
-     "p": 11,
+     "team": "Wacker Innsbruck",
+     "p": 12,
      "w": 5,
      "d": 2,
-     "l": 4,
-     "gf": 22,
-     "ga": 23,
+     "l": 5,
+     "gf": 16,
+     "ga": 15,
      "pts": 17,
-     "tid": 1400,
-     "form": "LWLDW"
+     "tid": 1073,
+     "form": "WLLLW"
     },
     {
      "pos": 8,
+     "team": "SKU Amstetten",
+     "p": 12,
+     "w": 4,
+     "d": 5,
+     "l": 3,
+     "gf": 20,
+     "ga": 20,
+     "pts": 17,
+     "tid": 1404,
+     "form": "DDWLL"
+    },
+    {
+     "pos": 9,
      "team": "Schwarz-Weiß Bregenz",
      "p": 11,
      "w": 4,
@@ -322,7 +335,7 @@
      "form": "LLDDW"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Floridsdorfer AC",
      "p": 11,
      "w": 4,
@@ -333,19 +346,6 @@
      "pts": 14,
      "tid": 1395,
      "form": "WLLLD"
-    },
-    {
-     "pos": 10,
-     "team": "Wacker Innsbruck",
-     "p": 11,
-     "w": 4,
-     "d": 2,
-     "l": 5,
-     "gf": 13,
-     "ga": 13,
-     "pts": 14,
-     "tid": 1073,
-     "form": "DWLLL"
     },
     {
      "pos": 11,
@@ -426,7 +426,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-10-31T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "regionalliga",
@@ -442,7 +442,7 @@
    "groups": [
     {
      "name": "East",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-06T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -656,7 +656,7 @@
     },
     {
      "name": "North",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-06T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -764,19 +764,6 @@
       },
       {
        "pos": 9,
-       "team": "SK Vorwarts Steyr",
-       "p": 14,
-       "w": 5,
-       "d": 3,
-       "l": 6,
-       "gf": 18,
-       "ga": 19,
-       "pts": 18,
-       "tid": 1406,
-       "form": "LDWLL"
-      },
-      {
-       "pos": 10,
        "team": "Leonfelden",
        "p": 14,
        "w": 4,
@@ -789,7 +776,33 @@
        "form": "LWWDD"
       },
       {
+       "pos": 10,
+       "team": "SK Vorwarts Steyr",
+       "p": 15,
+       "w": 5,
+       "d": 3,
+       "l": 7,
+       "gf": 20,
+       "ga": 23,
+       "pts": 18,
+       "tid": 1406,
+       "form": "DWLLL"
+      },
+      {
        "pos": 11,
+       "team": "Seekirchen",
+       "p": 15,
+       "w": 4,
+       "d": 5,
+       "l": 6,
+       "gf": 17,
+       "ga": 22,
+       "pts": 17,
+       "tid": 4958,
+       "form": "DLDDW"
+      },
+      {
+       "pos": 12,
        "team": "Wohnbau Dietach",
        "p": 14,
        "w": 4,
@@ -802,7 +815,7 @@
        "form": "LLDLW"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "Ried II",
        "p": 14,
        "w": 4,
@@ -813,19 +826,6 @@
        "pts": 15,
        "tid": 8250,
        "form": "LDWLD"
-      },
-      {
-       "pos": 13,
-       "team": "Seekirchen",
-       "p": 14,
-       "w": 3,
-       "d": 5,
-       "l": 6,
-       "gf": 13,
-       "ga": 20,
-       "pts": 14,
-       "tid": 4958,
-       "form": "WDLDD"
       },
       {
        "pos": 14,
@@ -857,7 +857,7 @@
     },
     {
      "name": "South",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-06T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -887,6 +887,19 @@
       },
       {
        "pos": 3,
+       "team": "Deutschlandsberger SC",
+       "p": 14,
+       "w": 7,
+       "d": 5,
+       "l": 2,
+       "gf": 30,
+       "ga": 21,
+       "pts": 26,
+       "tid": 4972,
+       "form": "DWLDW"
+      },
+      {
+       "pos": 4,
        "team": "Austria Klagenfurt",
        "p": 14,
        "w": 8,
@@ -899,7 +912,20 @@
        "form": "LDLWW"
       },
       {
-       "pos": 4,
+       "pos": 5,
+       "team": "Weiz",
+       "p": 14,
+       "w": 6,
+       "d": 6,
+       "l": 2,
+       "gf": 22,
+       "ga": 12,
+       "pts": 24,
+       "tid": 4996,
+       "form": "WDLWW"
+      },
+      {
+       "pos": 6,
        "team": "Treibach",
        "p": 14,
        "w": 7,
@@ -912,46 +938,7 @@
        "form": "LWLWL"
       },
       {
-       "pos": 5,
-       "team": "Deutschlandsberger SC",
-       "p": 13,
-       "w": 6,
-       "d": 5,
-       "l": 2,
-       "gf": 26,
-       "ga": 20,
-       "pts": 23,
-       "tid": 4972,
-       "form": "DDWLD"
-      },
-      {
-       "pos": 6,
-       "team": "Weiz",
-       "p": 13,
-       "w": 5,
-       "d": 6,
-       "l": 2,
-       "gf": 21,
-       "ga": 12,
-       "pts": 21,
-       "tid": 4996,
-       "form": "DWDLW"
-      },
-      {
        "pos": 7,
-       "team": "Kalsdorf",
-       "p": 13,
-       "w": 5,
-       "d": 4,
-       "l": 4,
-       "gf": 19,
-       "ga": 16,
-       "pts": 19,
-       "tid": 4946,
-       "form": "LLDDL"
-      },
-      {
-       "pos": 8,
        "team": "SV Lafnitz",
        "p": 13,
        "w": 4,
@@ -964,7 +951,7 @@
        "form": "DDWDD"
       },
       {
-       "pos": 9,
+       "pos": 8,
        "team": "Wolfsberger AC",
        "p": 14,
        "w": 5,
@@ -976,43 +963,56 @@
        "tid": 1025
       },
       {
-       "pos": 10,
-       "team": "Hartberg II",
-       "p": 13,
-       "w": 4,
+       "pos": 9,
+       "team": "Kalsdorf",
+       "p": 14,
+       "w": 5,
        "d": 4,
        "l": 5,
-       "gf": 22,
-       "ga": 26,
-       "pts": 16,
+       "gf": 20,
+       "ga": 20,
+       "pts": 19,
+       "tid": 4946,
+       "form": "LDDLL"
+      },
+      {
+       "pos": 10,
+       "team": "Hartberg II",
+       "p": 14,
+       "w": 4,
+       "d": 5,
+       "l": 5,
+       "gf": 23,
+       "ga": 27,
+       "pts": 17,
        "tid": 28052,
-       "form": "DDWWW"
+       "form": "DWWWD"
       },
       {
        "pos": 11,
        "team": "Tillmitsch",
-       "p": 13,
+       "p": 14,
        "w": 3,
-       "d": 5,
+       "d": 6,
        "l": 5,
-       "gf": 20,
-       "ga": 26,
-       "pts": 14,
+       "gf": 21,
+       "ga": 27,
+       "pts": 15,
        "tid": 21533,
-       "form": "DDLWL"
+       "form": "DLWLD"
       },
       {
        "pos": 12,
        "team": "Gleisdorf 09",
-       "p": 13,
+       "p": 14,
        "w": 4,
        "d": 2,
-       "l": 7,
+       "l": 8,
        "gf": 19,
-       "ga": 26,
+       "ga": 27,
        "pts": 14,
        "tid": 4940,
-       "form": "DWLWW"
+       "form": "WLWWL"
       },
       {
        "pos": 13,
@@ -1070,7 +1070,7 @@
     },
     {
      "name": "West",
-     "updated": "2026-11-01T00:00:00.000Z",
+     "updated": "2026-11-02T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1283,7 +1283,7 @@
      ]
     }
    ],
-   "updated": "2026-11-01T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   }
  ]
 }
