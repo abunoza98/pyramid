@@ -4,7 +4,7 @@
  "adjective": "Swiss",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-04T00:00:00.000Z",
+ "updated": "2026-11-06T00:00:00.000Z",
  "belowNote": "The top 2. Liga Interregional clubs come up",
  "leagues": [
   {
@@ -224,15 +224,15 @@
     {
      "pos": 1,
      "team": "Stade Lausanne-Ouchy",
-     "p": 12,
-     "w": 8,
+     "p": 13,
+     "w": 9,
      "d": 4,
      "l": 0,
-     "gf": 23,
-     "ga": 5,
-     "pts": 28,
+     "gf": 28,
+     "ga": 6,
+     "pts": 31,
      "tid": 4269,
-     "form": "WDWDW"
+     "form": "DWDWW"
     },
     {
      "pos": 2,
@@ -263,15 +263,15 @@
     {
      "pos": 4,
      "team": "SC Kriens",
-     "p": 12,
-     "w": 4,
+     "p": 13,
+     "w": 5,
      "d": 4,
      "l": 4,
-     "gf": 21,
+     "gf": 22,
      "ga": 19,
-     "pts": 16,
+     "pts": 19,
      "tid": 2186,
-     "form": "DWDLD"
+     "form": "WDLDW"
     },
     {
      "pos": 5,
@@ -315,15 +315,15 @@
     {
      "pos": 8,
      "team": "Rapperswil-Jona",
-     "p": 12,
+     "p": 13,
      "w": 3,
      "d": 2,
-     "l": 7,
+     "l": 8,
      "gf": 18,
-     "ga": 25,
+     "ga": 26,
      "pts": 11,
      "tid": 2185,
-     "form": "WWLDL"
+     "form": "WLDLL"
     },
     {
      "pos": 9,
@@ -341,18 +341,18 @@
     {
      "pos": 10,
      "team": "Stade Nyonnais",
-     "p": 12,
+     "p": 13,
      "w": 2,
      "d": 2,
-     "l": 8,
-     "gf": 12,
-     "ga": 29,
+     "l": 9,
+     "gf": 13,
+     "ga": 34,
      "pts": 8,
      "tid": 6646,
-     "form": "LLWLW"
+     "form": "LWLWL"
     }
    ],
-   "updated": "2026-11-03T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "promotion-league",
@@ -614,7 +614,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-04T00:00:00.000Z"
+   "updated": "2026-11-05T00:00:00.000Z"
   },
   {
    "id": "1-liga",

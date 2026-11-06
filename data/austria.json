@@ -29,13 +29,13 @@
     {
      "pos": 1,
      "team": "Rapid Wien",
-     "p": 11,
-     "w": 10,
+     "p": 12,
+     "w": 11,
      "d": 0,
      "l": 1,
-     "gf": 33,
+     "gf": 39,
      "ga": 9,
-     "pts": 30,
+     "pts": 33,
      "tid": 781,
      "form": "WWWWW"
     },
@@ -172,15 +172,15 @@
     {
      "pos": 12,
      "team": "Wolfsberger AC",
-     "p": 11,
+     "p": 12,
      "w": 1,
      "d": 3,
-     "l": 7,
+     "l": 8,
      "gf": 8,
-     "ga": 20,
+     "ga": 26,
      "pts": 6,
      "tid": 1025,
-     "form": "LLLLD"
+     "form": "LLLDL"
     }
    ],
    "updated": "2026-11-06T00:00:00.000Z"
@@ -447,15 +447,15 @@
       {
        "pos": 1,
        "team": "Mannsdorf-Großenzersdorf",
-       "p": 14,
-       "w": 9,
+       "p": 15,
+       "w": 10,
        "d": 2,
        "l": 3,
-       "gf": 34,
-       "ga": 13,
-       "pts": 29,
+       "gf": 38,
+       "ga": 14,
+       "pts": 32,
        "tid": 4952,
-       "form": "DWLWD"
+       "form": "WLWDW"
       },
       {
        "pos": 2,
@@ -511,6 +511,19 @@
       },
       {
        "pos": 6,
+       "team": "Parndorf",
+       "p": 15,
+       "w": 6,
+       "d": 4,
+       "l": 5,
+       "gf": 26,
+       "ga": 19,
+       "pts": 22,
+       "tid": 4955,
+       "form": "DLWDW"
+      },
+      {
+       "pos": 7,
        "team": "Wiener Viktoria",
        "p": 14,
        "w": 6,
@@ -523,20 +536,20 @@
        "form": "DLWLD"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Fach-Donaufeld",
-       "p": 14,
+       "p": 15,
        "w": 6,
        "d": 3,
-       "l": 5,
-       "gf": 19,
-       "ga": 19,
+       "l": 6,
+       "gf": 20,
+       "ga": 23,
        "pts": 21,
        "tid": 8366,
-       "form": "WLWLD"
+       "form": "LWLDL"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Scheiblingkirchen",
        "p": 14,
        "w": 5,
@@ -547,19 +560,6 @@
        "pts": 20,
        "tid": 4982,
        "form": "WDLLD"
-      },
-      {
-       "pos": 9,
-       "team": "Parndorf",
-       "p": 14,
-       "w": 5,
-       "d": 4,
-       "l": 5,
-       "gf": 23,
-       "ga": 18,
-       "pts": 19,
-       "tid": 4955,
-       "form": "LDLWD"
       },
       {
        "pos": 10,
@@ -642,15 +642,15 @@
       {
        "pos": 16,
        "team": "Wienerberg",
-       "p": 14,
+       "p": 15,
        "w": 0,
        "d": 1,
-       "l": 13,
-       "gf": 7,
-       "ga": 50,
+       "l": 14,
+       "gf": 8,
+       "ga": 53,
        "pts": 1,
        "tid": 5008,
-       "form": "LDLLL"
+       "form": "DLLLL"
       }
      ]
     },
@@ -940,15 +940,15 @@
       {
        "pos": 7,
        "team": "SV Lafnitz",
-       "p": 13,
-       "w": 4,
+       "p": 14,
+       "w": 5,
        "d": 7,
        "l": 2,
-       "gf": 28,
-       "ga": 26,
-       "pts": 19,
+       "gf": 33,
+       "ga": 28,
+       "pts": 22,
        "tid": 1402,
-       "form": "DDWDD"
+       "form": "DWDDW"
       },
       {
        "pos": 8,
@@ -1017,15 +1017,15 @@
       {
        "pos": 13,
        "team": "Allerheiligen",
-       "p": 13,
+       "p": 14,
        "w": 3,
        "d": 3,
-       "l": 7,
-       "gf": 23,
-       "ga": 26,
+       "l": 8,
+       "gf": 25,
+       "ga": 31,
        "pts": 12,
        "tid": 4934,
-       "form": "WLLLL"
+       "form": "LLLLL"
       },
       {
        "pos": 14,

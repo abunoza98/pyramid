@@ -4,7 +4,7 @@
  "adjective": "Spanish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-05T00:00:00.000Z",
+ "updated": "2026-11-06T00:00:00.000Z",
  "belowNote": "Promoted clubs from Segunda Federación come up",
  "leagues": [
   {
@@ -302,7 +302,7 @@
      "form": "LDLDL"
     }
    ],
-   "updated": "2026-11-05T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "segunda",
@@ -622,7 +622,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-05T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   },
   {
    "id": "primera-federacion",
@@ -656,20 +656,20 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-05T00:00:00.000Z",
+     "updated": "2026-11-06T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
        "team": "Lugo",
-       "p": 10,
-       "w": 8,
+       "p": 11,
+       "w": 9,
        "d": 1,
        "l": 1,
-       "gf": 18,
+       "gf": 19,
        "ga": 9,
-       "pts": 25,
+       "pts": 28,
        "tid": 716,
-       "form": "WWWLW"
+       "form": "WWLWW"
       },
       {
        "pos": 2,
@@ -752,15 +752,15 @@
       {
        "pos": 8,
        "team": "Cacereño",
-       "p": 10,
+       "p": 11,
        "w": 4,
        "d": 3,
-       "l": 3,
+       "l": 4,
        "gf": 9,
-       "ga": 8,
+       "ga": 9,
        "pts": 15,
        "tid": 9384,
-       "form": "LDLWL"
+       "form": "DLWLL"
       },
       {
        "pos": 9,
@@ -1187,7 +1187,7 @@
      ]
     }
    ],
-   "updated": "2026-11-05T00:00:00.000Z"
+   "updated": "2026-11-06T00:00:00.000Z"
   }
  ]
 }
