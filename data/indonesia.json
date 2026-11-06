@@ -48,6 +48,19 @@
     },
     {
      "pos": 2,
+     "team": "Madura United",
+     "p": 9,
+     "w": 6,
+     "d": 1,
+     "l": 2,
+     "gf": 16,
+     "ga": 10,
+     "pts": 19,
+     "tid": 2444,
+     "form": "DWLWW"
+    },
+    {
+     "pos": 3,
      "team": "Persija",
      "p": 8,
      "w": 6,
@@ -60,7 +73,7 @@
      "form": "WLWWL"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Bali United",
      "p": 8,
      "w": 5,
@@ -73,7 +86,7 @@
      "form": "WLWDW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Persib Bandung",
      "p": 8,
      "w": 5,
@@ -84,19 +97,6 @@
      "pts": 16,
      "tid": 2445,
      "form": "DWLWW"
-    },
-    {
-     "pos": 5,
-     "team": "Madura United",
-     "p": 8,
-     "w": 5,
-     "d": 1,
-     "l": 2,
-     "gf": 13,
-     "ga": 10,
-     "pts": 16,
-     "tid": 2444,
-     "form": "LDWLW"
     },
     {
      "pos": 6,
@@ -166,19 +166,6 @@
     },
     {
      "pos": 11,
-     "team": "Arema FC",
-     "p": 8,
-     "w": 2,
-     "d": 3,
-     "l": 3,
-     "gf": 17,
-     "ga": 17,
-     "pts": 9,
-     "tid": 2438,
-     "form": "DLLWL"
-    },
-    {
-     "pos": 12,
      "team": "Borneo FC",
      "p": 7,
      "w": 3,
@@ -189,6 +176,19 @@
      "pts": 9,
      "tid": 2442,
      "form": "LWLWL"
+    },
+    {
+     "pos": 12,
+     "team": "Arema FC",
+     "p": 9,
+     "w": 2,
+     "d": 3,
+     "l": 4,
+     "gf": 17,
+     "ga": 20,
+     "pts": 9,
+     "tid": 2438,
+     "form": "LLWLL"
     },
     {
      "pos": 13,
