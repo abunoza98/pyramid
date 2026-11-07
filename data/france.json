@@ -4,7 +4,7 @@
  "adjective": "French",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-06T00:00:00.000Z",
+ "updated": "2026-11-07T00:00:00.000Z",
  "belowNote": "Promoted clubs from National 1 come up",
  "leagues": [
   {
@@ -288,7 +288,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   },
   {
    "id": "ligue-2",
@@ -484,18 +484,31 @@
     {
      "pos": 13,
      "team": "Rodez",
-     "p": 11,
+     "p": 12,
      "w": 4,
      "d": 1,
-     "l": 6,
+     "l": 7,
      "gf": 17,
-     "ga": 22,
+     "ga": 23,
      "pts": 13,
      "tid": 1301,
-     "form": "LLLWW"
+     "form": "LLWWL"
     },
     {
      "pos": 14,
+     "team": "Clermont",
+     "p": 12,
+     "w": 1,
+     "d": 8,
+     "l": 3,
+     "gf": 11,
+     "ga": 15,
+     "pts": 11,
+     "tid": 99,
+     "form": "LDLDW"
+    },
+    {
+     "pos": 15,
      "team": "Sochaux",
      "p": 12,
      "w": 2,
@@ -508,7 +521,7 @@
      "form": "DLLLL"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Grenoble",
      "p": 12,
      "w": 3,
@@ -521,7 +534,7 @@
      "form": "LLLLW"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Nantes",
      "p": 11,
      "w": 2,
@@ -534,7 +547,7 @@
      "form": "WDLLD"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Laval",
      "p": 11,
      "w": 2,
@@ -545,22 +558,9 @@
      "pts": 9,
      "tid": 433,
      "form": "DLDLW"
-    },
-    {
-     "pos": 18,
-     "team": "Clermont",
-     "p": 11,
-     "w": 0,
-     "d": 8,
-     "l": 3,
-     "gf": 10,
-     "ga": 15,
-     "pts": 8,
-     "tid": 99,
-     "form": "DLDLD"
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   },
   {
    "id": "ligue-3",
@@ -603,171 +603,171 @@
     {
      "pos": 1,
      "team": "La Roche",
-     "p": 11,
-     "w": 7,
+     "p": 12,
+     "w": 8,
      "d": 3,
      "l": 1,
-     "gf": 18,
+     "gf": 19,
      "ga": 10,
-     "pts": 24,
+     "pts": 27,
      "tid": 9915,
-     "form": "WWWLW"
+     "form": "WWLWW"
     },
     {
      "pos": 2,
      "team": "Rouen",
-     "p": 11,
-     "w": 7,
+     "p": 12,
+     "w": 8,
      "d": 2,
      "l": 2,
-     "gf": 20,
+     "gf": 22,
      "ga": 9,
-     "pts": 23,
+     "pts": 26,
      "tid": 3221,
-     "form": "WLWLW"
+     "form": "LWLWW"
     },
     {
      "pos": 3,
-     "team": "Versailles",
-     "p": 11,
+     "team": "Caen",
+     "p": 12,
      "w": 7,
      "d": 1,
-     "l": 3,
-     "gf": 19,
-     "ga": 13,
+     "l": 4,
+     "gf": 22,
+     "ga": 15,
      "pts": 22,
-     "tid": 3131,
-     "form": "DWWWW"
+     "tid": 88,
+     "form": "WLWDW"
     },
     {
      "pos": 4,
-     "team": "Caen",
-     "p": 11,
-     "w": 6,
+     "team": "Versailles",
+     "p": 12,
+     "w": 7,
      "d": 1,
      "l": 4,
-     "gf": 21,
-     "ga": 15,
-     "pts": 19,
-     "tid": 88,
-     "form": "LWLWD"
+     "gf": 19,
+     "ga": 14,
+     "pts": 22,
+     "tid": 3131,
+     "form": "WWWWL"
     },
     {
      "pos": 5,
-     "team": "Cannes",
-     "p": 11,
-     "w": 4,
-     "d": 6,
-     "l": 1,
-     "gf": 14,
-     "ga": 7,
-     "pts": 18,
-     "tid": 9932,
-     "form": "DDWLW"
+     "team": "Amiens",
+     "p": 12,
+     "w": 5,
+     "d": 5,
+     "l": 2,
+     "gf": 16,
+     "ga": 5,
+     "pts": 20,
+     "tid": 87,
+     "form": "DWDDW"
     },
     {
      "pos": 6,
-     "team": "Le Puy",
-     "p": 11,
+     "team": "Concarneau",
+     "p": 12,
      "w": 5,
-     "d": 2,
-     "l": 4,
-     "gf": 14,
+     "d": 5,
+     "l": 2,
+     "gf": 16,
      "ga": 11,
-     "pts": 17,
-     "tid": 3069,
-     "form": "WLWWD"
+     "pts": 20,
+     "tid": 1300,
+     "form": "DWDLW"
     },
     {
      "pos": 7,
-     "team": "Concarneau",
-     "p": 11,
+     "team": "Cannes",
+     "p": 12,
      "w": 4,
-     "d": 5,
+     "d": 6,
      "l": 2,
      "gf": 14,
-     "ga": 11,
-     "pts": 17,
-     "tid": 1300,
-     "form": "WDWDL"
+     "ga": 8,
+     "pts": 18,
+     "tid": 9932,
+     "form": "DWLWL"
     },
     {
      "pos": 8,
-     "team": "Amiens",
-     "p": 11,
-     "w": 4,
-     "d": 5,
-     "l": 2,
-     "gf": 14,
-     "ga": 5,
-     "pts": 17,
-     "tid": 87,
-     "form": "WDWDD"
+     "team": "Le Puy",
+     "p": 12,
+     "w": 5,
+     "d": 3,
+     "l": 4,
+     "gf": 15,
+     "ga": 12,
+     "pts": 18,
+     "tid": 3069,
+     "form": "LWWDD"
     },
     {
      "pos": 9,
-     "team": "Fleury",
-     "p": 11,
+     "team": "Paris 13 Atletico",
+     "p": 12,
      "w": 4,
      "d": 4,
-     "l": 3,
-     "gf": 17,
-     "ga": 13,
+     "l": 4,
+     "gf": 11,
+     "ga": 12,
      "pts": 16,
-     "tid": 3179,
-     "form": "DLWWD"
+     "tid": 9238,
+     "form": "WLWDL"
     },
     {
      "pos": 10,
-     "team": "Paris 13 Atletico",
-     "p": 11,
+     "team": "Quevilly-Rouen",
+     "p": 12,
      "w": 4,
      "d": 4,
-     "l": 3,
-     "gf": 11,
-     "ga": 11,
+     "l": 4,
+     "gf": 13,
+     "ga": 16,
      "pts": 16,
-     "tid": 9238,
-     "form": "DWLWD"
+     "tid": 431,
+     "form": "DLWLW"
     },
     {
      "pos": 11,
-     "team": "Bastia",
-     "p": 11,
+     "team": "Thionville",
+     "p": 12,
      "w": 4,
-     "d": 3,
+     "d": 4,
      "l": 4,
-     "gf": 10,
-     "ga": 12,
-     "pts": 15,
-     "tid": 1305,
-     "form": "DLDDW"
+     "gf": 17,
+     "ga": 17,
+     "pts": 16,
+     "tid": 22039,
+     "form": "LLLDW"
     },
     {
      "pos": 12,
-     "team": "Thionville",
-     "p": 11,
-     "w": 3,
+     "team": "Fleury",
+     "p": 12,
+     "w": 4,
      "d": 4,
      "l": 4,
-     "gf": 16,
-     "ga": 17,
-     "pts": 13,
-     "tid": 22039,
-     "form": "DLLLD"
+     "gf": 17,
+     "ga": 15,
+     "pts": 16,
+     "tid": 3179,
+     "form": "LWWDL"
     },
     {
      "pos": 13,
-     "team": "Quevilly-Rouen",
-     "p": 11,
-     "w": 3,
-     "d": 4,
-     "l": 4,
-     "gf": 11,
-     "ga": 16,
-     "pts": 13,
-     "tid": 431,
-     "form": "DDLWL"
+     "team": "Bastia",
+     "p": 12,
+     "w": 4,
+     "d": 3,
+     "l": 5,
+     "gf": 10,
+     "ga": 14,
+     "pts": 15,
+     "tid": 1305,
+     "form": "LDDWL"
     },
     {
      "pos": 14,
@@ -798,44 +798,44 @@
     {
      "pos": 16,
      "team": "Villefranche",
-     "p": 11,
+     "p": 12,
      "w": 2,
      "d": 2,
-     "l": 7,
+     "l": 8,
      "gf": 10,
-     "ga": 24,
+     "ga": 26,
      "pts": 8,
      "tid": 1302,
-     "form": "LLLWD"
+     "form": "LLWDL"
     },
     {
      "pos": 17,
      "team": "Aubagne",
-     "p": 11,
+     "p": 12,
      "w": 2,
      "d": 1,
-     "l": 8,
+     "l": 9,
      "gf": 6,
-     "ga": 17,
+     "ga": 19,
      "pts": 7,
      "tid": 9930,
-     "form": "LWLLL"
+     "form": "WLLLL"
     },
     {
      "pos": 18,
      "team": "Bourg-Péronnas",
-     "p": 11,
+     "p": 12,
      "w": 1,
-     "d": 2,
+     "d": 3,
      "l": 8,
-     "gf": 5,
-     "ga": 18,
-     "pts": 5,
+     "gf": 6,
+     "ga": 19,
+     "pts": 6,
      "tid": 430,
-     "form": "DDLLL"
+     "form": "DLLLD"
     }
    ],
-   "updated": "2026-11-05T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   }
  ]
 }

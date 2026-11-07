@@ -232,15 +232,15 @@
     {
      "pos": 15,
      "team": "Konyaspor",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 2,
-     "l": 6,
+     "l": 7,
      "gf": 6,
-     "ga": 13,
+     "ga": 14,
      "pts": 8,
      "tid": 607,
-     "form": "DDLWL"
+     "form": "DLWLL"
     },
     {
      "pos": 16,
@@ -258,15 +258,15 @@
     {
      "pos": 17,
      "team": "Samsunspor",
-     "p": 10,
-     "w": 1,
+     "p": 11,
+     "w": 2,
      "d": 1,
      "l": 8,
-     "gf": 10,
+     "gf": 11,
      "ga": 26,
-     "pts": 4,
+     "pts": 7,
      "tid": 3603,
-     "form": "LLLLL"
+     "form": "LLLLW"
     },
     {
      "pos": 18,
@@ -919,6 +919,19 @@
       },
       {
        "pos": 5,
+       "team": "Kahramanmaraş İstiklal Spor",
+       "p": 10,
+       "w": 5,
+       "d": 2,
+       "l": 3,
+       "gf": 16,
+       "ga": 13,
+       "pts": 17,
+       "tid": 24601,
+       "form": "LWLWW"
+      },
+      {
+       "pos": 6,
        "team": "24 Erzincanspor",
        "p": 8,
        "w": 4,
@@ -931,7 +944,7 @@
        "form": "DWWWL"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "1461 Trabzon FK",
        "p": 9,
        "w": 4,
@@ -942,19 +955,6 @@
        "pts": 15,
        "tid": 6340,
        "form": "WDWDW"
-      },
-      {
-       "pos": 7,
-       "team": "Kahramanmaraş İstiklal Spor",
-       "p": 9,
-       "w": 4,
-       "d": 2,
-       "l": 3,
-       "gf": 13,
-       "ga": 12,
-       "pts": 14,
-       "tid": 24601,
-       "form": "WLWLW"
       },
       {
        "pos": 8,
@@ -1011,16 +1011,16 @@
       {
        "pos": 12,
        "team": "Ankaragücü",
-       "p": 8,
+       "p": 9,
        "w": 2,
        "d": 4,
-       "l": 2,
-       "gf": 14,
-       "ga": 10,
+       "l": 3,
+       "gf": 15,
+       "ga": 13,
        "pts": 7,
        "ded": 3,
        "tid": 1010,
-       "form": "WWDDD"
+       "form": "WDDDL"
       },
       {
        "pos": 13,

@@ -183,7 +183,7 @@
      "form": "LLLDL"
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   },
   {
    "id": "2-liga",
@@ -550,6 +550,19 @@
       },
       {
        "pos": 9,
+       "team": "Scheiblingkirchen",
+       "p": 15,
+       "w": 5,
+       "d": 6,
+       "l": 4,
+       "gf": 22,
+       "ga": 28,
+       "pts": 21,
+       "tid": 4982,
+       "form": "DLLDD"
+      },
+      {
+       "pos": 10,
        "team": "Mattersburg SV 2020",
        "p": 15,
        "w": 6,
@@ -560,19 +573,6 @@
        "pts": 20,
        "tid": 27886,
        "form": "LWLDW"
-      },
-      {
-       "pos": 10,
-       "team": "Scheiblingkirchen",
-       "p": 14,
-       "w": 5,
-       "d": 5,
-       "l": 4,
-       "gf": 21,
-       "ga": 27,
-       "pts": 20,
-       "tid": 4982,
-       "form": "WDLLD"
       },
       {
        "pos": 11,
@@ -615,6 +615,19 @@
       },
       {
        "pos": 14,
+       "team": "SV Horn",
+       "p": 15,
+       "w": 3,
+       "d": 4,
+       "l": 8,
+       "gf": 19,
+       "ga": 23,
+       "pts": 13,
+       "tid": 1397,
+       "form": "LLLDD"
+      },
+      {
+       "pos": 15,
        "team": "Favoritner AC",
        "p": 15,
        "w": 4,
@@ -625,19 +638,6 @@
        "pts": 13,
        "tid": 8367,
        "form": "WLLLL"
-      },
-      {
-       "pos": 15,
-       "team": "SV Horn",
-       "p": 14,
-       "w": 3,
-       "d": 3,
-       "l": 8,
-       "gf": 18,
-       "ga": 22,
-       "pts": 12,
-       "tid": 1397,
-       "form": "LLLLD"
       },
       {
        "pos": 16,
@@ -712,6 +712,19 @@
       },
       {
        "pos": 5,
+       "team": "Kuchl",
+       "p": 15,
+       "w": 7,
+       "d": 3,
+       "l": 5,
+       "gf": 26,
+       "ga": 27,
+       "pts": 24,
+       "tid": 14714,
+       "form": "DWLLW"
+      },
+      {
+       "pos": 6,
        "team": "Bad Schallerbach",
        "p": 14,
        "w": 6,
@@ -722,19 +735,6 @@
        "pts": 22,
        "tid": 8294,
        "form": "WLDDW"
-      },
-      {
-       "pos": 6,
-       "team": "Kuchl",
-       "p": 14,
-       "w": 6,
-       "d": 3,
-       "l": 5,
-       "gf": 25,
-       "ga": 27,
-       "pts": 21,
-       "tid": 14714,
-       "form": "WDWLL"
       },
       {
        "pos": 7,
@@ -843,15 +843,15 @@
       {
        "pos": 15,
        "team": "Pinzgau Saalfelden",
-       "p": 14,
+       "p": 15,
        "w": 1,
        "d": 3,
-       "l": 10,
+       "l": 11,
        "gf": 17,
-       "ga": 35,
+       "ga": 36,
        "pts": 6,
        "tid": 4980,
-       "form": "LLLLD"
+       "form": "LLLDL"
       }
      ]
     },
@@ -1074,6 +1074,19 @@
      "rows": [
       {
        "pos": 1,
+       "team": "Schwaz",
+       "p": 15,
+       "w": 12,
+       "d": 1,
+       "l": 2,
+       "gf": 45,
+       "ga": 22,
+       "pts": 37,
+       "tid": 4957,
+       "form": "WWWWW"
+      },
+      {
+       "pos": 2,
        "team": "Hohenems",
        "p": 15,
        "w": 12,
@@ -1086,7 +1099,7 @@
        "form": "LLWWW"
       },
       {
-       "pos": 2,
+       "pos": 3,
        "team": "Imst",
        "p": 14,
        "w": 11,
@@ -1099,20 +1112,20 @@
        "form": "WWWWW"
       },
       {
-       "pos": 3,
-       "team": "Schwaz",
-       "p": 14,
-       "w": 11,
+       "pos": 4,
+       "team": "Kitzbühel",
+       "p": 15,
+       "w": 9,
        "d": 1,
-       "l": 2,
-       "gf": 39,
-       "ga": 22,
-       "pts": 34,
-       "tid": 4957,
-       "form": "WWWWW"
+       "l": 5,
+       "gf": 32,
+       "ga": 21,
+       "pts": 28,
+       "tid": 4947,
+       "form": "LDWLW"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Dornbirn",
        "p": 15,
        "w": 7,
@@ -1123,19 +1136,6 @@
        "pts": 25,
        "tid": 4255,
        "form": "WDLLD"
-      },
-      {
-       "pos": 5,
-       "team": "Kitzbühel",
-       "p": 14,
-       "w": 8,
-       "d": 1,
-       "l": 5,
-       "gf": 29,
-       "ga": 21,
-       "pts": 25,
-       "tid": 4947,
-       "form": "WLDWL"
       },
       {
        "pos": 6,
@@ -1231,15 +1231,15 @@
       {
        "pos": 13,
        "team": "Lochau",
-       "p": 14,
+       "p": 15,
        "w": 3,
        "d": 2,
-       "l": 9,
+       "l": 10,
        "gf": 16,
-       "ga": 35,
+       "ga": 38,
        "pts": 11,
        "tid": 8359,
-       "form": "DWLLL"
+       "form": "WLLLL"
       },
       {
        "pos": 14,
@@ -1257,15 +1257,15 @@
       {
        "pos": 15,
        "team": "Lustenau",
-       "p": 14,
+       "p": 15,
        "w": 1,
        "d": 5,
-       "l": 8,
+       "l": 9,
        "gf": 18,
-       "ga": 39,
+       "ga": 45,
        "pts": 8,
        "tid": 8361,
-       "form": "DLLLD"
+       "form": "LLLDL"
       },
       {
        "pos": 16,

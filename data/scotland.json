@@ -4,7 +4,7 @@
  "adjective": "Scottish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-06T00:00:00.000Z",
+ "updated": "2026-11-07T00:00:00.000Z",
  "belowNote": "The Highland/Lowland League play-off winner can come up",
  "leagues": [
   {
@@ -189,7 +189,7 @@
      "form": "DLLLD"
     }
    ],
-   "updated": "2026-11-03T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   },
   {
    "id": "scottish-championship",
@@ -357,7 +357,7 @@
      "form": "LWLLL"
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   },
   {
    "id": "scottish-league-one",
@@ -444,7 +444,7 @@
      "ga": 17,
      "pts": 18,
      "tid": 6765,
-     "form": "WDDL"
+     "form": "WWDDL"
     },
     {
      "pos": 5,
@@ -522,10 +522,10 @@
      "ga": 18,
      "pts": 9,
      "tid": 6763,
-     "form": "LDLW"
+     "form": "LLDLW"
     }
    ],
-   "updated": "2026-11-03T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   },
   {
    "id": "scottish-league-two",
@@ -690,7 +690,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-03T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   }
  ]
 }
