@@ -93,15 +93,15 @@
     {
      "pos": 6,
      "team": "Tijuana",
-     "p": 15,
+     "p": 16,
      "w": 5,
      "d": 7,
-     "l": 3,
+     "l": 4,
      "gf": 25,
-     "ga": 21,
+     "ga": 22,
      "pts": 22,
      "tid": 2280,
-     "form": "DDWDD"
+     "form": "DWDDL"
     },
     {
      "pos": 7,
@@ -184,15 +184,15 @@
     {
      "pos": 13,
      "team": "Atlético San Luis",
-     "p": 15,
+     "p": 16,
      "w": 5,
      "d": 4,
-     "l": 6,
+     "l": 7,
      "gf": 19,
-     "ga": 23,
+     "ga": 24,
      "pts": 19,
      "tid": 2314,
-     "form": "LDWWL"
+     "form": "DWWLL"
     },
     {
      "pos": 14,
@@ -236,28 +236,28 @@
     {
      "pos": 17,
      "team": "Necaxa",
-     "p": 15,
-     "w": 2,
+     "p": 16,
+     "w": 3,
      "d": 4,
      "l": 9,
-     "gf": 16,
+     "gf": 17,
      "ga": 28,
-     "pts": 10,
+     "pts": 13,
      "tid": 2288,
-     "form": "DLLDL"
+     "form": "LLDLW"
     },
     {
      "pos": 18,
      "team": "FC Juárez",
-     "p": 15,
-     "w": 2,
+     "p": 16,
+     "w": 3,
      "d": 2,
      "l": 11,
-     "gf": 12,
+     "gf": 13,
      "ga": 34,
-     "pts": 8,
+     "pts": 11,
      "tid": 2298,
-     "form": "DLLDW"
+     "form": "LLDWW"
     }
    ],
    "updated": "2026-11-06T00:00:00.000Z"
@@ -563,15 +563,15 @@
     {
      "pos": 2,
      "team": "Acatlan",
-     "p": 10,
+     "p": 11,
      "w": 7,
      "d": 1,
-     "l": 2,
-     "gf": 24,
-     "ga": 17,
+     "l": 3,
+     "gf": 25,
+     "ga": 20,
      "pts": 23,
      "tid": 24949,
-     "form": "WLWWW"
+     "form": "LWWWL"
     },
     {
      "pos": 2,
@@ -733,16 +733,16 @@
     {
      "pos": 8,
      "team": "Real Refineros",
-     "p": 10,
-     "w": 4,
+     "p": 11,
+     "w": 5,
      "d": 1,
      "l": 5,
-     "gf": 17,
-     "ga": 24,
-     "pts": 12,
+     "gf": 20,
+     "ga": 25,
+     "pts": 15,
      "ded": 1,
      "tid": 28307,
-     "form": "LLWLW"
+     "form": "LWLWW"
     },
     {
      "pos": 9,

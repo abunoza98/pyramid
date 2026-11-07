@@ -83,15 +83,15 @@
     {
      "pos": 4,
      "team": "Fluminense",
-     "p": 33,
-     "w": 15,
+     "p": 34,
+     "w": 16,
      "d": 9,
      "l": 9,
-     "gf": 52,
+     "gf": 55,
      "ga": 42,
-     "pts": 54,
+     "pts": 57,
      "tid": 124,
-     "form": "WLLLW"
+     "form": "LLLWW"
     },
     {
      "pos": 5,
@@ -226,15 +226,15 @@
     {
      "pos": 15,
      "team": "Vitória",
-     "p": 33,
+     "p": 34,
      "w": 10,
      "d": 8,
-     "l": 15,
+     "l": 16,
      "gf": 35,
-     "ga": 48,
+     "ga": 51,
      "pts": 38,
      "tid": 136,
-     "form": "WLDDL"
+     "form": "LDDLL"
     },
     {
      "pos": 16,
