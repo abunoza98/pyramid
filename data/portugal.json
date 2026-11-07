@@ -108,15 +108,15 @@
     {
      "pos": 5,
      "team": "Arouca",
-     "p": 10,
+     "p": 11,
      "w": 6,
      "d": 2,
-     "l": 2,
+     "l": 3,
      "gf": 13,
-     "ga": 7,
+     "ga": 8,
      "pts": 20,
      "tid": 240,
-     "form": "LDWWW"
+     "form": "DWWWL"
     },
     {
      "pos": 6,
@@ -172,6 +172,19 @@
     },
     {
      "pos": 10,
+     "team": "Famalicão",
+     "p": 11,
+     "w": 3,
+     "d": 4,
+     "l": 4,
+     "gf": 15,
+     "ga": 14,
+     "pts": 13,
+     "tid": 242,
+     "form": "WLWLW"
+    },
+    {
+     "pos": 11,
      "team": "Alverca",
      "p": 10,
      "w": 3,
@@ -182,19 +195,6 @@
      "pts": 11,
      "tid": 4724,
      "form": "WWWLL"
-    },
-    {
-     "pos": 11,
-     "team": "Famalicão",
-     "p": 10,
-     "w": 2,
-     "d": 4,
-     "l": 4,
-     "gf": 14,
-     "ga": 14,
-     "pts": 10,
-     "tid": 242,
-     "form": "DWLWL"
     },
     {
      "pos": 12,
