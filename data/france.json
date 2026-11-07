@@ -56,13 +56,13 @@
     {
      "pos": 1,
      "team": "Paris Saint-Germain",
-     "p": 9,
-     "w": 6,
+     "p": 10,
+     "w": 7,
      "d": 2,
      "l": 1,
-     "gf": 21,
+     "gf": 22,
      "ga": 10,
-     "pts": 20,
+     "pts": 23,
      "tid": 85,
      "form": "WWWWW"
     },
@@ -251,15 +251,15 @@
     {
      "pos": 16,
      "team": "Troyes",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 2,
-     "l": 5,
+     "l": 6,
      "gf": 7,
-     "ga": 16,
+     "ga": 17,
      "pts": 8,
      "tid": 110,
-     "form": "LLLDW"
+     "form": "LLDWL"
     },
     {
      "pos": 17,

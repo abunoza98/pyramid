@@ -332,13 +332,13 @@
     {
      "pos": 1,
      "team": "Beerschot VA",
-     "p": 9,
-     "w": 8,
+     "p": 10,
+     "w": 9,
      "d": 0,
      "l": 1,
-     "gf": 23,
-     "ga": 7,
-     "pts": 24,
+     "gf": 25,
+     "ga": 8,
+     "pts": 27,
      "tid": 263,
      "form": "WWWWW"
     },
@@ -410,15 +410,15 @@
     {
      "pos": 7,
      "team": "Excelsior Virton",
-     "p": 8,
+     "p": 9,
      "w": 4,
      "d": 1,
-     "l": 3,
-     "gf": 14,
-     "ga": 10,
+     "l": 4,
+     "gf": 15,
+     "ga": 12,
      "pts": 13,
      "tid": 4715,
-     "form": "WDLLW"
+     "form": "DLLWL"
     },
     {
      "pos": 8,

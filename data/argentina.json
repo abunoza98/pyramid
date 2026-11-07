@@ -47,15 +47,15 @@
       {
        "pos": 2,
        "team": "Boca Juniors",
-       "p": 15,
-       "w": 8,
+       "p": 16,
+       "w": 9,
        "d": 6,
        "l": 1,
-       "gf": 23,
+       "gf": 24,
        "ga": 14,
-       "pts": 30,
+       "pts": 33,
        "tid": 451,
-       "form": "WDWWW"
+       "form": "DWWWW"
       },
       {
        "pos": 3,
@@ -73,15 +73,15 @@
       {
        "pos": 4,
        "team": "Defensa Y Justicia",
-       "p": 15,
+       "p": 16,
        "w": 8,
        "d": 4,
-       "l": 3,
+       "l": 4,
        "gf": 21,
-       "ga": 14,
+       "ga": 15,
        "pts": 28,
        "tid": 442,
-       "form": "WWLWD"
+       "form": "WLWDL"
       },
       {
        "pos": 5,
@@ -235,28 +235,28 @@
       {
        "pos": 1,
        "team": "Rosario Central",
-       "p": 15,
-       "w": 9,
+       "p": 16,
+       "w": 10,
        "d": 4,
        "l": 2,
-       "gf": 24,
+       "gf": 26,
        "ga": 12,
-       "pts": 31,
+       "pts": 34,
        "tid": 437,
-       "form": "DWWWW"
+       "form": "WWWWW"
       },
       {
        "pos": 2,
        "team": "Argentinos Juniors",
-       "p": 15,
+       "p": 16,
        "w": 9,
        "d": 4,
-       "l": 2,
+       "l": 3,
        "gf": 20,
-       "ga": 12,
+       "ga": 14,
        "pts": 31,
        "tid": 458,
-       "form": "WDWWW"
+       "form": "DWWWL"
       },
       {
        "pos": 3,
@@ -325,6 +325,19 @@
       },
       {
        "pos": 8,
+       "team": "Huracán",
+       "p": 16,
+       "w": 6,
+       "d": 4,
+       "l": 6,
+       "gf": 14,
+       "ga": 16,
+       "pts": 22,
+       "tid": 445,
+       "form": "LLLLW"
+      },
+      {
+       "pos": 9,
        "team": "Sarmiento",
        "p": 16,
        "w": 6,
@@ -337,7 +350,7 @@
        "form": "DDLLL"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Tigre",
        "p": 16,
        "w": 5,
@@ -348,19 +361,6 @@
        "pts": 19,
        "tid": 452,
        "form": "LDLWW"
-      },
-      {
-       "pos": 10,
-       "team": "Huracán",
-       "p": 15,
-       "w": 5,
-       "d": 4,
-       "l": 6,
-       "gf": 12,
-       "ga": 16,
-       "pts": 19,
-       "tid": 445,
-       "form": "WLLLL"
       },
       {
        "pos": 11,
@@ -417,15 +417,15 @@
       {
        "pos": 15,
        "team": "Estudiantes (Río Cuarto)",
-       "p": 15,
+       "p": 16,
        "w": 2,
        "d": 3,
-       "l": 10,
+       "l": 11,
        "gf": 10,
-       "ga": 21,
+       "ga": 23,
        "pts": 9,
        "tid": 2424,
-       "form": "LLWLL"
+       "form": "LWLLL"
       }
      ]
     }

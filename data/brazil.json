@@ -336,15 +336,15 @@
     {
      "pos": 1,
      "team": "Novorizontino",
-     "p": 36,
-     "w": 19,
+     "p": 37,
+     "w": 20,
      "d": 10,
      "l": 7,
-     "gf": 64,
-     "ga": 31,
-     "pts": 67,
+     "gf": 66,
+     "ga": 32,
+     "pts": 70,
      "tid": 7834,
-     "form": "WWDWW"
+     "form": "WDWWW"
     },
     {
      "pos": 2,
@@ -388,15 +388,15 @@
     {
      "pos": 5,
      "team": "Fortaleza",
-     "p": 36,
+     "p": 37,
      "w": 16,
      "d": 14,
-     "l": 6,
-     "gf": 43,
-     "ga": 31,
+     "l": 7,
+     "gf": 44,
+     "ga": 33,
      "pts": 62,
      "tid": 154,
-     "form": "WDWDD"
+     "form": "DWDDL"
     },
     {
      "pos": 6,

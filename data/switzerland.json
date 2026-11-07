@@ -673,18 +673,31 @@
       {
        "pos": 4,
        "team": "Servette II",
-       "p": 12,
+       "p": 13,
        "w": 6,
        "d": 4,
-       "l": 2,
-       "gf": 23,
-       "ga": 21,
+       "l": 3,
+       "gf": 25,
+       "ga": 24,
        "pts": 22,
        "tid": 16323,
-       "form": "WDWDL"
+       "form": "DWDLL"
       },
       {
        "pos": 5,
+       "team": "Monthey",
+       "p": 13,
+       "w": 5,
+       "d": 5,
+       "l": 3,
+       "gf": 21,
+       "ga": 18,
+       "pts": 20,
+       "tid": 6631,
+       "form": "LWLWW"
+      },
+      {
+       "pos": 6,
        "team": "Sion II",
        "p": 13,
        "w": 5,
@@ -697,7 +710,7 @@
        "form": "DLLWL"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Lausanne-Sport II",
        "p": 12,
        "w": 4,
@@ -708,19 +721,6 @@
        "pts": 17,
        "tid": 12693,
        "form": "WDDLL"
-      },
-      {
-       "pos": 7,
-       "team": "Monthey",
-       "p": 12,
-       "w": 4,
-       "d": 5,
-       "l": 3,
-       "gf": 18,
-       "ga": 16,
-       "pts": 17,
-       "tid": 6631,
-       "form": "WLWLW"
       },
       {
        "pos": 8,

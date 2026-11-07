@@ -56,6 +56,19 @@
     },
     {
      "pos": 2,
+     "team": "Roma",
+     "p": 11,
+     "w": 8,
+     "d": 3,
+     "l": 0,
+     "gf": 31,
+     "ga": 10,
+     "pts": 27,
+     "tid": 497,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 3,
      "team": "Inter Milan",
      "p": 10,
      "w": 8,
@@ -66,19 +79,6 @@
      "pts": 25,
      "tid": 505,
      "form": "WWWWL"
-    },
-    {
-     "pos": 3,
-     "team": "Roma",
-     "p": 10,
-     "w": 7,
-     "d": 3,
-     "l": 0,
-     "gf": 28,
-     "ga": 10,
-     "pts": 24,
-     "tid": 497,
-     "form": "DWDWW"
     },
     {
      "pos": 4,
@@ -252,15 +252,15 @@
     {
      "pos": 17,
      "team": "Sassuolo",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 2,
-     "l": 6,
+     "l": 7,
      "gf": 16,
-     "ga": 26,
+     "ga": 29,
      "pts": 8,
      "tid": 488,
-     "form": "DLLLL"
+     "form": "LLLLL"
     },
     {
      "pos": 18,
