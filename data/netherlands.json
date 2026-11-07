@@ -410,15 +410,15 @@
     {
      "pos": 8,
      "team": "FC Den Bosch",
-     "p": 13,
+     "p": 14,
      "w": 5,
-     "d": 3,
+     "d": 4,
      "l": 5,
-     "gf": 23,
-     "ga": 21,
-     "pts": 18,
+     "gf": 24,
+     "ga": 22,
+     "pts": 19,
      "tid": 421,
-     "form": "DWWDW"
+     "form": "WWDWD"
     },
     {
      "pos": 9,
@@ -552,6 +552,19 @@
     },
     {
      "pos": 19,
+     "team": "Jong Utrecht",
+     "p": 14,
+     "w": 3,
+     "d": 2,
+     "l": 9,
+     "gf": 23,
+     "ga": 34,
+     "pts": 11,
+     "tid": 428,
+     "form": "LLLWD"
+    },
+    {
+     "pos": 20,
      "team": "FC Eindhoven",
      "p": 14,
      "w": 3,
@@ -562,19 +575,6 @@
      "pts": 11,
      "tid": 422,
      "form": "LLLLL"
-    },
-    {
-     "pos": 20,
-     "team": "Jong Utrecht",
-     "p": 13,
-     "w": 3,
-     "d": 1,
-     "l": 9,
-     "gf": 22,
-     "ga": 33,
-     "pts": 10,
-     "tid": 428,
-     "form": "LLLLW"
     }
    ],
    "updated": "2026-11-07T00:00:00.000Z"

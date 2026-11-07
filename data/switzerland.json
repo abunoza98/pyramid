@@ -49,28 +49,28 @@
     {
      "pos": 2,
      "team": "BSC Young Boys",
-     "p": 12,
-     "w": 7,
+     "p": 13,
+     "w": 8,
      "d": 4,
      "l": 1,
-     "gf": 38,
-     "ga": 23,
-     "pts": 25,
+     "gf": 41,
+     "ga": 25,
+     "pts": 28,
      "tid": 565,
-     "form": "DWWWL"
+     "form": "WWWLW"
     },
     {
      "pos": 3,
      "team": "FC Sion",
-     "p": 12,
-     "w": 7,
+     "p": 13,
+     "w": 8,
      "d": 2,
      "l": 3,
-     "gf": 25,
+     "gf": 29,
      "ga": 18,
-     "pts": 23,
+     "pts": 26,
      "tid": 630,
-     "form": "WDLWD"
+     "form": "DLWDW"
     },
     {
      "pos": 4,
@@ -127,15 +127,15 @@
     {
      "pos": 8,
      "team": "FC Luzern",
-     "p": 12,
+     "p": 13,
      "w": 3,
      "d": 4,
-     "l": 5,
-     "gf": 19,
-     "ga": 25,
+     "l": 6,
+     "gf": 21,
+     "ga": 28,
      "pts": 13,
      "tid": 644,
-     "form": "LWLLD"
+     "form": "WLLDL"
     },
     {
      "pos": 9,
@@ -153,15 +153,15 @@
     {
      "pos": 10,
      "team": "FC Vaduz",
-     "p": 12,
+     "p": 13,
      "w": 3,
      "d": 1,
-     "l": 8,
+     "l": 9,
      "gf": 24,
-     "ga": 25,
+     "ga": 29,
      "pts": 10,
      "tid": 660,
-     "form": "LLWLD"
+     "form": "LWLDL"
     },
     {
      "pos": 11,
@@ -237,15 +237,15 @@
     {
      "pos": 2,
      "team": "FC Winterthur",
-     "p": 12,
+     "p": 13,
      "w": 7,
-     "d": 3,
+     "d": 4,
      "l": 2,
-     "gf": 26,
-     "ga": 11,
-     "pts": 24,
+     "gf": 28,
+     "ga": 13,
+     "pts": 25,
      "tid": 2180,
-     "form": "WWLWW"
+     "form": "WLWWD"
     },
     {
      "pos": 3,
@@ -301,6 +301,19 @@
     },
     {
      "pos": 7,
+     "team": "Étoile Carouge",
+     "p": 13,
+     "w": 3,
+     "d": 5,
+     "l": 5,
+     "gf": 14,
+     "ga": 19,
+     "pts": 14,
+     "tid": 6654,
+     "form": "LLWDD"
+    },
+    {
+     "pos": 8,
      "team": "FC Wil",
      "p": 13,
      "w": 3,
@@ -311,19 +324,6 @@
      "pts": 14,
      "tid": 2179,
      "form": "WDDLW"
-    },
-    {
-     "pos": 8,
-     "team": "Étoile Carouge",
-     "p": 12,
-     "w": 3,
-     "d": 4,
-     "l": 5,
-     "gf": 12,
-     "ga": 17,
-     "pts": 13,
-     "tid": 6654,
-     "form": "LLLWD"
     },
     {
      "pos": 9,
@@ -382,15 +382,15 @@
     {
      "pos": 1,
      "team": "FC Schaffhausen",
-     "p": 13,
+     "p": 14,
      "w": 10,
-     "d": 1,
+     "d": 2,
      "l": 2,
-     "gf": 33,
-     "ga": 15,
-     "pts": 31,
+     "gf": 35,
+     "ga": 17,
+     "pts": 32,
      "tid": 2182,
-     "form": "WWWWW"
+     "form": "WWWWD"
     },
     {
      "pos": 2,
@@ -499,15 +499,15 @@
     {
      "pos": 10,
      "team": "Basel II",
-     "p": 14,
+     "p": 15,
      "w": 6,
-     "d": 1,
+     "d": 2,
      "l": 7,
-     "gf": 24,
-     "ga": 26,
-     "pts": 19,
+     "gf": 26,
+     "ga": 28,
+     "pts": 20,
      "tid": 10585,
-     "form": "WDWLL"
+     "form": "DWLLD"
     },
     {
      "pos": 11,
@@ -659,6 +659,19 @@
       },
       {
        "pos": 3,
+       "team": "Portalban / Gletterens",
+       "p": 13,
+       "w": 7,
+       "d": 2,
+       "l": 4,
+       "gf": 23,
+       "ga": 15,
+       "pts": 23,
+       "tid": 16337,
+       "form": "WWWWW"
+      },
+      {
+       "pos": 4,
        "team": "Servette II",
        "p": 12,
        "w": 6,
@@ -671,30 +684,17 @@
        "form": "WDWDL"
       },
       {
-       "pos": 4,
-       "team": "Portalban / Gletterens",
-       "p": 12,
-       "w": 6,
-       "d": 2,
-       "l": 4,
-       "gf": 21,
-       "ga": 14,
-       "pts": 20,
-       "tid": 16337,
-       "form": "DWWWW"
-      },
-      {
        "pos": 5,
        "team": "Sion II",
-       "p": 12,
+       "p": 13,
        "w": 5,
        "d": 4,
-       "l": 3,
+       "l": 4,
        "gf": 17,
-       "ga": 14,
+       "ga": 18,
        "pts": 19,
        "tid": 10590,
-       "form": "WDLLW"
+       "form": "DLLWL"
       },
       {
        "pos": 6,
@@ -738,31 +738,70 @@
       {
        "pos": 9,
        "team": "Naters",
-       "p": 12,
+       "p": 13,
        "w": 5,
        "d": 2,
-       "l": 5,
-       "gf": 23,
-       "ga": 31,
+       "l": 6,
+       "gf": 24,
+       "ga": 33,
        "pts": 17,
        "tid": 12695,
-       "form": "WLLWL"
+       "form": "LLWLL"
       },
       {
        "pos": 10,
        "team": "Lancy",
-       "p": 12,
+       "p": 13,
        "w": 5,
        "d": 1,
-       "l": 6,
-       "gf": 20,
-       "ga": 20,
+       "l": 7,
+       "gf": 22,
+       "ga": 23,
        "pts": 16,
        "tid": 6628,
-       "form": "LWWLW"
+       "form": "WWLWL"
       },
       {
        "pos": 11,
+       "team": "La Chaux-de-Fonds",
+       "p": 13,
+       "w": 5,
+       "d": 1,
+       "l": 7,
+       "gf": 17,
+       "ga": 32,
+       "pts": 16,
+       "tid": 10592,
+       "form": "LLWLW"
+      },
+      {
+       "pos": 12,
+       "team": "Echallens",
+       "p": 13,
+       "w": 4,
+       "d": 3,
+       "l": 6,
+       "gf": 20,
+       "ga": 28,
+       "pts": 15,
+       "tid": 6623,
+       "form": "WLLLW"
+      },
+      {
+       "pos": 13,
+       "team": "Meyrin",
+       "p": 13,
+       "w": 4,
+       "d": 2,
+       "l": 7,
+       "gf": 21,
+       "ga": 22,
+       "pts": 14,
+       "tid": 6630,
+       "form": "LDLLW"
+      },
+      {
+       "pos": 14,
        "team": "Coffrane",
        "p": 12,
        "w": 3,
@@ -773,45 +812,6 @@
        "pts": 13,
        "tid": 17413,
        "form": "WDLWW"
-      },
-      {
-       "pos": 12,
-       "team": "La Chaux-de-Fonds",
-       "p": 12,
-       "w": 4,
-       "d": 1,
-       "l": 7,
-       "gf": 16,
-       "ga": 32,
-       "pts": 13,
-       "tid": 10592,
-       "form": "LLLWL"
-      },
-      {
-       "pos": 13,
-       "team": "Echallens",
-       "p": 12,
-       "w": 3,
-       "d": 3,
-       "l": 6,
-       "gf": 16,
-       "ga": 28,
-       "pts": 12,
-       "tid": 6623,
-       "form": "LWLLL"
-      },
-      {
-       "pos": 14,
-       "team": "Meyrin",
-       "p": 12,
-       "w": 3,
-       "d": 2,
-       "l": 7,
-       "gf": 18,
-       "ga": 20,
-       "pts": 11,
-       "tid": 6630,
-       "form": "LLDLL"
       },
       {
        "pos": 15,
@@ -829,15 +829,15 @@
       {
        "pos": 16,
        "team": "Vevey Sports",
-       "p": 12,
+       "p": 13,
        "w": 1,
        "d": 1,
-       "l": 10,
+       "l": 11,
        "gf": 17,
-       "ga": 35,
+       "ga": 36,
        "pts": 4,
        "tid": 12697,
-       "form": "LWLLL"
+       "form": "WLLLL"
       }
      ]
     },

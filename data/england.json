@@ -38,15 +38,15 @@
     {
      "pos": 1,
      "team": "Arsenal",
-     "p": 9,
-     "w": 8,
+     "p": 10,
+     "w": 9,
      "d": 0,
      "l": 1,
-     "gf": 14,
+     "gf": 15,
      "ga": 5,
-     "pts": 24,
+     "pts": 27,
      "tid": 42,
-     "form": "LWWWW"
+     "form": "WWWWW"
     },
     {
      "pos": 2,
@@ -167,6 +167,19 @@
     },
     {
      "pos": 11,
+     "team": "Newcastle United",
+     "p": 10,
+     "w": 3,
+     "d": 3,
+     "l": 4,
+     "gf": 13,
+     "ga": 16,
+     "pts": 12,
+     "tid": 34,
+     "form": "LLWLD"
+    },
+    {
+     "pos": 12,
      "team": "Aston Villa",
      "p": 9,
      "w": 3,
@@ -179,30 +192,17 @@
      "form": "WDWWD"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Hull City",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 5,
-     "l": 2,
+     "l": 3,
      "gf": 11,
-     "ga": 10,
+     "ga": 11,
      "pts": 11,
      "tid": 64,
-     "form": "LDLDD"
-    },
-    {
-     "pos": 13,
-     "team": "Newcastle United",
-     "p": 9,
-     "w": 3,
-     "d": 2,
-     "l": 4,
-     "gf": 12,
-     "ga": 15,
-     "pts": 11,
-     "tid": 34,
-     "form": "WLLWL"
+     "form": "DLDDL"
     },
     {
      "pos": 14,
@@ -220,15 +220,15 @@
     {
      "pos": 15,
      "team": "Fulham",
-     "p": 9,
+     "p": 10,
      "w": 2,
-     "d": 3,
+     "d": 4,
      "l": 4,
-     "gf": 9,
-     "ga": 11,
-     "pts": 9,
+     "gf": 10,
+     "ga": 12,
+     "pts": 10,
      "tid": 36,
-     "form": "DLWWD"
+     "form": "LWWDD"
     },
     {
      "pos": 16,

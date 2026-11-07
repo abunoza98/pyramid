@@ -381,6 +381,19 @@
     },
     {
      "pos": 5,
+     "team": "Académica",
+     "p": 10,
+     "w": 5,
+     "d": 1,
+     "l": 4,
+     "gf": 16,
+     "ga": 13,
+     "pts": 16,
+     "tid": 239,
+     "form": "LWWLD"
+    },
+    {
+     "pos": 6,
      "team": "Farense",
      "p": 9,
      "w": 4,
@@ -391,19 +404,6 @@
      "pts": 15,
      "tid": 231,
      "form": "DWWLD"
-    },
-    {
-     "pos": 6,
-     "team": "Académica",
-     "p": 9,
-     "w": 5,
-     "d": 0,
-     "l": 4,
-     "gf": 15,
-     "ga": 12,
-     "pts": 15,
-     "tid": 239,
-     "form": "LLWWL"
     },
     {
      "pos": 7,
@@ -498,6 +498,19 @@
     },
     {
      "pos": 14,
+     "team": "Amarante",
+     "p": 10,
+     "w": 2,
+     "d": 3,
+     "l": 5,
+     "gf": 9,
+     "ga": 13,
+     "pts": 9,
+     "tid": 4725,
+     "form": "DLLWD"
+    },
+    {
+     "pos": 15,
      "team": "Felgueiras 1932",
      "p": 10,
      "w": 1,
@@ -508,19 +521,6 @@
      "pts": 8,
      "tid": 4744,
      "form": "LLDLD"
-    },
-    {
-     "pos": 15,
-     "team": "Amarante",
-     "p": 9,
-     "w": 2,
-     "d": 2,
-     "l": 5,
-     "gf": 8,
-     "ga": 12,
-     "pts": 8,
-     "tid": 4725,
-     "form": "LDLLW"
     },
     {
      "pos": 16,
