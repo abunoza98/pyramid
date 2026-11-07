@@ -588,6 +588,32 @@
     },
     {
      "pos": 3,
+     "team": "Mineros de Fresnillo",
+     "p": 11,
+     "w": 6,
+     "d": 3,
+     "l": 2,
+     "gf": 19,
+     "ga": 8,
+     "pts": 22,
+     "tid": 15935,
+     "form": "WDWLW"
+    },
+    {
+     "pos": 3,
+     "team": "Acambaro",
+     "p": 11,
+     "w": 7,
+     "d": 1,
+     "l": 3,
+     "gf": 32,
+     "ga": 15,
+     "pts": 23,
+     "tid": 22051,
+     "form": "WWWWL"
+    },
+    {
+     "pos": 4,
      "team": "La Tribu de Cd. Juarez",
      "p": 10,
      "w": 6,
@@ -598,32 +624,6 @@
      "pts": 19,
      "tid": 28306,
      "form": "LLWWL"
-    },
-    {
-     "pos": 3,
-     "team": "Acambaro",
-     "p": 10,
-     "w": 7,
-     "d": 1,
-     "l": 2,
-     "gf": 31,
-     "ga": 12,
-     "pts": 23,
-     "tid": 22051,
-     "form": "LWWWW"
-    },
-    {
-     "pos": 4,
-     "team": "Mineros de Fresnillo",
-     "p": 10,
-     "w": 5,
-     "d": 3,
-     "l": 2,
-     "gf": 16,
-     "ga": 7,
-     "pts": 19,
-     "tid": 15935,
-     "form": "WWDWL"
     },
     {
      "pos": 4,

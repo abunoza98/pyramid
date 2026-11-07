@@ -68,6 +68,19 @@
     },
     {
      "pos": 2,
+     "team": "Paris FC",
+     "p": 10,
+     "w": 6,
+     "d": 2,
+     "l": 2,
+     "gf": 17,
+     "ga": 10,
+     "pts": 20,
+     "tid": 114,
+     "form": "LWLWW"
+    },
+    {
+     "pos": 3,
      "team": "Lille",
      "p": 9,
      "w": 5,
@@ -80,7 +93,7 @@
      "form": "LWDDW"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Lyon",
      "p": 9,
      "w": 5,
@@ -90,19 +103,6 @@
      "ga": 7,
      "pts": 17,
      "tid": 80,
-     "form": "WLWLW"
-    },
-    {
-     "pos": 4,
-     "team": "Paris FC",
-     "p": 9,
-     "w": 5,
-     "d": 2,
-     "l": 2,
-     "gf": 16,
-     "ga": 10,
-     "pts": 17,
-     "tid": 114,
      "form": "WLWLW"
     },
     {
@@ -225,15 +225,15 @@
     {
      "pos": 14,
      "team": "Auxerre",
-     "p": 9,
+     "p": 10,
      "w": 3,
      "d": 1,
-     "l": 5,
+     "l": 6,
      "gf": 13,
-     "ga": 23,
+     "ga": 24,
      "pts": 10,
      "tid": 108,
-     "form": "WLWDL"
+     "form": "LWDLL"
     },
     {
      "pos": 15,

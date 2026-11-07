@@ -122,15 +122,15 @@
     {
      "pos": 7,
      "team": "Athletic Bilbao",
-     "p": 10,
+     "p": 11,
      "w": 4,
-     "d": 3,
+     "d": 4,
      "l": 3,
-     "gf": 14,
-     "ga": 10,
-     "pts": 15,
+     "gf": 15,
+     "ga": 11,
+     "pts": 16,
      "tid": 531,
-     "form": "DDLWW"
+     "form": "DLWWD"
     },
     {
      "pos": 8,
@@ -239,15 +239,15 @@
     {
      "pos": 16,
      "team": "Osasuna",
-     "p": 11,
+     "p": 12,
      "w": 3,
-     "d": 2,
+     "d": 3,
      "l": 6,
-     "gf": 11,
-     "ga": 22,
-     "pts": 11,
+     "gf": 12,
+     "ga": 23,
+     "pts": 12,
      "tid": 727,
-     "form": "DLWLL"
+     "form": "LWLLD"
     },
     {
      "pos": 17,
@@ -454,6 +454,19 @@
     },
     {
      "pos": 10,
+     "team": "Córdoba",
+     "p": 13,
+     "w": 6,
+     "d": 1,
+     "l": 6,
+     "gf": 22,
+     "ga": 22,
+     "pts": 19,
+     "tid": 713,
+     "form": "LWWDW"
+    },
+    {
+     "pos": 11,
      "team": "Sabadell",
      "p": 12,
      "w": 4,
@@ -466,7 +479,7 @@
      "form": "DWLDL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Las Palmas",
      "p": 12,
      "w": 5,
@@ -477,19 +490,6 @@
      "pts": 17,
      "tid": 534,
      "form": "DLLWW"
-    },
-    {
-     "pos": 12,
-     "team": "Córdoba",
-     "p": 12,
-     "w": 5,
-     "d": 1,
-     "l": 6,
-     "gf": 19,
-     "ga": 22,
-     "pts": 16,
-     "tid": 713,
-     "form": "WLWWD"
     },
     {
      "pos": 13,
@@ -546,15 +546,15 @@
     {
      "pos": 17,
      "team": "Leganés",
-     "p": 12,
+     "p": 13,
      "w": 3,
      "d": 3,
-     "l": 6,
-     "gf": 10,
-     "ga": 20,
+     "l": 7,
+     "gf": 11,
+     "ga": 23,
      "pts": 12,
      "tid": 537,
-     "form": "LLLDL"
+     "form": "LLDLL"
     },
     {
      "pos": 18,
@@ -598,28 +598,28 @@
     {
      "pos": 21,
      "team": "Albacete",
-     "p": 12,
-     "w": 2,
+     "p": 13,
+     "w": 3,
      "d": 1,
      "l": 9,
-     "gf": 10,
-     "ga": 23,
-     "pts": 7,
+     "gf": 13,
+     "ga": 24,
+     "pts": 10,
      "tid": 722,
-     "form": "LLLWW"
+     "form": "LLWWW"
     },
     {
      "pos": 22,
      "team": "Ceuta",
-     "p": 12,
+     "p": 13,
      "w": 1,
      "d": 2,
-     "l": 9,
+     "l": 10,
      "gf": 10,
-     "ga": 27,
+     "ga": 30,
      "pts": 5,
      "tid": 10139,
-     "form": "DLLLL"
+     "form": "LLLLL"
     }
    ],
    "updated": "2026-11-07T00:00:00.000Z"
@@ -829,6 +829,19 @@
       },
       {
        "pos": 14,
+       "team": "Unionistas",
+       "p": 11,
+       "w": 4,
+       "d": 1,
+       "l": 6,
+       "gf": 13,
+       "ga": 18,
+       "pts": 13,
+       "tid": 5281,
+       "form": "DLWLW"
+      },
+      {
+       "pos": 15,
        "team": "Cultural Leonesa",
        "p": 10,
        "w": 3,
@@ -841,20 +854,20 @@
        "form": "LWDLL"
       },
       {
-       "pos": 15,
+       "pos": 16,
        "team": "Zamora",
-       "p": 10,
+       "p": 11,
        "w": 3,
        "d": 3,
-       "l": 4,
+       "l": 5,
        "gf": 11,
-       "ga": 12,
+       "ga": 13,
        "pts": 12,
        "tid": 9418,
-       "form": "WDDLL"
+       "form": "DDLLL"
       },
       {
-       "pos": 16,
+       "pos": 17,
        "team": "Deportivo Fabril",
        "p": 10,
        "w": 3,
@@ -865,19 +878,6 @@
        "pts": 11,
        "tid": 9610,
        "form": "LLLLW"
-      },
-      {
-       "pos": 17,
-       "team": "Unionistas",
-       "p": 10,
-       "w": 3,
-       "d": 1,
-       "l": 6,
-       "gf": 12,
-       "ga": 18,
-       "pts": 10,
-       "tid": 5281,
-       "form": "WDLWL"
       },
       {
        "pos": 18,
@@ -1004,6 +1004,19 @@
       },
       {
        "pos": 7,
+       "team": "Cartagena",
+       "p": 11,
+       "w": 4,
+       "d": 4,
+       "l": 3,
+       "gf": 16,
+       "ga": 13,
+       "pts": 16,
+       "tid": 5262,
+       "form": "DWLLD"
+      },
+      {
+       "pos": 8,
        "team": "Hércules",
        "p": 10,
        "w": 5,
@@ -1014,19 +1027,6 @@
        "pts": 16,
        "tid": 4666,
        "form": "DWLLW"
-      },
-      {
-       "pos": 8,
-       "team": "Cartagena",
-       "p": 10,
-       "w": 4,
-       "d": 3,
-       "l": 3,
-       "gf": 14,
-       "ga": 11,
-       "pts": 15,
-       "tid": 5262,
-       "form": "WDWLL"
       },
       {
        "pos": 9,
@@ -1082,6 +1082,19 @@
       },
       {
        "pos": 13,
+       "team": "Sant Andreu",
+       "p": 11,
+       "w": 3,
+       "d": 4,
+       "l": 4,
+       "gf": 14,
+       "ga": 14,
+       "pts": 13,
+       "tid": 5277,
+       "form": "LDLWD"
+      },
+      {
+       "pos": 14,
        "team": "Algeciras",
        "p": 10,
        "w": 4,
@@ -1092,19 +1105,6 @@
        "pts": 13,
        "tid": 9597,
        "form": "WLWWL"
-      },
-      {
-       "pos": 14,
-       "team": "Sant Andreu",
-       "p": 10,
-       "w": 3,
-       "d": 3,
-       "l": 4,
-       "gf": 12,
-       "ga": 12,
-       "pts": 12,
-       "tid": 5277,
-       "form": "DLDLW"
       },
       {
        "pos": 15,

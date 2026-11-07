@@ -407,6 +407,19 @@
     },
     {
      "pos": 3,
+     "team": "Cham",
+     "p": 15,
+     "w": 9,
+     "d": 3,
+     "l": 3,
+     "gf": 30,
+     "ga": 19,
+     "pts": 30,
+     "tid": 6621,
+     "form": "WDDWW"
+    },
+    {
+     "pos": 4,
      "team": "Biel-Bienne",
      "p": 14,
      "w": 8,
@@ -417,19 +430,6 @@
      "pts": 28,
      "tid": 12700,
      "form": "WDDDL"
-    },
-    {
-     "pos": 4,
-     "team": "Cham",
-     "p": 14,
-     "w": 8,
-     "d": 3,
-     "l": 3,
-     "gf": 25,
-     "ga": 19,
-     "pts": 27,
-     "tid": 6621,
-     "form": "LWDDW"
     },
     {
      "pos": 5,
@@ -472,6 +472,19 @@
     },
     {
      "pos": 8,
+     "team": "YF Juventus",
+     "p": 15,
+     "w": 7,
+     "d": 1,
+     "l": 7,
+     "gf": 25,
+     "ga": 23,
+     "pts": 22,
+     "tid": 6652,
+     "form": "WLWLW"
+    },
+    {
+     "pos": 9,
      "team": "Zürich II",
      "p": 15,
      "w": 6,
@@ -484,7 +497,7 @@
      "form": "DWLWL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Breitenrain",
      "p": 15,
      "w": 6,
@@ -497,7 +510,7 @@
      "form": "DWLWL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Basel II",
      "p": 15,
      "w": 6,
@@ -510,30 +523,17 @@
      "form": "DWLLD"
     },
     {
-     "pos": 11,
-     "team": "YF Juventus",
-     "p": 14,
-     "w": 6,
-     "d": 1,
-     "l": 7,
-     "gf": 19,
-     "ga": 22,
-     "pts": 19,
-     "tid": 6652,
-     "form": "LWLWL"
-    },
-    {
      "pos": 12,
      "team": "Amical Saint-Prex",
-     "p": 14,
+     "p": 15,
      "w": 6,
      "d": 1,
-     "l": 7,
+     "l": 8,
      "gf": 18,
-     "ga": 26,
+     "ga": 31,
      "pts": 19,
      "tid": 16316,
-     "form": "LWLWL"
+     "form": "WLWLL"
     },
     {
      "pos": 13,
@@ -577,15 +577,15 @@
     {
      "pos": 16,
      "team": "Lugano II",
-     "p": 14,
+     "p": 15,
      "w": 4,
      "d": 1,
-     "l": 9,
-     "gf": 21,
-     "ga": 33,
+     "l": 10,
+     "gf": 22,
+     "ga": 39,
      "pts": 13,
      "tid": 17441,
-     "form": "LLWDL"
+     "form": "LWDLL"
     },
     {
      "pos": 17,

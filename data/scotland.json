@@ -151,19 +151,32 @@
     },
     {
      "pos": 10,
-     "team": "Aberdeen",
-     "p": 11,
+     "team": "Hibernian",
+     "p": 12,
      "w": 3,
      "d": 2,
-     "l": 6,
-     "gf": 12,
-     "ga": 14,
+     "l": 7,
+     "gf": 15,
+     "ga": 17,
      "pts": 11,
-     "tid": 252,
-     "form": "DLWLL"
+     "tid": 249,
+     "form": "LLLDW"
     },
     {
      "pos": 11,
+     "team": "Aberdeen",
+     "p": 12,
+     "w": 3,
+     "d": 2,
+     "l": 7,
+     "gf": 12,
+     "ga": 18,
+     "pts": 11,
+     "tid": 252,
+     "form": "LWLLL"
+    },
+    {
+     "pos": 12,
      "team": "Kilmarnock",
      "p": 12,
      "w": 2,
@@ -174,19 +187,6 @@
      "pts": 9,
      "tid": 250,
      "form": "LWLLD"
-    },
-    {
-     "pos": 12,
-     "team": "Hibernian",
-     "p": 11,
-     "w": 2,
-     "d": 2,
-     "l": 7,
-     "gf": 11,
-     "ga": 17,
-     "pts": 8,
-     "tid": 249,
-     "form": "DLLLD"
     }
    ],
    "updated": "2026-11-07T00:00:00.000Z"

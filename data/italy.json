@@ -683,15 +683,15 @@
       {
        "pos": 3,
        "team": "Trento",
-       "p": 12,
-       "w": 6,
+       "p": 13,
+       "w": 7,
        "d": 6,
        "l": 0,
-       "gf": 17,
-       "ga": 6,
-       "pts": 24,
+       "gf": 19,
+       "ga": 7,
+       "pts": 27,
        "tid": 17147,
-       "form": "DWWWD"
+       "form": "WWWDW"
       },
       {
        "pos": 4,
@@ -761,28 +761,28 @@
       {
        "pos": 9,
        "team": "AlbinoLeffe",
-       "p": 12,
+       "p": 13,
        "w": 4,
        "d": 5,
-       "l": 3,
-       "gf": 19,
-       "ga": 17,
+       "l": 4,
+       "gf": 20,
+       "ga": 19,
        "pts": 17,
        "tid": 879,
-       "form": "WLDDW"
+       "form": "LDDWL"
       },
       {
        "pos": 10,
        "team": "Pergolettese",
-       "p": 12,
+       "p": 13,
        "w": 4,
        "d": 5,
-       "l": 3,
-       "gf": 12,
-       "ga": 12,
+       "l": 4,
+       "gf": 14,
+       "ga": 15,
        "pts": 17,
        "tid": 6380,
-       "form": "DWWWL"
+       "form": "WWWLL"
       },
       {
        "pos": 11,
@@ -851,6 +851,19 @@
       },
       {
        "pos": 16,
+       "team": "Renate",
+       "p": 13,
+       "w": 2,
+       "d": 5,
+       "l": 6,
+       "gf": 17,
+       "ga": 18,
+       "pts": 11,
+       "tid": 875,
+       "form": "DLDWW"
+      },
+      {
+       "pos": 17,
        "team": "Giana Erminio",
        "p": 12,
        "w": 2,
@@ -863,7 +876,7 @@
        "form": "DDWWL"
       },
       {
-       "pos": 17,
+       "pos": 18,
        "team": "Juventus Next Gen",
        "p": 12,
        "w": 2,
@@ -876,7 +889,7 @@
        "form": "LDWLD"
       },
       {
-       "pos": 18,
+       "pos": 19,
        "team": "Dolomiti Bellunesi",
        "p": 13,
        "w": 2,
@@ -887,19 +900,6 @@
        "pts": 10,
        "tid": 17820,
        "form": "LLLLL"
-      },
-      {
-       "pos": 19,
-       "team": "Renate",
-       "p": 12,
-       "w": 1,
-       "d": 5,
-       "l": 6,
-       "gf": 14,
-       "ga": 16,
-       "pts": 8,
-       "tid": 875,
-       "form": "DDLDW"
       },
       {
        "pos": 20,

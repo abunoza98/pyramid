@@ -51,15 +51,15 @@
     {
      "pos": 2,
      "team": "Manchester City",
-     "p": 9,
+     "p": 10,
      "w": 7,
      "d": 0,
-     "l": 2,
-     "gf": 20,
-     "ga": 10,
+     "l": 3,
+     "gf": 21,
+     "ga": 13,
      "pts": 21,
      "tid": 50,
-     "form": "WWWLL"
+     "form": "WWLLL"
     },
     {
      "pos": 3,
@@ -232,6 +232,19 @@
     },
     {
      "pos": 16,
+     "team": "Nottingham Forest",
+     "p": 10,
+     "w": 2,
+     "d": 3,
+     "l": 5,
+     "gf": 9,
+     "ga": 13,
+     "pts": 9,
+     "tid": 65,
+     "form": "LLDLW"
+    },
+    {
+     "pos": 17,
      "team": "Coventry City",
      "p": 10,
      "w": 3,
@@ -244,7 +257,7 @@
      "form": "WLLWL"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Manchester United",
      "p": 9,
      "w": 1,
@@ -257,7 +270,7 @@
      "form": "DDDLL"
     },
     {
-     "pos": 18,
+     "pos": 19,
      "team": "Crystal Palace",
      "p": 9,
      "w": 2,
@@ -268,19 +281,6 @@
      "pts": 7,
      "tid": 52,
      "form": "DWLLL"
-    },
-    {
-     "pos": 19,
-     "team": "Nottingham Forest",
-     "p": 9,
-     "w": 1,
-     "d": 3,
-     "l": 5,
-     "gf": 6,
-     "ga": 12,
-     "pts": 6,
-     "tid": 65,
-     "form": "LLLDL"
     },
     {
      "pos": 20,

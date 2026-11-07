@@ -102,15 +102,15 @@
     {
      "pos": 5,
      "team": "Werder Bremen",
-     "p": 8,
+     "p": 9,
      "w": 4,
      "d": 3,
-     "l": 1,
+     "l": 2,
      "gf": 17,
-     "ga": 14,
+     "ga": 15,
      "pts": 15,
      "tid": 162,
-     "form": "WDDWW"
+     "form": "DDWWL"
     },
     {
      "pos": 6,
@@ -140,6 +140,19 @@
     },
     {
      "pos": 8,
+     "team": "VfB Stuttgart",
+     "p": 9,
+     "w": 4,
+     "d": 0,
+     "l": 5,
+     "gf": 15,
+     "ga": 15,
+     "pts": 12,
+     "tid": 172,
+     "form": "WLLWW"
+    },
+    {
+     "pos": 9,
      "team": "Eintracht Frankfurt",
      "p": 9,
      "w": 3,
@@ -152,7 +165,7 @@
      "form": "LWLWD"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Hamburger SV",
      "p": 9,
      "w": 4,
@@ -165,7 +178,7 @@
      "form": "WWLLW"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Mainz 05",
      "p": 9,
      "w": 3,
@@ -178,7 +191,7 @@
      "form": "LWLLL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "SC Paderborn",
      "p": 9,
      "w": 2,
@@ -191,7 +204,7 @@
      "form": "LDWDD"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "FC Augsburg",
      "p": 9,
      "w": 2,
@@ -202,19 +215,6 @@
      "pts": 9,
      "tid": 170,
      "form": "DLDLL"
-    },
-    {
-     "pos": 13,
-     "team": "VfB Stuttgart",
-     "p": 8,
-     "w": 3,
-     "d": 0,
-     "l": 5,
-     "gf": 14,
-     "ga": 15,
-     "pts": 9,
-     "tid": 172,
-     "form": "LWLLW"
     },
     {
      "pos": 14,
