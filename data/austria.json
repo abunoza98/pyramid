@@ -4,7 +4,7 @@
  "adjective": "Austrian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-06T00:00:00.000Z",
+ "updated": "2026-11-07T00:00:00.000Z",
  "belowNote": "Landesliga champions come up",
  "leagues": [
   {
@@ -426,7 +426,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   },
   {
    "id": "regionalliga",
@@ -442,7 +442,7 @@
    "groups": [
     {
      "name": "East",
-     "updated": "2026-11-06T00:00:00.000Z",
+     "updated": "2026-11-07T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -656,7 +656,7 @@
     },
     {
      "name": "North",
-     "updated": "2026-11-06T00:00:00.000Z",
+     "updated": "2026-11-07T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -673,6 +673,19 @@
       },
       {
        "pos": 2,
+       "team": "Wals-Grünau",
+       "p": 15,
+       "w": 8,
+       "d": 5,
+       "l": 2,
+       "gf": 30,
+       "ga": 15,
+       "pts": 29,
+       "tid": 8261,
+       "form": "DLWLW"
+      },
+      {
+       "pos": 3,
        "team": "LASK Juniors",
        "p": 14,
        "w": 8,
@@ -683,19 +696,6 @@
        "pts": 28,
        "tid": 11225,
        "form": "WWDWD"
-      },
-      {
-       "pos": 3,
-       "team": "Wals-Grünau",
-       "p": 14,
-       "w": 7,
-       "d": 5,
-       "l": 2,
-       "gf": 25,
-       "ga": 15,
-       "pts": 26,
-       "tid": 8261,
-       "form": "WDLWL"
       },
       {
        "pos": 4,
@@ -764,19 +764,6 @@
       },
       {
        "pos": 9,
-       "team": "Leonfelden",
-       "p": 14,
-       "w": 4,
-       "d": 6,
-       "l": 4,
-       "gf": 26,
-       "ga": 28,
-       "pts": 18,
-       "tid": 27885,
-       "form": "LWWDD"
-      },
-      {
-       "pos": 10,
        "team": "SK Vorwarts Steyr",
        "p": 15,
        "w": 5,
@@ -787,6 +774,19 @@
        "pts": 18,
        "tid": 1406,
        "form": "DWLLL"
+      },
+      {
+       "pos": 10,
+       "team": "Leonfelden",
+       "p": 15,
+       "w": 4,
+       "d": 6,
+       "l": 5,
+       "gf": 26,
+       "ga": 33,
+       "pts": 18,
+       "tid": 27885,
+       "form": "WWDDL"
       },
       {
        "pos": 11,
@@ -857,7 +857,7 @@
     },
     {
      "name": "South",
-     "updated": "2026-11-06T00:00:00.000Z",
+     "updated": "2026-11-07T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1070,10 +1070,23 @@
     },
     {
      "name": "West",
-     "updated": "2026-11-02T00:00:00.000Z",
+     "updated": "2026-11-07T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
+       "team": "Hohenems",
+       "p": 15,
+       "w": 12,
+       "d": 0,
+       "l": 3,
+       "gf": 41,
+       "ga": 17,
+       "pts": 36,
+       "tid": 4945,
+       "form": "LLWWW"
+      },
+      {
+       "pos": 2,
        "team": "Imst",
        "p": 14,
        "w": 11,
@@ -1086,7 +1099,7 @@
        "form": "WWWWW"
       },
       {
-       "pos": 2,
+       "pos": 3,
        "team": "Schwaz",
        "p": 14,
        "w": 11,
@@ -1099,20 +1112,20 @@
        "form": "WWWWW"
       },
       {
-       "pos": 3,
-       "team": "Hohenems",
-       "p": 14,
-       "w": 11,
-       "d": 0,
-       "l": 3,
-       "gf": 37,
-       "ga": 17,
-       "pts": 33,
-       "tid": 4945,
-       "form": "WLLWW"
+       "pos": 4,
+       "team": "Dornbirn",
+       "p": 15,
+       "w": 7,
+       "d": 4,
+       "l": 4,
+       "gf": 25,
+       "ga": 16,
+       "pts": 25,
+       "tid": 4255,
+       "form": "WDLLD"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Kitzbühel",
        "p": 14,
        "w": 8,
@@ -1123,19 +1136,6 @@
        "pts": 25,
        "tid": 4947,
        "form": "WLDWL"
-      },
-      {
-       "pos": 5,
-       "team": "Dornbirn",
-       "p": 14,
-       "w": 7,
-       "d": 3,
-       "l": 4,
-       "gf": 25,
-       "ga": 16,
-       "pts": 24,
-       "tid": 4255,
-       "form": "LWDLL"
       },
       {
        "pos": 6,
@@ -1153,15 +1153,15 @@
       {
        "pos": 7,
        "team": "SK St. Johann",
-       "p": 14,
+       "p": 15,
        "w": 6,
        "d": 3,
-       "l": 5,
+       "l": 6,
        "gf": 23,
-       "ga": 19,
+       "ga": 23,
        "pts": 21,
        "tid": 27905,
-       "form": "WLLLW"
+       "form": "LLLWL"
       },
       {
        "pos": 8,
@@ -1192,18 +1192,31 @@
       {
        "pos": 10,
        "team": "Kufstein",
-       "p": 14,
+       "p": 15,
        "w": 4,
-       "d": 5,
+       "d": 6,
        "l": 5,
-       "gf": 21,
-       "ga": 18,
-       "pts": 17,
+       "gf": 22,
+       "ga": 19,
+       "pts": 18,
        "tid": 4948,
-       "form": "LWDWW"
+       "form": "WDWWD"
       },
       {
        "pos": 11,
+       "team": "SVG Reichenau",
+       "p": 15,
+       "w": 4,
+       "d": 5,
+       "l": 6,
+       "gf": 17,
+       "ga": 22,
+       "pts": 17,
+       "tid": 4981,
+       "form": "WWLDD"
+      },
+      {
+       "pos": 12,
        "team": "Lauterach",
        "p": 14,
        "w": 4,
@@ -1214,19 +1227,6 @@
        "pts": 16,
        "tid": 8255,
        "form": "LWWWD"
-      },
-      {
-       "pos": 12,
-       "team": "SVG Reichenau",
-       "p": 14,
-       "w": 4,
-       "d": 4,
-       "l": 6,
-       "gf": 17,
-       "ga": 22,
-       "pts": 16,
-       "tid": 4981,
-       "form": "LWWLD"
       },
       {
        "pos": 13,
@@ -1270,20 +1270,20 @@
       {
        "pos": 16,
        "team": "Wolfurt",
-       "p": 14,
+       "p": 15,
        "w": 1,
-       "d": 1,
+       "d": 2,
        "l": 12,
-       "gf": 19,
-       "ga": 45,
-       "pts": 4,
+       "gf": 20,
+       "ga": 46,
+       "pts": 5,
        "tid": 4968,
-       "form": "LLLLL"
+       "form": "LLLLD"
       }
      ]
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   }
  ]
 }

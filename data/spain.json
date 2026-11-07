@@ -4,7 +4,7 @@
  "adjective": "Spanish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-06T00:00:00.000Z",
+ "updated": "2026-11-07T00:00:00.000Z",
  "belowNote": "Promoted clubs from Segunda Federación come up",
  "leagues": [
   {
@@ -302,7 +302,7 @@
      "form": "LDLDL"
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   },
   {
    "id": "segunda",
@@ -622,7 +622,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   },
   {
    "id": "primera-federacion",
@@ -656,7 +656,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-06T00:00:00.000Z",
+     "updated": "2026-11-07T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -674,15 +674,15 @@
       {
        "pos": 2,
        "team": "UD Logroñés",
-       "p": 10,
-       "w": 6,
+       "p": 11,
+       "w": 7,
        "d": 2,
        "l": 2,
-       "gf": 20,
-       "ga": 13,
-       "pts": 20,
+       "gf": 22,
+       "ga": 14,
+       "pts": 23,
        "tid": 5280,
-       "form": "WLDWL"
+       "form": "LDWLW"
       },
       {
        "pos": 3,
@@ -713,15 +713,15 @@
       {
        "pos": 5,
        "team": "Racing Ferrol",
-       "p": 10,
+       "p": 11,
        "w": 5,
        "d": 2,
-       "l": 3,
-       "gf": 9,
-       "ga": 7,
+       "l": 4,
+       "gf": 10,
+       "ga": 9,
        "pts": 17,
        "tid": 9409,
-       "form": "WWWLD"
+       "form": "WWLDL"
       },
       {
        "pos": 6,
@@ -922,7 +922,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-05T00:00:00.000Z",
+     "updated": "2026-11-06T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1187,7 +1187,7 @@
      ]
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   }
  ]
 }
