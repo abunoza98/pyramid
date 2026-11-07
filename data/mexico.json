@@ -536,16 +536,16 @@
    "rows": [
     {
      "pos": 1,
-     "team": "Acatlan",
-     "p": 10,
+     "team": "FC Santiago",
+     "p": 11,
      "w": 7,
      "d": 1,
-     "l": 2,
-     "gf": 24,
-     "ga": 17,
+     "l": 3,
+     "gf": 27,
+     "ga": 7,
      "pts": 23,
-     "tid": 24949,
-     "form": "WLWWW"
+     "tid": 22055,
+     "form": "WWWWW"
     },
     {
      "pos": 1,
@@ -562,16 +562,16 @@
     },
     {
      "pos": 2,
-     "team": "FC Santiago",
+     "team": "Acatlan",
      "p": 10,
-     "w": 6,
+     "w": 7,
      "d": 1,
-     "l": 3,
-     "gf": 23,
-     "ga": 7,
-     "pts": 20,
-     "tid": 22055,
-     "form": "DWWWW"
+     "l": 2,
+     "gf": 24,
+     "ga": 17,
+     "pts": 23,
+     "tid": 24949,
+     "form": "WLWWW"
     },
     {
      "pos": 2,
@@ -654,15 +654,15 @@
     {
      "pos": 5,
      "team": "Halcones Negros",
-     "p": 10,
+     "p": 11,
      "w": 5,
      "d": 1,
-     "l": 4,
+     "l": 5,
      "gf": 22,
-     "ga": 14,
+     "ga": 18,
      "pts": 17,
      "tid": 28305,
-     "form": "WWLLW"
+     "form": "WLLWL"
     },
     {
      "pos": 6,
@@ -706,15 +706,15 @@
     {
      "pos": 7,
      "team": "Calor de San Pedro",
-     "p": 10,
-     "w": 3,
+     "p": 11,
+     "w": 4,
      "d": 1,
      "l": 6,
-     "gf": 19,
+     "gf": 20,
      "ga": 27,
-     "pts": 13,
+     "pts": 16,
      "tid": 17804,
-     "form": "WLLLL"
+     "form": "LLLLW"
     },
     {
      "pos": 8,
@@ -775,12 +775,12 @@
     {
      "pos": 10,
      "team": "Héroes de Zaci",
-     "p": 9,
+     "p": 10,
      "w": 0,
      "d": 1,
-     "l": 8,
+     "l": 9,
      "gf": 3,
-     "ga": 28,
+     "ga": 29,
      "pts": 2,
      "tid": 26526,
      "form": "LLLLL"

@@ -326,18 +326,31 @@
       {
        "pos": 8,
        "team": "Sarmiento",
-       "p": 15,
+       "p": 16,
        "w": 6,
        "d": 3,
-       "l": 6,
+       "l": 7,
        "gf": 23,
-       "ga": 23,
+       "ga": 24,
        "pts": 21,
        "tid": 474,
-       "form": "WDDLL"
+       "form": "DDLLL"
       },
       {
        "pos": 9,
+       "team": "Tigre",
+       "p": 16,
+       "w": 5,
+       "d": 4,
+       "l": 7,
+       "gf": 16,
+       "ga": 16,
+       "pts": 19,
+       "tid": 452,
+       "form": "LDLWW"
+      },
+      {
+       "pos": 10,
        "team": "Huracán",
        "p": 15,
        "w": 5,
@@ -350,33 +363,33 @@
        "form": "WLLLL"
       },
       {
-       "pos": 10,
-       "team": "Atlético Tucumán",
-       "p": 15,
-       "w": 4,
-       "d": 5,
-       "l": 6,
-       "gf": 14,
-       "ga": 15,
-       "pts": 17,
-       "tid": 455,
-       "form": "LDLWL"
-      },
-      {
        "pos": 11,
-       "team": "Tigre",
-       "p": 15,
+       "team": "Atlético Tucumán",
+       "p": 16,
        "w": 4,
-       "d": 4,
-       "l": 7,
-       "gf": 15,
-       "ga": 16,
-       "pts": 16,
-       "tid": 452,
-       "form": "LLDLW"
+       "d": 6,
+       "l": 6,
+       "gf": 16,
+       "ga": 17,
+       "pts": 18,
+       "tid": 455,
+       "form": "DLWLD"
       },
       {
        "pos": 12,
+       "team": "Banfield",
+       "p": 16,
+       "w": 3,
+       "d": 6,
+       "l": 7,
+       "gf": 18,
+       "ga": 25,
+       "pts": 15,
+       "tid": 449,
+       "form": "WLDLD"
+      },
+      {
+       "pos": 13,
        "team": "Racing Club",
        "p": 16,
        "w": 4,
@@ -387,19 +400,6 @@
        "pts": 15,
        "tid": 436,
        "form": "LDLWL"
-      },
-      {
-       "pos": 13,
-       "team": "Banfield",
-       "p": 15,
-       "w": 3,
-       "d": 5,
-       "l": 7,
-       "gf": 16,
-       "ga": 23,
-       "pts": 14,
-       "tid": 449,
-       "form": "DWLDL"
       },
       {
        "pos": 14,
