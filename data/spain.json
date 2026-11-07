@@ -147,6 +147,19 @@
     },
     {
      "pos": 9,
+     "team": "Racing Santander",
+     "p": 12,
+     "w": 4,
+     "d": 2,
+     "l": 6,
+     "gf": 17,
+     "ga": 30,
+     "pts": 14,
+     "tid": 4665,
+     "form": "DLWLW"
+    },
+    {
+     "pos": 10,
      "team": "Alavés",
      "p": 12,
      "w": 3,
@@ -159,7 +172,7 @@
      "form": "LLDLD"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Villarreal",
      "p": 11,
      "w": 3,
@@ -172,7 +185,7 @@
      "form": "WLDWL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Celta Vigo",
      "p": 11,
      "w": 2,
@@ -185,7 +198,7 @@
      "form": "WDWDL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Rayo Vallecano",
      "p": 10,
      "w": 3,
@@ -198,7 +211,7 @@
      "form": "WDDLW"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Getafe",
      "p": 11,
      "w": 3,
@@ -211,7 +224,7 @@
      "form": "WLDLW"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Espanyol",
      "p": 11,
      "w": 3,
@@ -224,7 +237,7 @@
      "form": "LDLLW"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Osasuna",
      "p": 11,
      "w": 3,
@@ -235,19 +248,6 @@
      "pts": 11,
      "tid": 727,
      "form": "DLWLL"
-    },
-    {
-     "pos": 16,
-     "team": "Racing Santander",
-     "p": 11,
-     "w": 3,
-     "d": 2,
-     "l": 6,
-     "gf": 15,
-     "ga": 29,
-     "pts": 11,
-     "tid": 4665,
-     "form": "LDLWL"
     },
     {
      "pos": 17,
@@ -291,15 +291,15 @@
     {
      "pos": 20,
      "team": "Málaga",
-     "p": 11,
+     "p": 12,
      "w": 0,
      "d": 5,
-     "l": 6,
-     "gf": 8,
-     "ga": 21,
+     "l": 7,
+     "gf": 9,
+     "ga": 23,
      "pts": 5,
      "tid": 535,
-     "form": "LDLDL"
+     "form": "DLDLL"
     }
    ],
    "updated": "2026-11-07T00:00:00.000Z"

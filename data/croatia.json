@@ -130,6 +130,19 @@
     },
     {
      "pos": 7,
+     "team": "Slaven Belupo",
+     "p": 13,
+     "w": 5,
+     "d": 1,
+     "l": 7,
+     "gf": 19,
+     "ga": 28,
+     "pts": 16,
+     "tid": 1018,
+     "form": "WLWLW"
+    },
+    {
+     "pos": 8,
      "team": "Rudeš",
      "p": 13,
      "w": 5,
@@ -140,19 +153,6 @@
      "pts": 16,
      "tid": 1019,
      "form": "WLWWW"
-    },
-    {
-     "pos": 8,
-     "team": "Slaven Belupo",
-     "p": 12,
-     "w": 4,
-     "d": 1,
-     "l": 7,
-     "gf": 14,
-     "ga": 25,
-     "pts": 13,
-     "tid": 1018,
-     "form": "DWLWL"
     },
     {
      "pos": 9,
@@ -170,15 +170,15 @@
     {
      "pos": 10,
      "team": "Gorica",
-     "p": 12,
+     "p": 13,
      "w": 1,
      "d": 4,
-     "l": 7,
-     "gf": 7,
-     "ga": 20,
+     "l": 8,
+     "gf": 10,
+     "ga": 25,
      "pts": 7,
      "tid": 1068,
-     "form": "WLDDL"
+     "form": "LDDLL"
     }
    ],
    "updated": "2026-11-07T00:00:00.000Z"
@@ -217,6 +217,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Mladost Ždralovi",
+     "p": 12,
+     "w": 7,
+     "d": 2,
+     "l": 3,
+     "gf": 14,
+     "ga": 10,
+     "pts": 23,
+     "tid": 8593,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 2,
      "team": "Jadran LP",
      "p": 12,
      "w": 5,
@@ -227,19 +240,6 @@
      "pts": 20,
      "tid": 5708,
      "form": "DDLDW"
-    },
-    {
-     "pos": 2,
-     "team": "Mladost Ždralovi",
-     "p": 11,
-     "w": 6,
-     "d": 2,
-     "l": 3,
-     "gf": 13,
-     "ga": 10,
-     "pts": 20,
-     "tid": 8593,
-     "form": "LWLWW"
     },
     {
      "pos": 3,
@@ -400,15 +400,15 @@
     {
      "pos": 15,
      "team": "Hrvace",
-     "p": 11,
+     "p": 12,
      "w": 3,
      "d": 2,
-     "l": 6,
+     "l": 7,
      "gf": 11,
-     "ga": 15,
+     "ga": 16,
      "pts": 11,
      "tid": 6241,
-     "form": "WLLDW"
+     "form": "LLDWL"
     },
     {
      "pos": 16,

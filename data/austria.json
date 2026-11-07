@@ -725,6 +725,19 @@
       },
       {
        "pos": 6,
+       "team": "Grödig",
+       "p": 15,
+       "w": 7,
+       "d": 2,
+       "l": 6,
+       "gf": 23,
+       "ga": 21,
+       "pts": 23,
+       "tid": 4974,
+       "form": "LLWDW"
+      },
+      {
+       "pos": 7,
        "team": "Bad Schallerbach",
        "p": 14,
        "w": 6,
@@ -737,30 +750,17 @@
        "form": "WLDDW"
       },
       {
-       "pos": 7,
-       "team": "Grödig",
-       "p": 14,
-       "w": 6,
-       "d": 2,
-       "l": 6,
-       "gf": 21,
-       "ga": 21,
-       "pts": 20,
-       "tid": 4974,
-       "form": "WLLWD"
-      },
-      {
        "pos": 8,
        "team": "TSV St. Johann",
-       "p": 14,
+       "p": 15,
        "w": 5,
        "d": 4,
-       "l": 5,
+       "l": 6,
        "gf": 16,
-       "ga": 19,
+       "ga": 21,
        "pts": 19,
        "tid": 4994,
-       "form": "DLDDW"
+       "form": "LDDWL"
       },
       {
        "pos": 9,
@@ -1152,6 +1152,19 @@
       },
       {
        "pos": 7,
+       "team": "Fügen",
+       "p": 15,
+       "w": 7,
+       "d": 1,
+       "l": 7,
+       "gf": 33,
+       "ga": 35,
+       "pts": 22,
+       "tid": 8335,
+       "form": "LWLWW"
+      },
+      {
+       "pos": 8,
        "team": "SK St. Johann",
        "p": 15,
        "w": 6,
@@ -1164,7 +1177,7 @@
        "form": "LLLWL"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Swarovski Tirol II",
        "p": 14,
        "w": 6,
@@ -1175,19 +1188,6 @@
        "pts": 20,
        "tid": 8344,
        "form": "WLDLL"
-      },
-      {
-       "pos": 9,
-       "team": "Fügen",
-       "p": 14,
-       "w": 6,
-       "d": 1,
-       "l": 7,
-       "gf": 28,
-       "ga": 34,
-       "pts": 19,
-       "tid": 8335,
-       "form": "LLWLW"
       },
       {
        "pos": 10,
@@ -1218,15 +1218,15 @@
       {
        "pos": 12,
        "team": "Lauterach",
-       "p": 14,
+       "p": 15,
        "w": 4,
        "d": 4,
-       "l": 6,
-       "gf": 25,
-       "ga": 28,
+       "l": 7,
+       "gf": 26,
+       "ga": 33,
        "pts": 16,
        "tid": 8255,
-       "form": "LWWWD"
+       "form": "WWWDL"
       },
       {
        "pos": 13,

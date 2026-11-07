@@ -4,7 +4,7 @@
  "adjective": "Dutch",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-06T00:00:00.000Z",
+ "updated": "2026-11-07T00:00:00.000Z",
  "belowNote": "The top Derde Divisie clubs come up",
  "leagues": [
   {
@@ -288,7 +288,7 @@
      "form": "LLLLD"
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   },
   {
    "id": "eerste-divisie",
@@ -577,7 +577,7 @@
      "form": "LLLLW"
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   },
   {
    "id": "tweede-divisie",
@@ -785,6 +785,19 @@
     },
     {
      "pos": 15,
+     "team": "Koninklijke HFC",
+     "p": 12,
+     "w": 3,
+     "d": 3,
+     "l": 6,
+     "gf": 17,
+     "ga": 22,
+     "pts": 12,
+     "tid": 1246,
+     "form": "LLWLW"
+    },
+    {
+     "pos": 16,
      "team": "Hoek",
      "p": 11,
      "w": 2,
@@ -795,19 +808,6 @@
      "pts": 10,
      "tid": 1276,
      "form": "LWLDL"
-    },
-    {
-     "pos": 16,
-     "team": "Koninklijke HFC",
-     "p": 11,
-     "w": 2,
-     "d": 3,
-     "l": 6,
-     "gf": 13,
-     "ga": 21,
-     "pts": 9,
-     "tid": 1246,
-     "form": "DLLWL"
     },
     {
      "pos": 17,
@@ -825,18 +825,18 @@
     {
      "pos": 18,
      "team": "ROHDA Raalte",
-     "p": 11,
+     "p": 12,
      "w": 0,
      "d": 1,
-     "l": 10,
-     "gf": 9,
-     "ga": 33,
+     "l": 11,
+     "gf": 10,
+     "ga": 37,
      "pts": 1,
      "tid": 6269,
-     "form": "DLLLL"
+     "form": "LLLLL"
     }
    ],
-   "updated": "2026-10-28T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   }
  ]
 }
