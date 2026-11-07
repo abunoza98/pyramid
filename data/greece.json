@@ -66,6 +66,19 @@
     },
     {
      "pos": 3,
+     "team": "Aris",
+     "p": 10,
+     "w": 6,
+     "d": 1,
+     "l": 3,
+     "gf": 16,
+     "ga": 17,
+     "pts": 19,
+     "tid": 1123,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 4,
      "team": "PAOK",
      "p": 9,
      "w": 6,
@@ -78,7 +91,7 @@
      "form": "WLWLW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "AEK Athens",
      "p": 8,
      "w": 5,
@@ -88,19 +101,6 @@
      "ga": 5,
      "pts": 17,
      "tid": 575,
-     "form": "DWWWL"
-    },
-    {
-     "pos": 5,
-     "team": "Aris",
-     "p": 9,
-     "w": 5,
-     "d": 1,
-     "l": 3,
-     "gf": 13,
-     "ga": 17,
-     "pts": 16,
-     "tid": 1123,
      "form": "DWWWL"
     },
     {
@@ -158,12 +158,12 @@
     {
      "pos": 10,
      "team": "Panetolikos",
-     "p": 9,
+     "p": 10,
      "w": 3,
      "d": 0,
-     "l": 6,
+     "l": 7,
      "gf": 8,
-     "ga": 17,
+     "ga": 20,
      "pts": 9,
      "tid": 949,
      "form": "LLLLL"

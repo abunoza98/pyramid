@@ -152,6 +152,19 @@
     },
     {
      "pos": 10,
+     "team": "Grasshopper Club",
+     "p": 13,
+     "w": 2,
+     "d": 5,
+     "l": 6,
+     "gf": 16,
+     "ga": 29,
+     "pts": 11,
+     "tid": 1013,
+     "form": "LLDDD"
+    },
+    {
+     "pos": 11,
      "team": "FC Vaduz",
      "p": 13,
      "w": 3,
@@ -164,30 +177,17 @@
      "form": "LWLDL"
     },
     {
-     "pos": 11,
-     "team": "Grasshopper Club",
-     "p": 12,
-     "w": 2,
-     "d": 4,
-     "l": 6,
-     "gf": 15,
-     "ga": 28,
-     "pts": 10,
-     "tid": 1013,
-     "form": "LLLDD"
-    },
-    {
      "pos": 12,
      "team": "Lausanne-Sport",
-     "p": 12,
+     "p": 13,
      "w": 1,
-     "d": 3,
+     "d": 4,
      "l": 8,
-     "gf": 11,
-     "ga": 22,
-     "pts": 6,
+     "gf": 12,
+     "ga": 23,
+     "pts": 7,
      "tid": 1014,
-     "form": "LLLLL"
+     "form": "LLLLD"
     }
    ],
    "updated": "2026-11-07T00:00:00.000Z"
@@ -1062,15 +1062,15 @@
       {
        "pos": 1,
        "team": "St. Gallen II",
-       "p": 12,
+       "p": 13,
        "w": 9,
        "d": 1,
-       "l": 2,
-       "gf": 25,
-       "ga": 18,
+       "l": 3,
+       "gf": 26,
+       "ga": 20,
        "pts": 28,
        "tid": 12718,
-       "form": "WWWWW"
+       "form": "WWWWL"
       },
       {
        "pos": 2,
@@ -1152,6 +1152,19 @@
       },
       {
        "pos": 8,
+       "team": "Wettswil-Bonstetten",
+       "p": 13,
+       "w": 5,
+       "d": 3,
+       "l": 5,
+       "gf": 20,
+       "ga": 18,
+       "pts": 18,
+       "tid": 6650,
+       "form": "LWWWW"
+      },
+      {
+       "pos": 9,
        "team": "Freienbach",
        "p": 13,
        "w": 4,
@@ -1162,19 +1175,6 @@
        "pts": 16,
        "tid": 6625,
        "form": "DLLWW"
-      },
-      {
-       "pos": 9,
-       "team": "Wettswil-Bonstetten",
-       "p": 12,
-       "w": 4,
-       "d": 3,
-       "l": 5,
-       "gf": 18,
-       "ga": 17,
-       "pts": 15,
-       "tid": 6650,
-       "form": "DLWWW"
       },
       {
        "pos": 10,

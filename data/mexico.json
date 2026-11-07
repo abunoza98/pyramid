@@ -614,6 +614,32 @@
     },
     {
      "pos": 4,
+     "team": "Correcaminos UAT II",
+     "p": 11,
+     "w": 6,
+     "d": 2,
+     "l": 3,
+     "gf": 18,
+     "ga": 14,
+     "pts": 20,
+     "tid": 17782,
+     "form": "WWLWW"
+    },
+    {
+     "pos": 4,
+     "team": "Delfines Coatzacoalcos",
+     "p": 11,
+     "w": 5,
+     "d": 3,
+     "l": 3,
+     "gf": 17,
+     "ga": 13,
+     "pts": 19,
+     "tid": 28303,
+     "form": "DWWWL"
+    },
+    {
+     "pos": 5,
      "team": "La Tribu de Cd. Juarez",
      "p": 10,
      "w": 6,
@@ -624,32 +650,6 @@
      "pts": 19,
      "tid": 28306,
      "form": "LLWWL"
-    },
-    {
-     "pos": 4,
-     "team": "Delfines Coatzacoalcos",
-     "p": 10,
-     "w": 5,
-     "d": 3,
-     "l": 2,
-     "gf": 15,
-     "ga": 11,
-     "pts": 18,
-     "tid": 28303,
-     "form": "DDWWW"
-    },
-    {
-     "pos": 5,
-     "team": "Correcaminos UAT II",
-     "p": 10,
-     "w": 5,
-     "d": 2,
-     "l": 3,
-     "gf": 16,
-     "ga": 12,
-     "pts": 18,
-     "tid": 17782,
-     "form": "WWWLW"
     },
     {
      "pos": 5,

@@ -328,15 +328,15 @@
     {
      "pos": 1,
      "team": "Saint-Étienne",
-     "p": 11,
-     "w": 8,
+     "p": 12,
+     "w": 9,
      "d": 1,
      "l": 2,
-     "gf": 23,
+     "gf": 25,
      "ga": 11,
-     "pts": 25,
+     "pts": 28,
      "tid": 1063,
-     "form": "DWWWL"
+     "form": "WWWLW"
     },
     {
      "pos": 2,
@@ -380,15 +380,15 @@
     {
      "pos": 5,
      "team": "Pau",
-     "p": 11,
+     "p": 12,
      "w": 6,
      "d": 2,
-     "l": 3,
+     "l": 4,
      "gf": 16,
-     "ga": 11,
+     "ga": 13,
      "pts": 20,
      "tid": 1297,
-     "form": "WWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 6,
@@ -496,6 +496,19 @@
     },
     {
      "pos": 14,
+     "team": "Nantes",
+     "p": 12,
+     "w": 3,
+     "d": 3,
+     "l": 6,
+     "gf": 14,
+     "ga": 18,
+     "pts": 12,
+     "tid": 83,
+     "form": "DLLDW"
+    },
+    {
+     "pos": 15,
      "team": "Clermont",
      "p": 12,
      "w": 1,
@@ -508,7 +521,7 @@
      "form": "LDLDW"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Sochaux",
      "p": 12,
      "w": 2,
@@ -521,7 +534,7 @@
      "form": "DLLLL"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Grenoble",
      "p": 12,
      "w": 3,
@@ -534,30 +547,17 @@
      "form": "LLLLW"
     },
     {
-     "pos": 17,
-     "team": "Nantes",
-     "p": 11,
-     "w": 2,
-     "d": 3,
-     "l": 6,
-     "gf": 12,
-     "ga": 18,
-     "pts": 9,
-     "tid": 83,
-     "form": "WDLLD"
-    },
-    {
      "pos": 18,
      "team": "Laval",
-     "p": 11,
+     "p": 12,
      "w": 2,
      "d": 3,
-     "l": 6,
+     "l": 7,
      "gf": 14,
-     "ga": 21,
+     "ga": 23,
      "pts": 9,
      "tid": 433,
-     "form": "DLDLW"
+     "form": "LDLWL"
     }
    ],
    "updated": "2026-11-07T00:00:00.000Z"

@@ -322,15 +322,15 @@
     {
      "pos": 1,
      "team": "Hertha BSC",
-     "p": 10,
-     "w": 9,
+     "p": 11,
+     "w": 10,
      "d": 1,
      "l": 0,
-     "gf": 23,
-     "ga": 8,
-     "pts": 28,
+     "gf": 25,
+     "ga": 9,
+     "pts": 31,
      "tid": 159,
-     "form": "WWDWW"
+     "form": "WDWWW"
     },
     {
      "pos": 2,
@@ -361,15 +361,15 @@
     {
      "pos": 4,
      "team": "VfL Wolfsburg",
-     "p": 10,
+     "p": 11,
      "w": 5,
      "d": 4,
-     "l": 1,
-     "gf": 25,
-     "ga": 14,
+     "l": 2,
+     "gf": 26,
+     "ga": 16,
      "pts": 19,
      "tid": 161,
-     "form": "WDWDW"
+     "form": "DWDWL"
     },
     {
      "pos": 5,
