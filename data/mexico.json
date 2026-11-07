@@ -79,6 +79,19 @@
     },
     {
      "pos": 5,
+     "team": "Santos Laguna",
+     "p": 16,
+     "w": 8,
+     "d": 1,
+     "l": 7,
+     "gf": 23,
+     "ga": 20,
+     "pts": 25,
+     "tid": 2285,
+     "form": "WWLWW"
+    },
+    {
+     "pos": 6,
      "team": "Toluca",
      "p": 15,
      "w": 6,
@@ -91,7 +104,7 @@
      "form": "LDDDD"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Tijuana",
      "p": 16,
      "w": 5,
@@ -104,7 +117,7 @@
      "form": "DWDDL"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "León",
      "p": 15,
      "w": 6,
@@ -115,19 +128,6 @@
      "pts": 22,
      "tid": 2289,
      "form": "DLWDL"
-    },
-    {
-     "pos": 8,
-     "team": "Santos Laguna",
-     "p": 15,
-     "w": 7,
-     "d": 1,
-     "l": 7,
-     "gf": 21,
-     "ga": 20,
-     "pts": 22,
-     "tid": 2285,
-     "form": "WWWLW"
     },
     {
      "pos": 9,
@@ -223,15 +223,15 @@
     {
      "pos": 16,
      "team": "Atlante",
-     "p": 15,
+     "p": 16,
      "w": 3,
      "d": 5,
-     "l": 7,
+     "l": 8,
      "gf": 16,
-     "ga": 24,
+     "ga": 26,
      "pts": 14,
      "tid": 2312,
-     "form": "LLWLL"
+     "form": "LWLLL"
     },
     {
      "pos": 17,
