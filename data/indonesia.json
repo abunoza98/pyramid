@@ -4,7 +4,7 @@
  "adjective": "Indonesian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-06T00:00:00.000Z",
+ "updated": "2026-11-07T00:00:00.000Z",
  "belowNote": "Championship (second tier) clubs come up; API-Football doesn't have its tables yet",
  "leagues": [
   {
@@ -167,18 +167,31 @@
     {
      "pos": 11,
      "team": "Borneo FC",
-     "p": 7,
+     "p": 8,
      "w": 3,
-     "d": 0,
+     "d": 1,
      "l": 4,
-     "gf": 7,
-     "ga": 9,
-     "pts": 9,
+     "gf": 8,
+     "ga": 10,
+     "pts": 10,
      "tid": 2442,
-     "form": "LWLWL"
+     "form": "WLWLD"
     },
     {
      "pos": 12,
+     "team": "PSM Makassar",
+     "p": 9,
+     "w": 2,
+     "d": 4,
+     "l": 3,
+     "gf": 10,
+     "ga": 14,
+     "pts": 10,
+     "tid": 2441,
+     "form": "WWDLD"
+    },
+    {
+     "pos": 13,
      "team": "Arema FC",
      "p": 9,
      "w": 2,
@@ -189,19 +202,6 @@
      "pts": 9,
      "tid": 2438,
      "form": "LLWLL"
-    },
-    {
-     "pos": 13,
-     "team": "PSM Makassar",
-     "p": 8,
-     "w": 2,
-     "d": 3,
-     "l": 3,
-     "gf": 9,
-     "ga": 13,
-     "pts": 9,
-     "tid": 2441,
-     "form": "LWWDL"
     },
     {
      "pos": 14,
@@ -270,7 +270,7 @@
      "form": "LLLDD"
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   }
  ]
 }
