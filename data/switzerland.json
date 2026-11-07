@@ -381,6 +381,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Bulle",
+     "p": 15,
+     "w": 10,
+     "d": 3,
+     "l": 2,
+     "gf": 34,
+     "ga": 20,
+     "pts": 33,
+     "tid": 6618,
+     "form": "DWWWW"
+    },
+    {
+     "pos": 2,
      "team": "FC Schaffhausen",
      "p": 14,
      "w": 10,
@@ -391,19 +404,6 @@
      "pts": 32,
      "tid": 2182,
      "form": "WWWWD"
-    },
-    {
-     "pos": 2,
-     "team": "Bulle",
-     "p": 14,
-     "w": 9,
-     "d": 3,
-     "l": 2,
-     "gf": 31,
-     "ga": 20,
-     "pts": 30,
-     "tid": 6618,
-     "form": "WDWWW"
     },
     {
      "pos": 3,
@@ -459,42 +459,42 @@
     },
     {
      "pos": 7,
-     "team": "Zürich II",
-     "p": 14,
-     "w": 6,
-     "d": 3,
-     "l": 5,
-     "gf": 29,
-     "ga": 25,
-     "pts": 21,
-     "tid": 10591,
-     "form": "WDWLW"
+     "team": "Brühl",
+     "p": 15,
+     "w": 7,
+     "d": 2,
+     "l": 6,
+     "gf": 20,
+     "ga": 19,
+     "pts": 23,
+     "tid": 10587,
+     "form": "WLWWW"
     },
     {
      "pos": 8,
-     "team": "Breitenrain",
-     "p": 14,
+     "team": "Zürich II",
+     "p": 15,
      "w": 6,
      "d": 3,
-     "l": 5,
-     "gf": 21,
-     "ga": 20,
+     "l": 6,
+     "gf": 29,
+     "ga": 28,
      "pts": 21,
-     "tid": 10586,
-     "form": "WDWLW"
+     "tid": 10591,
+     "form": "DWLWL"
     },
     {
      "pos": 9,
-     "team": "Brühl",
-     "p": 14,
+     "team": "Breitenrain",
+     "p": 15,
      "w": 6,
-     "d": 2,
+     "d": 3,
      "l": 6,
-     "gf": 18,
-     "ga": 18,
-     "pts": 20,
-     "tid": 10587,
-     "form": "LWLWW"
+     "gf": 22,
+     "ga": 22,
+     "pts": 21,
+     "tid": 10586,
+     "form": "DWLWL"
     },
     {
      "pos": 10,
@@ -991,15 +991,15 @@
       {
        "pos": 12,
        "team": "Grasshopper II",
-       "p": 12,
+       "p": 13,
        "w": 5,
        "d": 1,
-       "l": 6,
-       "gf": 18,
-       "ga": 21,
+       "l": 7,
+       "gf": 19,
+       "ga": 23,
        "pts": 16,
        "tid": 12704,
-       "form": "WWLLD"
+       "form": "WLLDL"
       },
       {
        "pos": 13,
@@ -1016,6 +1016,19 @@
       },
       {
        "pos": 14,
+       "team": "Black Stars",
+       "p": 13,
+       "w": 2,
+       "d": 7,
+       "l": 4,
+       "gf": 14,
+       "ga": 18,
+       "pts": 13,
+       "tid": 6617,
+       "form": "DLLDW"
+      },
+      {
+       "pos": 15,
        "team": "Zug",
        "p": 13,
        "w": 4,
@@ -1026,19 +1039,6 @@
        "pts": 13,
        "tid": 12710,
        "form": "LWWLL"
-      },
-      {
-       "pos": 15,
-       "team": "Black Stars",
-       "p": 12,
-       "w": 1,
-       "d": 7,
-       "l": 4,
-       "gf": 12,
-       "ga": 17,
-       "pts": 10,
-       "tid": 6617,
-       "form": "DDLLD"
       },
       {
        "pos": 16,
@@ -1192,18 +1192,31 @@
       {
        "pos": 11,
        "team": "Gossau",
-       "p": 12,
+       "p": 13,
        "w": 4,
        "d": 2,
-       "l": 6,
-       "gf": 16,
-       "ga": 24,
+       "l": 7,
+       "gf": 17,
+       "ga": 28,
        "pts": 14,
        "tid": 12714,
-       "form": "LWWLL"
+       "form": "WWLLL"
       },
       {
        "pos": 12,
+       "team": "Mendrisio",
+       "p": 13,
+       "w": 2,
+       "d": 6,
+       "l": 5,
+       "gf": 16,
+       "ga": 18,
+       "pts": 12,
+       "tid": 16354,
+       "form": "DLDLW"
+      },
+      {
+       "pos": 13,
        "team": "Eschen / Mauren",
        "p": 12,
        "w": 3,
@@ -1216,7 +1229,7 @@
        "form": "DDWLL"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Locarno",
        "p": 12,
        "w": 2,
@@ -1229,7 +1242,7 @@
        "form": "WDWDL"
       },
       {
-       "pos": 14,
+       "pos": 15,
        "team": "Winterthur II",
        "p": 12,
        "w": 3,
@@ -1240,19 +1253,6 @@
        "pts": 10,
        "tid": 12721,
        "form": "LLLLD"
-      },
-      {
-       "pos": 15,
-       "team": "Mendrisio",
-       "p": 12,
-       "w": 1,
-       "d": 6,
-       "l": 5,
-       "gf": 12,
-       "ga": 17,
-       "pts": 9,
-       "tid": 16354,
-       "form": "DDLDL"
       },
       {
        "pos": 16,

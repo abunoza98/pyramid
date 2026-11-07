@@ -91,6 +91,19 @@
     },
     {
      "pos": 4,
+     "team": "Istra 1961",
+     "p": 13,
+     "w": 5,
+     "d": 4,
+     "l": 4,
+     "gf": 24,
+     "ga": 19,
+     "pts": 19,
+     "tid": 1016,
+     "form": "WLDWW"
+    },
+    {
+     "pos": 5,
      "team": "Varaždin",
      "p": 12,
      "w": 5,
@@ -103,30 +116,17 @@
      "form": "DWLLD"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Rijeka",
-     "p": 11,
+     "p": 12,
      "w": 5,
      "d": 3,
-     "l": 3,
-     "gf": 18,
-     "ga": 15,
+     "l": 4,
+     "gf": 19,
+     "ga": 18,
      "pts": 18,
      "tid": 561,
-     "form": "WLWLD"
-    },
-    {
-     "pos": 6,
-     "team": "Istra 1961",
-     "p": 12,
-     "w": 4,
-     "d": 4,
-     "l": 4,
-     "gf": 21,
-     "ga": 18,
-     "pts": 16,
-     "tid": 1016,
-     "form": "LWLDW"
+     "form": "LWLDL"
     },
     {
      "pos": 7,
@@ -230,6 +230,19 @@
     },
     {
      "pos": 2,
+     "team": "Croatia Zmijavci",
+     "p": 12,
+     "w": 7,
+     "d": 1,
+     "l": 4,
+     "gf": 18,
+     "ga": 12,
+     "pts": 22,
+     "tid": 6254,
+     "form": "WWLLW"
+    },
+    {
+     "pos": 3,
      "team": "Jadran LP",
      "p": 12,
      "w": 5,
@@ -240,19 +253,6 @@
      "pts": 20,
      "tid": 5708,
      "form": "DDLDW"
-    },
-    {
-     "pos": 3,
-     "team": "Croatia Zmijavci",
-     "p": 11,
-     "w": 6,
-     "d": 1,
-     "l": 4,
-     "gf": 17,
-     "ga": 12,
-     "pts": 19,
-     "tid": 6254,
-     "form": "WWWLL"
     },
     {
      "pos": 4,
@@ -270,15 +270,15 @@
     {
      "pos": 5,
      "team": "Cibalia",
-     "p": 11,
+     "p": 12,
      "w": 5,
      "d": 4,
-     "l": 2,
+     "l": 3,
      "gf": 12,
-     "ga": 10,
+     "ga": 11,
      "pts": 19,
      "tid": 1021,
-     "form": "WLLWW"
+     "form": "LLWWL"
     },
     {
      "pos": 6,

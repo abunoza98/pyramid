@@ -125,15 +125,15 @@
       {
        "pos": 8,
        "team": "Gimnasia (Mendoza)",
-       "p": 15,
+       "p": 16,
        "w": 6,
-       "d": 3,
+       "d": 4,
        "l": 6,
-       "gf": 17,
-       "ga": 16,
-       "pts": 21,
+       "gf": 18,
+       "ga": 17,
+       "pts": 22,
        "tid": 1066,
-       "form": "LWLLD"
+       "form": "WLLDD"
       },
       {
        "pos": 9,
@@ -177,28 +177,28 @@
       {
        "pos": 12,
        "team": "Estudiantes",
-       "p": 15,
+       "p": 16,
        "w": 4,
-       "d": 3,
+       "d": 4,
        "l": 8,
-       "gf": 20,
-       "ga": 21,
-       "pts": 15,
+       "gf": 21,
+       "ga": 22,
+       "pts": 16,
        "tid": 450,
-       "form": "WDLLD"
+       "form": "DLLDD"
       },
       {
        "pos": 13,
        "team": "Talleres",
-       "p": 15,
+       "p": 16,
        "w": 3,
-       "d": 3,
+       "d": 4,
        "l": 9,
-       "gf": 16,
-       "ga": 22,
-       "pts": 12,
+       "gf": 17,
+       "ga": 23,
+       "pts": 13,
        "tid": 456,
-       "form": "LDLLW"
+       "form": "DLLWD"
       },
       {
        "pos": 14,
@@ -313,15 +313,15 @@
       {
        "pos": 7,
        "team": "Independiente Rivadavia",
-       "p": 15,
+       "p": 16,
        "w": 6,
-       "d": 4,
+       "d": 5,
        "l": 5,
-       "gf": 20,
-       "ga": 23,
-       "pts": 22,
+       "gf": 21,
+       "ga": 24,
+       "pts": 23,
        "tid": 473,
-       "form": "DLDLW"
+       "form": "LDLWD"
       },
       {
        "pos": 8,

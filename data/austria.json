@@ -220,15 +220,15 @@
     {
      "pos": 1,
      "team": "Blau-Weiß Linz",
-     "p": 11,
-     "w": 9,
+     "p": 12,
+     "w": 10,
      "d": 1,
      "l": 1,
-     "gf": 32,
+     "gf": 35,
      "ga": 6,
-     "pts": 28,
+     "pts": 31,
      "tid": 1394,
-     "form": "WDWWW"
+     "form": "DWWWW"
     },
     {
      "pos": 2,
@@ -363,15 +363,15 @@
     {
      "pos": 12,
      "team": "Floridsdorfer AC",
-     "p": 11,
+     "p": 12,
      "w": 4,
      "d": 2,
-     "l": 5,
+     "l": 6,
      "gf": 16,
-     "ga": 18,
+     "ga": 21,
      "pts": 14,
      "tid": 1395,
-     "form": "WLLLD"
+     "form": "LLLDL"
     },
     {
      "pos": 13,
@@ -669,7 +669,7 @@
        "ga": 16,
        "pts": 32,
        "tid": 21534,
-       "form": "WWLWD"
+       "form": "WLWDW"
       },
       {
        "pos": 2,
@@ -695,7 +695,7 @@
        "ga": 17,
        "pts": 28,
        "tid": 11225,
-       "form": "WWDWD"
+       "form": "WDWDL"
       },
       {
        "pos": 4,

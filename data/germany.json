@@ -602,6 +602,19 @@
     },
     {
      "pos": 2,
+     "team": "MSV Duisburg",
+     "p": 13,
+     "w": 9,
+     "d": 2,
+     "l": 2,
+     "gf": 33,
+     "ga": 18,
+     "pts": 29,
+     "tid": 187,
+     "form": "WDLDW"
+    },
+    {
+     "pos": 3,
      "team": "Rot-Weiss Essen",
      "p": 13,
      "w": 8,
@@ -612,19 +625,6 @@
      "pts": 27,
      "tid": 1621,
      "form": "WLWWW"
-    },
-    {
-     "pos": 3,
-     "team": "MSV Duisburg",
-     "p": 12,
-     "w": 8,
-     "d": 2,
-     "l": 2,
-     "gf": 31,
-     "ga": 17,
-     "pts": 26,
-     "tid": 187,
-     "form": "WWDLD"
     },
     {
      "pos": 4,
@@ -759,15 +759,15 @@
     {
      "pos": 14,
      "team": "Preußen Münster",
-     "p": 12,
+     "p": 13,
      "w": 4,
      "d": 3,
-     "l": 5,
-     "gf": 20,
-     "ga": 23,
+     "l": 6,
+     "gf": 21,
+     "ga": 25,
      "pts": 15,
      "tid": 1313,
-     "form": "DLLWL"
+     "form": "LLWLL"
     },
     {
      "pos": 15,

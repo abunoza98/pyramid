@@ -185,19 +185,6 @@
     },
     {
      "pos": 11,
-     "team": "Sparta Rotterdam",
-     "p": 11,
-     "w": 3,
-     "d": 3,
-     "l": 5,
-     "gf": 20,
-     "ga": 26,
-     "pts": 12,
-     "tid": 426,
-     "form": "LDWLW"
-    },
-    {
-     "pos": 12,
      "team": "Utrecht",
      "p": 11,
      "w": 3,
@@ -208,6 +195,19 @@
      "pts": 12,
      "tid": 207,
      "form": "LWWDL"
+    },
+    {
+     "pos": 12,
+     "team": "Sparta Rotterdam",
+     "p": 12,
+     "w": 3,
+     "d": 3,
+     "l": 6,
+     "gf": 21,
+     "ga": 29,
+     "pts": 12,
+     "tid": 426,
+     "form": "DWLWL"
     },
     {
      "pos": 13,
@@ -264,15 +264,15 @@
     {
      "pos": 17,
      "team": "ADO Den Haag",
-     "p": 11,
-     "w": 1,
+     "p": 12,
+     "w": 2,
      "d": 3,
      "l": 7,
-     "gf": 13,
-     "ga": 24,
-     "pts": 6,
+     "gf": 16,
+     "ga": 25,
+     "pts": 9,
      "tid": 198,
-     "form": "DDWLL"
+     "form": "DWLLW"
     },
     {
      "pos": 18,

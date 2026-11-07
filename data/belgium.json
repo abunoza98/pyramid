@@ -173,19 +173,32 @@
     },
     {
      "pos": 10,
-     "team": "KV Mechelen",
-     "p": 10,
+     "team": "OH Leuven",
+     "p": 11,
      "w": 3,
      "d": 3,
-     "l": 4,
-     "gf": 13,
-     "ga": 18,
+     "l": 5,
+     "gf": 12,
+     "ga": 17,
      "pts": 12,
-     "tid": 266,
-     "form": "LDWWW"
+     "tid": 260,
+     "form": "WDDWW"
     },
     {
      "pos": 11,
+     "team": "KV Mechelen",
+     "p": 11,
+     "w": 3,
+     "d": 3,
+     "l": 5,
+     "gf": 13,
+     "ga": 20,
+     "pts": 12,
+     "tid": 266,
+     "form": "DWWWL"
+    },
+    {
+     "pos": 12,
      "team": "Zulte Waregem",
      "p": 10,
      "w": 3,
@@ -198,7 +211,7 @@
      "form": "LLLLL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Antwerp",
      "p": 10,
      "w": 3,
@@ -211,7 +224,7 @@
      "form": "LLLWL"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "SK Beveren",
      "p": 11,
      "w": 3,
@@ -222,19 +235,6 @@
      "pts": 10,
      "tid": 738,
      "form": "LLDLL"
-    },
-    {
-     "pos": 14,
-     "team": "OH Leuven",
-     "p": 10,
-     "w": 2,
-     "d": 3,
-     "l": 5,
-     "gf": 10,
-     "ga": 17,
-     "pts": 9,
-     "tid": 260,
-     "form": "DWDDW"
     },
     {
      "pos": 15,
