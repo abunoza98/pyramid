@@ -4,7 +4,7 @@
  "adjective": "Argentine",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-06T00:00:00.000Z",
+ "updated": "2026-11-07T00:00:00.000Z",
  "belowNote": "Promoted clubs from Primera D come up",
  "leagues": [
   {
@@ -29,7 +29,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-11-06T00:00:00.000Z",
+     "updated": "2026-11-07T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -60,15 +60,15 @@
       {
        "pos": 3,
        "team": "Vélez Sarsfield",
-       "p": 15,
+       "p": 16,
        "w": 7,
        "d": 7,
-       "l": 1,
+       "l": 2,
        "gf": 25,
-       "ga": 15,
+       "ga": 17,
        "pts": 28,
        "tid": 438,
-       "form": "DLWWD"
+       "form": "LWWDL"
       },
       {
        "pos": 4,
@@ -98,6 +98,19 @@
       },
       {
        "pos": 6,
+       "team": "Independiente",
+       "p": 16,
+       "w": 6,
+       "d": 5,
+       "l": 5,
+       "gf": 15,
+       "ga": 16,
+       "pts": 23,
+       "tid": 453,
+       "form": "DDLDW"
+      },
+      {
+       "pos": 7,
        "team": "Newell's Old Boys",
        "p": 15,
        "w": 5,
@@ -110,7 +123,7 @@
        "form": "DLWDD"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Gimnasia (Mendoza)",
        "p": 15,
        "w": 6,
@@ -123,56 +136,43 @@
        "form": "LWLLD"
       },
       {
-       "pos": 8,
-       "team": "Independiente",
-       "p": 15,
-       "w": 5,
-       "d": 5,
-       "l": 5,
-       "gf": 13,
-       "ga": 15,
-       "pts": 20,
-       "tid": 453,
-       "form": "LDDLD"
-      },
-      {
        "pos": 9,
-       "team": "San Lorenzo",
-       "p": 15,
-       "w": 5,
-       "d": 4,
-       "l": 6,
-       "gf": 9,
-       "ga": 14,
-       "pts": 19,
-       "tid": 460,
-       "form": "LWWDD"
+       "team": "Unión",
+       "p": 16,
+       "w": 6,
+       "d": 3,
+       "l": 7,
+       "gf": 24,
+       "ga": 24,
+       "pts": 21,
+       "tid": 441,
+       "form": "LDWDW"
       },
       {
        "pos": 10,
-       "team": "Unión",
-       "p": 15,
+       "team": "Platense",
+       "p": 16,
        "w": 5,
-       "d": 3,
-       "l": 7,
-       "gf": 22,
-       "ga": 24,
-       "pts": 18,
-       "tid": 441,
-       "form": "LLDWD"
+       "d": 5,
+       "l": 6,
+       "gf": 18,
+       "ga": 20,
+       "pts": 20,
+       "tid": 1064,
+       "form": "DLWWW"
       },
       {
        "pos": 11,
-       "team": "Platense",
-       "p": 15,
-       "w": 4,
-       "d": 5,
-       "l": 6,
-       "gf": 16,
-       "ga": 20,
-       "pts": 17,
-       "tid": 1064,
-       "form": "DDLWW"
+       "team": "San Lorenzo",
+       "p": 16,
+       "w": 5,
+       "d": 4,
+       "l": 7,
+       "gf": 9,
+       "ga": 16,
+       "pts": 19,
+       "tid": 460,
+       "form": "WWDDL"
       },
       {
        "pos": 12,
@@ -203,15 +203,15 @@
       {
        "pos": 14,
        "team": "Deportivo Riestra",
-       "p": 15,
+       "p": 16,
        "w": 2,
        "d": 6,
-       "l": 7,
-       "gf": 10,
-       "ga": 17,
+       "l": 8,
+       "gf": 11,
+       "ga": 19,
        "pts": 12,
        "tid": 476,
-       "form": "DLDLL"
+       "form": "LDLLL"
       },
       {
        "pos": 15,
@@ -230,7 +230,7 @@
     },
     {
      "name": "Group B",
-     "updated": "2026-11-06T00:00:00.000Z",
+     "updated": "2026-11-07T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -430,7 +430,7 @@
      ]
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   },
   {
    "id": "primera-nacional",
