@@ -542,6 +542,19 @@
     },
     {
      "pos": 8,
+     "team": "Križevci",
+     "p": 12,
+     "w": 5,
+     "d": 3,
+     "l": 4,
+     "gf": 16,
+     "ga": 16,
+     "pts": 18,
+     "tid": 5711,
+     "form": "LDDWW"
+    },
+    {
+     "pos": 9,
      "team": "Hrvatski Dragovoljac",
      "p": 12,
      "w": 5,
@@ -554,7 +567,7 @@
      "form": "LLDWW"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Inter Zaprešić",
      "p": 12,
      "w": 4,
@@ -567,20 +580,20 @@
      "form": "WDDWL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Trnje",
-     "p": 11,
+     "p": 12,
      "w": 4,
      "d": 3,
-     "l": 4,
+     "l": 5,
      "gf": 16,
-     "ga": 14,
+     "ga": 15,
      "pts": 15,
      "tid": 8607,
-     "form": "WLDLD"
+     "form": "LDLDL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Zagora",
      "p": 12,
      "w": 3,
@@ -591,19 +604,6 @@
      "pts": 15,
      "tid": 5731,
      "form": "DDDWL"
-    },
-    {
-     "pos": 12,
-     "team": "Križevci",
-     "p": 11,
-     "w": 4,
-     "d": 3,
-     "l": 4,
-     "gf": 15,
-     "ga": 16,
-     "pts": 15,
-     "tid": 5711,
-     "form": "LLDDW"
     },
     {
      "pos": 13,

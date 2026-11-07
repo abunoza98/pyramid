@@ -4,7 +4,7 @@
  "adjective": "Belgian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-06T00:00:00.000Z",
+ "updated": "2026-11-07T00:00:00.000Z",
  "belowNote": "The top amateur clubs come up",
  "leagues": [
   {
@@ -69,6 +69,19 @@
     },
     {
      "pos": 2,
+     "team": "Charleroi",
+     "p": 11,
+     "w": 9,
+     "d": 0,
+     "l": 2,
+     "gf": 26,
+     "ga": 13,
+     "pts": 27,
+     "tid": 736,
+     "form": "WWLWW"
+    },
+    {
+     "pos": 3,
      "team": "Union Saint-Gilloise",
      "p": 10,
      "w": 8,
@@ -81,7 +94,7 @@
      "form": "WWDWW"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Gent",
      "p": 10,
      "w": 8,
@@ -92,19 +105,6 @@
      "pts": 25,
      "tid": 631,
      "form": "DWWWL"
-    },
-    {
-     "pos": 4,
-     "team": "Charleroi",
-     "p": 10,
-     "w": 8,
-     "d": 0,
-     "l": 2,
-     "gf": 21,
-     "ga": 12,
-     "pts": 24,
-     "tid": 736,
-     "form": "WWWLW"
     },
     {
      "pos": 5,
@@ -161,15 +161,15 @@
     {
      "pos": 9,
      "team": "Westerlo",
-     "p": 10,
+     "p": 11,
      "w": 4,
      "d": 2,
-     "l": 4,
-     "gf": 25,
-     "ga": 25,
+     "l": 5,
+     "gf": 26,
+     "ga": 30,
      "pts": 14,
      "tid": 261,
-     "form": "WWWDL"
+     "form": "WWDLL"
     },
     {
      "pos": 10,
@@ -289,7 +289,7 @@
      "form": "LWLDL"
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   },
   {
    "id": "challenger-pro-league",
@@ -357,6 +357,19 @@
     },
     {
      "pos": 3,
+     "team": "Francs Borains",
+     "p": 9,
+     "w": 6,
+     "d": 0,
+     "l": 3,
+     "gf": 11,
+     "ga": 10,
+     "pts": 18,
+     "tid": 5805,
+     "form": "WLLWW"
+    },
+    {
+     "pos": 4,
      "team": "AS Eupen",
      "p": 8,
      "w": 5,
@@ -369,7 +382,7 @@
      "form": "WWWLL"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Patro Eisden",
      "p": 10,
      "w": 5,
@@ -380,19 +393,6 @@
      "pts": 15,
      "tid": 6222,
      "form": "LWWWW"
-    },
-    {
-     "pos": 5,
-     "team": "Francs Borains",
-     "p": 8,
-     "w": 5,
-     "d": 0,
-     "l": 3,
-     "gf": 10,
-     "ga": 10,
-     "pts": 15,
-     "tid": 5805,
-     "form": "WWLLW"
     },
     {
      "pos": 6,
@@ -462,31 +462,18 @@
     {
      "pos": 11,
      "team": "Club Brugge II",
-     "p": 8,
+     "p": 9,
      "w": 2,
      "d": 3,
-     "l": 3,
+     "l": 4,
      "gf": 14,
-     "ga": 17,
+     "ga": 21,
      "pts": 9,
      "tid": 14130,
-     "form": "DDLDL"
+     "form": "DLDLL"
     },
     {
      "pos": 12,
-     "team": "Seraing United",
-     "p": 9,
-     "w": 2,
-     "d": 2,
-     "l": 5,
-     "gf": 12,
-     "ga": 16,
-     "pts": 8,
-     "tid": 10244,
-     "form": "LDLWW"
-    },
-    {
-     "pos": 13,
      "team": "Lierse",
      "p": 8,
      "w": 2,
@@ -499,7 +486,33 @@
      "form": "DLWLL"
     },
     {
+     "pos": 13,
+     "team": "Seraing United",
+     "p": 10,
+     "w": 2,
+     "d": 2,
+     "l": 6,
+     "gf": 12,
+     "ga": 17,
+     "pts": 8,
+     "tid": 10244,
+     "form": "DLWWL"
+    },
+    {
      "pos": 14,
+     "team": "Anderlecht II",
+     "p": 9,
+     "w": 2,
+     "d": 1,
+     "l": 6,
+     "gf": 12,
+     "ga": 17,
+     "pts": 7,
+     "tid": 19046,
+     "form": "LLLWW"
+    },
+    {
+     "pos": 15,
      "team": "Liège",
      "p": 9,
      "w": 1,
@@ -510,22 +523,9 @@
      "pts": 5,
      "tid": 6220,
      "form": "DLLLL"
-    },
-    {
-     "pos": 15,
-     "team": "Anderlecht II",
-     "p": 8,
-     "w": 1,
-     "d": 1,
-     "l": 6,
-     "gf": 8,
-     "ga": 17,
-     "pts": 4,
-     "tid": 19046,
-     "form": "DLLLW"
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   }
  ]
 }

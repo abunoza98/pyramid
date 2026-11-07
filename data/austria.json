@@ -119,6 +119,19 @@
     },
     {
      "pos": 8,
+     "team": "Austria Lustenau",
+     "p": 12,
+     "w": 3,
+     "d": 2,
+     "l": 7,
+     "gf": 15,
+     "ga": 30,
+     "pts": 11,
+     "tid": 1399,
+     "form": "LLLLW"
+    },
+    {
+     "pos": 9,
      "team": "Rheindorf Altach",
      "p": 11,
      "w": 3,
@@ -131,30 +144,17 @@
      "form": "LWLWD"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Grazer AK",
-     "p": 11,
+     "p": 12,
      "w": 2,
      "d": 4,
-     "l": 5,
-     "gf": 8,
-     "ga": 27,
+     "l": 6,
+     "gf": 9,
+     "ga": 29,
      "pts": 10,
      "tid": 4256,
-     "form": "DDLDL"
-    },
-    {
-     "pos": 10,
-     "team": "Austria Lustenau",
-     "p": 11,
-     "w": 2,
-     "d": 2,
-     "l": 7,
-     "gf": 13,
-     "ga": 29,
-     "pts": 8,
-     "tid": 1399,
-     "form": "WLLLL"
+     "form": "DLDLL"
     },
     {
      "pos": 11,
@@ -323,6 +323,19 @@
     },
     {
      "pos": 9,
+     "team": "Schwarz-Weiß Bregenz",
+     "p": 12,
+     "w": 4,
+     "d": 4,
+     "l": 4,
+     "gf": 15,
+     "ga": 16,
+     "pts": 16,
+     "tid": 8259,
+     "form": "LDDWD"
+    },
+    {
+     "pos": 10,
      "team": "SKN St. Pölten",
      "p": 12,
      "w": 4,
@@ -335,20 +348,20 @@
      "form": "LDDWD"
     },
     {
-     "pos": 10,
-     "team": "Schwarz-Weiß Bregenz",
-     "p": 11,
+     "pos": 11,
+     "team": "Sturm Graz II",
+     "p": 12,
      "w": 4,
-     "d": 3,
-     "l": 4,
-     "gf": 14,
-     "ga": 15,
-     "pts": 15,
-     "tid": 8259,
-     "form": "LLDDW"
+     "d": 2,
+     "l": 6,
+     "gf": 21,
+     "ga": 25,
+     "pts": 14,
+     "tid": 8251,
+     "form": "LLLWW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Floridsdorfer AC",
      "p": 11,
      "w": 4,
@@ -361,7 +374,7 @@
      "form": "WLLLD"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Voitsberg",
      "p": 11,
      "w": 3,
@@ -372,19 +385,6 @@
      "pts": 12,
      "tid": 8332,
      "form": "WLLWL"
-    },
-    {
-     "pos": 13,
-     "team": "Sturm Graz II",
-     "p": 11,
-     "w": 3,
-     "d": 2,
-     "l": 6,
-     "gf": 18,
-     "ga": 24,
-     "pts": 11,
-     "tid": 8251,
-     "form": "DLLLW"
     },
     {
      "pos": 14,
@@ -401,29 +401,29 @@
     },
     {
      "pos": 15,
-     "team": "WSPG Wels",
-     "p": 11,
+     "team": "Rapid Wien II",
+     "p": 12,
      "w": 2,
      "d": 2,
-     "l": 7,
-     "gf": 14,
-     "ga": 27,
+     "l": 8,
+     "gf": 12,
+     "ga": 25,
      "pts": 8,
-     "tid": 22213,
-     "form": "LWDLL"
+     "tid": 8247,
+     "form": "LDLLD"
     },
     {
      "pos": 16,
-     "team": "Rapid Wien II",
-     "p": 11,
+     "team": "WSPG Wels",
+     "p": 12,
      "w": 2,
-     "d": 1,
+     "d": 2,
      "l": 8,
-     "gf": 11,
-     "ga": 24,
-     "pts": 7,
-     "tid": 8247,
-     "form": "LLDLL"
+     "gf": 15,
+     "ga": 30,
+     "pts": 8,
+     "tid": 22213,
+     "form": "WDLLL"
     }
    ],
    "updated": "2026-11-07T00:00:00.000Z"
@@ -563,6 +563,19 @@
       },
       {
        "pos": 10,
+       "team": "Gloggnitz",
+       "p": 15,
+       "w": 5,
+       "d": 5,
+       "l": 5,
+       "gf": 21,
+       "ga": 24,
+       "pts": 20,
+       "tid": 4941,
+       "form": "DDDWW"
+      },
+      {
+       "pos": 11,
        "team": "Mattersburg SV 2020",
        "p": 15,
        "w": 6,
@@ -575,20 +588,20 @@
        "form": "LWLDW"
       },
       {
-       "pos": 11,
+       "pos": 12,
        "team": "Donau",
-       "p": 14,
+       "p": 15,
        "w": 4,
        "d": 6,
-       "l": 4,
-       "gf": 28,
-       "ga": 23,
+       "l": 5,
+       "gf": 31,
+       "ga": 27,
        "pts": 18,
        "tid": 8365,
-       "form": "DDLWW"
+       "form": "DLWWL"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "Leobendorf",
        "p": 15,
        "w": 5,
@@ -599,19 +612,6 @@
        "pts": 18,
        "tid": 4951,
        "form": "WWDLL"
-      },
-      {
-       "pos": 13,
-       "team": "Gloggnitz",
-       "p": 14,
-       "w": 4,
-       "d": 5,
-       "l": 5,
-       "gf": 17,
-       "ga": 21,
-       "pts": 17,
-       "tid": 4941,
-       "form": "WDDDW"
       },
       {
        "pos": 14,
@@ -661,13 +661,13 @@
       {
        "pos": 1,
        "team": "Wallern / Marienkirchen",
-       "p": 14,
-       "w": 9,
+       "p": 15,
+       "w": 10,
        "d": 2,
        "l": 3,
-       "gf": 35,
-       "ga": 14,
-       "pts": 29,
+       "gf": 38,
+       "ga": 16,
+       "pts": 32,
        "tid": 21534,
        "form": "WWLWD"
       },
@@ -687,12 +687,12 @@
       {
        "pos": 3,
        "team": "LASK Juniors",
-       "p": 14,
+       "p": 15,
        "w": 8,
        "d": 4,
-       "l": 2,
-       "gf": 42,
-       "ga": 14,
+       "l": 3,
+       "gf": 44,
+       "ga": 17,
        "pts": 28,
        "tid": 11225,
        "form": "WWDWD"
@@ -700,13 +700,13 @@
       {
        "pos": 4,
        "team": "Gurten",
-       "p": 14,
-       "w": 7,
+       "p": 15,
+       "w": 8,
        "d": 3,
        "l": 4,
-       "gf": 21,
-       "ga": 14,
-       "pts": 24,
+       "gf": 23,
+       "ga": 15,
+       "pts": 27,
        "tid": 4942,
        "form": "DDWWW"
       },
@@ -830,12 +830,12 @@
       {
        "pos": 14,
        "team": "UFC Hallein",
-       "p": 14,
+       "p": 15,
        "w": 3,
        "d": 4,
-       "l": 7,
-       "gf": 13,
-       "ga": 26,
+       "l": 8,
+       "gf": 14,
+       "ga": 28,
        "pts": 13,
        "tid": 19315,
        "form": "LWWLD"

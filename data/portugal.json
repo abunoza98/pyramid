@@ -288,7 +288,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   },
   {
    "id": "liga-portugal-2",
@@ -329,6 +329,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Penafiel",
+     "p": 10,
+     "w": 7,
+     "d": 1,
+     "l": 2,
+     "gf": 22,
+     "ga": 10,
+     "pts": 22,
+     "tid": 235,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 2,
      "team": "Sporting CP B",
      "p": 9,
      "w": 7,
@@ -339,19 +352,6 @@
      "pts": 21,
      "tid": 761,
      "form": "WLWWW"
-    },
-    {
-     "pos": 2,
-     "team": "Penafiel",
-     "p": 9,
-     "w": 6,
-     "d": 1,
-     "l": 2,
-     "gf": 19,
-     "ga": 8,
-     "pts": 19,
-     "tid": 235,
-     "form": "WWLWW"
     },
     {
      "pos": 3,
@@ -524,19 +524,6 @@
     },
     {
      "pos": 16,
-     "team": "Chaves",
-     "p": 9,
-     "w": 2,
-     "d": 2,
-     "l": 5,
-     "gf": 9,
-     "ga": 18,
-     "pts": 8,
-     "tid": 223,
-     "form": "WLDWL"
-    },
-    {
-     "pos": 17,
      "team": "FC Porto B",
      "p": 9,
      "w": 2,
@@ -547,6 +534,19 @@
      "pts": 8,
      "tid": 243,
      "form": "LDWDL"
+    },
+    {
+     "pos": 17,
+     "team": "Chaves",
+     "p": 10,
+     "w": 2,
+     "d": 2,
+     "l": 6,
+     "gf": 11,
+     "ga": 21,
+     "pts": 8,
+     "tid": 223,
+     "form": "LDWLL"
     },
     {
      "pos": 18,
