@@ -35,6 +35,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Persija",
+     "p": 9,
+     "w": 7,
+     "d": 0,
+     "l": 2,
+     "gf": 19,
+     "ga": 8,
+     "pts": 21,
+     "tid": 10134,
+     "form": "LWWLW"
+    },
+    {
+     "pos": 2,
      "team": "Dewa United",
      "p": 9,
      "w": 6,
@@ -47,7 +60,7 @@
      "form": "DWLWW"
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "Madura United",
      "p": 9,
      "w": 6,
@@ -58,19 +71,6 @@
      "pts": 19,
      "tid": 2444,
      "form": "DWLWW"
-    },
-    {
-     "pos": 3,
-     "team": "Persija",
-     "p": 8,
-     "w": 6,
-     "d": 0,
-     "l": 2,
-     "gf": 18,
-     "ga": 8,
-     "pts": 18,
-     "tid": 10134,
-     "form": "WLWWL"
     },
     {
      "pos": 4,
@@ -101,28 +101,28 @@
     {
      "pos": 6,
      "team": "Persita",
-     "p": 7,
+     "p": 8,
      "w": 4,
      "d": 3,
-     "l": 0,
+     "l": 1,
      "gf": 17,
-     "ga": 10,
+     "ga": 11,
      "pts": 15,
      "tid": 4244,
-     "form": "DWWDW"
+     "form": "WWDWL"
     },
     {
      "pos": 7,
      "team": "Persebaya Surabaya",
-     "p": 8,
+     "p": 9,
      "w": 3,
      "d": 4,
-     "l": 1,
+     "l": 2,
      "gf": 10,
-     "ga": 7,
+     "ga": 8,
      "pts": 13,
      "tid": 2446,
-     "form": "WDLWD"
+     "form": "DLWDL"
     },
     {
      "pos": 8,
@@ -139,6 +139,19 @@
     },
     {
      "pos": 9,
+     "team": "Garudayaksa",
+     "p": 9,
+     "w": 3,
+     "d": 2,
+     "l": 4,
+     "gf": 12,
+     "ga": 16,
+     "pts": 11,
+     "tid": 26645,
+     "form": "WLLWW"
+    },
+    {
+     "pos": 10,
      "team": "Java United",
      "p": 8,
      "w": 3,
@@ -152,7 +165,7 @@
      "form": "WWDDW"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Persik Kediri",
      "p": 8,
      "w": 3,
@@ -165,7 +178,7 @@
      "form": "WLWLL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Borneo FC",
      "p": 8,
      "w": 3,
@@ -178,7 +191,7 @@
      "form": "WLWLD"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "PSM Makassar",
      "p": 9,
      "w": 2,
@@ -191,7 +204,7 @@
      "form": "WWDLD"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Arema FC",
      "p": 9,
      "w": 2,
@@ -204,20 +217,21 @@
      "form": "LLWLL"
     },
     {
-     "pos": 14,
-     "team": "Garudayaksa",
-     "p": 8,
+     "pos": 15,
+     "team": "Isenmulang Kalteng",
+     "p": 9,
      "w": 2,
      "d": 2,
-     "l": 4,
-     "gf": 10,
-     "ga": 15,
-     "pts": 8,
-     "tid": 26645,
-     "form": "LWLLW"
+     "l": 5,
+     "gf": 4,
+     "ga": 16,
+     "pts": 6,
+     "ded": 2,
+     "tid": 24993,
+     "form": "WDDLW"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "PSIM Yogyakarta",
      "p": 9,
      "w": 1,
@@ -230,7 +244,7 @@
      "form": "LLDWL"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "PSS Sleman",
      "p": 8,
      "w": 1,
@@ -243,31 +257,17 @@
      "form": "WDLLL"
     },
     {
-     "pos": 17,
-     "team": "Isenmulang Kalteng",
-     "p": 8,
-     "w": 1,
-     "d": 2,
-     "l": 5,
-     "gf": 3,
-     "ga": 16,
-     "pts": 3,
-     "ded": 2,
-     "tid": 24993,
-     "form": "LWDDL"
-    },
-    {
      "pos": 18,
      "team": "Persijap",
-     "p": 8,
+     "p": 9,
      "w": 0,
      "d": 2,
-     "l": 6,
-     "gf": 4,
-     "ga": 16,
+     "l": 7,
+     "gf": 5,
+     "ga": 18,
      "pts": 2,
      "tid": 11132,
-     "form": "LLLDD"
+     "form": "LLDDL"
     }
    ],
    "updated": "2026-11-07T00:00:00.000Z"
