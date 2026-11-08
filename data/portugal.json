@@ -56,13 +56,13 @@
     {
      "pos": 1,
      "team": "FC Porto",
-     "p": 10,
-     "w": 10,
+     "p": 11,
+     "w": 11,
      "d": 0,
      "l": 0,
-     "gf": 25,
-     "ga": 4,
-     "pts": 30,
+     "gf": 27,
+     "ga": 5,
+     "pts": 33,
      "tid": 212,
      "form": "WWWWW"
     },
@@ -225,15 +225,15 @@
     {
      "pos": 14,
      "team": "Vitória de Guimarães",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 3,
-     "l": 5,
-     "gf": 10,
-     "ga": 10,
+     "l": 6,
+     "gf": 11,
+     "ga": 12,
      "pts": 9,
      "tid": 224,
-     "form": "LDLWD"
+     "form": "DLWDL"
     },
     {
      "pos": 15,

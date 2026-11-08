@@ -448,6 +448,19 @@
     },
     {
      "pos": 9,
+     "team": "Cremonese",
+     "p": 11,
+     "w": 4,
+     "d": 3,
+     "l": 4,
+     "gf": 14,
+     "ga": 12,
+     "pts": 15,
+     "tid": 520,
+     "form": "LLWWW"
+    },
+    {
+     "pos": 10,
      "team": "Padova",
      "p": 11,
      "w": 4,
@@ -460,7 +473,7 @@
      "form": "LWWDD"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Cesena",
      "p": 11,
      "w": 3,
@@ -473,7 +486,7 @@
      "form": "DLWDW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Südtirol",
      "p": 11,
      "w": 3,
@@ -486,7 +499,7 @@
      "form": "LDLDD"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Juve Stabia",
      "p": 11,
      "w": 4,
@@ -498,19 +511,6 @@
      "ded": 4,
      "tid": 863,
      "form": "WWLDW"
-    },
-    {
-     "pos": 13,
-     "team": "Cremonese",
-     "p": 10,
-     "w": 3,
-     "d": 3,
-     "l": 4,
-     "gf": 10,
-     "ga": 11,
-     "pts": 12,
-     "tid": 520,
-     "form": "DLLWW"
     },
     {
      "pos": 14,
@@ -567,15 +567,15 @@
     {
      "pos": 18,
      "team": "Vicenza",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 3,
-     "l": 5,
-     "gf": 13,
-     "ga": 20,
+     "l": 6,
+     "gf": 14,
+     "ga": 24,
      "pts": 9,
      "tid": 1584,
-     "form": "LDWLL"
+     "form": "DWLLL"
     },
     {
      "pos": 19,

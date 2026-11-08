@@ -153,6 +153,19 @@
     },
     {
      "pos": 9,
+     "team": "TSG Hoffenheim",
+     "p": 9,
+     "w": 4,
+     "d": 0,
+     "l": 5,
+     "gf": 16,
+     "ga": 17,
+     "pts": 12,
+     "tid": 167,
+     "form": "LWWLW"
+    },
+    {
+     "pos": 10,
      "team": "Eintracht Frankfurt",
      "p": 9,
      "w": 3,
@@ -165,7 +178,7 @@
      "form": "LWLWD"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Hamburger SV",
      "p": 9,
      "w": 4,
@@ -178,7 +191,7 @@
      "form": "WWLLW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Mainz 05",
      "p": 9,
      "w": 3,
@@ -191,7 +204,7 @@
      "form": "LWLLL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "SC Paderborn",
      "p": 9,
      "w": 2,
@@ -204,7 +217,7 @@
      "form": "LDWDD"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "FC Augsburg",
      "p": 9,
      "w": 2,
@@ -215,19 +228,6 @@
      "pts": 9,
      "tid": 170,
      "form": "DLDLL"
-    },
-    {
-     "pos": 14,
-     "team": "TSG Hoffenheim",
-     "p": 8,
-     "w": 3,
-     "d": 0,
-     "l": 5,
-     "gf": 14,
-     "ga": 16,
-     "pts": 9,
-     "tid": 167,
-     "form": "LLWWL"
     },
     {
      "pos": 15,
@@ -258,15 +258,15 @@
     {
      "pos": 17,
      "team": "Schalke 04",
-     "p": 8,
+     "p": 9,
      "w": 1,
      "d": 3,
-     "l": 4,
-     "gf": 4,
-     "ga": 9,
+     "l": 5,
+     "gf": 5,
+     "ga": 11,
      "pts": 6,
      "tid": 174,
-     "form": "DLLDL"
+     "form": "LLDLL"
     },
     {
      "pos": 18,

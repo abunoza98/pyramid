@@ -185,16 +185,16 @@
     },
     {
      "pos": 11,
-     "team": "Utrecht",
-     "p": 11,
+     "team": "NEC Nijmegen",
+     "p": 12,
      "w": 3,
-     "d": 3,
-     "l": 5,
-     "gf": 19,
-     "ga": 31,
-     "pts": 12,
-     "tid": 207,
-     "form": "LWWDL"
+     "d": 5,
+     "l": 4,
+     "gf": 20,
+     "ga": 21,
+     "pts": 14,
+     "tid": 413,
+     "form": "DDDLW"
     },
     {
      "pos": 12,
@@ -224,16 +224,16 @@
     },
     {
      "pos": 14,
-     "team": "NEC Nijmegen",
-     "p": 11,
-     "w": 2,
-     "d": 5,
-     "l": 4,
-     "gf": 17,
-     "ga": 19,
-     "pts": 11,
-     "tid": 413,
-     "form": "DDDDL"
+     "team": "Utrecht",
+     "p": 12,
+     "w": 3,
+     "d": 3,
+     "l": 6,
+     "gf": 21,
+     "ga": 34,
+     "pts": 12,
+     "tid": 207,
+     "form": "WWDLL"
     },
     {
      "pos": 15,

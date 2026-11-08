@@ -952,6 +952,19 @@
       },
       {
        "pos": 3,
+       "team": "Murcia",
+       "p": 11,
+       "w": 6,
+       "d": 2,
+       "l": 3,
+       "gf": 13,
+       "ga": 9,
+       "pts": 20,
+       "tid": 5275,
+       "form": "WDLWD"
+      },
+      {
+       "pos": 4,
        "team": "Jaén",
        "p": 11,
        "w": 5,
@@ -962,19 +975,6 @@
        "pts": 19,
        "tid": 5274,
        "form": "DWDWL"
-      },
-      {
-       "pos": 4,
-       "team": "Murcia",
-       "p": 10,
-       "w": 6,
-       "d": 1,
-       "l": 3,
-       "gf": 12,
-       "ga": 8,
-       "pts": 19,
-       "tid": 5275,
-       "form": "LWDLW"
       },
       {
        "pos": 5,
@@ -1082,6 +1082,19 @@
       },
       {
        "pos": 13,
+       "team": "Algeciras",
+       "p": 11,
+       "w": 4,
+       "d": 2,
+       "l": 5,
+       "gf": 16,
+       "ga": 17,
+       "pts": 14,
+       "tid": 9597,
+       "form": "LWWLD"
+      },
+      {
+       "pos": 14,
        "team": "Sant Andreu",
        "p": 11,
        "w": 3,
@@ -1092,19 +1105,6 @@
        "pts": 13,
        "tid": 5277,
        "form": "LDLWD"
-      },
-      {
-       "pos": 14,
-       "team": "Algeciras",
-       "p": 10,
-       "w": 4,
-       "d": 1,
-       "l": 5,
-       "gf": 15,
-       "ga": 16,
-       "pts": 13,
-       "tid": 9597,
-       "form": "WLWWL"
       },
       {
        "pos": 15,
