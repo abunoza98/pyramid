@@ -83,15 +83,15 @@
     {
      "pos": 4,
      "team": "Real Betis",
-     "p": 11,
-     "w": 7,
+     "p": 12,
+     "w": 8,
      "d": 2,
      "l": 2,
-     "gf": 18,
+     "gf": 20,
      "ga": 15,
-     "pts": 23,
+     "pts": 26,
      "tid": 543,
-     "form": "DWLDW"
+     "form": "WLDWW"
     },
     {
      "pos": 5,
@@ -251,19 +251,6 @@
     },
     {
      "pos": 17,
-     "team": "Elche",
-     "p": 11,
-     "w": 2,
-     "d": 4,
-     "l": 5,
-     "gf": 14,
-     "ga": 18,
-     "pts": 10,
-     "tid": 797,
-     "form": "WDDWL"
-    },
-    {
-     "pos": 18,
      "team": "Levante",
      "p": 11,
      "w": 2,
@@ -273,6 +260,19 @@
      "ga": 21,
      "pts": 10,
      "tid": 539,
+     "form": "DDWLL"
+    },
+    {
+     "pos": 18,
+     "team": "Elche",
+     "p": 12,
+     "w": 2,
+     "d": 4,
+     "l": 6,
+     "gf": 14,
+     "ga": 20,
+     "pts": 10,
+     "tid": 797,
      "form": "DDWLL"
     },
     {

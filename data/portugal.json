@@ -288,7 +288,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-08T00:00:00.000Z"
   },
   {
    "id": "liga-portugal-2",
@@ -355,6 +355,19 @@
     },
     {
      "pos": 3,
+     "team": "Benfica B",
+     "p": 10,
+     "w": 6,
+     "d": 2,
+     "l": 2,
+     "gf": 14,
+     "ga": 8,
+     "pts": 20,
+     "tid": 229,
+     "form": "WWDWW"
+    },
+    {
+     "pos": 4,
      "team": "Lusitânia Lourosa",
      "p": 10,
      "w": 5,
@@ -365,19 +378,6 @@
      "pts": 19,
      "tid": 6358,
      "form": "WDDDL"
-    },
-    {
-     "pos": 4,
-     "team": "Benfica B",
-     "p": 9,
-     "w": 5,
-     "d": 2,
-     "l": 2,
-     "gf": 11,
-     "ga": 6,
-     "pts": 17,
-     "tid": 229,
-     "form": "LWWDW"
     },
     {
      "pos": 5,
@@ -395,15 +395,15 @@
     {
      "pos": 6,
      "team": "Farense",
-     "p": 9,
+     "p": 10,
      "w": 4,
      "d": 3,
-     "l": 2,
-     "gf": 15,
-     "ga": 11,
+     "l": 3,
+     "gf": 17,
+     "ga": 14,
      "pts": 15,
      "tid": 231,
-     "form": "DWWLD"
+     "form": "WWLDL"
     },
     {
      "pos": 7,

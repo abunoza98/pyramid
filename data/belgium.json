@@ -69,6 +69,19 @@
     },
     {
      "pos": 2,
+     "team": "Gent",
+     "p": 11,
+     "w": 9,
+     "d": 1,
+     "l": 1,
+     "gf": 20,
+     "ga": 6,
+     "pts": 28,
+     "tid": 631,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 3,
      "team": "Charleroi",
      "p": 11,
      "w": 9,
@@ -81,7 +94,7 @@
      "form": "WWLWW"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Union Saint-Gilloise",
      "p": 10,
      "w": 8,
@@ -92,19 +105,6 @@
      "pts": 26,
      "tid": 1393,
      "form": "WWDWW"
-    },
-    {
-     "pos": 4,
-     "team": "Gent",
-     "p": 10,
-     "w": 8,
-     "d": 1,
-     "l": 1,
-     "gf": 19,
-     "ga": 6,
-     "pts": 25,
-     "tid": 631,
-     "form": "DWWWL"
     },
     {
      "pos": 5,
@@ -278,15 +278,15 @@
     {
      "pos": 18,
      "team": "Kortrijk",
-     "p": 10,
+     "p": 11,
      "w": 1,
      "d": 1,
-     "l": 8,
+     "l": 9,
      "gf": 4,
-     "ga": 22,
+     "ga": 23,
      "pts": 4,
      "tid": 734,
-     "form": "LWLDL"
+     "form": "WLDLL"
     }
    ],
    "updated": "2026-11-08T00:00:00.000Z"
@@ -525,7 +525,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-08T00:00:00.000Z"
   }
  ]
 }

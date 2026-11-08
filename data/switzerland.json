@@ -1088,15 +1088,15 @@
       {
        "pos": 3,
        "team": "Tuggen",
-       "p": 12,
+       "p": 13,
        "w": 7,
        "d": 3,
-       "l": 2,
+       "l": 3,
        "gf": 27,
-       "ga": 15,
+       "ga": 19,
        "pts": 24,
        "tid": 12720,
-       "form": "DDDWL"
+       "form": "DDWLL"
       },
       {
        "pos": 4,
@@ -1178,6 +1178,19 @@
       },
       {
        "pos": 10,
+       "team": "Eschen / Mauren",
+       "p": 13,
+       "w": 4,
+       "d": 3,
+       "l": 6,
+       "gf": 23,
+       "ga": 26,
+       "pts": 15,
+       "tid": 12713,
+       "form": "DWLLW"
+      },
+      {
+       "pos": 11,
        "team": "Dietikon",
        "p": 13,
        "w": 4,
@@ -1190,7 +1203,7 @@
        "form": "LWLDL"
       },
       {
-       "pos": 11,
+       "pos": 12,
        "team": "Gossau",
        "p": 13,
        "w": 4,
@@ -1203,7 +1216,7 @@
        "form": "WWLLL"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "Mendrisio",
        "p": 13,
        "w": 2,
@@ -1214,19 +1227,6 @@
        "pts": 12,
        "tid": 16354,
        "form": "DLDLW"
-      },
-      {
-       "pos": 13,
-       "team": "Eschen / Mauren",
-       "p": 12,
-       "w": 3,
-       "d": 3,
-       "l": 6,
-       "gf": 19,
-       "ga": 26,
-       "pts": 12,
-       "tid": 12713,
-       "form": "DDWLL"
       },
       {
        "pos": 14,
