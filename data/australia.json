@@ -4,7 +4,7 @@
  "adjective": "Australian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-07T00:00:00.000Z",
+ "updated": "2026-11-08T00:00:00.000Z",
  "belowNote": "Below the NPL, each state has its own divisions",
  "systemNote": "There's no promotion or relegation between the A-League and the state leagues. Within each state, clubs move between its NPL and its second division.",
  "leagues": [
@@ -146,15 +146,15 @@
     {
      "pos": 9,
      "team": "Melbourne Victory",
-     "p": 3,
+     "p": 4,
      "w": 0,
-     "d": 2,
+     "d": 3,
      "l": 1,
-     "gf": 3,
-     "ga": 4,
-     "pts": 2,
+     "gf": 5,
+     "ga": 6,
+     "pts": 3,
      "tid": 944,
-     "form": "LDD"
+     "form": "LDDD"
     },
     {
      "pos": 10,
@@ -185,18 +185,18 @@
     {
      "pos": 12,
      "team": "Adelaide United",
-     "p": 2,
+     "p": 3,
      "w": 0,
-     "d": 0,
+     "d": 1,
      "l": 2,
-     "gf": 1,
-     "ga": 6,
-     "pts": 0,
+     "gf": 3,
+     "ga": 8,
+     "pts": 1,
      "tid": 948,
-     "form": "LL"
+     "form": "LLD"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-08T00:00:00.000Z"
   },
   {
    "id": "npl",

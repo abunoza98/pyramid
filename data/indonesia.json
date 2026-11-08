@@ -4,7 +4,7 @@
  "adjective": "Indonesian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-07T00:00:00.000Z",
+ "updated": "2026-11-08T00:00:00.000Z",
  "belowNote": "Championship (second tier) clubs come up; API-Football doesn't have its tables yet",
  "leagues": [
   {
@@ -61,6 +61,19 @@
     },
     {
      "pos": 3,
+     "team": "Bali United",
+     "p": 9,
+     "w": 6,
+     "d": 1,
+     "l": 2,
+     "gf": 26,
+     "ga": 9,
+     "pts": 19,
+     "tid": 2448,
+     "form": "LWDWW"
+    },
+    {
+     "pos": 4,
      "team": "Madura United",
      "p": 9,
      "w": 6,
@@ -71,19 +84,6 @@
      "pts": 19,
      "tid": 2444,
      "form": "DWLWW"
-    },
-    {
-     "pos": 4,
-     "team": "Bali United",
-     "p": 8,
-     "w": 5,
-     "d": 1,
-     "l": 2,
-     "gf": 23,
-     "ga": 9,
-     "pts": 16,
-     "tid": 2448,
-     "form": "WLWDW"
     },
     {
      "pos": 5,
@@ -127,15 +127,15 @@
     {
      "pos": 8,
      "team": "Bhayangkara FC",
-     "p": 8,
+     "p": 9,
      "w": 2,
-     "d": 5,
+     "d": 6,
      "l": 1,
-     "gf": 11,
-     "ga": 10,
-     "pts": 11,
+     "gf": 12,
+     "ga": 11,
+     "pts": 12,
      "tid": 2443,
-     "form": "DDWDL"
+     "form": "DWDLD"
     },
     {
      "pos": 9,
@@ -166,19 +166,6 @@
     },
     {
      "pos": 11,
-     "team": "Persik Kediri",
-     "p": 8,
-     "w": 3,
-     "d": 1,
-     "l": 4,
-     "gf": 9,
-     "ga": 11,
-     "pts": 10,
-     "tid": 4241,
-     "form": "WLWLL"
-    },
-    {
-     "pos": 12,
      "team": "Borneo FC",
      "p": 8,
      "w": 3,
@@ -191,7 +178,7 @@
      "form": "WLWLD"
     },
     {
-     "pos": 13,
+     "pos": 12,
      "team": "PSM Makassar",
      "p": 9,
      "w": 2,
@@ -202,6 +189,19 @@
      "pts": 10,
      "tid": 2441,
      "form": "WWDLD"
+    },
+    {
+     "pos": 13,
+     "team": "Persik Kediri",
+     "p": 9,
+     "w": 3,
+     "d": 1,
+     "l": 5,
+     "gf": 9,
+     "ga": 14,
+     "pts": 10,
+     "tid": 4241,
+     "form": "LWLLL"
     },
     {
      "pos": 14,
@@ -232,6 +232,19 @@
     },
     {
      "pos": 16,
+     "team": "PSS Sleman",
+     "p": 9,
+     "w": 1,
+     "d": 2,
+     "l": 6,
+     "gf": 12,
+     "ga": 17,
+     "pts": 5,
+     "tid": 3882,
+     "form": "DLLLD"
+    },
+    {
+     "pos": 17,
      "team": "PSIM Yogyakarta",
      "p": 9,
      "w": 1,
@@ -242,19 +255,6 @@
      "pts": 5,
      "tid": 4235,
      "form": "LLDWL"
-    },
-    {
-     "pos": 17,
-     "team": "PSS Sleman",
-     "p": 8,
-     "w": 1,
-     "d": 1,
-     "l": 6,
-     "gf": 11,
-     "ga": 16,
-     "pts": 4,
-     "tid": 3882,
-     "form": "WDLLL"
     },
     {
      "pos": 18,
@@ -270,7 +270,7 @@
      "form": "LLDDL"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-08T00:00:00.000Z"
   }
  ]
 }
