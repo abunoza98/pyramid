@@ -94,6 +94,19 @@
     },
     {
      "pos": 4,
+     "team": "Marseille",
+     "p": 10,
+     "w": 6,
+     "d": 0,
+     "l": 4,
+     "gf": 22,
+     "ga": 14,
+     "pts": 18,
+     "tid": 81,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 5,
      "team": "Lyon",
      "p": 10,
      "w": 5,
@@ -106,7 +119,7 @@
      "form": "LWLWL"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Nice",
      "p": 10,
      "w": 5,
@@ -119,7 +132,7 @@
      "form": "WLWWW"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Monaco",
      "p": 10,
      "w": 4,
@@ -132,7 +145,7 @@
      "form": "DLDLD"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Rennes",
      "p": 10,
      "w": 5,
@@ -143,19 +156,6 @@
      "pts": 16,
      "tid": 94,
      "form": "WLWLL"
-    },
-    {
-     "pos": 8,
-     "team": "Marseille",
-     "p": 9,
-     "w": 5,
-     "d": 0,
-     "l": 4,
-     "gf": 20,
-     "ga": 13,
-     "pts": 15,
-     "tid": 81,
-     "form": "LWWWW"
     },
     {
      "pos": 9,
@@ -186,15 +186,15 @@
     {
      "pos": 11,
      "team": "Lens",
-     "p": 9,
+     "p": 10,
      "w": 4,
      "d": 1,
-     "l": 4,
-     "gf": 16,
-     "ga": 13,
+     "l": 5,
+     "gf": 17,
+     "ga": 15,
      "pts": 13,
      "tid": 116,
-     "form": "LWWWL"
+     "form": "WWWLL"
     },
     {
      "pos": 12,

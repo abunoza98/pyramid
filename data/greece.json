@@ -54,15 +54,15 @@
     {
      "pos": 2,
      "team": "Olympiacos",
-     "p": 9,
+     "p": 10,
      "w": 7,
-     "d": 1,
+     "d": 2,
      "l": 1,
-     "gf": 15,
-     "ga": 4,
-     "pts": 22,
+     "gf": 16,
+     "ga": 5,
+     "pts": 23,
      "tid": 553,
-     "form": "WWWWW"
+     "form": "WWWWD"
     },
     {
      "pos": 3,
@@ -79,6 +79,19 @@
     },
     {
      "pos": 4,
+     "team": "PAOK",
+     "p": 10,
+     "w": 6,
+     "d": 1,
+     "l": 3,
+     "gf": 19,
+     "ga": 13,
+     "pts": 19,
+     "tid": 619,
+     "form": "LWLWD"
+    },
+    {
+     "pos": 5,
      "team": "Aris",
      "p": 10,
      "w": 6,
@@ -89,19 +102,6 @@
      "pts": 19,
      "tid": 1123,
      "form": "WWWLW"
-    },
-    {
-     "pos": 5,
-     "team": "PAOK",
-     "p": 9,
-     "w": 6,
-     "d": 0,
-     "l": 3,
-     "gf": 18,
-     "ga": 12,
-     "pts": 18,
-     "tid": 619,
-     "form": "WLWLW"
     },
     {
      "pos": 6,

@@ -693,6 +693,19 @@
     },
     {
      "pos": 9,
+     "team": "TSG Hoffenheim II",
+     "p": 13,
+     "w": 6,
+     "d": 1,
+     "l": 6,
+     "gf": 22,
+     "ga": 20,
+     "pts": 19,
+     "tid": 9364,
+     "form": "LWLLW"
+    },
+    {
+     "pos": 10,
      "team": "Hansa Rostock",
      "p": 13,
      "w": 5,
@@ -705,7 +718,7 @@
      "form": "LLDLW"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "SV Meppen",
      "p": 13,
      "w": 5,
@@ -718,7 +731,7 @@
      "form": "WDWDW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "VfB Stuttgart II",
      "p": 13,
      "w": 5,
@@ -729,19 +742,6 @@
      "pts": 18,
      "tid": 12867,
      "form": "WWLDW"
-    },
-    {
-     "pos": 12,
-     "team": "TSG Hoffenheim II",
-     "p": 12,
-     "w": 5,
-     "d": 1,
-     "l": 6,
-     "gf": 21,
-     "ga": 20,
-     "pts": 16,
-     "tid": 9364,
-     "form": "LLWLL"
     },
     {
      "pos": 13,
@@ -772,15 +772,15 @@
     {
      "pos": 15,
      "team": "Würzburger Kickers",
-     "p": 12,
+     "p": 13,
      "w": 4,
      "d": 2,
-     "l": 6,
+     "l": 7,
      "gf": 17,
-     "ga": 24,
+     "ga": 25,
      "pts": 14,
      "tid": 784,
-     "form": "LDWLW"
+     "form": "DWLWL"
     },
     {
      "pos": 16,

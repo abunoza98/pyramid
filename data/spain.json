@@ -44,15 +44,15 @@
     {
      "pos": 1,
      "team": "Barcelona",
-     "p": 11,
-     "w": 10,
+     "p": 12,
+     "w": 11,
      "d": 0,
      "l": 1,
-     "gf": 46,
-     "ga": 12,
-     "pts": 30,
+     "gf": 48,
+     "ga": 13,
+     "pts": 33,
      "tid": 529,
-     "form": "WWWLW"
+     "form": "WWLWW"
     },
     {
      "pos": 2,
@@ -70,15 +70,15 @@
     {
      "pos": 3,
      "team": "Atlético Madrid",
-     "p": 11,
+     "p": 12,
      "w": 9,
      "d": 1,
-     "l": 1,
-     "gf": 22,
-     "ga": 8,
+     "l": 2,
+     "gf": 23,
+     "ga": 10,
      "pts": 28,
      "tid": 530,
-     "form": "WWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 4,

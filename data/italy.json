@@ -122,15 +122,15 @@
     {
      "pos": 7,
      "team": "Juventus",
-     "p": 10,
+     "p": 11,
      "w": 5,
-     "d": 2,
+     "d": 3,
      "l": 3,
-     "gf": 13,
-     "ga": 10,
-     "pts": 17,
+     "gf": 15,
+     "ga": 12,
+     "pts": 18,
      "tid": 496,
-     "form": "DLWLW"
+     "form": "LWLWD"
     },
     {
      "pos": 8,
@@ -226,15 +226,15 @@
     {
      "pos": 15,
      "team": "Fiorentina",
-     "p": 10,
+     "p": 11,
      "w": 2,
-     "d": 2,
+     "d": 3,
      "l": 6,
-     "gf": 15,
-     "ga": 23,
-     "pts": 8,
+     "gf": 17,
+     "ga": 25,
+     "pts": 9,
      "tid": 502,
-     "form": "LLLDW"
+     "form": "LLDWD"
     },
     {
      "pos": 16,
