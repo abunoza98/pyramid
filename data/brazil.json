@@ -4,7 +4,7 @@
  "adjective": "Brazilian",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-07T00:00:00.000Z",
+ "updated": "2026-11-08T00:00:00.000Z",
  "belowNote": "Clubs qualify for Série D through their state championships",
  "leagues": [
   {
@@ -348,6 +348,19 @@
     },
     {
      "pos": 2,
+     "team": "Vila Nova",
+     "p": 37,
+     "w": 19,
+     "d": 9,
+     "l": 9,
+     "gf": 53,
+     "ga": 38,
+     "pts": 66,
+     "tid": 142,
+     "form": "WDLDW"
+    },
+    {
+     "pos": 3,
      "team": "Juventude",
      "p": 36,
      "w": 18,
@@ -360,30 +373,17 @@
      "form": "WDDWD"
     },
     {
-     "pos": 3,
-     "team": "Vila Nova",
-     "p": 36,
-     "w": 18,
-     "d": 9,
-     "l": 9,
-     "gf": 52,
-     "ga": 38,
-     "pts": 63,
-     "tid": 142,
-     "form": "DWDLD"
-    },
-    {
      "pos": 4,
      "team": "Criciúma",
-     "p": 36,
+     "p": 37,
      "w": 18,
      "d": 8,
-     "l": 10,
+     "l": 11,
      "gf": 38,
-     "ga": 30,
+     "ga": 31,
      "pts": 62,
      "tid": 140,
-     "form": "LWWLW"
+     "form": "WWLWL"
     },
     {
      "pos": 5,
@@ -594,7 +594,7 @@
      "form": "LLDDL"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-08T00:00:00.000Z"
   },
   {
    "id": "serie-c",
