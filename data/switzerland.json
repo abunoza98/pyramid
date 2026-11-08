@@ -537,6 +537,19 @@
     },
     {
      "pos": 13,
+     "team": "Young Boys II",
+     "p": 15,
+     "w": 5,
+     "d": 3,
+     "l": 7,
+     "gf": 32,
+     "ga": 38,
+     "pts": 18,
+     "tid": 12698,
+     "form": "LDWLW"
+    },
+    {
+     "pos": 14,
      "team": "Kreuzlingen",
      "p": 14,
      "w": 4,
@@ -547,19 +560,6 @@
      "pts": 15,
      "tid": 14504,
      "form": "WWLLL"
-    },
-    {
-     "pos": 14,
-     "team": "Young Boys II",
-     "p": 14,
-     "w": 4,
-     "d": 3,
-     "l": 7,
-     "gf": 29,
-     "ga": 36,
-     "pts": 15,
-     "tid": 12698,
-     "form": "LLDWL"
     },
     {
      "pos": 15,
@@ -603,15 +603,15 @@
     {
      "pos": 18,
      "team": "Bellinzona",
-     "p": 14,
+     "p": 15,
      "w": 2,
      "d": 3,
-     "l": 9,
-     "gf": 10,
-     "ga": 26,
+     "l": 10,
+     "gf": 12,
+     "ga": 29,
      "pts": 9,
      "tid": 6616,
-     "form": "LLWDL"
+     "form": "LWDLL"
     }
    ],
    "updated": "2026-11-08T00:00:00.000Z"
@@ -685,6 +685,19 @@
       },
       {
        "pos": 5,
+       "team": "Lausanne-Sport II",
+       "p": 13,
+       "w": 5,
+       "d": 5,
+       "l": 3,
+       "gf": 22,
+       "ga": 15,
+       "pts": 20,
+       "tid": 12693,
+       "form": "DDLLW"
+      },
+      {
+       "pos": 6,
        "team": "Monthey",
        "p": 13,
        "w": 5,
@@ -697,7 +710,7 @@
        "form": "LWLWW"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Sion II",
        "p": 13,
        "w": 5,
@@ -710,30 +723,17 @@
        "form": "DLLWL"
       },
       {
-       "pos": 7,
-       "team": "Lausanne-Sport II",
-       "p": 12,
-       "w": 4,
-       "d": 5,
-       "l": 3,
-       "gf": 21,
-       "ga": 15,
-       "pts": 17,
-       "tid": 12693,
-       "form": "WDDLL"
-      },
-      {
        "pos": 8,
        "team": "Chênois",
-       "p": 12,
+       "p": 13,
        "w": 5,
-       "d": 2,
+       "d": 3,
        "l": 5,
-       "gf": 21,
-       "ga": 20,
-       "pts": 17,
+       "gf": 23,
+       "ga": 22,
+       "pts": 18,
        "tid": 12692,
-       "form": "DLLWW"
+       "form": "LLWWD"
       },
       {
        "pos": 9,
@@ -789,6 +789,19 @@
       },
       {
        "pos": 13,
+       "team": "Coffrane",
+       "p": 13,
+       "w": 3,
+       "d": 5,
+       "l": 5,
+       "gf": 19,
+       "ga": 18,
+       "pts": 14,
+       "tid": 17413,
+       "form": "DLWWD"
+      },
+      {
+       "pos": 14,
        "team": "Meyrin",
        "p": 13,
        "w": 4,
@@ -801,30 +814,17 @@
        "form": "LDLLW"
       },
       {
-       "pos": 14,
-       "team": "Coffrane",
-       "p": 12,
-       "w": 3,
-       "d": 4,
-       "l": 5,
-       "gf": 17,
-       "ga": 16,
-       "pts": 13,
-       "tid": 17413,
-       "form": "WDLWW"
-      },
-      {
        "pos": 15,
        "team": "Stade Payerne",
-       "p": 12,
+       "p": 13,
        "w": 3,
        "d": 2,
-       "l": 7,
+       "l": 8,
        "gf": 21,
-       "ga": 30,
+       "ga": 31,
        "pts": 11,
        "tid": 16339,
-       "form": "LLWDL"
+       "form": "LWDLL"
       },
       {
        "pos": 16,
@@ -886,6 +886,19 @@
       },
       {
        "pos": 4,
+       "team": "Delémont",
+       "p": 13,
+       "w": 6,
+       "d": 3,
+       "l": 4,
+       "gf": 20,
+       "ga": 13,
+       "pts": 21,
+       "tid": 12702,
+       "form": "LWDLW"
+      },
+      {
+       "pos": 5,
        "team": "Muttenz",
        "p": 13,
        "w": 6,
@@ -898,7 +911,7 @@
        "form": "DWWDL"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "Solothurn",
        "p": 13,
        "w": 6,
@@ -909,19 +922,6 @@
        "pts": 20,
        "tid": 12709,
        "form": "WWWLD"
-      },
-      {
-       "pos": 6,
-       "team": "Delémont",
-       "p": 12,
-       "w": 5,
-       "d": 3,
-       "l": 4,
-       "gf": 18,
-       "ga": 12,
-       "pts": 18,
-       "tid": 12702,
-       "form": "WLWDL"
       },
       {
        "pos": 7,
@@ -965,15 +965,15 @@
       {
        "pos": 10,
        "team": "Concordia Basel",
-       "p": 12,
+       "p": 13,
        "w": 5,
        "d": 2,
-       "l": 5,
-       "gf": 23,
-       "ga": 18,
+       "l": 6,
+       "gf": 24,
+       "ga": 20,
        "pts": 17,
        "tid": 6622,
-       "form": "WWWLL"
+       "form": "WWLLL"
       },
       {
        "pos": 11,

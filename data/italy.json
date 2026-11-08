@@ -1001,28 +1001,28 @@
       {
        "pos": 7,
        "team": "Livorno",
-       "p": 12,
+       "p": 13,
        "w": 5,
-       "d": 4,
+       "d": 5,
        "l": 3,
-       "gf": 17,
-       "ga": 16,
-       "pts": 19,
+       "gf": 18,
+       "ga": 17,
+       "pts": 20,
        "tid": 868,
-       "form": "LDDLW"
+       "form": "DDLWD"
       },
       {
        "pos": 8,
        "team": "Campobasso",
-       "p": 12,
+       "p": 13,
        "w": 5,
-       "d": 3,
+       "d": 4,
        "l": 4,
-       "gf": 18,
-       "ga": 20,
-       "pts": 18,
+       "gf": 19,
+       "ga": 21,
+       "pts": 19,
        "tid": 9510,
-       "form": "DLLWW"
+       "form": "LLWWD"
       },
       {
        "pos": 9,

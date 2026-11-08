@@ -67,6 +67,19 @@
     },
     {
      "pos": 4,
+     "team": "TSV Hartberg",
+     "p": 12,
+     "w": 6,
+     "d": 2,
+     "l": 4,
+     "gf": 23,
+     "ga": 19,
+     "pts": 20,
+     "tid": 1072,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 5,
      "team": "Sturm Graz",
      "p": 11,
      "w": 5,
@@ -77,19 +90,6 @@
      "pts": 19,
      "tid": 637,
      "form": "LWWDD"
-    },
-    {
-     "pos": 5,
-     "team": "TSV Hartberg",
-     "p": 11,
-     "w": 5,
-     "d": 2,
-     "l": 4,
-     "gf": 20,
-     "ga": 19,
-     "pts": 17,
-     "tid": 1072,
-     "form": "DWLWW"
     },
     {
      "pos": 6,
@@ -107,15 +107,15 @@
     {
      "pos": 7,
      "team": "WSG Tirol",
-     "p": 11,
+     "p": 12,
      "w": 3,
-     "d": 3,
+     "d": 4,
      "l": 5,
-     "gf": 14,
-     "ga": 17,
-     "pts": 12,
+     "gf": 15,
+     "ga": 18,
+     "pts": 13,
      "tid": 1398,
-     "form": "LLWDL"
+     "form": "LWDLD"
     },
     {
      "pos": 8,
@@ -133,15 +133,15 @@
     {
      "pos": 9,
      "team": "Rheindorf Altach",
-     "p": 11,
+     "p": 12,
      "w": 3,
      "d": 1,
-     "l": 7,
+     "l": 8,
      "gf": 11,
-     "ga": 17,
+     "ga": 20,
      "pts": 10,
      "tid": 618,
-     "form": "LWLWD"
+     "form": "WLWDL"
     },
     {
      "pos": 10,
@@ -159,15 +159,15 @@
     {
      "pos": 11,
      "team": "Austria Wien",
-     "p": 11,
+     "p": 12,
      "w": 2,
-     "d": 1,
+     "d": 2,
      "l": 8,
-     "gf": 10,
-     "ga": 22,
-     "pts": 7,
+     "gf": 11,
+     "ga": 23,
+     "pts": 8,
      "tid": 601,
-     "form": "DLLLL"
+     "form": "LLLLD"
     },
     {
      "pos": 12,
@@ -1152,6 +1152,19 @@
       },
       {
        "pos": 7,
+       "team": "Swarovski Tirol II",
+       "p": 15,
+       "w": 7,
+       "d": 2,
+       "l": 6,
+       "gf": 39,
+       "ga": 27,
+       "pts": 23,
+       "tid": 8344,
+       "form": "LDLLW"
+      },
+      {
+       "pos": 8,
        "team": "Fügen",
        "p": 15,
        "w": 7,
@@ -1164,7 +1177,7 @@
        "form": "LWLWW"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "SK St. Johann",
        "p": 15,
        "w": 6,
@@ -1175,19 +1188,6 @@
        "pts": 21,
        "tid": 27905,
        "form": "LLLWL"
-      },
-      {
-       "pos": 9,
-       "team": "Swarovski Tirol II",
-       "p": 14,
-       "w": 6,
-       "d": 2,
-       "l": 6,
-       "gf": 36,
-       "ga": 27,
-       "pts": 20,
-       "tid": 8344,
-       "form": "WLDLL"
       },
       {
        "pos": 10,
@@ -1244,15 +1244,15 @@
       {
        "pos": 14,
        "team": "Rheindorf Altach II",
-       "p": 14,
+       "p": 15,
        "w": 2,
        "d": 4,
-       "l": 8,
+       "l": 9,
        "gf": 17,
-       "ga": 31,
+       "ga": 34,
        "pts": 10,
        "tid": 8256,
-       "form": "LLLWD"
+       "form": "LLWDL"
       },
       {
        "pos": 15,

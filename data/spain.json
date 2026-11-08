@@ -869,18 +869,31 @@
       {
        "pos": 17,
        "team": "Deportivo Fabril",
-       "p": 10,
+       "p": 11,
        "w": 3,
        "d": 2,
-       "l": 5,
-       "gf": 11,
-       "ga": 17,
+       "l": 6,
+       "gf": 12,
+       "ga": 19,
        "pts": 11,
        "tid": 9610,
-       "form": "LLLLW"
+       "form": "LLLWL"
       },
       {
        "pos": 18,
+       "team": "Arenas",
+       "p": 11,
+       "w": 3,
+       "d": 2,
+       "l": 6,
+       "gf": 10,
+       "ga": 23,
+       "pts": 11,
+       "tid": 9578,
+       "form": "LLWWW"
+      },
+      {
+       "pos": 19,
        "team": "Coria",
        "p": 10,
        "w": 2,
@@ -893,7 +906,7 @@
        "form": "LLWDL"
       },
       {
-       "pos": 19,
+       "pos": 20,
        "team": "UD Ourense",
        "p": 11,
        "w": 2,
@@ -904,19 +917,6 @@
        "pts": 8,
        "tid": 9617,
        "form": "WLLWL"
-      },
-      {
-       "pos": 20,
-       "team": "Arenas",
-       "p": 10,
-       "w": 2,
-       "d": 2,
-       "l": 6,
-       "gf": 8,
-       "ga": 22,
-       "pts": 8,
-       "tid": 9578,
-       "form": "DLLWW"
       }
      ]
     },

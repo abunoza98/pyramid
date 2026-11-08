@@ -706,6 +706,19 @@
     },
     {
      "pos": 10,
+     "team": "SV Meppen",
+     "p": 13,
+     "w": 5,
+     "d": 3,
+     "l": 5,
+     "gf": 18,
+     "ga": 18,
+     "pts": 18,
+     "tid": 1318,
+     "form": "WDWDW"
+    },
+    {
+     "pos": 11,
      "team": "TSG Hoffenheim II",
      "p": 12,
      "w": 5,
@@ -718,7 +731,7 @@
      "form": "LLWLL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Fortuna Düsseldorf",
      "p": 13,
      "w": 4,
@@ -729,19 +742,6 @@
      "pts": 16,
      "tid": 158,
      "form": "WLDDL"
-    },
-    {
-     "pos": 12,
-     "team": "SV Meppen",
-     "p": 12,
-     "w": 4,
-     "d": 3,
-     "l": 5,
-     "gf": 16,
-     "ga": 17,
-     "pts": 15,
-     "tid": 1318,
-     "form": "DWDWD"
     },
     {
      "pos": 13,
@@ -785,15 +785,15 @@
     {
      "pos": 16,
      "team": "Jahn Regensburg",
-     "p": 12,
+     "p": 13,
      "w": 3,
      "d": 4,
-     "l": 5,
-     "gf": 22,
-     "ga": 21,
+     "l": 6,
+     "gf": 23,
+     "ga": 23,
      "pts": 13,
      "tid": 177,
-     "form": "WDDLW"
+     "form": "DDLWL"
     },
     {
      "pos": 17,
