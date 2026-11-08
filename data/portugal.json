@@ -343,15 +343,15 @@
     {
      "pos": 2,
      "team": "Sporting CP B",
-     "p": 9,
+     "p": 10,
      "w": 7,
-     "d": 0,
+     "d": 1,
      "l": 2,
-     "gf": 15,
-     "ga": 7,
-     "pts": 21,
+     "gf": 16,
+     "ga": 8,
+     "pts": 22,
      "tid": 761,
-     "form": "WLWWW"
+     "form": "LWWWD"
     },
     {
      "pos": 3,
@@ -394,6 +394,19 @@
     },
     {
      "pos": 6,
+     "team": "Tondela",
+     "p": 10,
+     "w": 5,
+     "d": 1,
+     "l": 4,
+     "gf": 13,
+     "ga": 11,
+     "pts": 16,
+     "tid": 218,
+     "form": "WWLWD"
+    },
+    {
+     "pos": 7,
      "team": "Farense",
      "p": 10,
      "w": 4,
@@ -404,19 +417,6 @@
      "pts": 15,
      "tid": 231,
      "form": "WWLDL"
-    },
-    {
-     "pos": 7,
-     "team": "Tondela",
-     "p": 9,
-     "w": 5,
-     "d": 0,
-     "l": 4,
-     "gf": 12,
-     "ga": 10,
-     "pts": 15,
-     "tid": 218,
-     "form": "WWWLW"
     },
     {
      "pos": 8,

@@ -199,16 +199,16 @@
     },
     {
      "pos": 12,
-     "team": "Zulte Waregem",
-     "p": 10,
+     "team": "Sint-Truiden",
+     "p": 11,
      "w": 3,
      "d": 2,
-     "l": 5,
-     "gf": 12,
-     "ga": 16,
+     "l": 6,
+     "gf": 22,
+     "ga": 22,
      "pts": 11,
-     "tid": 600,
-     "form": "LLLLL"
+     "tid": 735,
+     "form": "LLLLW"
     },
     {
      "pos": 13,
@@ -225,6 +225,19 @@
     },
     {
      "pos": 14,
+     "team": "Zulte Waregem",
+     "p": 11,
+     "w": 3,
+     "d": 2,
+     "l": 6,
+     "gf": 13,
+     "ga": 20,
+     "pts": 11,
+     "tid": 600,
+     "form": "LLLLL"
+    },
+    {
+     "pos": 15,
      "team": "SK Beveren",
      "p": 11,
      "w": 3,
@@ -237,7 +250,7 @@
      "form": "LLDLL"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Cercle Brugge",
      "p": 11,
      "w": 2,
@@ -248,19 +261,6 @@
      "pts": 9,
      "tid": 741,
      "form": "LLLWW"
-    },
-    {
-     "pos": 16,
-     "team": "Sint-Truiden",
-     "p": 10,
-     "w": 2,
-     "d": 2,
-     "l": 6,
-     "gf": 18,
-     "ga": 21,
-     "pts": 8,
-     "tid": 735,
-     "form": "LLLLL"
     },
     {
      "pos": 17,
