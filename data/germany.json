@@ -101,6 +101,19 @@
     },
     {
      "pos": 5,
+     "team": "Bayer Leverkusen",
+     "p": 9,
+     "w": 5,
+     "d": 1,
+     "l": 3,
+     "gf": 20,
+     "ga": 17,
+     "pts": 16,
+     "tid": 168,
+     "form": "WWLLW"
+    },
+    {
+     "pos": 6,
      "team": "Werder Bremen",
      "p": 9,
      "w": 4,
@@ -111,19 +124,6 @@
      "pts": 15,
      "tid": 162,
      "form": "DDWWL"
-    },
-    {
-     "pos": 6,
-     "team": "Bayer Leverkusen",
-     "p": 8,
-     "w": 4,
-     "d": 1,
-     "l": 3,
-     "gf": 18,
-     "ga": 16,
-     "pts": 13,
-     "tid": 168,
-     "form": "WWWLL"
     },
     {
      "pos": 7,
@@ -232,15 +232,15 @@
     {
      "pos": 15,
      "team": "1. FC Köln",
-     "p": 8,
+     "p": 9,
      "w": 2,
      "d": 3,
-     "l": 3,
-     "gf": 9,
-     "ga": 12,
+     "l": 4,
+     "gf": 10,
+     "ga": 14,
      "pts": 9,
      "tid": 192,
-     "form": "LWLDD"
+     "form": "WLDDL"
     },
     {
      "pos": 16,

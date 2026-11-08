@@ -4,7 +4,7 @@
  "adjective": "Scottish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-07T00:00:00.000Z",
+ "updated": "2026-11-08T00:00:00.000Z",
  "belowNote": "The Highland/Lowland League play-off winner can come up",
  "leagues": [
   {
@@ -60,29 +60,29 @@
     },
     {
      "pos": 3,
-     "team": "Heart of Midlothian",
-     "p": 11,
+     "team": "Falkirk",
+     "p": 13,
      "w": 6,
-     "d": 2,
-     "l": 3,
-     "gf": 24,
-     "ga": 17,
-     "pts": 20,
-     "tid": 254,
-     "form": "DWLWD"
+     "d": 3,
+     "l": 4,
+     "gf": 20,
+     "ga": 14,
+     "pts": 21,
+     "tid": 1389,
+     "form": "WWWWW"
     },
     {
      "pos": 4,
-     "team": "Falkirk",
+     "team": "Heart of Midlothian",
      "p": 12,
-     "w": 5,
-     "d": 3,
+     "w": 6,
+     "d": 2,
      "l": 4,
-     "gf": 15,
-     "ga": 12,
-     "pts": 18,
-     "tid": 1389,
-     "form": "LWWWW"
+     "gf": 26,
+     "ga": 22,
+     "pts": 20,
+     "tid": 254,
+     "form": "WLWDL"
     },
     {
      "pos": 5,
@@ -189,7 +189,7 @@
      "form": "LWLLD"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-08T00:00:00.000Z"
   },
   {
    "id": "scottish-championship",

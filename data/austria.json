@@ -336,6 +336,19 @@
     },
     {
      "pos": 10,
+     "team": "Voitsberg",
+     "p": 12,
+     "w": 4,
+     "d": 3,
+     "l": 5,
+     "gf": 23,
+     "ga": 21,
+     "pts": 15,
+     "tid": 8332,
+     "form": "LLWLW"
+    },
+    {
+     "pos": 11,
      "team": "SKN St. Pölten",
      "p": 12,
      "w": 4,
@@ -348,7 +361,7 @@
      "form": "LDDWD"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Sturm Graz II",
      "p": 12,
      "w": 4,
@@ -361,7 +374,7 @@
      "form": "LLLWW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Floridsdorfer AC",
      "p": 12,
      "w": 4,
@@ -374,30 +387,17 @@
      "form": "LLLDL"
     },
     {
-     "pos": 13,
-     "team": "Voitsberg",
-     "p": 11,
-     "w": 3,
-     "d": 3,
-     "l": 5,
-     "gf": 19,
-     "ga": 21,
-     "pts": 12,
-     "tid": 8332,
-     "form": "WLLWL"
-    },
-    {
      "pos": 14,
      "team": "SV Kapfenberg",
-     "p": 11,
+     "p": 12,
      "w": 2,
      "d": 2,
-     "l": 7,
+     "l": 8,
      "gf": 14,
-     "ga": 21,
+     "ga": 25,
      "pts": 8,
      "tid": 1401,
-     "form": "LLWDD"
+     "form": "LWDDL"
     },
     {
      "pos": 15,
@@ -426,7 +426,7 @@
      "form": "WDLLL"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-08T00:00:00.000Z"
   },
   {
    "id": "regionalliga",

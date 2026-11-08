@@ -88,44 +88,57 @@
     {
      "pos": 5,
      "team": "FC Zürich",
-     "p": 12,
+     "p": 13,
      "w": 6,
-     "d": 2,
+     "d": 3,
      "l": 4,
      "gf": 25,
      "ga": 26,
-     "pts": 20,
+     "pts": 21,
      "tid": 783,
-     "form": "WDWWW"
+     "form": "DWWWD"
     },
     {
      "pos": 6,
      "team": "Servette FC",
-     "p": 12,
+     "p": 13,
      "w": 5,
-     "d": 1,
+     "d": 2,
      "l": 6,
      "gf": 17,
      "ga": 16,
-     "pts": 16,
+     "pts": 17,
      "tid": 2184,
-     "form": "WLWWL"
+     "form": "LWWLD"
     },
     {
      "pos": 7,
      "team": "FC Basel",
-     "p": 12,
+     "p": 13,
      "w": 4,
-     "d": 2,
+     "d": 3,
      "l": 6,
-     "gf": 18,
-     "ga": 22,
-     "pts": 14,
+     "gf": 21,
+     "ga": 25,
+     "pts": 15,
      "tid": 551,
-     "form": "WLLDL"
+     "form": "LLDLD"
     },
     {
      "pos": 8,
+     "team": "Thun",
+     "p": 13,
+     "w": 4,
+     "d": 2,
+     "l": 7,
+     "gf": 27,
+     "ga": 37,
+     "pts": 14,
+     "tid": 1012,
+     "form": "WLLWD"
+    },
+    {
+     "pos": 9,
      "team": "FC Luzern",
      "p": 13,
      "w": 3,
@@ -136,19 +149,6 @@
      "pts": 13,
      "tid": 644,
      "form": "WLLDL"
-    },
-    {
-     "pos": 9,
-     "team": "Thun",
-     "p": 12,
-     "w": 4,
-     "d": 1,
-     "l": 7,
-     "gf": 24,
-     "ga": 34,
-     "pts": 13,
-     "tid": 1012,
-     "form": "LWLLW"
     },
     {
      "pos": 10,
@@ -250,15 +250,15 @@
     {
      "pos": 3,
      "team": "Yverdon Sport",
-     "p": 12,
+     "p": 13,
      "w": 6,
-     "d": 4,
+     "d": 5,
      "l": 2,
      "gf": 23,
      "ga": 14,
-     "pts": 22,
+     "pts": 23,
      "tid": 6653,
-     "form": "LDWWL"
+     "form": "DWWLD"
     },
     {
      "pos": 4,
@@ -276,15 +276,15 @@
     {
      "pos": 5,
      "team": "Neuchâtel Xamax",
-     "p": 12,
+     "p": 13,
      "w": 5,
-     "d": 1,
+     "d": 2,
      "l": 6,
      "gf": 16,
      "ga": 20,
-     "pts": 16,
+     "pts": 17,
      "tid": 1015,
-     "form": "WLWDL"
+     "form": "LWDLD"
     },
     {
      "pos": 6,
@@ -407,6 +407,19 @@
     },
     {
      "pos": 3,
+     "team": "Biel-Bienne",
+     "p": 15,
+     "w": 9,
+     "d": 4,
+     "l": 2,
+     "gf": 33,
+     "ga": 19,
+     "pts": 31,
+     "tid": 12700,
+     "form": "DDDLW"
+    },
+    {
+     "pos": 4,
      "team": "Cham",
      "p": 15,
      "w": 9,
@@ -417,19 +430,6 @@
      "pts": 30,
      "tid": 6621,
      "form": "WDDWW"
-    },
-    {
-     "pos": 4,
-     "team": "Biel-Bienne",
-     "p": 14,
-     "w": 8,
-     "d": 4,
-     "l": 2,
-     "gf": 30,
-     "ga": 18,
-     "pts": 28,
-     "tid": 12700,
-     "form": "WDDDL"
     },
     {
      "pos": 5,
@@ -551,15 +551,15 @@
     {
      "pos": 14,
      "team": "Kreuzlingen",
-     "p": 14,
+     "p": 15,
      "w": 4,
      "d": 3,
-     "l": 7,
-     "gf": 22,
-     "ga": 26,
+     "l": 8,
+     "gf": 23,
+     "ga": 29,
      "pts": 15,
      "tid": 14504,
-     "form": "WWLLL"
+     "form": "WLLLL"
     },
     {
      "pos": 15,
@@ -633,29 +633,29 @@
      "rows": [
       {
        "pos": 1,
-       "team": "Azzurri Bienne",
-       "p": 12,
+       "team": "Prishtina Bern",
+       "p": 13,
        "w": 10,
-       "d": 0,
-       "l": 2,
-       "gf": 29,
-       "ga": 12,
-       "pts": 30,
-       "tid": 26346,
+       "d": 2,
+       "l": 1,
+       "gf": 38,
+       "ga": 11,
+       "pts": 32,
+       "tid": 17484,
        "form": "WWWWW"
       },
       {
        "pos": 2,
-       "team": "Prishtina Bern",
-       "p": 12,
-       "w": 9,
-       "d": 2,
-       "l": 1,
-       "gf": 36,
-       "ga": 10,
-       "pts": 29,
-       "tid": 17484,
-       "form": "LWWWW"
+       "team": "Azzurri Bienne",
+       "p": 13,
+       "w": 10,
+       "d": 0,
+       "l": 3,
+       "gf": 30,
+       "ga": 14,
+       "pts": 30,
+       "tid": 26346,
+       "form": "WWWWL"
       },
       {
        "pos": 3,
@@ -848,15 +848,15 @@
       {
        "pos": 1,
        "team": "Langenthal",
-       "p": 12,
-       "w": 8,
+       "p": 13,
+       "w": 9,
        "d": 3,
        "l": 1,
-       "gf": 30,
-       "ga": 20,
-       "pts": 27,
+       "gf": 34,
+       "ga": 21,
+       "pts": 30,
        "tid": 12705,
-       "form": "LWDDW"
+       "form": "WDDWW"
       },
       {
        "pos": 2,
@@ -874,15 +874,15 @@
       {
        "pos": 3,
        "team": "Courtételle",
-       "p": 12,
+       "p": 13,
        "w": 7,
        "d": 2,
-       "l": 3,
-       "gf": 26,
-       "ga": 15,
+       "l": 4,
+       "gf": 27,
+       "ga": 19,
        "pts": 23,
        "tid": 17480,
-       "form": "LWWWD"
+       "form": "WWWDL"
       },
       {
        "pos": 4,

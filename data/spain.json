@@ -337,6 +337,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Almería",
+     "p": 13,
+     "w": 9,
+     "d": 2,
+     "l": 2,
+     "gf": 24,
+     "ga": 10,
+     "pts": 29,
+     "tid": 723,
+     "form": "WWDDW"
+    },
+    {
+     "pos": 2,
      "team": "Castellón",
      "p": 12,
      "w": 8,
@@ -347,19 +360,6 @@
      "pts": 27,
      "tid": 5254,
      "form": "DLWWD"
-    },
-    {
-     "pos": 2,
-     "team": "Almería",
-     "p": 12,
-     "w": 8,
-     "d": 2,
-     "l": 2,
-     "gf": 23,
-     "ga": 10,
-     "pts": 26,
-     "tid": 723,
-     "form": "WWWDD"
     },
     {
      "pos": 3,
@@ -429,15 +429,15 @@
     {
      "pos": 8,
      "team": "Girona",
-     "p": 12,
+     "p": 13,
      "w": 6,
      "d": 3,
-     "l": 3,
+     "l": 4,
      "gf": 22,
-     "ga": 11,
+     "ga": 12,
      "pts": 21,
      "tid": 547,
-     "form": "DDWWL"
+     "form": "DWWLL"
     },
     {
      "pos": 9,
@@ -1004,6 +1004,19 @@
       },
       {
        "pos": 7,
+       "team": "Hércules",
+       "p": 11,
+       "w": 5,
+       "d": 2,
+       "l": 4,
+       "gf": 12,
+       "ga": 13,
+       "pts": 17,
+       "tid": 4666,
+       "form": "WLLWD"
+      },
+      {
+       "pos": 8,
        "team": "Cartagena",
        "p": 11,
        "w": 4,
@@ -1016,30 +1029,17 @@
        "form": "DWLLD"
       },
       {
-       "pos": 8,
-       "team": "Hércules",
-       "p": 10,
-       "w": 5,
-       "d": 1,
-       "l": 4,
-       "gf": 10,
-       "ga": 11,
-       "pts": 16,
-       "tid": 4666,
-       "form": "DWLLW"
-      },
-      {
        "pos": 9,
        "team": "Real Madrid Castilla",
-       "p": 10,
+       "p": 11,
        "w": 4,
-       "d": 3,
+       "d": 4,
        "l": 3,
-       "gf": 13,
-       "ga": 11,
-       "pts": 15,
+       "gf": 15,
+       "ga": 13,
+       "pts": 16,
        "tid": 9575,
-       "form": "WDWLW"
+       "form": "DWLWD"
       },
       {
        "pos": 10,

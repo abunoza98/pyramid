@@ -55,6 +55,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "PSV Eindhoven",
+     "p": 12,
+     "w": 8,
+     "d": 2,
+     "l": 2,
+     "gf": 40,
+     "ga": 15,
+     "pts": 26,
+     "tid": 197,
+     "form": "WLDWW"
+    },
+    {
+     "pos": 2,
      "team": "Feyenoord",
      "p": 12,
      "w": 7,
@@ -67,7 +80,7 @@
      "form": "WWDDL"
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "Ajax",
      "p": 12,
      "w": 7,
@@ -80,7 +93,7 @@
      "form": "DWWWD"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Twente",
      "p": 12,
      "w": 7,
@@ -93,20 +106,20 @@
      "form": "DLWWD"
     },
     {
-     "pos": 4,
-     "team": "PSV Eindhoven",
-     "p": 11,
+     "pos": 5,
+     "team": "AZ Alkmaar",
+     "p": 12,
      "w": 7,
      "d": 2,
-     "l": 2,
-     "gf": 35,
-     "ga": 13,
+     "l": 3,
+     "gf": 24,
+     "ga": 16,
      "pts": 23,
-     "tid": 197,
-     "form": "LWLDW"
+     "tid": 201,
+     "form": "LDLLW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Heerenveen",
      "p": 12,
      "w": 6,
@@ -117,19 +130,6 @@
      "pts": 21,
      "tid": 210,
      "form": "LWWWW"
-    },
-    {
-     "pos": 6,
-     "team": "AZ Alkmaar",
-     "p": 11,
-     "w": 6,
-     "d": 2,
-     "l": 3,
-     "gf": 20,
-     "ga": 13,
-     "pts": 20,
-     "tid": 201,
-     "form": "WLDLL"
     },
     {
      "pos": 7,
@@ -160,28 +160,28 @@
     {
      "pos": 9,
      "team": "Groningen",
-     "p": 11,
+     "p": 12,
      "w": 4,
      "d": 3,
-     "l": 4,
-     "gf": 26,
-     "ga": 24,
+     "l": 5,
+     "gf": 29,
+     "ga": 28,
      "pts": 15,
      "tid": 202,
-     "form": "WWLDL"
+     "form": "WLDLL"
     },
     {
      "pos": 10,
      "team": "Cambuur",
-     "p": 11,
+     "p": 12,
      "w": 4,
      "d": 3,
-     "l": 4,
-     "gf": 23,
-     "ga": 22,
+     "l": 5,
+     "gf": 25,
+     "ga": 27,
      "pts": 15,
      "tid": 420,
-     "form": "DWDWW"
+     "form": "WDWWL"
     },
     {
      "pos": 11,
@@ -357,19 +357,6 @@
     },
     {
      "pos": 4,
-     "team": "Emmen",
-     "p": 13,
-     "w": 8,
-     "d": 1,
-     "l": 4,
-     "gf": 26,
-     "ga": 24,
-     "pts": 25,
-     "tid": 208,
-     "form": "DWWWL"
-    },
-    {
-     "pos": 5,
      "team": "NAC Breda",
      "p": 14,
      "w": 7,
@@ -382,7 +369,7 @@
      "form": "WWDWD"
     },
     {
-     "pos": 6,
+     "pos": 5,
      "team": "Roda JC",
      "p": 14,
      "w": 7,
@@ -393,6 +380,19 @@
      "pts": 25,
      "tid": 414,
      "form": "DWWWL"
+    },
+    {
+     "pos": 6,
+     "team": "Emmen",
+     "p": 14,
+     "w": 8,
+     "d": 1,
+     "l": 5,
+     "gf": 26,
+     "ga": 26,
+     "pts": 25,
+     "tid": 208,
+     "form": "WWWLL"
     },
     {
      "pos": 7,
@@ -409,6 +409,19 @@
     },
     {
      "pos": 8,
+     "team": "MVV",
+     "p": 14,
+     "w": 6,
+     "d": 2,
+     "l": 6,
+     "gf": 19,
+     "ga": 29,
+     "pts": 20,
+     "tid": 412,
+     "form": "LLDLW"
+    },
+    {
+     "pos": 9,
      "team": "FC Den Bosch",
      "p": 14,
      "w": 5,
@@ -421,7 +434,7 @@
      "form": "WWDWD"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Vitesse",
      "p": 13,
      "w": 5,
@@ -432,19 +445,6 @@
      "pts": 18,
      "tid": 200,
      "form": "DLWLD"
-    },
-    {
-     "pos": 10,
-     "team": "MVV",
-     "p": 13,
-     "w": 5,
-     "d": 2,
-     "l": 6,
-     "gf": 17,
-     "ga": 29,
-     "pts": 17,
-     "tid": 412,
-     "form": "LLLDL"
     },
     {
      "pos": 11,
