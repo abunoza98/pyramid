@@ -88,15 +88,15 @@
     {
      "pos": 5,
      "team": "Persib Bandung",
-     "p": 8,
+     "p": 9,
      "w": 5,
      "d": 1,
-     "l": 2,
-     "gf": 15,
-     "ga": 8,
+     "l": 3,
+     "gf": 16,
+     "ga": 10,
      "pts": 16,
      "tid": 2445,
-     "form": "DWLWW"
+     "form": "WLWWL"
     },
     {
      "pos": 6,
@@ -113,6 +113,20 @@
     },
     {
      "pos": 7,
+     "team": "Java United",
+     "p": 9,
+     "w": 4,
+     "d": 3,
+     "l": 2,
+     "gf": 14,
+     "ga": 11,
+     "pts": 13,
+     "ded": 2,
+     "tid": 22409,
+     "form": "WDDWW"
+    },
+    {
+     "pos": 8,
      "team": "Persebaya Surabaya",
      "p": 9,
      "w": 3,
@@ -125,7 +139,7 @@
      "form": "DLWDL"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Bhayangkara FC",
      "p": 9,
      "w": 2,
@@ -138,7 +152,7 @@
      "form": "DWDLD"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Garudayaksa",
      "p": 9,
      "w": 3,
@@ -149,20 +163,6 @@
      "pts": 11,
      "tid": 26645,
      "form": "WLLWW"
-    },
-    {
-     "pos": 10,
-     "team": "Java United",
-     "p": 8,
-     "w": 3,
-     "d": 3,
-     "l": 2,
-     "gf": 12,
-     "ga": 10,
-     "pts": 10,
-     "ded": 2,
-     "tid": 22409,
-     "form": "WWDDW"
     },
     {
      "pos": 11,
