@@ -27,6 +27,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Cruz Azul",
+     "p": 16,
+     "w": 10,
+     "d": 2,
+     "l": 4,
+     "gf": 37,
+     "ga": 26,
+     "pts": 32,
+     "tid": 2295,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 2,
      "team": "América",
      "p": 15,
      "w": 8,
@@ -39,7 +52,7 @@
      "form": "WWLDD"
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "Guadalajara",
      "p": 15,
      "w": 8,
@@ -52,20 +65,20 @@
      "form": "DDWWW"
     },
     {
-     "pos": 3,
-     "team": "Cruz Azul",
-     "p": 15,
-     "w": 9,
-     "d": 2,
-     "l": 4,
-     "gf": 34,
-     "ga": 24,
-     "pts": 29,
-     "tid": 2295,
-     "form": "DWWWW"
+     "pos": 4,
+     "team": "Toluca",
+     "p": 16,
+     "w": 7,
+     "d": 6,
+     "l": 3,
+     "gf": 35,
+     "ga": 21,
+     "pts": 27,
+     "tid": 2281,
+     "form": "DDDDW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Atlas",
      "p": 16,
      "w": 8,
@@ -78,7 +91,7 @@
      "form": "WLWWL"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Santos Laguna",
      "p": 16,
      "w": 8,
@@ -89,19 +102,6 @@
      "pts": 25,
      "tid": 2285,
      "form": "WWLWW"
-    },
-    {
-     "pos": 6,
-     "team": "Toluca",
-     "p": 15,
-     "w": 6,
-     "d": 6,
-     "l": 3,
-     "gf": 31,
-     "ga": 21,
-     "pts": 24,
-     "tid": 2281,
-     "form": "LDDDD"
     },
     {
      "pos": 7,
@@ -145,15 +145,15 @@
     {
      "pos": 10,
      "team": "Monterrey",
-     "p": 14,
+     "p": 15,
      "w": 6,
      "d": 3,
-     "l": 5,
+     "l": 6,
      "gf": 26,
-     "ga": 21,
+     "ga": 25,
      "pts": 21,
      "tid": 2282,
-     "form": "DWWLD"
+     "form": "WWLDL"
     },
     {
      "pos": 11,
@@ -210,15 +210,15 @@
     {
      "pos": 15,
      "team": "Tigres UANL",
-     "p": 15,
+     "p": 16,
      "w": 3,
      "d": 6,
-     "l": 6,
-     "gf": 15,
-     "ga": 22,
+     "l": 7,
+     "gf": 17,
+     "ga": 25,
      "pts": 15,
      "tid": 2279,
-     "form": "WDLDL"
+     "form": "DLDLL"
     },
     {
      "pos": 16,
