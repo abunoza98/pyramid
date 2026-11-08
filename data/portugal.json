@@ -82,15 +82,15 @@
     {
      "pos": 3,
      "team": "Sporting CP",
-     "p": 10,
-     "w": 6,
+     "p": 11,
+     "w": 7,
      "d": 3,
      "l": 1,
-     "gf": 23,
+     "gf": 24,
      "ga": 11,
-     "pts": 21,
+     "pts": 24,
      "tid": 228,
-     "form": "DDWLW"
+     "form": "DWLWW"
     },
     {
      "pos": 4,
@@ -160,15 +160,15 @@
     {
      "pos": 9,
      "team": "Moreirense",
-     "p": 10,
+     "p": 11,
      "w": 4,
      "d": 2,
-     "l": 4,
+     "l": 5,
      "gf": 13,
-     "ga": 17,
+     "ga": 18,
      "pts": 14,
      "tid": 215,
-     "form": "WDLWW"
+     "form": "DLWWL"
     },
     {
      "pos": 10,

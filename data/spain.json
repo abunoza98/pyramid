@@ -56,6 +56,19 @@
     },
     {
      "pos": 2,
+     "team": "Real Madrid",
+     "p": 12,
+     "w": 10,
+     "d": 0,
+     "l": 2,
+     "gf": 31,
+     "ga": 10,
+     "pts": 30,
+     "tid": 541,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 3,
      "team": "Atlético Madrid",
      "p": 11,
      "w": 9,
@@ -66,19 +79,6 @@
      "pts": 28,
      "tid": 530,
      "form": "WWWWW"
-    },
-    {
-     "pos": 3,
-     "team": "Real Madrid",
-     "p": 11,
-     "w": 9,
-     "d": 0,
-     "l": 2,
-     "gf": 28,
-     "ga": 10,
-     "pts": 27,
-     "tid": 541,
-     "form": "LWWWW"
     },
     {
      "pos": 4,
@@ -278,15 +278,15 @@
     {
      "pos": 19,
      "team": "Valencia",
-     "p": 11,
+     "p": 12,
      "w": 2,
      "d": 3,
-     "l": 6,
+     "l": 7,
      "gf": 8,
-     "ga": 17,
+     "ga": 20,
      "pts": 9,
      "tid": 532,
-     "form": "LDDLW"
+     "form": "DDLWL"
     },
     {
      "pos": 20,
