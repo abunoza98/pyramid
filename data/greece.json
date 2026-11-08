@@ -41,15 +41,15 @@
     {
      "pos": 1,
      "team": "Panathinaikos",
-     "p": 9,
-     "w": 8,
+     "p": 10,
+     "w": 9,
      "d": 0,
      "l": 1,
-     "gf": 20,
-     "ga": 4,
-     "pts": 24,
+     "gf": 22,
+     "ga": 5,
+     "pts": 27,
      "tid": 617,
-     "form": "WLWWW"
+     "form": "LWWWW"
     },
     {
      "pos": 2,
@@ -145,15 +145,15 @@
     {
      "pos": 9,
      "team": "Iraklis 1908",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 4,
-     "l": 3,
-     "gf": 10,
-     "ga": 12,
+     "l": 4,
+     "gf": 11,
+     "ga": 14,
      "pts": 10,
      "tid": 17991,
-     "form": "DWLLD"
+     "form": "WLLDL"
     },
     {
      "pos": 10,

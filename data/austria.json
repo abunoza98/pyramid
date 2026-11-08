@@ -42,15 +42,15 @@
     {
      "pos": 2,
      "team": "Red Bull Salzburg",
-     "p": 11,
-     "w": 8,
+     "p": 12,
+     "w": 9,
      "d": 3,
      "l": 0,
-     "gf": 29,
-     "ga": 6,
-     "pts": 27,
+     "gf": 33,
+     "ga": 9,
+     "pts": 30,
      "tid": 571,
-     "form": "WDWWW"
+     "form": "DWWWW"
     },
     {
      "pos": 3,
@@ -81,15 +81,15 @@
     {
      "pos": 5,
      "team": "Sturm Graz",
-     "p": 11,
+     "p": 12,
      "w": 5,
      "d": 4,
-     "l": 2,
-     "gf": 19,
-     "ga": 13,
+     "l": 3,
+     "gf": 22,
+     "ga": 17,
      "pts": 19,
      "tid": 637,
-     "form": "LWWDD"
+     "form": "WWDDL"
     },
     {
      "pos": 6,

@@ -358,18 +358,31 @@
     {
      "pos": 4,
      "team": "Mardin 1969",
-     "p": 13,
+     "p": 14,
      "w": 7,
-     "d": 3,
+     "d": 4,
      "l": 3,
-     "gf": 18,
-     "ga": 12,
-     "pts": 24,
+     "gf": 19,
+     "ga": 13,
+     "pts": 25,
      "tid": 6533,
-     "form": "WWLWW"
+     "form": "WLWWD"
     },
     {
      "pos": 5,
+     "team": "Batman Petrolspor",
+     "p": 14,
+     "w": 7,
+     "d": 3,
+     "l": 4,
+     "gf": 27,
+     "ga": 24,
+     "pts": 24,
+     "tid": 7395,
+     "form": "WDWLD"
+    },
+    {
+     "pos": 6,
      "team": "Keçiörengücü",
      "p": 14,
      "w": 6,
@@ -380,19 +393,6 @@
      "pts": 23,
      "tid": 3595,
      "form": "DWLLW"
-    },
-    {
-     "pos": 6,
-     "team": "Batman Petrolspor",
-     "p": 13,
-     "w": 7,
-     "d": 2,
-     "l": 4,
-     "gf": 26,
-     "ga": 23,
-     "pts": 23,
-     "tid": 7395,
-     "form": "LWDWL"
     },
     {
      "pos": 7,

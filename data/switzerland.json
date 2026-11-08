@@ -1217,6 +1217,19 @@
       },
       {
        "pos": 13,
+       "team": "Winterthur II",
+       "p": 13,
+       "w": 4,
+       "d": 1,
+       "l": 8,
+       "gf": 15,
+       "ga": 24,
+       "pts": 13,
+       "tid": 12721,
+       "form": "LLLDW"
+      },
+      {
+       "pos": 14,
        "team": "Mendrisio",
        "p": 13,
        "w": 2,
@@ -1229,30 +1242,17 @@
        "form": "DLDLW"
       },
       {
-       "pos": 14,
+       "pos": 15,
        "team": "Locarno",
-       "p": 12,
+       "p": 13,
        "w": 2,
        "d": 5,
-       "l": 5,
-       "gf": 12,
-       "ga": 15,
+       "l": 6,
+       "gf": 13,
+       "ga": 17,
        "pts": 11,
        "tid": 21866,
-       "form": "WDWDL"
-      },
-      {
-       "pos": 15,
-       "team": "Winterthur II",
-       "p": 12,
-       "w": 3,
-       "d": 1,
-       "l": 8,
-       "gf": 13,
-       "ga": 23,
-       "pts": 10,
-       "tid": 12721,
-       "form": "LLLLD"
+       "form": "DWDLL"
       },
       {
        "pos": 16,

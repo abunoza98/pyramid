@@ -66,15 +66,15 @@
     {
      "pos": 2,
      "team": "Dinamo Zagreb",
-     "p": 11,
-     "w": 7,
+     "p": 12,
+     "w": 8,
      "d": 1,
      "l": 3,
-     "gf": 25,
-     "ga": 14,
-     "pts": 22,
+     "gf": 28,
+     "ga": 15,
+     "pts": 25,
      "tid": 620,
-     "form": "WLWWL"
+     "form": "LWWLW"
     },
     {
      "pos": 3,
@@ -105,15 +105,15 @@
     {
      "pos": 5,
      "team": "Varaždin",
-     "p": 12,
+     "p": 13,
      "w": 5,
      "d": 4,
-     "l": 3,
-     "gf": 16,
-     "ga": 11,
+     "l": 4,
+     "gf": 17,
+     "ga": 14,
      "pts": 19,
      "tid": 1483,
-     "form": "DWLLD"
+     "form": "WLLDL"
     },
     {
      "pos": 6,

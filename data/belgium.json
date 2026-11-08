@@ -357,6 +357,19 @@
     },
     {
      "pos": 3,
+     "team": "AS Eupen",
+     "p": 9,
+     "w": 6,
+     "d": 0,
+     "l": 3,
+     "gf": 18,
+     "ga": 11,
+     "pts": 18,
+     "tid": 739,
+     "form": "WWLLW"
+    },
+    {
+     "pos": 4,
      "team": "Francs Borains",
      "p": 9,
      "w": 6,
@@ -367,19 +380,6 @@
      "pts": 18,
      "tid": 5805,
      "form": "WLLWW"
-    },
-    {
-     "pos": 4,
-     "team": "AS Eupen",
-     "p": 8,
-     "w": 5,
-     "d": 0,
-     "l": 3,
-     "gf": 15,
-     "ga": 9,
-     "pts": 15,
-     "tid": 739,
-     "form": "WWWLL"
     },
     {
      "pos": 5,
@@ -474,19 +474,6 @@
     },
     {
      "pos": 12,
-     "team": "Lierse",
-     "p": 8,
-     "w": 2,
-     "d": 2,
-     "l": 4,
-     "gf": 7,
-     "ga": 11,
-     "pts": 8,
-     "tid": 6219,
-     "form": "DLWLL"
-    },
-    {
-     "pos": 13,
      "team": "Seraing United",
      "p": 10,
      "w": 2,
@@ -497,6 +484,19 @@
      "pts": 8,
      "tid": 10244,
      "form": "DLWWL"
+    },
+    {
+     "pos": 13,
+     "team": "Lierse",
+     "p": 9,
+     "w": 2,
+     "d": 2,
+     "l": 5,
+     "gf": 9,
+     "ga": 14,
+     "pts": 8,
+     "tid": 6219,
+     "form": "LWLLL"
     },
     {
      "pos": 14,

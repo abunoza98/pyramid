@@ -527,6 +527,19 @@
     },
     {
      "pos": 15,
+     "team": "Sampdoria",
+     "p": 11,
+     "w": 3,
+     "d": 2,
+     "l": 6,
+     "gf": 11,
+     "ga": 18,
+     "pts": 11,
+     "tid": 498,
+     "form": "LDLWW"
+    },
+    {
+     "pos": 16,
      "team": "Virtus Entella",
      "p": 11,
      "w": 2,
@@ -539,20 +552,20 @@
      "form": "WLDLL"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Carrarese",
-     "p": 10,
+     "p": 11,
      "w": 3,
      "d": 1,
-     "l": 6,
+     "l": 7,
      "gf": 9,
-     "ga": 13,
+     "ga": 14,
      "pts": 10,
      "tid": 1581,
-     "form": "WWLWL"
+     "form": "WLWLL"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Vicenza",
      "p": 10,
      "w": 2,
@@ -565,7 +578,7 @@
      "form": "LDWLL"
     },
     {
-     "pos": 18,
+     "pos": 19,
      "team": "Empoli",
      "p": 11,
      "w": 2,
@@ -576,19 +589,6 @@
      "pts": 9,
      "tid": 511,
      "form": "DLLDD"
-    },
-    {
-     "pos": 19,
-     "team": "Sampdoria",
-     "p": 10,
-     "w": 2,
-     "d": 2,
-     "l": 6,
-     "gf": 10,
-     "ga": 18,
-     "pts": 8,
-     "tid": 498,
-     "form": "LLDLW"
     },
     {
      "pos": 20,
@@ -1000,6 +1000,19 @@
       },
       {
        "pos": 7,
+       "team": "Guidonia Montecelio",
+       "p": 13,
+       "w": 5,
+       "d": 5,
+       "l": 3,
+       "gf": 17,
+       "ga": 14,
+       "pts": 20,
+       "tid": 882,
+       "form": "DWLDW"
+      },
+      {
+       "pos": 8,
        "team": "Livorno",
        "p": 13,
        "w": 5,
@@ -1012,7 +1025,7 @@
        "form": "DDLWD"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Campobasso",
        "p": 13,
        "w": 5,
@@ -1025,7 +1038,7 @@
        "form": "LLWWD"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Atalanta U23",
        "p": 13,
        "w": 6,
@@ -1038,30 +1051,17 @@
        "form": "WLWLW"
       },
       {
-       "pos": 10,
-       "team": "Guidonia Montecelio",
-       "p": 12,
-       "w": 4,
-       "d": 5,
-       "l": 3,
-       "gf": 15,
-       "ga": 13,
-       "pts": 17,
-       "tid": 882,
-       "form": "WDWLD"
-      },
-      {
        "pos": 11,
        "team": "Perugia",
-       "p": 12,
+       "p": 13,
        "w": 5,
        "d": 2,
-       "l": 5,
-       "gf": 16,
-       "ga": 18,
+       "l": 6,
+       "gf": 18,
+       "ga": 21,
        "pts": 17,
        "tid": 524,
-       "form": "WLWLD"
+       "form": "LWLDL"
       },
       {
        "pos": 12,
@@ -1117,29 +1117,29 @@
       },
       {
        "pos": 16,
-       "team": "Sambenedettese",
-       "p": 12,
+       "team": "Pianese",
+       "p": 13,
        "w": 2,
-       "d": 4,
-       "l": 6,
-       "gf": 16,
-       "ga": 20,
-       "pts": 10,
-       "tid": 871,
-       "form": "WDDWL"
+       "d": 7,
+       "l": 4,
+       "gf": 10,
+       "ga": 13,
+       "pts": 13,
+       "tid": 6381,
+       "form": "DDDDW"
       },
       {
        "pos": 17,
-       "team": "Pianese",
-       "p": 12,
-       "w": 1,
-       "d": 7,
-       "l": 4,
-       "gf": 7,
-       "ga": 11,
+       "team": "Sambenedettese",
+       "p": 13,
+       "w": 2,
+       "d": 4,
+       "l": 7,
+       "gf": 17,
+       "ga": 22,
        "pts": 10,
-       "tid": 6381,
-       "form": "WDDDD"
+       "tid": 871,
+       "form": "DDWLL"
       },
       {
        "pos": 18,

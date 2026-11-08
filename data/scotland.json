@@ -35,15 +35,15 @@
     {
      "pos": 1,
      "team": "Celtic",
-     "p": 12,
-     "w": 9,
+     "p": 13,
+     "w": 10,
      "d": 1,
      "l": 2,
-     "gf": 27,
+     "gf": 28,
      "ga": 10,
-     "pts": 28,
+     "pts": 31,
      "tid": 247,
-     "form": "WWWDL"
+     "form": "WWDLW"
     },
     {
      "pos": 2,
@@ -178,15 +178,15 @@
     {
      "pos": 12,
      "team": "Kilmarnock",
-     "p": 12,
+     "p": 13,
      "w": 2,
      "d": 3,
-     "l": 7,
+     "l": 8,
      "gf": 13,
-     "ga": 28,
+     "ga": 29,
      "pts": 9,
      "tid": 250,
-     "form": "LWLLD"
+     "form": "WLLDL"
     }
    ],
    "updated": "2026-11-08T00:00:00.000Z"

@@ -96,15 +96,15 @@
     {
      "pos": 5,
      "team": "Real Sociedad",
-     "p": 11,
-     "w": 6,
+     "p": 12,
+     "w": 7,
      "d": 1,
      "l": 4,
-     "gf": 20,
+     "gf": 21,
      "ga": 20,
-     "pts": 19,
+     "pts": 22,
      "tid": 548,
-     "form": "WWWWL"
+     "form": "WWWLW"
     },
     {
      "pos": 6,
@@ -213,15 +213,15 @@
     {
      "pos": 14,
      "team": "Rayo Vallecano",
-     "p": 10,
+     "p": 11,
      "w": 3,
      "d": 3,
-     "l": 4,
+     "l": 5,
      "gf": 15,
-     "ga": 20,
+     "ga": 21,
      "pts": 12,
      "tid": 728,
-     "form": "WDDLW"
+     "form": "DDLWL"
     },
     {
      "pos": 15,

@@ -719,6 +719,19 @@
     },
     {
      "pos": 11,
+     "team": "VfB Stuttgart II",
+     "p": 13,
+     "w": 5,
+     "d": 3,
+     "l": 5,
+     "gf": 22,
+     "ga": 23,
+     "pts": 18,
+     "tid": 12867,
+     "form": "WWLDW"
+    },
+    {
+     "pos": 12,
      "team": "TSG Hoffenheim II",
      "p": 12,
      "w": 5,
@@ -731,7 +744,7 @@
      "form": "LLWLL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Fortuna Düsseldorf",
      "p": 13,
      "w": 4,
@@ -742,19 +755,6 @@
      "pts": 16,
      "tid": 158,
      "form": "WLDDL"
-    },
-    {
-     "pos": 13,
-     "team": "VfB Stuttgart II",
-     "p": 12,
-     "w": 4,
-     "d": 3,
-     "l": 5,
-     "gf": 21,
-     "ga": 23,
-     "pts": 15,
-     "tid": 12867,
-     "form": "DWWLD"
     },
     {
      "pos": 14,
@@ -798,15 +798,15 @@
     {
      "pos": 17,
      "team": "SC Verl",
-     "p": 12,
+     "p": 13,
      "w": 3,
      "d": 3,
-     "l": 6,
+     "l": 7,
      "gf": 17,
-     "ga": 26,
+     "ga": 27,
      "pts": 12,
      "tid": 4265,
-     "form": "DDLLL"
+     "form": "DLLLL"
     },
     {
      "pos": 18,
