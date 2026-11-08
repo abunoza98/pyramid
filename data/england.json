@@ -154,6 +154,19 @@
     },
     {
      "pos": 10,
+     "team": "Aston Villa",
+     "p": 10,
+     "w": 3,
+     "d": 4,
+     "l": 3,
+     "gf": 14,
+     "ga": 17,
+     "pts": 13,
+     "tid": 66,
+     "form": "DWWDD"
+    },
+    {
+     "pos": 11,
      "team": "Tottenham Hotspur",
      "p": 10,
      "w": 3,
@@ -166,7 +179,7 @@
      "form": "DWWWL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Newcastle United",
      "p": 10,
      "w": 3,
@@ -177,19 +190,6 @@
      "pts": 12,
      "tid": 34,
      "form": "LLWLD"
-    },
-    {
-     "pos": 12,
-     "team": "Aston Villa",
-     "p": 9,
-     "w": 3,
-     "d": 3,
-     "l": 3,
-     "gf": 10,
-     "ga": 13,
-     "pts": 12,
-     "tid": 66,
-     "form": "WDWWD"
     },
     {
      "pos": 13,
@@ -258,6 +258,19 @@
     },
     {
      "pos": 18,
+     "team": "Manchester United",
+     "p": 10,
+     "w": 1,
+     "d": 5,
+     "l": 4,
+     "gf": 14,
+     "ga": 19,
+     "pts": 8,
+     "tid": 33,
+     "form": "DDLLD"
+    },
+    {
+     "pos": 19,
      "team": "Sunderland",
      "p": 10,
      "w": 2,
@@ -268,19 +281,6 @@
      "pts": 8,
      "tid": 746,
      "form": "LLDLW"
-    },
-    {
-     "pos": 19,
-     "team": "Manchester United",
-     "p": 9,
-     "w": 1,
-     "d": 4,
-     "l": 4,
-     "gf": 10,
-     "ga": 15,
-     "pts": 7,
-     "tid": 33,
-     "form": "DDDLL"
     },
     {
      "pos": 20,

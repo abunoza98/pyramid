@@ -106,15 +106,15 @@
     {
      "pos": 6,
      "team": "OFI Crete",
-     "p": 9,
+     "p": 10,
      "w": 5,
-     "d": 1,
+     "d": 2,
      "l": 3,
      "gf": 14,
      "ga": 12,
-     "pts": 16,
+     "pts": 17,
      "tid": 1124,
-     "form": "DLLWW"
+     "form": "LLWWD"
     },
     {
      "pos": 7,
@@ -183,6 +183,19 @@
     },
     {
      "pos": 12,
+     "team": "Atromitos",
+     "p": 9,
+     "w": 1,
+     "d": 3,
+     "l": 5,
+     "gf": 9,
+     "ga": 12,
+     "pts": 6,
+     "tid": 12260,
+     "form": "LLLWD"
+    },
+    {
+     "pos": 13,
      "team": "Levadiakos",
      "p": 10,
      "w": 1,
@@ -193,19 +206,6 @@
      "pts": 6,
      "tid": 957,
      "form": "LDDWL"
-    },
-    {
-     "pos": 13,
-     "team": "Atromitos",
-     "p": 8,
-     "w": 1,
-     "d": 2,
-     "l": 5,
-     "gf": 9,
-     "ga": 12,
-     "pts": 5,
-     "tid": 12260,
-     "form": "DLLLW"
     },
     {
      "pos": 14,

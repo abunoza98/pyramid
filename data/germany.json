@@ -75,6 +75,19 @@
     },
     {
      "pos": 3,
+     "team": "SC Freiburg",
+     "p": 9,
+     "w": 6,
+     "d": 1,
+     "l": 2,
+     "gf": 20,
+     "ga": 10,
+     "pts": 19,
+     "tid": 160,
+     "form": "WLLWW"
+    },
+    {
+     "pos": 4,
      "team": "RB Leipzig",
      "p": 9,
      "w": 6,
@@ -85,19 +98,6 @@
      "pts": 18,
      "tid": 173,
      "form": "WLWWW"
-    },
-    {
-     "pos": 4,
-     "team": "SC Freiburg",
-     "p": 8,
-     "w": 5,
-     "d": 1,
-     "l": 2,
-     "gf": 18,
-     "ga": 10,
-     "pts": 16,
-     "tid": 160,
-     "form": "DWLLW"
     },
     {
      "pos": 5,
@@ -245,15 +245,15 @@
     {
      "pos": 16,
      "team": "Union Berlin",
-     "p": 8,
+     "p": 9,
      "w": 1,
      "d": 4,
-     "l": 3,
+     "l": 4,
      "gf": 7,
-     "ga": 19,
+     "ga": 21,
      "pts": 7,
      "tid": 182,
-     "form": "LWDDD"
+     "form": "WDDDL"
     },
     {
      "pos": 17,

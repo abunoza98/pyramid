@@ -56,6 +56,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Union Saint-Gilloise",
+     "p": 11,
+     "w": 9,
+     "d": 2,
+     "l": 0,
+     "gf": 30,
+     "ga": 7,
+     "pts": 29,
+     "tid": 1393,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 2,
      "team": "Club Brugge",
      "p": 11,
      "w": 9,
@@ -68,7 +81,7 @@
      "form": "WWWWD"
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "Gent",
      "p": 11,
      "w": 9,
@@ -81,7 +94,7 @@
      "form": "WWWLW"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Charleroi",
      "p": 11,
      "w": 9,
@@ -92,19 +105,6 @@
      "pts": 27,
      "tid": 736,
      "form": "WWLWW"
-    },
-    {
-     "pos": 4,
-     "team": "Union Saint-Gilloise",
-     "p": 10,
-     "w": 8,
-     "d": 2,
-     "l": 0,
-     "gf": 29,
-     "ga": 7,
-     "pts": 26,
-     "tid": 1393,
-     "form": "WWDWW"
     },
     {
      "pos": 5,
@@ -135,15 +135,15 @@
     {
      "pos": 7,
      "team": "Genk",
-     "p": 10,
+     "p": 11,
      "w": 4,
      "d": 3,
-     "l": 3,
+     "l": 4,
      "gf": 18,
-     "ga": 14,
+     "ga": 15,
      "pts": 15,
      "tid": 742,
-     "form": "DLWWL"
+     "form": "LWWLL"
     },
     {
      "pos": 8,

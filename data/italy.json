@@ -56,6 +56,19 @@
     },
     {
      "pos": 2,
+     "team": "Inter Milan",
+     "p": 11,
+     "w": 9,
+     "d": 1,
+     "l": 1,
+     "gf": 28,
+     "ga": 13,
+     "pts": 28,
+     "tid": 505,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 3,
      "team": "Roma",
      "p": 11,
      "w": 8,
@@ -66,19 +79,6 @@
      "pts": 27,
      "tid": 497,
      "form": "WDWWW"
-    },
-    {
-     "pos": 3,
-     "team": "Inter Milan",
-     "p": 10,
-     "w": 8,
-     "d": 1,
-     "l": 1,
-     "gf": 26,
-     "ga": 13,
-     "pts": 25,
-     "tid": 505,
-     "form": "WWWWL"
     },
     {
      "pos": 4,
@@ -96,15 +96,15 @@
     {
      "pos": 5,
      "team": "Como",
-     "p": 10,
+     "p": 11,
      "w": 7,
      "d": 2,
-     "l": 1,
+     "l": 2,
      "gf": 18,
-     "ga": 8,
+     "ga": 10,
      "pts": 23,
      "tid": 895,
-     "form": "DWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 6,
@@ -695,6 +695,32 @@
       },
       {
        "pos": 4,
+       "team": "Ospitaletto",
+       "p": 13,
+       "w": 6,
+       "d": 4,
+       "l": 3,
+       "gf": 19,
+       "ga": 11,
+       "pts": 22,
+       "tid": 24696,
+       "form": "WLLDW"
+      },
+      {
+       "pos": 5,
+       "team": "Treviso",
+       "p": 13,
+       "w": 6,
+       "d": 4,
+       "l": 3,
+       "gf": 14,
+       "ga": 9,
+       "pts": 22,
+       "tid": 22319,
+       "form": "LWWLW"
+      },
+      {
+       "pos": 6,
        "team": "Arzignano Valchiampo",
        "p": 13,
        "w": 6,
@@ -707,7 +733,7 @@
        "form": "WLWDL"
       },
       {
-       "pos": 5,
+       "pos": 7,
        "team": "Lecco",
        "p": 13,
        "w": 5,
@@ -718,32 +744,6 @@
        "pts": 20,
        "tid": 6379,
        "form": "DWDWW"
-      },
-      {
-       "pos": 6,
-       "team": "Ospitaletto",
-       "p": 12,
-       "w": 5,
-       "d": 4,
-       "l": 3,
-       "gf": 18,
-       "ga": 11,
-       "pts": 19,
-       "tid": 24696,
-       "form": "DWLLD"
-      },
-      {
-       "pos": 7,
-       "team": "Treviso",
-       "p": 12,
-       "w": 5,
-       "d": 4,
-       "l": 3,
-       "gf": 12,
-       "ga": 9,
-       "pts": 19,
-       "tid": 22319,
-       "form": "DLWWL"
       },
       {
        "pos": 8,
@@ -813,31 +813,44 @@
       {
        "pos": 13,
        "team": "Desenzano",
-       "p": 12,
+       "p": 13,
        "w": 3,
        "d": 4,
-       "l": 5,
+       "l": 6,
        "gf": 10,
-       "ga": 14,
+       "ga": 15,
        "pts": 13,
        "tid": 17816,
-       "form": "WWLLL"
+       "form": "WLLLL"
       },
       {
        "pos": 14,
        "team": "Novara",
-       "p": 12,
+       "p": 13,
        "w": 3,
        "d": 4,
-       "l": 5,
+       "l": 6,
        "gf": 11,
-       "ga": 16,
+       "ga": 18,
        "pts": 13,
        "tid": 513,
-       "form": "WLDLW"
+       "form": "LDLWL"
       },
       {
        "pos": 15,
+       "team": "Carpi",
+       "p": 13,
+       "w": 3,
+       "d": 4,
+       "l": 6,
+       "gf": 16,
+       "ga": 26,
+       "pts": 13,
+       "tid": 17825,
+       "form": "LWWLD"
+      },
+      {
+       "pos": 16,
        "team": "Giana Erminio",
        "p": 13,
        "w": 2,
@@ -848,19 +861,6 @@
        "pts": 12,
        "tid": 865,
        "form": "DWWLD"
-      },
-      {
-       "pos": 16,
-       "team": "Carpi",
-       "p": 12,
-       "w": 3,
-       "d": 3,
-       "l": 6,
-       "gf": 16,
-       "ga": 26,
-       "pts": 12,
-       "tid": 17825,
-       "form": "LLWWL"
       },
       {
        "pos": 17,
@@ -904,15 +904,15 @@
       {
        "pos": 20,
        "team": "Folgore Caratese",
-       "p": 12,
+       "p": 13,
        "w": 1,
-       "d": 4,
+       "d": 5,
        "l": 7,
        "gf": 11,
        "ga": 21,
-       "pts": 7,
+       "pts": 8,
        "tid": 9450,
-       "form": "LLLDL"
+       "form": "LLDLD"
       }
      ]
     },

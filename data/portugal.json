@@ -95,15 +95,15 @@
     {
      "pos": 4,
      "team": "Santa Clara",
-     "p": 10,
+     "p": 11,
      "w": 6,
      "d": 3,
-     "l": 1,
-     "gf": 15,
-     "ga": 6,
+     "l": 2,
+     "gf": 16,
+     "ga": 8,
      "pts": 21,
      "tid": 227,
-     "form": "WDWLW"
+     "form": "DWLWL"
     },
     {
      "pos": 5,
@@ -121,28 +121,28 @@
     {
      "pos": 6,
      "team": "Académico de Viseu",
-     "p": 10,
+     "p": 11,
      "w": 6,
      "d": 2,
-     "l": 2,
+     "l": 3,
      "gf": 15,
-     "ga": 12,
+     "ga": 13,
      "pts": 20,
      "tid": 238,
-     "form": "WWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 7,
      "team": "Gil Vicente",
-     "p": 10,
-     "w": 4,
+     "p": 11,
+     "w": 5,
      "d": 3,
      "l": 3,
-     "gf": 8,
-     "ga": 7,
-     "pts": 15,
+     "gf": 10,
+     "ga": 8,
+     "pts": 18,
      "tid": 762,
-     "form": "DWWLD"
+     "form": "WWLDW"
     },
     {
      "pos": 8,
@@ -211,6 +211,19 @@
     },
     {
      "pos": 13,
+     "team": "Nacional",
+     "p": 11,
+     "w": 3,
+     "d": 1,
+     "l": 7,
+     "gf": 11,
+     "ga": 19,
+     "pts": 10,
+     "tid": 225,
+     "form": "LLWLW"
+    },
+    {
+     "pos": 14,
      "team": "Vitória de Guimarães",
      "p": 10,
      "w": 2,
@@ -223,7 +236,7 @@
      "form": "LDLWD"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Marítimo",
      "p": 10,
      "w": 2,
@@ -236,7 +249,7 @@
      "form": "LDLLL"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Casa Pia",
      "p": 11,
      "w": 2,
@@ -247,19 +260,6 @@
      "pts": 8,
      "tid": 4716,
      "form": "WLWLD"
-    },
-    {
-     "pos": 16,
-     "team": "Nacional",
-     "p": 10,
-     "w": 2,
-     "d": 1,
-     "l": 7,
-     "gf": 10,
-     "ga": 19,
-     "pts": 7,
-     "tid": 225,
-     "form": "LLLWL"
     },
     {
      "pos": 17,
