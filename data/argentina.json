@@ -4,7 +4,7 @@
  "adjective": "Argentine",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-07T00:00:00.000Z",
+ "updated": "2026-11-08T00:00:00.000Z",
  "belowNote": "Promoted clubs from Primera D come up",
  "leagues": [
   {
@@ -29,20 +29,20 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-11-07T00:00:00.000Z",
+     "updated": "2026-11-08T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
        "team": "Instituto",
-       "p": 15,
+       "p": 16,
        "w": 10,
-       "d": 3,
+       "d": 4,
        "l": 2,
-       "gf": 24,
-       "ga": 13,
-       "pts": 33,
+       "gf": 26,
+       "ga": 15,
+       "pts": 34,
        "tid": 478,
-       "form": "WDWWD"
+       "form": "DWWDD"
       },
       {
        "pos": 2,
@@ -98,6 +98,19 @@
       },
       {
        "pos": 6,
+       "team": "Newell's Old Boys",
+       "p": 16,
+       "w": 5,
+       "d": 8,
+       "l": 3,
+       "gf": 16,
+       "ga": 13,
+       "pts": 23,
+       "tid": 457,
+       "form": "LWDDD"
+      },
+      {
+       "pos": 7,
        "team": "Independiente",
        "p": 16,
        "w": 6,
@@ -108,19 +121,6 @@
        "pts": 23,
        "tid": 453,
        "form": "DDLDW"
-      },
-      {
-       "pos": 7,
-       "team": "Newell's Old Boys",
-       "p": 15,
-       "w": 5,
-       "d": 7,
-       "l": 3,
-       "gf": 14,
-       "ga": 11,
-       "pts": 22,
-       "tid": 457,
-       "form": "DLWDD"
       },
       {
        "pos": 8,
@@ -230,7 +230,7 @@
     },
     {
      "name": "Group B",
-     "updated": "2026-11-07T00:00:00.000Z",
+     "updated": "2026-11-08T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -430,7 +430,7 @@
      ]
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-08T00:00:00.000Z"
   },
   {
    "id": "primera-nacional",
