@@ -4,7 +4,7 @@
  "adjective": "Turkish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-07T00:00:00.000Z",
+ "updated": "2026-11-08T00:00:00.000Z",
  "belowNote": "Regional amateur league champions come up",
  "leagues": [
   {
@@ -179,19 +179,32 @@
     },
     {
      "pos": 11,
-     "team": "Erzurumspor FK",
-     "p": 10,
+     "team": "Rizespor",
+     "p": 11,
      "w": 4,
      "d": 2,
-     "l": 4,
-     "gf": 9,
-     "ga": 15,
+     "l": 5,
+     "gf": 13,
+     "ga": 16,
      "pts": 14,
-     "tid": 1009,
-     "form": "WDWWL"
+     "tid": 1007,
+     "form": "LLLDW"
     },
     {
      "pos": 12,
+     "team": "Erzurumspor FK",
+     "p": 11,
+     "w": 4,
+     "d": 2,
+     "l": 5,
+     "gf": 10,
+     "ga": 17,
+     "pts": 14,
+     "tid": 1009,
+     "form": "DWWLL"
+    },
+    {
+     "pos": 13,
      "team": "Alanyaspor",
      "p": 10,
      "w": 3,
@@ -202,19 +215,6 @@
      "pts": 12,
      "tid": 996,
      "form": "WDLLL"
-    },
-    {
-     "pos": 13,
-     "team": "Rizespor",
-     "p": 10,
-     "w": 3,
-     "d": 2,
-     "l": 5,
-     "gf": 11,
-     "ga": 15,
-     "pts": 11,
-     "tid": 1007,
-     "form": "DLLLD"
     },
     {
      "pos": 14,
@@ -282,7 +282,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-08T00:00:00.000Z"
   },
   {
    "id": "1-lig",
@@ -409,6 +409,19 @@
     },
     {
      "pos": 8,
+     "team": "Fatih Karagümrük",
+     "p": 14,
+     "w": 5,
+     "d": 4,
+     "l": 5,
+     "gf": 20,
+     "ga": 16,
+     "pts": 19,
+     "tid": 3589,
+     "form": "LLWLW"
+    },
+    {
+     "pos": 9,
      "team": "Bodrum FK",
      "p": 13,
      "w": 4,
@@ -421,7 +434,7 @@
      "form": "LWWWD"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Esenler Erokspor",
      "p": 14,
      "w": 4,
@@ -434,7 +447,7 @@
      "form": "DWLWW"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Muğlaspor",
      "p": 14,
      "w": 4,
@@ -447,7 +460,7 @@
      "form": "LWWLL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Sarıyer",
      "p": 14,
      "w": 4,
@@ -458,19 +471,6 @@
      "pts": 17,
      "tid": 3605,
      "form": "LDLLD"
-    },
-    {
-     "pos": 12,
-     "team": "Fatih Karagümrük",
-     "p": 13,
-     "w": 4,
-     "d": 4,
-     "l": 5,
-     "gf": 16,
-     "ga": 16,
-     "pts": 16,
-     "tid": 3589,
-     "form": "DLLWL"
     },
     {
      "pos": 13,
@@ -488,19 +488,6 @@
     },
     {
      "pos": 14,
-     "team": "Bandırmaspor",
-     "p": 13,
-     "w": 3,
-     "d": 5,
-     "l": 5,
-     "gf": 17,
-     "ga": 13,
-     "pts": 14,
-     "tid": 3584,
-     "form": "WDLLL"
-    },
-    {
-     "pos": 15,
      "team": "Ümraniyespor",
      "p": 12,
      "w": 3,
@@ -511,6 +498,19 @@
      "pts": 14,
      "tid": 3577,
      "form": "DWWD"
+    },
+    {
+     "pos": 15,
+     "team": "Bandırmaspor",
+     "p": 14,
+     "w": 3,
+     "d": 5,
+     "l": 6,
+     "gf": 17,
+     "ga": 17,
+     "pts": 14,
+     "tid": 3584,
+     "form": "DLLLL"
     },
     {
      "pos": 16,
@@ -578,7 +578,7 @@
      "form": "LLLW"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-08T00:00:00.000Z"
   },
   {
    "id": "2-lig",
@@ -620,7 +620,7 @@
    "groups": [
     {
      "name": "White Group",
-     "updated": "2026-11-07T00:00:00.000Z",
+     "updated": "2026-11-08T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -863,7 +863,7 @@
     },
     {
      "name": "Red Group",
-     "updated": "2026-11-07T00:00:00.000Z",
+     "updated": "2026-11-08T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1093,7 +1093,7 @@
      ]
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-08T00:00:00.000Z"
   },
   {
    "id": "3-lig",
@@ -1109,7 +1109,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-07T00:00:00.000Z",
+     "updated": "2026-11-08T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1349,7 +1349,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-07T00:00:00.000Z",
+     "updated": "2026-11-08T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1589,7 +1589,7 @@
     },
     {
      "name": "Group 3",
-     "updated": "2026-11-07T00:00:00.000Z",
+     "updated": "2026-11-08T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1828,7 +1828,7 @@
      ]
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-08T00:00:00.000Z"
   }
  ]
 }
