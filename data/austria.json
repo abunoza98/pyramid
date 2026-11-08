@@ -4,7 +4,7 @@
  "adjective": "Austrian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-07T00:00:00.000Z",
+ "updated": "2026-11-08T00:00:00.000Z",
  "belowNote": "Landesliga champions come up",
  "leagues": [
   {
@@ -183,7 +183,7 @@
      "form": "LLLDL"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-08T00:00:00.000Z"
   },
   {
    "id": "2-liga",
@@ -442,7 +442,7 @@
    "groups": [
     {
      "name": "East",
-     "updated": "2026-11-07T00:00:00.000Z",
+     "updated": "2026-11-08T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -656,7 +656,7 @@
     },
     {
      "name": "North",
-     "updated": "2026-11-07T00:00:00.000Z",
+     "updated": "2026-11-08T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -857,7 +857,7 @@
     },
     {
      "name": "South",
-     "updated": "2026-11-07T00:00:00.000Z",
+     "updated": "2026-11-08T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1070,10 +1070,23 @@
     },
     {
      "name": "West",
-     "updated": "2026-11-07T00:00:00.000Z",
+     "updated": "2026-11-08T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
+       "team": "Imst",
+       "p": 15,
+       "w": 12,
+       "d": 1,
+       "l": 2,
+       "gf": 34,
+       "ga": 10,
+       "pts": 37,
+       "tid": 14709,
+       "form": "WWWWW"
+      },
+      {
+       "pos": 2,
        "team": "Schwaz",
        "p": 15,
        "w": 12,
@@ -1086,7 +1099,7 @@
        "form": "WWWWW"
       },
       {
-       "pos": 2,
+       "pos": 3,
        "team": "Hohenems",
        "p": 15,
        "w": 12,
@@ -1097,19 +1110,6 @@
        "pts": 36,
        "tid": 4945,
        "form": "LLWWW"
-      },
-      {
-       "pos": 3,
-       "team": "Imst",
-       "p": 14,
-       "w": 11,
-       "d": 1,
-       "l": 2,
-       "gf": 31,
-       "ga": 10,
-       "pts": 34,
-       "tid": 14709,
-       "form": "WWWWW"
       },
       {
        "pos": 4,
@@ -1140,15 +1140,15 @@
       {
        "pos": 6,
        "team": "Röthis",
-       "p": 14,
+       "p": 15,
        "w": 7,
        "d": 3,
-       "l": 4,
+       "l": 5,
        "gf": 28,
-       "ga": 25,
+       "ga": 28,
        "pts": 24,
        "tid": 8258,
-       "form": "WWWWL"
+       "form": "WWWLL"
       },
       {
        "pos": 7,
@@ -1283,7 +1283,7 @@
      ]
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-08T00:00:00.000Z"
   }
  ]
 }
