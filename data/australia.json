@@ -67,6 +67,19 @@
     },
     {
      "pos": 3,
+     "team": "Brisbane Roar",
+     "p": 3,
+     "w": 2,
+     "d": 1,
+     "l": 0,
+     "gf": 5,
+     "ga": 3,
+     "pts": 7,
+     "tid": 947,
+     "form": "WDW"
+    },
+    {
+     "pos": 4,
      "team": "Melbourne City",
      "p": 4,
      "w": 2,
@@ -79,7 +92,7 @@
      "form": "LDWW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Perth Glory",
      "p": 4,
      "w": 2,
@@ -92,7 +105,7 @@
      "form": "LLWW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Western Sydney Wanderers",
      "p": 4,
      "w": 1,
@@ -105,20 +118,20 @@
      "form": "DWDL"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Macarthur FC",
-     "p": 3,
+     "p": 4,
      "w": 1,
      "d": 2,
-     "l": 0,
-     "gf": 3,
-     "ga": 2,
+     "l": 1,
+     "gf": 4,
+     "ga": 4,
      "pts": 5,
      "tid": 15550,
-     "form": "WDD"
+     "form": "WDDL"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Auckland FC",
      "p": 4,
      "w": 1,
@@ -129,19 +142,6 @@
      "pts": 5,
      "tid": 24608,
      "form": "WLDD"
-    },
-    {
-     "pos": 8,
-     "team": "Brisbane Roar",
-     "p": 2,
-     "w": 1,
-     "d": 1,
-     "l": 0,
-     "gf": 3,
-     "ga": 2,
-     "pts": 4,
-     "tid": 947,
-     "form": "WD"
     },
     {
      "pos": 9,
