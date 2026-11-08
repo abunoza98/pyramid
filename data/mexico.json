@@ -576,28 +576,28 @@
     {
      "pos": 2,
      "team": "Artesanos Metepec",
-     "p": 10,
+     "p": 11,
      "w": 7,
-     "d": 2,
+     "d": 3,
      "l": 1,
      "gf": 21,
      "ga": 7,
-     "pts": 24,
+     "pts": 25,
      "tid": 22049,
-     "form": "WDDLW"
+     "form": "DDLWD"
     },
     {
      "pos": 3,
-     "team": "Mineros de Fresnillo",
+     "team": "La Tribu de Cd. Juarez",
      "p": 11,
-     "w": 6,
-     "d": 3,
-     "l": 2,
-     "gf": 19,
-     "ga": 8,
+     "w": 7,
+     "d": 0,
+     "l": 4,
+     "gf": 31,
+     "ga": 13,
      "pts": 22,
-     "tid": 15935,
-     "form": "WDWLW"
+     "tid": 28306,
+     "form": "LWWLW"
     },
     {
      "pos": 3,
@@ -614,16 +614,16 @@
     },
     {
      "pos": 4,
-     "team": "Correcaminos UAT II",
+     "team": "Mineros de Fresnillo",
      "p": 11,
      "w": 6,
-     "d": 2,
-     "l": 3,
-     "gf": 18,
-     "ga": 14,
-     "pts": 20,
-     "tid": 17782,
-     "form": "WWLWW"
+     "d": 3,
+     "l": 2,
+     "gf": 19,
+     "ga": 8,
+     "pts": 22,
+     "tid": 15935,
+     "form": "WDWLW"
     },
     {
      "pos": 4,
@@ -640,16 +640,16 @@
     },
     {
      "pos": 5,
-     "team": "La Tribu de Cd. Juarez",
-     "p": 10,
+     "team": "Correcaminos UAT II",
+     "p": 11,
      "w": 6,
-     "d": 0,
-     "l": 4,
-     "gf": 23,
-     "ga": 13,
-     "pts": 19,
-     "tid": 28306,
-     "form": "LLWWL"
+     "d": 2,
+     "l": 3,
+     "gf": 18,
+     "ga": 14,
+     "pts": 20,
+     "tid": 17782,
+     "form": "WWLWW"
     },
     {
      "pos": 5,
@@ -667,15 +667,15 @@
     {
      "pos": 6,
      "team": "Vaqueros Reynosa",
-     "p": 10,
+     "p": 11,
      "w": 5,
-     "d": 1,
+     "d": 2,
      "l": 4,
      "gf": 17,
      "ga": 16,
-     "pts": 17,
+     "pts": 18,
      "tid": 28308,
-     "form": "WWLLL"
+     "form": "WLLLD"
     },
     {
      "pos": 6,
@@ -788,12 +788,12 @@
     {
      "pos": 10,
      "team": "Cañoneros Marina",
-     "p": 9,
+     "p": 10,
      "w": 0,
      "d": 0,
-     "l": 9,
+     "l": 10,
      "gf": 5,
-     "ga": 33,
+     "ga": 41,
      "pts": 0,
      "tid": 15924,
      "form": "LLLLL"
