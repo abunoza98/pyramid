@@ -348,6 +348,19 @@
     },
     {
      "pos": 2,
+     "team": "Juventude",
+     "p": 37,
+     "w": 19,
+     "d": 11,
+     "l": 7,
+     "gf": 49,
+     "ga": 26,
+     "pts": 68,
+     "tid": 152,
+     "form": "DDWDW"
+    },
+    {
+     "pos": 3,
      "team": "Vila Nova",
      "p": 37,
      "w": 19,
@@ -358,19 +371,6 @@
      "pts": 66,
      "tid": 142,
      "form": "WDLDW"
-    },
-    {
-     "pos": 3,
-     "team": "Juventude",
-     "p": 36,
-     "w": 18,
-     "d": 11,
-     "l": 7,
-     "gf": 47,
-     "ga": 25,
-     "pts": 65,
-     "tid": 152,
-     "form": "WDDWD"
     },
     {
      "pos": 4,
@@ -492,15 +492,15 @@
     {
      "pos": 13,
      "team": "Cuiabá",
-     "p": 36,
+     "p": 37,
      "w": 11,
      "d": 14,
-     "l": 11,
-     "gf": 33,
-     "ga": 30,
+     "l": 12,
+     "gf": 34,
+     "ga": 32,
      "pts": 47,
      "tid": 1193,
-     "form": "DLLLL"
+     "form": "LLLLL"
     },
     {
      "pos": 14,

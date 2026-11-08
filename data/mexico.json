@@ -67,15 +67,15 @@
     {
      "pos": 4,
      "team": "Atlas",
-     "p": 15,
+     "p": 16,
      "w": 8,
      "d": 3,
-     "l": 4,
-     "gf": 26,
-     "ga": 26,
+     "l": 5,
+     "gf": 27,
+     "ga": 30,
      "pts": 27,
      "tid": 2283,
-     "form": "DWLWW"
+     "form": "WLWWL"
     },
     {
      "pos": 5,
@@ -105,6 +105,19 @@
     },
     {
      "pos": 7,
+     "team": "Pachuca",
+     "p": 16,
+     "w": 6,
+     "d": 4,
+     "l": 6,
+     "gf": 29,
+     "ga": 20,
+     "pts": 22,
+     "tid": 2292,
+     "form": "LLWWW"
+    },
+    {
+     "pos": 8,
      "team": "Tijuana",
      "p": 16,
      "w": 5,
@@ -117,7 +130,7 @@
      "form": "DWDDL"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "León",
      "p": 15,
      "w": 6,
@@ -130,7 +143,7 @@
      "form": "DLWDL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Monterrey",
      "p": 14,
      "w": 6,
@@ -143,7 +156,7 @@
      "form": "DWWLD"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Pumas UNAM",
      "p": 15,
      "w": 5,
@@ -156,7 +169,7 @@
      "form": "DWLDW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Querétaro",
      "p": 14,
      "w": 6,
@@ -167,19 +180,6 @@
      "pts": 20,
      "tid": 2290,
      "form": "WLLLL"
-    },
-    {
-     "pos": 12,
-     "team": "Pachuca",
-     "p": 15,
-     "w": 5,
-     "d": 4,
-     "l": 6,
-     "gf": 25,
-     "ga": 19,
-     "pts": 19,
-     "tid": 2292,
-     "form": "DLLWW"
     },
     {
      "pos": 13,
@@ -488,7 +488,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-06T00:00:00.000Z"
+   "updated": "2026-11-07T00:00:00.000Z"
   },
   {
    "id": "liga-premier",
