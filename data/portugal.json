@@ -69,15 +69,15 @@
     {
      "pos": 2,
      "team": "Benfica",
-     "p": 10,
-     "w": 8,
+     "p": 11,
+     "w": 9,
      "d": 1,
      "l": 1,
-     "gf": 27,
-     "ga": 8,
-     "pts": 25,
+     "gf": 30,
+     "ga": 10,
+     "pts": 28,
      "tid": 211,
-     "form": "WLWWW"
+     "form": "LWWWW"
     },
     {
      "pos": 3,
@@ -147,15 +147,15 @@
     {
      "pos": 8,
      "team": "Braga",
-     "p": 10,
-     "w": 4,
+     "p": 11,
+     "w": 5,
      "d": 2,
      "l": 4,
-     "gf": 12,
+     "gf": 13,
      "ga": 11,
-     "pts": 14,
+     "pts": 17,
      "tid": 217,
-     "form": "DLLLW"
+     "form": "LLLWW"
     },
     {
      "pos": 9,
@@ -199,15 +199,15 @@
     {
      "pos": 12,
      "team": "Estrela da Amadora",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 4,
-     "l": 4,
-     "gf": 15,
-     "ga": 19,
+     "l": 5,
+     "gf": 17,
+     "ga": 22,
      "pts": 10,
      "tid": 15130,
-     "form": "DLLLL"
+     "form": "LLLLL"
     },
     {
      "pos": 13,
@@ -264,15 +264,15 @@
     {
      "pos": 17,
      "team": "Rio Ave",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 1,
-     "l": 7,
+     "l": 8,
      "gf": 9,
-     "ga": 23,
+     "ga": 24,
      "pts": 7,
      "tid": 226,
-     "form": "DLWLL"
+     "form": "LWLLL"
     },
     {
      "pos": 18,
