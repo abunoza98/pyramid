@@ -4,7 +4,7 @@
  "adjective": "Italian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-08T00:00:00.000Z",
+ "updated": "2026-11-09T00:00:00.000Z",
  "belowNote": "Serie D group winners come up",
  "leagues": [
   {
@@ -302,7 +302,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-09T00:00:00.000Z"
   },
   {
    "id": "serie-b",
@@ -918,7 +918,7 @@
     },
     {
      "name": "Girone B",
-     "updated": "2026-11-08T00:00:00.000Z",
+     "updated": "2026-11-09T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1052,6 +1052,19 @@
       },
       {
        "pos": 11,
+       "team": "Pineto",
+       "p": 13,
+       "w": 4,
+       "d": 5,
+       "l": 4,
+       "gf": 11,
+       "ga": 13,
+       "pts": 17,
+       "tid": 9514,
+       "form": "DWWLW"
+      },
+      {
+       "pos": 12,
        "team": "Perugia",
        "p": 13,
        "w": 5,
@@ -1064,7 +1077,7 @@
        "form": "LWLDL"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "Vado",
        "p": 13,
        "w": 4,
@@ -1077,7 +1090,7 @@
        "form": "WDWDL"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Forlì",
        "p": 13,
        "w": 3,
@@ -1090,7 +1103,7 @@
        "form": "DLDLW"
       },
       {
-       "pos": 14,
+       "pos": 15,
        "team": "Latina",
        "p": 13,
        "w": 3,
@@ -1101,19 +1114,6 @@
        "pts": 15,
        "tid": 804,
        "form": "WWDDL"
-      },
-      {
-       "pos": 15,
-       "team": "Pineto",
-       "p": 12,
-       "w": 3,
-       "d": 5,
-       "l": 4,
-       "gf": 10,
-       "ga": 13,
-       "pts": 14,
-       "tid": 9514,
-       "form": "LDWWL"
       },
       {
        "pos": 16,
@@ -1170,21 +1170,21 @@
       {
        "pos": 20,
        "team": "Vis Pesaro",
-       "p": 12,
+       "p": 13,
        "w": 1,
        "d": 2,
-       "l": 9,
+       "l": 10,
        "gf": 11,
-       "ga": 26,
+       "ga": 27,
        "pts": 5,
        "tid": 1708,
-       "form": "LLLLD"
+       "form": "LLLDL"
       }
      ]
     },
     {
      "name": "Girone C",
-     "updated": "2026-11-08T00:00:00.000Z",
+     "updated": "2026-11-09T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1450,7 +1450,7 @@
      ]
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-09T00:00:00.000Z"
   }
  ]
 }

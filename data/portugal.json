@@ -4,7 +4,7 @@
  "adjective": "Portuguese",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-08T00:00:00.000Z",
+ "updated": "2026-11-09T00:00:00.000Z",
  "belowNote": "Liga 3's top clubs come up, one through a play-off",
  "leagues": [
   {
@@ -381,6 +381,19 @@
     },
     {
      "pos": 5,
+     "team": "União de Leiria",
+     "p": 10,
+     "w": 5,
+     "d": 2,
+     "l": 3,
+     "gf": 16,
+     "ga": 13,
+     "pts": 17,
+     "tid": 4662,
+     "form": "DLDWW"
+    },
+    {
+     "pos": 6,
      "team": "Académica",
      "p": 10,
      "w": 5,
@@ -393,7 +406,7 @@
      "form": "LWWLD"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Tondela",
      "p": 10,
      "w": 5,
@@ -406,7 +419,7 @@
      "form": "WWLWD"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Farense",
      "p": 10,
      "w": 4,
@@ -419,7 +432,7 @@
      "form": "WWLDL"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Vizela",
      "p": 10,
      "w": 4,
@@ -430,19 +443,6 @@
      "pts": 15,
      "tid": 810,
      "form": "DLLWD"
-    },
-    {
-     "pos": 9,
-     "team": "União de Leiria",
-     "p": 9,
-     "w": 4,
-     "d": 2,
-     "l": 3,
-     "gf": 13,
-     "ga": 11,
-     "pts": 14,
-     "tid": 4662,
-     "form": "WDLDW"
     },
     {
      "pos": 10,
@@ -486,15 +486,15 @@
     {
      "pos": 13,
      "team": "Torreense",
-     "p": 9,
+     "p": 10,
      "w": 2,
      "d": 4,
-     "l": 3,
-     "gf": 8,
-     "ga": 10,
+     "l": 4,
+     "gf": 10,
+     "ga": 13,
      "pts": 10,
      "tid": 4799,
-     "form": "WDLWD"
+     "form": "DLWDL"
     },
     {
      "pos": 14,
@@ -562,7 +562,7 @@
      "form": "LLDLW"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-09T00:00:00.000Z"
   }
  ]
 }
