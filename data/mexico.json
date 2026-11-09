@@ -54,15 +54,15 @@
     {
      "pos": 3,
      "team": "Guadalajara",
-     "p": 15,
+     "p": 16,
      "w": 8,
-     "d": 5,
+     "d": 6,
      "l": 2,
-     "gf": 25,
-     "ga": 14,
-     "pts": 29,
+     "gf": 26,
+     "ga": 15,
+     "pts": 30,
      "tid": 2278,
-     "form": "DDWWW"
+     "form": "DWWWD"
     },
     {
      "pos": 4,
@@ -105,6 +105,19 @@
     },
     {
      "pos": 7,
+     "team": "León",
+     "p": 16,
+     "w": 6,
+     "d": 5,
+     "l": 5,
+     "gf": 23,
+     "ga": 21,
+     "pts": 23,
+     "tid": 2289,
+     "form": "LWDLD"
+    },
+    {
+     "pos": 8,
      "team": "Pachuca",
      "p": 16,
      "w": 6,
@@ -117,7 +130,7 @@
      "form": "LLWWW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Tijuana",
      "p": 16,
      "w": 5,
@@ -128,19 +141,6 @@
      "pts": 22,
      "tid": 2280,
      "form": "DWDDL"
-    },
-    {
-     "pos": 9,
-     "team": "León",
-     "p": 15,
-     "w": 6,
-     "d": 4,
-     "l": 5,
-     "gf": 22,
-     "ga": 20,
-     "pts": 22,
-     "tid": 2289,
-     "form": "DLWDL"
     },
     {
      "pos": 10,
