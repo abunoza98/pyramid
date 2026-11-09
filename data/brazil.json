@@ -4,7 +4,7 @@
  "adjective": "Brazilian",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-08T00:00:00.000Z",
+ "updated": "2026-11-09T00:00:00.000Z",
  "belowNote": "Clubs qualify for Série D through their state championships",
  "leagues": [
   {
@@ -413,6 +413,19 @@
     },
     {
      "pos": 7,
+     "team": "Goiás",
+     "p": 37,
+     "w": 17,
+     "d": 7,
+     "l": 13,
+     "gf": 39,
+     "ga": 41,
+     "pts": 58,
+     "tid": 151,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 8,
      "team": "Atlético Goianiense",
      "p": 37,
      "w": 15,
@@ -423,19 +436,6 @@
      "pts": 58,
      "tid": 144,
      "form": "DDLDW"
-    },
-    {
-     "pos": 8,
-     "team": "Goiás",
-     "p": 36,
-     "w": 16,
-     "d": 7,
-     "l": 13,
-     "gf": 38,
-     "ga": 41,
-     "pts": 55,
-     "tid": 151,
-     "form": "WWDWW"
     },
     {
      "pos": 9,
@@ -531,15 +531,15 @@
     {
      "pos": 16,
      "team": "Ceará",
-     "p": 36,
+     "p": 37,
      "w": 11,
      "d": 10,
-     "l": 15,
+     "l": 16,
      "gf": 38,
-     "ga": 46,
+     "ga": 47,
      "pts": 43,
      "tid": 129,
-     "form": "WLDLL"
+     "form": "LDLLL"
     },
     {
      "pos": 17,
@@ -570,31 +570,31 @@
     {
      "pos": 19,
      "team": "América Mineiro",
-     "p": 36,
-     "w": 7,
+     "p": 37,
+     "w": 8,
      "d": 5,
      "l": 24,
-     "gf": 26,
+     "gf": 27,
      "ga": 55,
-     "pts": 26,
+     "pts": 29,
      "tid": 125,
-     "form": "LLWWW"
+     "form": "LWWWW"
     },
     {
      "pos": 20,
      "team": "Ponte Preta",
-     "p": 36,
+     "p": 37,
      "w": 3,
      "d": 6,
-     "l": 27,
+     "l": 28,
      "gf": 21,
-     "ga": 78,
+     "ga": 79,
      "pts": 15,
      "tid": 139,
-     "form": "LLDDL"
+     "form": "LDDLL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-09T00:00:00.000Z"
   },
   {
    "id": "serie-c",

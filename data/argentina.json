@@ -4,7 +4,7 @@
  "adjective": "Argentine",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-08T00:00:00.000Z",
+ "updated": "2026-11-09T00:00:00.000Z",
  "belowNote": "Promoted clubs from Primera D come up",
  "leagues": [
   {
@@ -29,7 +29,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-11-08T00:00:00.000Z",
+     "updated": "2026-11-09T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -86,15 +86,15 @@
       {
        "pos": 5,
        "team": "Lanús",
-       "p": 15,
+       "p": 16,
        "w": 7,
-       "d": 4,
+       "d": 5,
        "l": 4,
-       "gf": 18,
-       "ga": 11,
-       "pts": 25,
+       "gf": 19,
+       "ga": 12,
+       "pts": 26,
        "tid": 446,
-       "form": "DWWDD"
+       "form": "WWDDD"
       },
       {
        "pos": 6,
@@ -216,21 +216,21 @@
       {
        "pos": 15,
        "team": "Central Córdoba",
-       "p": 15,
+       "p": 16,
        "w": 2,
-       "d": 4,
+       "d": 5,
        "l": 9,
-       "gf": 11,
-       "ga": 25,
-       "pts": 10,
+       "gf": 12,
+       "ga": 26,
+       "pts": 11,
        "tid": 1065,
-       "form": "DDLLL"
+       "form": "DLLLD"
       }
      ]
     },
     {
      "name": "Group B",
-     "updated": "2026-11-08T00:00:00.000Z",
+     "updated": "2026-11-09T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -430,7 +430,7 @@
      ]
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-09T00:00:00.000Z"
   },
   {
    "id": "primera-nacional",
