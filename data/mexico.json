@@ -4,7 +4,7 @@
  "adjective": "Mexican",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-08T00:00:00.000Z",
+ "updated": "2026-11-09T00:00:00.000Z",
  "belowNote": "Promotion between Liga Premier and the Liga de Expansión is suspended",
  "leagues": [
   {
@@ -260,7 +260,7 @@
      "form": "LLDWW"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-09T00:00:00.000Z"
   },
   {
    "id": "liga-de-expansion",
@@ -488,7 +488,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-09T00:00:00.000Z"
   },
   {
    "id": "liga-premier",
@@ -550,15 +550,15 @@
     {
      "pos": 1,
      "team": "Dragones de Oaxaca",
-     "p": 10,
+     "p": 11,
      "w": 7,
      "d": 2,
-     "l": 1,
+     "l": 2,
      "gf": 27,
-     "ga": 8,
+     "ga": 11,
      "pts": 25,
      "tid": 26393,
-     "form": "WWDWW"
+     "form": "WDWWL"
     },
     {
      "pos": 2,
@@ -680,28 +680,28 @@
     {
      "pos": 6,
      "team": "Guerreros del Pacifico",
-     "p": 10,
+     "p": 11,
      "w": 4,
      "d": 1,
-     "l": 5,
-     "gf": 20,
-     "ga": 17,
+     "l": 6,
+     "gf": 21,
+     "ga": 20,
      "pts": 17,
      "tid": 28304,
-     "form": "LLWLW"
+     "form": "LWLWL"
     },
     {
      "pos": 7,
      "team": "Guerreros",
-     "p": 9,
-     "w": 3,
+     "p": 10,
+     "w": 4,
      "d": 2,
      "l": 4,
-     "gf": 14,
-     "ga": 16,
-     "pts": 12,
+     "gf": 17,
+     "ga": 17,
+     "pts": 15,
      "tid": 26426,
-     "form": "WDDWL"
+     "form": "DDWLW"
     },
     {
      "pos": 7,
@@ -747,16 +747,16 @@
     {
      "pos": 9,
      "team": "Real Apodaca",
-     "p": 10,
-     "w": 2,
+     "p": 11,
+     "w": 3,
      "d": 1,
      "l": 7,
-     "gf": 10,
+     "gf": 13,
      "ga": 20,
-     "pts": 6,
+     "pts": 9,
      "ded": 1,
      "tid": 22047,
-     "form": "LLLWL"
+     "form": "LLWLW"
     },
     {
      "pos": 9,
@@ -799,7 +799,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-09T00:00:00.000Z"
   }
  ]
 }
