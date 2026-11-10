@@ -1201,6 +1201,19 @@
       },
       {
        "pos": 2,
+       "team": "Bari",
+       "p": 13,
+       "w": 6,
+       "d": 5,
+       "l": 2,
+       "gf": 16,
+       "ga": 9,
+       "pts": 23,
+       "tid": 508,
+       "form": "WDDDD"
+      },
+      {
+       "pos": 3,
        "team": "Catania",
        "p": 13,
        "w": 7,
@@ -1211,19 +1224,6 @@
        "pts": 22,
        "tid": 1580,
        "form": "WLWLW"
-      },
-      {
-       "pos": 3,
-       "team": "Bari",
-       "p": 12,
-       "w": 6,
-       "d": 4,
-       "l": 2,
-       "gf": 15,
-       "ga": 8,
-       "pts": 22,
-       "tid": 508,
-       "form": "LWDDD"
       },
       {
        "pos": 4,
@@ -1306,18 +1306,44 @@
       {
        "pos": 10,
        "team": "Picerno",
-       "p": 12,
+       "p": 13,
        "w": 6,
-       "d": 0,
+       "d": 1,
        "l": 6,
-       "gf": 22,
-       "ga": 19,
-       "pts": 18,
+       "gf": 23,
+       "ga": 20,
+       "pts": 19,
        "tid": 1587,
-       "form": "LLLWW"
+       "form": "LLWWD"
       },
       {
        "pos": 11,
+       "team": "Cavese",
+       "p": 13,
+       "w": 4,
+       "d": 4,
+       "l": 5,
+       "gf": 23,
+       "ga": 22,
+       "pts": 16,
+       "tid": 1712,
+       "form": "DWLLD"
+      },
+      {
+       "pos": 12,
+       "team": "Altamura",
+       "p": 13,
+       "w": 4,
+       "d": 4,
+       "l": 5,
+       "gf": 13,
+       "ga": 19,
+       "pts": 16,
+       "tid": 9549,
+       "form": "LWDWD"
+      },
+      {
+       "pos": 13,
        "team": "Giugliano",
        "p": 13,
        "w": 5,
@@ -1330,20 +1356,7 @@
        "form": "LWLWW"
       },
       {
-       "pos": 12,
-       "team": "Cavese",
-       "p": 12,
-       "w": 4,
-       "d": 3,
-       "l": 5,
-       "gf": 21,
-       "ga": 20,
-       "pts": 15,
-       "tid": 1712,
-       "form": "WDWLL"
-      },
-      {
-       "pos": 13,
+       "pos": 14,
        "team": "Salernitana",
        "p": 13,
        "w": 3,
@@ -1356,20 +1369,33 @@
        "form": "DDLDL"
       },
       {
-       "pos": 14,
-       "team": "Foggia",
-       "p": 12,
-       "w": 4,
-       "d": 3,
-       "l": 5,
-       "gf": 13,
-       "ga": 15,
+       "pos": 15,
+       "team": "Barletta",
+       "p": 13,
+       "w": 3,
+       "d": 6,
+       "l": 4,
+       "gf": 14,
+       "ga": 16,
        "pts": 15,
-       "tid": 521,
-       "form": "WLLWD"
+       "tid": 19968,
+       "form": "DWLDW"
       },
       {
-       "pos": 15,
+       "pos": 16,
+       "team": "Foggia",
+       "p": 13,
+       "w": 4,
+       "d": 3,
+       "l": 6,
+       "gf": 13,
+       "ga": 16,
+       "pts": 15,
+       "tid": 521,
+       "form": "LLWDL"
+      },
+      {
+       "pos": 17,
        "team": "Casarano",
        "p": 13,
        "w": 4,
@@ -1380,32 +1406,6 @@
        "pts": 15,
        "tid": 9542,
        "form": "DLWDL"
-      },
-      {
-       "pos": 16,
-       "team": "Altamura",
-       "p": 12,
-       "w": 4,
-       "d": 3,
-       "l": 5,
-       "gf": 11,
-       "ga": 17,
-       "pts": 15,
-       "tid": 9549,
-       "form": "DLWDW"
-      },
-      {
-       "pos": 17,
-       "team": "Barletta",
-       "p": 12,
-       "w": 2,
-       "d": 6,
-       "l": 4,
-       "gf": 13,
-       "ga": 16,
-       "pts": 12,
-       "tid": 19968,
-       "form": "LDWLD"
       },
       {
        "pos": 18,
