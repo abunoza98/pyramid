@@ -4,7 +4,7 @@
  "adjective": "English",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-09T00:00:00.000Z",
+ "updated": "2026-11-10T00:00:00.000Z",
  "belowNote": "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
  "leagues": [
   {
@@ -296,7 +296,7 @@
      "form": "WLLLL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-10T00:00:00.000Z"
   },
   {
    "id": "championship",
@@ -644,7 +644,7 @@
      "form": "LDLLW"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-10T00:00:00.000Z"
   },
   {
    "id": "league-one",
@@ -1685,7 +1685,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-10T00:00:00.000Z"
   },
   {
    "id": "national-league-north-south",
@@ -1727,7 +1727,7 @@
    "groups": [
     {
      "name": "North",
-     "updated": "2026-11-08T00:00:00.000Z",
+     "updated": "2026-11-10T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2045,7 +2045,7 @@
     },
     {
      "name": "South",
-     "updated": "2026-11-09T00:00:00.000Z",
+     "updated": "2026-11-10T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2075,6 +2075,19 @@
       },
       {
        "pos": 3,
+       "team": "Salisbury",
+       "p": 15,
+       "w": 9,
+       "d": 4,
+       "l": 2,
+       "gf": 27,
+       "ga": 10,
+       "pts": 31,
+       "tid": 7744,
+       "form": "WDWWW"
+      },
+      {
+       "pos": 4,
        "team": "Truro City",
        "p": 14,
        "w": 9,
@@ -2087,7 +2100,7 @@
        "form": "DWWWW"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Farnham Town",
        "p": 16,
        "w": 9,
@@ -2098,19 +2111,6 @@
        "pts": 29,
        "tid": 8783,
        "form": "WWLWW"
-      },
-      {
-       "pos": 5,
-       "team": "Salisbury",
-       "p": 14,
-       "w": 8,
-       "d": 4,
-       "l": 2,
-       "gf": 25,
-       "ga": 10,
-       "pts": 28,
-       "tid": 7744,
-       "form": "WWDWW"
       },
       {
        "pos": 6,
@@ -2179,6 +2179,19 @@
       },
       {
        "pos": 11,
+       "team": "Torquay United",
+       "p": 15,
+       "w": 6,
+       "d": 5,
+       "l": 4,
+       "gf": 24,
+       "ga": 17,
+       "pts": 23,
+       "tid": 1827,
+       "form": "WDLWW"
+      },
+      {
+       "pos": 12,
        "team": "Horsham",
        "p": 16,
        "w": 5,
@@ -2191,7 +2204,7 @@
        "form": "DWDWL"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "Dover Athletic",
        "p": 14,
        "w": 6,
@@ -2204,7 +2217,7 @@
        "form": "WDDLW"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Weston-super-Mare",
        "p": 15,
        "w": 6,
@@ -2215,19 +2228,6 @@
        "pts": 21,
        "tid": 4687,
        "form": "DLLLW"
-      },
-      {
-       "pos": 14,
-       "team": "Torquay United",
-       "p": 14,
-       "w": 5,
-       "d": 5,
-       "l": 4,
-       "gf": 22,
-       "ga": 17,
-       "pts": 20,
-       "tid": 1827,
-       "form": "LWDLW"
       },
       {
        "pos": 15,
@@ -2284,28 +2284,28 @@
       {
        "pos": 19,
        "team": "Braintree Town",
-       "p": 15,
+       "p": 16,
        "w": 5,
        "d": 1,
-       "l": 9,
+       "l": 10,
        "gf": 22,
-       "ga": 38,
+       "ga": 40,
        "pts": 16,
        "tid": 1831,
-       "form": "LLWWL"
+       "form": "LWWLL"
       },
       {
        "pos": 20,
        "team": "Hemel Hempstead Town",
-       "p": 16,
+       "p": 17,
        "w": 3,
        "d": 6,
-       "l": 7,
+       "l": 8,
        "gf": 15,
-       "ga": 24,
+       "ga": 26,
        "pts": 15,
        "tid": 8660,
-       "form": "LLDLL"
+       "form": "LDLLL"
       },
       {
        "pos": 21,
@@ -2362,7 +2362,7 @@
      ]
     }
    ],
-   "updated": "2026-11-09T00:00:00.000Z"
+   "updated": "2026-11-10T00:00:00.000Z"
   }
  ]
 }
