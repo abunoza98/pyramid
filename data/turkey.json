@@ -1687,15 +1687,15 @@
       {
        "pos": 8,
        "team": "Yeni Mersin Idmanyurdu",
-       "p": 10,
-       "w": 6,
+       "p": 11,
+       "w": 7,
        "d": 0,
        "l": 4,
-       "gf": 15,
+       "gf": 16,
        "ga": 10,
-       "pts": 18,
+       "pts": 21,
        "tid": 6546,
-       "form": "LWWWW"
+       "form": "WWWWW"
       },
       {
        "pos": 9,
@@ -1765,15 +1765,15 @@
       {
        "pos": 14,
        "team": "Silifke Belediyespor",
-       "p": 10,
+       "p": 11,
        "w": 2,
        "d": 2,
-       "l": 6,
+       "l": 7,
        "gf": 11,
-       "ga": 21,
+       "ga": 22,
        "pts": 8,
        "tid": 21998,
-       "form": "WLLDL"
+       "form": "LLDLL"
       },
       {
        "pos": 15,
