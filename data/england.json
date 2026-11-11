@@ -1745,28 +1745,28 @@
       {
        "pos": 2,
        "team": "Hereford",
-       "p": 15,
+       "p": 16,
        "w": 9,
-       "d": 2,
+       "d": 3,
        "l": 4,
-       "gf": 26,
-       "ga": 12,
-       "pts": 29,
+       "gf": 28,
+       "ga": 14,
+       "pts": 30,
        "tid": 4692,
-       "form": "LWLLW"
+       "form": "WLLWD"
       },
       {
        "pos": 3,
        "team": "Oxford City",
-       "p": 14,
+       "p": 15,
        "w": 8,
-       "d": 3,
+       "d": 4,
        "l": 3,
-       "gf": 26,
-       "ga": 11,
-       "pts": 27,
+       "gf": 27,
+       "ga": 12,
+       "pts": 28,
        "tid": 4684,
-       "form": "DWDWL"
+       "form": "WDWLD"
       },
       {
        "pos": 4,
@@ -1836,15 +1836,15 @@
       {
        "pos": 9,
        "team": "Morecambe",
-       "p": 15,
+       "p": 16,
        "w": 7,
-       "d": 2,
+       "d": 3,
        "l": 6,
-       "gf": 23,
-       "ga": 18,
-       "pts": 23,
+       "gf": 25,
+       "ga": 20,
+       "pts": 24,
        "tid": 1375,
-       "form": "LWWWL"
+       "form": "WWWLD"
       },
       {
        "pos": 10,
@@ -1926,6 +1926,19 @@
       },
       {
        "pos": 16,
+       "team": "Marine",
+       "p": 15,
+       "w": 6,
+       "d": 1,
+       "l": 8,
+       "gf": 20,
+       "ga": 20,
+       "pts": 19,
+       "tid": 7656,
+       "form": "WDLLW"
+      },
+      {
+       "pos": 17,
        "team": "Merthyr Town",
        "p": 16,
        "w": 4,
@@ -1938,7 +1951,7 @@
        "form": "DLLDW"
       },
       {
-       "pos": 17,
+       "pos": 18,
        "team": "Brackley Town",
        "p": 16,
        "w": 5,
@@ -1951,7 +1964,7 @@
        "form": "LLDWL"
       },
       {
-       "pos": 18,
+       "pos": 19,
        "team": "Harborough Town",
        "p": 14,
        "w": 4,
@@ -1964,30 +1977,17 @@
        "form": "LWDLD"
       },
       {
-       "pos": 19,
+       "pos": 20,
        "team": "Scarborough Athletic",
-       "p": 15,
+       "p": 16,
        "w": 4,
        "d": 4,
-       "l": 7,
-       "gf": 21,
-       "ga": 22,
+       "l": 8,
+       "gf": 22,
+       "ga": 25,
        "pts": 16,
        "tid": 7745,
-       "form": "LWLLD"
-      },
-      {
-       "pos": 20,
-       "team": "Marine",
-       "p": 14,
-       "w": 5,
-       "d": 1,
-       "l": 8,
-       "gf": 17,
-       "ga": 19,
-       "pts": 16,
-       "tid": 7656,
-       "form": "WWDLL"
+       "form": "WLLDL"
       },
       {
        "pos": 21,
@@ -2005,15 +2005,15 @@
       {
        "pos": 22,
        "team": "Darlington",
-       "p": 15,
+       "p": 16,
        "w": 3,
-       "d": 2,
+       "d": 3,
        "l": 10,
-       "gf": 19,
-       "ga": 28,
-       "pts": 11,
+       "gf": 20,
+       "ga": 29,
+       "pts": 12,
        "tid": 10157,
-       "form": "DLWLL"
+       "form": "LWLLD"
       },
       {
        "pos": 23,
