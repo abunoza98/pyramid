@@ -4,7 +4,7 @@
  "adjective": "Brazilian",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-09T00:00:00.000Z",
+ "updated": "2026-11-12T00:00:00.000Z",
  "belowNote": "Clubs qualify for Série D through their state championships",
  "leagues": [
   {
@@ -302,7 +302,7 @@
      "form": "LLWLL"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-10T00:00:00.000Z"
   },
   {
    "id": "serie-b",
@@ -518,15 +518,15 @@
     {
      "pos": 15,
      "team": "Náutico",
-     "p": 37,
+     "p": 38,
      "w": 12,
      "d": 10,
-     "l": 15,
-     "gf": 40,
-     "ga": 49,
+     "l": 16,
+     "gf": 41,
+     "ga": 51,
      "pts": 46,
      "tid": 755,
-     "form": "LDLWL"
+     "form": "DLWLL"
     },
     {
      "pos": 16,
@@ -557,15 +557,15 @@
     {
      "pos": 18,
      "team": "Londrina",
-     "p": 37,
-     "w": 8,
+     "p": 38,
+     "w": 9,
      "d": 8,
      "l": 21,
-     "gf": 45,
-     "ga": 58,
-     "pts": 32,
+     "gf": 47,
+     "ga": 59,
+     "pts": 35,
      "tid": 148,
-     "form": "DWLLL"
+     "form": "WLLLW"
     },
     {
      "pos": 19,
@@ -594,7 +594,7 @@
      "form": "LDDLL"
     }
    ],
-   "updated": "2026-11-09T00:00:00.000Z"
+   "updated": "2026-11-12T00:00:00.000Z"
   },
   {
    "id": "serie-c",
