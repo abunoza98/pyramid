@@ -364,15 +364,15 @@
     {
      "pos": 3,
      "team": "Burgos",
-     "p": 13,
+     "p": 14,
      "w": 7,
      "d": 3,
-     "l": 3,
-     "gf": 19,
-     "ga": 14,
+     "l": 4,
+     "gf": 20,
+     "ga": 17,
      "pts": 24,
      "tid": 9580,
-     "form": "LWWDW"
+     "form": "WWDWL"
     },
     {
      "pos": 4,
@@ -519,6 +519,19 @@
     },
     {
      "pos": 15,
+     "team": "Leganés",
+     "p": 14,
+     "w": 4,
+     "d": 3,
+     "l": 7,
+     "gf": 14,
+     "ga": 24,
+     "pts": 15,
+     "tid": 537,
+     "form": "LDLLW"
+    },
+    {
+     "pos": 16,
      "team": "Eldense",
      "p": 13,
      "w": 4,
@@ -531,7 +544,7 @@
      "form": "WWLLL"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Celta Fortuna",
      "p": 13,
      "w": 3,
@@ -544,7 +557,7 @@
      "form": "WDLDL"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Real Sociedad B",
      "p": 13,
      "w": 3,
@@ -555,19 +568,6 @@
      "pts": 12,
      "tid": 9585,
      "form": "LLLWD"
-    },
-    {
-     "pos": 18,
-     "team": "Leganés",
-     "p": 13,
-     "w": 3,
-     "d": 3,
-     "l": 7,
-     "gf": 11,
-     "ga": 23,
-     "pts": 12,
-     "tid": 537,
-     "form": "LLDLL"
     },
     {
      "pos": 19,
@@ -978,6 +978,19 @@
       },
       {
        "pos": 5,
+       "team": "Real Madrid Castilla",
+       "p": 12,
+       "w": 5,
+       "d": 4,
+       "l": 3,
+       "gf": 16,
+       "ga": 13,
+       "pts": 19,
+       "tid": 9575,
+       "form": "WLWDW"
+      },
+      {
+       "pos": 6,
        "team": "Alcorcón",
        "p": 11,
        "w": 4,
@@ -990,7 +1003,7 @@
        "form": "LDDDW"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Ibiza",
        "p": 11,
        "w": 5,
@@ -1003,7 +1016,7 @@
        "form": "DWDWD"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Hércules",
        "p": 11,
        "w": 5,
@@ -1016,7 +1029,7 @@
        "form": "WLLWD"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Cartagena",
        "p": 11,
        "w": 4,
@@ -1027,19 +1040,6 @@
        "pts": 16,
        "tid": 5262,
        "form": "DWLLD"
-      },
-      {
-       "pos": 9,
-       "team": "Real Madrid Castilla",
-       "p": 11,
-       "w": 4,
-       "d": 4,
-       "l": 3,
-       "gf": 15,
-       "ga": 13,
-       "pts": 16,
-       "tid": 9575,
-       "form": "DWLWD"
       },
       {
        "pos": 10,
@@ -1057,15 +1057,15 @@
       {
        "pos": 11,
        "team": "Gimnàstic",
-       "p": 11,
+       "p": 12,
        "w": 4,
        "d": 3,
-       "l": 4,
+       "l": 5,
        "gf": 16,
-       "ga": 17,
+       "ga": 18,
        "pts": 15,
        "tid": 714,
-       "form": "DWWLD"
+       "form": "WWLDL"
       },
       {
        "pos": 12,
