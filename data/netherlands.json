@@ -4,7 +4,7 @@
  "adjective": "Dutch",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-08T00:00:00.000Z",
+ "updated": "2026-11-13T00:00:00.000Z",
  "belowNote": "The top Derde Divisie clubs come up",
  "leagues": [
   {
@@ -288,7 +288,7 @@
      "form": "LLLLD"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-10T00:00:00.000Z"
   },
   {
    "id": "eerste-divisie",
@@ -577,7 +577,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-11T00:00:00.000Z"
   },
   {
    "id": "tweede-divisie",
@@ -785,6 +785,19 @@
     },
     {
      "pos": 15,
+     "team": "Hoek",
+     "p": 13,
+     "w": 3,
+     "d": 4,
+     "l": 6,
+     "gf": 15,
+     "ga": 23,
+     "pts": 13,
+     "tid": 1276,
+     "form": "LDLLW"
+    },
+    {
+     "pos": 16,
      "team": "Koninklijke HFC",
      "p": 12,
      "w": 3,
@@ -797,30 +810,17 @@
      "form": "LLWLW"
     },
     {
-     "pos": 16,
-     "team": "Hoek",
-     "p": 12,
-     "w": 2,
-     "d": 4,
-     "l": 6,
-     "gf": 12,
-     "ga": 21,
-     "pts": 10,
-     "tid": 1276,
-     "form": "WLDLL"
-    },
-    {
      "pos": 17,
      "team": "Kloetinge",
-     "p": 12,
+     "p": 13,
      "w": 1,
      "d": 4,
-     "l": 7,
-     "gf": 17,
-     "ga": 33,
+     "l": 8,
+     "gf": 19,
+     "ga": 36,
      "pts": 7,
      "tid": 3930,
-     "form": "LDLLL"
+     "form": "DLLLL"
     },
     {
      "pos": 18,
@@ -836,7 +836,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-13T00:00:00.000Z"
   }
  ]
 }

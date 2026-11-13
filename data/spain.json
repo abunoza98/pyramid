@@ -4,7 +4,7 @@
  "adjective": "Spanish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-09T00:00:00.000Z",
+ "updated": "2026-11-13T00:00:00.000Z",
  "belowNote": "Promoted clubs from Segunda Federación come up",
  "leagues": [
   {
@@ -302,7 +302,7 @@
      "form": "DLDLL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-10T00:00:00.000Z"
   },
   {
    "id": "segunda",
@@ -622,7 +622,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-09T00:00:00.000Z"
+   "updated": "2026-11-13T00:00:00.000Z"
   },
   {
    "id": "primera-federacion",
@@ -656,7 +656,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-08T00:00:00.000Z",
+     "updated": "2026-11-13T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -699,6 +699,19 @@
       },
       {
        "pos": 4,
+       "team": "Cacereño",
+       "p": 12,
+       "w": 5,
+       "d": 3,
+       "l": 4,
+       "gf": 11,
+       "ga": 10,
+       "pts": 18,
+       "tid": 9384,
+       "form": "LWLLW"
+      },
+      {
+       "pos": 5,
        "team": "Avilés",
        "p": 11,
        "w": 5,
@@ -711,7 +724,7 @@
        "form": "WWLWW"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "Mirandés",
        "p": 11,
        "w": 5,
@@ -724,7 +737,7 @@
        "form": "DLWWL"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Racing Ferrol",
        "p": 11,
        "w": 5,
@@ -737,7 +750,7 @@
        "form": "WWLDL"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Extremadura",
        "p": 11,
        "w": 5,
@@ -750,7 +763,7 @@
        "form": "WDWWL"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Mérida",
        "p": 11,
        "w": 5,
@@ -763,7 +776,7 @@
        "form": "WWDLW"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Bilbao Athletic",
        "p": 11,
        "w": 4,
@@ -776,30 +789,17 @@
        "form": "DLLWL"
       },
       {
-       "pos": 10,
-       "team": "Cacereño",
-       "p": 11,
-       "w": 4,
-       "d": 3,
-       "l": 4,
-       "gf": 9,
-       "ga": 9,
-       "pts": 15,
-       "tid": 9384,
-       "form": "DLWLL"
-      },
-      {
        "pos": 11,
        "team": "Ponferradina",
-       "p": 11,
+       "p": 12,
        "w": 3,
        "d": 6,
-       "l": 2,
-       "gf": 7,
-       "ga": 7,
+       "l": 3,
+       "gf": 8,
+       "ga": 9,
        "pts": 15,
        "tid": 4907,
-       "form": "LDDDD"
+       "form": "DDDDL"
       },
       {
        "pos": 12,
@@ -922,7 +922,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-08T00:00:00.000Z",
+     "updated": "2026-11-13T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1187,7 +1187,7 @@
      ]
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-13T00:00:00.000Z"
   }
  ]
 }
