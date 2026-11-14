@@ -363,6 +363,19 @@
     },
     {
      "pos": 3,
+     "team": "Girona",
+     "p": 14,
+     "w": 7,
+     "d": 3,
+     "l": 4,
+     "gf": 24,
+     "ga": 13,
+     "pts": 24,
+     "tid": 547,
+     "form": "WWLLW"
+    },
+    {
+     "pos": 4,
      "team": "Burgos",
      "p": 14,
      "w": 7,
@@ -375,7 +388,7 @@
      "form": "WWDWL"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Mallorca",
      "p": 13,
      "w": 6,
@@ -388,7 +401,7 @@
      "form": "WDDWD"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Eibar",
      "p": 12,
      "w": 7,
@@ -401,7 +414,7 @@
      "form": "WLDLD"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Granada",
      "p": 12,
      "w": 7,
@@ -414,7 +427,7 @@
      "form": "WWWWW"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Sporting Gijón",
      "p": 14,
      "w": 7,
@@ -427,30 +440,17 @@
      "form": "WLWLD"
     },
     {
-     "pos": 8,
-     "team": "Girona",
-     "p": 13,
-     "w": 6,
-     "d": 3,
-     "l": 4,
-     "gf": 22,
-     "ga": 12,
-     "pts": 21,
-     "tid": 547,
-     "form": "DWWLL"
-    },
-    {
      "pos": 9,
      "team": "Oviedo",
-     "p": 13,
+     "p": 14,
      "w": 6,
      "d": 3,
-     "l": 4,
-     "gf": 19,
-     "ga": 16,
+     "l": 5,
+     "gf": 20,
+     "ga": 18,
      "pts": 21,
      "tid": 718,
-     "form": "WWDLW"
+     "form": "WDLWL"
     },
     {
      "pos": 10,
@@ -927,15 +927,15 @@
       {
        "pos": 1,
        "team": "Zaragoza",
-       "p": 11,
-       "w": 7,
+       "p": 12,
+       "w": 8,
        "d": 3,
        "l": 1,
-       "gf": 21,
+       "gf": 25,
        "ga": 12,
-       "pts": 24,
+       "pts": 27,
        "tid": 732,
-       "form": "DDWDW"
+       "form": "DWDWW"
       },
       {
        "pos": 2,
@@ -965,19 +965,6 @@
       },
       {
        "pos": 4,
-       "team": "Jaén",
-       "p": 11,
-       "w": 5,
-       "d": 4,
-       "l": 2,
-       "gf": 19,
-       "ga": 15,
-       "pts": 19,
-       "tid": 5274,
-       "form": "DWDWL"
-      },
-      {
-       "pos": 5,
        "team": "Real Madrid Castilla",
        "p": 12,
        "w": 5,
@@ -988,6 +975,19 @@
        "pts": 19,
        "tid": 9575,
        "form": "WLWDW"
+      },
+      {
+       "pos": 5,
+       "team": "Jaén",
+       "p": 12,
+       "w": 5,
+       "d": 4,
+       "l": 3,
+       "gf": 19,
+       "ga": 19,
+       "pts": 19,
+       "tid": 5274,
+       "form": "WDWLL"
       },
       {
        "pos": 6,
