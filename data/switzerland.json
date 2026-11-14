@@ -4,7 +4,7 @@
  "adjective": "Swiss",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-13T00:00:00.000Z",
+ "updated": "2026-11-14T00:00:00.000Z",
  "belowNote": "The top 2. Liga Interregional clubs come up",
  "leagues": [
   {
@@ -629,7 +629,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-13T00:00:00.000Z",
+     "updated": "2026-11-14T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -660,13 +660,13 @@
       {
        "pos": 3,
        "team": "Portalban / Gletterens",
-       "p": 13,
-       "w": 7,
+       "p": 14,
+       "w": 8,
        "d": 2,
        "l": 4,
-       "gf": 23,
-       "ga": 15,
-       "pts": 23,
+       "gf": 25,
+       "ga": 16,
+       "pts": 26,
        "tid": 16337,
        "form": "WWWWW"
       },
@@ -790,15 +790,15 @@
       {
        "pos": 13,
        "team": "Echallens",
-       "p": 13,
+       "p": 14,
        "w": 4,
        "d": 3,
-       "l": 6,
-       "gf": 20,
-       "ga": 28,
+       "l": 7,
+       "gf": 21,
+       "ga": 30,
        "pts": 15,
        "tid": 6623,
-       "form": "WLLLW"
+       "form": "LLLWL"
       },
       {
        "pos": 14,
@@ -843,7 +843,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-09T00:00:00.000Z",
+     "updated": "2026-11-14T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1057,7 +1057,7 @@
     },
     {
      "name": "Group 3",
-     "updated": "2026-11-09T00:00:00.000Z",
+     "updated": "2026-11-14T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1270,7 +1270,7 @@
      ]
     }
    ],
-   "updated": "2026-11-13T00:00:00.000Z"
+   "updated": "2026-11-14T00:00:00.000Z"
   }
  ]
 }
