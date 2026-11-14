@@ -1096,7 +1096,7 @@
        "ga": 12,
        "pts": 38,
        "tid": 14709,
-       "form": "WWWWW"
+       "form": "WWWWD"
       },
       {
        "pos": 3,
@@ -1135,7 +1135,7 @@
        "ga": 18,
        "pts": 28,
        "tid": 4255,
-       "form": "WDLLD"
+       "form": "DLLDW"
       },
       {
        "pos": 6,
@@ -1161,7 +1161,7 @@
        "ga": 30,
        "pts": 23,
        "tid": 8344,
-       "form": "LDLLW"
+       "form": "DLLWL"
       },
       {
        "pos": 8,
@@ -1213,7 +1213,7 @@
        "ga": 24,
        "pts": 18,
        "tid": 4981,
-       "form": "WWLDD"
+       "form": "WLDDD"
       },
       {
        "pos": 12,

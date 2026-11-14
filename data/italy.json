@@ -988,18 +988,31 @@
       {
        "pos": 6,
        "team": "Reggiana",
-       "p": 13,
+       "p": 14,
        "w": 6,
-       "d": 2,
+       "d": 3,
        "l": 5,
        "gf": 19,
        "ga": 15,
-       "pts": 20,
+       "pts": 21,
        "tid": 880,
-       "form": "WLLWL"
+       "form": "LLWLD"
       },
       {
        "pos": 7,
+       "team": "Livorno",
+       "p": 14,
+       "w": 5,
+       "d": 6,
+       "l": 3,
+       "gf": 18,
+       "ga": 17,
+       "pts": 21,
+       "tid": 868,
+       "form": "DLWDD"
+      },
+      {
+       "pos": 8,
        "team": "Guidonia Montecelio",
        "p": 13,
        "w": 5,
@@ -1010,19 +1023,6 @@
        "pts": 20,
        "tid": 882,
        "form": "DWLDW"
-      },
-      {
-       "pos": 8,
-       "team": "Livorno",
-       "p": 13,
-       "w": 5,
-       "d": 5,
-       "l": 3,
-       "gf": 18,
-       "ga": 17,
-       "pts": 20,
-       "tid": 868,
-       "form": "DDLWD"
       },
       {
        "pos": 9,
@@ -1118,15 +1118,15 @@
       {
        "pos": 16,
        "team": "Pianese",
-       "p": 13,
+       "p": 14,
        "w": 2,
        "d": 7,
-       "l": 4,
-       "gf": 10,
-       "ga": 13,
+       "l": 5,
+       "gf": 12,
+       "ga": 17,
        "pts": 13,
        "tid": 6381,
-       "form": "DDDDW"
+       "form": "DDDWL"
       },
       {
        "pos": 17,
@@ -1170,15 +1170,15 @@
       {
        "pos": 20,
        "team": "Vis Pesaro",
-       "p": 13,
-       "w": 1,
+       "p": 14,
+       "w": 2,
        "d": 2,
        "l": 10,
-       "gf": 11,
-       "ga": 27,
-       "pts": 5,
+       "gf": 15,
+       "ga": 29,
+       "pts": 8,
        "tid": 1708,
-       "form": "LLLDL"
+       "form": "LLDLW"
       }
      ]
     },

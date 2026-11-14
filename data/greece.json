@@ -251,6 +251,19 @@
     },
     {
      "pos": 2,
+     "team": "Larisa",
+     "p": 11,
+     "w": 5,
+     "d": 5,
+     "l": 1,
+     "gf": 15,
+     "ga": 6,
+     "pts": 20,
+     "tid": 953,
+     "form": "DDWWD"
+    },
+    {
+     "pos": 3,
      "team": "Kallithea",
      "p": 10,
      "w": 6,
@@ -263,7 +276,20 @@
      "form": "WDDLW"
     },
     {
-     "pos": 3,
+     "pos": 4,
+     "team": "Panserraikos",
+     "p": 11,
+     "w": 6,
+     "d": 2,
+     "l": 3,
+     "gf": 16,
+     "ga": 14,
+     "pts": 20,
+     "tid": 2099,
+     "form": "DWLWW"
+    },
+    {
+     "pos": 5,
      "team": "Ellas Syros",
      "p": 11,
      "w": 5,
@@ -276,20 +302,7 @@
      "form": "DLWWW"
     },
     {
-     "pos": 4,
-     "team": "Larisa",
-     "p": 10,
-     "w": 5,
-     "d": 4,
-     "l": 1,
-     "gf": 15,
-     "ga": 6,
-     "pts": 19,
-     "tid": 953,
-     "form": "LDDWW"
-    },
-    {
-     "pos": 5,
+     "pos": 6,
      "team": "Niki Volos",
      "p": 10,
      "w": 5,
@@ -302,7 +315,7 @@
      "form": "WDWWW"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Panionios",
      "p": 10,
      "w": 5,
@@ -315,30 +328,17 @@
      "form": "WDLWL"
     },
     {
-     "pos": 7,
-     "team": "Panserraikos",
-     "p": 10,
-     "w": 5,
-     "d": 2,
-     "l": 3,
-     "gf": 14,
-     "ga": 14,
-     "pts": 17,
-     "tid": 2099,
-     "form": "WDWLW"
-    },
-    {
      "pos": 8,
      "team": "Asteras Tripolis II",
-     "p": 10,
-     "w": 3,
+     "p": 11,
+     "w": 4,
      "d": 4,
      "l": 3,
-     "gf": 10,
+     "gf": 14,
      "ga": 11,
-     "pts": 13,
+     "pts": 16,
      "tid": 25017,
-     "form": "DDDDW"
+     "form": "DDDWW"
     },
     {
      "pos": 9,
@@ -356,31 +356,44 @@
     {
      "pos": 10,
      "team": "Anagennisi Karditsas",
-     "p": 10,
+     "p": 11,
      "w": 3,
      "d": 3,
-     "l": 4,
+     "l": 5,
      "gf": 8,
-     "ga": 10,
+     "ga": 12,
      "pts": 12,
      "tid": 2094,
-     "form": "WWWLD"
+     "form": "WWLDL"
     },
     {
      "pos": 11,
      "team": "PAOK II",
-     "p": 10,
+     "p": 11,
      "w": 3,
      "d": 3,
-     "l": 4,
+     "l": 5,
      "gf": 10,
-     "ga": 13,
+     "ga": 17,
      "pts": 12,
      "tid": 18018,
-     "form": "LWLDW"
+     "form": "WLDWL"
     },
     {
      "pos": 12,
+     "team": "Nestos Chrisoupolis",
+     "p": 11,
+     "w": 2,
+     "d": 3,
+     "l": 6,
+     "gf": 9,
+     "ga": 15,
+     "pts": 9,
+     "tid": 12367,
+     "form": "DWLLD"
+    },
+    {
+     "pos": 13,
      "team": "Pyrgos 1968",
      "p": 10,
      "w": 2,
@@ -391,19 +404,6 @@
      "pts": 9,
      "tid": 26587,
      "form": "LLWDL"
-    },
-    {
-     "pos": 13,
-     "team": "Nestos Chrisoupolis",
-     "p": 10,
-     "w": 2,
-     "d": 2,
-     "l": 6,
-     "gf": 9,
-     "ga": 15,
-     "pts": 8,
-     "tid": 12367,
-     "form": "LDWLL"
     },
     {
      "pos": 14,
