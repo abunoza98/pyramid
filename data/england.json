@@ -1151,6 +1151,19 @@
     },
     {
      "pos": 11,
+     "team": "Fleetwood Town",
+     "p": 15,
+     "w": 5,
+     "d": 5,
+     "l": 5,
+     "gf": 19,
+     "ga": 18,
+     "pts": 20,
+     "tid": 1336,
+     "form": "WLLWW"
+    },
+    {
+     "pos": 12,
      "team": "Gillingham",
      "p": 15,
      "w": 5,
@@ -1163,7 +1176,7 @@
      "form": "LDLWL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Accrington Stanley",
      "p": 15,
      "w": 4,
@@ -1176,7 +1189,7 @@
      "form": "WDWDL"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Newport County",
      "p": 15,
      "w": 4,
@@ -1189,20 +1202,20 @@
      "form": "DDLWD"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Tranmere Rovers",
-     "p": 14,
+     "p": 15,
      "w": 4,
      "d": 7,
-     "l": 3,
+     "l": 4,
      "gf": 19,
-     "ga": 17,
+     "ga": 18,
      "pts": 19,
      "tid": 1381,
-     "form": "DLWDW"
+     "form": "LWDWL"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Swindon Town",
      "p": 15,
      "w": 5,
@@ -1215,7 +1228,7 @@
      "form": "DWDWL"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Port Vale",
      "p": 13,
      "w": 5,
@@ -1226,19 +1239,6 @@
      "pts": 18,
      "tid": 1351,
      "form": "WDLWW"
-    },
-    {
-     "pos": 17,
-     "team": "Fleetwood Town",
-     "p": 14,
-     "w": 4,
-     "d": 5,
-     "l": 5,
-     "gf": 18,
-     "ga": 18,
-     "pts": 17,
-     "tid": 1336,
-     "form": "DWLLW"
     },
     {
      "pos": 18,

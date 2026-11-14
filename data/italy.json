@@ -683,15 +683,15 @@
       {
        "pos": 3,
        "team": "Trento",
-       "p": 13,
-       "w": 7,
+       "p": 14,
+       "w": 8,
        "d": 6,
        "l": 0,
-       "gf": 19,
-       "ga": 7,
-       "pts": 27,
+       "gf": 21,
+       "ga": 8,
+       "pts": 30,
        "tid": 17147,
-       "form": "WWWDW"
+       "form": "WWDWW"
       },
       {
        "pos": 4,
@@ -787,15 +787,15 @@
       {
        "pos": 11,
        "team": "Lumezzane",
-       "p": 13,
+       "p": 14,
        "w": 4,
        "d": 4,
-       "l": 5,
-       "gf": 14,
-       "ga": 17,
+       "l": 6,
+       "gf": 15,
+       "ga": 19,
        "pts": 16,
        "tid": 1689,
-       "form": "DLLDW"
+       "form": "LLDWL"
       },
       {
        "pos": 12,
@@ -825,6 +825,32 @@
       },
       {
        "pos": 14,
+       "team": "Carpi",
+       "p": 14,
+       "w": 3,
+       "d": 5,
+       "l": 6,
+       "gf": 17,
+       "ga": 27,
+       "pts": 14,
+       "tid": 17825,
+       "form": "WWLDD"
+      },
+      {
+       "pos": 15,
+       "team": "Giana Erminio",
+       "p": 14,
+       "w": 2,
+       "d": 7,
+       "l": 5,
+       "gf": 14,
+       "ga": 18,
+       "pts": 13,
+       "tid": 865,
+       "form": "WWLDD"
+      },
+      {
+       "pos": 16,
        "team": "Novara",
        "p": 13,
        "w": 3,
@@ -837,20 +863,7 @@
        "form": "LDLWL"
       },
       {
-       "pos": 15,
-       "team": "Carpi",
-       "p": 13,
-       "w": 3,
-       "d": 4,
-       "l": 6,
-       "gf": 16,
-       "ga": 26,
-       "pts": 13,
-       "tid": 17825,
-       "form": "LWWLD"
-      },
-      {
-       "pos": 16,
+       "pos": 17,
        "team": "Renate",
        "p": 14,
        "w": 2,
@@ -861,19 +874,6 @@
        "pts": 12,
        "tid": 875,
        "form": "LDWWD"
-      },
-      {
-       "pos": 17,
-       "team": "Giana Erminio",
-       "p": 13,
-       "w": 2,
-       "d": 6,
-       "l": 5,
-       "gf": 13,
-       "ga": 17,
-       "pts": 12,
-       "tid": 865,
-       "form": "DWWLD"
       },
       {
        "pos": 18,
@@ -949,15 +949,15 @@
       {
        "pos": 3,
        "team": "Grosseto",
-       "p": 13,
+       "p": 14,
        "w": 6,
        "d": 5,
-       "l": 2,
-       "gf": 26,
-       "ga": 18,
+       "l": 3,
+       "gf": 28,
+       "ga": 21,
        "pts": 23,
        "tid": 9499,
-       "form": "WDWDL"
+       "form": "DWDLL"
       },
       {
        "pos": 4,
@@ -1130,6 +1130,19 @@
       },
       {
        "pos": 17,
+       "team": "Gubbio",
+       "p": 14,
+       "w": 3,
+       "d": 2,
+       "l": 9,
+       "gf": 13,
+       "ga": 24,
+       "pts": 11,
+       "tid": 866,
+       "form": "LLDLW"
+      },
+      {
+       "pos": 18,
        "team": "Sambenedettese",
        "p": 13,
        "w": 2,
@@ -1142,7 +1155,7 @@
        "form": "DDWLL"
       },
       {
-       "pos": 18,
+       "pos": 19,
        "team": "Ostia Mare",
        "p": 13,
        "w": 2,
@@ -1153,19 +1166,6 @@
        "pts": 9,
        "tid": 9530,
        "form": "DLLLL"
-      },
-      {
-       "pos": 19,
-       "team": "Gubbio",
-       "p": 13,
-       "w": 2,
-       "d": 2,
-       "l": 9,
-       "gf": 10,
-       "ga": 22,
-       "pts": 8,
-       "tid": 866,
-       "form": "LLLDL"
       },
       {
        "pos": 20,
@@ -1202,15 +1202,15 @@
       {
        "pos": 2,
        "team": "Bari",
-       "p": 13,
-       "w": 6,
+       "p": 14,
+       "w": 7,
        "d": 5,
        "l": 2,
-       "gf": 16,
-       "ga": 9,
-       "pts": 23,
+       "gf": 19,
+       "ga": 11,
+       "pts": 26,
        "tid": 508,
-       "form": "WDDDD"
+       "form": "DDDDW"
       },
       {
        "pos": 3,
@@ -1397,15 +1397,15 @@
       {
        "pos": 17,
        "team": "Foggia",
-       "p": 13,
+       "p": 14,
        "w": 4,
        "d": 3,
-       "l": 6,
-       "gf": 13,
-       "ga": 16,
+       "l": 7,
+       "gf": 15,
+       "ga": 19,
        "pts": 15,
        "tid": 521,
-       "form": "LLWDL"
+       "form": "LWDLL"
       },
       {
        "pos": 18,

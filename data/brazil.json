@@ -4,7 +4,7 @@
  "adjective": "Brazilian",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-13T00:00:00.000Z",
+ "updated": "2026-11-14T00:00:00.000Z",
  "belowNote": "Clubs qualify for Série D through their state championships",
  "leagues": [
   {
@@ -21,13 +21,13 @@
     },
     {
      "from": 5,
-     "to": 5,
+     "to": 6,
      "kind": "top",
      "label": "Copa Libertadores qualifiers"
     },
     {
-     "from": 6,
-     "to": 11,
+     "from": 7,
+     "to": 12,
      "kind": "mid",
      "label": "Copa Sudamericana"
     },
@@ -302,7 +302,7 @@
      "form": "LLWLL"
     }
    ],
-   "updated": "2026-11-10T00:00:00.000Z"
+   "updated": "2026-11-14T00:00:00.000Z"
   },
   {
    "id": "serie-b",
@@ -336,109 +336,122 @@
     {
      "pos": 1,
      "team": "Novorizontino",
-     "p": 37,
-     "w": 20,
+     "p": 38,
+     "w": 21,
      "d": 10,
      "l": 7,
-     "gf": 66,
+     "gf": 67,
      "ga": 32,
-     "pts": 70,
+     "pts": 73,
      "tid": 7834,
-     "form": "WDWWW"
+     "form": "DWWWW"
     },
     {
      "pos": 2,
      "team": "Juventude",
-     "p": 37,
-     "w": 19,
+     "p": 38,
+     "w": 20,
      "d": 11,
      "l": 7,
-     "gf": 49,
+     "gf": 51,
      "ga": 26,
-     "pts": 68,
+     "pts": 71,
      "tid": 152,
-     "form": "DDWDW"
+     "form": "DWDWW"
     },
     {
      "pos": 3,
      "team": "Vila Nova",
-     "p": 37,
+     "p": 38,
      "w": 19,
      "d": 9,
-     "l": 9,
+     "l": 10,
      "gf": 53,
-     "ga": 38,
+     "ga": 39,
      "pts": 66,
      "tid": 142,
-     "form": "WDLDW"
+     "form": "DLDWL"
     },
     {
      "pos": 4,
-     "team": "Criciúma",
-     "p": 37,
-     "w": 18,
-     "d": 8,
-     "l": 11,
-     "gf": 38,
-     "ga": 31,
-     "pts": 62,
-     "tid": 140,
-     "form": "WWLWL"
+     "team": "Fortaleza",
+     "p": 38,
+     "w": 17,
+     "d": 14,
+     "l": 7,
+     "gf": 45,
+     "ga": 33,
+     "pts": 65,
+     "tid": 154,
+     "form": "WDDLW"
     },
     {
      "pos": 5,
-     "team": "Fortaleza",
-     "p": 37,
-     "w": 16,
-     "d": 14,
-     "l": 7,
-     "gf": 44,
-     "ga": 33,
+     "team": "Criciúma",
+     "p": 38,
+     "w": 18,
+     "d": 8,
+     "l": 12,
+     "gf": 38,
+     "ga": 32,
      "pts": 62,
-     "tid": 154,
-     "form": "DWDDL"
+     "tid": 140,
+     "form": "WLWLL"
     },
     {
      "pos": 6,
-     "team": "CRB",
-     "p": 37,
-     "w": 17,
-     "d": 7,
-     "l": 13,
-     "gf": 57,
-     "ga": 51,
-     "pts": 58,
-     "tid": 146,
-     "form": "DLWLW"
+     "team": "Atlético Goianiense",
+     "p": 38,
+     "w": 16,
+     "d": 13,
+     "l": 9,
+     "gf": 46,
+     "ga": 35,
+     "pts": 61,
+     "tid": 144,
+     "form": "DLDWW"
     },
     {
      "pos": 7,
-     "team": "Goiás",
-     "p": 37,
+     "team": "CRB",
+     "p": 38,
      "w": 17,
-     "d": 7,
+     "d": 8,
      "l": 13,
-     "gf": 39,
-     "ga": 41,
-     "pts": 58,
-     "tid": 151,
-     "form": "WDWWW"
+     "gf": 58,
+     "ga": 52,
+     "pts": 59,
+     "tid": 146,
+     "form": "LWLWD"
     },
     {
      "pos": 8,
-     "team": "Atlético Goianiense",
-     "p": 37,
-     "w": 15,
-     "d": 13,
-     "l": 9,
-     "gf": 45,
-     "ga": 35,
+     "team": "Goiás",
+     "p": 38,
+     "w": 17,
+     "d": 7,
+     "l": 14,
+     "gf": 39,
+     "ga": 44,
      "pts": 58,
-     "tid": 144,
-     "form": "DDLDW"
+     "tid": 151,
+     "form": "DWWWL"
     },
     {
      "pos": 9,
+     "team": "Sport Recife",
+     "p": 38,
+     "w": 15,
+     "d": 13,
+     "l": 10,
+     "gf": 53,
+     "ga": 42,
+     "pts": 58,
+     "tid": 123,
+     "form": "LWDLW"
+    },
+    {
+     "pos": 10,
      "team": "Operário-PR",
      "p": 38,
      "w": 16,
@@ -449,19 +462,6 @@
      "pts": 57,
      "tid": 1223,
      "form": "LWLWW"
-    },
-    {
-     "pos": 10,
-     "team": "Sport Recife",
-     "p": 37,
-     "w": 14,
-     "d": 13,
-     "l": 10,
-     "gf": 50,
-     "ga": 42,
-     "pts": 55,
-     "tid": 123,
-     "form": "DLWDL"
     },
     {
      "pos": 11,
@@ -479,15 +479,15 @@
     {
      "pos": 12,
      "team": "Botafogo-SP",
-     "p": 37,
+     "p": 38,
      "w": 14,
      "d": 9,
-     "l": 14,
+     "l": 15,
      "gf": 45,
-     "ga": 39,
+     "ga": 41,
      "pts": 51,
      "tid": 2618,
-     "form": "WWWDW"
+     "form": "WWDWL"
     },
     {
      "pos": 13,
@@ -505,12 +505,12 @@
     {
      "pos": 14,
      "team": "Cuiabá",
-     "p": 37,
+     "p": 38,
      "w": 11,
      "d": 14,
-     "l": 12,
+     "l": 13,
      "gf": 34,
-     "ga": 32,
+     "ga": 33,
      "pts": 47,
      "tid": 1193,
      "form": "LLLLL"
@@ -531,28 +531,28 @@
     {
      "pos": 16,
      "team": "Ceará",
-     "p": 37,
+     "p": 38,
      "w": 11,
-     "d": 10,
+     "d": 11,
      "l": 16,
-     "gf": 38,
-     "ga": 47,
-     "pts": 43,
+     "gf": 39,
+     "ga": 48,
+     "pts": 44,
      "tid": 129,
-     "form": "LDLLL"
+     "form": "DLLLD"
     },
     {
      "pos": 17,
      "team": "Avaí",
-     "p": 37,
-     "w": 11,
+     "p": 38,
+     "w": 12,
      "d": 7,
      "l": 19,
-     "gf": 35,
+     "gf": 37,
      "ga": 47,
-     "pts": 40,
+     "pts": 43,
      "tid": 145,
-     "form": "WDLLW"
+     "form": "DLLWW"
     },
     {
      "pos": 18,
@@ -570,15 +570,15 @@
     {
      "pos": 19,
      "team": "América Mineiro",
-     "p": 37,
+     "p": 38,
      "w": 8,
      "d": 5,
-     "l": 24,
+     "l": 25,
      "gf": 27,
-     "ga": 55,
+     "ga": 57,
      "pts": 29,
      "tid": 125,
-     "form": "LWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 20,
@@ -594,7 +594,7 @@
      "form": "DDLLL"
     }
    ],
-   "updated": "2026-11-13T00:00:00.000Z"
+   "updated": "2026-11-14T00:00:00.000Z"
   },
   {
    "id": "serie-c",
