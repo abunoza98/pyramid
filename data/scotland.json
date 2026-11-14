@@ -4,7 +4,7 @@
  "adjective": "Scottish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-08T00:00:00.000Z",
+ "updated": "2026-11-14T00:00:00.000Z",
  "belowNote": "The Highland/Lowland League play-off winner can come up",
  "leagues": [
   {
@@ -189,7 +189,7 @@
      "form": "WLLDL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-11T00:00:00.000Z"
   },
   {
    "id": "scottish-championship",
@@ -229,31 +229,44 @@
     {
      "pos": 1,
      "team": "Partick Thistle",
-     "p": 14,
-     "w": 8,
+     "p": 15,
+     "w": 9,
      "d": 4,
      "l": 2,
-     "gf": 18,
-     "ga": 7,
-     "pts": 28,
+     "gf": 21,
+     "ga": 9,
+     "pts": 31,
      "tid": 901,
-     "form": "WDWLW"
+     "form": "DWLWW"
     },
     {
      "pos": 2,
-     "team": "Raith Rovers",
-     "p": 14,
-     "w": 7,
-     "d": 4,
-     "l": 3,
-     "gf": 20,
-     "ga": 9,
-     "pts": 25,
-     "tid": 1385,
-     "form": "WDLWD"
+     "team": "Stenhousemuir",
+     "p": 15,
+     "w": 8,
+     "d": 2,
+     "l": 5,
+     "gf": 18,
+     "ga": 16,
+     "pts": 26,
+     "tid": 6784,
+     "form": "LLLLW"
     },
     {
      "pos": 3,
+     "team": "Raith Rovers",
+     "p": 15,
+     "w": 7,
+     "d": 4,
+     "l": 4,
+     "gf": 21,
+     "ga": 12,
+     "pts": 25,
+     "tid": 1385,
+     "form": "DLWDL"
+    },
+    {
+     "pos": 4,
      "team": "Dunfermline",
      "p": 14,
      "w": 6,
@@ -266,56 +279,43 @@
      "form": "DWWWD"
     },
     {
-     "pos": 4,
-     "team": "Stenhousemuir",
-     "p": 14,
-     "w": 7,
-     "d": 2,
-     "l": 5,
-     "gf": 16,
-     "ga": 16,
-     "pts": 23,
-     "tid": 6784,
-     "form": "DLLLL"
-    },
-    {
      "pos": 5,
      "team": "Livingston",
-     "p": 14,
-     "w": 6,
+     "p": 15,
+     "w": 7,
      "d": 3,
      "l": 5,
-     "gf": 19,
+     "gf": 21,
      "ga": 12,
-     "pts": 21,
+     "pts": 24,
      "tid": 255,
-     "form": "LDWWD"
+     "form": "DWWDW"
     },
     {
      "pos": 6,
      "team": "Inverness Caledonian Thistle",
-     "p": 14,
+     "p": 15,
      "w": 5,
      "d": 5,
-     "l": 4,
-     "gf": 18,
-     "ga": 17,
+     "l": 5,
+     "gf": 20,
+     "ga": 20,
      "pts": 20,
      "tid": 903,
-     "form": "LWWLD"
+     "form": "WWLDL"
     },
     {
      "pos": 7,
      "team": "Ayr United",
-     "p": 13,
-     "w": 4,
+     "p": 14,
+     "w": 5,
      "d": 3,
      "l": 6,
-     "gf": 14,
-     "ga": 18,
-     "pts": 15,
+     "gf": 17,
+     "ga": 19,
+     "pts": 18,
      "tid": 1387,
-     "form": "WDLWL"
+     "form": "DLWLW"
     },
     {
      "pos": 8,
@@ -333,31 +333,31 @@
     {
      "pos": 9,
      "team": "Greenock Morton",
-     "p": 13,
+     "p": 14,
      "w": 4,
      "d": 1,
-     "l": 8,
+     "l": 9,
      "gf": 16,
-     "ga": 23,
+     "ga": 25,
      "pts": 13,
      "tid": 1383,
-     "form": "LWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 10,
      "team": "Queen's Park",
-     "p": 14,
+     "p": 15,
      "w": 2,
      "d": 1,
-     "l": 11,
+     "l": 12,
      "gf": 8,
-     "ga": 23,
+     "ga": 25,
      "pts": 7,
      "tid": 6778,
-     "form": "WLLLL"
+     "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-14T00:00:00.000Z"
   },
   {
    "id": "scottish-league-one",
@@ -525,7 +525,7 @@
      "form": "LDLWW"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-14T00:00:00.000Z"
   },
   {
    "id": "scottish-league-two",
@@ -561,136 +561,136 @@
     {
      "pos": 1,
      "team": "Stranraer",
-     "p": 13,
-     "w": 8,
+     "p": 14,
+     "w": 9,
      "d": 3,
      "l": 2,
-     "gf": 28,
+     "gf": 29,
      "ga": 9,
-     "pts": 27,
+     "pts": 30,
      "tid": 6785,
-     "form": "DWWDW"
+     "form": "WWDWW"
     },
     {
      "pos": 2,
      "team": "Clyde",
-     "p": 13,
-     "w": 8,
+     "p": 14,
+     "w": 9,
      "d": 3,
      "l": 2,
-     "gf": 30,
-     "ga": 20,
-     "pts": 27,
+     "gf": 36,
+     "ga": 22,
+     "pts": 30,
      "tid": 6762,
-     "form": "LWWDW"
+     "form": "WWDWW"
     },
     {
      "pos": 3,
      "team": "Elgin City",
-     "p": 13,
+     "p": 14,
      "w": 6,
      "d": 3,
-     "l": 4,
-     "gf": 28,
-     "ga": 19,
+     "l": 5,
+     "gf": 29,
+     "ga": 21,
      "pts": 21,
      "tid": 6767,
-     "form": "WWDWL"
+     "form": "WDWLL"
     },
     {
      "pos": 4,
      "team": "Spartans",
-     "p": 13,
+     "p": 14,
      "w": 5,
      "d": 3,
-     "l": 5,
-     "gf": 27,
-     "ga": 25,
+     "l": 6,
+     "gf": 28,
+     "ga": 27,
      "pts": 18,
      "tid": 6781,
-     "form": "LWLWL"
+     "form": "WLWLL"
     },
     {
      "pos": 5,
      "team": "Kelty Hearts",
-     "p": 13,
+     "p": 14,
      "w": 6,
      "d": 0,
-     "l": 7,
+     "l": 8,
      "gf": 18,
-     "ga": 23,
+     "ga": 24,
      "pts": 18,
      "tid": 6773,
-     "form": "WLWLW"
+     "form": "LWLWL"
     },
     {
      "pos": 6,
-     "team": "Dumbarton",
-     "p": 13,
+     "team": "Stirling Albion",
+     "p": 14,
      "w": 5,
-     "d": 1,
-     "l": 7,
-     "gf": 15,
-     "ga": 20,
-     "pts": 16,
-     "tid": 1382,
-     "form": "WLDLW"
+     "d": 3,
+     "l": 6,
+     "gf": 21,
+     "ga": 30,
+     "pts": 18,
+     "tid": 4669,
+     "form": "WDWLW"
     },
     {
      "pos": 7,
-     "team": "Edinburgh City",
-     "p": 13,
+     "team": "Dumbarton",
+     "p": 14,
      "w": 5,
-     "d": 5,
-     "l": 3,
-     "gf": 23,
-     "ga": 20,
-     "pts": 15,
-     "ded": 5,
-     "tid": 6766,
-     "form": "DLDWD"
+     "d": 1,
+     "l": 8,
+     "gf": 15,
+     "ga": 25,
+     "pts": 16,
+     "tid": 1382,
+     "form": "LDLWL"
     },
     {
      "pos": 8,
-     "team": "Stirling Albion",
-     "p": 13,
-     "w": 4,
-     "d": 3,
-     "l": 6,
-     "gf": 19,
-     "ga": 29,
+     "team": "Edinburgh City",
+     "p": 14,
+     "w": 5,
+     "d": 5,
+     "l": 4,
+     "gf": 25,
+     "ga": 26,
      "pts": 15,
-     "tid": 4669,
-     "form": "WWDWL"
+     "ded": 5,
+     "tid": 6766,
+     "form": "LDWDL"
     },
     {
      "pos": 9,
      "team": "Forfar Athletic",
-     "p": 13,
-     "w": 3,
+     "p": 14,
+     "w": 4,
      "d": 3,
      "l": 7,
-     "gf": 14,
-     "ga": 25,
-     "pts": 12,
+     "gf": 16,
+     "ga": 26,
+     "pts": 15,
      "tid": 4250,
-     "form": "LLLLD"
+     "form": "LLLDW"
     },
     {
      "pos": 10,
      "team": "Annan Athletic",
-     "p": 13,
-     "w": 3,
+     "p": 14,
+     "w": 4,
      "d": 0,
      "l": 10,
-     "gf": 14,
+     "gf": 19,
      "ga": 26,
-     "pts": 9,
+     "pts": 12,
      "tid": 6757,
-     "form": "LLLLL"
+     "form": "LLLLW"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-14T00:00:00.000Z"
   }
  ]
 }

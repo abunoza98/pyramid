@@ -337,6 +337,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Castellón",
+     "p": 13,
+     "w": 9,
+     "d": 3,
+     "l": 1,
+     "gf": 24,
+     "ga": 5,
+     "pts": 30,
+     "tid": 5254,
+     "form": "LWWDW"
+    },
+    {
+     "pos": 2,
      "team": "Almería",
      "p": 13,
      "w": 9,
@@ -347,19 +360,6 @@
      "pts": 29,
      "tid": 723,
      "form": "WWDDW"
-    },
-    {
-     "pos": 2,
-     "team": "Castellón",
-     "p": 12,
-     "w": 8,
-     "d": 3,
-     "l": 1,
-     "gf": 23,
-     "ga": 5,
-     "pts": 27,
-     "tid": 5254,
-     "form": "DLWWD"
     },
     {
      "pos": 3,
@@ -481,15 +481,15 @@
     {
      "pos": 12,
      "team": "Valladolid",
-     "p": 13,
+     "p": 14,
      "w": 5,
      "d": 3,
-     "l": 5,
+     "l": 6,
      "gf": 22,
-     "ga": 20,
+     "ga": 21,
      "pts": 18,
      "tid": 720,
-     "form": "WLLWW"
+     "form": "LLWWL"
     },
     {
      "pos": 13,
@@ -922,7 +922,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-13T00:00:00.000Z",
+     "updated": "2026-11-14T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
