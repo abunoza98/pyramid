@@ -4,7 +4,7 @@
  "adjective": "Mexican",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-11T00:00:00.000Z",
+ "updated": "2026-11-13T00:00:00.000Z",
  "belowNote": "Promotion between Liga Premier and the Liga de Expansión is suspended",
  "leagues": [
   {
@@ -260,7 +260,7 @@
      "form": "LLDWW"
     }
    ],
-   "updated": "2026-11-10T00:00:00.000Z"
+   "updated": "2026-11-12T00:00:00.000Z"
   },
   {
    "id": "liga-de-expansion",
@@ -488,7 +488,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-11T00:00:00.000Z"
+   "updated": "2026-11-13T00:00:00.000Z"
   },
   {
    "id": "liga-premier",
@@ -528,9 +528,9 @@
     }
    ],
    "notes": [
-    "Atlético Saltillo: 1 point deducted.",
-    "Real Refineros: 1 point deducted.",
     "Real Apodaca: 1 point deducted.",
+    "Real Refineros: 1 point deducted.",
+    "Atlético Saltillo: 1 point deducted.",
     "Ciervos: 1 point deducted."
    ],
    "rows": [
@@ -706,29 +706,29 @@
     {
      "pos": 7,
      "team": "Calor de San Pedro",
-     "p": 11,
+     "p": 12,
      "w": 4,
      "d": 1,
-     "l": 6,
+     "l": 7,
      "gf": 20,
-     "ga": 27,
+     "ga": 32,
      "pts": 16,
      "tid": 17804,
-     "form": "LLLLW"
+     "form": "LLLWL"
     },
     {
      "pos": 8,
-     "team": "Atlético Saltillo",
-     "p": 10,
+     "team": "Real Apodaca",
+     "p": 12,
      "w": 4,
-     "d": 0,
-     "l": 6,
-     "gf": 19,
-     "ga": 26,
-     "pts": 11,
+     "d": 1,
+     "l": 7,
+     "gf": 18,
+     "ga": 20,
+     "pts": 12,
      "ded": 1,
-     "tid": 15919,
-     "form": "LLLLW"
+     "tid": 22047,
+     "form": "LWLWW"
     },
     {
      "pos": 8,
@@ -746,17 +746,17 @@
     },
     {
      "pos": 9,
-     "team": "Real Apodaca",
-     "p": 11,
-     "w": 3,
-     "d": 1,
-     "l": 7,
-     "gf": 13,
-     "ga": 20,
-     "pts": 9,
+     "team": "Atlético Saltillo",
+     "p": 10,
+     "w": 4,
+     "d": 0,
+     "l": 6,
+     "gf": 19,
+     "ga": 26,
+     "pts": 11,
      "ded": 1,
-     "tid": 22047,
-     "form": "LLWLW"
+     "tid": 15919,
+     "form": "LLLLW"
     },
     {
      "pos": 9,
@@ -799,7 +799,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-11T00:00:00.000Z"
+   "updated": "2026-11-13T00:00:00.000Z"
   }
  ]
 }
