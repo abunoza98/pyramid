@@ -947,6 +947,19 @@
       },
       {
        "pos": 7,
+       "team": "Kütahyaspor",
+       "p": 11,
+       "w": 5,
+       "d": 1,
+       "l": 5,
+       "gf": 17,
+       "ga": 20,
+       "pts": 16,
+       "tid": 11092,
+       "form": "DWWWW"
+      },
+      {
+       "pos": 8,
        "team": "1461 Trabzon FK",
        "p": 10,
        "w": 4,
@@ -959,7 +972,7 @@
        "form": "DWDWL"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Karacabey Belediyespor",
        "p": 10,
        "w": 4,
@@ -972,7 +985,7 @@
        "form": "LWLDW"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Beyoğlu Yeni Çarşı",
        "p": 9,
        "w": 4,
@@ -985,7 +998,7 @@
        "form": "LLLDW"
       },
       {
-       "pos": 10,
+       "pos": 11,
        "team": "12 Bingölspor",
        "p": 10,
        "w": 3,
@@ -996,19 +1009,6 @@
        "pts": 13,
        "tid": 6504,
        "form": "WDDWL"
-      },
-      {
-       "pos": 11,
-       "team": "Kütahyaspor",
-       "p": 10,
-       "w": 4,
-       "d": 1,
-       "l": 5,
-       "gf": 15,
-       "ga": 19,
-       "pts": 13,
-       "tid": 11092,
-       "form": "LDWWW"
       },
       {
        "pos": 12,
@@ -1026,16 +1026,16 @@
       {
        "pos": 13,
        "team": "Ankaragücü",
-       "p": 9,
+       "p": 10,
        "w": 2,
        "d": 4,
-       "l": 3,
-       "gf": 15,
-       "ga": 13,
+       "l": 4,
+       "gf": 16,
+       "ga": 15,
        "pts": 7,
        "ded": 3,
        "tid": 1010,
-       "form": "WDDDL"
+       "form": "DDDLL"
       },
       {
        "pos": 14,

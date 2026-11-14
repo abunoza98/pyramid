@@ -4,7 +4,7 @@
  "adjective": "Greek",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-09T00:00:00.000Z",
+ "updated": "2026-11-14T00:00:00.000Z",
  "belowNote": "Gamma Ethniki group winners come up",
  "leagues": [
   {
@@ -222,7 +222,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-11T00:00:00.000Z"
   },
   {
    "id": "super-league-2",
@@ -264,6 +264,19 @@
     },
     {
      "pos": 3,
+     "team": "Ellas Syros",
+     "p": 11,
+     "w": 5,
+     "d": 4,
+     "l": 2,
+     "gf": 18,
+     "ga": 9,
+     "pts": 19,
+     "tid": 22244,
+     "form": "DLWWW"
+    },
+    {
+     "pos": 4,
      "team": "Larisa",
      "p": 10,
      "w": 5,
@@ -276,7 +289,7 @@
      "form": "LDDWW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Niki Volos",
      "p": 10,
      "w": 5,
@@ -289,7 +302,7 @@
      "form": "WDWWW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Panionios",
      "p": 10,
      "w": 5,
@@ -302,7 +315,7 @@
      "form": "WDLWL"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Panserraikos",
      "p": 10,
      "w": 5,
@@ -315,33 +328,7 @@
      "form": "WDWLW"
     },
     {
-     "pos": 7,
-     "team": "Ellas Syros",
-     "p": 10,
-     "w": 4,
-     "d": 4,
-     "l": 2,
-     "gf": 16,
-     "ga": 9,
-     "pts": 16,
-     "tid": 22244,
-     "form": "LDLWW"
-    },
-    {
      "pos": 8,
-     "team": "Panthrakikos",
-     "p": 10,
-     "w": 3,
-     "d": 4,
-     "l": 3,
-     "gf": 12,
-     "ga": 12,
-     "pts": 13,
-     "tid": 2090,
-     "form": "LDDWL"
-    },
-    {
-     "pos": 9,
      "team": "Asteras Tripolis II",
      "p": 10,
      "w": 3,
@@ -352,6 +339,19 @@
      "pts": 13,
      "tid": 25017,
      "form": "DDDDW"
+    },
+    {
+     "pos": 9,
+     "team": "Panthrakikos",
+     "p": 11,
+     "w": 3,
+     "d": 4,
+     "l": 4,
+     "gf": 12,
+     "ga": 14,
+     "pts": 13,
+     "tid": 2090,
+     "form": "DDWLL"
     },
     {
      "pos": 10,
@@ -445,7 +445,7 @@
      "form": "LDLDL"
     }
    ],
-   "updated": "2026-11-09T00:00:00.000Z"
+   "updated": "2026-11-14T00:00:00.000Z"
   }
  ]
 }

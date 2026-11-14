@@ -4,7 +4,7 @@
  "adjective": "Austrian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-08T00:00:00.000Z",
+ "updated": "2026-11-14T00:00:00.000Z",
  "belowNote": "Landesliga champions come up",
  "leagues": [
   {
@@ -183,7 +183,7 @@
      "form": "LLLDL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-11T00:00:00.000Z"
   },
   {
    "id": "2-liga",
@@ -426,7 +426,7 @@
      "form": "WDLLL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-11T00:00:00.000Z"
   },
   {
    "id": "regionalliga",
@@ -442,7 +442,7 @@
    "groups": [
     {
      "name": "East",
-     "updated": "2026-11-08T00:00:00.000Z",
+     "updated": "2026-11-09T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -656,7 +656,7 @@
     },
     {
      "name": "North",
-     "updated": "2026-11-08T00:00:00.000Z",
+     "updated": "2026-11-10T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1070,10 +1070,23 @@
     },
     {
      "name": "West",
-     "updated": "2026-11-08T00:00:00.000Z",
+     "updated": "2026-11-14T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
+       "team": "Hohenems",
+       "p": 16,
+       "w": 13,
+       "d": 0,
+       "l": 3,
+       "gf": 45,
+       "ga": 18,
+       "pts": 39,
+       "tid": 4945,
+       "form": "LWWWW"
+      },
+      {
+       "pos": 2,
        "team": "Imst",
        "p": 15,
        "w": 12,
@@ -1086,7 +1099,7 @@
        "form": "WWWWW"
       },
       {
-       "pos": 2,
+       "pos": 3,
        "team": "Schwaz",
        "p": 15,
        "w": 12,
@@ -1099,30 +1112,17 @@
        "form": "WWWWW"
       },
       {
-       "pos": 3,
-       "team": "Hohenems",
-       "p": 15,
-       "w": 12,
-       "d": 0,
-       "l": 3,
-       "gf": 41,
-       "ga": 17,
-       "pts": 36,
-       "tid": 4945,
-       "form": "LLWWW"
-      },
-      {
        "pos": 4,
        "team": "Kitzbühel",
-       "p": 15,
-       "w": 9,
+       "p": 16,
+       "w": 10,
        "d": 1,
        "l": 5,
-       "gf": 32,
-       "ga": 21,
-       "pts": 28,
+       "gf": 34,
+       "ga": 22,
+       "pts": 31,
        "tid": 4947,
-       "form": "LDWLW"
+       "form": "DWLWW"
       },
       {
        "pos": 5,
@@ -1165,6 +1165,19 @@
       },
       {
        "pos": 8,
+       "team": "SK St. Johann",
+       "p": 16,
+       "w": 6,
+       "d": 4,
+       "l": 6,
+       "gf": 24,
+       "ga": 24,
+       "pts": 22,
+       "tid": 27905,
+       "form": "LLWLD"
+      },
+      {
+       "pos": 9,
        "team": "Fügen",
        "p": 15,
        "w": 7,
@@ -1177,30 +1190,17 @@
        "form": "LWLWW"
       },
       {
-       "pos": 9,
-       "team": "SK St. Johann",
-       "p": 15,
-       "w": 6,
-       "d": 3,
-       "l": 6,
-       "gf": 23,
-       "ga": 23,
-       "pts": 21,
-       "tid": 27905,
-       "form": "LLLWL"
-      },
-      {
        "pos": 10,
        "team": "Kufstein",
-       "p": 15,
+       "p": 16,
        "w": 4,
-       "d": 6,
+       "d": 7,
        "l": 5,
-       "gf": 22,
-       "ga": 19,
-       "pts": 18,
+       "gf": 23,
+       "ga": 20,
+       "pts": 19,
        "tid": 4948,
-       "form": "WDWWD"
+       "form": "DWWDD"
       },
       {
        "pos": 11,
@@ -1231,15 +1231,15 @@
       {
        "pos": 13,
        "team": "Lochau",
-       "p": 15,
+       "p": 16,
        "w": 3,
        "d": 2,
-       "l": 10,
-       "gf": 16,
-       "ga": 38,
+       "l": 11,
+       "gf": 17,
+       "ga": 42,
        "pts": 11,
        "tid": 8359,
-       "form": "WLLLL"
+       "form": "LLLLL"
       },
       {
        "pos": 14,
@@ -1257,15 +1257,15 @@
       {
        "pos": 15,
        "team": "Lustenau",
-       "p": 15,
+       "p": 16,
        "w": 1,
        "d": 5,
-       "l": 9,
-       "gf": 18,
-       "ga": 45,
+       "l": 10,
+       "gf": 19,
+       "ga": 47,
        "pts": 8,
        "tid": 8361,
-       "form": "LLLDL"
+       "form": "LLDLL"
       },
       {
        "pos": 16,
@@ -1283,7 +1283,7 @@
      ]
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-14T00:00:00.000Z"
   }
  ]
 }
