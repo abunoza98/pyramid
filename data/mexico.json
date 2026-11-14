@@ -260,7 +260,7 @@
      "form": "LLDWW"
     }
    ],
-   "updated": "2026-11-12T00:00:00.000Z"
+   "updated": "2026-11-13T00:00:00.000Z"
   },
   {
    "id": "liga-de-expansion",
@@ -537,15 +537,15 @@
     {
      "pos": 1,
      "team": "FC Santiago",
-     "p": 11,
+     "p": 12,
      "w": 7,
-     "d": 1,
+     "d": 2,
      "l": 3,
-     "gf": 27,
-     "ga": 7,
-     "pts": 24,
+     "gf": 28,
+     "ga": 8,
+     "pts": 25,
      "tid": 22055,
-     "form": "WWWWW"
+     "form": "WWWWD"
     },
     {
      "pos": 1,
@@ -653,16 +653,16 @@
     },
     {
      "pos": 5,
-     "team": "Halcones Negros",
-     "p": 11,
-     "w": 5,
-     "d": 1,
-     "l": 5,
+     "team": "Guerreros del Pacifico",
+     "p": 12,
+     "w": 4,
+     "d": 2,
+     "l": 6,
      "gf": 22,
-     "ga": 18,
-     "pts": 17,
-     "tid": 28305,
-     "form": "WLLWL"
+     "ga": 21,
+     "pts": 18,
+     "tid": 28304,
+     "form": "WLWLD"
     },
     {
      "pos": 6,
@@ -679,16 +679,16 @@
     },
     {
      "pos": 6,
-     "team": "Guerreros del Pacifico",
+     "team": "Halcones Negros",
      "p": 11,
-     "w": 4,
+     "w": 5,
      "d": 1,
-     "l": 6,
-     "gf": 21,
-     "ga": 20,
+     "l": 5,
+     "gf": 22,
+     "ga": 18,
      "pts": 17,
-     "tid": 28304,
-     "form": "LWLWL"
+     "tid": 28305,
+     "form": "WLLWL"
     },
     {
      "pos": 7,
