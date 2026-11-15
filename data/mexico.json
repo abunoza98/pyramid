@@ -528,8 +528,8 @@
     }
    ],
    "notes": [
-    "Real Apodaca: 1 point deducted.",
     "Real Refineros: 1 point deducted.",
+    "Real Apodaca: 1 point deducted.",
     "Atlético Saltillo: 1 point deducted.",
     "Ciervos: 1 point deducted."
    ],
@@ -549,16 +549,16 @@
     },
     {
      "pos": 1,
-     "team": "Dragones de Oaxaca",
-     "p": 11,
+     "team": "Artesanos Metepec",
+     "p": 12,
      "w": 7,
-     "d": 2,
-     "l": 2,
-     "gf": 27,
-     "ga": 11,
-     "pts": 25,
-     "tid": 26393,
-     "form": "WDWWL"
+     "d": 4,
+     "l": 1,
+     "gf": 22,
+     "ga": 8,
+     "pts": 26,
+     "tid": 22049,
+     "form": "DLWDD"
     },
     {
      "pos": 2,
@@ -575,16 +575,16 @@
     },
     {
      "pos": 2,
-     "team": "Artesanos Metepec",
+     "team": "Dragones de Oaxaca",
      "p": 11,
      "w": 7,
-     "d": 3,
-     "l": 1,
-     "gf": 21,
-     "ga": 7,
+     "d": 2,
+     "l": 2,
+     "gf": 27,
+     "ga": 11,
      "pts": 25,
-     "tid": 22049,
-     "form": "DDLWD"
+     "tid": 26393,
+     "form": "WDWWL"
     },
     {
      "pos": 3,
@@ -641,15 +641,15 @@
     {
      "pos": 5,
      "team": "Correcaminos UAT II",
-     "p": 11,
+     "p": 12,
      "w": 6,
-     "d": 2,
+     "d": 3,
      "l": 3,
-     "gf": 18,
-     "ga": 14,
-     "pts": 21,
+     "gf": 19,
+     "ga": 15,
+     "pts": 22,
      "tid": 17782,
-     "form": "WWLWW"
+     "form": "WLWWD"
     },
     {
      "pos": 5,
@@ -667,28 +667,29 @@
     {
      "pos": 6,
      "team": "Vaqueros Reynosa",
-     "p": 11,
-     "w": 5,
+     "p": 12,
+     "w": 6,
      "d": 2,
      "l": 4,
-     "gf": 17,
-     "ga": 16,
-     "pts": 18,
+     "gf": 20,
+     "ga": 17,
+     "pts": 21,
      "tid": 28308,
-     "form": "WLLLD"
+     "form": "LLLDW"
     },
     {
      "pos": 6,
-     "team": "Halcones Negros",
-     "p": 11,
-     "w": 5,
+     "team": "Real Refineros",
+     "p": 12,
+     "w": 6,
      "d": 1,
      "l": 5,
-     "gf": 22,
-     "ga": 18,
-     "pts": 17,
-     "tid": 28305,
-     "form": "WLLWL"
+     "gf": 24,
+     "ga": 26,
+     "pts": 18,
+     "ded": 1,
+     "tid": 28307,
+     "form": "WLWWW"
     },
     {
      "pos": 7,
@@ -705,16 +706,16 @@
     },
     {
      "pos": 7,
-     "team": "Calor de San Pedro",
-     "p": 12,
-     "w": 4,
+     "team": "Halcones Negros",
+     "p": 11,
+     "w": 5,
      "d": 1,
-     "l": 7,
-     "gf": 20,
-     "ga": 32,
-     "pts": 16,
-     "tid": 17804,
-     "form": "LLLWL"
+     "l": 5,
+     "gf": 22,
+     "ga": 18,
+     "pts": 17,
+     "tid": 28305,
+     "form": "WLLWL"
     },
     {
      "pos": 8,
@@ -732,31 +733,30 @@
     },
     {
      "pos": 8,
-     "team": "Real Refineros",
-     "p": 11,
-     "w": 5,
+     "team": "Calor de San Pedro",
+     "p": 12,
+     "w": 4,
      "d": 1,
-     "l": 5,
+     "l": 7,
      "gf": 20,
-     "ga": 25,
-     "pts": 15,
-     "ded": 1,
-     "tid": 28307,
-     "form": "LWLWW"
+     "ga": 32,
+     "pts": 16,
+     "tid": 17804,
+     "form": "LLLWL"
     },
     {
      "pos": 9,
      "team": "Atlético Saltillo",
-     "p": 10,
+     "p": 11,
      "w": 4,
      "d": 0,
-     "l": 6,
-     "gf": 19,
-     "ga": 26,
+     "l": 7,
+     "gf": 20,
+     "ga": 30,
      "pts": 11,
      "ded": 1,
      "tid": 15919,
-     "form": "LLLLW"
+     "form": "LLLWL"
     },
     {
      "pos": 9,
@@ -788,12 +788,12 @@
     {
      "pos": 10,
      "team": "Cañoneros Marina",
-     "p": 10,
+     "p": 11,
      "w": 0,
      "d": 0,
-     "l": 10,
-     "gf": 5,
-     "ga": 41,
+     "l": 11,
+     "gf": 6,
+     "ga": 44,
      "pts": 0,
      "tid": 15924,
      "form": "LLLLL"
