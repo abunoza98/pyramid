@@ -550,6 +550,19 @@
     },
     {
      "pos": 14,
+     "team": "Luzern II",
+     "p": 16,
+     "w": 5,
+     "d": 2,
+     "l": 9,
+     "gf": 28,
+     "ga": 35,
+     "pts": 17,
+     "tid": 12706,
+     "form": "LDWWW"
+    },
+    {
+     "pos": 15,
      "team": "Kreuzlingen",
      "p": 16,
      "w": 4,
@@ -562,7 +575,7 @@
      "form": "LLLLL"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Bavois",
      "p": 15,
      "w": 4,
@@ -573,19 +586,6 @@
      "pts": 14,
      "tid": 6615,
      "form": "LLLWW"
-    },
-    {
-     "pos": 16,
-     "team": "Luzern II",
-     "p": 15,
-     "w": 4,
-     "d": 2,
-     "l": 9,
-     "gf": 26,
-     "ga": 34,
-     "pts": 14,
-     "tid": 12706,
-     "form": "LLDWW"
     },
     {
      "pos": 17,
@@ -603,15 +603,15 @@
     {
      "pos": 18,
      "team": "Bellinzona",
-     "p": 15,
+     "p": 16,
      "w": 2,
      "d": 3,
-     "l": 10,
-     "gf": 12,
-     "ga": 29,
+     "l": 11,
+     "gf": 13,
+     "ga": 31,
      "pts": 9,
      "tid": 6616,
-     "form": "LWDLL"
+     "form": "WDLLL"
     }
    ],
    "updated": "2026-11-15T00:00:00.000Z"

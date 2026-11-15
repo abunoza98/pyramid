@@ -1595,6 +1595,19 @@
      "rows": [
       {
        "pos": 1,
+       "team": "Yeşilyurt Belediyespor",
+       "p": 12,
+       "w": 9,
+       "d": 3,
+       "l": 0,
+       "gf": 46,
+       "ga": 10,
+       "pts": 30,
+       "tid": 6541,
+       "form": "WWDDW"
+      },
+      {
+       "pos": 2,
        "team": "Talasgücü Belediyespor",
        "p": 12,
        "w": 9,
@@ -1605,19 +1618,6 @@
        "pts": 29,
        "tid": 21995,
        "form": "WLWWW"
-      },
-      {
-       "pos": 2,
-       "team": "Yeşilyurt Belediyespor",
-       "p": 11,
-       "w": 8,
-       "d": 3,
-       "l": 0,
-       "gf": 40,
-       "ga": 8,
-       "pts": 27,
-       "tid": 6541,
-       "form": "DWWDD"
       },
       {
        "pos": 3,
@@ -1726,15 +1726,15 @@
       {
        "pos": 11,
        "team": "Adana Adaletgucu",
-       "p": 11,
+       "p": 12,
        "w": 4,
        "d": 1,
-       "l": 6,
-       "gf": 18,
-       "ga": 20,
+       "l": 7,
+       "gf": 20,
+       "ga": 26,
        "pts": 13,
        "tid": 27999,
-       "form": "WLLWD"
+       "form": "LLWDL"
       },
       {
        "pos": 12,
