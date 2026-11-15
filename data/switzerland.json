@@ -737,6 +737,19 @@
       },
       {
        "pos": 9,
+       "team": "Coffrane",
+       "p": 14,
+       "w": 4,
+       "d": 5,
+       "l": 5,
+       "gf": 19,
+       "ga": 17,
+       "pts": 17,
+       "tid": 17413,
+       "form": "LWWWD"
+      },
+      {
+       "pos": 10,
        "team": "Chênois",
        "p": 14,
        "w": 5,
@@ -747,19 +760,6 @@
        "pts": 17,
        "tid": 12692,
        "form": "LWWLL"
-      },
-      {
-       "pos": 10,
-       "team": "Coffrane",
-       "p": 13,
-       "w": 4,
-       "d": 4,
-       "l": 5,
-       "gf": 19,
-       "ga": 17,
-       "pts": 16,
-       "tid": 17413,
-       "form": "DLWWW"
       },
       {
        "pos": 11,
@@ -816,15 +816,15 @@
       {
        "pos": 15,
        "team": "Stade Payerne",
-       "p": 13,
+       "p": 14,
        "w": 3,
-       "d": 2,
+       "d": 3,
        "l": 8,
        "gf": 21,
        "ga": 32,
-       "pts": 11,
+       "pts": 12,
        "tid": 16339,
-       "form": "LWDLL"
+       "form": "WDLLD"
       },
       {
        "pos": 16,
@@ -874,18 +874,31 @@
       {
        "pos": 3,
        "team": "Courtételle",
-       "p": 13,
+       "p": 14,
        "w": 7,
-       "d": 2,
+       "d": 3,
        "l": 4,
        "gf": 27,
        "ga": 19,
-       "pts": 23,
+       "pts": 24,
        "tid": 17480,
-       "form": "WWWDL"
+       "form": "WWDLD"
       },
       {
        "pos": 4,
+       "team": "Delémont",
+       "p": 14,
+       "w": 6,
+       "d": 4,
+       "l": 4,
+       "gf": 20,
+       "ga": 13,
+       "pts": 22,
+       "tid": 12702,
+       "form": "WDLWD"
+      },
+      {
+       "pos": 5,
        "team": "Muttenz",
        "p": 14,
        "w": 6,
@@ -896,19 +909,6 @@
        "pts": 22,
        "tid": 12707,
        "form": "WWDLD"
-      },
-      {
-       "pos": 5,
-       "team": "Delémont",
-       "p": 13,
-       "w": 6,
-       "d": 3,
-       "l": 4,
-       "gf": 20,
-       "ga": 13,
-       "pts": 21,
-       "tid": 12702,
-       "form": "LWDLW"
       },
       {
        "pos": 6,
@@ -1166,15 +1166,15 @@
       {
        "pos": 9,
        "team": "Wettswil-Bonstetten",
-       "p": 13,
+       "p": 14,
        "w": 5,
        "d": 3,
-       "l": 5,
-       "gf": 20,
-       "ga": 18,
+       "l": 6,
+       "gf": 21,
+       "ga": 20,
        "pts": 18,
        "tid": 6650,
-       "form": "LWWWW"
+       "form": "WWWWL"
       },
       {
        "pos": 10,
@@ -1243,6 +1243,19 @@
       },
       {
        "pos": 15,
+       "team": "Widnau",
+       "p": 14,
+       "w": 3,
+       "d": 3,
+       "l": 8,
+       "gf": 14,
+       "ga": 29,
+       "pts": 12,
+       "tid": 16377,
+       "form": "DLLWW"
+      },
+      {
+       "pos": 16,
        "team": "Locarno",
        "p": 14,
        "w": 2,
@@ -1253,19 +1266,6 @@
        "pts": 11,
        "tid": 21866,
        "form": "WDLLL"
-      },
-      {
-       "pos": 16,
-       "team": "Widnau",
-       "p": 13,
-       "w": 2,
-       "d": 3,
-       "l": 8,
-       "gf": 12,
-       "ga": 28,
-       "pts": 9,
-       "tid": 16377,
-       "form": "LDLLW"
       }
      ]
     }

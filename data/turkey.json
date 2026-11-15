@@ -1407,6 +1407,19 @@
       },
       {
        "pos": 5,
+       "team": "Karsiyaka",
+       "p": 12,
+       "w": 7,
+       "d": 3,
+       "l": 2,
+       "gf": 19,
+       "ga": 8,
+       "pts": 24,
+       "tid": 7409,
+       "form": "WWWWW"
+      },
+      {
+       "pos": 6,
        "team": "Bursa Yıldırımspor",
        "p": 12,
        "w": 6,
@@ -1419,7 +1432,7 @@
        "form": "DDWLW"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Anadolu Üniversitesi",
        "p": 12,
        "w": 6,
@@ -1432,7 +1445,7 @@
        "form": "WWWLD"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Ayvalikgucu",
        "p": 12,
        "w": 6,
@@ -1443,19 +1456,6 @@
        "pts": 22,
        "tid": 13407,
        "form": "DWLWD"
-      },
-      {
-       "pos": 8,
-       "team": "Karsiyaka",
-       "p": 11,
-       "w": 6,
-       "d": 3,
-       "l": 2,
-       "gf": 17,
-       "ga": 7,
-       "pts": 21,
-       "tid": 7409,
-       "form": "DWWWW"
       },
       {
        "pos": 9,
@@ -1551,15 +1551,15 @@
       {
        "pos": 16,
        "team": "Bucaspor 1928",
-       "p": 11,
+       "p": 12,
        "w": 2,
        "d": 2,
-       "l": 7,
-       "gf": 9,
-       "ga": 16,
+       "l": 8,
+       "gf": 10,
+       "ga": 18,
        "pts": 8,
        "tid": 7396,
-       "form": "WLLDD"
+       "form": "LLDDL"
       },
       {
        "pos": 17,
