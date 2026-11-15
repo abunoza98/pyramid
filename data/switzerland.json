@@ -939,15 +939,15 @@
       {
        "pos": 8,
        "team": "Buochs",
-       "p": 13,
+       "p": 14,
        "w": 5,
        "d": 3,
-       "l": 5,
-       "gf": 22,
-       "ga": 23,
+       "l": 6,
+       "gf": 23,
+       "ga": 25,
        "pts": 18,
        "tid": 12701,
-       "form": "LLWDD"
+       "form": "LWDDL"
       },
       {
        "pos": 9,
@@ -990,6 +990,19 @@
       },
       {
        "pos": 12,
+       "team": "Black Stars",
+       "p": 14,
+       "w": 3,
+       "d": 7,
+       "l": 4,
+       "gf": 16,
+       "ga": 19,
+       "pts": 16,
+       "tid": 6617,
+       "form": "LLDWW"
+      },
+      {
+       "pos": 13,
        "team": "Grasshopper II",
        "p": 13,
        "w": 5,
@@ -1002,7 +1015,7 @@
        "form": "WLLDL"
       },
       {
-       "pos": 13,
+       "pos": 14,
        "team": "Zug",
        "p": 14,
        "w": 5,
@@ -1015,7 +1028,7 @@
        "form": "WWLLW"
       },
       {
-       "pos": 14,
+       "pos": 15,
        "team": "Bassecourt",
        "p": 14,
        "w": 4,
@@ -1026,19 +1039,6 @@
        "pts": 15,
        "tid": 6614,
        "form": "LWDDL"
-      },
-      {
-       "pos": 15,
-       "team": "Black Stars",
-       "p": 13,
-       "w": 2,
-       "d": 7,
-       "l": 4,
-       "gf": 14,
-       "ga": 18,
-       "pts": 13,
-       "tid": 6617,
-       "form": "DLLDW"
       },
       {
        "pos": 16,
