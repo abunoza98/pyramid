@@ -4,7 +4,7 @@
  "adjective": "Swiss",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-14T00:00:00.000Z",
+ "updated": "2026-11-15T00:00:00.000Z",
  "belowNote": "The top 2. Liga Interregional clubs come up",
  "leagues": [
   {
@@ -614,7 +614,7 @@
      "form": "LWDLL"
     }
    ],
-   "updated": "2026-11-14T00:00:00.000Z"
+   "updated": "2026-11-15T00:00:00.000Z"
   },
   {
    "id": "1-liga",
@@ -629,7 +629,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-14T00:00:00.000Z",
+     "updated": "2026-11-15T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -672,6 +672,19 @@
       },
       {
        "pos": 4,
+       "team": "Servette II",
+       "p": 14,
+       "w": 7,
+       "d": 4,
+       "l": 3,
+       "gf": 27,
+       "ga": 24,
+       "pts": 25,
+       "tid": 16323,
+       "form": "WDLLW"
+      },
+      {
+       "pos": 5,
        "team": "Monthey",
        "p": 14,
        "w": 6,
@@ -682,19 +695,6 @@
        "pts": 23,
        "tid": 6631,
        "form": "WLWWW"
-      },
-      {
-       "pos": 5,
-       "team": "Servette II",
-       "p": 13,
-       "w": 6,
-       "d": 4,
-       "l": 3,
-       "gf": 25,
-       "ga": 24,
-       "pts": 22,
-       "tid": 16323,
-       "form": "DWDLL"
       },
       {
        "pos": 6,
@@ -777,15 +777,15 @@
       {
        "pos": 12,
        "team": "La Chaux-de-Fonds",
-       "p": 13,
+       "p": 14,
        "w": 5,
        "d": 1,
-       "l": 7,
+       "l": 8,
        "gf": 17,
-       "ga": 32,
+       "ga": 34,
        "pts": 16,
        "tid": 10592,
-       "form": "LLWLW"
+       "form": "LWLWL"
       },
       {
        "pos": 13,
@@ -843,7 +843,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-14T00:00:00.000Z",
+     "updated": "2026-11-15T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1057,7 +1057,7 @@
     },
     {
      "name": "Group 3",
-     "updated": "2026-11-14T00:00:00.000Z",
+     "updated": "2026-11-15T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1270,7 +1270,7 @@
      ]
     }
    ],
-   "updated": "2026-11-14T00:00:00.000Z"
+   "updated": "2026-11-15T00:00:00.000Z"
   }
  ]
 }

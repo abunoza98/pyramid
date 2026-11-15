@@ -1368,6 +1368,19 @@
       },
       {
        "pos": 2,
+       "team": "Eskişehirspor",
+       "p": 12,
+       "w": 7,
+       "d": 4,
+       "l": 1,
+       "gf": 33,
+       "ga": 12,
+       "pts": 25,
+       "tid": 3572,
+       "form": "DWWWD"
+      },
+      {
+       "pos": 3,
        "team": "Nilüfer Belediye",
        "p": 12,
        "w": 7,
@@ -1380,30 +1393,17 @@
        "form": "DWDLW"
       },
       {
-       "pos": 3,
-       "team": "Eskişehirspor",
-       "p": 11,
-       "w": 7,
-       "d": 3,
-       "l": 1,
-       "gf": 31,
-       "ga": 10,
-       "pts": 24,
-       "tid": 3572,
-       "form": "WDWWW"
-      },
-      {
        "pos": 4,
        "team": "Balıkesirspor",
-       "p": 11,
+       "p": 12,
        "w": 7,
-       "d": 2,
+       "d": 3,
        "l": 2,
-       "gf": 30,
-       "ga": 18,
-       "pts": 23,
+       "gf": 31,
+       "ga": 19,
+       "pts": 24,
        "tid": 3568,
-       "form": "DWDWW"
+       "form": "WDWWD"
       },
       {
        "pos": 5,
@@ -1421,18 +1421,31 @@
       {
        "pos": 6,
        "team": "Anadolu Üniversitesi",
-       "p": 11,
+       "p": 12,
        "w": 6,
-       "d": 3,
+       "d": 4,
        "l": 2,
-       "gf": 18,
-       "ga": 8,
-       "pts": 21,
+       "gf": 19,
+       "ga": 9,
+       "pts": 22,
        "tid": 21997,
-       "form": "DWWWL"
+       "form": "WWWLD"
       },
       {
        "pos": 7,
+       "team": "Ayvalikgucu",
+       "p": 12,
+       "w": 6,
+       "d": 4,
+       "l": 2,
+       "gf": 19,
+       "ga": 14,
+       "pts": 22,
+       "tid": 13407,
+       "form": "DWLWD"
+      },
+      {
+       "pos": 8,
        "team": "Karsiyaka",
        "p": 11,
        "w": 6,
@@ -1443,19 +1456,6 @@
        "pts": 21,
        "tid": 7409,
        "form": "DWWWW"
-      },
-      {
-       "pos": 8,
-       "team": "Ayvalikgucu",
-       "p": 11,
-       "w": 6,
-       "d": 3,
-       "l": 2,
-       "gf": 17,
-       "ga": 12,
-       "pts": 21,
-       "tid": 13407,
-       "form": "DDWLW"
       },
       {
        "pos": 9,

@@ -686,6 +686,19 @@
       },
       {
        "pos": 3,
+       "team": "Pontevedra",
+       "p": 12,
+       "w": 6,
+       "d": 3,
+       "l": 3,
+       "gf": 16,
+       "ga": 13,
+       "pts": 21,
+       "tid": 9407,
+       "form": "WWDWW"
+      },
+      {
+       "pos": 4,
        "team": "Mérida",
        "p": 12,
        "w": 6,
@@ -698,20 +711,20 @@
        "form": "WDLWW"
       },
       {
-       "pos": 4,
-       "team": "Pontevedra",
-       "p": 11,
+       "pos": 5,
+       "team": "Avilés",
+       "p": 12,
        "w": 5,
        "d": 3,
-       "l": 3,
-       "gf": 13,
-       "ga": 11,
+       "l": 4,
+       "gf": 25,
+       "ga": 17,
        "pts": 18,
-       "tid": 9407,
-       "form": "LWWDW"
+       "tid": 9632,
+       "form": "WLWWD"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "Cacereño",
        "p": 12,
        "w": 5,
@@ -724,7 +737,7 @@
        "form": "LWLLW"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Racing Ferrol",
        "p": 12,
        "w": 5,
@@ -735,19 +748,6 @@
        "pts": 18,
        "tid": 9409,
        "form": "WLDLD"
-      },
-      {
-       "pos": 7,
-       "team": "Avilés",
-       "p": 11,
-       "w": 5,
-       "d": 2,
-       "l": 4,
-       "gf": 23,
-       "ga": 15,
-       "pts": 17,
-       "tid": 9632,
-       "form": "WWLWW"
       },
       {
        "pos": 8,
@@ -765,15 +765,15 @@
       {
        "pos": 9,
        "team": "Extremadura",
-       "p": 11,
+       "p": 12,
        "w": 5,
        "d": 1,
-       "l": 5,
-       "gf": 21,
-       "ga": 15,
+       "l": 6,
+       "gf": 23,
+       "ga": 18,
        "pts": 16,
        "tid": 24612,
-       "form": "WDWWL"
+       "form": "DWWLL"
       },
       {
        "pos": 10,
@@ -855,6 +855,19 @@
       },
       {
        "pos": 16,
+       "team": "Zamora",
+       "p": 12,
+       "w": 3,
+       "d": 4,
+       "l": 5,
+       "gf": 13,
+       "ga": 15,
+       "pts": 13,
+       "tid": 9418,
+       "form": "DLLLD"
+      },
+      {
+       "pos": 17,
        "team": "Unionistas",
        "p": 12,
        "w": 4,
@@ -865,19 +878,6 @@
        "pts": 13,
        "tid": 5281,
        "form": "LWLWL"
-      },
-      {
-       "pos": 17,
-       "team": "Zamora",
-       "p": 11,
-       "w": 3,
-       "d": 3,
-       "l": 5,
-       "gf": 11,
-       "ga": 13,
-       "pts": 12,
-       "tid": 9418,
-       "form": "DDLLL"
       },
       {
        "pos": 18,

@@ -1101,12 +1101,12 @@
       {
        "pos": 3,
        "team": "Schwaz",
-       "p": 15,
+       "p": 16,
        "w": 12,
        "d": 1,
-       "l": 2,
+       "l": 3,
        "gf": 45,
-       "ga": 22,
+       "ga": 24,
        "pts": 37,
        "tid": 4957,
        "form": "WWWWW"
@@ -1139,6 +1139,19 @@
       },
       {
        "pos": 6,
+       "team": "Fügen",
+       "p": 16,
+       "w": 8,
+       "d": 1,
+       "l": 7,
+       "gf": 35,
+       "ga": 35,
+       "pts": 25,
+       "tid": 8335,
+       "form": "LWLWW"
+      },
+      {
+       "pos": 7,
        "team": "Röthis",
        "p": 16,
        "w": 7,
@@ -1151,7 +1164,7 @@
        "form": "WWLLD"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Swarovski Tirol II",
        "p": 16,
        "w": 7,
@@ -1164,7 +1177,7 @@
        "form": "DLLWL"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "SK St. Johann",
        "p": 16,
        "w": 6,
@@ -1175,19 +1188,6 @@
        "pts": 22,
        "tid": 27905,
        "form": "LLWLD"
-      },
-      {
-       "pos": 9,
-       "team": "Fügen",
-       "p": 15,
-       "w": 7,
-       "d": 1,
-       "l": 7,
-       "gf": 33,
-       "ga": 35,
-       "pts": 22,
-       "tid": 8335,
-       "form": "LWLWW"
       },
       {
        "pos": 10,
