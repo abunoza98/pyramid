@@ -329,19 +329,32 @@
    "rows": [
     {
      "pos": 1,
-     "team": "Penafiel",
-     "p": 10,
-     "w": 7,
-     "d": 1,
-     "l": 2,
-     "gf": 22,
+     "team": "Lusitânia Lourosa",
+     "p": 11,
+     "w": 6,
+     "d": 4,
+     "l": 1,
+     "gf": 17,
      "ga": 10,
      "pts": 22,
-     "tid": 235,
-     "form": "WLWWW"
+     "tid": 6358,
+     "form": "DDDLW"
     },
     {
      "pos": 2,
+     "team": "Penafiel",
+     "p": 11,
+     "w": 7,
+     "d": 1,
+     "l": 3,
+     "gf": 23,
+     "ga": 12,
+     "pts": 22,
+     "tid": 235,
+     "form": "LWWWL"
+    },
+    {
+     "pos": 3,
      "team": "Sporting CP B",
      "p": 10,
      "w": 7,
@@ -354,7 +367,7 @@
      "form": "LWWWD"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Benfica B",
      "p": 10,
      "w": 6,
@@ -365,19 +378,6 @@
      "pts": 20,
      "tid": 229,
      "form": "WWDWW"
-    },
-    {
-     "pos": 4,
-     "team": "Lusitânia Lourosa",
-     "p": 10,
-     "w": 5,
-     "d": 4,
-     "l": 1,
-     "gf": 15,
-     "ga": 9,
-     "pts": 19,
-     "tid": 6358,
-     "form": "WDDDL"
     },
     {
      "pos": 5,
@@ -394,6 +394,19 @@
     },
     {
      "pos": 6,
+     "team": "Académica",
+     "p": 11,
+     "w": 5,
+     "d": 2,
+     "l": 4,
+     "gf": 16,
+     "ga": 13,
+     "pts": 17,
+     "tid": 239,
+     "form": "WWLDD"
+    },
+    {
+     "pos": 7,
      "team": "União de Leiria",
      "p": 10,
      "w": 5,
@@ -404,19 +417,6 @@
      "pts": 17,
      "tid": 4662,
      "form": "DLDWW"
-    },
-    {
-     "pos": 7,
-     "team": "Académica",
-     "p": 10,
-     "w": 5,
-     "d": 1,
-     "l": 4,
-     "gf": 16,
-     "ga": 13,
-     "pts": 16,
-     "tid": 239,
-     "form": "LWWLD"
     },
     {
      "pos": 8,
@@ -447,15 +447,15 @@
     {
      "pos": 10,
      "team": "Portimonense",
-     "p": 10,
+     "p": 11,
      "w": 4,
-     "d": 2,
+     "d": 3,
      "l": 4,
      "gf": 7,
      "ga": 10,
-     "pts": 14,
+     "pts": 15,
      "tid": 216,
-     "form": "LWLDW"
+     "form": "WLDWD"
     },
     {
      "pos": 11,
