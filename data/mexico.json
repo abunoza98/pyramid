@@ -4,7 +4,7 @@
  "adjective": "Mexican",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-13T00:00:00.000Z",
+ "updated": "2026-11-14T00:00:00.000Z",
  "belowNote": "Promotion between Liga Premier and the Liga de Expansión is suspended",
  "leagues": [
   {
@@ -260,7 +260,7 @@
      "form": "LLDWW"
     }
    ],
-   "updated": "2026-11-13T00:00:00.000Z"
+   "updated": "2026-11-14T00:00:00.000Z"
   },
   {
    "id": "liga-de-expansion",
@@ -562,16 +562,16 @@
     },
     {
      "pos": 2,
-     "team": "Acatlan",
-     "p": 11,
-     "w": 7,
-     "d": 1,
+     "team": "Mineros de Fresnillo",
+     "p": 12,
+     "w": 6,
+     "d": 3,
      "l": 3,
-     "gf": 25,
-     "ga": 20,
+     "gf": 21,
+     "ga": 10,
      "pts": 23,
-     "tid": 24949,
-     "form": "LWWWL"
+     "tid": 15935,
+     "form": "DWLWL"
     },
     {
      "pos": 2,
@@ -588,16 +588,16 @@
     },
     {
      "pos": 3,
-     "team": "La Tribu de Cd. Juarez",
+     "team": "Acatlan",
      "p": 11,
      "w": 7,
-     "d": 0,
-     "l": 4,
-     "gf": 31,
-     "ga": 13,
-     "pts": 22,
-     "tid": 28306,
-     "form": "LWWLW"
+     "d": 1,
+     "l": 3,
+     "gf": 25,
+     "ga": 20,
+     "pts": 23,
+     "tid": 24949,
+     "form": "LWWWL"
     },
     {
      "pos": 3,
@@ -614,29 +614,29 @@
     },
     {
      "pos": 4,
-     "team": "Mineros de Fresnillo",
+     "team": "La Tribu de Cd. Juarez",
      "p": 11,
-     "w": 6,
-     "d": 3,
-     "l": 2,
-     "gf": 19,
-     "ga": 8,
+     "w": 7,
+     "d": 0,
+     "l": 4,
+     "gf": 31,
+     "ga": 13,
      "pts": 22,
-     "tid": 15935,
-     "form": "WDWLW"
+     "tid": 28306,
+     "form": "LWWLW"
     },
     {
      "pos": 4,
      "team": "Delfines Coatzacoalcos",
-     "p": 11,
-     "w": 5,
+     "p": 12,
+     "w": 6,
      "d": 3,
      "l": 3,
-     "gf": 17,
-     "ga": 13,
-     "pts": 19,
+     "gf": 19,
+     "ga": 15,
+     "pts": 21,
      "tid": 28303,
-     "form": "DWWWL"
+     "form": "WWWLW"
     },
     {
      "pos": 5,
@@ -799,7 +799,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-13T00:00:00.000Z"
+   "updated": "2026-11-14T00:00:00.000Z"
   }
  ]
 }
