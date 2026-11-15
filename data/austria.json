@@ -4,7 +4,7 @@
  "adjective": "Austrian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-14T00:00:00.000Z",
+ "updated": "2026-11-15T00:00:00.000Z",
  "belowNote": "Landesliga champions come up",
  "leagues": [
   {
@@ -1070,7 +1070,7 @@
     },
     {
      "name": "West",
-     "updated": "2026-11-14T00:00:00.000Z",
+     "updated": "2026-11-15T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1230,6 +1230,19 @@
       },
       {
        "pos": 13,
+       "team": "Rheindorf Altach II",
+       "p": 16,
+       "w": 3,
+       "d": 4,
+       "l": 9,
+       "gf": 21,
+       "ga": 34,
+       "pts": 13,
+       "tid": 8256,
+       "form": "LWDLW"
+      },
+      {
+       "pos": 14,
        "team": "Lochau",
        "p": 16,
        "w": 3,
@@ -1240,19 +1253,6 @@
        "pts": 11,
        "tid": 8359,
        "form": "LLLLL"
-      },
-      {
-       "pos": 14,
-       "team": "Rheindorf Altach II",
-       "p": 15,
-       "w": 2,
-       "d": 4,
-       "l": 9,
-       "gf": 17,
-       "ga": 34,
-       "pts": 10,
-       "tid": 8256,
-       "form": "LLWDL"
       },
       {
        "pos": 15,
@@ -1270,20 +1270,20 @@
       {
        "pos": 16,
        "team": "Wolfurt",
-       "p": 15,
+       "p": 16,
        "w": 1,
        "d": 2,
-       "l": 12,
+       "l": 13,
        "gf": 20,
-       "ga": 46,
+       "ga": 50,
        "pts": 5,
        "tid": 4968,
-       "form": "LLLLD"
+       "form": "LLLDL"
       }
      ]
     }
    ],
-   "updated": "2026-11-14T00:00:00.000Z"
+   "updated": "2026-11-15T00:00:00.000Z"
   }
  ]
 }

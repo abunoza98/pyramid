@@ -1595,6 +1595,19 @@
      "rows": [
       {
        "pos": 1,
+       "team": "Talasgücü Belediyespor",
+       "p": 12,
+       "w": 9,
+       "d": 2,
+       "l": 1,
+       "gf": 29,
+       "ga": 12,
+       "pts": 29,
+       "tid": 21995,
+       "form": "WLWWW"
+      },
+      {
+       "pos": 2,
        "team": "Yeşilyurt Belediyespor",
        "p": 11,
        "w": 8,
@@ -1607,7 +1620,7 @@
        "form": "DWWDD"
       },
       {
-       "pos": 2,
+       "pos": 3,
        "team": "Karaköprü Belediyespor",
        "p": 12,
        "w": 8,
@@ -1618,19 +1631,6 @@
        "pts": 26,
        "tid": 7408,
        "form": "WDLDW"
-      },
-      {
-       "pos": 3,
-       "team": "Talasgücü Belediyespor",
-       "p": 11,
-       "w": 8,
-       "d": 2,
-       "l": 1,
-       "gf": 26,
-       "ga": 11,
-       "pts": 26,
-       "tid": 21995,
-       "form": "DWLWW"
       },
       {
        "pos": 4,
@@ -1661,15 +1661,15 @@
       {
        "pos": 6,
        "team": "Kırşehir Belediyespor",
-       "p": 11,
+       "p": 12,
        "w": 7,
        "d": 3,
-       "l": 1,
-       "gf": 31,
-       "ga": 12,
+       "l": 2,
+       "gf": 32,
+       "ga": 15,
        "pts": 24,
        "tid": 6341,
-       "form": "WWDDW"
+       "form": "WDDWL"
       },
       {
        "pos": 7,
@@ -1765,15 +1765,15 @@
       {
        "pos": 14,
        "team": "Yozgat Bld Bozokspor",
-       "p": 11,
+       "p": 12,
        "w": 2,
        "d": 3,
-       "l": 6,
+       "l": 7,
        "gf": 7,
-       "ga": 23,
+       "ga": 27,
        "pts": 9,
        "tid": 22448,
-       "form": "DLWLD"
+       "form": "LWLDL"
       },
       {
        "pos": 15,
@@ -1803,6 +1803,19 @@
       },
       {
        "pos": 17,
+       "team": "Adanaspor",
+       "p": 12,
+       "w": 1,
+       "d": 1,
+       "l": 10,
+       "gf": 10,
+       "ga": 39,
+       "pts": 4,
+       "tid": 3564,
+       "form": "LDLLW"
+      },
+      {
+       "pos": 18,
        "team": "Yeni Malatyaspor",
        "p": 11,
        "w": 0,
@@ -1813,19 +1826,6 @@
        "pts": 1,
        "tid": 999,
        "form": "LLLLD"
-      },
-      {
-       "pos": 18,
-       "team": "Adanaspor",
-       "p": 11,
-       "w": 0,
-       "d": 1,
-       "l": 10,
-       "gf": 6,
-       "ga": 39,
-       "pts": 1,
-       "tid": 3564,
-       "form": "LLDLL"
       }
      ]
     }

@@ -4,7 +4,7 @@
  "adjective": "Italian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-14T00:00:00.000Z",
+ "updated": "2026-11-15T00:00:00.000Z",
  "belowNote": "Serie D group winners come up",
  "leagues": [
   {
@@ -652,7 +652,7 @@
    "groups": [
     {
      "name": "Girone A",
-     "updated": "2026-11-14T00:00:00.000Z",
+     "updated": "2026-11-15T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -735,15 +735,15 @@
       {
        "pos": 7,
        "team": "Lecco",
-       "p": 13,
+       "p": 14,
        "w": 5,
-       "d": 5,
+       "d": 6,
        "l": 3,
-       "gf": 22,
-       "ga": 11,
-       "pts": 20,
+       "gf": 23,
+       "ga": 12,
+       "pts": 21,
        "tid": 6379,
-       "form": "DWDWW"
+       "form": "WDWWD"
       },
       {
        "pos": 8,
@@ -825,6 +825,19 @@
       },
       {
        "pos": 14,
+       "team": "Novara",
+       "p": 14,
+       "w": 3,
+       "d": 5,
+       "l": 6,
+       "gf": 12,
+       "ga": 19,
+       "pts": 14,
+       "tid": 513,
+       "form": "DLWLD"
+      },
+      {
+       "pos": 15,
        "team": "Carpi",
        "p": 14,
        "w": 3,
@@ -837,7 +850,7 @@
        "form": "WWLDD"
       },
       {
-       "pos": 15,
+       "pos": 16,
        "team": "Giana Erminio",
        "p": 14,
        "w": 2,
@@ -848,19 +861,6 @@
        "pts": 13,
        "tid": 865,
        "form": "WWLDD"
-      },
-      {
-       "pos": 16,
-       "team": "Novara",
-       "p": 13,
-       "w": 3,
-       "d": 4,
-       "l": 6,
-       "gf": 11,
-       "ga": 18,
-       "pts": 13,
-       "tid": 513,
-       "form": "LDLWL"
       },
       {
        "pos": 17,
@@ -918,7 +918,7 @@
     },
     {
      "name": "Girone B",
-     "updated": "2026-11-14T00:00:00.000Z",
+     "updated": "2026-11-15T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1184,7 +1184,7 @@
     },
     {
      "name": "Girone C",
-     "updated": "2026-11-14T00:00:00.000Z",
+     "updated": "2026-11-15T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1450,7 +1450,7 @@
      ]
     }
    ],
-   "updated": "2026-11-14T00:00:00.000Z"
+   "updated": "2026-11-15T00:00:00.000Z"
   }
  ]
 }

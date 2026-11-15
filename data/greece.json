@@ -4,7 +4,7 @@
  "adjective": "Greek",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-14T00:00:00.000Z",
+ "updated": "2026-11-15T00:00:00.000Z",
  "belowNote": "Gamma Ethniki group winners come up",
  "leagues": [
   {
@@ -251,6 +251,19 @@
     },
     {
      "pos": 2,
+     "team": "Kallithea",
+     "p": 11,
+     "w": 6,
+     "d": 3,
+     "l": 2,
+     "gf": 13,
+     "ga": 7,
+     "pts": 21,
+     "tid": 2095,
+     "form": "DDLWD"
+    },
+    {
+     "pos": 3,
      "team": "Larisa",
      "p": 11,
      "w": 5,
@@ -261,19 +274,6 @@
      "pts": 20,
      "tid": 953,
      "form": "DDWWD"
-    },
-    {
-     "pos": 3,
-     "team": "Kallithea",
-     "p": 10,
-     "w": 6,
-     "d": 2,
-     "l": 2,
-     "gf": 12,
-     "ga": 6,
-     "pts": 20,
-     "tid": 2095,
-     "form": "WDDLW"
     },
     {
      "pos": 4,
@@ -394,6 +394,19 @@
     },
     {
      "pos": 13,
+     "team": "Apollon Pontou",
+     "p": 11,
+     "w": 2,
+     "d": 3,
+     "l": 6,
+     "gf": 8,
+     "ga": 14,
+     "pts": 9,
+     "tid": 2102,
+     "form": "LLLLD"
+    },
+    {
+     "pos": 14,
      "team": "Pyrgos 1968",
      "p": 10,
      "w": 2,
@@ -404,19 +417,6 @@
      "pts": 9,
      "tid": 26587,
      "form": "LLWDL"
-    },
-    {
-     "pos": 14,
-     "team": "Apollon Pontou",
-     "p": 10,
-     "w": 2,
-     "d": 2,
-     "l": 6,
-     "gf": 7,
-     "ga": 13,
-     "pts": 8,
-     "tid": 2102,
-     "form": "WLLLL"
     },
     {
      "pos": 15,
@@ -445,7 +445,7 @@
      "form": "LDLDL"
     }
    ],
-   "updated": "2026-11-14T00:00:00.000Z"
+   "updated": "2026-11-15T00:00:00.000Z"
   }
  ]
 }
