@@ -536,16 +536,16 @@
    "rows": [
     {
      "pos": 1,
-     "team": "FC Santiago",
+     "team": "La Tribu de Cd. Juarez",
      "p": 12,
-     "w": 7,
-     "d": 2,
-     "l": 3,
-     "gf": 28,
-     "ga": 8,
+     "w": 8,
+     "d": 0,
+     "l": 4,
+     "gf": 38,
+     "ga": 13,
      "pts": 25,
-     "tid": 22055,
-     "form": "WWWWD"
+     "tid": 28306,
+     "form": "WWLWW"
     },
     {
      "pos": 1,
@@ -562,16 +562,16 @@
     },
     {
      "pos": 2,
-     "team": "Mineros de Fresnillo",
+     "team": "FC Santiago",
      "p": 12,
-     "w": 6,
-     "d": 3,
+     "w": 7,
+     "d": 2,
      "l": 3,
-     "gf": 21,
-     "ga": 10,
-     "pts": 23,
-     "tid": 15935,
-     "form": "DWLWL"
+     "gf": 28,
+     "ga": 8,
+     "pts": 25,
+     "tid": 22055,
+     "form": "WWWWD"
     },
     {
      "pos": 2,
@@ -588,16 +588,16 @@
     },
     {
      "pos": 3,
-     "team": "Acatlan",
+     "team": "Mineros de Fresnillo",
      "p": 12,
-     "w": 7,
-     "d": 1,
-     "l": 4,
-     "gf": 27,
-     "ga": 24,
+     "w": 6,
+     "d": 3,
+     "l": 3,
+     "gf": 21,
+     "ga": 10,
      "pts": 23,
-     "tid": 24949,
-     "form": "WWWLL"
+     "tid": 15935,
+     "form": "DWLWL"
     },
     {
      "pos": 3,
@@ -614,16 +614,16 @@
     },
     {
      "pos": 4,
-     "team": "La Tribu de Cd. Juarez",
-     "p": 11,
+     "team": "Acatlan",
+     "p": 12,
      "w": 7,
-     "d": 0,
+     "d": 1,
      "l": 4,
-     "gf": 31,
-     "ga": 13,
-     "pts": 22,
-     "tid": 28306,
-     "form": "LWWLW"
+     "gf": 27,
+     "ga": 24,
+     "pts": 23,
+     "tid": 24949,
+     "form": "WWWLL"
     },
     {
      "pos": 4,
@@ -761,16 +761,16 @@
     {
      "pos": 9,
      "team": "Ciervos",
-     "p": 11,
+     "p": 12,
      "w": 2,
      "d": 0,
-     "l": 9,
+     "l": 10,
      "gf": 13,
-     "ga": 40,
+     "ga": 47,
      "pts": 5,
      "ded": 1,
      "tid": 15925,
-     "form": "LWLLL"
+     "form": "WLLLL"
     },
     {
      "pos": 10,
