@@ -389,6 +389,19 @@
     },
     {
      "pos": 5,
+     "team": "Eibar",
+     "p": 13,
+     "w": 7,
+     "d": 3,
+     "l": 3,
+     "gf": 22,
+     "ga": 15,
+     "pts": 24,
+     "tid": 545,
+     "form": "LDLDD"
+    },
+    {
+     "pos": 6,
      "team": "Burgos",
      "p": 14,
      "w": 7,
@@ -401,7 +414,7 @@
      "form": "WWDWL"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Mallorca",
      "p": 13,
      "w": 6,
@@ -412,19 +425,6 @@
      "pts": 23,
      "tid": 798,
      "form": "WDDWD"
-    },
-    {
-     "pos": 7,
-     "team": "Eibar",
-     "p": 12,
-     "w": 7,
-     "d": 2,
-     "l": 3,
-     "gf": 21,
-     "ga": 14,
-     "pts": 23,
-     "tid": 545,
-     "form": "WLDLD"
     },
     {
      "pos": 8,
@@ -493,19 +493,6 @@
     },
     {
      "pos": 13,
-     "team": "Sabadell",
-     "p": 13,
-     "w": 4,
-     "d": 6,
-     "l": 3,
-     "gf": 12,
-     "ga": 11,
-     "pts": 18,
-     "tid": 9593,
-     "form": "WLDLD"
-    },
-    {
-     "pos": 14,
      "team": "Tenerife",
      "p": 13,
      "w": 4,
@@ -518,7 +505,33 @@
      "form": "DDDDW"
     },
     {
+     "pos": 14,
+     "team": "Sabadell",
+     "p": 14,
+     "w": 4,
+     "d": 6,
+     "l": 4,
+     "gf": 12,
+     "ga": 13,
+     "pts": 18,
+     "tid": 9593,
+     "form": "LDLDL"
+    },
+    {
      "pos": 15,
+     "team": "Eldense",
+     "p": 14,
+     "w": 5,
+     "d": 2,
+     "l": 7,
+     "gf": 15,
+     "ga": 19,
+     "pts": 17,
+     "tid": 9692,
+     "form": "WLLLW"
+    },
+    {
+     "pos": 16,
      "team": "Leganés",
      "p": 14,
      "w": 4,
@@ -529,19 +542,6 @@
      "pts": 15,
      "tid": 537,
      "form": "LDLLW"
-    },
-    {
-     "pos": 16,
-     "team": "Eldense",
-     "p": 13,
-     "w": 4,
-     "d": 2,
-     "l": 7,
-     "gf": 13,
-     "ga": 19,
-     "pts": 14,
-     "tid": 9692,
-     "form": "WWLLL"
     },
     {
      "pos": 17,
@@ -571,6 +571,19 @@
     },
     {
      "pos": 19,
+     "team": "Cádiz",
+     "p": 14,
+     "w": 2,
+     "d": 5,
+     "l": 7,
+     "gf": 17,
+     "ga": 19,
+     "pts": 11,
+     "tid": 724,
+     "form": "LWLLD"
+    },
+    {
+     "pos": 20,
      "team": "Andorra",
      "p": 13,
      "w": 3,
@@ -581,19 +594,6 @@
      "pts": 11,
      "tid": 8157,
      "form": "WLLDL"
-    },
-    {
-     "pos": 20,
-     "team": "Cádiz",
-     "p": 13,
-     "w": 2,
-     "d": 4,
-     "l": 7,
-     "gf": 16,
-     "ga": 18,
-     "pts": 10,
-     "tid": 724,
-     "form": "LLWLL"
     },
     {
      "pos": 21,
@@ -952,19 +952,32 @@
       },
       {
        "pos": 3,
-       "team": "Murcia",
-       "p": 11,
-       "w": 6,
-       "d": 2,
-       "l": 3,
-       "gf": 13,
-       "ga": 9,
-       "pts": 20,
-       "tid": 5275,
-       "form": "WDLWD"
+       "team": "Alcorcón",
+       "p": 12,
+       "w": 5,
+       "d": 6,
+       "l": 1,
+       "gf": 24,
+       "ga": 14,
+       "pts": 21,
+       "tid": 711,
+       "form": "DDDWW"
       },
       {
        "pos": 4,
+       "team": "Murcia",
+       "p": 12,
+       "w": 6,
+       "d": 2,
+       "l": 4,
+       "gf": 14,
+       "ga": 11,
+       "pts": 20,
+       "tid": 5275,
+       "form": "DLWDL"
+      },
+      {
+       "pos": 5,
        "team": "Cartagena",
        "p": 12,
        "w": 5,
@@ -977,7 +990,7 @@
        "form": "WLLDW"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "Real Madrid Castilla",
        "p": 12,
        "w": 5,
@@ -990,7 +1003,7 @@
        "form": "WLWDW"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Jaén",
        "p": 12,
        "w": 5,
@@ -1001,19 +1014,6 @@
        "pts": 19,
        "tid": 5274,
        "form": "WDWLL"
-      },
-      {
-       "pos": 7,
-       "team": "Alcorcón",
-       "p": 11,
-       "w": 4,
-       "d": 6,
-       "l": 1,
-       "gf": 22,
-       "ga": 13,
-       "pts": 18,
-       "tid": 711,
-       "form": "LDDDW"
       },
       {
        "pos": 8,
