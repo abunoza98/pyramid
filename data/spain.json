@@ -4,7 +4,7 @@
  "adjective": "Spanish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-15T00:00:00.000Z",
+ "updated": "2026-11-16T00:00:00.000Z",
  "belowNote": "Promoted clubs from Segunda Federación come up",
  "leagues": [
   {
@@ -546,15 +546,15 @@
     {
      "pos": 17,
      "team": "Celta Fortuna",
-     "p": 13,
+     "p": 14,
      "w": 3,
      "d": 4,
-     "l": 6,
+     "l": 7,
      "gf": 19,
-     "ga": 25,
+     "ga": 26,
      "pts": 13,
      "tid": 9571,
-     "form": "WDLDL"
+     "form": "DLDLL"
     },
     {
      "pos": 18,
@@ -571,6 +571,19 @@
     },
     {
      "pos": 19,
+     "team": "Albacete",
+     "p": 14,
+     "w": 4,
+     "d": 1,
+     "l": 9,
+     "gf": 14,
+     "ga": 24,
+     "pts": 13,
+     "tid": 722,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 20,
      "team": "Cádiz",
      "p": 14,
      "w": 2,
@@ -583,7 +596,7 @@
      "form": "LWLLD"
     },
     {
-     "pos": 20,
+     "pos": 21,
      "team": "Andorra",
      "p": 13,
      "w": 3,
@@ -594,19 +607,6 @@
      "pts": 11,
      "tid": 8157,
      "form": "WLLDL"
-    },
-    {
-     "pos": 21,
-     "team": "Albacete",
-     "p": 13,
-     "w": 3,
-     "d": 1,
-     "l": 9,
-     "gf": 13,
-     "ga": 24,
-     "pts": 10,
-     "tid": 722,
-     "form": "LLWWW"
     },
     {
      "pos": 22,
@@ -622,7 +622,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-15T00:00:00.000Z"
+   "updated": "2026-11-16T00:00:00.000Z"
   },
   {
    "id": "primera-federacion",
