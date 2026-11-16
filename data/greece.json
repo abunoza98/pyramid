@@ -4,7 +4,7 @@
  "adjective": "Greek",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-15T00:00:00.000Z",
+ "updated": "2026-11-16T00:00:00.000Z",
  "belowNote": "Gamma Ethniki group winners come up",
  "leagues": [
   {
@@ -239,15 +239,15 @@
     {
      "pos": 1,
      "team": "Marko",
-     "p": 10,
-     "w": 8,
+     "p": 11,
+     "w": 9,
      "d": 2,
      "l": 0,
-     "gf": 19,
+     "gf": 25,
      "ga": 6,
-     "pts": 26,
+     "pts": 29,
      "tid": 12403,
-     "form": "WDWWD"
+     "form": "DWWDW"
     },
     {
      "pos": 2,
@@ -434,18 +434,18 @@
     {
      "pos": 16,
      "team": "Zakynthos",
-     "p": 10,
+     "p": 11,
      "w": 0,
      "d": 4,
-     "l": 6,
+     "l": 7,
      "gf": 7,
-     "ga": 18,
+     "ga": 24,
      "pts": 4,
      "tid": 6326,
-     "form": "LDLDL"
+     "form": "DLDLL"
     }
    ],
-   "updated": "2026-11-15T00:00:00.000Z"
+   "updated": "2026-11-16T00:00:00.000Z"
   }
  ]
 }
