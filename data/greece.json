@@ -277,6 +277,32 @@
     },
     {
      "pos": 4,
+     "team": "Niki Volos",
+     "p": 11,
+     "w": 6,
+     "d": 2,
+     "l": 3,
+     "gf": 16,
+     "ga": 10,
+     "pts": 20,
+     "tid": 5056,
+     "form": "DWWWW"
+    },
+    {
+     "pos": 5,
+     "team": "Panionios",
+     "p": 11,
+     "w": 6,
+     "d": 2,
+     "l": 3,
+     "gf": 15,
+     "ga": 9,
+     "pts": 20,
+     "tid": 622,
+     "form": "DLWLW"
+    },
+    {
+     "pos": 6,
      "team": "Panserraikos",
      "p": 11,
      "w": 6,
@@ -289,7 +315,7 @@
      "form": "DWLWW"
     },
     {
-     "pos": 5,
+     "pos": 7,
      "team": "Ellas Syros",
      "p": 11,
      "w": 5,
@@ -300,32 +326,6 @@
      "pts": 19,
      "tid": 22244,
      "form": "DLWWW"
-    },
-    {
-     "pos": 6,
-     "team": "Niki Volos",
-     "p": 10,
-     "w": 5,
-     "d": 2,
-     "l": 3,
-     "gf": 14,
-     "ga": 9,
-     "pts": 17,
-     "tid": 5056,
-     "form": "WDWWW"
-    },
-    {
-     "pos": 7,
-     "team": "Panionios",
-     "p": 10,
-     "w": 5,
-     "d": 2,
-     "l": 3,
-     "gf": 13,
-     "ga": 9,
-     "pts": 17,
-     "tid": 622,
-     "form": "WDLWL"
     },
     {
      "pos": 8,
@@ -408,28 +408,28 @@
     {
      "pos": 14,
      "team": "Pyrgos 1968",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 3,
-     "l": 5,
-     "gf": 8,
-     "ga": 14,
+     "l": 6,
+     "gf": 9,
+     "ga": 16,
      "pts": 9,
      "tid": 26587,
-     "form": "LLWDL"
+     "form": "LWDLL"
     },
     {
      "pos": 15,
      "team": "Olympiacos B",
-     "p": 10,
+     "p": 11,
      "w": 1,
      "d": 3,
-     "l": 6,
+     "l": 7,
      "gf": 13,
-     "ga": 22,
+     "ga": 24,
      "pts": 6,
      "tid": 18017,
-     "form": "LDLLL"
+     "form": "DLLLL"
     },
     {
      "pos": 16,
