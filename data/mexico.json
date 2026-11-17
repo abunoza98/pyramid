@@ -4,7 +4,7 @@
  "adjective": "Mexican",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-14T00:00:00.000Z",
+ "updated": "2026-11-16T00:00:00.000Z",
  "belowNote": "Promotion between Liga Premier and the Liga de Expansión is suspended",
  "leagues": [
   {
@@ -118,7 +118,7 @@
     },
     {
      "pos": 8,
-     "team": "León",
+     "team": "Club Leon",
      "p": 16,
      "w": 6,
      "d": 5,
@@ -126,7 +126,6 @@
      "gf": 23,
      "ga": 21,
      "pts": 23,
-     "tid": 2289,
      "form": "LWDLD"
     },
     {
@@ -260,7 +259,7 @@
      "form": "LLDWW"
     }
    ],
-   "updated": "2026-11-14T00:00:00.000Z"
+   "updated": "2026-11-16T00:00:00.000Z"
   },
   {
    "id": "liga-de-expansion",
@@ -488,7 +487,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-14T00:00:00.000Z"
+   "updated": "2026-11-16T00:00:00.000Z"
   },
   {
    "id": "liga-premier",
@@ -528,8 +527,6 @@
     }
    ],
    "notes": [
-    "Real Refineros: 1 point deducted.",
-    "Real Apodaca: 1 point deducted.",
     "Atlético Saltillo: 1 point deducted.",
     "Ciervos: 1 point deducted."
    ],
@@ -543,7 +540,7 @@
      "l": 4,
      "gf": 38,
      "ga": 13,
-     "pts": 25,
+     "pts": 26,
      "tid": 28306,
      "form": "WWLWW"
     },
@@ -575,16 +572,16 @@
     },
     {
      "pos": 2,
-     "team": "Artesanos Metepec",
+     "team": "Acambaro",
      "p": 12,
-     "w": 7,
-     "d": 4,
-     "l": 1,
-     "gf": 22,
-     "ga": 8,
+     "w": 8,
+     "d": 1,
+     "l": 3,
+     "gf": 37,
+     "ga": 16,
      "pts": 26,
-     "tid": 22049,
-     "form": "DLWDD"
+     "tid": 22051,
+     "form": "WWWLW"
     },
     {
      "pos": 3,
@@ -601,16 +598,16 @@
     },
     {
      "pos": 3,
-     "team": "Acambaro",
-     "p": 11,
+     "team": "Artesanos Metepec",
+     "p": 12,
      "w": 7,
-     "d": 1,
-     "l": 3,
-     "gf": 32,
-     "ga": 15,
-     "pts": 23,
-     "tid": 22051,
-     "form": "WWWWL"
+     "d": 4,
+     "l": 1,
+     "gf": 22,
+     "ga": 8,
+     "pts": 26,
+     "tid": 22049,
+     "form": "DLWDD"
     },
     {
      "pos": 4,
@@ -673,22 +670,22 @@
      "l": 4,
      "gf": 20,
      "ga": 17,
-     "pts": 21,
+     "pts": 22,
      "tid": 28308,
      "form": "LLLDW"
     },
     {
      "pos": 6,
-     "team": "Guerreros del Pacifico",
+     "team": "Real Refineros",
      "p": 12,
-     "w": 4,
-     "d": 2,
-     "l": 6,
-     "gf": 22,
-     "ga": 21,
-     "pts": 18,
-     "tid": 28304,
-     "form": "WLWLD"
+     "w": 6,
+     "d": 1,
+     "l": 5,
+     "gf": 24,
+     "ga": 26,
+     "pts": 19,
+     "tid": 28307,
+     "form": "WLWWW"
     },
     {
      "pos": 7,
@@ -705,17 +702,16 @@
     },
     {
      "pos": 7,
-     "team": "Real Refineros",
+     "team": "Guerreros del Pacifico",
      "p": 12,
-     "w": 6,
-     "d": 1,
-     "l": 5,
-     "gf": 24,
-     "ga": 26,
+     "w": 4,
+     "d": 2,
+     "l": 6,
+     "gf": 22,
+     "ga": 21,
      "pts": 18,
-     "ded": 1,
-     "tid": 28307,
-     "form": "WLWWW"
+     "tid": 28304,
+     "form": "WLWLD"
     },
     {
      "pos": 8,
@@ -726,8 +722,7 @@
      "l": 7,
      "gf": 18,
      "ga": 20,
-     "pts": 12,
-     "ded": 1,
+     "pts": 13,
      "tid": 22047,
      "form": "LWLWW"
     },
@@ -775,12 +770,12 @@
     {
      "pos": 10,
      "team": "Héroes de Zaci",
-     "p": 10,
+     "p": 11,
      "w": 0,
      "d": 1,
-     "l": 9,
-     "gf": 3,
-     "ga": 29,
+     "l": 10,
+     "gf": 4,
+     "ga": 34,
      "pts": 2,
      "tid": 26526,
      "form": "LLLLL"
@@ -799,7 +794,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-14T00:00:00.000Z"
+   "updated": "2026-11-16T00:00:00.000Z"
   }
  ]
 }
