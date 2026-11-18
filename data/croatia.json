@@ -4,7 +4,7 @@
  "adjective": "Croatian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-08T00:00:00.000Z",
+ "updated": "2026-11-17T00:00:00.000Z",
  "belowNote": "Treća NL champions come up",
  "leagues": [
   {
@@ -181,7 +181,7 @@
      "form": "LDDLL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-11T00:00:00.000Z"
   },
   {
    "id": "prva-nl",
@@ -424,7 +424,7 @@
      "form": "LLDWL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-10T00:00:00.000Z"
   },
   {
    "id": "druga-nl",
@@ -464,6 +464,19 @@
     },
     {
      "pos": 2,
+     "team": "Solin",
+     "p": 13,
+     "w": 6,
+     "d": 3,
+     "l": 4,
+     "gf": 22,
+     "ga": 13,
+     "pts": 21,
+     "tid": 1480,
+     "form": "LWLWW"
+    },
+    {
+     "pos": 3,
      "team": "Jarun",
      "p": 11,
      "w": 5,
@@ -476,7 +489,7 @@
      "form": "WDDWW"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Dugo Selo",
      "p": 12,
      "w": 6,
@@ -489,7 +502,7 @@
      "form": "WLWDL"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Uljanik",
      "p": 12,
      "w": 6,
@@ -500,19 +513,6 @@
      "pts": 20,
      "tid": 8582,
      "form": "WLLWW"
-    },
-    {
-     "pos": 5,
-     "team": "Solin",
-     "p": 12,
-     "w": 5,
-     "d": 3,
-     "l": 4,
-     "gf": 20,
-     "ga": 13,
-     "pts": 18,
-     "tid": 1480,
-     "form": "DLWLW"
     },
     {
      "pos": 6,
@@ -647,18 +647,18 @@
     {
      "pos": 16,
      "team": "Koprivnica",
-     "p": 12,
+     "p": 13,
      "w": 1,
      "d": 2,
-     "l": 9,
+     "l": 10,
      "gf": 10,
-     "ga": 28,
+     "ga": 30,
      "pts": 5,
      "tid": 5710,
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-17T00:00:00.000Z"
   }
  ]
 }

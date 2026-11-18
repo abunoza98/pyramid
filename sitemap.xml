@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://footballpyramids.com/</loc><lastmod>2026-11-17</lastmod><changefreq>hourly</changefreq></url>
-  <url><loc>https://footballpyramids.com/england/</loc><lastmod>2026-11-14</lastmod><changefreq>hourly</changefreq></url>
+  <url><loc>https://footballpyramids.com/england/</loc><lastmod>2026-11-17</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/</loc><lastmod>2026-11-16</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/</loc><lastmod>2026-11-08</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/france/</loc><lastmod>2026-11-08</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/</loc><lastmod>2026-11-16</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/belgium/</loc><lastmod>2026-11-08</lastmod><changefreq>hourly</changefreq></url>
-  <url><loc>https://footballpyramids.com/croatia/</loc><lastmod>2026-11-08</lastmod><changefreq>hourly</changefreq></url>
+  <url><loc>https://footballpyramids.com/croatia/</loc><lastmod>2026-11-17</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/netherlands/</loc><lastmod>2026-11-15</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/portugal/</loc><lastmod>2026-11-15</lastmod><changefreq>hourly</changefreq></url>
   <url><loc>https://footballpyramids.com/scotland/</loc><lastmod>2026-11-14</lastmod><changefreq>hourly</changefreq></url>
@@ -146,19 +146,19 @@
   <url><loc>https://footballpyramids.com/england/club/gateshead/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/south-shields/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/hereford/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/england/club/oxford-city/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/macclesfield/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/england/club/chester/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/england/club/oxford-city/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/hednesford-town/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/king-s-lynn-town/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/buxton/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/england/club/chester/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/morecambe/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/england/club/chorley/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/england/club/spalding-united/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/bedford-town/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/afc-telford-united/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/england/club/spalding-united/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/england/club/chorley/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/england/club/worksop-town/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/hebburn-town/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/england/club/worksop-town/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/marine/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/merthyr-town/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/brackley-town/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
@@ -173,11 +173,11 @@
   <url><loc>https://footballpyramids.com/england/club/salisbury/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/truro-city/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/farnham-town/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/england/club/dorking-wanderers/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/billericay-town/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/england/club/dorking-wanderers/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/england/club/tonbridge-angels/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/chelmsford-city/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/dagenham-redbridge/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/england/club/tonbridge-angels/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/torquay-united/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/horsham/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/england/club/dover-athletic/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
@@ -544,10 +544,10 @@
   <url><loc>https://footballpyramids.com/croatia/club/dugopolje/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/hrvace/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/uskok-klis/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/croatia/club/solin/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/jarun/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/dugo-selo/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/uljanik/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/croatia/club/solin/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/slavonija-pozega/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/bjelovar/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/croatia/club/krizevci/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
@@ -1708,13 +1708,13 @@
   <url><loc>https://footballpyramids.com/australia/australian-championship/</loc><lastmod>2026-11-02</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/us-open-cup/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/usa/mls-cup-playoffs/</loc><lastmod>2026-11-10</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/england/races/</loc><lastmod>2026-11-14</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/england/races/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/spain/races/</loc><lastmod>2026-11-16</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/germany/races/</loc><lastmod>2026-11-08</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/france/races/</loc><lastmod>2026-11-08</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/italy/races/</loc><lastmod>2026-11-16</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/belgium/races/</loc><lastmod>2026-11-08</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://footballpyramids.com/croatia/races/</loc><lastmod>2026-11-08</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://footballpyramids.com/croatia/races/</loc><lastmod>2026-11-17</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/netherlands/races/</loc><lastmod>2026-11-15</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/portugal/races/</loc><lastmod>2026-11-15</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://footballpyramids.com/scotland/races/</loc><lastmod>2026-11-14</lastmod><changefreq>daily</changefreq></url>
