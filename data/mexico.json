@@ -4,7 +4,7 @@
  "adjective": "Mexican",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-16T00:00:00.000Z",
+ "updated": "2026-11-18T00:00:00.000Z",
  "belowNote": "Promotion between Liga Premier and the Liga de Expansión is suspended",
  "leagues": [
   {
@@ -259,7 +259,7 @@
      "form": "LLDWW"
     }
    ],
-   "updated": "2026-11-16T00:00:00.000Z"
+   "updated": "2026-11-17T00:00:00.000Z"
   },
   {
    "id": "liga-de-expansion",
@@ -487,7 +487,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-16T00:00:00.000Z"
+   "updated": "2026-11-17T00:00:00.000Z"
   },
   {
    "id": "liga-premier",
@@ -715,16 +715,17 @@
     },
     {
      "pos": 8,
-     "team": "Real Apodaca",
+     "team": "Atlético Saltillo",
      "p": 12,
-     "w": 4,
-     "d": 1,
+     "w": 5,
+     "d": 0,
      "l": 7,
-     "gf": 18,
-     "ga": 20,
-     "pts": 13,
-     "tid": 22047,
-     "form": "LWLWW"
+     "gf": 22,
+     "ga": 30,
+     "pts": 14,
+     "ded": 1,
+     "tid": 15919,
+     "form": "LLWLW"
     },
     {
      "pos": 8,
@@ -741,17 +742,16 @@
     },
     {
      "pos": 9,
-     "team": "Atlético Saltillo",
-     "p": 11,
+     "team": "Real Apodaca",
+     "p": 12,
      "w": 4,
-     "d": 0,
+     "d": 1,
      "l": 7,
-     "gf": 20,
-     "ga": 30,
-     "pts": 11,
-     "ded": 1,
-     "tid": 15919,
-     "form": "LLLWL"
+     "gf": 18,
+     "ga": 20,
+     "pts": 13,
+     "tid": 22047,
+     "form": "LWLWW"
     },
     {
      "pos": 9,
@@ -783,18 +783,18 @@
     {
      "pos": 10,
      "team": "Cañoneros Marina",
-     "p": 11,
+     "p": 12,
      "w": 0,
      "d": 0,
-     "l": 11,
+     "l": 12,
      "gf": 6,
-     "ga": 44,
+     "ga": 46,
      "pts": 0,
      "tid": 15924,
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-16T00:00:00.000Z"
+   "updated": "2026-11-18T00:00:00.000Z"
   }
  ]
 }
