@@ -4,7 +4,7 @@
  "adjective": "Brazilian",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-18T00:00:00.000Z",
+ "updated": "2026-11-20T00:00:00.000Z",
  "belowNote": "Clubs qualify for Série D through their state championships",
  "leagues": [
   {
@@ -83,15 +83,15 @@
     {
      "pos": 4,
      "team": "Fluminense",
-     "p": 34,
-     "w": 16,
+     "p": 35,
+     "w": 17,
      "d": 9,
      "l": 9,
-     "gf": 55,
+     "gf": 56,
      "ga": 42,
-     "pts": 57,
+     "pts": 60,
      "tid": 124,
-     "form": "LLLWW"
+     "form": "LLWWW"
     },
     {
      "pos": 5,
@@ -148,41 +148,41 @@
     {
      "pos": 9,
      "team": "Red Bull Bragantino",
-     "p": 34,
+     "p": 35,
      "w": 13,
-     "d": 8,
-     "l": 13,
-     "gf": 44,
-     "ga": 39,
-     "pts": 47,
-     "tid": 794,
-     "form": "WDLWW"
-    },
-    {
-     "pos": 10,
-     "team": "São Paulo",
-     "p": 34,
-     "w": 12,
-     "d": 8,
-     "l": 14,
-     "gf": 39,
-     "ga": 39,
-     "pts": 44,
-     "tid": 126,
-     "form": "WWDLD"
-    },
-    {
-     "pos": 11,
-     "team": "Vasco da Gama",
-     "p": 34,
-     "w": 12,
      "d": 8,
      "l": 14,
      "gf": 45,
-     "ga": 50,
-     "pts": 44,
+     "ga": 41,
+     "pts": 47,
+     "tid": 794,
+     "form": "DLWWL"
+    },
+    {
+     "pos": 10,
+     "team": "Vasco da Gama",
+     "p": 35,
+     "w": 13,
+     "d": 8,
+     "l": 14,
+     "gf": 47,
+     "ga": 51,
+     "pts": 47,
      "tid": 133,
-     "form": "LWLWW"
+     "form": "WLWWW"
+    },
+    {
+     "pos": 11,
+     "team": "São Paulo",
+     "p": 35,
+     "w": 12,
+     "d": 8,
+     "l": 15,
+     "gf": 39,
+     "ga": 40,
+     "pts": 44,
+     "tid": 126,
+     "form": "WDLDL"
     },
     {
      "pos": 12,
@@ -212,6 +212,19 @@
     },
     {
      "pos": 14,
+     "team": "Vitória",
+     "p": 35,
+     "w": 11,
+     "d": 8,
+     "l": 16,
+     "gf": 37,
+     "ga": 52,
+     "pts": 41,
+     "tid": 136,
+     "form": "DDLLW"
+    },
+    {
+     "pos": 15,
      "team": "Mirassol",
      "p": 35,
      "w": 10,
@@ -224,7 +237,7 @@
      "form": "WDLWD"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Corinthians",
      "p": 35,
      "w": 10,
@@ -237,30 +250,17 @@
      "form": "DLWDW"
     },
     {
-     "pos": 16,
-     "team": "Vitória",
-     "p": 34,
-     "w": 10,
-     "d": 8,
-     "l": 16,
-     "gf": 35,
-     "ga": 51,
-     "pts": 38,
-     "tid": 136,
-     "form": "LDDLL"
-    },
-    {
      "pos": 17,
      "team": "Internacional",
-     "p": 34,
+     "p": 35,
      "w": 9,
      "d": 11,
-     "l": 14,
-     "gf": 38,
-     "ga": 42,
+     "l": 15,
+     "gf": 39,
+     "ga": 44,
      "pts": 38,
      "tid": 119,
-     "form": "DLWLW"
+     "form": "LWLWL"
     },
     {
      "pos": 18,
@@ -302,7 +302,7 @@
      "form": "WLLLL"
     }
    ],
-   "updated": "2026-11-18T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   },
   {
    "id": "serie-b",

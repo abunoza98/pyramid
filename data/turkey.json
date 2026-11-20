@@ -4,7 +4,7 @@
  "adjective": "Turkish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-18T00:00:00.000Z",
+ "updated": "2026-11-19T00:00:00.000Z",
  "belowNote": "Regional amateur league champions come up",
  "leagues": [
   {
@@ -470,7 +470,7 @@
      "ga": 12,
      "pts": 17,
      "tid": 3577,
-     "form": "WWDW"
+     "form": "DWWDW"
     },
     {
      "pos": 13,
@@ -575,10 +575,10 @@
      "ga": 28,
      "pts": 4,
      "tid": 3569,
-     "form": "LLWL"
+     "form": "LLLWL"
     }
    ],
-   "updated": "2026-11-10T00:00:00.000Z"
+   "updated": "2026-11-19T00:00:00.000Z"
   },
   {
    "id": "2-lig",
@@ -621,7 +621,7 @@
    "groups": [
     {
      "name": "White Group",
-     "updated": "2026-11-18T00:00:00.000Z",
+     "updated": "2026-11-19T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -865,7 +865,7 @@
     },
     {
      "name": "Red Group",
-     "updated": "2026-11-18T00:00:00.000Z",
+     "updated": "2026-11-19T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1095,7 +1095,7 @@
      ]
     }
    ],
-   "updated": "2026-11-18T00:00:00.000Z"
+   "updated": "2026-11-19T00:00:00.000Z"
   },
   {
    "id": "3-lig",
