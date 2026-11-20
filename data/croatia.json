@@ -4,7 +4,7 @@
  "adjective": "Croatian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-17T00:00:00.000Z",
+ "updated": "2026-11-20T00:00:00.000Z",
  "belowNote": "Treća NL champions come up",
  "leagues": [
   {
@@ -295,6 +295,19 @@
     },
     {
      "pos": 7,
+     "team": "Dinamo Zagreb II",
+     "p": 13,
+     "w": 6,
+     "d": 0,
+     "l": 7,
+     "gf": 19,
+     "ga": 18,
+     "pts": 18,
+     "tid": 22416,
+     "form": "LLWLW"
+    },
+    {
+     "pos": 8,
      "team": "Orijent 1919",
      "p": 12,
      "w": 5,
@@ -307,7 +320,7 @@
      "form": "WDWWL"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "BSK Bijelo Brdo",
      "p": 12,
      "w": 5,
@@ -320,20 +333,20 @@
      "form": "LDWLL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Opatija",
-     "p": 12,
+     "p": 13,
      "w": 5,
      "d": 2,
-     "l": 5,
-     "gf": 13,
-     "ga": 15,
+     "l": 6,
+     "gf": 14,
+     "ga": 17,
      "pts": 17,
      "tid": 6246,
-     "form": "DWWLW"
+     "form": "WWLWL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Sesvete",
      "p": 12,
      "w": 4,
@@ -344,19 +357,6 @@
      "pts": 15,
      "tid": 1479,
      "form": "DLDDW"
-    },
-    {
-     "pos": 11,
-     "team": "Dinamo Zagreb II",
-     "p": 12,
-     "w": 5,
-     "d": 0,
-     "l": 7,
-     "gf": 17,
-     "ga": 17,
-     "pts": 15,
-     "tid": 22416,
-     "form": "WLLWL"
     },
     {
      "pos": 12,
@@ -424,7 +424,7 @@
      "form": "LLDWL"
     }
    ],
-   "updated": "2026-11-10T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   },
   {
    "id": "druga-nl",
@@ -658,7 +658,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-17T00:00:00.000Z"
+   "updated": "2026-11-19T00:00:00.000Z"
   }
  ]
 }
