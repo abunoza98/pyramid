@@ -4,7 +4,7 @@
  "adjective": "French",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-08T00:00:00.000Z",
+ "updated": "2026-11-20T00:00:00.000Z",
  "belowNote": "Promoted clubs from National 1 come up",
  "leagues": [
   {
@@ -288,7 +288,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   },
   {
    "id": "ligue-2",
@@ -560,7 +560,7 @@
      "form": "LDLWL"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-10T00:00:00.000Z"
   },
   {
    "id": "ligue-3",
@@ -628,19 +628,32 @@
     },
     {
      "pos": 3,
-     "team": "Caen",
-     "p": 12,
-     "w": 7,
-     "d": 1,
-     "l": 4,
-     "gf": 22,
-     "ga": 15,
-     "pts": 22,
-     "tid": 88,
-     "form": "WLWDW"
+     "team": "Amiens",
+     "p": 13,
+     "w": 6,
+     "d": 5,
+     "l": 2,
+     "gf": 18,
+     "ga": 6,
+     "pts": 23,
+     "tid": 87,
+     "form": "WDDWW"
     },
     {
      "pos": 4,
+     "team": "Caen",
+     "p": 13,
+     "w": 7,
+     "d": 1,
+     "l": 5,
+     "gf": 23,
+     "ga": 17,
+     "pts": 22,
+     "tid": 88,
+     "form": "LWDWL"
+    },
+    {
+     "pos": 5,
      "team": "Versailles",
      "p": 12,
      "w": 7,
@@ -651,19 +664,6 @@
      "pts": 22,
      "tid": 3131,
      "form": "WWWWL"
-    },
-    {
-     "pos": 5,
-     "team": "Amiens",
-     "p": 12,
-     "w": 5,
-     "d": 5,
-     "l": 2,
-     "gf": 16,
-     "ga": 5,
-     "pts": 20,
-     "tid": 87,
-     "form": "DWDDW"
     },
     {
      "pos": 6,
@@ -835,7 +835,7 @@
      "form": "DLLLD"
     }
    ],
-   "updated": "2026-11-07T00:00:00.000Z"
+   "updated": "2026-11-19T00:00:00.000Z"
   }
  ]
 }
