@@ -4,7 +4,7 @@
  "adjective": "Dutch",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-20T00:00:00.000Z",
+ "updated": "2026-11-21T00:00:00.000Z",
  "belowNote": "The top Derde Divisie clubs come up",
  "leagues": [
   {
@@ -288,7 +288,7 @@
      "form": "LLLLD"
     }
    ],
-   "updated": "2026-11-10T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   },
   {
    "id": "eerste-divisie",
@@ -577,7 +577,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-11-20T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "tweede-divisie",
@@ -616,6 +616,19 @@
     },
     {
      "pos": 2,
+     "team": "HHC",
+     "p": 14,
+     "w": 9,
+     "d": 3,
+     "l": 2,
+     "gf": 25,
+     "ga": 16,
+     "pts": 30,
+     "tid": 1278,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 3,
      "team": "IJsselmeervogels",
      "p": 13,
      "w": 9,
@@ -628,7 +641,7 @@
      "form": "LWWWW"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Kozakken Boys",
      "p": 13,
      "w": 8,
@@ -639,19 +652,6 @@
      "pts": 27,
      "tid": 1242,
      "form": "WDLWW"
-    },
-    {
-     "pos": 4,
-     "team": "HHC",
-     "p": 13,
-     "w": 8,
-     "d": 3,
-     "l": 2,
-     "gf": 24,
-     "ga": 16,
-     "pts": 27,
-     "tid": 1278,
-     "form": "DWWWW"
     },
     {
      "pos": 5,
@@ -733,32 +733,45 @@
     },
     {
      "pos": 11,
-     "team": "Koninklijke HFC",
-     "p": 13,
-     "w": 4,
-     "d": 3,
-     "l": 6,
-     "gf": 21,
-     "ga": 23,
-     "pts": 15,
-     "tid": 1246,
-     "form": "LWLWW"
+     "team": "Rijnsburgse Boys",
+     "p": 14,
+     "w": 5,
+     "d": 1,
+     "l": 8,
+     "gf": 20,
+     "ga": 33,
+     "pts": 16,
+     "tid": 1248,
+     "form": "WLLLW"
     },
     {
      "pos": 12,
-     "team": "Katwijk",
-     "p": 13,
+     "team": "Koninklijke HFC",
+     "p": 14,
      "w": 4,
      "d": 3,
-     "l": 6,
-     "gf": 17,
-     "ga": 26,
+     "l": 7,
+     "gf": 21,
+     "ga": 24,
      "pts": 15,
-     "tid": 1237,
-     "form": "LLWLD"
+     "tid": 1246,
+     "form": "WLWWL"
     },
     {
      "pos": 13,
+     "team": "Katwijk",
+     "p": 14,
+     "w": 4,
+     "d": 3,
+     "l": 7,
+     "gf": 17,
+     "ga": 28,
+     "pts": 15,
+     "tid": 1237,
+     "form": "LWLDL"
+    },
+    {
+     "pos": 14,
      "team": "Sparta Rotterdam II",
      "p": 13,
      "w": 3,
@@ -771,7 +784,7 @@
      "form": "LLDDL"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Almere City II",
      "p": 13,
      "w": 4,
@@ -784,7 +797,7 @@
      "form": "WLWLL"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Hoek",
      "p": 13,
      "w": 3,
@@ -795,19 +808,6 @@
      "pts": 13,
      "tid": 1276,
      "form": "LDLLW"
-    },
-    {
-     "pos": 16,
-     "team": "Rijnsburgse Boys",
-     "p": 13,
-     "w": 4,
-     "d": 1,
-     "l": 8,
-     "gf": 18,
-     "ga": 33,
-     "pts": 13,
-     "tid": 1248,
-     "form": "LWLLL"
     },
     {
      "pos": 17,
@@ -836,7 +836,7 @@
      "form": "LLLLD"
     }
    ],
-   "updated": "2026-11-17T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   }
  ]
 }

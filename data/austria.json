@@ -183,7 +183,7 @@
      "form": "LLLDL"
     }
    ],
-   "updated": "2026-11-11T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "2-liga",
@@ -426,7 +426,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-20T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "regionalliga",
@@ -1075,93 +1075,93 @@
       {
        "pos": 1,
        "team": "Hohenems",
-       "p": 16,
-       "w": 13,
+       "p": 17,
+       "w": 14,
        "d": 0,
        "l": 3,
-       "gf": 45,
-       "ga": 18,
-       "pts": 39,
+       "gf": 49,
+       "ga": 19,
+       "pts": 42,
        "tid": 4945,
-       "form": "LWWWW"
+       "form": "WWWWW"
       },
       {
        "pos": 2,
        "team": "Imst",
-       "p": 16,
-       "w": 12,
+       "p": 17,
+       "w": 13,
        "d": 2,
        "l": 2,
-       "gf": 36,
+       "gf": 39,
        "ga": 12,
-       "pts": 38,
+       "pts": 41,
        "tid": 14709,
-       "form": "WWWWD"
+       "form": "WWWDW"
       },
       {
        "pos": 3,
        "team": "Schwaz",
-       "p": 16,
-       "w": 12,
+       "p": 17,
+       "w": 13,
        "d": 1,
        "l": 3,
-       "gf": 45,
-       "ga": 24,
-       "pts": 37,
+       "gf": 52,
+       "ga": 27,
+       "pts": 40,
        "tid": 4957,
-       "form": "WWWWL"
+       "form": "WWWLW"
       },
       {
        "pos": 4,
        "team": "Kitzbühel",
-       "p": 16,
-       "w": 10,
+       "p": 17,
+       "w": 11,
        "d": 1,
        "l": 5,
-       "gf": 34,
+       "gf": 36,
        "ga": 22,
-       "pts": 31,
+       "pts": 34,
        "tid": 4947,
-       "form": "DWLWW"
+       "form": "WLWWW"
       },
       {
        "pos": 5,
        "team": "Dornbirn",
-       "p": 16,
-       "w": 8,
+       "p": 17,
+       "w": 9,
        "d": 4,
        "l": 4,
-       "gf": 28,
-       "ga": 18,
-       "pts": 28,
+       "gf": 31,
+       "ga": 19,
+       "pts": 31,
        "tid": 4255,
-       "form": "DLLDW"
+       "form": "LLDWW"
       },
       {
        "pos": 6,
        "team": "Fügen",
-       "p": 16,
+       "p": 17,
        "w": 8,
        "d": 1,
-       "l": 7,
+       "l": 8,
        "gf": 35,
-       "ga": 35,
+       "ga": 37,
        "pts": 25,
        "tid": 8335,
-       "form": "WLWWW"
+       "form": "LWWWL"
       },
       {
        "pos": 7,
        "team": "Röthis",
-       "p": 16,
+       "p": 17,
        "w": 7,
        "d": 4,
-       "l": 5,
-       "gf": 30,
-       "ga": 30,
+       "l": 6,
+       "gf": 33,
+       "ga": 37,
        "pts": 25,
        "tid": 8258,
-       "form": "WWLLD"
+       "form": "WLLDL"
       },
       {
        "pos": 8,
@@ -1192,15 +1192,15 @@
       {
        "pos": 10,
        "team": "Kufstein",
-       "p": 16,
+       "p": 17,
        "w": 4,
        "d": 7,
-       "l": 5,
-       "gf": 23,
-       "ga": 20,
+       "l": 6,
+       "gf": 25,
+       "ga": 24,
        "pts": 19,
        "tid": 4948,
-       "form": "DWWDD"
+       "form": "WWDDL"
       },
       {
        "pos": 11,
@@ -1218,18 +1218,31 @@
       {
        "pos": 12,
        "team": "Lauterach",
-       "p": 16,
+       "p": 17,
        "w": 4,
        "d": 5,
-       "l": 7,
+       "l": 8,
        "gf": 28,
-       "ga": 35,
+       "ga": 38,
        "pts": 17,
        "tid": 8255,
-       "form": "WWDLD"
+       "form": "WDLDL"
       },
       {
        "pos": 13,
+       "team": "Lochau",
+       "p": 17,
+       "w": 4,
+       "d": 2,
+       "l": 11,
+       "gf": 21,
+       "ga": 44,
+       "pts": 14,
+       "tid": 8359,
+       "form": "LLLLW"
+      },
+      {
+       "pos": 14,
        "team": "Rheindorf Altach II",
        "p": 16,
        "w": 3,
@@ -1242,43 +1255,30 @@
        "form": "LWDLW"
       },
       {
-       "pos": 14,
-       "team": "Lochau",
-       "p": 16,
-       "w": 3,
-       "d": 2,
-       "l": 11,
-       "gf": 17,
-       "ga": 42,
-       "pts": 11,
-       "tid": 8359,
-       "form": "LLLLL"
-      },
-      {
        "pos": 15,
        "team": "Lustenau",
-       "p": 16,
+       "p": 17,
        "w": 1,
        "d": 5,
-       "l": 10,
-       "gf": 19,
-       "ga": 47,
+       "l": 11,
+       "gf": 20,
+       "ga": 51,
        "pts": 8,
        "tid": 8361,
-       "form": "LLDLL"
+       "form": "LDLLL"
       },
       {
        "pos": 16,
        "team": "Wolfurt",
-       "p": 16,
+       "p": 17,
        "w": 1,
        "d": 2,
-       "l": 13,
-       "gf": 20,
-       "ga": 50,
+       "l": 14,
+       "gf": 21,
+       "ga": 53,
        "pts": 5,
        "tid": 4968,
-       "form": "LLLDL"
+       "form": "LLDLL"
       }
      ]
     }

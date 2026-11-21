@@ -4,7 +4,7 @@
  "adjective": "Australian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-20T00:00:00.000Z",
+ "updated": "2026-11-21T00:00:00.000Z",
  "belowNote": "Below the NPL, each state has its own divisions",
  "systemNote": "There's no promotion or relegation between the A-League and the state leagues. Within each state, clubs move between its NPL and its second division.",
  "leagues": [
@@ -68,31 +68,44 @@
     {
      "pos": 3,
      "team": "Sydney FC",
-     "p": 4,
+     "p": 5,
      "w": 2,
-     "d": 1,
+     "d": 2,
      "l": 1,
      "gf": 7,
      "ga": 4,
-     "pts": 7,
+     "pts": 8,
      "tid": 943,
-     "form": "DWLW"
+     "form": "DWLWD"
     },
     {
      "pos": 4,
      "team": "Brisbane Roar",
-     "p": 3,
+     "p": 4,
      "w": 2,
-     "d": 1,
+     "d": 2,
      "l": 0,
      "gf": 5,
      "ga": 3,
-     "pts": 7,
+     "pts": 8,
      "tid": 947,
-     "form": "WDW"
+     "form": "WDWD"
     },
     {
      "pos": 5,
+     "team": "Perth Glory",
+     "p": 5,
+     "w": 2,
+     "d": 1,
+     "l": 2,
+     "gf": 8,
+     "ga": 5,
+     "pts": 7,
+     "tid": 940,
+     "form": "LLWWD"
+    },
+    {
+     "pos": 6,
      "team": "Melbourne City",
      "p": 4,
      "w": 2,
@@ -103,19 +116,6 @@
      "pts": 7,
      "tid": 945,
      "form": "LDWW"
-    },
-    {
-     "pos": 6,
-     "team": "Perth Glory",
-     "p": 4,
-     "w": 2,
-     "d": 0,
-     "l": 2,
-     "gf": 8,
-     "ga": 5,
-     "pts": 6,
-     "tid": 940,
-     "form": "LLWW"
     },
     {
      "pos": 7,
@@ -158,6 +158,19 @@
     },
     {
      "pos": 10,
+     "team": "Central Coast Mariners",
+     "p": 5,
+     "w": 0,
+     "d": 3,
+     "l": 2,
+     "gf": 4,
+     "ga": 9,
+     "pts": 3,
+     "tid": 941,
+     "form": "DLDLD"
+    },
+    {
+     "pos": 11,
      "team": "Newcastle Jets",
      "p": 4,
      "w": 0,
@@ -168,19 +181,6 @@
      "pts": 2,
      "tid": 946,
      "form": "DDLL"
-    },
-    {
-     "pos": 11,
-     "team": "Central Coast Mariners",
-     "p": 4,
-     "w": 0,
-     "d": 2,
-     "l": 2,
-     "gf": 4,
-     "ga": 9,
-     "pts": 2,
-     "tid": 941,
-     "form": "DLDL"
     },
     {
      "pos": 12,
@@ -196,7 +196,7 @@
      "form": "LLDL"
     }
    ],
-   "updated": "2026-11-20T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "npl",

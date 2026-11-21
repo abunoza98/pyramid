@@ -335,15 +335,15 @@
     {
      "pos": 2,
      "team": "1. FC Nürnberg",
-     "p": 11,
+     "p": 12,
      "w": 7,
      "d": 3,
-     "l": 1,
-     "gf": 26,
-     "ga": 13,
+     "l": 2,
+     "gf": 27,
+     "ga": 15,
      "pts": 24,
      "tid": 171,
-     "form": "DDLWW"
+     "form": "DLWWL"
     },
     {
      "pos": 3,
@@ -360,6 +360,19 @@
     },
     {
      "pos": 4,
+     "team": "VfL Wolfsburg",
+     "p": 12,
+     "w": 6,
+     "d": 4,
+     "l": 2,
+     "gf": 29,
+     "ga": 16,
+     "pts": 22,
+     "tid": 161,
+     "form": "WDWLW"
+    },
+    {
+     "pos": 5,
      "team": "1. FC Kaiserslautern",
      "p": 11,
      "w": 6,
@@ -370,19 +383,6 @@
      "pts": 21,
      "tid": 745,
      "form": "DWWLW"
-    },
-    {
-     "pos": 5,
-     "team": "VfL Wolfsburg",
-     "p": 11,
-     "w": 5,
-     "d": 4,
-     "l": 2,
-     "gf": 26,
-     "ga": 16,
-     "pts": 19,
-     "tid": 161,
-     "form": "DWDWL"
     },
     {
      "pos": 6,
@@ -412,6 +412,32 @@
     },
     {
      "pos": 8,
+     "team": "Hannover 96",
+     "p": 12,
+     "w": 4,
+     "d": 3,
+     "l": 5,
+     "gf": 14,
+     "ga": 19,
+     "pts": 15,
+     "tid": 166,
+     "form": "DLWDW"
+    },
+    {
+     "pos": 9,
+     "team": "Eintracht Braunschweig",
+     "p": 12,
+     "w": 4,
+     "d": 2,
+     "l": 6,
+     "gf": 18,
+     "ga": 19,
+     "pts": 14,
+     "tid": 744,
+     "form": "LWLDW"
+    },
+    {
+     "pos": 10,
      "team": "VfL Bochum",
      "p": 11,
      "w": 4,
@@ -424,7 +450,7 @@
      "form": "LLDWW"
     },
     {
-     "pos": 9,
+     "pos": 11,
      "team": "FC St. Pauli",
      "p": 11,
      "w": 2,
@@ -437,33 +463,20 @@
      "form": "WDDLL"
     },
     {
-     "pos": 10,
+     "pos": 12,
      "team": "Greuther Fürth",
-     "p": 11,
+     "p": 12,
      "w": 3,
      "d": 3,
-     "l": 5,
-     "gf": 13,
-     "ga": 19,
+     "l": 6,
+     "gf": 14,
+     "ga": 21,
      "pts": 12,
      "tid": 178,
-     "form": "LWLWL"
+     "form": "WLWLL"
     },
     {
-     "pos": 11,
-     "team": "Hannover 96",
-     "p": 11,
-     "w": 3,
-     "d": 3,
-     "l": 5,
-     "gf": 12,
-     "ga": 18,
-     "pts": 12,
-     "tid": 166,
-     "form": "LDLWD"
-    },
-    {
-     "pos": 12,
+     "pos": 13,
      "team": "Darmstadt 98",
      "p": 12,
      "w": 3,
@@ -476,7 +489,7 @@
      "form": "LDDLW"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Energie Cottbus",
      "p": 11,
      "w": 2,
@@ -487,19 +500,6 @@
      "pts": 11,
      "tid": 1320,
      "form": "LDDLD"
-    },
-    {
-     "pos": 14,
-     "team": "Eintracht Braunschweig",
-     "p": 11,
-     "w": 3,
-     "d": 2,
-     "l": 6,
-     "gf": 16,
-     "ga": 18,
-     "pts": 11,
-     "tid": 744,
-     "form": "WLWLD"
     },
     {
      "pos": 15,
@@ -543,18 +543,18 @@
     {
      "pos": 18,
      "team": "Holstein Kiel",
-     "p": 11,
+     "p": 12,
      "w": 1,
      "d": 5,
-     "l": 5,
+     "l": 6,
      "gf": 11,
-     "ga": 14,
+     "ga": 17,
      "pts": 8,
      "tid": 191,
-     "form": "LDWLL"
+     "form": "DWLLL"
     }
    ],
-   "updated": "2026-11-20T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "3-liga",
@@ -602,6 +602,19 @@
     },
     {
      "pos": 2,
+     "team": "Rot-Weiss Essen",
+     "p": 14,
+     "w": 9,
+     "d": 3,
+     "l": 2,
+     "gf": 24,
+     "ga": 13,
+     "pts": 30,
+     "tid": 1621,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 3,
      "team": "MSV Duisburg",
      "p": 13,
      "w": 9,
@@ -614,20 +627,20 @@
      "form": "WDLDW"
     },
     {
-     "pos": 3,
-     "team": "Rot-Weiss Essen",
-     "p": 13,
-     "w": 8,
-     "d": 3,
-     "l": 2,
-     "gf": 21,
-     "ga": 13,
-     "pts": 27,
-     "tid": 1621,
-     "form": "WLWWW"
+     "pos": 4,
+     "team": "TSG Hoffenheim II",
+     "p": 14,
+     "w": 7,
+     "d": 1,
+     "l": 6,
+     "gf": 26,
+     "ga": 20,
+     "pts": 22,
+     "tid": 9364,
+     "form": "WLLWW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Wehen Wiesbaden",
      "p": 13,
      "w": 6,
@@ -640,7 +653,7 @@
      "form": "WDWWW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "FC Ingolstadt",
      "p": 13,
      "w": 6,
@@ -653,7 +666,7 @@
      "form": "WWWDW"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "1. FC Saarbrücken",
      "p": 13,
      "w": 6,
@@ -666,7 +679,7 @@
      "form": "LWLWL"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Alemannia Aachen",
      "p": 13,
      "w": 6,
@@ -679,7 +692,7 @@
      "form": "LWWWL"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Waldhof Mannheim",
      "p": 13,
      "w": 6,
@@ -690,19 +703,6 @@
      "pts": 19,
      "tid": 4268,
      "form": "LLWLW"
-    },
-    {
-     "pos": 9,
-     "team": "TSG Hoffenheim II",
-     "p": 13,
-     "w": 6,
-     "d": 1,
-     "l": 6,
-     "gf": 22,
-     "ga": 20,
-     "pts": 19,
-     "tid": 9364,
-     "form": "LWLLW"
     },
     {
      "pos": 10,
@@ -719,16 +719,16 @@
     },
     {
      "pos": 11,
-     "team": "SV Meppen",
-     "p": 13,
+     "team": "Fortuna Düsseldorf",
+     "p": 14,
      "w": 5,
-     "d": 3,
+     "d": 4,
      "l": 5,
-     "gf": 18,
+     "gf": 17,
      "ga": 18,
-     "pts": 18,
-     "tid": 1318,
-     "form": "WDWDW"
+     "pts": 19,
+     "tid": 158,
+     "form": "LDDLW"
     },
     {
      "pos": 12,
@@ -745,94 +745,94 @@
     },
     {
      "pos": 13,
-     "team": "Fortuna Düsseldorf",
-     "p": 13,
-     "w": 4,
-     "d": 4,
-     "l": 5,
-     "gf": 14,
-     "ga": 17,
-     "pts": 16,
-     "tid": 158,
-     "form": "WLDDL"
+     "team": "SV Meppen",
+     "p": 14,
+     "w": 5,
+     "d": 3,
+     "l": 6,
+     "gf": 19,
+     "ga": 20,
+     "pts": 18,
+     "tid": 1318,
+     "form": "DWDWL"
     },
     {
      "pos": 14,
-     "team": "Preußen Münster",
-     "p": 13,
+     "team": "Jahn Regensburg",
+     "p": 14,
      "w": 4,
-     "d": 3,
+     "d": 4,
      "l": 6,
-     "gf": 21,
-     "ga": 25,
-     "pts": 15,
-     "tid": 1313,
-     "form": "LLWLL"
+     "gf": 25,
+     "ga": 24,
+     "pts": 16,
+     "tid": 177,
+     "form": "DLWLW"
     },
     {
      "pos": 15,
-     "team": "Würzburger Kickers",
-     "p": 13,
+     "team": "Preußen Münster",
+     "p": 14,
      "w": 4,
-     "d": 2,
+     "d": 3,
      "l": 7,
-     "gf": 17,
-     "ga": 25,
-     "pts": 14,
-     "tid": 784,
-     "form": "DWLWL"
+     "gf": 21,
+     "ga": 29,
+     "pts": 15,
+     "tid": 1313,
+     "form": "LWLLL"
     },
     {
      "pos": 16,
-     "team": "Jahn Regensburg",
-     "p": 13,
-     "w": 3,
-     "d": 4,
-     "l": 6,
-     "gf": 23,
-     "ga": 23,
-     "pts": 13,
-     "tid": 177,
-     "form": "DDLWL"
+     "team": "Würzburger Kickers",
+     "p": 14,
+     "w": 4,
+     "d": 2,
+     "l": 8,
+     "gf": 18,
+     "ga": 27,
+     "pts": 14,
+     "tid": 784,
+     "form": "WLWLL"
     },
     {
      "pos": 17,
-     "team": "SC Verl",
-     "p": 13,
+     "team": "Fortuna Köln",
+     "p": 14,
      "w": 3,
-     "d": 3,
+     "d": 4,
      "l": 7,
-     "gf": 17,
-     "ga": 27,
-     "pts": 12,
-     "tid": 4265,
-     "form": "DLLLL"
+     "gf": 12,
+     "ga": 17,
+     "pts": 13,
+     "tid": 1326,
+     "form": "LLLLW"
     },
     {
      "pos": 18,
-     "team": "Sonnenhof Großaspach",
-     "p": 13,
+     "team": "SC Verl",
+     "p": 14,
      "w": 3,
      "d": 3,
-     "l": 7,
-     "gf": 13,
-     "ga": 29,
+     "l": 8,
+     "gf": 17,
+     "ga": 30,
      "pts": 12,
-     "tid": 1317,
-     "form": "DWLLL"
+     "tid": 4265,
+     "form": "LLLLL"
     },
     {
      "pos": 19,
-     "team": "Fortuna Köln",
-     "p": 13,
-     "w": 2,
-     "d": 4,
-     "l": 7,
-     "gf": 10,
-     "ga": 16,
-     "pts": 10,
-     "tid": 1326,
-     "form": "LLLLL"
+     "team": "Sonnenhof Großaspach",
+     "p": 14,
+     "w": 3,
+     "d": 3,
+     "l": 8,
+     "gf": 14,
+     "ga": 32,
+     "pts": 12,
+     "tid": 1317,
+     "form": "WLLLL"
     },
     {
      "pos": 20,
@@ -848,7 +848,7 @@
      "form": "DWDLL"
     }
    ],
-   "updated": "2026-11-20T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   }
  ]
 }

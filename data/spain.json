@@ -4,7 +4,7 @@
  "adjective": "Spanish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-20T00:00:00.000Z",
+ "updated": "2026-11-21T00:00:00.000Z",
  "belowNote": "Promoted clubs from Segunda Federación come up",
  "leagues": [
   {
@@ -302,7 +302,7 @@
      "form": "DLDLL"
     }
    ],
-   "updated": "2026-11-20T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "segunda",
@@ -622,7 +622,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-20T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "primera-federacion",
@@ -656,7 +656,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-19T00:00:00.000Z",
+     "updated": "2026-11-21T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -700,15 +700,15 @@
       {
        "pos": 4,
        "team": "Mirandés",
-       "p": 12,
+       "p": 13,
        "w": 6,
        "d": 2,
-       "l": 4,
+       "l": 5,
        "gf": 16,
-       "ga": 13,
+       "ga": 14,
        "pts": 20,
        "tid": 799,
-       "form": "LWWLW"
+       "form": "WWLWL"
       },
       {
        "pos": 5,
@@ -725,6 +725,19 @@
       },
       {
        "pos": 6,
+       "team": "Bilbao Athletic",
+       "p": 13,
+       "w": 5,
+       "d": 4,
+       "l": 4,
+       "gf": 18,
+       "ga": 15,
+       "pts": 19,
+       "tid": 9579,
+       "form": "LWLDW"
+      },
+      {
+       "pos": 7,
        "team": "Avilés",
        "p": 12,
        "w": 5,
@@ -737,7 +750,7 @@
        "form": "WLWWD"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Cacereño",
        "p": 12,
        "w": 5,
@@ -750,7 +763,7 @@
        "form": "LWLLW"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Racing Ferrol",
        "p": 12,
        "w": 5,
@@ -763,7 +776,7 @@
        "form": "WLDLD"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Extremadura",
        "p": 12,
        "w": 5,
@@ -774,19 +787,6 @@
        "pts": 16,
        "tid": 24612,
        "form": "DWWLL"
-      },
-      {
-       "pos": 10,
-       "team": "Bilbao Athletic",
-       "p": 12,
-       "w": 4,
-       "d": 4,
-       "l": 4,
-       "gf": 17,
-       "ga": 15,
-       "pts": 16,
-       "tid": 9579,
-       "form": "LLWLD"
       },
       {
        "pos": 11,
@@ -922,7 +922,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-20T00:00:00.000Z",
+     "updated": "2026-11-21T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1187,7 +1187,7 @@
      ]
     }
    ],
-   "updated": "2026-11-20T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   }
  ]
 }

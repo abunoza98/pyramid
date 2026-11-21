@@ -44,15 +44,15 @@
     {
      "pos": 1,
      "team": "Lazio",
-     "p": 11,
-     "w": 9,
+     "p": 12,
+     "w": 10,
      "d": 2,
      "l": 0,
-     "gf": 25,
+     "gf": 28,
      "ga": 9,
-     "pts": 29,
+     "pts": 32,
      "tid": 487,
-     "form": "WWWWD"
+     "form": "WWWDW"
     },
     {
      "pos": 2,
@@ -82,6 +82,19 @@
     },
     {
      "pos": 4,
+     "team": "Como",
+     "p": 12,
+     "w": 8,
+     "d": 2,
+     "l": 2,
+     "gf": 20,
+     "ga": 10,
+     "pts": 26,
+     "tid": 895,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 5,
      "team": "AC Milan",
      "p": 11,
      "w": 7,
@@ -92,19 +105,6 @@
      "pts": 24,
      "tid": 489,
      "form": "WWLWW"
-    },
-    {
-     "pos": 5,
-     "team": "Como",
-     "p": 11,
-     "w": 7,
-     "d": 2,
-     "l": 2,
-     "gf": 18,
-     "ga": 10,
-     "pts": 23,
-     "tid": 895,
-     "form": "WWWWL"
     },
     {
      "pos": 6,
@@ -148,15 +148,15 @@
     {
      "pos": 9,
      "team": "Cagliari",
-     "p": 11,
+     "p": 12,
      "w": 5,
      "d": 1,
-     "l": 5,
+     "l": 6,
      "gf": 10,
-     "ga": 15,
+     "ga": 17,
      "pts": 16,
      "tid": 490,
-     "form": "LLLLW"
+     "form": "LLLWL"
     },
     {
      "pos": 10,
@@ -213,15 +213,15 @@
     {
      "pos": 14,
      "team": "Lecce",
-     "p": 11,
+     "p": 12,
      "w": 3,
      "d": 1,
-     "l": 7,
+     "l": 8,
      "gf": 12,
-     "ga": 22,
+     "ga": 25,
      "pts": 10,
      "tid": 867,
-     "form": "WLLLD"
+     "form": "LLLDL"
     },
     {
      "pos": 15,
@@ -604,7 +604,7 @@
      "form": "DLDDL"
     }
    ],
-   "updated": "2026-11-20T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "serie-c",
@@ -652,7 +652,7 @@
    "groups": [
     {
      "name": "Girone A",
-     "updated": "2026-11-20T00:00:00.000Z",
+     "updated": "2026-11-21T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -708,6 +708,19 @@
       },
       {
        "pos": 5,
+       "team": "Treviso",
+       "p": 15,
+       "w": 7,
+       "d": 4,
+       "l": 4,
+       "gf": 15,
+       "ga": 12,
+       "pts": 25,
+       "tid": 22319,
+       "form": "WLWLW"
+      },
+      {
+       "pos": 6,
        "team": "Arzignano Valchiampo",
        "p": 14,
        "w": 7,
@@ -718,19 +731,6 @@
        "pts": 24,
        "tid": 6378,
        "form": "LWDLW"
-      },
-      {
-       "pos": 6,
-       "team": "Treviso",
-       "p": 14,
-       "w": 6,
-       "d": 4,
-       "l": 4,
-       "gf": 14,
-       "ga": 12,
-       "pts": 22,
-       "tid": 22319,
-       "form": "WWLWL"
       },
       {
        "pos": 7,
@@ -761,15 +761,15 @@
       {
        "pos": 9,
        "team": "Pergolettese",
-       "p": 14,
+       "p": 15,
        "w": 4,
        "d": 6,
-       "l": 4,
+       "l": 5,
        "gf": 14,
-       "ga": 15,
+       "ga": 16,
        "pts": 18,
        "tid": 6380,
-       "form": "WWLLD"
+       "form": "WLLDL"
       },
       {
        "pos": 10,
@@ -918,7 +918,7 @@
     },
     {
      "name": "Girone B",
-     "updated": "2026-11-19T00:00:00.000Z",
+     "updated": "2026-11-21T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1013,6 +1013,19 @@
       },
       {
        "pos": 8,
+       "team": "Latina",
+       "p": 15,
+       "w": 5,
+       "d": 6,
+       "l": 4,
+       "gf": 17,
+       "ga": 14,
+       "pts": 21,
+       "tid": 804,
+       "form": "DDLWW"
+      },
+      {
+       "pos": 9,
        "team": "Livorno",
        "p": 14,
        "w": 5,
@@ -1025,7 +1038,20 @@
        "form": "DLWDD"
       },
       {
-       "pos": 9,
+       "pos": 10,
+       "team": "Atalanta U23",
+       "p": 14,
+       "w": 6,
+       "d": 1,
+       "l": 7,
+       "gf": 18,
+       "ga": 21,
+       "pts": 19,
+       "tid": 22104,
+       "form": "LWLWD"
+      },
+      {
+       "pos": 11,
        "team": "Campobasso",
        "p": 14,
        "w": 5,
@@ -1036,32 +1062,6 @@
        "pts": 19,
        "tid": 9510,
        "form": "LWWDL"
-      },
-      {
-       "pos": 10,
-       "team": "Latina",
-       "p": 14,
-       "w": 4,
-       "d": 6,
-       "l": 4,
-       "gf": 16,
-       "ga": 14,
-       "pts": 18,
-       "tid": 804,
-       "form": "WDDLW"
-      },
-      {
-       "pos": 11,
-       "team": "Atalanta U23",
-       "p": 13,
-       "w": 6,
-       "d": 0,
-       "l": 7,
-       "gf": 18,
-       "ga": 21,
-       "pts": 18,
-       "tid": 22104,
-       "form": "WLWLW"
       },
       {
        "pos": 12,
@@ -1092,15 +1092,15 @@
       {
        "pos": 14,
        "team": "Vado",
-       "p": 14,
+       "p": 15,
        "w": 4,
        "d": 4,
-       "l": 6,
+       "l": 7,
        "gf": 15,
-       "ga": 19,
+       "ga": 20,
        "pts": 16,
        "tid": 9442,
-       "form": "DWDLL"
+       "form": "WDLLL"
       },
       {
        "pos": 15,
@@ -1130,6 +1130,19 @@
       },
       {
        "pos": 17,
+       "team": "Ostia Mare",
+       "p": 15,
+       "w": 2,
+       "d": 5,
+       "l": 8,
+       "gf": 12,
+       "ga": 21,
+       "pts": 11,
+       "tid": 9530,
+       "form": "LLLDD"
+      },
+      {
+       "pos": 18,
        "team": "Gubbio",
        "p": 14,
        "w": 3,
@@ -1142,7 +1155,7 @@
        "form": "LLDLW"
       },
       {
-       "pos": 18,
+       "pos": 19,
        "team": "Sambenedettese",
        "p": 14,
        "w": 2,
@@ -1153,19 +1166,6 @@
        "pts": 10,
        "tid": 871,
        "form": "DWLLL"
-      },
-      {
-       "pos": 19,
-       "team": "Ostia Mare",
-       "p": 14,
-       "w": 2,
-       "d": 4,
-       "l": 8,
-       "gf": 12,
-       "ga": 21,
-       "pts": 10,
-       "tid": 9530,
-       "form": "LLLLD"
       },
       {
        "pos": 20,
@@ -1184,20 +1184,20 @@
     },
     {
      "name": "Girone C",
-     "updated": "2026-11-20T00:00:00.000Z",
+     "updated": "2026-11-21T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
        "team": "Potenza",
-       "p": 14,
+       "p": 15,
        "w": 11,
        "d": 2,
-       "l": 1,
-       "gf": 39,
-       "ga": 18,
+       "l": 2,
+       "gf": 40,
+       "ga": 20,
        "pts": 35,
        "tid": 1710,
-       "form": "WDWWW"
+       "form": "DWWWL"
       },
       {
        "pos": 2,
@@ -1214,6 +1214,32 @@
       },
       {
        "pos": 3,
+       "team": "Monopoli",
+       "p": 15,
+       "w": 6,
+       "d": 5,
+       "l": 4,
+       "gf": 15,
+       "ga": 11,
+       "pts": 23,
+       "tid": 10138,
+       "form": "WDDLW"
+      },
+      {
+       "pos": 4,
+       "team": "Inter Milan U23",
+       "p": 14,
+       "w": 7,
+       "d": 2,
+       "l": 5,
+       "gf": 24,
+       "ga": 21,
+       "pts": 23,
+       "tid": 26355,
+       "form": "DWLWW"
+      },
+      {
+       "pos": 5,
        "team": "Sorrento",
        "p": 14,
        "w": 7,
@@ -1226,7 +1252,7 @@
        "form": "DDLLW"
       },
       {
-       "pos": 4,
+       "pos": 6,
        "team": "Catania",
        "p": 14,
        "w": 7,
@@ -1239,7 +1265,20 @@
        "form": "LWLWL"
       },
       {
-       "pos": 5,
+       "pos": 7,
+       "team": "Audace Cerignola",
+       "p": 14,
+       "w": 6,
+       "d": 3,
+       "l": 5,
+       "gf": 21,
+       "ga": 16,
+       "pts": 21,
+       "tid": 9539,
+       "form": "WLWLD"
+      },
+      {
+       "pos": 8,
        "team": "Scafatese",
        "p": 14,
        "w": 5,
@@ -1252,7 +1291,7 @@
        "form": "WLDWL"
       },
       {
-       "pos": 6,
+       "pos": 9,
        "team": "Casertana",
        "p": 15,
        "w": 5,
@@ -1265,56 +1304,17 @@
        "form": "DLWLD"
       },
       {
-       "pos": 7,
-       "team": "Audace Cerignola",
-       "p": 13,
-       "w": 6,
-       "d": 2,
-       "l": 5,
-       "gf": 20,
-       "ga": 15,
-       "pts": 20,
-       "tid": 9539,
-       "form": "WWLWL"
-      },
-      {
-       "pos": 8,
-       "team": "Monopoli",
-       "p": 14,
-       "w": 5,
-       "d": 5,
-       "l": 4,
-       "gf": 14,
-       "ga": 11,
-       "pts": 20,
-       "tid": 10138,
-       "form": "WWDDL"
-      },
-      {
-       "pos": 9,
-       "team": "Inter Milan U23",
-       "p": 13,
-       "w": 6,
-       "d": 2,
-       "l": 5,
-       "gf": 22,
-       "ga": 20,
-       "pts": 20,
-       "tid": 26355,
-       "form": "LDWLW"
-      },
-      {
        "pos": 10,
        "team": "Cavese",
-       "p": 14,
+       "p": 15,
        "w": 5,
        "d": 4,
-       "l": 5,
+       "l": 6,
        "gf": 24,
-       "ga": 22,
+       "ga": 23,
        "pts": 19,
        "tid": 1712,
-       "form": "WLLDW"
+       "form": "LLDWL"
       },
       {
        "pos": 11,
@@ -1331,6 +1331,19 @@
       },
       {
        "pos": 12,
+       "team": "Barletta",
+       "p": 15,
+       "w": 4,
+       "d": 7,
+       "l": 4,
+       "gf": 17,
+       "ga": 17,
+       "pts": 19,
+       "tid": 19968,
+       "form": "LDWWD"
+      },
+      {
+       "pos": 13,
        "team": "Salernitana",
        "p": 15,
        "w": 4,
@@ -1341,19 +1354,6 @@
        "pts": 19,
        "tid": 514,
        "form": "LDLWD"
-      },
-      {
-       "pos": 13,
-       "team": "Barletta",
-       "p": 14,
-       "w": 4,
-       "d": 6,
-       "l": 4,
-       "gf": 16,
-       "ga": 16,
-       "pts": 18,
-       "tid": 19968,
-       "form": "WLDWW"
       },
       {
        "pos": 14,
@@ -1450,7 +1450,7 @@
      ]
     }
    ],
-   "updated": "2026-11-20T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   }
  ]
 }
