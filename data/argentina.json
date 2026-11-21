@@ -4,7 +4,7 @@
  "adjective": "Argentine",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-10T00:00:00.000Z",
+ "updated": "2026-11-21T00:00:00.000Z",
  "belowNote": "Promoted clubs from Primera D come up",
  "leagues": [
   {
@@ -22,14 +22,14 @@
     }
    ],
    "notes": [
-    "These are the Liga Profesional Argentina tables.",
+    "These are the Tabla Anual tables.",
     "The year has two tournaments, the Apertura and the Clausura. The top eight in each group go into a knockout stage for the title.",
     "Relegation is decided by a table of the whole year and by average points over recent seasons, so it isn't shown here."
    ],
    "groups": [
     {
-     "name": "Liga Profesional Argentina",
-     "updated": "2026-11-10T00:00:00.000Z",
+     "name": "Tabla Anual",
+     "updated": "2026-11-21T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -107,7 +107,7 @@
        "ga": 29,
        "pts": 56,
        "tid": 438,
-       "form": "LWWDL"
+       "form": "WWDLW"
       },
       {
        "pos": 7,
@@ -159,7 +159,7 @@
        "ga": 28,
        "pts": 49,
        "tid": 440,
-       "form": "WLLDL"
+       "form": "LLDLL"
       },
       {
        "pos": 11,
@@ -424,7 +424,7 @@
      ]
     }
    ],
-   "updated": "2026-11-10T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "primera-nacional",
@@ -458,7 +458,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-05T00:00:00.000Z",
+     "updated": "2026-11-20T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -698,7 +698,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-05T00:00:00.000Z",
+     "updated": "2026-11-20T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -937,7 +937,7 @@
      ]
     }
    ],
-   "updated": "2026-11-05T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   },
   {
    "id": "primera-b-metropolitana",
@@ -1257,7 +1257,7 @@
      "form": "LDDLL"
     }
    ],
-   "updated": "2026-11-05T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   },
   {
    "id": "primera-c",
@@ -1290,7 +1290,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-11-05T00:00:00.000Z",
+     "updated": "2026-11-19T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1478,7 +1478,7 @@
     },
     {
      "name": "Group B",
-     "updated": "2026-11-05T00:00:00.000Z",
+     "updated": "2026-11-19T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1665,7 +1665,7 @@
      ]
     }
    ],
-   "updated": "2026-11-05T00:00:00.000Z"
+   "updated": "2026-11-19T00:00:00.000Z"
   }
  ]
 }

@@ -4,7 +4,7 @@
  "adjective": "Mexican",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-19T00:00:00.000Z",
+ "updated": "2026-11-20T00:00:00.000Z",
  "belowNote": "Promotion between Liga Premier and the Liga de Expansión is suspended",
  "leagues": [
   {
@@ -66,6 +66,19 @@
     },
     {
      "pos": 4,
+     "team": "Atlas",
+     "p": 17,
+     "w": 8,
+     "d": 4,
+     "l": 5,
+     "gf": 30,
+     "ga": 33,
+     "pts": 28,
+     "tid": 2283,
+     "form": "LWWLD"
+    },
+    {
+     "pos": 5,
      "team": "Toluca",
      "p": 16,
      "w": 7,
@@ -78,20 +91,20 @@
      "form": "DDDDW"
     },
     {
-     "pos": 5,
-     "team": "Atlas",
-     "p": 16,
-     "w": 8,
-     "d": 3,
-     "l": 5,
-     "gf": 27,
-     "ga": 30,
-     "pts": 27,
-     "tid": 2283,
-     "form": "WLWWL"
+     "pos": 6,
+     "team": "Tijuana",
+     "p": 17,
+     "w": 6,
+     "d": 7,
+     "l": 4,
+     "gf": 26,
+     "ga": 22,
+     "pts": 25,
+     "tid": 2280,
+     "form": "WDDLW"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Santos Laguna",
      "p": 16,
      "w": 8,
@@ -104,7 +117,7 @@
      "form": "WWLWW"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Monterrey",
      "p": 16,
      "w": 7,
@@ -117,8 +130,8 @@
      "form": "WLDLW"
     },
     {
-     "pos": 8,
-     "team": "Club Leon",
+     "pos": 9,
+     "team": "León",
      "p": 16,
      "w": 6,
      "d": 5,
@@ -126,10 +139,11 @@
      "gf": 23,
      "ga": 21,
      "pts": 23,
+     "tid": 2289,
      "form": "LWDLD"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Pachuca",
      "p": 16,
      "w": 6,
@@ -140,19 +154,6 @@
      "pts": 22,
      "tid": 2292,
      "form": "LLWWW"
-    },
-    {
-     "pos": 10,
-     "team": "Tijuana",
-     "p": 16,
-     "w": 5,
-     "d": 7,
-     "l": 4,
-     "gf": 25,
-     "ga": 22,
-     "pts": 22,
-     "tid": 2280,
-     "form": "DWDDL"
     },
     {
      "pos": 11,
@@ -169,6 +170,32 @@
     },
     {
      "pos": 12,
+     "team": "Puebla",
+     "p": 17,
+     "w": 5,
+     "d": 5,
+     "l": 7,
+     "gf": 20,
+     "ga": 24,
+     "pts": 20,
+     "tid": 2291,
+     "form": "LLLWD"
+    },
+    {
+     "pos": 13,
+     "team": "Atlético San Luis",
+     "p": 17,
+     "w": 5,
+     "d": 5,
+     "l": 7,
+     "gf": 20,
+     "ga": 25,
+     "pts": 20,
+     "tid": 2314,
+     "form": "WWLLD"
+    },
+    {
+     "pos": 14,
      "team": "Querétaro",
      "p": 16,
      "w": 6,
@@ -179,32 +206,6 @@
      "pts": 20,
      "tid": 2290,
      "form": "LLLLL"
-    },
-    {
-     "pos": 13,
-     "team": "Puebla",
-     "p": 16,
-     "w": 5,
-     "d": 4,
-     "l": 7,
-     "gf": 19,
-     "ga": 23,
-     "pts": 19,
-     "tid": 2291,
-     "form": "DLLLW"
-    },
-    {
-     "pos": 14,
-     "team": "Atlético San Luis",
-     "p": 16,
-     "w": 5,
-     "d": 4,
-     "l": 7,
-     "gf": 19,
-     "ga": 24,
-     "pts": 19,
-     "tid": 2314,
-     "form": "DWWLL"
     },
     {
      "pos": 15,
@@ -222,15 +223,15 @@
     {
      "pos": 16,
      "team": "Atlante",
-     "p": 16,
+     "p": 17,
      "w": 3,
      "d": 5,
-     "l": 8,
+     "l": 9,
      "gf": 16,
-     "ga": 26,
+     "ga": 27,
      "pts": 14,
      "tid": 2312,
-     "form": "LWLLL"
+     "form": "WLLLL"
     },
     {
      "pos": 17,
@@ -248,18 +249,18 @@
     {
      "pos": 18,
      "team": "FC Juárez",
-     "p": 16,
+     "p": 17,
      "w": 3,
-     "d": 2,
+     "d": 3,
      "l": 11,
-     "gf": 13,
-     "ga": 34,
-     "pts": 11,
+     "gf": 16,
+     "ga": 37,
+     "pts": 12,
      "tid": 2298,
-     "form": "LLDWW"
+     "form": "LDWWD"
     }
    ],
-   "updated": "2026-11-17T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   },
   {
    "id": "liga-de-expansion",
@@ -547,28 +548,28 @@
     {
      "pos": 1,
      "team": "Dragones de Oaxaca",
-     "p": 12,
+     "p": 13,
      "w": 8,
-     "d": 2,
+     "d": 3,
      "l": 2,
-     "gf": 31,
-     "ga": 13,
-     "pts": 28,
+     "gf": 32,
+     "ga": 14,
+     "pts": 29,
      "tid": 26393,
-     "form": "DWWLW"
+     "form": "WWLWD"
     },
     {
      "pos": 2,
      "team": "FC Santiago",
-     "p": 12,
+     "p": 13,
      "w": 7,
-     "d": 2,
+     "d": 3,
      "l": 3,
-     "gf": 28,
-     "ga": 8,
-     "pts": 25,
+     "gf": 29,
+     "ga": 9,
+     "pts": 26,
      "tid": 22055,
-     "form": "WWWWD"
+     "form": "WWWDD"
     },
     {
      "pos": 2,
@@ -612,28 +613,28 @@
     {
      "pos": 4,
      "team": "Acatlan",
-     "p": 12,
+     "p": 13,
      "w": 7,
      "d": 1,
-     "l": 4,
+     "l": 5,
      "gf": 27,
-     "ga": 24,
+     "ga": 29,
      "pts": 23,
      "tid": 24949,
-     "form": "WWWLL"
+     "form": "WWLLL"
     },
     {
      "pos": 4,
      "team": "Delfines Coatzacoalcos",
-     "p": 12,
-     "w": 6,
+     "p": 13,
+     "w": 7,
      "d": 3,
      "l": 3,
-     "gf": 19,
+     "gf": 20,
      "ga": 15,
-     "pts": 21,
+     "pts": 24,
      "tid": 28303,
-     "form": "WWWLW"
+     "form": "WWLWW"
     },
     {
      "pos": 5,
@@ -650,16 +651,16 @@
     },
     {
      "pos": 5,
-     "team": "Halcones Negros",
-     "p": 12,
-     "w": 6,
-     "d": 1,
-     "l": 5,
-     "gf": 26,
-     "ga": 20,
-     "pts": 20,
-     "tid": 28305,
-     "form": "LLWLW"
+     "team": "Guerreros del Pacifico",
+     "p": 13,
+     "w": 5,
+     "d": 2,
+     "l": 6,
+     "gf": 27,
+     "ga": 21,
+     "pts": 21,
+     "tid": 28304,
+     "form": "LWLDW"
     },
     {
      "pos": 6,
@@ -676,16 +677,16 @@
     },
     {
      "pos": 6,
-     "team": "Real Refineros",
+     "team": "Halcones Negros",
      "p": 12,
      "w": 6,
      "d": 1,
      "l": 5,
-     "gf": 24,
-     "ga": 26,
-     "pts": 19,
-     "tid": 28307,
-     "form": "WLWWW"
+     "gf": 26,
+     "ga": 20,
+     "pts": 20,
+     "tid": 28305,
+     "form": "LLWLW"
     },
     {
      "pos": 7,
@@ -702,16 +703,16 @@
     },
     {
      "pos": 7,
-     "team": "Guerreros del Pacifico",
+     "team": "Real Refineros",
      "p": 12,
-     "w": 4,
-     "d": 2,
-     "l": 6,
-     "gf": 22,
-     "ga": 21,
-     "pts": 18,
-     "tid": 28304,
-     "form": "WLWLD"
+     "w": 6,
+     "d": 1,
+     "l": 5,
+     "gf": 24,
+     "ga": 26,
+     "pts": 19,
+     "tid": 28307,
+     "form": "WLWWW"
     },
     {
      "pos": 8,
@@ -770,12 +771,12 @@
     {
      "pos": 10,
      "team": "Héroes de Zaci",
-     "p": 11,
+     "p": 12,
      "w": 0,
      "d": 1,
-     "l": 10,
+     "l": 11,
      "gf": 4,
-     "ga": 34,
+     "ga": 35,
      "pts": 2,
      "tid": 26526,
      "form": "LLLLL"
@@ -794,7 +795,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-19T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   }
  ]
 }
