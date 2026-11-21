@@ -4,7 +4,7 @@
  "adjective": "English",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-17T00:00:00.000Z",
+ "updated": "2026-11-20T00:00:00.000Z",
  "belowNote": "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
  "leagues": [
   {
@@ -703,6 +703,19 @@
     },
     {
      "pos": 3,
+     "team": "Sheffield Wednesday",
+     "p": 15,
+     "w": 7,
+     "d": 5,
+     "l": 3,
+     "gf": 27,
+     "ga": 15,
+     "pts": 26,
+     "tid": 74,
+     "form": "LDDWW"
+    },
+    {
+     "pos": 4,
      "team": "Oxford United",
      "p": 13,
      "w": 7,
@@ -715,7 +728,7 @@
      "form": "WDWDW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Luton Town",
      "p": 14,
      "w": 7,
@@ -726,19 +739,6 @@
      "pts": 24,
      "tid": 1359,
      "form": "WWWWD"
-    },
-    {
-     "pos": 5,
-     "team": "Sheffield Wednesday",
-     "p": 14,
-     "w": 6,
-     "d": 5,
-     "l": 3,
-     "gf": 25,
-     "ga": 14,
-     "pts": 23,
-     "tid": 74,
-     "form": "LLDDW"
     },
     {
      "pos": 6,
@@ -964,15 +964,15 @@
     {
      "pos": 23,
      "team": "Barnsley",
-     "p": 13,
+     "p": 14,
      "w": 2,
      "d": 3,
-     "l": 8,
-     "gf": 13,
-     "ga": 24,
+     "l": 9,
+     "gf": 14,
+     "ga": 26,
      "pts": 9,
      "tid": 747,
-     "form": "LLLDL"
+     "form": "LLDLL"
     },
     {
      "pos": 24,
@@ -988,7 +988,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-11-16T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   },
   {
    "id": "league-two",
@@ -1332,7 +1332,7 @@
      "form": "DLLDW"
     }
    ],
-   "updated": "2026-11-16T00:00:00.000Z"
+   "updated": "2026-11-17T00:00:00.000Z"
   },
   {
    "id": "national-league",
@@ -1375,15 +1375,15 @@
     {
      "pos": 1,
      "team": "Boreham Wood",
-     "p": 17,
-     "w": 14,
+     "p": 18,
+     "w": 15,
      "d": 3,
      "l": 0,
-     "gf": 46,
-     "ga": 19,
-     "pts": 45,
+     "gf": 49,
+     "ga": 21,
+     "pts": 48,
      "tid": 1830,
-     "form": "WWWWD"
+     "form": "WWWDW"
     },
     {
      "pos": 2,
@@ -1401,15 +1401,15 @@
     {
      "pos": 3,
      "team": "Southend United",
-     "p": 17,
+     "p": 18,
      "w": 9,
      "d": 5,
-     "l": 3,
-     "gf": 40,
-     "ga": 28,
+     "l": 4,
+     "gf": 42,
+     "ga": 31,
      "pts": 32,
      "tid": 1341,
-     "form": "WDDLW"
+     "form": "DDLWL"
     },
     {
      "pos": 4,
@@ -1685,7 +1685,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-16T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   },
   {
    "id": "national-league-north-south",
@@ -1727,7 +1727,7 @@
    "groups": [
     {
      "name": "North",
-     "updated": "2026-11-17T00:00:00.000Z",
+     "updated": "2026-11-19T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2045,7 +2045,7 @@
     },
     {
      "name": "South",
-     "updated": "2026-11-17T00:00:00.000Z",
+     "updated": "2026-11-19T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2362,7 +2362,7 @@
      ]
     }
    ],
-   "updated": "2026-11-17T00:00:00.000Z"
+   "updated": "2026-11-19T00:00:00.000Z"
   }
  ]
 }

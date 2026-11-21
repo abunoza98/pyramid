@@ -4,7 +4,7 @@
  "adjective": "German",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-08T00:00:00.000Z",
+ "updated": "2026-11-21T00:00:00.000Z",
  "belowNote": "Regionalliga champions come up, some through a play-off",
  "leagues": [
   {
@@ -50,15 +50,15 @@
     {
      "pos": 1,
      "team": "Bayern Munich",
-     "p": 9,
+     "p": 10,
      "w": 6,
-     "d": 3,
+     "d": 4,
      "l": 0,
-     "gf": 29,
-     "ga": 9,
-     "pts": 21,
+     "gf": 30,
+     "ga": 10,
+     "pts": 22,
      "tid": 157,
-     "form": "DWWDW"
+     "form": "WWDWD"
     },
     {
      "pos": 2,
@@ -218,6 +218,19 @@
     },
     {
      "pos": 14,
+     "team": "1. FC Köln",
+     "p": 10,
+     "w": 2,
+     "d": 4,
+     "l": 4,
+     "gf": 11,
+     "ga": 15,
+     "pts": 10,
+     "tid": 192,
+     "form": "LDDLD"
+    },
+    {
+     "pos": 15,
      "team": "FC Augsburg",
      "p": 9,
      "w": 2,
@@ -228,19 +241,6 @@
      "pts": 9,
      "tid": 170,
      "form": "DLDLL"
-    },
-    {
-     "pos": 15,
-     "team": "1. FC Köln",
-     "p": 9,
-     "w": 2,
-     "d": 3,
-     "l": 4,
-     "gf": 10,
-     "ga": 14,
-     "pts": 9,
-     "tid": 192,
-     "form": "WLDDL"
     },
     {
      "pos": 16,
@@ -282,7 +282,7 @@
      "form": "LLWDL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "2-bundesliga",
@@ -347,6 +347,19 @@
     },
     {
      "pos": 3,
+     "team": "1. FC Magdeburg",
+     "p": 12,
+     "w": 7,
+     "d": 2,
+     "l": 3,
+     "gf": 27,
+     "ga": 15,
+     "pts": 23,
+     "tid": 179,
+     "form": "LWDWW"
+    },
+    {
+     "pos": 4,
      "team": "1. FC Kaiserslautern",
      "p": 11,
      "w": 6,
@@ -357,19 +370,6 @@
      "pts": 21,
      "tid": 745,
      "form": "DWWLW"
-    },
-    {
-     "pos": 4,
-     "team": "1. FC Magdeburg",
-     "p": 11,
-     "w": 6,
-     "d": 2,
-     "l": 3,
-     "gf": 25,
-     "ga": 14,
-     "pts": 20,
-     "tid": 179,
-     "form": "WLWDW"
     },
     {
      "pos": 5,
@@ -387,28 +387,28 @@
     {
      "pos": 6,
      "team": "Arminia Bielefeld",
-     "p": 11,
+     "p": 12,
      "w": 5,
      "d": 2,
-     "l": 4,
-     "gf": 18,
-     "ga": 16,
+     "l": 5,
+     "gf": 19,
+     "ga": 18,
      "pts": 17,
      "tid": 188,
-     "form": "WWLWW"
+     "form": "WLWWL"
     },
     {
      "pos": 7,
      "team": "1. FC Heidenheim",
-     "p": 11,
+     "p": 12,
      "w": 4,
      "d": 4,
-     "l": 3,
-     "gf": 19,
-     "ga": 20,
+     "l": 4,
+     "gf": 20,
+     "ga": 23,
      "pts": 16,
      "tid": 180,
-     "form": "DLDLD"
+     "form": "LDLDL"
     },
     {
      "pos": 8,
@@ -464,6 +464,19 @@
     },
     {
      "pos": 12,
+     "team": "Darmstadt 98",
+     "p": 12,
+     "w": 3,
+     "d": 3,
+     "l": 6,
+     "gf": 12,
+     "ga": 22,
+     "pts": 12,
+     "tid": 181,
+     "form": "LDDLW"
+    },
+    {
+     "pos": 13,
      "team": "Energie Cottbus",
      "p": 11,
      "w": 2,
@@ -476,7 +489,7 @@
      "form": "LDDLD"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Eintracht Braunschweig",
      "p": 11,
      "w": 3,
@@ -489,7 +502,7 @@
      "form": "WLWLD"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "VfL Osnabrück",
      "p": 11,
      "w": 3,
@@ -502,7 +515,7 @@
      "form": "DLWLL"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Dynamo Dresden",
      "p": 11,
      "w": 3,
@@ -515,7 +528,7 @@
      "form": "DWLLW"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Karlsruher SC",
      "p": 11,
      "w": 3,
@@ -526,19 +539,6 @@
      "pts": 11,
      "tid": 785,
      "form": "LWLWL"
-    },
-    {
-     "pos": 17,
-     "team": "Darmstadt 98",
-     "p": 11,
-     "w": 2,
-     "d": 3,
-     "l": 6,
-     "gf": 9,
-     "ga": 21,
-     "pts": 9,
-     "tid": 181,
-     "form": "WLDDL"
     },
     {
      "pos": 18,
@@ -554,7 +554,7 @@
      "form": "LDWLL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   },
   {
    "id": "3-liga",
@@ -590,15 +590,15 @@
     {
      "pos": 1,
      "team": "Viktoria Köln",
-     "p": 13,
-     "w": 9,
+     "p": 14,
+     "w": 10,
      "d": 2,
      "l": 2,
-     "gf": 36,
-     "ga": 18,
-     "pts": 29,
+     "gf": 42,
+     "ga": 19,
+     "pts": 32,
      "tid": 1620,
-     "form": "DDWWW"
+     "form": "DWWWW"
     },
     {
      "pos": 2,
@@ -837,18 +837,18 @@
     {
      "pos": 20,
      "team": "TSV Havelse",
-     "p": 13,
+     "p": 14,
      "w": 2,
      "d": 4,
-     "l": 7,
-     "gf": 17,
-     "ga": 29,
+     "l": 8,
+     "gf": 18,
+     "ga": 35,
      "pts": 10,
      "tid": 9342,
-     "form": "DDWDL"
+     "form": "DWDLL"
     }
    ],
-   "updated": "2026-11-08T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   }
  ]
 }

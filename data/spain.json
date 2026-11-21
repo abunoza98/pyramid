@@ -4,7 +4,7 @@
  "adjective": "Spanish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-16T00:00:00.000Z",
+ "updated": "2026-11-20T00:00:00.000Z",
  "belowNote": "Promoted clubs from Segunda Federación come up",
  "leagues": [
   {
@@ -122,15 +122,15 @@
     {
      "pos": 7,
      "team": "Athletic Bilbao",
-     "p": 11,
+     "p": 12,
      "w": 4,
      "d": 4,
-     "l": 3,
+     "l": 4,
      "gf": 15,
-     "ga": 11,
+     "ga": 12,
      "pts": 16,
      "tid": 531,
-     "form": "DLWWD"
+     "form": "LWWDL"
     },
     {
      "pos": 8,
@@ -160,6 +160,19 @@
     },
     {
      "pos": 10,
+     "team": "Espanyol",
+     "p": 13,
+     "w": 4,
+     "d": 3,
+     "l": 6,
+     "gf": 14,
+     "ga": 14,
+     "pts": 15,
+     "tid": 540,
+     "form": "LLWDW"
+    },
+    {
+     "pos": 11,
      "team": "Racing Santander",
      "p": 12,
      "w": 4,
@@ -172,7 +185,7 @@
      "form": "DLWLW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Celta Vigo",
      "p": 12,
      "w": 2,
@@ -185,7 +198,7 @@
      "form": "DWDLD"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Alavés",
      "p": 12,
      "w": 3,
@@ -196,19 +209,6 @@
      "pts": 13,
      "tid": 542,
      "form": "LLDLD"
-    },
-    {
-     "pos": 13,
-     "team": "Espanyol",
-     "p": 12,
-     "w": 3,
-     "d": 3,
-     "l": 6,
-     "gf": 13,
-     "ga": 14,
-     "pts": 12,
-     "tid": 540,
-     "form": "DLLWD"
     },
     {
      "pos": 14,
@@ -302,7 +302,7 @@
      "form": "DLDLL"
     }
    ],
-   "updated": "2026-11-10T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   },
   {
    "id": "segunda",
@@ -519,6 +519,19 @@
     },
     {
      "pos": 15,
+     "team": "Leganés",
+     "p": 15,
+     "w": 5,
+     "d": 3,
+     "l": 7,
+     "gf": 17,
+     "ga": 25,
+     "pts": 18,
+     "tid": 537,
+     "form": "DLLWW"
+    },
+    {
+     "pos": 16,
      "team": "Eldense",
      "p": 14,
      "w": 5,
@@ -529,19 +542,6 @@
      "pts": 17,
      "tid": 9692,
      "form": "WLLLW"
-    },
-    {
-     "pos": 16,
-     "team": "Leganés",
-     "p": 14,
-     "w": 4,
-     "d": 3,
-     "l": 7,
-     "gf": 14,
-     "ga": 24,
-     "pts": 15,
-     "tid": 537,
-     "form": "LDLLW"
     },
     {
      "pos": 17,
@@ -598,15 +598,15 @@
     {
      "pos": 21,
      "team": "Andorra",
-     "p": 13,
+     "p": 14,
      "w": 3,
      "d": 2,
-     "l": 8,
-     "gf": 18,
-     "ga": 24,
+     "l": 9,
+     "gf": 19,
+     "ga": 27,
      "pts": 11,
      "tid": 8157,
-     "form": "WLLDL"
+     "form": "LLDLL"
     },
     {
      "pos": 22,
@@ -622,7 +622,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-16T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   },
   {
    "id": "primera-federacion",
@@ -656,7 +656,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-15T00:00:00.000Z",
+     "updated": "2026-11-19T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -922,7 +922,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-15T00:00:00.000Z",
+     "updated": "2026-11-20T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -940,18 +940,31 @@
       {
        "pos": 2,
        "team": "Villarreal B",
-       "p": 12,
+       "p": 13,
        "w": 6,
-       "d": 5,
+       "d": 6,
        "l": 1,
-       "gf": 26,
-       "ga": 15,
-       "pts": 23,
+       "gf": 28,
+       "ga": 17,
+       "pts": 24,
        "tid": 9595,
-       "form": "WWDDD"
+       "form": "WDDDD"
       },
       {
        "pos": 3,
+       "team": "Murcia",
+       "p": 13,
+       "w": 7,
+       "d": 2,
+       "l": 4,
+       "gf": 16,
+       "ga": 11,
+       "pts": 23,
+       "tid": 5275,
+       "form": "LWDLW"
+      },
+      {
+       "pos": 4,
        "team": "Alcorcón",
        "p": 12,
        "w": 5,
@@ -964,20 +977,20 @@
        "form": "DDDWW"
       },
       {
-       "pos": 4,
-       "team": "Murcia",
-       "p": 12,
+       "pos": 5,
+       "team": "Hércules",
+       "p": 13,
        "w": 6,
-       "d": 2,
+       "d": 3,
        "l": 4,
-       "gf": 14,
-       "ga": 11,
-       "pts": 20,
-       "tid": 5275,
-       "form": "DLWDL"
+       "gf": 15,
+       "ga": 15,
+       "pts": 21,
+       "tid": 4666,
+       "form": "LWDDW"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "Cartagena",
        "p": 12,
        "w": 5,
@@ -990,20 +1003,20 @@
        "form": "WLLDW"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Real Madrid Castilla",
-       "p": 12,
+       "p": 13,
        "w": 5,
        "d": 4,
-       "l": 3,
+       "l": 4,
        "gf": 16,
-       "ga": 13,
+       "ga": 15,
        "pts": 19,
        "tid": 9575,
-       "form": "WLWDW"
+       "form": "LWDWL"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Jaén",
        "p": 12,
        "w": 5,
@@ -1016,7 +1029,7 @@
        "form": "WDWLL"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Ibiza",
        "p": 12,
        "w": 5,
@@ -1027,19 +1040,6 @@
        "pts": 18,
        "tid": 9390,
        "form": "WDWDL"
-      },
-      {
-       "pos": 9,
-       "team": "Hércules",
-       "p": 12,
-       "w": 5,
-       "d": 3,
-       "l": 4,
-       "gf": 14,
-       "ga": 15,
-       "pts": 18,
-       "tid": 4666,
-       "form": "LLWDD"
       },
       {
        "pos": 10,
@@ -1069,6 +1069,19 @@
       },
       {
        "pos": 12,
+       "team": "Gimnàstic",
+       "p": 13,
+       "w": 4,
+       "d": 4,
+       "l": 5,
+       "gf": 18,
+       "ga": 20,
+       "pts": 16,
+       "tid": 714,
+       "form": "WLDLD"
+      },
+      {
+       "pos": 13,
        "team": "Huesca",
        "p": 12,
        "w": 3,
@@ -1079,19 +1092,6 @@
        "pts": 15,
        "tid": 726,
        "form": "DDWLL"
-      },
-      {
-       "pos": 13,
-       "team": "Gimnàstic",
-       "p": 12,
-       "w": 4,
-       "d": 3,
-       "l": 5,
-       "gf": 16,
-       "ga": 18,
-       "pts": 15,
-       "tid": 714,
-       "form": "WWLDL"
       },
       {
        "pos": 14,
@@ -1174,20 +1174,20 @@
       {
        "pos": 20,
        "team": "Teruel",
-       "p": 12,
+       "p": 13,
        "w": 1,
        "d": 4,
-       "l": 7,
+       "l": 8,
        "gf": 5,
-       "ga": 19,
+       "ga": 20,
        "pts": 7,
        "tid": 5278,
-       "form": "LDLDL"
+       "form": "DLDLL"
       }
      ]
     }
    ],
-   "updated": "2026-11-15T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   }
  ]
 }

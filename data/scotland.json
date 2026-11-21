@@ -4,7 +4,7 @@
  "adjective": "Scottish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-14T00:00:00.000Z",
+ "updated": "2026-11-20T00:00:00.000Z",
  "belowNote": "The Highland/Lowland League play-off winner can come up",
  "leagues": [
   {
@@ -294,28 +294,28 @@
     {
      "pos": 6,
      "team": "Inverness Caledonian Thistle",
-     "p": 15,
+     "p": 16,
      "w": 5,
-     "d": 5,
+     "d": 6,
      "l": 5,
      "gf": 20,
      "ga": 20,
-     "pts": 20,
+     "pts": 21,
      "tid": 903,
-     "form": "WWLDL"
+     "form": "WLDLD"
     },
     {
      "pos": 7,
      "team": "Ayr United",
-     "p": 14,
+     "p": 15,
      "w": 5,
-     "d": 3,
+     "d": 4,
      "l": 6,
      "gf": 17,
      "ga": 19,
-     "pts": 18,
+     "pts": 19,
      "tid": 1387,
-     "form": "DLWLW"
+     "form": "LWLWD"
     },
     {
      "pos": 8,
@@ -357,7 +357,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-14T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   },
   {
    "id": "scottish-league-one",
@@ -525,7 +525,7 @@
      "form": "WLLLL"
     }
    ],
-   "updated": "2026-11-14T00:00:00.000Z"
+   "updated": "2026-11-17T00:00:00.000Z"
   },
   {
    "id": "scottish-league-two",
@@ -690,7 +690,7 @@
      "form": "LLLLW"
     }
    ],
-   "updated": "2026-11-14T00:00:00.000Z"
+   "updated": "2026-11-17T00:00:00.000Z"
   }
  ]
 }

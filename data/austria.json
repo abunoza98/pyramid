@@ -4,7 +4,7 @@
  "adjective": "Austrian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-15T00:00:00.000Z",
+ "updated": "2026-11-21T00:00:00.000Z",
  "belowNote": "Landesliga champions come up",
  "leagues": [
   {
@@ -220,15 +220,15 @@
     {
      "pos": 1,
      "team": "Blau-Weiß Linz",
-     "p": 12,
-     "w": 10,
+     "p": 13,
+     "w": 11,
      "d": 1,
      "l": 1,
-     "gf": 35,
-     "ga": 6,
-     "pts": 31,
+     "gf": 41,
+     "ga": 7,
+     "pts": 34,
      "tid": 1394,
-     "form": "DWWWW"
+     "form": "WWWWW"
     },
     {
      "pos": 2,
@@ -246,18 +246,31 @@
     {
      "pos": 3,
      "team": "Austria Wien II",
-     "p": 12,
+     "p": 13,
      "w": 7,
      "d": 2,
-     "l": 3,
-     "gf": 20,
-     "ga": 15,
+     "l": 4,
+     "gf": 21,
+     "ga": 18,
      "pts": 23,
      "tid": 2860,
-     "form": "WDWWD"
+     "form": "DWWDL"
     },
     {
      "pos": 4,
+     "team": "Admira Wacker",
+     "p": 13,
+     "w": 7,
+     "d": 1,
+     "l": 5,
+     "gf": 17,
+     "ga": 14,
+     "pts": 22,
+     "tid": 1023,
+     "form": "WWLDW"
+    },
+    {
+     "pos": 5,
      "team": "FC Liefering",
      "p": 12,
      "w": 6,
@@ -270,33 +283,46 @@
      "form": "WLDWW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Austria Salzburg",
-     "p": 12,
+     "p": 13,
      "w": 6,
      "d": 1,
-     "l": 5,
-     "gf": 21,
-     "ga": 18,
+     "l": 6,
+     "gf": 22,
+     "ga": 20,
      "pts": 19,
      "tid": 5000,
-     "form": "WWLWL"
-    },
-    {
-     "pos": 6,
-     "team": "Admira Wacker",
-     "p": 12,
-     "w": 6,
-     "d": 1,
-     "l": 5,
-     "gf": 15,
-     "ga": 13,
-     "pts": 19,
-     "tid": 1023,
-     "form": "WWWLD"
+     "form": "WLWLL"
     },
     {
      "pos": 7,
+     "team": "Voitsberg",
+     "p": 13,
+     "w": 5,
+     "d": 3,
+     "l": 5,
+     "gf": 25,
+     "ga": 21,
+     "pts": 18,
+     "tid": 8332,
+     "form": "LWLWW"
+    },
+    {
+     "pos": 8,
+     "team": "Floridsdorfer AC",
+     "p": 13,
+     "w": 5,
+     "d": 2,
+     "l": 6,
+     "gf": 19,
+     "ga": 22,
+     "pts": 17,
+     "tid": 1395,
+     "form": "LLDLW"
+    },
+    {
+     "pos": 9,
      "team": "Wacker Innsbruck",
      "p": 12,
      "w": 5,
@@ -309,7 +335,7 @@
      "form": "WLLLW"
     },
     {
-     "pos": 8,
+     "pos": 10,
      "team": "SKU Amstetten",
      "p": 12,
      "w": 4,
@@ -322,7 +348,7 @@
      "form": "DDWLL"
     },
     {
-     "pos": 9,
+     "pos": 11,
      "team": "Schwarz-Weiß Bregenz",
      "p": 12,
      "w": 4,
@@ -335,33 +361,20 @@
      "form": "LDDWD"
     },
     {
-     "pos": 10,
-     "team": "Voitsberg",
-     "p": 12,
-     "w": 4,
-     "d": 3,
-     "l": 5,
-     "gf": 23,
-     "ga": 21,
-     "pts": 15,
-     "tid": 8332,
-     "form": "LLWLW"
-    },
-    {
-     "pos": 11,
+     "pos": 12,
      "team": "SKN St. Pölten",
-     "p": 12,
+     "p": 13,
      "w": 4,
      "d": 3,
-     "l": 5,
+     "l": 6,
      "gf": 12,
-     "ga": 13,
+     "ga": 15,
      "pts": 15,
      "tid": 1027,
-     "form": "LDDWD"
+     "form": "DDWDL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Sturm Graz II",
      "p": 12,
      "w": 4,
@@ -374,59 +387,46 @@
      "form": "LLLWW"
     },
     {
-     "pos": 13,
-     "team": "Floridsdorfer AC",
-     "p": 12,
-     "w": 4,
-     "d": 2,
-     "l": 6,
-     "gf": 16,
-     "ga": 21,
-     "pts": 14,
-     "tid": 1395,
-     "form": "LLLDL"
-    },
-    {
      "pos": 14,
      "team": "SV Kapfenberg",
-     "p": 12,
-     "w": 2,
+     "p": 13,
+     "w": 3,
      "d": 2,
      "l": 8,
-     "gf": 14,
+     "gf": 15,
      "ga": 25,
-     "pts": 8,
+     "pts": 11,
      "tid": 1401,
-     "form": "LWDDL"
+     "form": "WDDLW"
     },
     {
      "pos": 15,
      "team": "Rapid Wien II",
-     "p": 12,
+     "p": 13,
      "w": 2,
      "d": 2,
-     "l": 8,
-     "gf": 12,
-     "ga": 25,
+     "l": 9,
+     "gf": 13,
+     "ga": 31,
      "pts": 8,
      "tid": 8247,
-     "form": "LDLLD"
+     "form": "DLLDL"
     },
     {
      "pos": 16,
      "team": "WSPG Wels",
-     "p": 12,
+     "p": 13,
      "w": 2,
      "d": 2,
-     "l": 8,
+     "l": 9,
      "gf": 15,
-     "ga": 30,
+     "ga": 31,
      "pts": 8,
      "tid": 22213,
-     "form": "WDLLL"
+     "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-11T00:00:00.000Z"
+   "updated": "2026-11-20T00:00:00.000Z"
   },
   {
    "id": "regionalliga",
@@ -1070,7 +1070,7 @@
     },
     {
      "name": "West",
-     "updated": "2026-11-15T00:00:00.000Z",
+     "updated": "2026-11-21T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1283,7 +1283,7 @@
      ]
     }
    ],
-   "updated": "2026-11-15T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   }
  ]
 }
