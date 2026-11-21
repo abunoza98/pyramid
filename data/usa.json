@@ -4,7 +4,7 @@
  "adjective": "American",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-17T00:00:00.000Z",
+ "updated": "2026-11-21T00:00:00.000Z",
  "belowNote": "There's no promotion or relegation between US leagues; these are the professional divisions from the top",
  "system": "US soccer league system",
  "systemNote": "The US system doesn't use promotion and relegation between these leagues; play-off places are marked on each table.",
@@ -37,7 +37,7 @@
    "groups": [
     {
      "name": "Western Conference",
-     "updated": "2026-11-11T00:00:00.000Z",
+     "updated": "2026-11-21T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -238,7 +238,7 @@
     },
     {
      "name": "Eastern Conference",
-     "updated": "2026-11-11T00:00:00.000Z",
+     "updated": "2026-11-21T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -438,7 +438,7 @@
      ]
     }
    ],
-   "updated": "2026-11-11T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "usl-championship",
@@ -460,7 +460,7 @@
    "groups": [
     {
      "name": "Eastern Conference",
-     "updated": "2026-11-17T00:00:00.000Z",
+     "updated": "2026-11-21T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -512,7 +512,7 @@
        "ga": 43,
        "pts": 47,
        "tid": 4000,
-       "form": "WDWWW"
+       "form": "DWWWL"
       },
       {
        "pos": 5,
@@ -635,7 +635,7 @@
     },
     {
      "name": "Western Conference",
-     "updated": "2026-11-17T00:00:00.000Z",
+     "updated": "2026-11-21T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -796,7 +796,7 @@
      ]
     }
    ],
-   "updated": "2026-11-17T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "usl-league-one",
@@ -1049,7 +1049,7 @@
      "tid": 4108
     }
    ],
-   "updated": "2026-11-16T00:00:00.000Z"
+   "updated": "2026-11-19T00:00:00.000Z"
   }
  ]
 }

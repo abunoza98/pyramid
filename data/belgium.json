@@ -4,7 +4,7 @@
  "adjective": "Belgian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-20T00:00:00.000Z",
+ "updated": "2026-11-21T00:00:00.000Z",
  "belowNote": "The top amateur clubs come up",
  "leagues": [
   {
@@ -96,15 +96,15 @@
     {
      "pos": 4,
      "team": "Charleroi",
-     "p": 11,
+     "p": 12,
      "w": 9,
-     "d": 0,
+     "d": 1,
      "l": 2,
-     "gf": 26,
-     "ga": 13,
-     "pts": 27,
+     "gf": 28,
+     "ga": 15,
+     "pts": 28,
      "tid": 736,
-     "form": "WWLWW"
+     "form": "WLWWD"
     },
     {
      "pos": 5,
@@ -121,6 +121,19 @@
     },
     {
      "pos": 6,
+     "team": "Genk",
+     "p": 12,
+     "w": 5,
+     "d": 3,
+     "l": 4,
+     "gf": 21,
+     "ga": 15,
+     "pts": 18,
+     "tid": 742,
+     "form": "WWLLW"
+    },
+    {
+     "pos": 7,
      "team": "Lommel United",
      "p": 11,
      "w": 4,
@@ -131,19 +144,6 @@
      "pts": 16,
      "tid": 259,
      "form": "DWDWD"
-    },
-    {
-     "pos": 7,
-     "team": "Genk",
-     "p": 11,
-     "w": 4,
-     "d": 3,
-     "l": 4,
-     "gf": 18,
-     "ga": 15,
-     "pts": 15,
-     "tid": 742,
-     "form": "LWWLL"
     },
     {
      "pos": 8,
@@ -173,6 +173,19 @@
     },
     {
      "pos": 10,
+     "team": "Sint-Truiden",
+     "p": 12,
+     "w": 3,
+     "d": 3,
+     "l": 6,
+     "gf": 24,
+     "ga": 24,
+     "pts": 12,
+     "tid": 735,
+     "form": "LLLWD"
+    },
+    {
+     "pos": 11,
      "team": "OH Leuven",
      "p": 11,
      "w": 3,
@@ -185,7 +198,7 @@
      "form": "WDDWW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Cercle Brugge",
      "p": 12,
      "w": 3,
@@ -198,7 +211,7 @@
      "form": "LLWWW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "KV Mechelen",
      "p": 11,
      "w": 3,
@@ -209,19 +222,6 @@
      "pts": 12,
      "tid": 266,
      "form": "DWWWL"
-    },
-    {
-     "pos": 13,
-     "team": "Sint-Truiden",
-     "p": 11,
-     "w": 3,
-     "d": 2,
-     "l": 6,
-     "gf": 22,
-     "ga": 22,
-     "pts": 11,
-     "tid": 735,
-     "form": "LLLLW"
     },
     {
      "pos": 14,
@@ -265,15 +265,15 @@
     {
      "pos": 17,
      "team": "La Louvière",
-     "p": 11,
+     "p": 12,
      "w": 2,
      "d": 1,
-     "l": 8,
+     "l": 9,
      "gf": 13,
-     "ga": 24,
+     "ga": 27,
      "pts": 7,
      "tid": 5902,
-     "form": "LLWLL"
+     "form": "LWLLL"
     },
     {
      "pos": 18,
@@ -289,7 +289,7 @@
      "form": "WLDLL"
     }
    ],
-   "updated": "2026-11-20T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "challenger-pro-league",
@@ -358,15 +358,15 @@
     {
      "pos": 3,
      "team": "AS Eupen",
-     "p": 9,
+     "p": 10,
      "w": 6,
-     "d": 0,
+     "d": 1,
      "l": 3,
-     "gf": 18,
-     "ga": 11,
-     "pts": 18,
+     "gf": 19,
+     "ga": 12,
+     "pts": 19,
      "tid": 739,
-     "form": "WWLLW"
+     "form": "WLLWD"
     },
     {
      "pos": 4,
@@ -383,6 +383,19 @@
     },
     {
      "pos": 5,
+     "team": "Sporting Hasselt",
+     "p": 10,
+     "w": 5,
+     "d": 1,
+     "l": 4,
+     "gf": 14,
+     "ga": 16,
+     "pts": 16,
+     "tid": 5931,
+     "form": "LWWLD"
+    },
+    {
+     "pos": 6,
      "team": "Patro Eisden",
      "p": 10,
      "w": 5,
@@ -393,19 +406,6 @@
      "pts": 15,
      "tid": 6222,
      "form": "LWWWW"
-    },
-    {
-     "pos": 6,
-     "team": "Sporting Hasselt",
-     "p": 9,
-     "w": 5,
-     "d": 0,
-     "l": 4,
-     "gf": 13,
-     "ga": 15,
-     "pts": 15,
-     "tid": 5931,
-     "form": "WLWWL"
     },
     {
      "pos": 7,
@@ -500,32 +500,32 @@
     },
     {
      "pos": 14,
-     "team": "Anderlecht II",
-     "p": 9,
+     "team": "Liège",
+     "p": 10,
      "w": 2,
-     "d": 1,
+     "d": 2,
      "l": 6,
-     "gf": 12,
-     "ga": 17,
-     "pts": 7,
-     "tid": 19046,
-     "form": "LLLWW"
+     "gf": 15,
+     "ga": 22,
+     "pts": 8,
+     "tid": 6220,
+     "form": "LLLLW"
     },
     {
      "pos": 15,
-     "team": "Liège",
-     "p": 9,
-     "w": 1,
-     "d": 2,
-     "l": 6,
-     "gf": 13,
-     "ga": 22,
-     "pts": 5,
-     "tid": 6220,
-     "form": "DLLLL"
+     "team": "Anderlecht II",
+     "p": 10,
+     "w": 2,
+     "d": 1,
+     "l": 7,
+     "gf": 12,
+     "ga": 19,
+     "pts": 7,
+     "tid": 19046,
+     "form": "LLWWL"
     }
    ],
-   "updated": "2026-11-20T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   }
  ]
 }

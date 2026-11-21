@@ -55,28 +55,28 @@
     {
      "pos": 3,
      "team": "LASK",
-     "p": 12,
-     "w": 8,
+     "p": 13,
+     "w": 9,
      "d": 1,
      "l": 3,
-     "gf": 30,
-     "ga": 15,
-     "pts": 25,
+     "gf": 32,
+     "ga": 16,
+     "pts": 28,
      "tid": 1026,
-     "form": "LWLWW"
+     "form": "WLWWW"
     },
     {
      "pos": 4,
      "team": "TSV Hartberg",
-     "p": 12,
+     "p": 13,
      "w": 6,
      "d": 2,
-     "l": 4,
-     "gf": 23,
-     "ga": 19,
+     "l": 5,
+     "gf": 24,
+     "ga": 21,
      "pts": 20,
      "tid": 1072,
-     "form": "WLWWW"
+     "form": "LWWWL"
     },
     {
      "pos": 5,
@@ -106,29 +106,29 @@
     },
     {
      "pos": 7,
-     "team": "WSG Tirol",
-     "p": 12,
-     "w": 3,
-     "d": 4,
-     "l": 5,
-     "gf": 15,
-     "ga": 18,
-     "pts": 13,
-     "tid": 1398,
-     "form": "LWDLD"
+     "team": "Austria Lustenau",
+     "p": 13,
+     "w": 4,
+     "d": 2,
+     "l": 7,
+     "gf": 16,
+     "ga": 30,
+     "pts": 14,
+     "tid": 1399,
+     "form": "LLLWW"
     },
     {
      "pos": 8,
-     "team": "Austria Lustenau",
-     "p": 12,
+     "team": "WSG Tirol",
+     "p": 13,
      "w": 3,
-     "d": 2,
-     "l": 7,
+     "d": 4,
+     "l": 6,
      "gf": 15,
-     "ga": 30,
-     "pts": 11,
-     "tid": 1399,
-     "form": "LLLLW"
+     "ga": 19,
+     "pts": 13,
+     "tid": 1398,
+     "form": "WDLDL"
     },
     {
      "pos": 9,
@@ -233,15 +233,15 @@
     {
      "pos": 2,
      "team": "First Vienna",
-     "p": 12,
-     "w": 8,
+     "p": 13,
+     "w": 9,
      "d": 2,
      "l": 2,
-     "gf": 22,
-     "ga": 16,
-     "pts": 26,
+     "gf": 24,
+     "ga": 17,
+     "pts": 29,
      "tid": 4990,
-     "form": "WWWLD"
+     "form": "WWLDW"
     },
     {
      "pos": 3,
@@ -271,19 +271,32 @@
     },
     {
      "pos": 5,
-     "team": "FC Liefering",
-     "p": 12,
+     "team": "Wacker Innsbruck",
+     "p": 13,
      "w": 6,
      "d": 2,
-     "l": 4,
-     "gf": 26,
-     "ga": 24,
+     "l": 5,
+     "gf": 19,
+     "ga": 15,
      "pts": 20,
-     "tid": 1400,
-     "form": "WLDWW"
+     "tid": 1073,
+     "form": "LLLWW"
     },
     {
      "pos": 6,
+     "team": "FC Liefering",
+     "p": 13,
+     "w": 6,
+     "d": 2,
+     "l": 5,
+     "gf": 26,
+     "ga": 27,
+     "pts": 20,
+     "tid": 1400,
+     "form": "LDWWL"
+    },
+    {
+     "pos": 7,
      "team": "Austria Salzburg",
      "p": 13,
      "w": 6,
@@ -296,7 +309,7 @@
      "form": "WLWLL"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Voitsberg",
      "p": 13,
      "w": 5,
@@ -309,7 +322,20 @@
      "form": "LWLWW"
     },
     {
-     "pos": 8,
+     "pos": 9,
+     "team": "SKU Amstetten",
+     "p": 13,
+     "w": 4,
+     "d": 6,
+     "l": 3,
+     "gf": 21,
+     "ga": 21,
+     "pts": 18,
+     "tid": 1404,
+     "form": "DWLLD"
+    },
+    {
+     "pos": 10,
      "team": "Floridsdorfer AC",
      "p": 13,
      "w": 5,
@@ -322,43 +348,17 @@
      "form": "LLDLW"
     },
     {
-     "pos": 9,
-     "team": "Wacker Innsbruck",
-     "p": 12,
-     "w": 5,
-     "d": 2,
-     "l": 5,
-     "gf": 16,
-     "ga": 15,
-     "pts": 17,
-     "tid": 1073,
-     "form": "WLLLW"
-    },
-    {
-     "pos": 10,
-     "team": "SKU Amstetten",
-     "p": 12,
-     "w": 4,
-     "d": 5,
-     "l": 3,
-     "gf": 20,
-     "ga": 20,
-     "pts": 17,
-     "tid": 1404,
-     "form": "DDWLL"
-    },
-    {
      "pos": 11,
      "team": "Schwarz-Weiß Bregenz",
-     "p": 12,
+     "p": 13,
      "w": 4,
      "d": 4,
-     "l": 4,
-     "gf": 15,
-     "ga": 16,
+     "l": 5,
+     "gf": 16,
+     "ga": 18,
      "pts": 16,
      "tid": 8259,
-     "form": "LDDWD"
+     "form": "DDWDL"
     },
     {
      "pos": 12,
@@ -376,15 +376,15 @@
     {
      "pos": 13,
      "team": "Sturm Graz II",
-     "p": 12,
+     "p": 13,
      "w": 4,
-     "d": 2,
+     "d": 3,
      "l": 6,
-     "gf": 21,
-     "ga": 25,
-     "pts": 14,
+     "gf": 22,
+     "ga": 26,
+     "pts": 15,
      "tid": 8251,
-     "form": "LLLWW"
+     "form": "LLWWD"
     },
     {
      "pos": 14,

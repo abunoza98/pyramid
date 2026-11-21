@@ -53,15 +53,15 @@
     {
      "pos": 1,
      "team": "Hajduk Split",
-     "p": 13,
-     "w": 9,
+     "p": 14,
+     "w": 10,
      "d": 2,
      "l": 2,
-     "gf": 27,
-     "ga": 11,
-     "pts": 29,
+     "gf": 29,
+     "ga": 12,
+     "pts": 32,
      "tid": 608,
-     "form": "WWDWW"
+     "form": "WDWWW"
     },
     {
      "pos": 2,
@@ -78,6 +78,19 @@
     },
     {
      "pos": 3,
+     "team": "Varaždin",
+     "p": 14,
+     "w": 6,
+     "d": 4,
+     "l": 4,
+     "gf": 19,
+     "ga": 14,
+     "pts": 22,
+     "tid": 1483,
+     "form": "LLDLW"
+    },
+    {
+     "pos": 4,
      "team": "Osijek",
      "p": 13,
      "w": 6,
@@ -90,7 +103,7 @@
      "form": "LDLWL"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Istra 1961",
      "p": 13,
      "w": 5,
@@ -101,19 +114,6 @@
      "pts": 19,
      "tid": 1016,
      "form": "WLDWW"
-    },
-    {
-     "pos": 5,
-     "team": "Varaždin",
-     "p": 13,
-     "w": 5,
-     "d": 4,
-     "l": 4,
-     "gf": 17,
-     "ga": 14,
-     "pts": 19,
-     "tid": 1483,
-     "form": "WLLDL"
     },
     {
      "pos": 6,
@@ -144,28 +144,28 @@
     {
      "pos": 8,
      "team": "Rudeš",
-     "p": 13,
+     "p": 14,
      "w": 5,
      "d": 1,
-     "l": 7,
+     "l": 8,
      "gf": 16,
-     "ga": 27,
+     "ga": 29,
      "pts": 16,
      "tid": 1019,
-     "form": "WLWWW"
+     "form": "LWWWL"
     },
     {
      "pos": 9,
      "team": "Lokomotiva",
-     "p": 13,
+     "p": 14,
      "w": 3,
      "d": 2,
-     "l": 8,
-     "gf": 14,
-     "ga": 21,
+     "l": 9,
+     "gf": 15,
+     "ga": 23,
      "pts": 11,
      "tid": 1017,
-     "form": "LWDLL"
+     "form": "WDLLL"
     },
     {
      "pos": 10,
@@ -464,6 +464,19 @@
     },
     {
      "pos": 2,
+     "team": "Solin",
+     "p": 13,
+     "w": 7,
+     "d": 3,
+     "l": 3,
+     "gf": 24,
+     "ga": 11,
+     "pts": 24,
+     "tid": 1480,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 3,
      "team": "Jarun",
      "p": 12,
      "w": 5,
@@ -474,19 +487,6 @@
      "pts": 22,
      "tid": 8605,
      "form": "DDWWD"
-    },
-    {
-     "pos": 3,
-     "team": "Solin",
-     "p": 13,
-     "w": 6,
-     "d": 3,
-     "l": 4,
-     "gf": 22,
-     "ga": 13,
-     "pts": 21,
-     "tid": 1480,
-     "form": "LWLWW"
     },
     {
      "pos": 4,
@@ -542,19 +542,6 @@
     },
     {
      "pos": 8,
-     "team": "Inter Zaprešić",
-     "p": 13,
-     "w": 5,
-     "d": 4,
-     "l": 4,
-     "gf": 19,
-     "ga": 20,
-     "pts": 19,
-     "tid": 1020,
-     "form": "DDWLW"
-    },
-    {
-     "pos": 9,
      "team": "Trnje",
      "p": 13,
      "w": 5,
@@ -567,7 +554,7 @@
      "form": "DLDLW"
     },
     {
-     "pos": 10,
+     "pos": 9,
      "team": "Zagora",
      "p": 13,
      "w": 4,
@@ -580,7 +567,7 @@
      "form": "DDWLW"
     },
     {
-     "pos": 11,
+     "pos": 10,
      "team": "Hrvatski Dragovoljac",
      "p": 13,
      "w": 5,
@@ -593,7 +580,7 @@
      "form": "LDWWD"
     },
     {
-     "pos": 12,
+     "pos": 11,
      "team": "Slavonija Požega",
      "p": 13,
      "w": 5,
@@ -604,6 +591,19 @@
      "pts": 18,
      "tid": 6250,
      "form": "WWLWL"
+    },
+    {
+     "pos": 12,
+     "team": "Inter Zaprešić",
+     "p": 13,
+     "w": 4,
+     "d": 4,
+     "l": 5,
+     "gf": 17,
+     "ga": 22,
+     "pts": 16,
+     "tid": 1020,
+     "form": "DDLLW"
     },
     {
      "pos": 13,

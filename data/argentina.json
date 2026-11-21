@@ -68,7 +68,7 @@
        "ga": 27,
        "pts": 60,
        "tid": 458,
-       "form": "DWWWL"
+       "form": "WWWLL"
       },
       {
        "pos": 4,
@@ -185,7 +185,7 @@
        "ga": 28,
        "pts": 47,
        "tid": 2432,
-       "form": "WDWDW"
+       "form": "DWDWW"
       },
       {
        "pos": 13,
@@ -198,7 +198,7 @@
        "ga": 36,
        "pts": 47,
        "tid": 453,
-       "form": "DDLDW"
+       "form": "DLDWW"
       },
       {
        "pos": 14,
@@ -211,7 +211,7 @@
        "ga": 36,
        "pts": 47,
        "tid": 442,
-       "form": "WLWDL"
+       "form": "LWDLL"
       },
       {
        "pos": 15,
@@ -458,7 +458,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-20T00:00:00.000Z",
+     "updated": "2026-11-21T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -698,7 +698,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-20T00:00:00.000Z",
+     "updated": "2026-11-21T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -937,7 +937,7 @@
      ]
     }
    ],
-   "updated": "2026-11-20T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "primera-b-metropolitana",
@@ -1257,7 +1257,7 @@
      "form": "LDDLL"
     }
    ],
-   "updated": "2026-11-20T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "primera-c",

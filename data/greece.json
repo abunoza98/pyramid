@@ -4,7 +4,7 @@
  "adjective": "Greek",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-16T00:00:00.000Z",
+ "updated": "2026-11-21T00:00:00.000Z",
  "belowNote": "Gamma Ethniki group winners come up",
  "leagues": [
   {
@@ -53,6 +53,19 @@
     },
     {
      "pos": 2,
+     "team": "AEK Athens",
+     "p": 10,
+     "w": 7,
+     "d": 2,
+     "l": 1,
+     "gf": 24,
+     "ga": 6,
+     "pts": 23,
+     "tid": 575,
+     "form": "WWLWW"
+    },
+    {
+     "pos": 3,
      "team": "Olympiacos",
      "p": 10,
      "w": 7,
@@ -63,19 +76,6 @@
      "pts": 23,
      "tid": 553,
      "form": "WWWWD"
-    },
-    {
-     "pos": 3,
-     "team": "AEK Athens",
-     "p": 9,
-     "w": 6,
-     "d": 2,
-     "l": 1,
-     "gf": 23,
-     "ga": 6,
-     "pts": 20,
-     "tid": 575,
-     "form": "WWWLW"
     },
     {
      "pos": 4,
@@ -132,15 +132,15 @@
     {
      "pos": 8,
      "team": "Kalamata",
-     "p": 10,
+     "p": 11,
      "w": 3,
      "d": 3,
-     "l": 4,
+     "l": 5,
      "gf": 15,
-     "ga": 19,
+     "ga": 20,
      "pts": 12,
      "tid": 5046,
-     "form": "WWLDD"
+     "form": "WLDDL"
     },
     {
      "pos": 9,
@@ -222,7 +222,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-11-11T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "super-league-2",
@@ -251,6 +251,32 @@
     },
     {
      "pos": 2,
+     "team": "Larisa",
+     "p": 12,
+     "w": 6,
+     "d": 5,
+     "l": 1,
+     "gf": 17,
+     "ga": 7,
+     "pts": 23,
+     "tid": 953,
+     "form": "DWWDW"
+    },
+    {
+     "pos": 3,
+     "team": "Panionios",
+     "p": 12,
+     "w": 6,
+     "d": 3,
+     "l": 3,
+     "gf": 15,
+     "ga": 9,
+     "pts": 21,
+     "tid": 622,
+     "form": "LWLWD"
+    },
+    {
+     "pos": 4,
      "team": "Kallithea",
      "p": 11,
      "w": 6,
@@ -263,20 +289,7 @@
      "form": "DDLWD"
     },
     {
-     "pos": 3,
-     "team": "Larisa",
-     "p": 11,
-     "w": 5,
-     "d": 5,
-     "l": 1,
-     "gf": 15,
-     "ga": 6,
-     "pts": 20,
-     "tid": 953,
-     "form": "DDWWD"
-    },
-    {
-     "pos": 4,
+     "pos": 5,
      "team": "Niki Volos",
      "p": 11,
      "w": 6,
@@ -287,19 +300,6 @@
      "pts": 20,
      "tid": 5056,
      "form": "DWWWW"
-    },
-    {
-     "pos": 5,
-     "team": "Panionios",
-     "p": 11,
-     "w": 6,
-     "d": 2,
-     "l": 3,
-     "gf": 15,
-     "ga": 9,
-     "pts": 20,
-     "tid": 622,
-     "form": "DLWLW"
     },
     {
      "pos": 6,
@@ -317,44 +317,57 @@
     {
      "pos": 7,
      "team": "Ellas Syros",
-     "p": 11,
+     "p": 12,
      "w": 5,
      "d": 4,
-     "l": 2,
+     "l": 3,
      "gf": 18,
-     "ga": 9,
+     "ga": 11,
      "pts": 19,
      "tid": 22244,
-     "form": "DLWWW"
+     "form": "LWWWL"
     },
     {
      "pos": 8,
      "team": "Asteras Tripolis II",
-     "p": 11,
+     "p": 12,
      "w": 4,
      "d": 4,
-     "l": 3,
-     "gf": 14,
-     "ga": 11,
+     "l": 4,
+     "gf": 15,
+     "ga": 13,
      "pts": 16,
      "tid": 25017,
-     "form": "DDDWW"
+     "form": "DDWWL"
     },
     {
      "pos": 9,
      "team": "Panthrakikos",
-     "p": 11,
+     "p": 12,
      "w": 3,
-     "d": 4,
+     "d": 5,
      "l": 4,
      "gf": 12,
      "ga": 14,
-     "pts": 13,
+     "pts": 14,
      "tid": 2090,
-     "form": "DDWLL"
+     "form": "DWLLD"
     },
     {
      "pos": 10,
+     "team": "Nestos Chrisoupolis",
+     "p": 12,
+     "w": 3,
+     "d": 3,
+     "l": 6,
+     "gf": 11,
+     "ga": 15,
+     "pts": 12,
+     "tid": 12367,
+     "form": "WLLDW"
+    },
+    {
+     "pos": 11,
      "team": "Anagennisi Karditsas",
      "p": 11,
      "w": 3,
@@ -367,7 +380,7 @@
      "form": "WWLDL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "PAOK II",
      "p": 11,
      "w": 3,
@@ -378,19 +391,6 @@
      "pts": 12,
      "tid": 18018,
      "form": "WLDWL"
-    },
-    {
-     "pos": 12,
-     "team": "Nestos Chrisoupolis",
-     "p": 11,
-     "w": 2,
-     "d": 3,
-     "l": 6,
-     "gf": 9,
-     "ga": 15,
-     "pts": 9,
-     "tid": 12367,
-     "form": "DWLLD"
     },
     {
      "pos": 13,
@@ -445,7 +445,7 @@
      "form": "DLDLL"
     }
    ],
-   "updated": "2026-11-16T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   }
  ]
 }
