@@ -4,7 +4,7 @@
  "adjective": "Brazilian",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-20T00:00:00.000Z",
+ "updated": "2026-11-22T00:00:00.000Z",
  "belowNote": "Clubs qualify for Série D through their state championships",
  "leagues": [
   {
@@ -44,28 +44,28 @@
     {
      "pos": 1,
      "team": "Flamengo",
-     "p": 35,
+     "p": 36,
      "w": 24,
-     "d": 7,
+     "d": 8,
      "l": 4,
-     "gf": 73,
-     "ga": 30,
-     "pts": 79,
+     "gf": 74,
+     "ga": 31,
+     "pts": 80,
      "tid": 127,
-     "form": "WWWWW"
+     "form": "WWWWD"
     },
     {
      "pos": 2,
      "team": "Palmeiras",
-     "p": 35,
+     "p": 36,
      "w": 21,
-     "d": 10,
+     "d": 11,
      "l": 4,
-     "gf": 63,
-     "ga": 25,
-     "pts": 73,
+     "gf": 64,
+     "ga": 26,
+     "pts": 74,
      "tid": 121,
-     "form": "WWDWL"
+     "form": "WDWLD"
     },
     {
      "pos": 3,
@@ -109,15 +109,15 @@
     {
      "pos": 6,
      "team": "Bahia",
-     "p": 35,
+     "p": 36,
      "w": 14,
      "d": 12,
-     "l": 9,
+     "l": 10,
      "gf": 50,
-     "ga": 45,
+     "ga": 46,
      "pts": 54,
      "tid": 118,
-     "form": "LDWLD"
+     "form": "DWLDL"
     },
     {
      "pos": 7,
@@ -173,6 +173,19 @@
     },
     {
      "pos": 11,
+     "team": "Coritiba",
+     "p": 36,
+     "w": 12,
+     "d": 9,
+     "l": 15,
+     "gf": 41,
+     "ga": 52,
+     "pts": 45,
+     "tid": 147,
+     "form": "LWLLW"
+    },
+    {
+     "pos": 12,
      "team": "São Paulo",
      "p": 35,
      "w": 12,
@@ -185,7 +198,7 @@
      "form": "WDLDL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Botafogo",
      "p": 35,
      "w": 11,
@@ -196,19 +209,6 @@
      "pts": 42,
      "tid": 120,
      "form": "WLLWL"
-    },
-    {
-     "pos": 13,
-     "team": "Coritiba",
-     "p": 35,
-     "w": 11,
-     "d": 9,
-     "l": 15,
-     "gf": 40,
-     "ga": 52,
-     "pts": 42,
-     "tid": 147,
-     "form": "LLWLL"
     },
     {
      "pos": 14,
@@ -302,7 +302,7 @@
      "form": "WLLLL"
     }
    ],
-   "updated": "2026-11-20T00:00:00.000Z"
+   "updated": "2026-11-21T00:00:00.000Z"
   },
   {
    "id": "serie-b",
@@ -594,7 +594,7 @@
      "form": "DDLLL"
     }
    ],
-   "updated": "2026-11-16T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "serie-c",

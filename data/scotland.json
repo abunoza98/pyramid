@@ -48,15 +48,15 @@
     {
      "pos": 2,
      "team": "Rangers",
-     "p": 12,
-     "w": 8,
+     "p": 13,
+     "w": 9,
      "d": 3,
      "l": 1,
-     "gf": 21,
-     "ga": 9,
-     "pts": 27,
+     "gf": 23,
+     "ga": 10,
+     "pts": 30,
      "tid": 257,
-     "form": "WDWDW"
+     "form": "DWDWW"
     },
     {
      "pos": 3,
@@ -152,15 +152,15 @@
     {
      "pos": 10,
      "team": "Motherwell",
-     "p": 13,
+     "p": 14,
      "w": 3,
      "d": 4,
-     "l": 6,
-     "gf": 15,
-     "ga": 21,
+     "l": 7,
+     "gf": 16,
+     "ga": 23,
      "pts": 13,
      "tid": 256,
-     "form": "LLDWD"
+     "form": "LDWDL"
     },
     {
      "pos": 11,

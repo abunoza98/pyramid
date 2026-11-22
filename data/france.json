@@ -4,7 +4,7 @@
  "adjective": "French",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-21T00:00:00.000Z",
+ "updated": "2026-11-22T00:00:00.000Z",
  "belowNote": "Promoted clubs from National 1 come up",
  "leagues": [
   {
@@ -288,7 +288,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "ligue-2",
@@ -328,15 +328,15 @@
     {
      "pos": 1,
      "team": "Saint-Étienne",
-     "p": 12,
-     "w": 9,
+     "p": 13,
+     "w": 10,
      "d": 1,
      "l": 2,
-     "gf": 25,
+     "gf": 26,
      "ga": 11,
-     "pts": 28,
+     "pts": 31,
      "tid": 1063,
-     "form": "WWWLW"
+     "form": "WWLWW"
     },
     {
      "pos": 2,
@@ -367,15 +367,15 @@
     {
      "pos": 4,
      "team": "Reims",
-     "p": 12,
+     "p": 13,
      "w": 5,
      "d": 6,
-     "l": 1,
+     "l": 2,
      "gf": 24,
-     "ga": 15,
+     "ga": 16,
      "pts": 21,
      "tid": 93,
-     "form": "DWDWL"
+     "form": "WDWLL"
     },
     {
      "pos": 5,

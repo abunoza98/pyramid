@@ -56,6 +56,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Club Brugge",
+     "p": 12,
+     "w": 10,
+     "d": 1,
+     "l": 1,
+     "gf": 32,
+     "ga": 10,
+     "pts": 31,
+     "tid": 569,
+     "form": "WWWDW"
+    },
+    {
+     "pos": 2,
      "team": "Union Saint-Gilloise",
      "p": 11,
      "w": 9,
@@ -66,19 +79,6 @@
      "pts": 29,
      "tid": 1393,
      "form": "WDWWW"
-    },
-    {
-     "pos": 2,
-     "team": "Club Brugge",
-     "p": 11,
-     "w": 9,
-     "d": 1,
-     "l": 1,
-     "gf": 27,
-     "ga": 9,
-     "pts": 28,
-     "tid": 569,
-     "form": "WWWWD"
     },
     {
      "pos": 3,
@@ -199,6 +199,19 @@
     },
     {
      "pos": 12,
+     "team": "Antwerp",
+     "p": 12,
+     "w": 3,
+     "d": 3,
+     "l": 6,
+     "gf": 20,
+     "ga": 26,
+     "pts": 12,
+     "tid": 740,
+     "form": "LWLDD"
+    },
+    {
+     "pos": 13,
      "team": "Cercle Brugge",
      "p": 12,
      "w": 3,
@@ -211,43 +224,30 @@
      "form": "LLWWW"
     },
     {
-     "pos": 13,
-     "team": "KV Mechelen",
-     "p": 11,
+     "pos": 14,
+     "team": "Zulte Waregem",
+     "p": 12,
      "w": 3,
      "d": 3,
-     "l": 5,
-     "gf": 13,
-     "ga": 20,
-     "pts": 12,
-     "tid": 266,
-     "form": "DWWWL"
-    },
-    {
-     "pos": 14,
-     "team": "Antwerp",
-     "p": 11,
-     "w": 3,
-     "d": 2,
      "l": 6,
-     "gf": 18,
-     "ga": 24,
-     "pts": 11,
-     "tid": 740,
-     "form": "LLWLD"
+     "gf": 15,
+     "ga": 22,
+     "pts": 12,
+     "tid": 600,
+     "form": "LLLLD"
     },
     {
      "pos": 15,
-     "team": "Zulte Waregem",
-     "p": 11,
+     "team": "KV Mechelen",
+     "p": 12,
      "w": 3,
-     "d": 2,
+     "d": 3,
      "l": 6,
-     "gf": 13,
-     "ga": 20,
-     "pts": 11,
-     "tid": 600,
-     "form": "LLLLL"
+     "gf": 14,
+     "ga": 25,
+     "pts": 12,
+     "tid": 266,
+     "form": "WWWLL"
     },
     {
      "pos": 16,
@@ -383,6 +383,19 @@
     },
     {
      "pos": 5,
+     "team": "Patro Eisden",
+     "p": 11,
+     "w": 5,
+     "d": 1,
+     "l": 5,
+     "gf": 17,
+     "ga": 17,
+     "pts": 16,
+     "tid": 6222,
+     "form": "WWWWD"
+    },
+    {
+     "pos": 6,
      "team": "Sporting Hasselt",
      "p": 10,
      "w": 5,
@@ -393,19 +406,6 @@
      "pts": 16,
      "tid": 5931,
      "form": "LWWLD"
-    },
-    {
-     "pos": 6,
-     "team": "Patro Eisden",
-     "p": 10,
-     "w": 5,
-     "d": 0,
-     "l": 5,
-     "gf": 16,
-     "ga": 16,
-     "pts": 15,
-     "tid": 6222,
-     "form": "LWWWW"
     },
     {
      "pos": 7,
@@ -488,15 +488,15 @@
     {
      "pos": 13,
      "team": "Seraing United",
-     "p": 10,
+     "p": 11,
      "w": 2,
-     "d": 2,
+     "d": 3,
      "l": 6,
-     "gf": 12,
-     "ga": 17,
-     "pts": 8,
+     "gf": 13,
+     "ga": 18,
+     "pts": 9,
      "tid": 10244,
-     "form": "DLWWL"
+     "form": "LWWLD"
     },
     {
      "pos": 14,

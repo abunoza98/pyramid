@@ -4,7 +4,7 @@
  "adjective": "German",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-21T00:00:00.000Z",
+ "updated": "2026-11-22T00:00:00.000Z",
  "belowNote": "Regionalliga champions come up, some through a play-off",
  "leagues": [
   {
@@ -282,7 +282,7 @@
      "form": "LWDLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "2-bundesliga",
@@ -412,6 +412,19 @@
     },
     {
      "pos": 8,
+     "team": "FC St. Pauli",
+     "p": 12,
+     "w": 3,
+     "d": 6,
+     "l": 3,
+     "gf": 15,
+     "ga": 16,
+     "pts": 15,
+     "tid": 186,
+     "form": "DDLLW"
+    },
+    {
+     "pos": 9,
      "team": "Hannover 96",
      "p": 12,
      "w": 4,
@@ -424,7 +437,7 @@
      "form": "DLWDW"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Eintracht Braunschweig",
      "p": 12,
      "w": 4,
@@ -437,30 +450,17 @@
      "form": "LWLDW"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "VfL Bochum",
-     "p": 11,
+     "p": 12,
      "w": 4,
      "d": 2,
-     "l": 5,
+     "l": 6,
      "gf": 11,
-     "ga": 13,
+     "ga": 15,
      "pts": 14,
      "tid": 176,
-     "form": "LLDWW"
-    },
-    {
-     "pos": 11,
-     "team": "FC St. Pauli",
-     "p": 11,
-     "w": 2,
-     "d": 6,
-     "l": 3,
-     "gf": 13,
-     "ga": 16,
-     "pts": 12,
-     "tid": 186,
-     "form": "WDDLL"
+     "form": "LDWWL"
     },
     {
      "pos": 12,
@@ -554,7 +554,7 @@
      "form": "DWLLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "3-liga",

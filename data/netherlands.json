@@ -107,6 +107,19 @@
     },
     {
      "pos": 5,
+     "team": "Heerenveen",
+     "p": 13,
+     "w": 7,
+     "d": 3,
+     "l": 3,
+     "gf": 27,
+     "ga": 17,
+     "pts": 24,
+     "tid": 210,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 6,
      "team": "AZ Alkmaar",
      "p": 12,
      "w": 7,
@@ -117,19 +130,6 @@
      "pts": 23,
      "tid": 201,
      "form": "LDLLW"
-    },
-    {
-     "pos": 6,
-     "team": "Heerenveen",
-     "p": 12,
-     "w": 6,
-     "d": 3,
-     "l": 3,
-     "gf": 24,
-     "ga": 16,
-     "pts": 21,
-     "tid": 210,
-     "form": "LWWWW"
     },
     {
      "pos": 7,
@@ -173,18 +173,31 @@
     {
      "pos": 10,
      "team": "Groningen",
-     "p": 12,
+     "p": 13,
      "w": 4,
      "d": 3,
-     "l": 5,
-     "gf": 29,
-     "ga": 28,
+     "l": 6,
+     "gf": 30,
+     "ga": 31,
      "pts": 15,
      "tid": 202,
-     "form": "WLDLL"
+     "form": "LDLLL"
     },
     {
      "pos": 11,
+     "team": "PEC Zwolle",
+     "p": 13,
+     "w": 4,
+     "d": 3,
+     "l": 6,
+     "gf": 16,
+     "ga": 25,
+     "pts": 15,
+     "tid": 193,
+     "form": "WDWDW"
+    },
+    {
+     "pos": 12,
      "team": "NEC Nijmegen",
      "p": 13,
      "w": 3,
@@ -197,7 +210,7 @@
      "form": "DDLWL"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Excelsior",
      "p": 13,
      "w": 4,
@@ -210,7 +223,7 @@
      "form": "LLLLW"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Sparta Rotterdam",
      "p": 12,
      "w": 3,
@@ -221,19 +234,6 @@
      "pts": 12,
      "tid": 426,
      "form": "DWLWL"
-    },
-    {
-     "pos": 14,
-     "team": "PEC Zwolle",
-     "p": 12,
-     "w": 3,
-     "d": 3,
-     "l": 6,
-     "gf": 13,
-     "ga": 24,
-     "pts": 12,
-     "tid": 193,
-     "form": "LWDWD"
     },
     {
      "pos": 15,
@@ -251,15 +251,15 @@
     {
      "pos": 16,
      "team": "Telstar",
-     "p": 12,
+     "p": 13,
      "w": 2,
      "d": 4,
-     "l": 6,
-     "gf": 18,
-     "ga": 25,
+     "l": 7,
+     "gf": 19,
+     "ga": 28,
      "pts": 10,
      "tid": 427,
-     "form": "DLLWD"
+     "form": "LLWDL"
     },
     {
      "pos": 17,
