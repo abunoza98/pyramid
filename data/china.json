@@ -4,7 +4,7 @@
  "adjective": "Chinese",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-15T00:00:00.000Z",
+ "updated": "2026-11-22T00:00:00.000Z",
  "belowNote": "China League Two's top clubs come up",
  "leagues": [
   {
@@ -482,7 +482,7 @@
      "ga": 53,
      "pts": 28,
      "tid": 1445,
-     "form": "WLDLL"
+     "form": "LDLLL"
     },
     {
      "pos": 15,
@@ -512,7 +512,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-15T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   }
  ]
 }

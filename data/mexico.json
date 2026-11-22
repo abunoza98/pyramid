@@ -4,7 +4,7 @@
  "adjective": "Mexican",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-21T00:00:00.000Z",
+ "updated": "2026-11-22T00:00:00.000Z",
  "belowNote": "Promotion between Liga Premier and the Liga de Expansión is suspended",
  "leagues": [
   {
@@ -41,15 +41,15 @@
     {
      "pos": 2,
      "team": "América",
-     "p": 16,
+     "p": 17,
      "w": 8,
      "d": 6,
-     "l": 2,
+     "l": 3,
      "gf": 38,
-     "ga": 23,
+     "ga": 24,
      "pts": 30,
      "tid": 2287,
-     "form": "WLDDD"
+     "form": "LDDDL"
     },
     {
      "pos": 3,
@@ -92,7 +92,20 @@
     },
     {
      "pos": 6,
-     "team": "Club Leon",
+     "team": "Monterrey",
+     "p": 17,
+     "w": 8,
+     "d": 3,
+     "l": 6,
+     "gf": 29,
+     "ga": 25,
+     "pts": 27,
+     "tid": 2282,
+     "form": "LDLWW"
+    },
+    {
+     "pos": 7,
+     "team": "León",
      "p": 17,
      "w": 7,
      "d": 5,
@@ -100,10 +113,11 @@
      "gf": 25,
      "ga": 22,
      "pts": 26,
+     "tid": 2289,
      "form": "WDLDW"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Pachuca",
      "p": 17,
      "w": 7,
@@ -116,7 +130,7 @@
      "form": "LWWWW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Tijuana",
      "p": 17,
      "w": 6,
@@ -129,7 +143,7 @@
      "form": "WDDLW"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Santos Laguna",
      "p": 17,
      "w": 8,
@@ -142,30 +156,17 @@
      "form": "WLWWL"
     },
     {
-     "pos": 10,
-     "team": "Monterrey",
-     "p": 16,
-     "w": 7,
-     "d": 3,
-     "l": 6,
-     "gf": 27,
-     "ga": 25,
-     "pts": 24,
-     "tid": 2282,
-     "form": "WLDLW"
-    },
-    {
      "pos": 11,
      "team": "Pumas UNAM",
-     "p": 16,
+     "p": 17,
      "w": 5,
      "d": 6,
-     "l": 5,
+     "l": 6,
      "gf": 24,
-     "ga": 26,
+     "ga": 28,
      "pts": 21,
      "tid": 2286,
-     "form": "WLDWD"
+     "form": "LDWDL"
     },
     {
      "pos": 12,
@@ -209,15 +210,15 @@
     {
      "pos": 15,
      "team": "Tigres UANL",
-     "p": 16,
-     "w": 3,
+     "p": 17,
+     "w": 4,
      "d": 6,
      "l": 7,
-     "gf": 17,
+     "gf": 18,
      "ga": 25,
-     "pts": 15,
+     "pts": 18,
      "tid": 2279,
-     "form": "DLDLL"
+     "form": "LDLLW"
     },
     {
      "pos": 16,
@@ -259,7 +260,7 @@
      "form": "LDWWD"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "liga-de-expansion",
@@ -487,7 +488,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-19T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "liga-premier",
@@ -534,15 +535,15 @@
     {
      "pos": 1,
      "team": "La Tribu de Cd. Juarez",
-     "p": 12,
-     "w": 8,
+     "p": 13,
+     "w": 9,
      "d": 0,
      "l": 4,
-     "gf": 38,
-     "ga": 13,
-     "pts": 26,
+     "gf": 42,
+     "ga": 14,
+     "pts": 29,
      "tid": 28306,
-     "form": "WWLWW"
+     "form": "WLWWW"
     },
     {
      "pos": 1,
@@ -689,6 +690,32 @@
     },
     {
      "pos": 7,
+     "team": "Guerreros",
+     "p": 12,
+     "w": 5,
+     "d": 2,
+     "l": 5,
+     "gf": 27,
+     "ga": 22,
+     "pts": 18,
+     "tid": 26426,
+     "form": "WLWLW"
+    },
+    {
+     "pos": 7,
+     "team": "Real Refineros",
+     "p": 13,
+     "w": 6,
+     "d": 1,
+     "l": 6,
+     "gf": 25,
+     "ga": 30,
+     "pts": 19,
+     "tid": 28307,
+     "form": "LWWWL"
+    },
+    {
+     "pos": 8,
      "team": "Atlético Saltillo",
      "p": 13,
      "w": 6,
@@ -702,43 +729,17 @@
      "form": "LWLWW"
     },
     {
-     "pos": 7,
-     "team": "Real Refineros",
-     "p": 12,
-     "w": 6,
-     "d": 1,
-     "l": 5,
-     "gf": 24,
-     "ga": 26,
-     "pts": 19,
-     "tid": 28307,
-     "form": "WLWWW"
-    },
-    {
-     "pos": 8,
-     "team": "Guerreros",
-     "p": 11,
-     "w": 4,
-     "d": 2,
-     "l": 5,
-     "gf": 19,
-     "ga": 21,
-     "pts": 15,
-     "tid": 26426,
-     "form": "DWLWL"
-    },
-    {
      "pos": 8,
      "team": "Calor de San Pedro",
-     "p": 12,
+     "p": 13,
      "w": 4,
      "d": 1,
-     "l": 7,
-     "gf": 20,
-     "ga": 32,
+     "l": 8,
+     "gf": 21,
+     "ga": 40,
      "pts": 15,
      "tid": 17804,
-     "form": "LLLWL"
+     "form": "LLWLL"
     },
     {
      "pos": 9,

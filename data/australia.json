@@ -4,7 +4,7 @@
  "adjective": "Australian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-21T00:00:00.000Z",
+ "updated": "2026-11-22T00:00:00.000Z",
  "belowNote": "Below the NPL, each state has its own divisions",
  "systemNote": "There's no promotion or relegation between the A-League and the state leagues. Within each state, clubs move between its NPL and its second division.",
  "leagues": [
@@ -42,15 +42,15 @@
     {
      "pos": 1,
      "team": "Wellington Phoenix",
-     "p": 4,
+     "p": 5,
      "w": 3,
      "d": 1,
-     "l": 0,
-     "gf": 7,
-     "ga": 1,
+     "l": 1,
+     "gf": 8,
+     "ga": 3,
      "pts": 10,
      "tid": 942,
-     "form": "WWWD"
+     "form": "WWWDL"
     },
     {
      "pos": 2,
@@ -93,6 +93,19 @@
     },
     {
      "pos": 5,
+     "team": "Macarthur FC",
+     "p": 5,
+     "w": 2,
+     "d": 2,
+     "l": 1,
+     "gf": 6,
+     "ga": 5,
+     "pts": 8,
+     "tid": 15550,
+     "form": "WDDLW"
+    },
+    {
+     "pos": 6,
      "team": "Perth Glory",
      "p": 5,
      "w": 2,
@@ -105,7 +118,7 @@
      "form": "LLWWD"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Melbourne City",
      "p": 4,
      "w": 2,
@@ -118,7 +131,7 @@
      "form": "LDWW"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Auckland FC",
      "p": 5,
      "w": 1,
@@ -129,19 +142,6 @@
      "pts": 6,
      "tid": 24608,
      "form": "WLDDD"
-    },
-    {
-     "pos": 8,
-     "team": "Macarthur FC",
-     "p": 4,
-     "w": 1,
-     "d": 2,
-     "l": 1,
-     "gf": 4,
-     "ga": 4,
-     "pts": 5,
-     "tid": 15550,
-     "form": "WDDL"
     },
     {
      "pos": 9,
@@ -196,7 +196,7 @@
      "form": "LLDL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "npl",
