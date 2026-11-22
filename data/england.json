@@ -4,7 +4,7 @@
  "adjective": "English",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-21T00:00:00.000Z",
+ "updated": "2026-11-22T00:00:00.000Z",
  "belowNote": "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
  "leagues": [
   {
@@ -51,15 +51,15 @@
     {
      "pos": 2,
      "team": "Brighton & Hove Albion",
-     "p": 10,
+     "p": 11,
      "w": 7,
      "d": 1,
-     "l": 2,
+     "l": 3,
      "gf": 26,
-     "ga": 7,
+     "ga": 9,
      "pts": 22,
      "tid": 51,
-     "form": "WWLWW"
+     "form": "WLWWL"
     },
     {
      "pos": 3,
@@ -167,6 +167,19 @@
     },
     {
      "pos": 11,
+     "team": "Hull City",
+     "p": 11,
+     "w": 3,
+     "d": 5,
+     "l": 3,
+     "gf": 13,
+     "ga": 11,
+     "pts": 14,
+     "tid": 64,
+     "form": "LDDLW"
+    },
+    {
+     "pos": 12,
      "team": "Aston Villa",
      "p": 11,
      "w": 3,
@@ -179,7 +192,7 @@
      "form": "WWDDD"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Newcastle United",
      "p": 11,
      "w": 3,
@@ -192,7 +205,7 @@
      "form": "LWLDD"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Coventry City",
      "p": 11,
      "w": 4,
@@ -203,19 +216,6 @@
      "pts": 12,
      "tid": 1346,
      "form": "LLWLW"
-    },
-    {
-     "pos": 14,
-     "team": "Hull City",
-     "p": 10,
-     "w": 2,
-     "d": 5,
-     "l": 3,
-     "gf": 11,
-     "ga": 11,
-     "pts": 11,
-     "tid": 64,
-     "form": "DLDDL"
     },
     {
      "pos": 15,
@@ -296,7 +296,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "championship",
@@ -490,15 +490,15 @@
     {
      "pos": 13,
      "team": "Blackburn Rovers",
-     "p": 15,
+     "p": 16,
      "w": 6,
-     "d": 3,
+     "d": 4,
      "l": 6,
-     "gf": 22,
-     "ga": 23,
-     "pts": 21,
+     "gf": 24,
+     "ga": 25,
+     "pts": 22,
      "tid": 67,
-     "form": "LWLLW"
+     "form": "WLLWD"
     },
     {
      "pos": 14,
@@ -607,15 +607,15 @@
     {
      "pos": 22,
      "team": "Burnley",
-     "p": 15,
+     "p": 16,
      "w": 1,
-     "d": 7,
+     "d": 8,
      "l": 7,
-     "gf": 22,
-     "ga": 31,
-     "pts": 10,
+     "gf": 24,
+     "ga": 33,
+     "pts": 11,
      "tid": 44,
-     "form": "LLDDL"
+     "form": "LDDLD"
     },
     {
      "pos": 23,
@@ -644,7 +644,7 @@
      "form": "DLLWD"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "league-one",

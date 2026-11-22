@@ -4,7 +4,7 @@
  "adjective": "Belgian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-21T00:00:00.000Z",
+ "updated": "2026-11-22T00:00:00.000Z",
  "belowNote": "The top amateur clubs come up",
  "leagues": [
   {
@@ -56,6 +56,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Union Saint-Gilloise",
+     "p": 12,
+     "w": 10,
+     "d": 2,
+     "l": 0,
+     "gf": 31,
+     "ga": 7,
+     "pts": 32,
+     "tid": 1393,
+     "form": "DWWWW"
+    },
+    {
+     "pos": 2,
      "team": "Club Brugge",
      "p": 12,
      "w": 10,
@@ -68,33 +81,7 @@
      "form": "WWWDW"
     },
     {
-     "pos": 2,
-     "team": "Union Saint-Gilloise",
-     "p": 11,
-     "w": 9,
-     "d": 2,
-     "l": 0,
-     "gf": 30,
-     "ga": 7,
-     "pts": 29,
-     "tid": 1393,
-     "form": "WDWWW"
-    },
-    {
      "pos": 3,
-     "team": "Gent",
-     "p": 11,
-     "w": 9,
-     "d": 1,
-     "l": 1,
-     "gf": 20,
-     "ga": 6,
-     "pts": 28,
-     "tid": 631,
-     "form": "WWWLW"
-    },
-    {
-     "pos": 4,
      "team": "Charleroi",
      "p": 12,
      "w": 9,
@@ -105,6 +92,19 @@
      "pts": 28,
      "tid": 736,
      "form": "WLWWD"
+    },
+    {
+     "pos": 4,
+     "team": "Gent",
+     "p": 12,
+     "w": 9,
+     "d": 1,
+     "l": 2,
+     "gf": 20,
+     "ga": 7,
+     "pts": 28,
+     "tid": 631,
+     "form": "WWLWL"
     },
     {
      "pos": 5,
@@ -173,6 +173,19 @@
     },
     {
      "pos": 10,
+     "team": "SK Beveren",
+     "p": 12,
+     "w": 4,
+     "d": 1,
+     "l": 7,
+     "gf": 14,
+     "ga": 23,
+     "pts": 13,
+     "tid": 738,
+     "form": "LDLLW"
+    },
+    {
+     "pos": 11,
      "team": "Sint-Truiden",
      "p": 12,
      "w": 3,
@@ -185,7 +198,7 @@
      "form": "LLLWD"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "OH Leuven",
      "p": 11,
      "w": 3,
@@ -198,7 +211,7 @@
      "form": "WDDWW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Antwerp",
      "p": 12,
      "w": 3,
@@ -211,7 +224,7 @@
      "form": "LWLDD"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Cercle Brugge",
      "p": 12,
      "w": 3,
@@ -224,7 +237,7 @@
      "form": "LLWWW"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Zulte Waregem",
      "p": 12,
      "w": 3,
@@ -237,7 +250,7 @@
      "form": "LLLLD"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "KV Mechelen",
      "p": 12,
      "w": 3,
@@ -248,19 +261,6 @@
      "pts": 12,
      "tid": 266,
      "form": "WWWLL"
-    },
-    {
-     "pos": 16,
-     "team": "SK Beveren",
-     "p": 11,
-     "w": 3,
-     "d": 1,
-     "l": 7,
-     "gf": 13,
-     "ga": 23,
-     "pts": 10,
-     "tid": 738,
-     "form": "LLDLL"
     },
     {
      "pos": 17,
@@ -278,18 +278,18 @@
     {
      "pos": 18,
      "team": "Kortrijk",
-     "p": 11,
+     "p": 12,
      "w": 1,
      "d": 1,
-     "l": 9,
+     "l": 10,
      "gf": 4,
-     "ga": 23,
+     "ga": 24,
      "pts": 4,
      "tid": 734,
-     "form": "WLDLL"
+     "form": "LDLLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "challenger-pro-league",
@@ -332,13 +332,13 @@
     {
      "pos": 1,
      "team": "Beerschot VA",
-     "p": 10,
-     "w": 9,
+     "p": 11,
+     "w": 10,
      "d": 0,
      "l": 1,
-     "gf": 25,
-     "ga": 8,
-     "pts": 27,
+     "gf": 30,
+     "ga": 9,
+     "pts": 30,
      "tid": 263,
      "form": "WWWWW"
     },
@@ -461,19 +461,6 @@
     },
     {
      "pos": 11,
-     "team": "Genk II",
-     "p": 10,
-     "w": 2,
-     "d": 4,
-     "l": 4,
-     "gf": 14,
-     "ga": 17,
-     "pts": 10,
-     "tid": 19045,
-     "form": "DLDDD"
-    },
-    {
-     "pos": 12,
      "team": "Club Brugge II",
      "p": 10,
      "w": 2,
@@ -484,6 +471,19 @@
      "pts": 10,
      "tid": 14130,
      "form": "LDLLD"
+    },
+    {
+     "pos": 12,
+     "team": "Genk II",
+     "p": 11,
+     "w": 2,
+     "d": 4,
+     "l": 5,
+     "gf": 15,
+     "ga": 22,
+     "pts": 10,
+     "tid": 19045,
+     "form": "LDDDL"
     },
     {
      "pos": 13,
@@ -525,7 +525,7 @@
      "form": "LLWWL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   }
  ]
 }

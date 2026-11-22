@@ -4,7 +4,7 @@
  "adjective": "Portuguese",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-15T00:00:00.000Z",
+ "updated": "2026-11-22T00:00:00.000Z",
  "belowNote": "Liga 3's top clubs come up, one through a play-off",
  "leagues": [
   {
@@ -420,6 +420,19 @@
     },
     {
      "pos": 8,
+     "team": "Vizela",
+     "p": 11,
+     "w": 4,
+     "d": 4,
+     "l": 3,
+     "gf": 14,
+     "ga": 13,
+     "pts": 16,
+     "tid": 810,
+     "form": "LLWDD"
+    },
+    {
+     "pos": 9,
      "team": "Farense",
      "p": 11,
      "w": 4,
@@ -430,19 +443,6 @@
      "pts": 15,
      "tid": 231,
      "form": "WLDLL"
-    },
-    {
-     "pos": 9,
-     "team": "Vizela",
-     "p": 10,
-     "w": 4,
-     "d": 3,
-     "l": 3,
-     "gf": 12,
-     "ga": 11,
-     "pts": 15,
-     "tid": 810,
-     "form": "DLLWD"
     },
     {
      "pos": 10,
@@ -551,18 +551,18 @@
     {
      "pos": 18,
      "team": "Feirense",
-     "p": 10,
+     "p": 11,
      "w": 1,
-     "d": 2,
+     "d": 3,
      "l": 7,
-     "gf": 3,
-     "ga": 11,
-     "pts": 5,
+     "gf": 5,
+     "ga": 13,
+     "pts": 6,
      "tid": 213,
-     "form": "LLDLW"
+     "form": "LDLWD"
     }
    ],
-   "updated": "2026-11-15T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   }
  ]
 }

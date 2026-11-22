@@ -4,7 +4,7 @@
  "adjective": "Dutch",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-21T00:00:00.000Z",
+ "updated": "2026-11-22T00:00:00.000Z",
  "belowNote": "The top Derde Divisie clubs come up",
  "leagues": [
   {
@@ -69,18 +69,44 @@
     {
      "pos": 2,
      "team": "Ajax",
-     "p": 12,
-     "w": 7,
+     "p": 13,
+     "w": 8,
      "d": 4,
      "l": 1,
-     "gf": 32,
+     "gf": 35,
      "ga": 15,
-     "pts": 25,
+     "pts": 28,
      "tid": 194,
-     "form": "DWWWD"
+     "form": "WWWDW"
     },
     {
      "pos": 3,
+     "team": "Twente",
+     "p": 13,
+     "w": 8,
+     "d": 3,
+     "l": 2,
+     "gf": 32,
+     "ga": 13,
+     "pts": 27,
+     "tid": 415,
+     "form": "LWWDW"
+    },
+    {
+     "pos": 4,
+     "team": "AZ Alkmaar",
+     "p": 13,
+     "w": 8,
+     "d": 2,
+     "l": 3,
+     "gf": 29,
+     "ga": 17,
+     "pts": 26,
+     "tid": 201,
+     "form": "DLLWW"
+    },
+    {
+     "pos": 5,
      "team": "Feyenoord",
      "p": 13,
      "w": 7,
@@ -93,20 +119,7 @@
      "form": "WDDLL"
     },
     {
-     "pos": 4,
-     "team": "Twente",
-     "p": 12,
-     "w": 7,
-     "d": 3,
-     "l": 2,
-     "gf": 30,
-     "ga": 12,
-     "pts": 24,
-     "tid": 415,
-     "form": "DLWWD"
-    },
-    {
-     "pos": 5,
+     "pos": 6,
      "team": "Heerenveen",
      "p": 13,
      "w": 7,
@@ -119,30 +132,17 @@
      "form": "WWWWW"
     },
     {
-     "pos": 6,
-     "team": "AZ Alkmaar",
-     "p": 12,
-     "w": 7,
-     "d": 2,
-     "l": 3,
-     "gf": 24,
-     "ga": 16,
-     "pts": 23,
-     "tid": 201,
-     "form": "LDLLW"
-    },
-    {
      "pos": 7,
      "team": "Fortuna Sittard",
-     "p": 12,
-     "w": 5,
+     "p": 13,
+     "w": 6,
      "d": 5,
      "l": 2,
-     "gf": 20,
+     "gf": 21,
      "ga": 20,
-     "pts": 20,
+     "pts": 23,
      "tid": 205,
-     "form": "DDWDD"
+     "form": "DWDDW"
     },
     {
      "pos": 8,
@@ -160,15 +160,15 @@
     {
      "pos": 9,
      "team": "Go Ahead Eagles",
-     "p": 12,
+     "p": 13,
      "w": 4,
      "d": 5,
-     "l": 3,
+     "l": 4,
      "gf": 24,
-     "ga": 27,
+     "ga": 28,
      "pts": 17,
      "tid": 410,
-     "form": "DLWLW"
+     "form": "LWLWL"
     },
     {
      "pos": 10,
@@ -225,15 +225,15 @@
     {
      "pos": 14,
      "team": "Sparta Rotterdam",
-     "p": 12,
+     "p": 13,
      "w": 3,
      "d": 3,
-     "l": 6,
-     "gf": 21,
-     "ga": 29,
+     "l": 7,
+     "gf": 22,
+     "ga": 34,
      "pts": 12,
      "tid": 426,
-     "form": "DWLWL"
+     "form": "WLWLL"
     },
     {
      "pos": 15,
@@ -264,31 +264,31 @@
     {
      "pos": 17,
      "team": "ADO Den Haag",
-     "p": 12,
+     "p": 13,
      "w": 2,
      "d": 3,
-     "l": 7,
+     "l": 8,
      "gf": 16,
-     "ga": 25,
+     "ga": 28,
      "pts": 9,
      "tid": 198,
-     "form": "DWLLW"
+     "form": "WLLWL"
     },
     {
      "pos": 18,
      "team": "Willem II",
-     "p": 12,
+     "p": 13,
      "w": 0,
      "d": 3,
-     "l": 9,
-     "gf": 11,
-     "ga": 40,
+     "l": 10,
+     "gf": 12,
+     "ga": 42,
      "pts": 3,
      "tid": 195,
-     "form": "LLLLD"
+     "form": "LLLDL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "eerste-divisie",

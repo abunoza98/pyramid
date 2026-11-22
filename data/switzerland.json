@@ -75,28 +75,28 @@
     {
      "pos": 4,
      "team": "FC St. Gallen",
-     "p": 13,
+     "p": 14,
      "w": 7,
-     "d": 1,
+     "d": 2,
      "l": 5,
-     "gf": 24,
-     "ga": 22,
-     "pts": 22,
+     "gf": 26,
+     "ga": 24,
+     "pts": 23,
      "tid": 1011,
-     "form": "WWLWW"
+     "form": "WLWWD"
     },
     {
      "pos": 5,
      "team": "FC Zürich",
-     "p": 13,
+     "p": 14,
      "w": 6,
-     "d": 3,
+     "d": 4,
      "l": 4,
-     "gf": 25,
-     "ga": 26,
-     "pts": 21,
+     "gf": 27,
+     "ga": 28,
+     "pts": 22,
      "tid": 783,
-     "form": "DWWWD"
+     "form": "WWWDD"
     },
     {
      "pos": 6,
@@ -113,19 +113,32 @@
     },
     {
      "pos": 7,
-     "team": "FC Basel",
-     "p": 13,
+     "team": "FC Luzern",
+     "p": 14,
      "w": 4,
-     "d": 3,
+     "d": 4,
      "l": 6,
-     "gf": 21,
-     "ga": 25,
-     "pts": 15,
-     "tid": 551,
-     "form": "LLDLD"
+     "gf": 23,
+     "ga": 28,
+     "pts": 16,
+     "tid": 644,
+     "form": "LLDLW"
     },
     {
      "pos": 8,
+     "team": "FC Basel",
+     "p": 14,
+     "w": 4,
+     "d": 3,
+     "l": 7,
+     "gf": 21,
+     "ga": 27,
+     "pts": 15,
+     "tid": 551,
+     "form": "LDLDL"
+    },
+    {
+     "pos": 9,
      "team": "Thun",
      "p": 14,
      "w": 4,
@@ -138,20 +151,20 @@
      "form": "LLWDL"
     },
     {
-     "pos": 9,
-     "team": "FC Luzern",
-     "p": 13,
+     "pos": 10,
+     "team": "FC Vaduz",
+     "p": 14,
      "w": 3,
-     "d": 4,
-     "l": 6,
-     "gf": 21,
-     "ga": 28,
-     "pts": 13,
-     "tid": 644,
-     "form": "WLLDL"
+     "d": 2,
+     "l": 9,
+     "gf": 26,
+     "ga": 31,
+     "pts": 11,
+     "tid": 660,
+     "form": "WLDLD"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Grasshopper Club",
      "p": 14,
      "w": 2,
@@ -164,30 +177,17 @@
      "form": "LDDDL"
     },
     {
-     "pos": 11,
-     "team": "FC Vaduz",
-     "p": 13,
-     "w": 3,
-     "d": 1,
-     "l": 9,
-     "gf": 24,
-     "ga": 29,
-     "pts": 10,
-     "tid": 660,
-     "form": "LWLDL"
-    },
-    {
      "pos": 12,
      "team": "Lausanne-Sport",
-     "p": 13,
+     "p": 14,
      "w": 1,
-     "d": 4,
+     "d": 5,
      "l": 8,
-     "gf": 12,
-     "ga": 23,
-     "pts": 7,
+     "gf": 14,
+     "ga": 25,
+     "pts": 8,
      "tid": 1014,
-     "form": "LLLLD"
+     "form": "LLLDD"
     }
    ],
    "updated": "2026-11-22T00:00:00.000Z"
@@ -352,7 +352,7 @@
      "form": "WLWLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "promotion-league",
@@ -381,32 +381,45 @@
    "rows": [
     {
      "pos": 1,
-     "team": "FC Schaffhausen",
-     "p": 15,
+     "team": "Biel-Bienne",
+     "p": 17,
      "w": 11,
-     "d": 2,
+     "d": 4,
      "l": 2,
-     "gf": 36,
-     "ga": 17,
-     "pts": 35,
-     "tid": 2182,
-     "form": "WWWDW"
+     "gf": 41,
+     "ga": 23,
+     "pts": 37,
+     "tid": 12700,
+     "form": "DLWWW"
     },
     {
      "pos": 2,
-     "team": "Biel-Bienne",
-     "p": 16,
-     "w": 10,
-     "d": 4,
-     "l": 2,
-     "gf": 37,
-     "ga": 21,
-     "pts": 34,
-     "tid": 12700,
-     "form": "DDLWW"
+     "team": "Cham",
+     "p": 17,
+     "w": 11,
+     "d": 3,
+     "l": 3,
+     "gf": 39,
+     "ga": 22,
+     "pts": 36,
+     "tid": 6621,
+     "form": "DWWWW"
     },
     {
      "pos": 3,
+     "team": "FC Schaffhausen",
+     "p": 16,
+     "w": 11,
+     "d": 2,
+     "l": 3,
+     "gf": 38,
+     "ga": 23,
+     "pts": 35,
+     "tid": 2182,
+     "form": "WWDWL"
+    },
+    {
+     "pos": 4,
      "team": "Bulle",
      "p": 16,
      "w": 10,
@@ -417,19 +430,6 @@
      "pts": 33,
      "tid": 6618,
      "form": "WWWWL"
-    },
-    {
-     "pos": 4,
-     "team": "Cham",
-     "p": 16,
-     "w": 10,
-     "d": 3,
-     "l": 3,
-     "gf": 33,
-     "ga": 20,
-     "pts": 33,
-     "tid": 6621,
-     "form": "DDWWW"
     },
     {
      "pos": 5,
@@ -473,18 +473,31 @@
     {
      "pos": 8,
      "team": "YF Juventus",
-     "p": 16,
+     "p": 17,
      "w": 8,
      "d": 1,
-     "l": 7,
+     "l": 8,
      "gf": 27,
-     "ga": 24,
+     "ga": 25,
      "pts": 25,
      "tid": 6652,
-     "form": "LWLWW"
+     "form": "WLWWL"
     },
     {
      "pos": 9,
+     "team": "Breitenrain",
+     "p": 17,
+     "w": 7,
+     "d": 3,
+     "l": 7,
+     "gf": 25,
+     "ga": 25,
+     "pts": 24,
+     "tid": 10586,
+     "form": "LWLLW"
+    },
+    {
+     "pos": 10,
      "team": "Zürich II",
      "p": 17,
      "w": 6,
@@ -497,20 +510,20 @@
      "form": "LWLDD"
     },
     {
-     "pos": 10,
-     "team": "Breitenrain",
-     "p": 16,
+     "pos": 11,
+     "team": "Young Boys II",
+     "p": 17,
      "w": 6,
-     "d": 3,
+     "d": 4,
      "l": 7,
-     "gf": 22,
-     "ga": 23,
-     "pts": 21,
-     "tid": 10586,
-     "form": "WLWLL"
+     "gf": 34,
+     "ga": 39,
+     "pts": 22,
+     "tid": 12698,
+     "form": "WLWDW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Basel II",
      "p": 17,
      "w": 6,
@@ -521,19 +534,6 @@
      "pts": 20,
      "tid": 10585,
      "form": "LLDLL"
-    },
-    {
-     "pos": 12,
-     "team": "Young Boys II",
-     "p": 16,
-     "w": 5,
-     "d": 4,
-     "l": 7,
-     "gf": 33,
-     "ga": 39,
-     "pts": 19,
-     "tid": 12698,
-     "form": "DWLWD"
     },
     {
      "pos": 13,
@@ -590,31 +590,31 @@
     {
      "pos": 17,
      "team": "Lugano II",
-     "p": 16,
+     "p": 17,
      "w": 4,
      "d": 1,
-     "l": 11,
-     "gf": 22,
-     "ga": 40,
+     "l": 12,
+     "gf": 24,
+     "ga": 43,
      "pts": 13,
      "tid": 17441,
-     "form": "WDLLL"
+     "form": "DLLLL"
     },
     {
      "pos": 18,
      "team": "Bellinzona",
-     "p": 16,
+     "p": 17,
      "w": 2,
      "d": 3,
-     "l": 11,
-     "gf": 13,
-     "ga": 31,
+     "l": 12,
+     "gf": 15,
+     "ga": 35,
      "pts": 9,
      "tid": 6616,
-     "form": "WDLLL"
+     "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "1-liga",
@@ -647,15 +647,15 @@
       {
        "pos": 2,
        "team": "Azzurri Bienne",
-       "p": 14,
+       "p": 15,
        "w": 11,
        "d": 0,
-       "l": 3,
+       "l": 4,
        "gf": 33,
-       "ga": 16,
+       "ga": 19,
        "pts": 33,
        "tid": 26346,
-       "form": "WWWLW"
+       "form": "WWLWL"
       },
       {
        "pos": 3,
@@ -685,6 +685,19 @@
       },
       {
        "pos": 5,
+       "team": "Sion II",
+       "p": 15,
+       "w": 7,
+       "d": 4,
+       "l": 4,
+       "gf": 22,
+       "ga": 19,
+       "pts": 25,
+       "tid": 10590,
+       "form": "LWLWW"
+      },
+      {
+       "pos": 6,
        "team": "Servette II",
        "p": 15,
        "w": 7,
@@ -697,7 +710,20 @@
        "form": "DLLWL"
       },
       {
-       "pos": 6,
+       "pos": 7,
+       "team": "Lausanne-Sport II",
+       "p": 15,
+       "w": 6,
+       "d": 6,
+       "l": 3,
+       "gf": 27,
+       "ga": 16,
+       "pts": 24,
+       "tid": 12693,
+       "form": "LLWDW"
+      },
+      {
+       "pos": 8,
        "team": "Naters",
        "p": 15,
        "w": 7,
@@ -708,32 +734,6 @@
        "pts": 23,
        "tid": 12695,
        "form": "WLLWW"
-      },
-      {
-       "pos": 7,
-       "team": "Sion II",
-       "p": 14,
-       "w": 6,
-       "d": 4,
-       "l": 4,
-       "gf": 19,
-       "ga": 19,
-       "pts": 22,
-       "tid": 10590,
-       "form": "LLWLW"
-      },
-      {
-       "pos": 8,
-       "team": "Lausanne-Sport II",
-       "p": 14,
-       "w": 5,
-       "d": 6,
-       "l": 3,
-       "gf": 24,
-       "ga": 16,
-       "pts": 21,
-       "tid": 12693,
-       "form": "DLLWD"
       },
       {
        "pos": 9,
@@ -764,15 +764,15 @@
       {
        "pos": 11,
        "team": "Coffrane",
-       "p": 14,
+       "p": 15,
        "w": 4,
        "d": 5,
-       "l": 5,
+       "l": 6,
        "gf": 19,
-       "ga": 17,
+       "ga": 20,
        "pts": 17,
        "tid": 17413,
-       "form": "LWWWD"
+       "form": "WWWDL"
       },
       {
        "pos": 12,
@@ -861,15 +861,15 @@
       {
        "pos": 2,
        "team": "Langenthal",
-       "p": 14,
+       "p": 15,
        "w": 9,
        "d": 3,
-       "l": 2,
-       "gf": 35,
-       "ga": 24,
+       "l": 3,
+       "gf": 36,
+       "ga": 26,
        "pts": 30,
        "tid": 12705,
-       "form": "DDWWL"
+       "form": "DWWLL"
       },
       {
        "pos": 3,
@@ -887,15 +887,15 @@
       {
        "pos": 4,
        "team": "Courtételle",
-       "p": 14,
+       "p": 15,
        "w": 7,
        "d": 3,
-       "l": 4,
-       "gf": 27,
-       "ga": 19,
+       "l": 5,
+       "gf": 28,
+       "ga": 22,
        "pts": 24,
        "tid": 17480,
-       "form": "WWDLD"
+       "form": "WDLDL"
       },
       {
        "pos": 5,
@@ -913,15 +913,15 @@
       {
        "pos": 6,
        "team": "Delémont",
-       "p": 14,
+       "p": 15,
        "w": 6,
        "d": 4,
-       "l": 4,
+       "l": 5,
        "gf": 20,
-       "ga": 13,
+       "ga": 15,
        "pts": 22,
        "tid": 12702,
-       "form": "WDLWD"
+       "form": "DLWDL"
       },
       {
        "pos": 7,
@@ -951,6 +951,32 @@
       },
       {
        "pos": 9,
+       "team": "Concordia Basel",
+       "p": 15,
+       "w": 6,
+       "d": 2,
+       "l": 7,
+       "gf": 27,
+       "ga": 23,
+       "pts": 20,
+       "tid": 6622,
+       "form": "LLLLW"
+      },
+      {
+       "pos": 10,
+       "team": "Black Stars",
+       "p": 15,
+       "w": 4,
+       "d": 7,
+       "l": 4,
+       "gf": 18,
+       "ga": 20,
+       "pts": 19,
+       "tid": 6617,
+       "form": "LDWWW"
+      },
+      {
+       "pos": 11,
        "team": "Muri-Gümligen",
        "p": 15,
        "w": 5,
@@ -963,20 +989,7 @@
        "form": "WDDLD"
       },
       {
-       "pos": 10,
-       "team": "Concordia Basel",
-       "p": 14,
-       "w": 5,
-       "d": 2,
-       "l": 7,
-       "gf": 24,
-       "ga": 22,
-       "pts": 17,
-       "tid": 6622,
-       "form": "WLLLL"
-      },
-      {
-       "pos": 11,
+       "pos": 12,
        "team": "Thun II",
        "p": 14,
        "w": 4,
@@ -987,19 +1000,6 @@
        "pts": 16,
        "tid": 16348,
        "form": "LLWDL"
-      },
-      {
-       "pos": 12,
-       "team": "Black Stars",
-       "p": 14,
-       "w": 3,
-       "d": 7,
-       "l": 4,
-       "gf": 16,
-       "ga": 19,
-       "pts": 16,
-       "tid": 6617,
-       "form": "LLDWW"
       },
       {
        "pos": 13,
@@ -1043,21 +1043,21 @@
       {
        "pos": 16,
        "team": "Münsingen",
-       "p": 14,
-       "w": 1,
+       "p": 15,
+       "w": 2,
        "d": 4,
        "l": 9,
-       "gf": 13,
+       "gf": 15,
        "ga": 30,
-       "pts": 7,
+       "pts": 10,
        "tid": 10589,
-       "form": "LLDDW"
+       "form": "LDDWW"
       }
      ]
     },
     {
      "name": "Group 3",
-     "updated": "2026-11-21T00:00:00.000Z",
+     "updated": "2026-11-22T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,

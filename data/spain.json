@@ -4,7 +4,7 @@
  "adjective": "Spanish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-21T00:00:00.000Z",
+ "updated": "2026-11-22T00:00:00.000Z",
  "belowNote": "Promoted clubs from Segunda Federación come up",
  "leagues": [
   {
@@ -44,15 +44,15 @@
     {
      "pos": 1,
      "team": "Barcelona",
-     "p": 12,
-     "w": 11,
+     "p": 13,
+     "w": 12,
      "d": 0,
      "l": 1,
-     "gf": 48,
-     "ga": 13,
-     "pts": 33,
+     "gf": 51,
+     "ga": 15,
+     "pts": 36,
      "tid": 529,
-     "form": "WWLWW"
+     "form": "WLWWW"
     },
     {
      "pos": 2,
@@ -96,15 +96,15 @@
     {
      "pos": 5,
      "team": "Real Sociedad",
-     "p": 12,
+     "p": 13,
      "w": 7,
      "d": 1,
-     "l": 4,
-     "gf": 21,
-     "ga": 20,
+     "l": 5,
+     "gf": 23,
+     "ga": 23,
      "pts": 22,
      "tid": 548,
-     "form": "WWWLW"
+     "form": "WWLWL"
     },
     {
      "pos": 6,
@@ -121,6 +121,19 @@
     },
     {
      "pos": 7,
+     "team": "Racing Santander",
+     "p": 13,
+     "w": 5,
+     "d": 2,
+     "l": 6,
+     "gf": 20,
+     "ga": 32,
+     "pts": 17,
+     "tid": 4665,
+     "form": "LWLWW"
+    },
+    {
+     "pos": 8,
      "team": "Athletic Bilbao",
      "p": 12,
      "w": 4,
@@ -133,7 +146,7 @@
      "form": "LWWDL"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Alavés",
      "p": 13,
      "w": 4,
@@ -146,20 +159,20 @@
      "form": "LDLDW"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Villarreal",
-     "p": 12,
+     "p": 13,
      "w": 4,
      "d": 3,
-     "l": 5,
-     "gf": 17,
-     "ga": 15,
+     "l": 6,
+     "gf": 19,
+     "ga": 18,
      "pts": 15,
      "tid": 533,
-     "form": "LDWLW"
+     "form": "DWLWL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Espanyol",
      "p": 13,
      "w": 4,
@@ -172,7 +185,7 @@
      "form": "LLWDW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Deportivo La Coruña",
      "p": 13,
      "w": 3,
@@ -183,19 +196,6 @@
      "pts": 15,
      "tid": 544,
      "form": "DLWDL"
-    },
-    {
-     "pos": 12,
-     "team": "Racing Santander",
-     "p": 12,
-     "w": 4,
-     "d": 2,
-     "l": 6,
-     "gf": 17,
-     "ga": 30,
-     "pts": 14,
-     "tid": 4665,
-     "form": "DLWLW"
     },
     {
      "pos": 13,
@@ -302,7 +302,7 @@
      "form": "DLDLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "segunda",
@@ -428,6 +428,19 @@
     },
     {
      "pos": 8,
+     "team": "Córdoba",
+     "p": 15,
+     "w": 7,
+     "d": 2,
+     "l": 6,
+     "gf": 28,
+     "ga": 25,
+     "pts": 23,
+     "tid": 713,
+     "form": "WDWDW"
+    },
+    {
+     "pos": 9,
      "team": "Sporting Gijón",
      "p": 14,
      "w": 7,
@@ -440,30 +453,17 @@
      "form": "WLWLD"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Oviedo",
-     "p": 14,
+     "p": 15,
      "w": 6,
      "d": 3,
-     "l": 5,
+     "l": 6,
      "gf": 20,
-     "ga": 18,
+     "ga": 21,
      "pts": 21,
      "tid": 718,
-     "form": "WDLWL"
-    },
-    {
-     "pos": 10,
-     "team": "Córdoba",
-     "p": 14,
-     "w": 6,
-     "d": 2,
-     "l": 6,
-     "gf": 25,
-     "ga": 25,
-     "pts": 20,
-     "tid": 713,
-     "form": "WWDWD"
+     "form": "DLWLL"
     },
     {
      "pos": 11,
@@ -622,7 +622,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "primera-federacion",
@@ -656,7 +656,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-21T00:00:00.000Z",
+     "updated": "2026-11-22T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -686,6 +686,32 @@
       },
       {
        "pos": 3,
+       "team": "Avilés",
+       "p": 13,
+       "w": 6,
+       "d": 3,
+       "l": 4,
+       "gf": 27,
+       "ga": 18,
+       "pts": 21,
+       "tid": 9632,
+       "form": "LWWDW"
+      },
+      {
+       "pos": 4,
+       "team": "Racing Ferrol",
+       "p": 13,
+       "w": 6,
+       "d": 3,
+       "l": 4,
+       "gf": 13,
+       "ga": 11,
+       "pts": 21,
+       "tid": 9409,
+       "form": "LDLDW"
+      },
+      {
+       "pos": 5,
        "team": "Pontevedra",
        "p": 13,
        "w": 6,
@@ -698,7 +724,7 @@
        "form": "WDWWL"
       },
       {
-       "pos": 4,
+       "pos": 6,
        "team": "Mirandés",
        "p": 13,
        "w": 6,
@@ -711,7 +737,7 @@
        "form": "WWLWL"
       },
       {
-       "pos": 5,
+       "pos": 7,
        "team": "Mérida",
        "p": 12,
        "w": 6,
@@ -724,7 +750,7 @@
        "form": "WDLWW"
       },
       {
-       "pos": 6,
+       "pos": 8,
        "team": "Bilbao Athletic",
        "p": 13,
        "w": 5,
@@ -737,20 +763,20 @@
        "form": "LWLDW"
       },
       {
-       "pos": 7,
-       "team": "Avilés",
-       "p": 12,
-       "w": 5,
-       "d": 3,
-       "l": 4,
-       "gf": 25,
-       "ga": 17,
+       "pos": 9,
+       "team": "Barakaldo",
+       "p": 13,
+       "w": 4,
+       "d": 6,
+       "l": 3,
+       "gf": 13,
+       "ga": 12,
        "pts": 18,
-       "tid": 9632,
-       "form": "WLWWD"
+       "tid": 5251,
+       "form": "DDWDW"
       },
       {
-       "pos": 8,
+       "pos": 10,
        "team": "Cacereño",
        "p": 12,
        "w": 5,
@@ -763,20 +789,7 @@
        "form": "LWLLW"
       },
       {
-       "pos": 9,
-       "team": "Racing Ferrol",
-       "p": 12,
-       "w": 5,
-       "d": 3,
-       "l": 4,
-       "gf": 10,
-       "ga": 9,
-       "pts": 18,
-       "tid": 9409,
-       "form": "WLDLD"
-      },
-      {
-       "pos": 10,
+       "pos": 11,
        "team": "Ponferradina",
        "p": 13,
        "w": 4,
@@ -789,7 +802,7 @@
        "form": "DDDLW"
       },
       {
-       "pos": 11,
+       "pos": 12,
        "team": "Extremadura",
        "p": 13,
        "w": 5,
@@ -802,7 +815,7 @@
        "form": "WWLLL"
       },
       {
-       "pos": 12,
+       "pos": 13,
        "team": "Real Unión",
        "p": 12,
        "w": 4,
@@ -815,30 +828,17 @@
        "form": "DWLLW"
       },
       {
-       "pos": 13,
-       "team": "Barakaldo",
-       "p": 12,
-       "w": 3,
-       "d": 6,
-       "l": 3,
-       "gf": 12,
-       "ga": 12,
-       "pts": 15,
-       "tid": 5251,
-       "form": "WDDWD"
-      },
-      {
        "pos": 14,
        "team": "Coria",
-       "p": 12,
+       "p": 13,
        "w": 4,
-       "d": 3,
+       "d": 4,
        "l": 5,
-       "gf": 18,
-       "ga": 19,
-       "pts": 15,
+       "gf": 21,
+       "ga": 22,
+       "pts": 16,
        "tid": 9827,
-       "form": "WDLWW"
+       "form": "DLWWD"
       },
       {
        "pos": 15,
@@ -868,61 +868,61 @@
       },
       {
        "pos": 17,
-       "team": "Unionistas",
-       "p": 12,
-       "w": 4,
-       "d": 1,
-       "l": 7,
-       "gf": 15,
-       "ga": 22,
+       "team": "Deportivo Fabril",
+       "p": 13,
+       "w": 3,
+       "d": 4,
+       "l": 6,
+       "gf": 17,
+       "ga": 24,
        "pts": 13,
-       "tid": 5281,
-       "form": "LWLWL"
+       "tid": 9610,
+       "form": "LWLDD"
       },
       {
        "pos": 18,
-       "team": "Deportivo Fabril",
-       "p": 12,
-       "w": 3,
-       "d": 3,
-       "l": 6,
-       "gf": 14,
-       "ga": 21,
-       "pts": 12,
-       "tid": 9610,
-       "form": "LLWLD"
+       "team": "Unionistas",
+       "p": 13,
+       "w": 4,
+       "d": 1,
+       "l": 8,
+       "gf": 15,
+       "ga": 23,
+       "pts": 13,
+       "tid": 5281,
+       "form": "WLWLL"
       },
       {
        "pos": 19,
        "team": "Arenas",
-       "p": 12,
+       "p": 13,
        "w": 3,
        "d": 3,
-       "l": 6,
-       "gf": 12,
-       "ga": 25,
+       "l": 7,
+       "gf": 13,
+       "ga": 27,
        "pts": 12,
        "tid": 9578,
-       "form": "LWWWD"
+       "form": "WWWDL"
       },
       {
        "pos": 20,
        "team": "UD Ourense",
-       "p": 12,
+       "p": 13,
        "w": 2,
        "d": 2,
-       "l": 8,
-       "gf": 5,
-       "ga": 19,
+       "l": 9,
+       "gf": 7,
+       "ga": 22,
        "pts": 8,
        "tid": 9617,
-       "form": "LLWLL"
+       "form": "LWLLL"
       }
      ]
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-21T00:00:00.000Z",
+     "updated": "2026-11-22T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -952,6 +952,19 @@
       },
       {
        "pos": 3,
+       "team": "Alcorcón",
+       "p": 13,
+       "w": 6,
+       "d": 6,
+       "l": 1,
+       "gf": 25,
+       "ga": 14,
+       "pts": 24,
+       "tid": 711,
+       "form": "DDWWW"
+      },
+      {
+       "pos": 4,
        "team": "Murcia",
        "p": 13,
        "w": 7,
@@ -964,20 +977,33 @@
        "form": "LWDLW"
       },
       {
-       "pos": 4,
-       "team": "Alcorcón",
-       "p": 12,
-       "w": 5,
-       "d": 6,
-       "l": 1,
-       "gf": 24,
-       "ga": 14,
-       "pts": 21,
-       "tid": 711,
-       "form": "DDDWW"
+       "pos": 5,
+       "team": "Cartagena",
+       "p": 13,
+       "w": 6,
+       "d": 4,
+       "l": 3,
+       "gf": 21,
+       "ga": 15,
+       "pts": 22,
+       "tid": 5262,
+       "form": "LLDWW"
       },
       {
-       "pos": 5,
+       "pos": 6,
+       "team": "Ibiza",
+       "p": 13,
+       "w": 6,
+       "d": 3,
+       "l": 4,
+       "gf": 22,
+       "ga": 15,
+       "pts": 21,
+       "tid": 9390,
+       "form": "DWDLW"
+      },
+      {
+       "pos": 7,
        "team": "Hércules",
        "p": 13,
        "w": 6,
@@ -990,20 +1016,7 @@
        "form": "LWDDW"
       },
       {
-       "pos": 6,
-       "team": "Cartagena",
-       "p": 12,
-       "w": 5,
-       "d": 4,
-       "l": 3,
-       "gf": 17,
-       "ga": 13,
-       "pts": 19,
-       "tid": 5262,
-       "form": "WLLDW"
-      },
-      {
-       "pos": 7,
+       "pos": 8,
        "team": "Real Madrid Castilla",
        "p": 13,
        "w": 5,
@@ -1016,30 +1029,17 @@
        "form": "LWDWL"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Jaén",
-       "p": 12,
+       "p": 13,
        "w": 5,
        "d": 4,
-       "l": 3,
-       "gf": 19,
-       "ga": 19,
+       "l": 4,
+       "gf": 21,
+       "ga": 23,
        "pts": 19,
        "tid": 5274,
-       "form": "WDWLL"
-      },
-      {
-       "pos": 9,
-       "team": "Ibiza",
-       "p": 12,
-       "w": 5,
-       "d": 3,
-       "l": 4,
-       "gf": 18,
-       "ga": 15,
-       "pts": 18,
-       "tid": 9390,
-       "form": "WDWDL"
+       "form": "DWLLL"
       },
       {
        "pos": 10,
@@ -1070,15 +1070,15 @@
       {
        "pos": 12,
        "team": "Algeciras",
-       "p": 12,
+       "p": 13,
        "w": 5,
        "d": 2,
-       "l": 5,
+       "l": 6,
        "gf": 18,
-       "ga": 18,
+       "ga": 19,
        "pts": 17,
        "tid": 9597,
-       "form": "WWLDW"
+       "form": "WLDWL"
       },
       {
        "pos": 13,
@@ -1109,15 +1109,15 @@
       {
        "pos": 15,
        "team": "Huesca",
-       "p": 12,
+       "p": 13,
        "w": 3,
        "d": 6,
-       "l": 3,
+       "l": 4,
        "gf": 13,
-       "ga": 14,
+       "ga": 18,
        "pts": 15,
        "tid": 726,
-       "form": "DDWLL"
+       "form": "DWLLL"
       },
       {
        "pos": 16,
@@ -1187,7 +1187,7 @@
      ]
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   }
  ]
 }

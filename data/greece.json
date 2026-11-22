@@ -4,7 +4,7 @@
  "adjective": "Greek",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-21T00:00:00.000Z",
+ "updated": "2026-11-22T00:00:00.000Z",
  "belowNote": "Gamma Ethniki group winners come up",
  "leagues": [
   {
@@ -41,15 +41,15 @@
     {
      "pos": 1,
      "team": "Panathinaikos",
-     "p": 10,
-     "w": 9,
+     "p": 11,
+     "w": 10,
      "d": 0,
      "l": 1,
-     "gf": 22,
+     "gf": 24,
      "ga": 5,
-     "pts": 27,
+     "pts": 30,
      "tid": 617,
-     "form": "LWWWW"
+     "form": "WWWWW"
     },
     {
      "pos": 2,
@@ -106,15 +106,15 @@
     {
      "pos": 6,
      "team": "OFI Crete",
-     "p": 10,
+     "p": 11,
      "w": 5,
      "d": 2,
-     "l": 3,
+     "l": 4,
      "gf": 14,
-     "ga": 12,
+     "ga": 14,
      "pts": 17,
      "tid": 1124,
-     "form": "LLWWD"
+     "form": "LWWDL"
     },
     {
      "pos": 7,
@@ -131,6 +131,19 @@
     },
     {
      "pos": 8,
+     "team": "Panetolikos",
+     "p": 11,
+     "w": 4,
+     "d": 0,
+     "l": 7,
+     "gf": 9,
+     "ga": 20,
+     "pts": 12,
+     "tid": 949,
+     "form": "LLLLW"
+    },
+    {
+     "pos": 9,
      "team": "Kalamata",
      "p": 11,
      "w": 3,
@@ -143,7 +156,7 @@
      "form": "WLDDL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Iraklis 1908",
      "p": 10,
      "w": 2,
@@ -154,19 +167,6 @@
      "pts": 10,
      "tid": 17991,
      "form": "WLLDL"
-    },
-    {
-     "pos": 10,
-     "team": "Panetolikos",
-     "p": 10,
-     "w": 3,
-     "d": 0,
-     "l": 7,
-     "gf": 8,
-     "ga": 20,
-     "pts": 9,
-     "tid": 949,
-     "form": "LLLLL"
     },
     {
      "pos": 11,
@@ -183,46 +183,46 @@
     },
     {
      "pos": 12,
-     "team": "Atromitos",
-     "p": 9,
+     "team": "Levadiakos",
+     "p": 11,
      "w": 1,
-     "d": 3,
-     "l": 5,
-     "gf": 9,
-     "ga": 12,
-     "pts": 6,
-     "tid": 12260,
-     "form": "LLLWD"
+     "d": 4,
+     "l": 6,
+     "gf": 5,
+     "ga": 14,
+     "pts": 7,
+     "tid": 957,
+     "form": "DDWLD"
     },
     {
      "pos": 13,
-     "team": "Levadiakos",
+     "team": "Atromitos",
      "p": 10,
      "w": 1,
-     "d": 3,
-     "l": 6,
-     "gf": 4,
+     "d": 4,
+     "l": 5,
+     "gf": 10,
      "ga": 13,
-     "pts": 6,
-     "tid": 957,
-     "form": "LDDWL"
+     "pts": 7,
+     "tid": 12260,
+     "form": "LLWDD"
     },
     {
      "pos": 14,
      "team": "Volos",
-     "p": 10,
+     "p": 11,
      "w": 0,
      "d": 3,
-     "l": 7,
+     "l": 8,
      "gf": 7,
-     "ga": 19,
+     "ga": 20,
      "pts": 0,
      "ded": 3,
      "tid": 2110,
-     "form": "LDLLL"
+     "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "super-league-2",
@@ -264,6 +264,32 @@
     },
     {
      "pos": 3,
+     "team": "Panserraikos",
+     "p": 12,
+     "w": 7,
+     "d": 2,
+     "l": 3,
+     "gf": 22,
+     "ga": 15,
+     "pts": 23,
+     "tid": 2099,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 4,
+     "team": "Kallithea",
+     "p": 12,
+     "w": 6,
+     "d": 4,
+     "l": 2,
+     "gf": 13,
+     "ga": 7,
+     "pts": 22,
+     "tid": 2095,
+     "form": "DLWDD"
+    },
+    {
+     "pos": 5,
      "team": "Panionios",
      "p": 12,
      "w": 6,
@@ -276,20 +302,7 @@
      "form": "LWLWD"
     },
     {
-     "pos": 4,
-     "team": "Kallithea",
-     "p": 11,
-     "w": 6,
-     "d": 3,
-     "l": 2,
-     "gf": 13,
-     "ga": 7,
-     "pts": 21,
-     "tid": 2095,
-     "form": "DDLWD"
-    },
-    {
-     "pos": 5,
+     "pos": 6,
      "team": "Niki Volos",
      "p": 11,
      "w": 6,
@@ -300,19 +313,6 @@
      "pts": 20,
      "tid": 5056,
      "form": "DWWWW"
-    },
-    {
-     "pos": 6,
-     "team": "Panserraikos",
-     "p": 11,
-     "w": 6,
-     "d": 2,
-     "l": 3,
-     "gf": 16,
-     "ga": 14,
-     "pts": 20,
-     "tid": 2099,
-     "form": "DWLWW"
     },
     {
      "pos": 7,
@@ -355,6 +355,19 @@
     },
     {
      "pos": 10,
+     "team": "Anagennisi Karditsas",
+     "p": 12,
+     "w": 3,
+     "d": 4,
+     "l": 5,
+     "gf": 8,
+     "ga": 12,
+     "pts": 13,
+     "tid": 2094,
+     "form": "WLDLD"
+    },
+    {
+     "pos": 11,
      "team": "Nestos Chrisoupolis",
      "p": 12,
      "w": 3,
@@ -365,19 +378,6 @@
      "pts": 12,
      "tid": 12367,
      "form": "WLLDW"
-    },
-    {
-     "pos": 11,
-     "team": "Anagennisi Karditsas",
-     "p": 11,
-     "w": 3,
-     "d": 3,
-     "l": 5,
-     "gf": 8,
-     "ga": 12,
-     "pts": 12,
-     "tid": 2094,
-     "form": "WWLDL"
     },
     {
      "pos": 12,
@@ -395,15 +395,15 @@
     {
      "pos": 13,
      "team": "Apollon Pontou",
-     "p": 11,
+     "p": 12,
      "w": 2,
-     "d": 3,
+     "d": 4,
      "l": 6,
-     "gf": 8,
-     "ga": 14,
-     "pts": 9,
+     "gf": 9,
+     "ga": 15,
+     "pts": 10,
      "tid": 2102,
-     "form": "LLLLD"
+     "form": "LLLDD"
     },
     {
      "pos": 14,
@@ -421,31 +421,31 @@
     {
      "pos": 15,
      "team": "Olympiacos B",
-     "p": 11,
+     "p": 12,
      "w": 1,
-     "d": 3,
+     "d": 4,
      "l": 7,
-     "gf": 13,
-     "ga": 24,
-     "pts": 6,
+     "gf": 14,
+     "ga": 25,
+     "pts": 7,
      "tid": 18017,
-     "form": "DLLLL"
+     "form": "LLLLD"
     },
     {
      "pos": 16,
      "team": "Zakynthos",
-     "p": 11,
+     "p": 12,
      "w": 0,
      "d": 4,
-     "l": 7,
-     "gf": 7,
-     "ga": 24,
+     "l": 8,
+     "gf": 8,
+     "ga": 30,
      "pts": 4,
      "tid": 6326,
-     "form": "DLDLL"
+     "form": "LDLLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   }
  ]
 }

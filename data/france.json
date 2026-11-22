@@ -68,6 +68,19 @@
     },
     {
      "pos": 2,
+     "team": "Paris FC",
+     "p": 11,
+     "w": 7,
+     "d": 2,
+     "l": 2,
+     "gf": 21,
+     "ga": 10,
+     "pts": 23,
+     "tid": 114,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 3,
      "team": "Lille",
      "p": 11,
      "w": 6,
@@ -78,19 +91,6 @@
      "pts": 21,
      "tid": 79,
      "form": "DDWWL"
-    },
-    {
-     "pos": 3,
-     "team": "Paris FC",
-     "p": 10,
-     "w": 6,
-     "d": 2,
-     "l": 2,
-     "gf": 17,
-     "ga": 10,
-     "pts": 20,
-     "tid": 114,
-     "form": "LWLWW"
     },
     {
      "pos": 4,
@@ -160,28 +160,28 @@
     {
      "pos": 9,
      "team": "Rennes",
-     "p": 10,
+     "p": 11,
      "w": 5,
-     "d": 1,
+     "d": 2,
      "l": 4,
-     "gf": 21,
-     "ga": 21,
-     "pts": 16,
+     "gf": 22,
+     "ga": 22,
+     "pts": 17,
      "tid": 94,
-     "form": "WLWLL"
+     "form": "LWLLD"
     },
     {
      "pos": 10,
      "team": "Lorient",
-     "p": 10,
+     "p": 11,
      "w": 4,
-     "d": 3,
+     "d": 4,
      "l": 3,
-     "gf": 9,
-     "ga": 8,
-     "pts": 15,
+     "gf": 10,
+     "ga": 9,
+     "pts": 16,
      "tid": 97,
-     "form": "WWDLW"
+     "form": "WDLWD"
     },
     {
      "pos": 11,
@@ -264,15 +264,15 @@
     {
      "pos": 17,
      "team": "Angers",
-     "p": 10,
+     "p": 11,
      "w": 2,
      "d": 2,
-     "l": 6,
+     "l": 7,
      "gf": 9,
-     "ga": 19,
+     "ga": 23,
      "pts": 8,
      "tid": 77,
-     "form": "LLDLL"
+     "form": "LDLLL"
     },
     {
      "pos": 18,

@@ -115,15 +115,15 @@
     {
      "pos": 6,
      "team": "Werder Bremen",
-     "p": 9,
-     "w": 4,
+     "p": 10,
+     "w": 5,
      "d": 3,
      "l": 2,
-     "gf": 17,
+     "gf": 21,
      "ga": 15,
-     "pts": 15,
+     "pts": 18,
      "tid": 162,
-     "form": "DDWWL"
+     "form": "DWWLW"
     },
     {
      "pos": 7,
@@ -166,6 +166,19 @@
     },
     {
      "pos": 10,
+     "team": "FC Augsburg",
+     "p": 10,
+     "w": 3,
+     "d": 3,
+     "l": 4,
+     "gf": 23,
+     "ga": 21,
+     "pts": 12,
+     "tid": 170,
+     "form": "LDLLW"
+    },
+    {
+     "pos": 11,
      "team": "TSG Hoffenheim",
      "p": 10,
      "w": 4,
@@ -178,33 +191,33 @@
      "form": "WWLWL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Hamburger SV",
-     "p": 9,
+     "p": 10,
      "w": 4,
      "d": 0,
-     "l": 5,
+     "l": 6,
      "gf": 10,
-     "ga": 20,
+     "ga": 24,
      "pts": 12,
      "tid": 175,
-     "form": "WWLLW"
-    },
-    {
-     "pos": 12,
-     "team": "Mainz 05",
-     "p": 9,
-     "w": 3,
-     "d": 1,
-     "l": 5,
-     "gf": 18,
-     "ga": 19,
-     "pts": 10,
-     "tid": 164,
-     "form": "LWLLL"
+     "form": "WLLWL"
     },
     {
      "pos": 13,
+     "team": "Mainz 05",
+     "p": 10,
+     "w": 3,
+     "d": 1,
+     "l": 6,
+     "gf": 19,
+     "ga": 22,
+     "pts": 10,
+     "tid": 164,
+     "form": "WLLLL"
+    },
+    {
+     "pos": 14,
      "team": "1. FC Köln",
      "p": 10,
      "w": 2,
@@ -217,7 +230,7 @@
      "form": "LDDLD"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "SC Paderborn",
      "p": 10,
      "w": 2,
@@ -228,19 +241,6 @@
      "pts": 10,
      "tid": 185,
      "form": "DWDDL"
-    },
-    {
-     "pos": 15,
-     "team": "FC Augsburg",
-     "p": 9,
-     "w": 2,
-     "d": 3,
-     "l": 4,
-     "gf": 20,
-     "ga": 20,
-     "pts": 9,
-     "tid": 170,
-     "form": "DLDLL"
     },
     {
      "pos": 16,
@@ -322,15 +322,15 @@
     {
      "pos": 1,
      "team": "Hertha BSC",
-     "p": 11,
-     "w": 10,
+     "p": 12,
+     "w": 11,
      "d": 1,
      "l": 0,
-     "gf": 25,
+     "gf": 29,
      "ga": 9,
-     "pts": 31,
+     "pts": 34,
      "tid": 159,
-     "form": "WDWWW"
+     "form": "DWWWW"
     },
     {
      "pos": 2,
@@ -374,15 +374,15 @@
     {
      "pos": 5,
      "team": "1. FC Kaiserslautern",
-     "p": 11,
+     "p": 12,
      "w": 6,
-     "d": 3,
+     "d": 4,
      "l": 2,
-     "gf": 10,
-     "ga": 7,
-     "pts": 21,
+     "gf": 12,
+     "ga": 9,
+     "pts": 22,
      "tid": 745,
-     "form": "DWWLW"
+     "form": "WWLWD"
     },
     {
      "pos": 6,
@@ -464,6 +464,32 @@
     },
     {
      "pos": 12,
+     "team": "VfL Osnabrück",
+     "p": 12,
+     "w": 3,
+     "d": 3,
+     "l": 6,
+     "gf": 14,
+     "ga": 18,
+     "pts": 12,
+     "tid": 1324,
+     "form": "LWLLD"
+    },
+    {
+     "pos": 13,
+     "team": "Dynamo Dresden",
+     "p": 12,
+     "w": 3,
+     "d": 3,
+     "l": 6,
+     "gf": 17,
+     "ga": 22,
+     "pts": 12,
+     "tid": 183,
+     "form": "WLLWD"
+    },
+    {
+     "pos": 14,
      "team": "Greuther Fürth",
      "p": 12,
      "w": 3,
@@ -476,7 +502,20 @@
      "form": "WLWLL"
     },
     {
-     "pos": 13,
+     "pos": 15,
+     "team": "Karlsruher SC",
+     "p": 12,
+     "w": 3,
+     "d": 3,
+     "l": 6,
+     "gf": 15,
+     "ga": 24,
+     "pts": 12,
+     "tid": 785,
+     "form": "WLWLD"
+    },
+    {
+     "pos": 16,
      "team": "Darmstadt 98",
      "p": 12,
      "w": 3,
@@ -489,56 +528,17 @@
      "form": "LDDLW"
     },
     {
-     "pos": 14,
+     "pos": 17,
      "team": "Energie Cottbus",
-     "p": 11,
+     "p": 12,
      "w": 2,
      "d": 5,
-     "l": 4,
+     "l": 5,
      "gf": 18,
-     "ga": 20,
-     "pts": 11,
-     "tid": 1320,
-     "form": "LDDLD"
-    },
-    {
-     "pos": 15,
-     "team": "VfL Osnabrück",
-     "p": 11,
-     "w": 3,
-     "d": 2,
-     "l": 6,
-     "gf": 14,
-     "ga": 18,
-     "pts": 11,
-     "tid": 1324,
-     "form": "DLWLL"
-    },
-    {
-     "pos": 16,
-     "team": "Dynamo Dresden",
-     "p": 11,
-     "w": 3,
-     "d": 2,
-     "l": 6,
-     "gf": 15,
-     "ga": 20,
-     "pts": 11,
-     "tid": 183,
-     "form": "DWLLW"
-    },
-    {
-     "pos": 17,
-     "team": "Karlsruher SC",
-     "p": 11,
-     "w": 3,
-     "d": 2,
-     "l": 6,
-     "gf": 15,
      "ga": 24,
      "pts": 11,
-     "tid": 785,
-     "form": "LWLWL"
+     "tid": 1320,
+     "form": "DDLDL"
     },
     {
      "pos": 18,
@@ -667,19 +667,32 @@
     },
     {
      "pos": 7,
-     "team": "FC Ingolstadt",
-     "p": 13,
+     "team": "VfB Stuttgart II",
+     "p": 14,
      "w": 6,
      "d": 3,
-     "l": 4,
-     "gf": 19,
-     "ga": 19,
+     "l": 5,
+     "gf": 27,
+     "ga": 23,
      "pts": 21,
-     "tid": 184,
-     "form": "WWWDW"
+     "tid": 12867,
+     "form": "WLDWW"
     },
     {
      "pos": 8,
+     "team": "FC Ingolstadt",
+     "p": 14,
+     "w": 6,
+     "d": 3,
+     "l": 5,
+     "gf": 19,
+     "ga": 24,
+     "pts": 21,
+     "tid": 184,
+     "form": "WWDWL"
+    },
+    {
+     "pos": 9,
      "team": "1. FC Saarbrücken",
      "p": 13,
      "w": 6,
@@ -692,7 +705,7 @@
      "form": "LWLWL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Waldhof Mannheim",
      "p": 14,
      "w": 6,
@@ -705,7 +718,7 @@
      "form": "LWLWL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Hansa Rostock",
      "p": 13,
      "w": 5,
@@ -718,7 +731,7 @@
      "form": "LLDLW"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Fortuna Düsseldorf",
      "p": 14,
      "w": 5,
@@ -729,19 +742,6 @@
      "pts": 19,
      "tid": 158,
      "form": "LDDLW"
-    },
-    {
-     "pos": 12,
-     "team": "VfB Stuttgart II",
-     "p": 13,
-     "w": 5,
-     "d": 3,
-     "l": 5,
-     "gf": 22,
-     "ga": 23,
-     "pts": 18,
-     "tid": 12867,
-     "form": "WWLDW"
     },
     {
      "pos": 13,
@@ -848,7 +848,7 @@
      "form": "DWDLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   }
  ]
 }
