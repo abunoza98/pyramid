@@ -93,15 +93,15 @@
     {
      "pos": 5,
      "team": "Aris",
-     "p": 10,
-     "w": 6,
+     "p": 11,
+     "w": 7,
      "d": 1,
      "l": 3,
-     "gf": 16,
+     "gf": 17,
      "ga": 17,
-     "pts": 19,
+     "pts": 22,
      "tid": 1123,
-     "form": "WWWLW"
+     "form": "WWLWW"
     },
     {
      "pos": 6,
@@ -171,15 +171,15 @@
     {
      "pos": 11,
      "team": "Asteras Tripolis",
-     "p": 10,
+     "p": 11,
      "w": 1,
      "d": 4,
-     "l": 5,
+     "l": 6,
      "gf": 9,
-     "ga": 18,
+     "ga": 19,
      "pts": 7,
      "tid": 955,
-     "form": "WLDLD"
+     "form": "LDLDL"
     },
     {
      "pos": 12,
@@ -222,7 +222,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   },
   {
    "id": "super-league-2",
@@ -239,15 +239,15 @@
     {
      "pos": 1,
      "team": "Marko",
-     "p": 11,
+     "p": 12,
      "w": 9,
-     "d": 2,
+     "d": 3,
      "l": 0,
      "gf": 25,
      "ga": 6,
-     "pts": 29,
+     "pts": 30,
      "tid": 12403,
-     "form": "DWWDW"
+     "form": "WWDWD"
     },
     {
      "pos": 2,
@@ -277,6 +277,19 @@
     },
     {
      "pos": 4,
+     "team": "Niki Volos",
+     "p": 12,
+     "w": 7,
+     "d": 2,
+     "l": 3,
+     "gf": 17,
+     "ga": 10,
+     "pts": 23,
+     "tid": 5056,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 5,
      "team": "Kallithea",
      "p": 12,
      "w": 6,
@@ -289,7 +302,7 @@
      "form": "DLWDD"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Panionios",
      "p": 12,
      "w": 6,
@@ -300,19 +313,6 @@
      "pts": 21,
      "tid": 622,
      "form": "LWLWD"
-    },
-    {
-     "pos": 6,
-     "team": "Niki Volos",
-     "p": 11,
-     "w": 6,
-     "d": 2,
-     "l": 3,
-     "gf": 16,
-     "ga": 10,
-     "pts": 20,
-     "tid": 5056,
-     "form": "DWWWW"
     },
     {
      "pos": 7,
@@ -382,15 +382,15 @@
     {
      "pos": 12,
      "team": "PAOK II",
-     "p": 11,
+     "p": 12,
      "w": 3,
      "d": 3,
-     "l": 5,
+     "l": 6,
      "gf": 10,
-     "ga": 17,
+     "ga": 18,
      "pts": 12,
      "tid": 18018,
-     "form": "WLDWL"
+     "form": "LDWLL"
     },
     {
      "pos": 13,
@@ -408,15 +408,15 @@
     {
      "pos": 14,
      "team": "Pyrgos 1968",
-     "p": 11,
+     "p": 12,
      "w": 2,
-     "d": 3,
+     "d": 4,
      "l": 6,
      "gf": 9,
      "ga": 16,
-     "pts": 9,
+     "pts": 10,
      "tid": 26587,
-     "form": "LWDLL"
+     "form": "WDLLD"
     },
     {
      "pos": 15,

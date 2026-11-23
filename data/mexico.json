@@ -4,7 +4,7 @@
  "adjective": "Mexican",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-22T00:00:00.000Z",
+ "updated": "2026-11-23T00:00:00.000Z",
  "belowNote": "Promotion between Liga Premier and the Liga de Expansión is suspended",
  "leagues": [
   {
@@ -105,7 +105,7 @@
     },
     {
      "pos": 7,
-     "team": "León",
+     "team": "Club Leon",
      "p": 17,
      "w": 7,
      "d": 5,
@@ -113,7 +113,6 @@
      "gf": 25,
      "ga": 22,
      "pts": 26,
-     "tid": 2289,
      "form": "WDLDW"
     },
     {
@@ -260,7 +259,7 @@
      "form": "LDWWD"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   },
   {
    "id": "liga-de-expansion",
