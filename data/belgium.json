@@ -109,15 +109,15 @@
     {
      "pos": 5,
      "team": "Anderlecht",
-     "p": 11,
-     "w": 6,
+     "p": 12,
+     "w": 7,
      "d": 2,
      "l": 3,
-     "gf": 14,
+     "gf": 15,
      "ga": 12,
-     "pts": 20,
+     "pts": 23,
      "tid": 554,
-     "form": "WWLWD"
+     "form": "WLWDW"
     },
     {
      "pos": 6,
@@ -134,29 +134,29 @@
     },
     {
      "pos": 7,
-     "team": "Lommel United",
-     "p": 11,
-     "w": 4,
-     "d": 4,
-     "l": 3,
-     "gf": 15,
-     "ga": 13,
-     "pts": 16,
-     "tid": 259,
-     "form": "DWDWD"
+     "team": "Standard Liège",
+     "p": 12,
+     "w": 5,
+     "d": 3,
+     "l": 4,
+     "gf": 20,
+     "ga": 17,
+     "pts": 18,
+     "tid": 733,
+     "form": "LLDWW"
     },
     {
      "pos": 8,
-     "team": "Standard Liège",
-     "p": 11,
+     "team": "Lommel United",
+     "p": 12,
      "w": 4,
-     "d": 3,
+     "d": 4,
      "l": 4,
-     "gf": 18,
-     "ga": 16,
-     "pts": 15,
-     "tid": 733,
-     "form": "LLLDW"
+     "gf": 16,
+     "ga": 15,
+     "pts": 16,
+     "tid": 259,
+     "form": "WDWDL"
     },
     {
      "pos": 9,
@@ -199,19 +199,6 @@
     },
     {
      "pos": 12,
-     "team": "OH Leuven",
-     "p": 11,
-     "w": 3,
-     "d": 3,
-     "l": 5,
-     "gf": 12,
-     "ga": 17,
-     "pts": 12,
-     "tid": 260,
-     "form": "WDDWW"
-    },
-    {
-     "pos": 13,
      "team": "Antwerp",
      "p": 12,
      "w": 3,
@@ -222,6 +209,19 @@
      "pts": 12,
      "tid": 740,
      "form": "LWLDD"
+    },
+    {
+     "pos": 13,
+     "team": "OH Leuven",
+     "p": 12,
+     "w": 3,
+     "d": 3,
+     "l": 6,
+     "gf": 12,
+     "ga": 18,
+     "pts": 12,
+     "tid": 260,
+     "form": "DDWWL"
     },
     {
      "pos": 14,
@@ -371,15 +371,15 @@
     {
      "pos": 4,
      "team": "Francs Borains",
-     "p": 9,
+     "p": 10,
      "w": 6,
      "d": 0,
-     "l": 3,
+     "l": 4,
      "gf": 11,
-     "ga": 10,
+     "ga": 12,
      "pts": 18,
      "tid": 5805,
-     "form": "WLLWW"
+     "form": "LLWWL"
     },
     {
      "pos": 5,
@@ -409,6 +409,19 @@
     },
     {
      "pos": 7,
+     "team": "Gent II",
+     "p": 10,
+     "w": 4,
+     "d": 3,
+     "l": 3,
+     "gf": 14,
+     "ga": 14,
+     "pts": 15,
+     "tid": 19685,
+     "form": "WLWDW"
+    },
+    {
+     "pos": 8,
      "team": "Excelsior Virton",
      "p": 10,
      "w": 4,
@@ -421,7 +434,7 @@
      "form": "LLWLD"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Lokeren-Temse",
      "p": 10,
      "w": 4,
@@ -432,19 +445,6 @@
      "pts": 14,
      "tid": 14128,
      "form": "DWLDL"
-    },
-    {
-     "pos": 9,
-     "team": "Gent II",
-     "p": 9,
-     "w": 3,
-     "d": 3,
-     "l": 3,
-     "gf": 12,
-     "ga": 14,
-     "pts": 12,
-     "tid": 19685,
-     "form": "DWLWD"
     },
     {
      "pos": 10,

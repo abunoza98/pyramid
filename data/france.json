@@ -108,15 +108,15 @@
     {
      "pos": 5,
      "team": "Marseille",
-     "p": 10,
+     "p": 11,
      "w": 6,
      "d": 0,
-     "l": 4,
-     "gf": 22,
-     "ga": 14,
+     "l": 5,
+     "gf": 24,
+     "ga": 17,
      "pts": 18,
      "tid": 81,
-     "form": "WWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 6,
@@ -211,6 +211,19 @@
     },
     {
      "pos": 13,
+     "team": "Le Mans",
+     "p": 11,
+     "w": 2,
+     "d": 5,
+     "l": 4,
+     "gf": 15,
+     "ga": 21,
+     "pts": 11,
+     "tid": 1298,
+     "form": "LDLDW"
+    },
+    {
+     "pos": 14,
      "team": "Troyes",
      "p": 11,
      "w": 3,
@@ -223,7 +236,7 @@
      "form": "LDWLW"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Auxerre",
      "p": 11,
      "w": 3,
@@ -236,7 +249,7 @@
      "form": "WDLLD"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Strasbourg",
      "p": 11,
      "w": 3,
@@ -247,19 +260,6 @@
      "pts": 10,
      "tid": 95,
      "form": "LLWLL"
-    },
-    {
-     "pos": 16,
-     "team": "Le Mans",
-     "p": 10,
-     "w": 1,
-     "d": 5,
-     "l": 4,
-     "gf": 12,
-     "ga": 19,
-     "pts": 8,
-     "tid": 1298,
-     "form": "LLDLD"
     },
     {
      "pos": 17,

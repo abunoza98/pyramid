@@ -91,6 +91,19 @@
     },
     {
      "pos": 4,
+     "team": "Rijeka",
+     "p": 13,
+     "w": 6,
+     "d": 3,
+     "l": 4,
+     "gf": 21,
+     "ga": 18,
+     "pts": 21,
+     "tid": 561,
+     "form": "WLDLW"
+    },
+    {
+     "pos": 5,
      "team": "Osijek",
      "p": 13,
      "w": 6,
@@ -103,7 +116,7 @@
      "form": "LDLWL"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Istra 1961",
      "p": 14,
      "w": 5,
@@ -114,19 +127,6 @@
      "pts": 19,
      "tid": 1016,
      "form": "LDWWL"
-    },
-    {
-     "pos": 6,
-     "team": "Rijeka",
-     "p": 12,
-     "w": 5,
-     "d": 3,
-     "l": 4,
-     "gf": 19,
-     "ga": 18,
-     "pts": 18,
-     "tid": 561,
-     "form": "LWLDL"
     },
     {
      "pos": 7,
@@ -170,15 +170,15 @@
     {
      "pos": 10,
      "team": "Gorica",
-     "p": 13,
+     "p": 14,
      "w": 1,
      "d": 4,
-     "l": 8,
+     "l": 9,
      "gf": 10,
-     "ga": 25,
+     "ga": 27,
      "pts": 7,
      "tid": 1068,
-     "form": "LDDLL"
+     "form": "DDLLL"
     }
    ],
    "updated": "2026-11-22T00:00:00.000Z"

@@ -602,6 +602,19 @@
     },
     {
      "pos": 2,
+     "team": "MSV Duisburg",
+     "p": 14,
+     "w": 10,
+     "d": 2,
+     "l": 2,
+     "gf": 35,
+     "ga": 18,
+     "pts": 32,
+     "tid": 187,
+     "form": "DLDWW"
+    },
+    {
+     "pos": 3,
      "team": "Rot-Weiss Essen",
      "p": 14,
      "w": 9,
@@ -614,20 +627,20 @@
      "form": "LWWWW"
     },
     {
-     "pos": 3,
-     "team": "MSV Duisburg",
-     "p": 13,
-     "w": 9,
+     "pos": 4,
+     "team": "1. FC Saarbrücken",
+     "p": 14,
+     "w": 7,
      "d": 2,
-     "l": 2,
+     "l": 5,
      "gf": 33,
-     "ga": 18,
-     "pts": 29,
-     "tid": 187,
-     "form": "WDLDW"
+     "ga": 27,
+     "pts": 23,
+     "tid": 1639,
+     "form": "WLWLW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Alemannia Aachen",
      "p": 14,
      "w": 7,
@@ -640,7 +653,7 @@
      "form": "WWWLW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "TSG Hoffenheim II",
      "p": 14,
      "w": 7,
@@ -653,20 +666,20 @@
      "form": "WLLWW"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Wehen Wiesbaden",
-     "p": 13,
+     "p": 14,
      "w": 6,
      "d": 3,
-     "l": 4,
-     "gf": 26,
-     "ga": 17,
+     "l": 5,
+     "gf": 27,
+     "ga": 19,
      "pts": 21,
      "tid": 1319,
-     "form": "WDWWW"
+     "form": "DWWWL"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "VfB Stuttgart II",
      "p": 14,
      "w": 6,
@@ -679,7 +692,7 @@
      "form": "WLDWW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "FC Ingolstadt",
      "p": 14,
      "w": 6,
@@ -690,19 +703,6 @@
      "pts": 21,
      "tid": 184,
      "form": "WWDWL"
-    },
-    {
-     "pos": 9,
-     "team": "1. FC Saarbrücken",
-     "p": 13,
-     "w": 6,
-     "d": 2,
-     "l": 5,
-     "gf": 31,
-     "ga": 26,
-     "pts": 20,
-     "tid": 1639,
-     "form": "LWLWL"
     },
     {
      "pos": 10,
@@ -719,19 +719,6 @@
     },
     {
      "pos": 11,
-     "team": "Hansa Rostock",
-     "p": 13,
-     "w": 5,
-     "d": 4,
-     "l": 4,
-     "gf": 22,
-     "ga": 22,
-     "pts": 19,
-     "tid": 1321,
-     "form": "LLDLW"
-    },
-    {
-     "pos": 12,
      "team": "Fortuna Düsseldorf",
      "p": 14,
      "w": 5,
@@ -742,6 +729,19 @@
      "pts": 19,
      "tid": 158,
      "form": "LDDLW"
+    },
+    {
+     "pos": 12,
+     "team": "Hansa Rostock",
+     "p": 14,
+     "w": 5,
+     "d": 4,
+     "l": 5,
+     "gf": 22,
+     "ga": 24,
+     "pts": 19,
+     "tid": 1321,
+     "form": "LDLWL"
     },
     {
      "pos": 13,

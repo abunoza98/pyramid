@@ -4,7 +4,7 @@
  "adjective": "Argentine",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-21T00:00:00.000Z",
+ "updated": "2026-11-23T00:00:00.000Z",
  "belowNote": "Promoted clubs from Primera D come up",
  "leagues": [
   {
@@ -29,7 +29,7 @@
    "groups": [
     {
      "name": "Tabla Anual",
-     "updated": "2026-11-21T00:00:00.000Z",
+     "updated": "2026-11-23T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -120,7 +120,7 @@
        "ga": 26,
        "pts": 55,
        "tid": 435,
-       "form": "DWWLW"
+       "form": "WWLWW"
       },
       {
        "pos": 8,
@@ -146,7 +146,7 @@
        "ga": 27,
        "pts": 50,
        "tid": 446,
-       "form": "WWDDD"
+       "form": "WDDDL"
       },
       {
        "pos": 10,
@@ -250,7 +250,7 @@
        "ga": 39,
        "pts": 41,
        "tid": 1066,
-       "form": "WLLDD"
+       "form": "LLDDL"
       },
       {
        "pos": 18,
@@ -424,7 +424,7 @@
      ]
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   },
   {
    "id": "primera-nacional",
@@ -458,7 +458,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-21T00:00:00.000Z",
+     "updated": "2026-11-22T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -698,7 +698,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-21T00:00:00.000Z",
+     "updated": "2026-11-22T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -937,7 +937,7 @@
      ]
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   },
   {
    "id": "primera-b-metropolitana",
@@ -1290,7 +1290,7 @@
    "groups": [
     {
      "name": "Group A",
-     "updated": "2026-11-19T00:00:00.000Z",
+     "updated": "2026-11-22T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1478,7 +1478,7 @@
     },
     {
      "name": "Group B",
-     "updated": "2026-11-19T00:00:00.000Z",
+     "updated": "2026-11-22T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1665,7 +1665,7 @@
      ]
     }
    ],
-   "updated": "2026-11-19T00:00:00.000Z"
+   "updated": "2026-11-22T00:00:00.000Z"
   }
  ]
 }

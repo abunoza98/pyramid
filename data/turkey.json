@@ -63,13 +63,13 @@
     {
      "pos": 2,
      "team": "Trabzonspor",
-     "p": 11,
-     "w": 8,
+     "p": 12,
+     "w": 9,
      "d": 1,
      "l": 2,
-     "gf": 26,
+     "gf": 27,
      "ga": 8,
-     "pts": 25,
+     "pts": 28,
      "tid": 998,
      "form": "WWWWW"
     },
@@ -271,12 +271,12 @@
     {
      "pos": 18,
      "team": "Eyüpspor",
-     "p": 11,
+     "p": 12,
      "w": 1,
      "d": 0,
-     "l": 10,
+     "l": 11,
      "gf": 3,
-     "ga": 30,
+     "ga": 31,
      "pts": 3,
      "tid": 3588,
      "form": "LLLLL"
@@ -318,6 +318,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Bursaspor",
+     "p": 15,
+     "w": 11,
+     "d": 2,
+     "l": 2,
+     "gf": 32,
+     "ga": 12,
+     "pts": 35,
+     "tid": 1003,
+     "form": "WWWDW"
+    },
+    {
+     "pos": 2,
      "team": "Kayserispor",
      "p": 15,
      "w": 10,
@@ -328,19 +341,6 @@
      "pts": 33,
      "tid": 1001,
      "form": "DDWLW"
-    },
-    {
-     "pos": 2,
-     "team": "Bursaspor",
-     "p": 14,
-     "w": 10,
-     "d": 2,
-     "l": 2,
-     "gf": 30,
-     "ga": 12,
-     "pts": 32,
-     "tid": 1003,
-     "form": "WWWWD"
     },
     {
      "pos": 3,
@@ -541,15 +541,15 @@
     {
      "pos": 18,
      "team": "Sivasspor",
-     "p": 14,
+     "p": 15,
      "w": 2,
      "d": 7,
-     "l": 5,
+     "l": 6,
      "gf": 17,
-     "ga": 23,
+     "ga": 25,
      "pts": 13,
      "tid": 1002,
-     "form": "DDLLL"
+     "form": "DLLLL"
     },
     {
      "pos": 19,

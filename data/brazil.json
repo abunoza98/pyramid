@@ -96,15 +96,15 @@
     {
      "pos": 5,
      "team": "Athletico Paranaense",
-     "p": 35,
-     "w": 15,
+     "p": 36,
+     "w": 16,
      "d": 9,
      "l": 11,
-     "gf": 52,
-     "ga": 45,
-     "pts": 54,
+     "gf": 56,
+     "ga": 47,
+     "pts": 57,
      "tid": 134,
-     "form": "LDLLL"
+     "form": "DLLLW"
     },
     {
      "pos": 6,
@@ -278,15 +278,15 @@
     {
      "pos": 19,
      "team": "Remo",
-     "p": 35,
+     "p": 36,
      "w": 7,
      "d": 11,
-     "l": 17,
-     "gf": 39,
-     "ga": 57,
+     "l": 18,
+     "gf": 41,
+     "ga": 61,
      "pts": 32,
      "tid": 1198,
-     "form": "DLWLW"
+     "form": "LWLWL"
     },
     {
      "pos": 20,
@@ -383,7 +383,7 @@
      "ga": 33,
      "pts": 65,
      "tid": 154,
-     "form": "WDDLW"
+     "form": "DDLWL"
     },
     {
      "pos": 5,
@@ -396,7 +396,7 @@
      "ga": 32,
      "pts": 62,
      "tid": 140,
-     "form": "WLWLL"
+     "form": "LWLLW"
     },
     {
      "pos": 6,
