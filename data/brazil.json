@@ -4,7 +4,7 @@
  "adjective": "Brazilian",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-22T00:00:00.000Z",
+ "updated": "2026-11-23T00:00:00.000Z",
  "belowNote": "Clubs qualify for Série D through their state championships",
  "leagues": [
   {
@@ -370,7 +370,7 @@
      "ga": 39,
      "pts": 66,
      "tid": 142,
-     "form": "DLDWL"
+     "form": "LDWLD"
     },
     {
      "pos": 4,
@@ -409,7 +409,7 @@
      "ga": 35,
      "pts": 61,
      "tid": 144,
-     "form": "DLDWW"
+     "form": "LDWWD"
     },
     {
      "pos": 7,
@@ -594,7 +594,7 @@
      "form": "DDLLL"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   },
   {
    "id": "serie-c",

@@ -27,19 +27,32 @@
    "rows": [
     {
      "pos": 1,
-     "team": "Cruz Azul",
-     "p": 16,
-     "w": 10,
-     "d": 2,
-     "l": 4,
-     "gf": 37,
-     "ga": 26,
-     "pts": 32,
-     "tid": 2295,
-     "form": "WWWWW"
+     "team": "Guadalajara",
+     "p": 17,
+     "w": 9,
+     "d": 6,
+     "l": 2,
+     "gf": 27,
+     "ga": 15,
+     "pts": 33,
+     "tid": 2278,
+     "form": "WWWDW"
     },
     {
      "pos": 2,
+     "team": "Cruz Azul",
+     "p": 17,
+     "w": 10,
+     "d": 2,
+     "l": 5,
+     "gf": 37,
+     "ga": 27,
+     "pts": 32,
+     "tid": 2295,
+     "form": "WWWWL"
+    },
+    {
+     "pos": 3,
      "team": "América",
      "p": 17,
      "w": 8,
@@ -50,19 +63,6 @@
      "pts": 30,
      "tid": 2287,
      "form": "LDDDL"
-    },
-    {
-     "pos": 3,
-     "team": "Guadalajara",
-     "p": 16,
-     "w": 8,
-     "d": 6,
-     "l": 2,
-     "gf": 26,
-     "ga": 15,
-     "pts": 30,
-     "tid": 2278,
-     "form": "DWWWD"
     },
     {
      "pos": 4,
@@ -170,6 +170,19 @@
     },
     {
      "pos": 12,
+     "team": "Querétaro",
+     "p": 17,
+     "w": 6,
+     "d": 3,
+     "l": 8,
+     "gf": 20,
+     "ga": 26,
+     "pts": 21,
+     "tid": 2290,
+     "form": "LLLLD"
+    },
+    {
+     "pos": 13,
      "team": "Puebla",
      "p": 17,
      "w": 5,
@@ -182,7 +195,7 @@
      "form": "LLLWD"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Atlético San Luis",
      "p": 17,
      "w": 5,
@@ -193,19 +206,6 @@
      "pts": 20,
      "tid": 2314,
      "form": "WWLLD"
-    },
-    {
-     "pos": 14,
-     "team": "Querétaro",
-     "p": 16,
-     "w": 6,
-     "d": 2,
-     "l": 8,
-     "gf": 18,
-     "ga": 24,
-     "pts": 20,
-     "tid": 2290,
-     "form": "LLLLL"
     },
     {
      "pos": 15,
@@ -222,6 +222,19 @@
     },
     {
      "pos": 16,
+     "team": "Necaxa",
+     "p": 17,
+     "w": 3,
+     "d": 5,
+     "l": 9,
+     "gf": 19,
+     "ga": 30,
+     "pts": 14,
+     "tid": 2288,
+     "form": "LDLWD"
+    },
+    {
+     "pos": 17,
      "team": "Atlante",
      "p": 17,
      "w": 3,
@@ -232,19 +245,6 @@
      "pts": 14,
      "tid": 2312,
      "form": "WLLLL"
-    },
-    {
-     "pos": 17,
-     "team": "Necaxa",
-     "p": 16,
-     "w": 3,
-     "d": 4,
-     "l": 9,
-     "gf": 17,
-     "ga": 28,
-     "pts": 13,
-     "tid": 2288,
-     "form": "LLDLW"
     },
     {
      "pos": 18,
@@ -600,15 +600,15 @@
     {
      "pos": 3,
      "team": "Acambaro",
-     "p": 12,
+     "p": 13,
      "w": 8,
      "d": 1,
-     "l": 3,
-     "gf": 37,
-     "ga": 16,
+     "l": 4,
+     "gf": 38,
+     "ga": 18,
      "pts": 26,
      "tid": 22051,
-     "form": "WWWLW"
+     "form": "WWLWL"
     },
     {
      "pos": 4,
@@ -744,15 +744,15 @@
     {
      "pos": 9,
      "team": "Real Apodaca",
-     "p": 12,
-     "w": 4,
+     "p": 13,
+     "w": 5,
      "d": 1,
      "l": 7,
-     "gf": 18,
-     "ga": 20,
-     "pts": 13,
+     "gf": 20,
+     "ga": 21,
+     "pts": 16,
      "tid": 22047,
-     "form": "LWLWW"
+     "form": "WLWWW"
     },
     {
      "pos": 9,
