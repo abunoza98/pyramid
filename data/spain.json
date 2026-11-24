@@ -4,7 +4,7 @@
  "adjective": "Spanish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-22T00:00:00.000Z",
+ "updated": "2026-11-23T00:00:00.000Z",
  "belowNote": "Promoted clubs from Segunda Federación come up",
  "leagues": [
   {
@@ -225,6 +225,19 @@
     },
     {
      "pos": 15,
+     "team": "Levante",
+     "p": 13,
+     "w": 2,
+     "d": 6,
+     "l": 5,
+     "gf": 17,
+     "ga": 22,
+     "pts": 12,
+     "tid": 539,
+     "form": "WLLDD"
+    },
+    {
+     "pos": 16,
      "team": "Rayo Vallecano",
      "p": 12,
      "w": 3,
@@ -237,7 +250,7 @@
      "form": "DLWLL"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Valencia",
      "p": 13,
      "w": 3,
@@ -250,7 +263,7 @@
      "form": "DLWLW"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Getafe",
      "p": 13,
      "w": 3,
@@ -263,30 +276,17 @@
      "form": "DLWLL"
     },
     {
-     "pos": 18,
-     "team": "Levante",
-     "p": 12,
-     "w": 2,
-     "d": 5,
-     "l": 5,
-     "gf": 16,
-     "ga": 21,
-     "pts": 11,
-     "tid": 539,
-     "form": "DWLLD"
-    },
-    {
      "pos": 19,
      "team": "Elche",
-     "p": 12,
+     "p": 13,
      "w": 2,
-     "d": 4,
+     "d": 5,
      "l": 6,
-     "gf": 14,
-     "ga": 20,
-     "pts": 10,
+     "gf": 15,
+     "ga": 21,
+     "pts": 11,
      "tid": 797,
-     "form": "DDWLL"
+     "form": "DWLLD"
     },
     {
      "pos": 20,
@@ -302,7 +302,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   },
   {
    "id": "segunda",
@@ -337,6 +337,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Almería",
+     "p": 15,
+     "w": 11,
+     "d": 2,
+     "l": 2,
+     "gf": 29,
+     "ga": 13,
+     "pts": 35,
+     "tid": 723,
+     "form": "DDWWW"
+    },
+    {
+     "pos": 2,
      "team": "Castellón",
      "p": 14,
      "w": 10,
@@ -347,19 +360,6 @@
      "pts": 33,
      "tid": 5254,
      "form": "WWDWW"
-    },
-    {
-     "pos": 2,
-     "team": "Almería",
-     "p": 14,
-     "w": 10,
-     "d": 2,
-     "l": 2,
-     "gf": 26,
-     "ga": 11,
-     "pts": 32,
-     "tid": 723,
-     "form": "WDDWW"
     },
     {
      "pos": 3,
@@ -611,18 +611,18 @@
     {
      "pos": 22,
      "team": "Ceuta",
-     "p": 14,
+     "p": 15,
      "w": 1,
      "d": 2,
-     "l": 11,
-     "gf": 10,
-     "ga": 32,
+     "l": 12,
+     "gf": 12,
+     "ga": 35,
      "pts": 5,
      "tid": 10139,
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   },
   {
    "id": "primera-federacion",
@@ -656,7 +656,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-22T00:00:00.000Z",
+     "updated": "2026-11-23T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -922,7 +922,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-22T00:00:00.000Z",
+     "updated": "2026-11-23T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1187,7 +1187,7 @@
      ]
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   }
  ]
 }

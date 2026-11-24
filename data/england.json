@@ -4,7 +4,7 @@
  "adjective": "English",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-22T00:00:00.000Z",
+ "updated": "2026-11-23T00:00:00.000Z",
  "belowNote": "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
  "leagues": [
   {
@@ -102,6 +102,19 @@
     },
     {
      "pos": 6,
+     "team": "Brentford",
+     "p": 11,
+     "w": 4,
+     "d": 5,
+     "l": 2,
+     "gf": 20,
+     "ga": 11,
+     "pts": 17,
+     "tid": 55,
+     "form": "LDWLW"
+    },
+    {
+     "pos": 7,
      "team": "Leeds United",
      "p": 11,
      "w": 4,
@@ -112,19 +125,6 @@
      "pts": 17,
      "tid": 63,
      "form": "DDLWW"
-    },
-    {
-     "pos": 7,
-     "team": "Everton",
-     "p": 10,
-     "w": 4,
-     "d": 4,
-     "l": 2,
-     "gf": 12,
-     "ga": 10,
-     "pts": 16,
-     "tid": 45,
-     "form": "DLLWW"
     },
     {
      "pos": 8,
@@ -141,6 +141,19 @@
     },
     {
      "pos": 9,
+     "team": "Everton",
+     "p": 11,
+     "w": 4,
+     "d": 4,
+     "l": 3,
+     "gf": 12,
+     "ga": 14,
+     "pts": 16,
+     "tid": 45,
+     "form": "LLWWL"
+    },
+    {
+     "pos": 10,
      "team": "Tottenham Hotspur",
      "p": 11,
      "w": 4,
@@ -151,19 +164,6 @@
      "pts": 15,
      "tid": 47,
      "form": "WWWLW"
-    },
-    {
-     "pos": 10,
-     "team": "Brentford",
-     "p": 10,
-     "w": 3,
-     "d": 5,
-     "l": 2,
-     "gf": 16,
-     "ga": 11,
-     "pts": 14,
-     "tid": 55,
-     "form": "DLDWL"
     },
     {
      "pos": 11,
@@ -296,7 +296,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   },
   {
    "id": "championship",
@@ -644,7 +644,7 @@
      "form": "DLLWD"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   },
   {
    "id": "league-one",
@@ -988,7 +988,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   },
   {
    "id": "league-two",
@@ -1332,7 +1332,7 @@
      "form": "LLDWW"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   },
   {
    "id": "national-league",
@@ -1685,7 +1685,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   },
   {
    "id": "national-league-north-south",
@@ -1727,7 +1727,7 @@
    "groups": [
     {
      "name": "North",
-     "updated": "2026-11-21T00:00:00.000Z",
+     "updated": "2026-11-23T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2045,7 +2045,7 @@
     },
     {
      "name": "South",
-     "updated": "2026-11-21T00:00:00.000Z",
+     "updated": "2026-11-23T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2102,15 +2102,15 @@
       {
        "pos": 5,
        "team": "Maidstone United",
-       "p": 17,
+       "p": 18,
        "w": 10,
        "d": 2,
-       "l": 5,
+       "l": 6,
        "gf": 28,
-       "ga": 20,
+       "ga": 21,
        "pts": 32,
        "tid": 1825,
-       "form": "DLWWL"
+       "form": "LWWLL"
       },
       {
        "pos": 6,
@@ -2127,6 +2127,19 @@
       },
       {
        "pos": 7,
+       "team": "Chelmsford City",
+       "p": 18,
+       "w": 6,
+       "d": 11,
+       "l": 1,
+       "gf": 28,
+       "ga": 19,
+       "pts": 29,
+       "tid": 4689,
+       "form": "LWDDW"
+      },
+      {
+       "pos": 8,
        "team": "Dorking Wanderers",
        "p": 16,
        "w": 7,
@@ -2139,7 +2152,7 @@
        "form": "WDWWD"
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "Tonbridge Angels",
        "p": 18,
        "w": 8,
@@ -2152,7 +2165,7 @@
        "form": "WLLWD"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Dagenham & Redbridge",
        "p": 17,
        "w": 8,
@@ -2163,19 +2176,6 @@
        "pts": 28,
        "tid": 1821,
        "form": "WLDDW"
-      },
-      {
-       "pos": 10,
-       "team": "Chelmsford City",
-       "p": 17,
-       "w": 5,
-       "d": 11,
-       "l": 1,
-       "gf": 27,
-       "ga": 19,
-       "pts": 26,
-       "tid": 4689,
-       "form": "WLWDD"
       },
       {
        "pos": 11,
@@ -2362,7 +2362,7 @@
      ]
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   }
  ]
 }

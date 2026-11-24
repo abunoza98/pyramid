@@ -4,7 +4,7 @@
  "adjective": "Brazilian",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-23T00:00:00.000Z",
+ "updated": "2026-11-24T00:00:00.000Z",
  "belowNote": "Clubs qualify for Série D through their state championships",
  "leagues": [
   {
@@ -83,15 +83,15 @@
     {
      "pos": 4,
      "team": "Fluminense",
-     "p": 35,
-     "w": 17,
+     "p": 36,
+     "w": 18,
      "d": 9,
      "l": 9,
-     "gf": 56,
+     "gf": 57,
      "ga": 42,
-     "pts": 60,
+     "pts": 63,
      "tid": 124,
-     "form": "LLWWW"
+     "form": "LWWWW"
     },
     {
      "pos": 5,
@@ -134,45 +134,58 @@
     },
     {
      "pos": 8,
-     "team": "Santos",
-     "p": 35,
-     "w": 13,
-     "d": 11,
-     "l": 11,
-     "gf": 51,
-     "ga": 49,
+     "team": "Red Bull Bragantino",
+     "p": 36,
+     "w": 14,
+     "d": 8,
+     "l": 14,
+     "gf": 46,
+     "ga": 41,
      "pts": 50,
-     "tid": 128,
-     "form": "WDDLW"
+     "tid": 794,
+     "form": "LWWLW"
     },
     {
      "pos": 9,
-     "team": "Red Bull Bragantino",
-     "p": 35,
+     "team": "Santos",
+     "p": 36,
      "w": 13,
-     "d": 8,
-     "l": 14,
-     "gf": 45,
-     "ga": 41,
-     "pts": 47,
-     "tid": 794,
-     "form": "DLWWL"
+     "d": 11,
+     "l": 12,
+     "gf": 51,
+     "ga": 51,
+     "pts": 50,
+     "tid": 128,
+     "form": "DDLWL"
     },
     {
      "pos": 10,
      "team": "Vasco da Gama",
-     "p": 35,
+     "p": 36,
      "w": 13,
      "d": 8,
-     "l": 14,
+     "l": 15,
      "gf": 47,
-     "ga": 51,
+     "ga": 52,
      "pts": 47,
      "tid": 133,
-     "form": "WLWWW"
+     "form": "LWWWL"
     },
     {
      "pos": 11,
+     "team": "São Paulo",
+     "p": 36,
+     "w": 12,
+     "d": 9,
+     "l": 15,
+     "gf": 40,
+     "ga": 41,
+     "pts": 45,
+     "tid": 126,
+     "form": "DLDLD"
+    },
+    {
+     "pos": 12,
      "team": "Coritiba",
      "p": 36,
      "w": 12,
@@ -185,59 +198,59 @@
      "form": "LWLLW"
     },
     {
-     "pos": 12,
-     "team": "São Paulo",
-     "p": 35,
+     "pos": 13,
+     "team": "Vitória",
+     "p": 36,
      "w": 12,
      "d": 8,
-     "l": 15,
-     "gf": 39,
-     "ga": 40,
+     "l": 16,
+     "gf": 42,
+     "ga": 54,
      "pts": 44,
-     "tid": 126,
-     "form": "WDLDL"
-    },
-    {
-     "pos": 13,
-     "team": "Botafogo",
-     "p": 35,
-     "w": 11,
-     "d": 9,
-     "l": 15,
-     "gf": 46,
-     "ga": 57,
-     "pts": 42,
-     "tid": 120,
-     "form": "WLLWL"
+     "tid": 136,
+     "form": "DLLWW"
     },
     {
      "pos": 14,
-     "team": "Vitória",
-     "p": 35,
+     "team": "Botafogo",
+     "p": 36,
      "w": 11,
-     "d": 8,
-     "l": 16,
-     "gf": 37,
-     "ga": 52,
-     "pts": 41,
-     "tid": 136,
-     "form": "DDLLW"
+     "d": 10,
+     "l": 15,
+     "gf": 47,
+     "ga": 58,
+     "pts": 43,
+     "tid": 120,
+     "form": "LLWLD"
     },
     {
      "pos": 15,
-     "team": "Mirassol",
-     "p": 35,
+     "team": "Grêmio",
+     "p": 36,
      "w": 10,
      "d": 11,
-     "l": 14,
-     "gf": 39,
-     "ga": 48,
+     "l": 15,
+     "gf": 40,
+     "ga": 47,
      "pts": 41,
-     "tid": 7848,
-     "form": "WDLWD"
+     "tid": 130,
+     "form": "WWLDW"
     },
     {
      "pos": 16,
+     "team": "Mirassol",
+     "p": 36,
+     "w": 10,
+     "d": 11,
+     "l": 15,
+     "gf": 39,
+     "ga": 49,
+     "pts": 41,
+     "tid": 7848,
+     "form": "DLWDL"
+    },
+    {
+     "pos": 17,
      "team": "Corinthians",
      "p": 35,
      "w": 10,
@@ -250,30 +263,17 @@
      "form": "DLWDW"
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "Internacional",
-     "p": 35,
+     "p": 36,
      "w": 9,
      "d": 11,
-     "l": 15,
-     "gf": 39,
-     "ga": 44,
+     "l": 16,
+     "gf": 41,
+     "ga": 49,
      "pts": 38,
      "tid": 119,
-     "form": "LWLWL"
-    },
-    {
-     "pos": 18,
-     "team": "Grêmio",
-     "p": 35,
-     "w": 9,
-     "d": 11,
-     "l": 15,
-     "gf": 38,
-     "ga": 47,
-     "pts": 38,
-     "tid": 130,
-     "form": "LWWLD"
+     "form": "WLWLL"
     },
     {
      "pos": 19,
@@ -302,7 +302,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   },
   {
    "id": "serie-b",
@@ -594,7 +594,7 @@
      "form": "DDLLL"
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-24T00:00:00.000Z"
   },
   {
    "id": "serie-c",
