@@ -4,7 +4,7 @@
  "adjective": "Scottish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-21T00:00:00.000Z",
+ "updated": "2026-11-24T00:00:00.000Z",
  "belowNote": "The Highland/Lowland League play-off winner can come up",
  "leagues": [
   {
@@ -48,15 +48,15 @@
     {
      "pos": 2,
      "team": "Rangers",
-     "p": 13,
-     "w": 9,
+     "p": 14,
+     "w": 10,
      "d": 3,
      "l": 1,
-     "gf": 23,
-     "ga": 10,
-     "pts": 30,
+     "gf": 26,
+     "ga": 12,
+     "pts": 33,
      "tid": 257,
-     "form": "DWDWW"
+     "form": "WDWWW"
     },
     {
      "pos": 3,
@@ -113,31 +113,44 @@
     {
      "pos": 7,
      "team": "Dundee",
-     "p": 13,
+     "p": 14,
      "w": 5,
      "d": 2,
-     "l": 6,
-     "gf": 18,
-     "ga": 23,
+     "l": 7,
+     "gf": 19,
+     "ga": 25,
      "pts": 17,
      "tid": 253,
-     "form": "DLWLL"
+     "form": "LWLLL"
     },
     {
      "pos": 8,
      "team": "Aberdeen",
-     "p": 13,
+     "p": 14,
      "w": 4,
      "d": 2,
-     "l": 7,
-     "gf": 16,
-     "ga": 20,
+     "l": 8,
+     "gf": 18,
+     "ga": 23,
      "pts": 14,
      "tid": 252,
-     "form": "WLLLW"
+     "form": "LLLWL"
     },
     {
      "pos": 9,
+     "team": "Hibernian",
+     "p": 14,
+     "w": 4,
+     "d": 2,
+     "l": 8,
+     "gf": 17,
+     "ga": 22,
+     "pts": 14,
+     "tid": 249,
+     "form": "LDWLW"
+    },
+    {
+     "pos": 10,
      "team": "St Mirren",
      "p": 14,
      "w": 4,
@@ -150,7 +163,7 @@
      "form": "WDLLL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Motherwell",
      "p": 14,
      "w": 3,
@@ -161,19 +174,6 @@
      "pts": 13,
      "tid": 256,
      "form": "LDWDL"
-    },
-    {
-     "pos": 11,
-     "team": "Hibernian",
-     "p": 13,
-     "w": 3,
-     "d": 2,
-     "l": 8,
-     "gf": 15,
-     "ga": 21,
-     "pts": 11,
-     "tid": 249,
-     "form": "LLDWL"
     },
     {
      "pos": 12,
@@ -189,7 +189,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-24T00:00:00.000Z"
   },
   {
    "id": "scottish-championship",
@@ -357,7 +357,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   },
   {
    "id": "scottish-league-one",
@@ -525,7 +525,7 @@
      "form": "WLLLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   },
   {
    "id": "scottish-league-two",
@@ -690,7 +690,7 @@
      "form": "LLLWD"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-23T00:00:00.000Z"
   }
  ]
 }
