@@ -32,6 +32,12 @@
      "label": "Copa Sudamericana"
     },
     {
+     "from": 15,
+     "to": 15,
+     "kind": "top",
+     "label": "Copa Libertadores"
+    },
+    {
      "from": 17,
      "to": 20,
      "kind": "down",
@@ -57,15 +63,15 @@
     {
      "pos": 2,
      "team": "Palmeiras",
-     "p": 36,
+     "p": 37,
      "w": 21,
      "d": 11,
-     "l": 4,
+     "l": 5,
      "gf": 64,
-     "ga": 26,
+     "ga": 29,
      "pts": 74,
      "tid": 121,
-     "form": "WDWLD"
+     "form": "DWLDL"
     },
     {
      "pos": 3,
@@ -291,18 +297,18 @@
     {
      "pos": 20,
      "team": "Chapecoense",
-     "p": 36,
-     "w": 4,
+     "p": 37,
+     "w": 5,
      "d": 9,
      "l": 23,
-     "gf": 34,
+     "gf": 37,
      "ga": 74,
-     "pts": 21,
+     "pts": 24,
      "tid": 132,
-     "form": "LLLLL"
+     "form": "LLLLW"
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-24T00:00:00.000Z"
   },
   {
    "id": "serie-b",

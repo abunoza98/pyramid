@@ -4,7 +4,7 @@
  "adjective": "Swiss",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-22T00:00:00.000Z",
+ "updated": "2026-11-25T00:00:00.000Z",
  "belowNote": "The top 2. Liga Interregional clubs come up",
  "leagues": [
   {
@@ -190,7 +190,7 @@
      "form": "LLLDD"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-24T00:00:00.000Z"
   },
   {
    "id": "challenge-league",
@@ -614,7 +614,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-24T00:00:00.000Z"
   },
   {
    "id": "1-liga",
@@ -629,7 +629,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-22T00:00:00.000Z",
+     "updated": "2026-11-23T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -843,7 +843,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-22T00:00:00.000Z",
+     "updated": "2026-11-23T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1057,7 +1057,7 @@
     },
     {
      "name": "Group 3",
-     "updated": "2026-11-22T00:00:00.000Z",
+     "updated": "2026-11-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1179,28 +1179,28 @@
       {
        "pos": 10,
        "team": "Eschen / Mauren",
-       "p": 14,
-       "w": 4,
+       "p": 15,
+       "w": 5,
        "d": 3,
        "l": 7,
-       "gf": 24,
-       "ga": 31,
-       "pts": 15,
+       "gf": 26,
+       "ga": 32,
+       "pts": 18,
        "tid": 12713,
-       "form": "WLLWL"
+       "form": "LLWLW"
       },
       {
        "pos": 11,
        "team": "Dietikon",
-       "p": 14,
+       "p": 15,
        "w": 4,
        "d": 3,
-       "l": 7,
-       "gf": 19,
-       "ga": 27,
+       "l": 8,
+       "gf": 20,
+       "ga": 29,
        "pts": 15,
        "tid": 12712,
-       "form": "WLDLL"
+       "form": "LDLLL"
       },
       {
        "pos": 12,
@@ -1270,7 +1270,7 @@
      ]
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-25T00:00:00.000Z"
   }
  ]
 }
