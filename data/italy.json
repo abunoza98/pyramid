@@ -4,7 +4,7 @@
  "adjective": "Italian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-24T00:00:00.000Z",
+ "updated": "2026-11-25T00:00:00.000Z",
  "belowNote": "Serie D group winners come up",
  "leagues": [
   {
@@ -302,7 +302,7 @@
      "form": "LLLWL"
     }
    ],
-   "updated": "2026-11-24T00:00:00.000Z"
+   "updated": "2026-11-25T00:00:00.000Z"
   },
   {
    "id": "serie-b",
@@ -358,18 +358,44 @@
     {
      "pos": 2,
      "team": "Modena",
-     "p": 12,
+     "p": 13,
      "w": 8,
-     "d": 2,
+     "d": 3,
      "l": 2,
-     "gf": 22,
-     "ga": 10,
-     "pts": 26,
+     "gf": 23,
+     "ga": 11,
+     "pts": 27,
      "tid": 899,
-     "form": "WWDWW"
+     "form": "WDWWD"
     },
     {
      "pos": 3,
+     "team": "Avellino",
+     "p": 13,
+     "w": 6,
+     "d": 4,
+     "l": 3,
+     "gf": 21,
+     "ga": 12,
+     "pts": 22,
+     "tid": 528,
+     "form": "DWDWW"
+    },
+    {
+     "pos": 4,
+     "team": "Mantova",
+     "p": 13,
+     "w": 6,
+     "d": 4,
+     "l": 3,
+     "gf": 19,
+     "ga": 15,
+     "pts": 22,
+     "tid": 1693,
+     "form": "LDDLW"
+    },
+    {
+     "pos": 5,
      "team": "Cesena",
      "p": 13,
      "w": 5,
@@ -382,7 +408,7 @@
      "form": "WDWWW"
     },
     {
-     "pos": 4,
+     "pos": 6,
      "team": "Ascoli",
      "p": 13,
      "w": 5,
@@ -395,20 +421,20 @@
      "form": "WDDDL"
     },
     {
-     "pos": 5,
-     "team": "Avellino",
-     "p": 12,
+     "pos": 7,
+     "team": "Pisa",
+     "p": 13,
      "w": 5,
-     "d": 4,
+     "d": 5,
      "l": 3,
-     "gf": 20,
-     "ga": 12,
-     "pts": 19,
-     "tid": 528,
-     "form": "LDWDW"
+     "gf": 22,
+     "ga": 18,
+     "pts": 20,
+     "tid": 801,
+     "form": "DLDWD"
     },
     {
-     "pos": 6,
+     "pos": 8,
      "team": "Benevento",
      "p": 13,
      "w": 5,
@@ -419,32 +445,6 @@
      "pts": 19,
      "tid": 506,
      "form": "DLDLW"
-    },
-    {
-     "pos": 7,
-     "team": "Pisa",
-     "p": 12,
-     "w": 5,
-     "d": 4,
-     "l": 3,
-     "gf": 21,
-     "ga": 17,
-     "pts": 19,
-     "tid": 801,
-     "form": "DDLDW"
-    },
-    {
-     "pos": 8,
-     "team": "Mantova",
-     "p": 12,
-     "w": 5,
-     "d": 4,
-     "l": 3,
-     "gf": 16,
-     "ga": 15,
-     "pts": 19,
-     "tid": 1693,
-     "form": "WLDDL"
     },
     {
      "pos": 9,
@@ -461,6 +461,19 @@
     },
     {
      "pos": 10,
+     "team": "Sampdoria",
+     "p": 13,
+     "w": 5,
+     "d": 2,
+     "l": 6,
+     "gf": 16,
+     "ga": 20,
+     "pts": 17,
+     "tid": 498,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 11,
      "team": "Hellas Verona",
      "p": 13,
      "w": 4,
@@ -473,7 +486,7 @@
      "form": "WWDLL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Carrarese",
      "p": 13,
      "w": 5,
@@ -486,43 +499,30 @@
      "form": "WLLWW"
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "Padova",
-     "p": 12,
+     "p": 13,
      "w": 4,
      "d": 4,
-     "l": 4,
-     "gf": 13,
-     "ga": 14,
-     "pts": 16,
-     "tid": 870,
-     "form": "WWDDD"
-    },
-    {
-     "pos": 13,
-     "team": "Cremonese",
-     "p": 12,
-     "w": 4,
-     "d": 3,
      "l": 5,
      "gf": 14,
-     "ga": 13,
-     "pts": 15,
-     "tid": 520,
-     "form": "LWWWL"
+     "ga": 16,
+     "pts": 16,
+     "tid": 870,
+     "form": "WDDDL"
     },
     {
      "pos": 14,
-     "team": "Sampdoria",
-     "p": 12,
+     "team": "Cremonese",
+     "p": 13,
      "w": 4,
-     "d": 2,
+     "d": 3,
      "l": 6,
      "gf": 14,
-     "ga": 19,
-     "pts": 14,
-     "tid": 498,
-     "form": "DLWWW"
+     "ga": 14,
+     "pts": 15,
+     "tid": 520,
+     "form": "WWWLL"
     },
     {
      "pos": 15,
@@ -567,15 +567,15 @@
     {
      "pos": 18,
      "team": "Arezzo",
-     "p": 12,
+     "p": 13,
      "w": 3,
      "d": 3,
-     "l": 6,
+     "l": 7,
      "gf": 10,
-     "ga": 21,
+     "ga": 24,
      "pts": 12,
      "tid": 876,
-     "form": "LLDLD"
+     "form": "LDLDL"
     },
     {
      "pos": 19,
@@ -604,7 +604,7 @@
      "form": "LDDLL"
     }
    ],
-   "updated": "2026-11-24T00:00:00.000Z"
+   "updated": "2026-11-25T00:00:00.000Z"
   },
   {
    "id": "serie-c",
@@ -652,7 +652,7 @@
    "groups": [
     {
      "name": "Girone A",
-     "updated": "2026-11-23T00:00:00.000Z",
+     "updated": "2026-11-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -918,7 +918,7 @@
     },
     {
      "name": "Girone B",
-     "updated": "2026-11-23T00:00:00.000Z",
+     "updated": "2026-11-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1052,6 +1052,19 @@
       },
       {
        "pos": 11,
+       "team": "Atalanta U23",
+       "p": 15,
+       "w": 6,
+       "d": 2,
+       "l": 7,
+       "gf": 19,
+       "ga": 22,
+       "pts": 20,
+       "tid": 22104,
+       "form": "WLWDD"
+      },
+      {
+       "pos": 12,
        "team": "Campobasso",
        "p": 15,
        "w": 5,
@@ -1064,30 +1077,17 @@
        "form": "WWDLD"
       },
       {
-       "pos": 12,
-       "team": "Atalanta U23",
-       "p": 14,
-       "w": 6,
-       "d": 1,
-       "l": 7,
-       "gf": 18,
-       "ga": 21,
-       "pts": 19,
-       "tid": 22104,
-       "form": "LWLWD"
-      },
-      {
        "pos": 13,
        "team": "Pineto",
-       "p": 14,
+       "p": 15,
        "w": 4,
-       "d": 6,
+       "d": 7,
        "l": 4,
-       "gf": 12,
-       "ga": 14,
-       "pts": 18,
+       "gf": 13,
+       "ga": 15,
+       "pts": 19,
        "tid": 9514,
-       "form": "WWLWD"
+       "form": "WLWDD"
       },
       {
        "pos": 14,
@@ -1184,7 +1184,7 @@
     },
     {
      "name": "Girone C",
-     "updated": "2026-11-23T00:00:00.000Z",
+     "updated": "2026-11-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1214,6 +1214,19 @@
       },
       {
        "pos": 3,
+       "team": "Audace Cerignola",
+       "p": 15,
+       "w": 7,
+       "d": 3,
+       "l": 5,
+       "gf": 24,
+       "ga": 16,
+       "pts": 24,
+       "tid": 9539,
+       "form": "LWLDW"
+      },
+      {
+       "pos": 4,
        "team": "Scafatese",
        "p": 15,
        "w": 6,
@@ -1226,7 +1239,7 @@
        "form": "LDWLW"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Catania",
        "p": 15,
        "w": 7,
@@ -1239,7 +1252,7 @@
        "form": "WLWLD"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "Monopoli",
        "p": 15,
        "w": 6,
@@ -1250,19 +1263,6 @@
        "pts": 23,
        "tid": 10138,
        "form": "WDDLW"
-      },
-      {
-       "pos": 6,
-       "team": "Inter Milan U23",
-       "p": 14,
-       "w": 7,
-       "d": 2,
-       "l": 5,
-       "gf": 24,
-       "ga": 21,
-       "pts": 23,
-       "tid": 26355,
-       "form": "DWLWW"
       },
       {
        "pos": 7,
@@ -1279,6 +1279,19 @@
       },
       {
        "pos": 8,
+       "team": "Inter Milan U23",
+       "p": 15,
+       "w": 7,
+       "d": 2,
+       "l": 6,
+       "gf": 24,
+       "ga": 24,
+       "pts": 23,
+       "tid": 26355,
+       "form": "WLWWL"
+      },
+      {
+       "pos": 9,
        "team": "Picerno",
        "p": 15,
        "w": 7,
@@ -1289,19 +1302,6 @@
        "pts": 22,
        "tid": 1587,
        "form": "WWDLW"
-      },
-      {
-       "pos": 9,
-       "team": "Audace Cerignola",
-       "p": 14,
-       "w": 6,
-       "d": 3,
-       "l": 5,
-       "gf": 21,
-       "ga": 16,
-       "pts": 21,
-       "tid": 9539,
-       "form": "WLWLD"
       },
       {
        "pos": 10,
@@ -1450,7 +1450,7 @@
      ]
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-25T00:00:00.000Z"
   }
  ]
 }

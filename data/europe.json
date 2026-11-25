@@ -4,7 +4,7 @@
  "adjective": "European",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-24T00:00:00.000Z",
+ "updated": "2026-11-25T00:00:00.000Z",
  "leagues": [
   {
    "id": "champions-league",
@@ -77,6 +77,19 @@
     },
     {
      "pos": 4,
+     "team": "Barcelona",
+     "p": 5,
+     "w": 4,
+     "d": 0,
+     "l": 1,
+     "gf": 18,
+     "ga": 7,
+     "pts": 12,
+     "tid": 529,
+     "form": "WWLWW"
+    },
+    {
+     "pos": 5,
      "team": "Real Betis",
      "p": 5,
      "w": 4,
@@ -89,7 +102,7 @@
      "form": "WWWLW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Arsenal",
      "p": 5,
      "w": 3,
@@ -102,7 +115,7 @@
      "form": "WWDWD"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Manchester City",
      "p": 5,
      "w": 3,
@@ -115,7 +128,7 @@
      "form": "WLWWD"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Borussia Dortmund",
      "p": 5,
      "w": 3,
@@ -126,19 +139,6 @@
      "pts": 10,
      "tid": 165,
      "form": "WLWWD"
-    },
-    {
-     "pos": 8,
-     "team": "Barcelona",
-     "p": 4,
-     "w": 3,
-     "d": 0,
-     "l": 1,
-     "gf": 14,
-     "ga": 6,
-     "pts": 9,
-     "tid": 529,
-     "form": "WWLW"
     },
     {
      "pos": 9,
@@ -311,6 +311,19 @@
     },
     {
      "pos": 22,
+     "team": "Villarreal",
+     "p": 5,
+     "w": 2,
+     "d": 0,
+     "l": 3,
+     "gf": 9,
+     "ga": 14,
+     "pts": 6,
+     "tid": 533,
+     "form": "LWLLW"
+    },
+    {
+     "pos": 23,
      "team": "Fenerbahçe",
      "p": 4,
      "w": 1,
@@ -323,7 +336,7 @@
      "form": "DLDW"
     },
     {
-     "pos": 23,
+     "pos": 24,
      "team": "Roma",
      "p": 4,
      "w": 1,
@@ -336,7 +349,7 @@
      "form": "DLWL"
     },
     {
-     "pos": 24,
+     "pos": 25,
      "team": "Shakhtar Donetsk",
      "p": 4,
      "w": 1,
@@ -349,7 +362,7 @@
      "form": "DWLL"
     },
     {
-     "pos": 25,
+     "pos": 26,
      "team": "Viking",
      "p": 4,
      "w": 1,
@@ -362,7 +375,7 @@
      "form": "LDLW"
     },
     {
-     "pos": 26,
+     "pos": 27,
      "team": "Atlético Madrid",
      "p": 4,
      "w": 1,
@@ -375,7 +388,7 @@
      "form": "LWDL"
     },
     {
-     "pos": 27,
+     "pos": 28,
      "team": "Napoli",
      "p": 5,
      "w": 1,
@@ -388,7 +401,7 @@
      "form": "LLWLD"
     },
     {
-     "pos": 28,
+     "pos": 29,
      "team": "PSV Eindhoven",
      "p": 5,
      "w": 1,
@@ -401,33 +414,7 @@
      "form": "DLWLL"
     },
     {
-     "pos": 29,
-     "team": "Villarreal",
-     "p": 4,
-     "w": 1,
-     "d": 0,
-     "l": 3,
-     "gf": 8,
-     "ga": 14,
-     "pts": 3,
-     "tid": 533,
-     "form": "LWLL"
-    },
-    {
      "pos": 30,
-     "team": "Sabah FA",
-     "p": 4,
-     "w": 1,
-     "d": 0,
-     "l": 3,
-     "gf": 4,
-     "ga": 10,
-     "pts": 3,
-     "tid": 13976,
-     "form": "LWLL"
-    },
-    {
-     "pos": 31,
      "team": "AEK Athens",
      "p": 5,
      "w": 1,
@@ -440,7 +427,7 @@
      "form": "WLLLL"
     },
     {
-     "pos": 32,
+     "pos": 31,
      "team": "Feyenoord",
      "p": 5,
      "w": 1,
@@ -450,6 +437,19 @@
      "ga": 12,
      "pts": 3,
      "tid": 209,
+     "form": "LWLLL"
+    },
+    {
+     "pos": 32,
+     "team": "Sabah FA",
+     "p": 5,
+     "w": 1,
+     "d": 0,
+     "l": 4,
+     "gf": 5,
+     "ga": 14,
+     "pts": 3,
+     "tid": 13976,
      "form": "LWLLL"
     },
     {
@@ -468,15 +468,15 @@
     {
      "pos": 34,
      "team": "Slavia Prague",
-     "p": 4,
+     "p": 5,
      "w": 0,
      "d": 1,
-     "l": 3,
+     "l": 4,
      "gf": 5,
-     "ga": 9,
+     "ga": 10,
      "pts": 1,
      "tid": 560,
-     "form": "LLDL"
+     "form": "LLDLL"
     },
     {
      "pos": 35,
@@ -505,7 +505,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-24T00:00:00.000Z"
+   "updated": "2026-11-25T00:00:00.000Z"
   },
   {
    "id": "europa-league",

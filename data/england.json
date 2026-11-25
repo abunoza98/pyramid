@@ -4,7 +4,7 @@
  "adjective": "English",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-24T00:00:00.000Z",
+ "updated": "2026-11-25T00:00:00.000Z",
  "belowNote": "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
  "leagues": [
   {
@@ -296,7 +296,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-24T00:00:00.000Z"
   },
   {
    "id": "championship",
@@ -358,6 +358,32 @@
     },
     {
      "pos": 3,
+     "team": "Birmingham City",
+     "p": 17,
+     "w": 9,
+     "d": 5,
+     "l": 3,
+     "gf": 30,
+     "ga": 15,
+     "pts": 32,
+     "tid": 54,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 4,
+     "team": "West Bromwich Albion",
+     "p": 17,
+     "w": 9,
+     "d": 5,
+     "l": 3,
+     "gf": 28,
+     "ga": 18,
+     "pts": 32,
+     "tid": 60,
+     "form": "WDWDW"
+    },
+    {
+     "pos": 5,
      "team": "Stoke City",
      "p": 16,
      "w": 10,
@@ -368,32 +394,6 @@
      "pts": 32,
      "tid": 75,
      "form": "DWWWW"
-    },
-    {
-     "pos": 4,
-     "team": "Birmingham City",
-     "p": 16,
-     "w": 8,
-     "d": 5,
-     "l": 3,
-     "gf": 28,
-     "ga": 15,
-     "pts": 29,
-     "tid": 54,
-     "form": "LWWWL"
-    },
-    {
-     "pos": 5,
-     "team": "West Bromwich Albion",
-     "p": 16,
-     "w": 8,
-     "d": 5,
-     "l": 3,
-     "gf": 25,
-     "ga": 17,
-     "pts": 29,
-     "tid": 60,
-     "form": "DWDWD"
     },
     {
      "pos": 6,
@@ -476,6 +476,19 @@
     },
     {
      "pos": 12,
+     "team": "Blackburn Rovers",
+     "p": 17,
+     "w": 7,
+     "d": 4,
+     "l": 6,
+     "gf": 25,
+     "ga": 25,
+     "pts": 25,
+     "tid": 67,
+     "form": "LLWDW"
+    },
+    {
+     "pos": 13,
      "team": "West Ham United",
      "p": 17,
      "w": 6,
@@ -486,19 +499,6 @@
      "pts": 24,
      "tid": 48,
      "form": "LDLDL"
-    },
-    {
-     "pos": 13,
-     "team": "Blackburn Rovers",
-     "p": 16,
-     "w": 6,
-     "d": 4,
-     "l": 6,
-     "gf": 24,
-     "ga": 25,
-     "pts": 22,
-     "tid": 67,
-     "form": "WLLWD"
     },
     {
      "pos": 14,
@@ -568,28 +568,28 @@
     {
      "pos": 19,
      "team": "Bolton Wanderers",
-     "p": 16,
+     "p": 17,
      "w": 5,
      "d": 3,
-     "l": 8,
-     "gf": 21,
-     "ga": 30,
+     "l": 9,
+     "gf": 22,
+     "ga": 33,
      "pts": 18,
      "tid": 68,
-     "form": "LLWLD"
+     "form": "LWLDL"
     },
     {
      "pos": 20,
      "team": "Watford",
-     "p": 16,
+     "p": 17,
      "w": 4,
      "d": 3,
-     "l": 9,
+     "l": 10,
      "gf": 13,
-     "ga": 27,
+     "ga": 28,
      "pts": 15,
      "tid": 38,
-     "form": "LLWDL"
+     "form": "LWDLL"
     },
     {
      "pos": 21,
@@ -620,15 +620,15 @@
     {
      "pos": 23,
      "team": "Burnley",
-     "p": 16,
+     "p": 17,
      "w": 1,
      "d": 8,
-     "l": 7,
+     "l": 8,
      "gf": 24,
-     "ga": 33,
+     "ga": 35,
      "pts": 11,
      "tid": 44,
-     "form": "LDDLD"
+     "form": "DDLDL"
     },
     {
      "pos": 24,
@@ -644,7 +644,7 @@
      "form": "LLWLL"
     }
    ],
-   "updated": "2026-11-24T00:00:00.000Z"
+   "updated": "2026-11-25T00:00:00.000Z"
   },
   {
    "id": "league-one",
@@ -1375,15 +1375,15 @@
     {
      "pos": 1,
      "team": "Boreham Wood",
-     "p": 18,
-     "w": 15,
+     "p": 19,
+     "w": 16,
      "d": 3,
      "l": 0,
-     "gf": 49,
-     "ga": 21,
-     "pts": 48,
+     "gf": 53,
+     "ga": 22,
+     "pts": 51,
      "tid": 1830,
-     "form": "WWWDW"
+     "form": "WWDWW"
     },
     {
      "pos": 2,
@@ -1531,15 +1531,15 @@
     {
      "pos": 13,
      "team": "Aldershot Town",
-     "p": 18,
+     "p": 19,
      "w": 7,
      "d": 3,
-     "l": 8,
-     "gf": 22,
-     "ga": 21,
+     "l": 9,
+     "gf": 23,
+     "ga": 25,
      "pts": 24,
      "tid": 1818,
-     "form": "LLWLW"
+     "form": "LWLWL"
     },
     {
      "pos": 14,
@@ -1685,7 +1685,7 @@
      "form": "LLLLW"
     }
    ],
-   "updated": "2026-11-24T00:00:00.000Z"
+   "updated": "2026-11-25T00:00:00.000Z"
   },
   {
    "id": "national-league-north-south",
