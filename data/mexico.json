@@ -4,7 +4,7 @@
  "adjective": "Mexican",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-23T00:00:00.000Z",
+ "updated": "2026-11-25T00:00:00.000Z",
  "belowNote": "Promotion between Liga Premier and the Liga de Expansión is suspended",
  "leagues": [
   {
@@ -15,6 +15,42 @@
    "zones": [
     {
      "from": 1,
+     "to": 3,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 3,
+     "to": 4,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 4,
+     "to": 5,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 5,
+     "to": 6,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 6,
+     "to": 7,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 7,
+     "to": 8,
+     "kind": "mid",
+     "label": "Play-offs"
+    },
+    {
+     "from": 8,
      "to": 8,
      "kind": "mid",
      "label": "Play-offs"
@@ -65,6 +101,19 @@
      "form": "LDDDL"
     },
     {
+     "pos": 3,
+     "team": "América",
+     "p": 17,
+     "w": 8,
+     "d": 6,
+     "l": 3,
+     "gf": 38,
+     "ga": 24,
+     "pts": 30,
+     "tid": 2287,
+     "form": "LDDDL"
+    },
+    {
      "pos": 4,
      "team": "Atlas",
      "p": 17,
@@ -76,6 +125,32 @@
      "pts": 28,
      "tid": 2283,
      "form": "LWWLD"
+    },
+    {
+     "pos": 4,
+     "team": "Atlas",
+     "p": 17,
+     "w": 8,
+     "d": 4,
+     "l": 5,
+     "gf": 30,
+     "ga": 33,
+     "pts": 28,
+     "tid": 2283,
+     "form": "LWWLD"
+    },
+    {
+     "pos": 5,
+     "team": "Toluca",
+     "p": 17,
+     "w": 7,
+     "d": 6,
+     "l": 4,
+     "gf": 35,
+     "ga": 23,
+     "pts": 27,
+     "tid": 2281,
+     "form": "DDDWL"
     },
     {
      "pos": 5,
@@ -104,6 +179,19 @@
      "form": "LDLWW"
     },
     {
+     "pos": 6,
+     "team": "Monterrey",
+     "p": 17,
+     "w": 8,
+     "d": 3,
+     "l": 6,
+     "gf": 29,
+     "ga": 25,
+     "pts": 27,
+     "tid": 2282,
+     "form": "LDLWW"
+    },
+    {
      "pos": 7,
      "team": "Club Leon",
      "p": 17,
@@ -114,6 +202,31 @@
      "ga": 22,
      "pts": 26,
      "form": "WDLDW"
+    },
+    {
+     "pos": 7,
+     "team": "Club Leon",
+     "p": 17,
+     "w": 7,
+     "d": 5,
+     "l": 5,
+     "gf": 25,
+     "ga": 22,
+     "pts": 26,
+     "form": "WDLDW"
+    },
+    {
+     "pos": 8,
+     "team": "Pachuca",
+     "p": 17,
+     "w": 7,
+     "d": 4,
+     "l": 6,
+     "gf": 31,
+     "ga": 20,
+     "pts": 25,
+     "tid": 2292,
+     "form": "LWWWW"
     },
     {
      "pos": 8,
@@ -142,6 +255,19 @@
      "form": "WDDLW"
     },
     {
+     "pos": 9,
+     "team": "Tijuana",
+     "p": 17,
+     "w": 6,
+     "d": 7,
+     "l": 4,
+     "gf": 26,
+     "ga": 22,
+     "pts": 25,
+     "tid": 2280,
+     "form": "WDDLW"
+    },
+    {
      "pos": 10,
      "team": "Santos Laguna",
      "p": 17,
@@ -153,6 +279,32 @@
      "pts": 25,
      "tid": 2285,
      "form": "WLWWL"
+    },
+    {
+     "pos": 10,
+     "team": "Santos Laguna",
+     "p": 17,
+     "w": 8,
+     "d": 1,
+     "l": 8,
+     "gf": 24,
+     "ga": 22,
+     "pts": 25,
+     "tid": 2285,
+     "form": "WLWWL"
+    },
+    {
+     "pos": 11,
+     "team": "Pumas UNAM",
+     "p": 17,
+     "w": 5,
+     "d": 6,
+     "l": 6,
+     "gf": 24,
+     "ga": 28,
+     "pts": 21,
+     "tid": 2286,
+     "form": "LDWDL"
     },
     {
      "pos": 11,
@@ -181,6 +333,19 @@
      "form": "LLLLD"
     },
     {
+     "pos": 12,
+     "team": "Querétaro",
+     "p": 17,
+     "w": 6,
+     "d": 3,
+     "l": 8,
+     "gf": 20,
+     "ga": 26,
+     "pts": 21,
+     "tid": 2290,
+     "form": "LLLLD"
+    },
+    {
      "pos": 13,
      "team": "Puebla",
      "p": 17,
@@ -192,6 +357,32 @@
      "pts": 20,
      "tid": 2291,
      "form": "LLLWD"
+    },
+    {
+     "pos": 13,
+     "team": "Puebla",
+     "p": 17,
+     "w": 5,
+     "d": 5,
+     "l": 7,
+     "gf": 20,
+     "ga": 24,
+     "pts": 20,
+     "tid": 2291,
+     "form": "LLLWD"
+    },
+    {
+     "pos": 14,
+     "team": "Atlético San Luis",
+     "p": 17,
+     "w": 5,
+     "d": 5,
+     "l": 7,
+     "gf": 20,
+     "ga": 25,
+     "pts": 20,
+     "tid": 2314,
+     "form": "WWLLD"
     },
     {
      "pos": 14,
@@ -220,6 +411,32 @@
      "form": "LDLLW"
     },
     {
+     "pos": 15,
+     "team": "Tigres UANL",
+     "p": 17,
+     "w": 4,
+     "d": 6,
+     "l": 7,
+     "gf": 18,
+     "ga": 25,
+     "pts": 18,
+     "tid": 2279,
+     "form": "LDLLW"
+    },
+    {
+     "pos": 16,
+     "team": "Necaxa",
+     "p": 17,
+     "w": 3,
+     "d": 5,
+     "l": 9,
+     "gf": 19,
+     "ga": 30,
+     "pts": 14,
+     "tid": 2288,
+     "form": "LDLWD"
+    },
+    {
      "pos": 16,
      "team": "Necaxa",
      "p": 17,
@@ -246,6 +463,32 @@
      "form": "WLLLL"
     },
     {
+     "pos": 17,
+     "team": "Atlante",
+     "p": 17,
+     "w": 3,
+     "d": 5,
+     "l": 9,
+     "gf": 16,
+     "ga": 27,
+     "pts": 14,
+     "tid": 2312,
+     "form": "WLLLL"
+    },
+    {
+     "pos": 18,
+     "team": "FC Juárez",
+     "p": 17,
+     "w": 3,
+     "d": 3,
+     "l": 11,
+     "gf": 16,
+     "ga": 37,
+     "pts": 12,
+     "tid": 2298,
+     "form": "LDWWD"
+    },
+    {
      "pos": 18,
      "team": "FC Juárez",
      "p": 17,
@@ -259,7 +502,7 @@
      "form": "LDWWD"
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-25T00:00:00.000Z"
   },
   {
    "id": "liga-de-expansion",
@@ -487,7 +730,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-25T00:00:00.000Z"
   },
   {
    "id": "liga-premier",
@@ -690,15 +933,15 @@
     {
      "pos": 7,
      "team": "Guerreros",
-     "p": 12,
-     "w": 5,
+     "p": 13,
+     "w": 6,
      "d": 2,
      "l": 5,
-     "gf": 27,
+     "gf": 34,
      "ga": 22,
-     "pts": 18,
+     "pts": 21,
      "tid": 26426,
-     "form": "WLWLW"
+     "form": "LWLWW"
     },
     {
      "pos": 7,
@@ -770,12 +1013,12 @@
     {
      "pos": 10,
      "team": "Héroes de Zaci",
-     "p": 12,
+     "p": 13,
      "w": 0,
      "d": 1,
-     "l": 11,
+     "l": 12,
      "gf": 4,
-     "ga": 35,
+     "ga": 42,
      "pts": 2,
      "tid": 26526,
      "form": "LLLLL"
@@ -794,7 +1037,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-25T00:00:00.000Z"
   }
  ]
 }

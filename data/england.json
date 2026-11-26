@@ -296,7 +296,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-24T00:00:00.000Z"
+   "updated": "2026-11-25T00:00:00.000Z"
   },
   {
    "id": "championship",
@@ -345,6 +345,19 @@
     },
     {
      "pos": 2,
+     "team": "Stoke City",
+     "p": 17,
+     "w": 11,
+     "d": 2,
+     "l": 4,
+     "gf": 27,
+     "ga": 19,
+     "pts": 35,
+     "tid": 75,
+     "form": "WWWWW"
+    },
+    {
+     "pos": 3,
      "team": "Wolverhampton Wanderers",
      "p": 17,
      "w": 10,
@@ -357,7 +370,7 @@
      "form": "WWDWW"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Birmingham City",
      "p": 17,
      "w": 9,
@@ -370,7 +383,7 @@
      "form": "WWWLW"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "West Bromwich Albion",
      "p": 17,
      "w": 9,
@@ -381,19 +394,6 @@
      "pts": 32,
      "tid": 60,
      "form": "WDWDW"
-    },
-    {
-     "pos": 5,
-     "team": "Stoke City",
-     "p": 16,
-     "w": 10,
-     "d": 2,
-     "l": 4,
-     "gf": 25,
-     "ga": 18,
-     "pts": 32,
-     "tid": 75,
-     "form": "DWWWW"
     },
     {
      "pos": 6,
@@ -555,15 +555,15 @@
     {
      "pos": 18,
      "team": "Millwall",
-     "p": 16,
+     "p": 17,
      "w": 5,
      "d": 3,
-     "l": 8,
-     "gf": 23,
-     "ga": 28,
+     "l": 9,
+     "gf": 24,
+     "ga": 30,
      "pts": 18,
      "tid": 58,
-     "form": "LWLLL"
+     "form": "WLLLL"
     },
     {
      "pos": 19,
@@ -988,7 +988,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-11-24T00:00:00.000Z"
+   "updated": "2026-11-25T00:00:00.000Z"
   },
   {
    "id": "league-two",
@@ -1332,7 +1332,7 @@
      "form": "LDWWD"
     }
    ],
-   "updated": "2026-11-24T00:00:00.000Z"
+   "updated": "2026-11-25T00:00:00.000Z"
   },
   {
    "id": "national-league",
@@ -1387,6 +1387,19 @@
     },
     {
      "pos": 2,
+     "team": "Harrogate Town",
+     "p": 19,
+     "w": 12,
+     "d": 2,
+     "l": 5,
+     "gf": 42,
+     "ga": 26,
+     "pts": 38,
+     "tid": 1842,
+     "form": "LDWLW"
+    },
+    {
+     "pos": 3,
      "team": "Yeovil Town",
      "p": 19,
      "w": 10,
@@ -1397,19 +1410,6 @@
      "pts": 35,
      "tid": 1377,
      "form": "WLDWW"
-    },
-    {
-     "pos": 3,
-     "team": "Harrogate Town",
-     "p": 18,
-     "w": 11,
-     "d": 2,
-     "l": 5,
-     "gf": 39,
-     "ga": 25,
-     "pts": 35,
-     "tid": 1842,
-     "form": "WLDWL"
     },
     {
      "pos": 4,
@@ -1557,15 +1557,15 @@
     {
      "pos": 15,
      "team": "Kidderminster Harriers",
-     "p": 18,
+     "p": 19,
      "w": 5,
      "d": 8,
-     "l": 5,
-     "gf": 20,
-     "ga": 19,
+     "l": 6,
+     "gf": 21,
+     "ga": 22,
      "pts": 23,
      "tid": 4695,
-     "form": "LDLDD"
+     "form": "DLDDL"
     },
     {
      "pos": 16,
@@ -1582,6 +1582,19 @@
     },
     {
      "pos": 17,
+     "team": "Hartlepool United",
+     "p": 19,
+     "w": 7,
+     "d": 1,
+     "l": 11,
+     "gf": 23,
+     "ga": 29,
+     "pts": 22,
+     "tid": 1366,
+     "form": "LLDWW"
+    },
+    {
+     "pos": 18,
      "team": "Eastleigh",
      "p": 19,
      "w": 6,
@@ -1594,7 +1607,7 @@
      "form": "LDLWL"
     },
     {
-     "pos": 18,
+     "pos": 19,
      "team": "Tamworth",
      "p": 18,
      "w": 6,
@@ -1607,7 +1620,7 @@
      "form": "WLLLW"
     },
     {
-     "pos": 19,
+     "pos": 20,
      "team": "Forest Green Rovers",
      "p": 16,
      "w": 5,
@@ -1620,30 +1633,17 @@
      "form": "LWDLL"
     },
     {
-     "pos": 20,
-     "team": "Hartlepool United",
-     "p": 18,
-     "w": 6,
-     "d": 1,
-     "l": 11,
-     "gf": 21,
-     "ga": 29,
-     "pts": 19,
-     "tid": 1366,
-     "form": "WLLDW"
-    },
-    {
      "pos": 21,
      "team": "Solihull Moors",
-     "p": 18,
+     "p": 19,
      "w": 6,
      "d": 1,
-     "l": 11,
+     "l": 12,
      "gf": 23,
-     "ga": 41,
+     "ga": 43,
      "pts": 19,
      "tid": 1834,
-     "form": "LWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 22,
@@ -1727,7 +1727,7 @@
    "groups": [
     {
      "name": "North",
-     "updated": "2026-11-24T00:00:00.000Z",
+     "updated": "2026-11-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2045,7 +2045,7 @@
     },
     {
      "name": "South",
-     "updated": "2026-11-24T00:00:00.000Z",
+     "updated": "2026-11-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2362,7 +2362,7 @@
      ]
     }
    ],
-   "updated": "2026-11-24T00:00:00.000Z"
+   "updated": "2026-11-25T00:00:00.000Z"
   }
  ]
 }

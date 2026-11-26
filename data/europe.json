@@ -52,15 +52,15 @@
     {
      "pos": 2,
      "team": "Paris Saint-Germain",
-     "p": 4,
+     "p": 5,
      "w": 4,
-     "d": 0,
+     "d": 1,
      "l": 0,
-     "gf": 20,
-     "ga": 5,
-     "pts": 12,
+     "gf": 22,
+     "ga": 7,
+     "pts": 13,
      "tid": 85,
-     "form": "WWWW"
+     "form": "WWWWD"
     },
     {
      "pos": 3,
@@ -90,6 +90,19 @@
     },
     {
      "pos": 5,
+     "team": "Liverpool",
+     "p": 5,
+     "w": 4,
+     "d": 0,
+     "l": 1,
+     "gf": 17,
+     "ga": 10,
+     "pts": 12,
+     "tid": 40,
+     "form": "WWWLW"
+    },
+    {
+     "pos": 6,
      "team": "Real Betis",
      "p": 5,
      "w": 4,
@@ -102,7 +115,7 @@
      "form": "WWWLW"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Arsenal",
      "p": 5,
      "w": 3,
@@ -115,7 +128,7 @@
      "form": "WWDWD"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Manchester City",
      "p": 5,
      "w": 3,
@@ -128,7 +141,20 @@
      "form": "WLWWD"
     },
     {
-     "pos": 8,
+     "pos": 9,
+     "team": "Sporting CP",
+     "p": 5,
+     "w": 3,
+     "d": 1,
+     "l": 1,
+     "gf": 10,
+     "ga": 6,
+     "pts": 10,
+     "tid": 228,
+     "form": "WWLWD"
+    },
+    {
+     "pos": 10,
      "team": "Borussia Dortmund",
      "p": 5,
      "w": 3,
@@ -141,7 +167,7 @@
      "form": "WLWWD"
     },
     {
-     "pos": 9,
+     "pos": 11,
      "team": "Aston Villa",
      "p": 5,
      "w": 3,
@@ -154,46 +180,33 @@
      "form": "WWWLL"
     },
     {
-     "pos": 10,
-     "team": "Liverpool",
-     "p": 4,
-     "w": 3,
-     "d": 0,
-     "l": 1,
-     "gf": 14,
-     "ga": 10,
-     "pts": 9,
-     "tid": 40,
-     "form": "WWWL"
-    },
-    {
-     "pos": 11,
-     "team": "Club Brugge",
-     "p": 4,
-     "w": 3,
-     "d": 0,
-     "l": 1,
-     "gf": 11,
-     "ga": 7,
-     "pts": 9,
-     "tid": 569,
-     "form": "LWWW"
-    },
-    {
      "pos": 12,
-     "team": "Sporting CP",
-     "p": 4,
+     "team": "Inter Milan",
+     "p": 5,
      "w": 3,
      "d": 0,
-     "l": 1,
-     "gf": 8,
-     "ga": 4,
+     "l": 2,
+     "gf": 10,
+     "ga": 6,
      "pts": 9,
-     "tid": 228,
-     "form": "WWLW"
+     "tid": 505,
+     "form": "LLWWW"
     },
     {
      "pos": 13,
+     "team": "Club Brugge",
+     "p": 5,
+     "w": 3,
+     "d": 0,
+     "l": 2,
+     "gf": 11,
+     "ga": 10,
+     "pts": 9,
+     "tid": 569,
+     "form": "LWWWL"
+    },
+    {
+     "pos": 14,
      "team": "Galatasaray",
      "p": 5,
      "w": 3,
@@ -206,33 +219,72 @@
      "form": "LLWWW"
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "Bayern Munich",
-     "p": 4,
+     "p": 5,
      "w": 2,
      "d": 2,
-     "l": 0,
-     "gf": 12,
-     "ga": 5,
+     "l": 1,
+     "gf": 13,
+     "ga": 7,
      "pts": 8,
      "tid": 157,
-     "form": "WDDW"
-    },
-    {
-     "pos": 15,
-     "team": "VfB Stuttgart",
-     "p": 4,
-     "w": 2,
-     "d": 1,
-     "l": 1,
-     "gf": 7,
-     "ga": 4,
-     "pts": 7,
-     "tid": 172,
-     "form": "WWDL"
+     "form": "WDDWL"
     },
     {
      "pos": 16,
+     "team": "Fenerbahçe",
+     "p": 5,
+     "w": 2,
+     "d": 2,
+     "l": 1,
+     "gf": 7,
+     "ga": 11,
+     "pts": 8,
+     "tid": 611,
+     "form": "DLDWW"
+    },
+    {
+     "pos": 17,
+     "team": "VfB Stuttgart",
+     "p": 5,
+     "w": 2,
+     "d": 1,
+     "l": 2,
+     "gf": 7,
+     "ga": 6,
+     "pts": 7,
+     "tid": 172,
+     "form": "WWDLL"
+    },
+    {
+     "pos": 18,
+     "team": "Atlético Madrid",
+     "p": 5,
+     "w": 2,
+     "d": 1,
+     "l": 2,
+     "gf": 6,
+     "ga": 5,
+     "pts": 7,
+     "tid": 530,
+     "form": "LWDLW"
+    },
+    {
+     "pos": 19,
+     "team": "Manchester United",
+     "p": 5,
+     "w": 2,
+     "d": 1,
+     "l": 2,
+     "gf": 10,
+     "ga": 10,
+     "pts": 7,
+     "tid": 33,
+     "form": "WLLWD"
+    },
+    {
+     "pos": 20,
      "team": "Bodø/Glimt",
      "p": 5,
      "w": 2,
@@ -245,20 +297,7 @@
      "form": "LWLDW"
     },
     {
-     "pos": 17,
-     "team": "Inter Milan",
-     "p": 4,
-     "w": 2,
-     "d": 0,
-     "l": 2,
-     "gf": 8,
-     "ga": 6,
-     "pts": 6,
-     "tid": 505,
-     "form": "LLWW"
-    },
-    {
-     "pos": 18,
+     "pos": 21,
      "team": "LASK",
      "p": 5,
      "w": 2,
@@ -271,20 +310,7 @@
      "form": "LLWWL"
     },
     {
-     "pos": 19,
-     "team": "Manchester United",
-     "p": 4,
-     "w": 2,
-     "d": 0,
-     "l": 2,
-     "gf": 8,
-     "ga": 8,
-     "pts": 6,
-     "tid": 33,
-     "form": "WLLW"
-    },
-    {
-     "pos": 20,
+     "pos": 22,
      "team": "FC Porto",
      "p": 5,
      "w": 2,
@@ -297,7 +323,7 @@
      "form": "LLLWW"
     },
     {
-     "pos": 21,
+     "pos": 23,
      "team": "RB Leipzig",
      "p": 5,
      "w": 2,
@@ -310,7 +336,7 @@
      "form": "LWLLW"
     },
     {
-     "pos": 22,
+     "pos": 24,
      "team": "Villarreal",
      "p": 5,
      "w": 2,
@@ -323,69 +349,43 @@
      "form": "LWLLW"
     },
     {
-     "pos": 23,
-     "team": "Fenerbahçe",
-     "p": 4,
+     "pos": 25,
+     "team": "Roma",
+     "p": 5,
      "w": 1,
      "d": 2,
-     "l": 1,
-     "gf": 6,
-     "ga": 11,
+     "l": 2,
+     "gf": 12,
+     "ga": 10,
      "pts": 5,
-     "tid": 611,
-     "form": "DLDW"
-    },
-    {
-     "pos": 24,
-     "team": "Roma",
-     "p": 4,
-     "w": 1,
-     "d": 1,
-     "l": 2,
-     "gf": 10,
-     "ga": 8,
-     "pts": 4,
      "tid": 497,
-     "form": "DLWL"
-    },
-    {
-     "pos": 25,
-     "team": "Shakhtar Donetsk",
-     "p": 4,
-     "w": 1,
-     "d": 1,
-     "l": 2,
-     "gf": 4,
-     "ga": 4,
-     "pts": 4,
-     "tid": 550,
-     "form": "DWLL"
+     "form": "DLWLD"
     },
     {
      "pos": 26,
-     "team": "Viking",
-     "p": 4,
+     "team": "Shakhtar Donetsk",
+     "p": 5,
      "w": 1,
      "d": 1,
-     "l": 2,
-     "gf": 9,
-     "ga": 10,
-     "pts": 4,
-     "tid": 759,
-     "form": "LDLW"
-    },
-    {
-     "pos": 27,
-     "team": "Atlético Madrid",
-     "p": 4,
-     "w": 1,
-     "d": 1,
-     "l": 2,
+     "l": 3,
      "gf": 4,
      "ga": 5,
      "pts": 4,
-     "tid": 530,
-     "form": "LWDL"
+     "tid": 550,
+     "form": "DWLLL"
+    },
+    {
+     "pos": 27,
+     "team": "Viking",
+     "p": 5,
+     "w": 1,
+     "d": 1,
+     "l": 3,
+     "gf": 9,
+     "ga": 12,
+     "pts": 4,
+     "tid": 759,
+     "form": "LDLWL"
     },
     {
      "pos": 28,
@@ -402,6 +402,19 @@
     },
     {
      "pos": 29,
+     "team": "Lille",
+     "p": 5,
+     "w": 1,
+     "d": 1,
+     "l": 3,
+     "gf": 6,
+     "ga": 11,
+     "pts": 4,
+     "tid": 79,
+     "form": "LLLDW"
+    },
+    {
+     "pos": 30,
      "team": "PSV Eindhoven",
      "p": 5,
      "w": 1,
@@ -414,7 +427,7 @@
      "form": "DLWLL"
     },
     {
-     "pos": 30,
+     "pos": 31,
      "team": "AEK Athens",
      "p": 5,
      "w": 1,
@@ -427,7 +440,7 @@
      "form": "WLLLL"
     },
     {
-     "pos": 31,
+     "pos": 32,
      "team": "Feyenoord",
      "p": 5,
      "w": 1,
@@ -440,7 +453,7 @@
      "form": "LWLLL"
     },
     {
-     "pos": 32,
+     "pos": 33,
      "team": "Sabah FA",
      "p": 5,
      "w": 1,
@@ -453,7 +466,7 @@
      "form": "LWLLL"
     },
     {
-     "pos": 33,
+     "pos": 34,
      "team": "Lens",
      "p": 5,
      "w": 1,
@@ -466,7 +479,7 @@
      "form": "WLLLL"
     },
     {
-     "pos": 34,
+     "pos": 35,
      "team": "Slavia Prague",
      "p": 5,
      "w": 0,
@@ -477,19 +490,6 @@
      "pts": 1,
      "tid": 560,
      "form": "LLDLL"
-    },
-    {
-     "pos": 35,
-     "team": "Lille",
-     "p": 4,
-     "w": 0,
-     "d": 1,
-     "l": 3,
-     "gf": 4,
-     "ga": 10,
-     "pts": 1,
-     "tid": 79,
-     "form": "LLLD"
     },
     {
      "pos": 36,
