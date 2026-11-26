@@ -4,7 +4,7 @@
  "adjective": "Indonesian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-22T00:00:00.000Z",
+ "updated": "2026-11-26T00:00:00.000Z",
  "belowNote": "Championship (second tier) clubs come up; API-Football doesn't have its tables yet",
  "leagues": [
   {
@@ -48,6 +48,19 @@
     },
     {
      "pos": 2,
+     "team": "Persita",
+     "p": 10,
+     "w": 6,
+     "d": 3,
+     "l": 1,
+     "gf": 21,
+     "ga": 13,
+     "pts": 21,
+     "tid": 4244,
+     "form": "DWLWW"
+    },
+    {
+     "pos": 3,
      "team": "Dewa United",
      "p": 10,
      "w": 6,
@@ -60,7 +73,7 @@
      "form": "WLWWL"
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Madura United",
      "p": 10,
      "w": 6,
@@ -73,7 +86,7 @@
      "form": "WLWWL"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Persib Bandung",
      "p": 10,
      "w": 6,
@@ -86,7 +99,7 @@
      "form": "LWWLW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Bali United",
      "p": 10,
      "w": 6,
@@ -97,19 +110,6 @@
      "pts": 19,
      "tid": 2448,
      "form": "WDWWL"
-    },
-    {
-     "pos": 6,
-     "team": "Persita",
-     "p": 9,
-     "w": 5,
-     "d": 3,
-     "l": 1,
-     "gf": 18,
-     "ga": 11,
-     "pts": 18,
-     "tid": 4244,
-     "form": "WDWLW"
     },
     {
      "pos": 7,
@@ -180,15 +180,15 @@
     {
      "pos": 12,
      "team": "Borneo FC",
-     "p": 9,
+     "p": 10,
      "w": 3,
      "d": 2,
-     "l": 4,
-     "gf": 8,
-     "ga": 10,
+     "l": 5,
+     "gf": 10,
+     "ga": 13,
      "pts": 11,
      "tid": 2442,
-     "form": "LWLDD"
+     "form": "WLDDL"
     },
     {
      "pos": 13,
@@ -270,7 +270,7 @@
      "form": "LDDLL"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-26T00:00:00.000Z"
   }
  ]
 }
