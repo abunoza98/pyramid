@@ -4,7 +4,7 @@
  "adjective": "Brazilian",
  "season": "2026",
  "mode": "live",
- "updated": "2026-11-25T00:00:00.000Z",
+ "updated": "2026-11-27T00:00:00.000Z",
  "belowNote": "Clubs qualify for Série D through their state championships",
  "leagues": [
   {
@@ -166,6 +166,19 @@
     },
     {
      "pos": 10,
+     "team": "São Paulo",
+     "p": 37,
+     "w": 13,
+     "d": 9,
+     "l": 15,
+     "gf": 43,
+     "ga": 42,
+     "pts": 48,
+     "tid": 126,
+     "form": "LDLDW"
+    },
+    {
+     "pos": 11,
      "team": "Vasco da Gama",
      "p": 36,
      "w": 13,
@@ -176,19 +189,6 @@
      "pts": 47,
      "tid": 133,
      "form": "LWWWL"
-    },
-    {
-     "pos": 11,
-     "team": "São Paulo",
-     "p": 36,
-     "w": 12,
-     "d": 9,
-     "l": 15,
-     "gf": 40,
-     "ga": 41,
-     "pts": 45,
-     "tid": 126,
-     "form": "DLDLD"
     },
     {
      "pos": 12,
@@ -284,15 +284,15 @@
     {
      "pos": 19,
      "team": "Remo",
-     "p": 36,
+     "p": 37,
      "w": 7,
      "d": 11,
-     "l": 18,
-     "gf": 41,
-     "ga": 61,
+     "l": 19,
+     "gf": 42,
+     "ga": 64,
      "pts": 32,
      "tid": 1198,
-     "form": "LWLWL"
+     "form": "WLWLL"
     },
     {
      "pos": 20,
@@ -308,7 +308,7 @@
      "form": "LLLLW"
     }
    ],
-   "updated": "2026-11-25T00:00:00.000Z"
+   "updated": "2026-11-26T00:00:00.000Z"
   },
   {
    "id": "serie-b",
@@ -600,7 +600,7 @@
      "form": "DDLLL"
     }
    ],
-   "updated": "2026-11-24T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   },
   {
    "id": "serie-c",

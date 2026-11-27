@@ -105,7 +105,7 @@
     },
     {
      "pos": 7,
-     "team": "Club Leon",
+     "team": "León",
      "p": 17,
      "w": 7,
      "d": 5,
@@ -113,6 +113,7 @@
      "gf": 25,
      "ga": 22,
      "pts": 26,
+     "tid": 2289,
      "form": "WDLDW"
     },
     {
@@ -585,16 +586,16 @@
     },
     {
      "pos": 3,
-     "team": "Correcaminos UAT II",
+     "team": "Vaqueros Reynosa",
      "p": 13,
      "w": 7,
-     "d": 3,
-     "l": 3,
-     "gf": 23,
-     "ga": 15,
+     "d": 2,
+     "l": 4,
+     "gf": 25,
+     "ga": 17,
      "pts": 25,
-     "tid": 17782,
-     "form": "LWWDW"
+     "tid": 28308,
+     "form": "LLDWW"
     },
     {
      "pos": 3,
@@ -611,16 +612,16 @@
     },
     {
      "pos": 4,
-     "team": "Mineros de Fresnillo",
+     "team": "Correcaminos UAT II",
      "p": 13,
-     "w": 6,
+     "w": 7,
      "d": 3,
-     "l": 4,
-     "gf": 21,
-     "ga": 11,
-     "pts": 23,
-     "tid": 15935,
-     "form": "WLWLL"
+     "l": 3,
+     "gf": 23,
+     "ga": 15,
+     "pts": 25,
+     "tid": 17782,
+     "form": "LWWDW"
     },
     {
      "pos": 4,
@@ -637,16 +638,16 @@
     },
     {
      "pos": 5,
-     "team": "Acatlan",
+     "team": "Mineros de Fresnillo",
      "p": 13,
-     "w": 7,
-     "d": 1,
-     "l": 5,
-     "gf": 27,
-     "ga": 29,
+     "w": 6,
+     "d": 3,
+     "l": 4,
+     "gf": 21,
+     "ga": 11,
      "pts": 23,
-     "tid": 24949,
-     "form": "WWLLL"
+     "tid": 15935,
+     "form": "WLWLL"
     },
     {
      "pos": 5,
@@ -663,16 +664,16 @@
     },
     {
      "pos": 6,
-     "team": "Vaqueros Reynosa",
-     "p": 12,
-     "w": 6,
-     "d": 2,
-     "l": 4,
-     "gf": 20,
-     "ga": 17,
-     "pts": 22,
-     "tid": 28308,
-     "form": "LLLDW"
+     "team": "Acatlan",
+     "p": 13,
+     "w": 7,
+     "d": 1,
+     "l": 5,
+     "gf": 27,
+     "ga": 29,
+     "pts": 23,
+     "tid": 24949,
+     "form": "WWLLL"
     },
     {
      "pos": 6,
@@ -756,16 +757,16 @@
     {
      "pos": 9,
      "team": "Ciervos",
-     "p": 12,
+     "p": 13,
      "w": 2,
      "d": 0,
-     "l": 10,
+     "l": 11,
      "gf": 13,
-     "ga": 47,
+     "ga": 52,
      "pts": 5,
      "ded": 1,
      "tid": 15925,
-     "form": "WLLLL"
+     "form": "LLLLL"
     },
     {
      "pos": 10,
@@ -794,7 +795,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-25T00:00:00.000Z"
+   "updated": "2026-11-26T00:00:00.000Z"
   }
  ]
 }
