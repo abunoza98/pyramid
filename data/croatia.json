@@ -4,7 +4,7 @@
  "adjective": "Croatian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-23T00:00:00.000Z",
+ "updated": "2026-11-27T00:00:00.000Z",
  "belowNote": "Treća NL champions come up",
  "leagues": [
   {
@@ -181,7 +181,7 @@
      "form": "DDLLL"
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   },
   {
    "id": "prva-nl",
@@ -218,15 +218,15 @@
     {
      "pos": 1,
      "team": "Mladost Ždralovi",
-     "p": 13,
-     "w": 8,
+     "p": 14,
+     "w": 9,
      "d": 2,
      "l": 3,
-     "gf": 15,
+     "gf": 19,
      "ga": 10,
-     "pts": 26,
+     "pts": 29,
      "tid": 8593,
-     "form": "LWWWW"
+     "form": "WWWWW"
     },
     {
      "pos": 2,
@@ -256,6 +256,19 @@
     },
     {
      "pos": 4,
+     "team": "Vukovar",
+     "p": 14,
+     "w": 6,
+     "d": 2,
+     "l": 6,
+     "gf": 26,
+     "ga": 24,
+     "pts": 20,
+     "tid": 5730,
+     "form": "LLWWW"
+    },
+    {
+     "pos": 5,
      "team": "Kustošija",
      "p": 13,
      "w": 5,
@@ -268,7 +281,7 @@
      "form": "WWWWL"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Cibalia",
      "p": 13,
      "w": 5,
@@ -281,20 +294,20 @@
      "form": "LWWLL"
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Sesvete",
-     "p": 13,
+     "p": 14,
      "w": 5,
      "d": 3,
-     "l": 5,
+     "l": 6,
      "gf": 18,
-     "ga": 13,
+     "ga": 16,
      "pts": 18,
      "tid": 1479,
-     "form": "LDDWW"
+     "form": "DDWWL"
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Segesta Sisak",
      "p": 13,
      "w": 5,
@@ -307,30 +320,17 @@
      "form": "WWDLL"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Dinamo Zagreb II",
-     "p": 13,
+     "p": 14,
      "w": 6,
      "d": 0,
-     "l": 7,
+     "l": 8,
      "gf": 19,
-     "ga": 18,
+     "ga": 20,
      "pts": 18,
      "tid": 22416,
-     "form": "LLWLW"
-    },
-    {
-     "pos": 9,
-     "team": "BSK Bijelo Brdo",
-     "p": 13,
-     "w": 5,
-     "d": 3,
-     "l": 5,
-     "gf": 17,
-     "ga": 18,
-     "pts": 18,
-     "tid": 1487,
-     "form": "DWLLD"
+     "form": "LWLWL"
     },
     {
      "pos": 10,
@@ -347,19 +347,32 @@
     },
     {
      "pos": 11,
-     "team": "Vukovar",
-     "p": 13,
+     "team": "BSK Bijelo Brdo",
+     "p": 14,
      "w": 5,
-     "d": 2,
+     "d": 3,
      "l": 6,
-     "gf": 23,
-     "ga": 24,
-     "pts": 17,
-     "tid": 5730,
-     "form": "LLLWW"
+     "gf": 17,
+     "ga": 22,
+     "pts": 18,
+     "tid": 1487,
+     "form": "WLLDL"
     },
     {
      "pos": 12,
+     "team": "Hrvace",
+     "p": 14,
+     "w": 5,
+     "d": 2,
+     "l": 7,
+     "gf": 14,
+     "ga": 16,
+     "pts": 17,
+     "tid": 6241,
+     "form": "DWLWW"
+    },
+    {
+     "pos": 13,
      "team": "Opatija",
      "p": 13,
      "w": 5,
@@ -372,7 +385,7 @@
      "form": "WWLWL"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Karlovac 1919",
      "p": 13,
      "w": 4,
@@ -383,19 +396,6 @@
      "pts": 15,
      "tid": 15295,
      "form": "WLLLD"
-    },
-    {
-     "pos": 14,
-     "team": "Hrvace",
-     "p": 13,
-     "w": 4,
-     "d": 2,
-     "l": 7,
-     "gf": 12,
-     "ga": 16,
-     "pts": 14,
-     "tid": 6241,
-     "form": "LDWLW"
     },
     {
      "pos": 15,
@@ -424,7 +424,7 @@
      "form": "DLLDD"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   },
   {
    "id": "druga-nl",
@@ -516,6 +516,19 @@
     },
     {
      "pos": 6,
+     "team": "Uljanik",
+     "p": 14,
+     "w": 6,
+     "d": 3,
+     "l": 5,
+     "gf": 22,
+     "ga": 24,
+     "pts": 21,
+     "tid": 8582,
+     "form": "LWWLD"
+    },
+    {
+     "pos": 7,
      "team": "Dugo Selo",
      "p": 13,
      "w": 6,
@@ -526,19 +539,6 @@
      "pts": 20,
      "tid": 8602,
      "form": "LWDLL"
-    },
-    {
-     "pos": 7,
-     "team": "Uljanik",
-     "p": 13,
-     "w": 6,
-     "d": 2,
-     "l": 5,
-     "gf": 22,
-     "ga": 24,
-     "pts": 20,
-     "tid": 8582,
-     "form": "LLWWL"
     },
     {
      "pos": 8,
@@ -647,18 +647,18 @@
     {
      "pos": 16,
      "team": "Koprivnica",
-     "p": 13,
+     "p": 14,
      "w": 1,
-     "d": 2,
+     "d": 3,
      "l": 10,
      "gf": 10,
      "ga": 30,
-     "pts": 5,
+     "pts": 6,
      "tid": 5710,
-     "form": "LLLLL"
+     "form": "LLLLD"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   }
  ]
 }

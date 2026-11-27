@@ -4,7 +4,7 @@
  "adjective": "Turkish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-23T00:00:00.000Z",
+ "updated": "2026-11-27T00:00:00.000Z",
  "belowNote": "Regional amateur league champions come up",
  "leagues": [
   {
@@ -282,7 +282,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   },
   {
    "id": "1-lig",
@@ -578,7 +578,7 @@
      "form": "LLWLD"
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   },
   {
    "id": "2-lig",
@@ -621,7 +621,7 @@
    "groups": [
     {
      "name": "White Group",
-     "updated": "2026-11-22T00:00:00.000Z",
+     "updated": "2026-11-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -865,7 +865,7 @@
     },
     {
      "name": "Red Group",
-     "updated": "2026-11-22T00:00:00.000Z",
+     "updated": "2026-11-25T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1095,7 +1095,7 @@
      ]
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-25T00:00:00.000Z"
   },
   {
    "id": "3-lig",
@@ -1591,20 +1591,20 @@
     },
     {
      "name": "Group 3",
-     "updated": "2026-11-23T00:00:00.000Z",
+     "updated": "2026-11-27T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
        "team": "Yeşilyurt Belediyespor",
-       "p": 13,
-       "w": 10,
+       "p": 14,
+       "w": 11,
        "d": 3,
        "l": 0,
-       "gf": 49,
-       "ga": 10,
-       "pts": 33,
+       "gf": 53,
+       "ga": 13,
+       "pts": 36,
        "tid": 6541,
-       "form": "WDDWW"
+       "form": "DDWWW"
       },
       {
        "pos": 2,
@@ -1765,15 +1765,15 @@
       {
        "pos": 14,
        "team": "Ağrı 1970",
-       "p": 13,
+       "p": 14,
        "w": 3,
        "d": 2,
-       "l": 8,
-       "gf": 11,
-       "ga": 20,
+       "l": 9,
+       "gf": 14,
+       "ga": 24,
        "pts": 11,
        "tid": 6509,
-       "form": "LLWLL"
+       "form": "LWLLL"
       },
       {
        "pos": 15,
@@ -1830,7 +1830,7 @@
      ]
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   }
  ]
 }
