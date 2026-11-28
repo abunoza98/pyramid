@@ -4,7 +4,7 @@
  "adjective": "Mexican",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-27T00:00:00.000Z",
+ "updated": "2026-11-28T00:00:00.000Z",
  "belowNote": "Promotion between Liga Premier and the Liga de Expansión is suspended",
  "leagues": [
   {
@@ -547,16 +547,16 @@
     },
     {
      "pos": 1,
-     "team": "Dragones de Oaxaca",
-     "p": 13,
+     "team": "Artesanos Metepec",
+     "p": 14,
      "w": 8,
-     "d": 3,
-     "l": 2,
-     "gf": 32,
-     "ga": 14,
-     "pts": 29,
-     "tid": 26393,
-     "form": "WWLWD"
+     "d": 5,
+     "l": 1,
+     "gf": 23,
+     "ga": 8,
+     "pts": 30,
+     "tid": 22049,
+     "form": "WDDWD"
     },
     {
      "pos": 2,
@@ -573,16 +573,16 @@
     },
     {
      "pos": 2,
-     "team": "Artesanos Metepec",
+     "team": "Dragones de Oaxaca",
      "p": 13,
      "w": 8,
-     "d": 4,
-     "l": 1,
-     "gf": 23,
-     "ga": 8,
+     "d": 3,
+     "l": 2,
+     "gf": 32,
+     "ga": 14,
      "pts": 29,
-     "tid": 22049,
-     "form": "LWDDW"
+     "tid": 26393,
+     "form": "WWLWD"
     },
     {
      "pos": 3,
@@ -612,16 +612,16 @@
     },
     {
      "pos": 4,
-     "team": "Vaqueros Reynosa",
-     "p": 13,
-     "w": 7,
-     "d": 2,
-     "l": 4,
-     "gf": 25,
-     "ga": 17,
-     "pts": 25,
-     "tid": 28308,
-     "form": "LLDWW"
+     "team": "Acatlan",
+     "p": 14,
+     "w": 8,
+     "d": 1,
+     "l": 5,
+     "gf": 28,
+     "ga": 29,
+     "pts": 26,
+     "tid": 24949,
+     "form": "WLLLW"
     },
     {
      "pos": 4,
@@ -638,6 +638,32 @@
     },
     {
      "pos": 5,
+     "team": "Vaqueros Reynosa",
+     "p": 14,
+     "w": 7,
+     "d": 2,
+     "l": 5,
+     "gf": 25,
+     "ga": 18,
+     "pts": 25,
+     "tid": 28308,
+     "form": "LDWWL"
+    },
+    {
+     "pos": 5,
+     "team": "Guerreros del Pacifico",
+     "p": 14,
+     "w": 5,
+     "d": 3,
+     "l": 6,
+     "gf": 27,
+     "ga": 21,
+     "pts": 23,
+     "tid": 28304,
+     "form": "WLDWD"
+    },
+    {
+     "pos": 6,
      "team": "Mineros de Fresnillo",
      "p": 13,
      "w": 6,
@@ -648,32 +674,6 @@
      "pts": 23,
      "tid": 15935,
      "form": "WLWLL"
-    },
-    {
-     "pos": 5,
-     "team": "Guerreros del Pacifico",
-     "p": 13,
-     "w": 5,
-     "d": 2,
-     "l": 6,
-     "gf": 27,
-     "ga": 21,
-     "pts": 22,
-     "tid": 28304,
-     "form": "LWLDW"
-    },
-    {
-     "pos": 6,
-     "team": "Acatlan",
-     "p": 13,
-     "w": 7,
-     "d": 1,
-     "l": 5,
-     "gf": 27,
-     "ga": 29,
-     "pts": 23,
-     "tid": 24949,
-     "form": "WWLLL"
     },
     {
      "pos": 6,
@@ -795,7 +795,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-27T00:00:00.000Z"
+   "updated": "2026-11-28T00:00:00.000Z"
   }
  ]
 }

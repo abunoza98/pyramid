@@ -76,28 +76,28 @@
     {
      "pos": 3,
      "team": "Cruzeiro",
-     "p": 36,
-     "w": 20,
+     "p": 37,
+     "w": 21,
      "d": 6,
      "l": 10,
-     "gf": 59,
+     "gf": 60,
      "ga": 50,
-     "pts": 66,
+     "pts": 69,
      "tid": 135,
      "form": "WWWWW"
     },
     {
      "pos": 4,
      "team": "Fluminense",
-     "p": 36,
+     "p": 37,
      "w": 18,
      "d": 9,
-     "l": 9,
+     "l": 10,
      "gf": 57,
-     "ga": 42,
+     "ga": 43,
      "pts": 63,
      "tid": 124,
-     "form": "LWWWW"
+     "form": "WWWWL"
     },
     {
      "pos": 5,
