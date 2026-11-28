@@ -4,7 +4,7 @@
  "adjective": "Spanish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-23T00:00:00.000Z",
+ "updated": "2026-11-27T00:00:00.000Z",
  "belowNote": "Promoted clubs from Segunda Federación come up",
  "leagues": [
   {
@@ -108,6 +108,19 @@
     },
     {
      "pos": 6,
+     "team": "Racing Santander",
+     "p": 14,
+     "w": 6,
+     "d": 2,
+     "l": 6,
+     "gf": 23,
+     "ga": 33,
+     "pts": 20,
+     "tid": 4665,
+     "form": "WLWWW"
+    },
+    {
+     "pos": 7,
      "team": "Sevilla",
      "p": 13,
      "w": 5,
@@ -118,19 +131,6 @@
      "pts": 19,
      "tid": 536,
      "form": "LWLDD"
-    },
-    {
-     "pos": 7,
-     "team": "Racing Santander",
-     "p": 13,
-     "w": 5,
-     "d": 2,
-     "l": 6,
-     "gf": 20,
-     "ga": 32,
-     "pts": 17,
-     "tid": 4665,
-     "form": "LWLWW"
     },
     {
      "pos": 8,
@@ -226,15 +226,15 @@
     {
      "pos": 15,
      "team": "Levante",
-     "p": 13,
+     "p": 14,
      "w": 2,
      "d": 6,
-     "l": 5,
-     "gf": 17,
-     "ga": 22,
+     "l": 6,
+     "gf": 18,
+     "ga": 25,
      "pts": 12,
      "tid": 539,
-     "form": "WLLDD"
+     "form": "LLDDL"
     },
     {
      "pos": 16,
@@ -302,7 +302,7 @@
      "form": "LDLLL"
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   },
   {
    "id": "segunda",
@@ -480,6 +480,19 @@
     },
     {
      "pos": 12,
+     "team": "Sabadell",
+     "p": 16,
+     "w": 4,
+     "d": 8,
+     "l": 4,
+     "gf": 13,
+     "ga": 14,
+     "pts": 20,
+     "tid": 9593,
+     "form": "LDLDD"
+    },
+    {
+     "pos": 13,
      "team": "Valladolid",
      "p": 15,
      "w": 5,
@@ -492,7 +505,7 @@
      "form": "LWWLD"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Tenerife",
      "p": 14,
      "w": 4,
@@ -505,30 +518,17 @@
      "form": "DDDWD"
     },
     {
-     "pos": 14,
-     "team": "Sabadell",
-     "p": 15,
-     "w": 4,
-     "d": 7,
-     "l": 4,
-     "gf": 13,
-     "ga": 14,
-     "pts": 19,
-     "tid": 9593,
-     "form": "DLDLD"
-    },
-    {
      "pos": 15,
      "team": "Leganés",
-     "p": 15,
+     "p": 16,
      "w": 5,
-     "d": 3,
+     "d": 4,
      "l": 7,
      "gf": 17,
      "ga": 25,
-     "pts": 18,
+     "pts": 19,
      "tid": 537,
-     "form": "DLLWW"
+     "form": "LLWWD"
     },
     {
      "pos": 16,
@@ -622,7 +622,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   },
   {
    "id": "primera-federacion",
@@ -656,7 +656,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-23T00:00:00.000Z",
+     "updated": "2026-11-27T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -686,6 +686,19 @@
       },
       {
        "pos": 3,
+       "team": "Bilbao Athletic",
+       "p": 14,
+       "w": 6,
+       "d": 4,
+       "l": 4,
+       "gf": 19,
+       "ga": 15,
+       "pts": 22,
+       "tid": 9579,
+       "form": "WLDWW"
+      },
+      {
+       "pos": 4,
        "team": "Avilés",
        "p": 13,
        "w": 6,
@@ -698,7 +711,7 @@
        "form": "LWWDW"
       },
       {
-       "pos": 4,
+       "pos": 5,
        "team": "Racing Ferrol",
        "p": 13,
        "w": 6,
@@ -711,7 +724,7 @@
        "form": "LDLDW"
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "Pontevedra",
        "p": 13,
        "w": 6,
@@ -724,7 +737,7 @@
        "form": "WDWWL"
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "Mérida",
        "p": 13,
        "w": 6,
@@ -737,7 +750,7 @@
        "form": "DLWWD"
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "Mirandés",
        "p": 13,
        "w": 6,
@@ -748,19 +761,6 @@
        "pts": 20,
        "tid": 799,
        "form": "WWLWL"
-      },
-      {
-       "pos": 8,
-       "team": "Bilbao Athletic",
-       "p": 13,
-       "w": 5,
-       "d": 4,
-       "l": 4,
-       "gf": 18,
-       "ga": 15,
-       "pts": 19,
-       "tid": 9579,
-       "form": "LWLDW"
       },
       {
        "pos": 9,
@@ -830,15 +830,15 @@
       {
        "pos": 14,
        "team": "Cultural Leonesa",
-       "p": 13,
+       "p": 14,
        "w": 4,
        "d": 4,
-       "l": 5,
+       "l": 6,
        "gf": 13,
-       "ga": 12,
+       "ga": 13,
        "pts": 16,
        "tid": 725,
-       "form": "LLDLW"
+       "form": "LDLWL"
       },
       {
        "pos": 15,
@@ -922,7 +922,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-23T00:00:00.000Z",
+     "updated": "2026-11-27T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1005,18 +1005,31 @@
       {
        "pos": 7,
        "team": "Hércules",
-       "p": 13,
+       "p": 14,
        "w": 6,
        "d": 3,
-       "l": 4,
+       "l": 5,
        "gf": 15,
-       "ga": 15,
+       "ga": 16,
        "pts": 21,
        "tid": 4666,
-       "form": "LWDDW"
+       "form": "WDDWL"
       },
       {
        "pos": 8,
+       "team": "Antequera",
+       "p": 14,
+       "w": 5,
+       "d": 5,
+       "l": 4,
+       "gf": 21,
+       "ga": 18,
+       "pts": 20,
+       "tid": 9742,
+       "form": "LWLWW"
+      },
+      {
+       "pos": 9,
        "team": "Real Madrid Castilla",
        "p": 13,
        "w": 5,
@@ -1029,7 +1042,7 @@
        "form": "LWDWL"
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "Jaén",
        "p": 13,
        "w": 5,
@@ -1042,7 +1055,7 @@
        "form": "DWLLL"
       },
       {
-       "pos": 10,
+       "pos": 11,
        "team": "Atlético Madrileño",
        "p": 13,
        "w": 4,
@@ -1053,19 +1066,6 @@
        "pts": 17,
        "tid": 9570,
        "form": "DDLWW"
-      },
-      {
-       "pos": 11,
-       "team": "Antequera",
-       "p": 13,
-       "w": 4,
-       "d": 5,
-       "l": 4,
-       "gf": 20,
-       "ga": 18,
-       "pts": 17,
-       "tid": 9742,
-       "form": "DLWLW"
       },
       {
        "pos": 12,
@@ -1187,7 +1187,7 @@
      ]
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   }
  ]
 }

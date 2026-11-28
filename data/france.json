@@ -4,7 +4,7 @@
  "adjective": "French",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-24T00:00:00.000Z",
+ "updated": "2026-11-28T00:00:00.000Z",
  "belowNote": "Promoted clubs from National 1 come up",
  "leagues": [
   {
@@ -69,18 +69,31 @@
     {
      "pos": 2,
      "team": "Paris FC",
-     "p": 11,
+     "p": 12,
      "w": 7,
      "d": 2,
-     "l": 2,
+     "l": 3,
      "gf": 21,
-     "ga": 10,
+     "ga": 11,
      "pts": 23,
      "tid": 114,
-     "form": "WLWWW"
+     "form": "LWWWL"
     },
     {
      "pos": 3,
+     "team": "Brest",
+     "p": 12,
+     "w": 6,
+     "d": 3,
+     "l": 3,
+     "gf": 20,
+     "ga": 12,
+     "pts": 21,
+     "tid": 106,
+     "form": "LWWWW"
+    },
+    {
+     "pos": 4,
      "team": "Lille",
      "p": 11,
      "w": 6,
@@ -93,7 +106,7 @@
      "form": "DDWWL"
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Lyon",
      "p": 11,
      "w": 6,
@@ -106,7 +119,7 @@
      "form": "WLWLW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Marseille",
      "p": 11,
      "w": 6,
@@ -117,19 +130,6 @@
      "pts": 18,
      "tid": 81,
      "form": "WWWWL"
-    },
-    {
-     "pos": 6,
-     "team": "Brest",
-     "p": 11,
-     "w": 5,
-     "d": 3,
-     "l": 3,
-     "gf": 19,
-     "ga": 12,
-     "pts": 18,
-     "tid": 106,
-     "form": "DLWWW"
     },
     {
      "pos": 7,
@@ -288,7 +288,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-24T00:00:00.000Z"
+   "updated": "2026-11-28T00:00:00.000Z"
   },
   {
    "id": "ligue-2",
@@ -560,7 +560,7 @@
      "form": "LLLWL"
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-26T00:00:00.000Z"
   },
   {
    "id": "ligue-3",
@@ -835,7 +835,7 @@
      "form": "LLLDL"
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-26T00:00:00.000Z"
   }
  ]
 }

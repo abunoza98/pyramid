@@ -4,7 +4,7 @@
  "adjective": "English",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-26T00:00:00.000Z",
+ "updated": "2026-11-27T00:00:00.000Z",
  "belowNote": "Champions and play-off winners from step 3 (the Northern Premier, Southern and Isthmian leagues) come up",
  "leagues": [
   {
@@ -129,15 +129,15 @@
     {
      "pos": 8,
      "team": "Chelsea",
-     "p": 11,
+     "p": 12,
      "w": 5,
      "d": 1,
-     "l": 5,
-     "gf": 20,
-     "ga": 20,
+     "l": 6,
+     "gf": 22,
+     "ga": 23,
      "pts": 16,
      "tid": 49,
-     "form": "WLWLL"
+     "form": "LWLLL"
     },
     {
      "pos": 9,
@@ -206,6 +206,19 @@
     },
     {
      "pos": 14,
+     "team": "Nottingham Forest",
+     "p": 12,
+     "w": 3,
+     "d": 3,
+     "l": 6,
+     "gf": 12,
+     "ga": 17,
+     "pts": 12,
+     "tid": 65,
+     "form": "DLWLW"
+    },
+    {
+     "pos": 15,
      "team": "Coventry City",
      "p": 11,
      "w": 4,
@@ -218,7 +231,7 @@
      "form": "LLWLW"
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "Fulham",
      "p": 11,
      "w": 2,
@@ -231,7 +244,7 @@
      "form": "WWDDD"
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "Ipswich Town",
      "p": 11,
      "w": 3,
@@ -242,19 +255,6 @@
      "pts": 11,
      "tid": 57,
      "form": "LDDLL"
-    },
-    {
-     "pos": 17,
-     "team": "Nottingham Forest",
-     "p": 11,
-     "w": 2,
-     "d": 3,
-     "l": 6,
-     "gf": 9,
-     "ga": 15,
-     "pts": 9,
-     "tid": 65,
-     "form": "LDLWL"
     },
     {
      "pos": 18,
@@ -296,7 +296,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-25T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   },
   {
    "id": "championship",
@@ -333,15 +333,15 @@
     {
      "pos": 1,
      "team": "Middlesbrough",
-     "p": 17,
+     "p": 18,
      "w": 10,
      "d": 5,
-     "l": 2,
+     "l": 3,
      "gf": 34,
-     "ga": 20,
+     "ga": 22,
      "pts": 35,
      "tid": 70,
-     "form": "WLDWW"
+     "form": "LDWWL"
     },
     {
      "pos": 2,
@@ -398,16 +398,16 @@
     {
      "pos": 6,
      "team": "Southampton",
-     "p": 17,
-     "w": 9,
+     "p": 18,
+     "w": 10,
      "d": 5,
      "l": 3,
-     "gf": 32,
+     "gf": 34,
      "ga": 16,
-     "pts": 28,
+     "pts": 31,
      "ded": 4,
      "tid": 41,
-     "form": "WDLWD"
+     "form": "DLWDW"
     },
     {
      "pos": 7,
@@ -644,7 +644,7 @@
      "form": "LLWLL"
     }
    ],
-   "updated": "2026-11-25T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   },
   {
    "id": "league-one",
@@ -1332,7 +1332,7 @@
      "form": "LDWWD"
     }
    ],
-   "updated": "2026-11-25T00:00:00.000Z"
+   "updated": "2026-11-26T00:00:00.000Z"
   },
   {
    "id": "national-league",
@@ -1569,19 +1569,6 @@
     },
     {
      "pos": 16,
-     "team": "Wealdstone",
-     "p": 19,
-     "w": 6,
-     "d": 4,
-     "l": 9,
-     "gf": 28,
-     "ga": 33,
-     "pts": 22,
-     "tid": 8663,
-     "form": "LWDWL"
-    },
-    {
-     "pos": 17,
      "team": "Hartlepool United",
      "p": 19,
      "w": 7,
@@ -1594,7 +1581,7 @@
      "form": "LLDWW"
     },
     {
-     "pos": 18,
+     "pos": 17,
      "team": "Eastleigh",
      "p": 19,
      "w": 6,
@@ -1605,6 +1592,19 @@
      "pts": 22,
      "tid": 1822,
      "form": "LDLWL"
+    },
+    {
+     "pos": 18,
+     "team": "Wealdstone",
+     "p": 20,
+     "w": 6,
+     "d": 4,
+     "l": 10,
+     "gf": 29,
+     "ga": 37,
+     "pts": 22,
+     "tid": 8663,
+     "form": "WDWLL"
     },
     {
      "pos": 19,
@@ -1661,15 +1661,15 @@
     {
      "pos": 23,
      "team": "Scunthorpe United",
-     "p": 18,
-     "w": 3,
+     "p": 19,
+     "w": 4,
      "d": 2,
      "l": 13,
-     "gf": 21,
-     "ga": 35,
-     "pts": 11,
+     "gf": 25,
+     "ga": 36,
+     "pts": 14,
      "tid": 1340,
-     "form": "LLDLL"
+     "form": "LDLLW"
     },
     {
      "pos": 24,
@@ -1685,7 +1685,7 @@
      "form": "LLLLW"
     }
    ],
-   "updated": "2026-11-25T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   },
   {
    "id": "national-league-north-south",
@@ -1727,7 +1727,7 @@
    "groups": [
     {
      "name": "North",
-     "updated": "2026-11-25T00:00:00.000Z",
+     "updated": "2026-11-26T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2045,7 +2045,7 @@
     },
     {
      "name": "South",
-     "updated": "2026-11-25T00:00:00.000Z",
+     "updated": "2026-11-26T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -2362,7 +2362,7 @@
      ]
     }
    ],
-   "updated": "2026-11-25T00:00:00.000Z"
+   "updated": "2026-11-26T00:00:00.000Z"
   }
  ]
 }

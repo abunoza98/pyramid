@@ -4,7 +4,7 @@
  "adjective": "Swiss",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-25T00:00:00.000Z",
+ "updated": "2026-11-28T00:00:00.000Z",
  "belowNote": "The top 2. Liga Interregional clubs come up",
  "leagues": [
   {
@@ -190,7 +190,7 @@
      "form": "LLLDD"
     }
    ],
-   "updated": "2026-11-24T00:00:00.000Z"
+   "updated": "2026-11-28T00:00:00.000Z"
   },
   {
    "id": "challenge-league",
@@ -224,18 +224,31 @@
     {
      "pos": 1,
      "team": "Stade Lausanne-Ouchy",
-     "p": 14,
-     "w": 10,
+     "p": 15,
+     "w": 11,
      "d": 4,
      "l": 0,
-     "gf": 31,
+     "gf": 33,
      "ga": 7,
-     "pts": 34,
+     "pts": 37,
      "tid": 4269,
-     "form": "WDWWW"
+     "form": "DWWWW"
     },
     {
      "pos": 2,
+     "team": "FC Winterthur",
+     "p": 15,
+     "w": 8,
+     "d": 4,
+     "l": 3,
+     "gf": 34,
+     "ga": 16,
+     "pts": 28,
+     "tid": 2180,
+     "form": "WWDLW"
+    },
+    {
+     "pos": 3,
      "team": "Yverdon Sport",
      "p": 14,
      "w": 7,
@@ -246,19 +259,6 @@
      "pts": 26,
      "tid": 6653,
      "form": "WWLDW"
-    },
-    {
-     "pos": 3,
-     "team": "FC Winterthur",
-     "p": 14,
-     "w": 7,
-     "d": 4,
-     "l": 3,
-     "gf": 28,
-     "ga": 15,
-     "pts": 25,
-     "tid": 2180,
-     "form": "LWWDL"
     },
     {
      "pos": 4,
@@ -276,18 +276,31 @@
     {
      "pos": 5,
      "team": "SC Kriens",
-     "p": 14,
+     "p": 15,
      "w": 5,
      "d": 4,
-     "l": 5,
+     "l": 6,
      "gf": 23,
-     "ga": 22,
+     "ga": 24,
      "pts": 19,
      "tid": 2186,
-     "form": "DLDWL"
+     "form": "LDWLL"
     },
     {
      "pos": 6,
+     "team": "FC Aarau",
+     "p": 15,
+     "w": 5,
+     "d": 3,
+     "l": 7,
+     "gf": 22,
+     "ga": 26,
+     "pts": 18,
+     "tid": 2177,
+     "form": "LWLLW"
+    },
+    {
+     "pos": 7,
      "team": "FC Wil",
      "p": 14,
      "w": 4,
@@ -300,43 +313,30 @@
      "form": "DDLWW"
     },
     {
-     "pos": 7,
-     "team": "FC Aarau",
-     "p": 14,
-     "w": 4,
-     "d": 3,
-     "l": 7,
-     "gf": 20,
-     "ga": 26,
-     "pts": 15,
-     "tid": 2177,
-     "form": "LLWLL"
-    },
-    {
      "pos": 8,
      "team": "Étoile Carouge",
-     "p": 14,
+     "p": 15,
      "w": 3,
      "d": 5,
-     "l": 6,
+     "l": 7,
      "gf": 14,
-     "ga": 20,
+     "ga": 22,
      "pts": 14,
      "tid": 6654,
-     "form": "LWDDL"
+     "form": "WDDLL"
     },
     {
      "pos": 9,
      "team": "Rapperswil-Jona",
-     "p": 14,
+     "p": 15,
      "w": 4,
      "d": 2,
-     "l": 8,
-     "gf": 20,
-     "ga": 27,
+     "l": 9,
+     "gf": 21,
+     "ga": 33,
      "pts": 14,
      "tid": 2185,
-     "form": "LDLLW"
+     "form": "DLLWL"
     },
     {
      "pos": 10,
@@ -352,7 +352,7 @@
      "form": "WLWLL"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-28T00:00:00.000Z"
   },
   {
    "id": "promotion-league",
@@ -614,7 +614,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-24T00:00:00.000Z"
+   "updated": "2026-11-25T00:00:00.000Z"
   },
   {
    "id": "1-liga",

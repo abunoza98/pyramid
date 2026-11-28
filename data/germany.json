@@ -4,7 +4,7 @@
  "adjective": "German",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-22T00:00:00.000Z",
+ "updated": "2026-11-28T00:00:00.000Z",
  "belowNote": "Regionalliga champions come up, some through a play-off",
  "leagues": [
   {
@@ -115,15 +115,15 @@
     {
      "pos": 6,
      "team": "Werder Bremen",
-     "p": 10,
+     "p": 11,
      "w": 5,
-     "d": 3,
+     "d": 4,
      "l": 2,
-     "gf": 21,
-     "ga": 15,
-     "pts": 18,
+     "gf": 24,
+     "ga": 18,
+     "pts": 19,
      "tid": 162,
-     "form": "DWWLW"
+     "form": "WWLWD"
     },
     {
      "pos": 7,
@@ -271,18 +271,18 @@
     {
      "pos": 18,
      "team": "Borussia Mönchengladbach",
-     "p": 10,
+     "p": 11,
      "w": 1,
-     "d": 1,
+     "d": 2,
      "l": 8,
-     "gf": 12,
-     "ga": 26,
-     "pts": 4,
+     "gf": 15,
+     "ga": 29,
+     "pts": 5,
      "tid": 163,
-     "form": "LWDLL"
+     "form": "WDLLD"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-28T00:00:00.000Z"
   },
   {
    "id": "2-bundesliga",
@@ -335,15 +335,15 @@
     {
      "pos": 2,
      "team": "1. FC Nürnberg",
-     "p": 12,
+     "p": 13,
      "w": 7,
      "d": 3,
-     "l": 2,
-     "gf": 27,
-     "ga": 15,
+     "l": 3,
+     "gf": 28,
+     "ga": 18,
      "pts": 24,
      "tid": 171,
-     "form": "DLWWL"
+     "form": "LWWLL"
     },
     {
      "pos": 3,
@@ -386,6 +386,19 @@
     },
     {
      "pos": 6,
+     "team": "1. FC Heidenheim",
+     "p": 13,
+     "w": 5,
+     "d": 4,
+     "l": 4,
+     "gf": 23,
+     "ga": 24,
+     "pts": 19,
+     "tid": 180,
+     "form": "DLDLW"
+    },
+    {
+     "pos": 7,
      "team": "Arminia Bielefeld",
      "p": 12,
      "w": 5,
@@ -398,20 +411,20 @@
      "form": "WLWWL"
     },
     {
-     "pos": 7,
-     "team": "1. FC Heidenheim",
-     "p": 12,
-     "w": 4,
-     "d": 4,
-     "l": 4,
-     "gf": 20,
-     "ga": 23,
-     "pts": 16,
-     "tid": 180,
-     "form": "LDLDL"
+     "pos": 8,
+     "team": "VfL Bochum",
+     "p": 13,
+     "w": 5,
+     "d": 2,
+     "l": 6,
+     "gf": 13,
+     "ga": 15,
+     "pts": 17,
+     "tid": 176,
+     "form": "DWWLW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "FC St. Pauli",
      "p": 12,
      "w": 3,
@@ -424,7 +437,7 @@
      "form": "DDLLW"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "Hannover 96",
      "p": 12,
      "w": 4,
@@ -437,7 +450,7 @@
      "form": "DLWDW"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Eintracht Braunschweig",
      "p": 12,
      "w": 4,
@@ -448,19 +461,6 @@
      "pts": 14,
      "tid": 744,
      "form": "LWLDW"
-    },
-    {
-     "pos": 11,
-     "team": "VfL Bochum",
-     "p": 12,
-     "w": 4,
-     "d": 2,
-     "l": 6,
-     "gf": 11,
-     "ga": 15,
-     "pts": 14,
-     "tid": 176,
-     "form": "LDWWL"
     },
     {
      "pos": 12,
@@ -517,15 +517,15 @@
     {
      "pos": 16,
      "team": "Darmstadt 98",
-     "p": 12,
+     "p": 13,
      "w": 3,
      "d": 3,
-     "l": 6,
+     "l": 7,
      "gf": 12,
-     "ga": 22,
+     "ga": 24,
      "pts": 12,
      "tid": 181,
-     "form": "LDDLW"
+     "form": "DDLWL"
     },
     {
      "pos": 17,
@@ -554,7 +554,7 @@
      "form": "DWLLL"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-28T00:00:00.000Z"
   },
   {
    "id": "3-liga",
@@ -667,6 +667,19 @@
     },
     {
      "pos": 7,
+     "team": "Hansa Rostock",
+     "p": 15,
+     "w": 6,
+     "d": 4,
+     "l": 5,
+     "gf": 24,
+     "ga": 24,
+     "pts": 22,
+     "tid": 1321,
+     "form": "DLWLW"
+    },
+    {
+     "pos": 8,
      "team": "Wehen Wiesbaden",
      "p": 14,
      "w": 6,
@@ -679,7 +692,7 @@
      "form": "DWWWL"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "VfB Stuttgart II",
      "p": 14,
      "w": 6,
@@ -692,7 +705,7 @@
      "form": "WLDWW"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "FC Ingolstadt",
      "p": 14,
      "w": 6,
@@ -705,7 +718,7 @@
      "form": "WWDWL"
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Waldhof Mannheim",
      "p": 14,
      "w": 6,
@@ -718,7 +731,7 @@
      "form": "LWLWL"
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "Fortuna Düsseldorf",
      "p": 14,
      "w": 5,
@@ -729,19 +742,6 @@
      "pts": 19,
      "tid": 158,
      "form": "LDDLW"
-    },
-    {
-     "pos": 12,
-     "team": "Hansa Rostock",
-     "p": 14,
-     "w": 5,
-     "d": 4,
-     "l": 5,
-     "gf": 22,
-     "ga": 24,
-     "pts": 19,
-     "tid": 1321,
-     "form": "LDLWL"
     },
     {
      "pos": 13,
@@ -837,18 +837,18 @@
     {
      "pos": 20,
      "team": "TSV Havelse",
-     "p": 14,
+     "p": 15,
      "w": 2,
      "d": 4,
-     "l": 8,
+     "l": 9,
      "gf": 18,
-     "ga": 35,
+     "ga": 37,
      "pts": 10,
      "tid": 9342,
-     "form": "DWDLL"
+     "form": "WDLLL"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   }
  ]
 }

@@ -78,19 +78,32 @@
     },
     {
      "pos": 3,
-     "team": "Varaždin",
-     "p": 14,
+     "team": "Istra 1961",
+     "p": 15,
      "w": 6,
      "d": 4,
-     "l": 4,
-     "gf": 19,
-     "ga": 14,
+     "l": 5,
+     "gf": 28,
+     "ga": 23,
      "pts": 22,
-     "tid": 1483,
-     "form": "LLDLW"
+     "tid": 1016,
+     "form": "DWWLW"
     },
     {
      "pos": 4,
+     "team": "Varaždin",
+     "p": 15,
+     "w": 6,
+     "d": 4,
+     "l": 5,
+     "gf": 20,
+     "ga": 16,
+     "pts": 22,
+     "tid": 1483,
+     "form": "LDLWL"
+    },
+    {
+     "pos": 5,
      "team": "Rijeka",
      "p": 13,
      "w": 6,
@@ -103,7 +116,7 @@
      "form": "WLDLW"
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Osijek",
      "p": 14,
      "w": 6,
@@ -114,19 +127,6 @@
      "pts": 20,
      "tid": 616,
      "form": "DLWLL"
-    },
-    {
-     "pos": 6,
-     "team": "Istra 1961",
-     "p": 14,
-     "w": 5,
-     "d": 4,
-     "l": 5,
-     "gf": 26,
-     "ga": 22,
-     "pts": 19,
-     "tid": 1016,
-     "form": "LDWWL"
     },
     {
      "pos": 7,

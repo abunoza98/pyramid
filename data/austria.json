@@ -4,7 +4,7 @@
  "adjective": "Austrian",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-22T00:00:00.000Z",
+ "updated": "2026-11-27T00:00:00.000Z",
  "belowNote": "Landesliga champions come up",
  "leagues": [
   {
@@ -106,6 +106,19 @@
     },
     {
      "pos": 7,
+     "team": "Rheindorf Altach",
+     "p": 14,
+     "w": 5,
+     "d": 1,
+     "l": 8,
+     "gf": 15,
+     "ga": 22,
+     "pts": 16,
+     "tid": 618,
+     "form": "WDLWW"
+    },
+    {
+     "pos": 8,
      "team": "Austria Lustenau",
      "p": 13,
      "w": 4,
@@ -118,7 +131,7 @@
      "form": "LLLWW"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "WSG Tirol",
      "p": 13,
      "w": 3,
@@ -129,19 +142,6 @@
      "pts": 13,
      "tid": 1398,
      "form": "WDLDL"
-    },
-    {
-     "pos": 9,
-     "team": "Rheindorf Altach",
-     "p": 13,
-     "w": 4,
-     "d": 1,
-     "l": 8,
-     "gf": 12,
-     "ga": 20,
-     "pts": 13,
-     "tid": 618,
-     "form": "LWDLW"
     },
     {
      "pos": 10,
@@ -159,15 +159,15 @@
     {
      "pos": 11,
      "team": "Grazer AK",
-     "p": 13,
+     "p": 14,
      "w": 2,
      "d": 4,
-     "l": 7,
-     "gf": 9,
-     "ga": 32,
+     "l": 8,
+     "gf": 11,
+     "ga": 35,
      "pts": 10,
      "tid": 4256,
-     "form": "LDLLL"
+     "form": "DLLLL"
     },
     {
      "pos": 12,
@@ -183,7 +183,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   },
   {
    "id": "2-liga",
@@ -233,15 +233,15 @@
     {
      "pos": 2,
      "team": "First Vienna",
-     "p": 13,
-     "w": 9,
+     "p": 14,
+     "w": 10,
      "d": 2,
      "l": 2,
-     "gf": 24,
+     "gf": 25,
      "ga": 17,
-     "pts": 29,
+     "pts": 32,
      "tid": 4990,
-     "form": "WWLDW"
+     "form": "WLDWW"
     },
     {
      "pos": 3,
@@ -272,15 +272,15 @@
     {
      "pos": 5,
      "team": "Wacker Innsbruck",
-     "p": 13,
+     "p": 14,
      "w": 6,
      "d": 2,
-     "l": 5,
+     "l": 6,
      "gf": 19,
-     "ga": 15,
+     "ga": 16,
      "pts": 20,
      "tid": 1073,
-     "form": "LLLWW"
+     "form": "LLWWL"
     },
     {
      "pos": 6,
@@ -426,7 +426,7 @@
      "form": "DLLLL"
     }
    ],
-   "updated": "2026-11-21T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   },
   {
    "id": "regionalliga",
@@ -1070,7 +1070,7 @@
     },
     {
      "name": "West",
-     "updated": "2026-11-22T00:00:00.000Z",
+     "updated": "2026-11-24T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1283,7 +1283,7 @@
      ]
     }
    ],
-   "updated": "2026-11-22T00:00:00.000Z"
+   "updated": "2026-11-24T00:00:00.000Z"
   }
  ]
 }

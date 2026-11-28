@@ -4,7 +4,7 @@
  "adjective": "Turkish",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-27T00:00:00.000Z",
+ "updated": "2026-11-28T00:00:00.000Z",
  "belowNote": "Regional amateur league champions come up",
  "leagues": [
   {
@@ -102,15 +102,15 @@
     {
      "pos": 5,
      "team": "Kasımpaşa",
-     "p": 12,
+     "p": 13,
      "w": 6,
      "d": 5,
-     "l": 1,
-     "gf": 19,
-     "ga": 12,
+     "l": 2,
+     "gf": 21,
+     "ga": 15,
      "pts": 23,
      "tid": 1004,
-     "form": "WWDWW"
+     "form": "WDWWL"
     },
     {
      "pos": 6,
@@ -153,6 +153,19 @@
     },
     {
      "pos": 9,
+     "team": "Rizespor",
+     "p": 13,
+     "w": 6,
+     "d": 2,
+     "l": 5,
+     "gf": 18,
+     "ga": 18,
+     "pts": 20,
+     "tid": 1007,
+     "form": "LDWWW"
+    },
+    {
+     "pos": 10,
      "team": "Göztepe",
      "p": 12,
      "w": 5,
@@ -163,19 +176,6 @@
      "pts": 18,
      "tid": 994,
      "form": "WWWLW"
-    },
-    {
-     "pos": 10,
-     "team": "Rizespor",
-     "p": 12,
-     "w": 5,
-     "d": 2,
-     "l": 5,
-     "gf": 15,
-     "ga": 16,
-     "pts": 17,
-     "tid": 1007,
-     "form": "LLDWW"
     },
     {
      "pos": 11,
@@ -219,12 +219,12 @@
     {
      "pos": 14,
      "team": "Alanyaspor",
-     "p": 12,
+     "p": 13,
      "w": 3,
      "d": 3,
-     "l": 6,
-     "gf": 10,
-     "ga": 20,
+     "l": 7,
+     "gf": 11,
+     "ga": 22,
      "pts": 12,
      "tid": 996,
      "form": "LLLLL"
@@ -232,15 +232,15 @@
     {
      "pos": 15,
      "team": "Konyaspor",
-     "p": 12,
-     "w": 2,
+     "p": 13,
+     "w": 3,
      "d": 2,
      "l": 8,
-     "gf": 8,
-     "ga": 18,
-     "pts": 8,
+     "gf": 10,
+     "ga": 19,
+     "pts": 11,
      "tid": 607,
-     "form": "LWLLL"
+     "form": "WLLLW"
     },
     {
      "pos": 16,
@@ -448,19 +448,32 @@
     },
     {
      "pos": 11,
-     "team": "Ümraniyespor",
-     "p": 14,
-     "w": 4,
-     "d": 6,
-     "l": 4,
-     "gf": 18,
-     "ga": 14,
-     "pts": 18,
-     "tid": 3577,
-     "form": "WWDWD"
+     "team": "Sarıyer",
+     "p": 16,
+     "w": 5,
+     "d": 5,
+     "l": 6,
+     "gf": 17,
+     "ga": 22,
+     "pts": 20,
+     "tid": 3605,
+     "form": "LLDLW"
     },
     {
      "pos": 12,
+     "team": "Ümraniyespor",
+     "p": 15,
+     "w": 4,
+     "d": 7,
+     "l": 4,
+     "gf": 20,
+     "ga": 16,
+     "pts": 19,
+     "tid": 3577,
+     "form": "WDWDD"
+    },
+    {
+     "pos": 13,
      "team": "Muğlaspor",
      "p": 15,
      "w": 4,
@@ -473,7 +486,7 @@
      "form": "WWLLL"
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "Bandırmaspor",
      "p": 15,
      "w": 4,
@@ -486,30 +499,17 @@
      "form": "LLLLW"
     },
     {
-     "pos": 14,
-     "team": "Sarıyer",
-     "p": 15,
-     "w": 4,
-     "d": 5,
-     "l": 6,
-     "gf": 16,
-     "ga": 22,
-     "pts": 17,
-     "tid": 3605,
-     "form": "DLLDL"
-    },
-    {
      "pos": 15,
      "team": "Manisa FK",
-     "p": 15,
+     "p": 16,
      "w": 4,
-     "d": 4,
+     "d": 5,
      "l": 7,
-     "gf": 23,
-     "ga": 24,
-     "pts": 16,
+     "gf": 25,
+     "ga": 26,
+     "pts": 17,
      "tid": 3597,
-     "form": "LLWLW"
+     "form": "LWLWD"
     },
     {
      "pos": 16,
@@ -554,15 +554,15 @@
     {
      "pos": 19,
      "team": "İstanbulspor",
-     "p": 15,
+     "p": 16,
      "w": 2,
      "d": 2,
-     "l": 11,
+     "l": 12,
      "gf": 12,
-     "ga": 34,
+     "ga": 35,
      "pts": 8,
      "tid": 3578,
-     "form": "LLLWL"
+     "form": "LLWLL"
     },
     {
      "pos": 20,
@@ -1111,7 +1111,7 @@
    "groups": [
     {
      "name": "Group 1",
-     "updated": "2026-11-23T00:00:00.000Z",
+     "updated": "2026-11-28T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1351,7 +1351,7 @@
     },
     {
      "name": "Group 2",
-     "updated": "2026-11-23T00:00:00.000Z",
+     "updated": "2026-11-28T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1591,7 +1591,7 @@
     },
     {
      "name": "Group 3",
-     "updated": "2026-11-27T00:00:00.000Z",
+     "updated": "2026-11-28T00:00:00.000Z",
      "rows": [
       {
        "pos": 1,
@@ -1830,7 +1830,7 @@
      ]
     }
    ],
-   "updated": "2026-11-27T00:00:00.000Z"
+   "updated": "2026-11-28T00:00:00.000Z"
   }
  ]
 }

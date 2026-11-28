@@ -4,7 +4,7 @@
  "adjective": "Dutch",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-23T00:00:00.000Z",
+ "updated": "2026-11-27T00:00:00.000Z",
  "belowNote": "The top Derde Divisie clubs come up",
  "leagues": [
   {
@@ -173,15 +173,15 @@
     {
      "pos": 10,
      "team": "Groningen",
-     "p": 13,
+     "p": 14,
      "w": 4,
-     "d": 3,
+     "d": 4,
      "l": 6,
-     "gf": 30,
-     "ga": 31,
-     "pts": 15,
+     "gf": 31,
+     "ga": 32,
+     "pts": 16,
      "tid": 202,
-     "form": "LDLLL"
+     "form": "DLLLD"
     },
     {
      "pos": 11,
@@ -277,18 +277,18 @@
     {
      "pos": 18,
      "team": "Willem II",
-     "p": 13,
+     "p": 14,
      "w": 0,
-     "d": 3,
+     "d": 4,
      "l": 10,
-     "gf": 12,
-     "ga": 42,
-     "pts": 3,
+     "gf": 13,
+     "ga": 43,
+     "pts": 4,
      "tid": 195,
-     "form": "LLLDL"
+     "form": "LLDLD"
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   },
   {
    "id": "eerste-divisie",
@@ -319,18 +319,31 @@
     {
      "pos": 1,
      "team": "Heracles",
-     "p": 16,
+     "p": 17,
      "w": 13,
-     "d": 2,
+     "d": 3,
      "l": 1,
-     "gf": 48,
-     "ga": 17,
-     "pts": 41,
+     "gf": 52,
+     "ga": 21,
+     "pts": 42,
      "tid": 206,
-     "form": "DWWWW"
+     "form": "WWWWD"
     },
     {
      "pos": 2,
+     "team": "NAC Breda",
+     "p": 17,
+     "w": 10,
+     "d": 4,
+     "l": 3,
+     "gf": 39,
+     "ga": 25,
+     "pts": 34,
+     "tid": 203,
+     "form": "WDWWW"
+    },
+    {
+     "pos": 3,
      "team": "Almere City",
      "p": 16,
      "w": 10,
@@ -341,19 +354,6 @@
      "pts": 31,
      "tid": 419,
      "form": "LWWWL"
-    },
-    {
-     "pos": 3,
-     "team": "NAC Breda",
-     "p": 16,
-     "w": 9,
-     "d": 4,
-     "l": 3,
-     "gf": 33,
-     "ga": 23,
-     "pts": 31,
-     "tid": 203,
-     "form": "DWDWW"
     },
     {
      "pos": 4,
@@ -383,6 +383,19 @@
     },
     {
      "pos": 6,
+     "team": "MVV",
+     "p": 17,
+     "w": 8,
+     "d": 2,
+     "l": 7,
+     "gf": 24,
+     "ga": 35,
+     "pts": 26,
+     "tid": 412,
+     "form": "LWWLW"
+    },
+    {
+     "pos": 7,
      "team": "Emmen",
      "p": 16,
      "w": 8,
@@ -395,20 +408,20 @@
      "form": "WLLLL"
     },
     {
-     "pos": 7,
-     "team": "MVV",
-     "p": 16,
-     "w": 7,
-     "d": 2,
-     "l": 7,
-     "gf": 21,
-     "ga": 33,
+     "pos": 8,
+     "team": "Jong Ajax",
+     "p": 17,
+     "w": 6,
+     "d": 5,
+     "l": 6,
+     "gf": 31,
+     "ga": 35,
      "pts": 23,
-     "tid": 412,
-     "form": "DLWWL"
+     "tid": 425,
+     "form": "DWWWD"
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "FC Volendam",
      "p": 16,
      "w": 7,
@@ -421,30 +434,17 @@
      "form": "WLWLL"
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "FC Den Bosch",
-     "p": 16,
+     "p": 17,
      "w": 6,
      "d": 4,
-     "l": 6,
-     "gf": 25,
-     "ga": 26,
+     "l": 7,
+     "gf": 27,
+     "ga": 32,
      "pts": 22,
      "tid": 421,
-     "form": "DWDLW"
-    },
-    {
-     "pos": 10,
-     "team": "Jong Ajax",
-     "p": 16,
-     "w": 6,
-     "d": 4,
-     "l": 6,
-     "gf": 27,
-     "ga": 31,
-     "pts": 22,
-     "tid": 425,
-     "form": "DDWWW"
+     "form": "WDLWL"
     },
     {
      "pos": 11,
@@ -501,15 +501,15 @@
     {
      "pos": 15,
      "team": "Jong PSV",
-     "p": 16,
+     "p": 17,
      "w": 5,
      "d": 5,
-     "l": 6,
-     "gf": 22,
-     "ga": 26,
+     "l": 7,
+     "gf": 24,
+     "ga": 29,
      "pts": 20,
      "tid": 411,
-     "form": "WLDLW"
+     "form": "LDLWL"
     },
     {
      "pos": 16,
@@ -577,7 +577,7 @@
      "form": "LLDLL"
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   },
   {
    "id": "tweede-divisie",
@@ -836,7 +836,7 @@
      "form": "LLLDL"
     }
    ],
-   "updated": "2026-11-23T00:00:00.000Z"
+   "updated": "2026-11-24T00:00:00.000Z"
   }
  ]
 }

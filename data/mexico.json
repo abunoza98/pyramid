@@ -4,7 +4,7 @@
  "adjective": "Mexican",
  "season": "2026–27",
  "mode": "live",
- "updated": "2026-11-26T00:00:00.000Z",
+ "updated": "2026-11-27T00:00:00.000Z",
  "belowNote": "Promotion between Liga Premier and the Liga de Expansión is suspended",
  "leagues": [
   {
@@ -260,7 +260,7 @@
      "form": "LDWWD"
     }
    ],
-   "updated": "2026-11-26T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   },
   {
    "id": "liga-de-expansion",
@@ -561,15 +561,15 @@
     {
      "pos": 2,
      "team": "FC Santiago",
-     "p": 13,
+     "p": 14,
      "w": 7,
-     "d": 3,
+     "d": 4,
      "l": 3,
      "gf": 29,
      "ga": 9,
-     "pts": 26,
+     "pts": 27,
      "tid": 22055,
-     "form": "WWWDD"
+     "form": "WWDDD"
     },
     {
      "pos": 2,
@@ -586,16 +586,16 @@
     },
     {
      "pos": 3,
-     "team": "Vaqueros Reynosa",
-     "p": 13,
+     "team": "Correcaminos UAT II",
+     "p": 14,
      "w": 7,
-     "d": 2,
-     "l": 4,
-     "gf": 25,
-     "ga": 17,
-     "pts": 25,
-     "tid": 28308,
-     "form": "LLDWW"
+     "d": 4,
+     "l": 3,
+     "gf": 23,
+     "ga": 15,
+     "pts": 26,
+     "tid": 17782,
+     "form": "WWDWD"
     },
     {
      "pos": 3,
@@ -612,16 +612,16 @@
     },
     {
      "pos": 4,
-     "team": "Correcaminos UAT II",
+     "team": "Vaqueros Reynosa",
      "p": 13,
      "w": 7,
-     "d": 3,
-     "l": 3,
-     "gf": 23,
-     "ga": 15,
+     "d": 2,
+     "l": 4,
+     "gf": 25,
+     "ga": 17,
      "pts": 25,
-     "tid": 17782,
-     "form": "LWWDW"
+     "tid": 28308,
+     "form": "LLDWW"
     },
     {
      "pos": 4,
@@ -795,7 +795,7 @@
      "form": "LLLLL"
     }
    ],
-   "updated": "2026-11-26T00:00:00.000Z"
+   "updated": "2026-11-27T00:00:00.000Z"
   }
  ]
 }
